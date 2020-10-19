@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-16"?><ProjectConstants xmlns="CBSourceCodeSchema3_0" Guid="4ed20da6-e8e3-4457-8841-0d6fe509ec84" BuildVersion="6.1.0.148" SaveDate="2020-10-19-10:44:02.434" CodePage="1252"><CheckSum Value="43998"/></ProjectConstants>

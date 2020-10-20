@@ -1,0 +1,535 @@
+<?xml version="1.0"?>
+<DeviceImportWizard xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <GsdmlMerge>
+    <SelectedDapId DapId="GenericMLink">
+      <SelectedModuleId ModuleId="GenericMLink">
+        <SelectedSubmoduleId SubmoduleId="GenericDAPStatus" />
+        <SelectedSubmoduleId SubmoduleId="GenericRedundancyControl1" />
+        <SelectedSubmoduleId SubmoduleId="GenericRedundancyControl2" />
+        <SelectedSubmoduleId SubmoduleId="GenericRedundancyControl3" />
+        <SelectedSubmoduleId SubmoduleId="GenericRedundancyControl4" />
+      </SelectedModuleId>
+      <SelectedModuleId ModuleId="GenericNrDol">
+        <SelectedSubmoduleId SubmoduleId="GenericControl-DOL" />
+        <SelectedSubmoduleId SubmoduleId="GenericMeasurements" />
+        <SelectedSubmoduleId SubmoduleId="GenericThermalOverload" />
+        <SelectedSubmoduleId SubmoduleId="GenericGPIO" />
+      </SelectedModuleId>
+      <SelectedModuleId ModuleId="GenericRevDol">
+        <SelectedSubmoduleId SubmoduleId="GenericControl-REVDOL" />
+        <SelectedSubmoduleId SubmoduleId="GenericMeasurements" />
+        <SelectedSubmoduleId SubmoduleId="GenericThermalOverload" />
+        <SelectedSubmoduleId SubmoduleId="GenericGPIO" />
+      </SelectedModuleId>
+      <SelectedModuleId ModuleId="GenericNrDolRcu">
+        <SelectedSubmoduleId SubmoduleId="GenericControl-DOL" />
+        <SelectedSubmoduleId SubmoduleId="GenericMeasurements" />
+        <SelectedSubmoduleId SubmoduleId="GenericThermalOverload" />
+        <SelectedSubmoduleId SubmoduleId="GenericGPIO" />
+      </SelectedModuleId>
+      <SelectedModuleId ModuleId="GenericRevDolRcu">
+        <SelectedSubmoduleId SubmoduleId="GenericControl-REVDOL" />
+        <SelectedSubmoduleId SubmoduleId="GenericMeasurements" />
+        <SelectedSubmoduleId SubmoduleId="GenericThermalOverload" />
+        <SelectedSubmoduleId SubmoduleId="GenericGPIO" />
+      </SelectedModuleId>
+      <SelectedModuleId ModuleId="GenericActuator">
+        <SelectedSubmoduleId SubmoduleId="GenericControl-Actuator" />
+        <SelectedSubmoduleId SubmoduleId="GenericMeasurements" />
+        <SelectedSubmoduleId SubmoduleId="GenericThermalOverload" />
+        <SelectedSubmoduleId SubmoduleId="GenericGPIO" />
+      </SelectedModuleId>
+      <SelectedModuleId ModuleId="GenericNrDolSd">
+        <SelectedSubmoduleId SubmoduleId="GenericControl-DOL" />
+        <SelectedSubmoduleId SubmoduleId="GenericMeasurements" />
+        <SelectedSubmoduleId SubmoduleId="GenericThermalOverload" />
+        <SelectedSubmoduleId SubmoduleId="GenericGPIO" />
+      </SelectedModuleId>
+      <SelectedModuleId ModuleId="GenericNoStarterModule">
+        <SelectedSubmoduleId SubmoduleId="GenericControl-NoStarterModule" />
+        <SelectedSubmoduleId SubmoduleId="GenericGPIOExtended" />
+      </SelectedModuleId>
+      <SelectedModuleId ModuleId="GenericTransparent">
+        <SelectedSubmoduleId SubmoduleId="GenericControl-Transparent" />
+        <SelectedSubmoduleId SubmoduleId="GenericMeasurements" />
+        <SelectedSubmoduleId SubmoduleId="GenericThermalOverload" />
+        <SelectedSubmoduleId SubmoduleId="GenericGPIO" />
+      </SelectedModuleId>
+      <SelectedModuleId ModuleId="GenericNrDolSoftstarter">
+        <SelectedSubmoduleId SubmoduleId="GenericControl-DOL" />
+        <SelectedSubmoduleId SubmoduleId="GenericMeasurements" />
+        <SelectedSubmoduleId SubmoduleId="GenericThermalOverload" />
+        <SelectedSubmoduleId SubmoduleId="GenericGPIO" />
+      </SelectedModuleId>
+      <SelectedModuleId ModuleId="GenericMFeed">
+        <SelectedSubmoduleId SubmoduleId="GenericControl-MFeed" />
+        <SelectedSubmoduleId SubmoduleId="GenericMeasurements" />
+        <SelectedSubmoduleId SubmoduleId="GenericThermalOverload" />
+        <SelectedSubmoduleId SubmoduleId="GenericGPIO" />
+      </SelectedModuleId>
+      <SelectedModuleId ModuleId="GenericCFeed">
+        <SelectedSubmoduleId SubmoduleId="GenericControl-CFeed" />
+        <SelectedSubmoduleId SubmoduleId="GenericMeasurements" />
+        <SelectedSubmoduleId SubmoduleId="GenericThermalOverload" />
+        <SelectedSubmoduleId SubmoduleId="GenericGPIO" />
+      </SelectedModuleId>
+      <SelectedModuleId ModuleId="GenericCFeedRCU">
+        <SelectedSubmoduleId SubmoduleId="GenericControl-CFeed" />
+        <SelectedSubmoduleId SubmoduleId="GenericMeasurements" />
+        <SelectedSubmoduleId SubmoduleId="GenericThermalOverload" />
+        <SelectedSubmoduleId SubmoduleId="GenericGPIO" />
+      </SelectedModuleId>
+      <SelectedModuleId ModuleId="GenericTransparentCFeed">
+        <SelectedSubmoduleId SubmoduleId="GenericControl-TransparentCFeed" />
+        <SelectedSubmoduleId SubmoduleId="GenericMeasurements" />
+        <SelectedSubmoduleId SubmoduleId="GenericThermalOverload" />
+        <SelectedSubmoduleId SubmoduleId="GenericGPIO" />
+      </SelectedModuleId>
+      <SelectedModuleId ModuleId="GenericTransparentMFeed">
+        <SelectedSubmoduleId SubmoduleId="GenericControl-TransparentMFeed" />
+        <SelectedSubmoduleId SubmoduleId="GenericMeasurements" />
+        <SelectedSubmoduleId SubmoduleId="GenericThermalOverload" />
+        <SelectedSubmoduleId SubmoduleId="GenericGPIO" />
+      </SelectedModuleId>
+      <SelectedModuleId ModuleId="GenericMFeedDc">
+        <SelectedSubmoduleId SubmoduleId="GenericControl-DCFeed" />
+        <SelectedSubmoduleId SubmoduleId="GenericMeasurementsDC" />
+        <SelectedSubmoduleId SubmoduleId="GenericThermalOverload" />
+        <SelectedSubmoduleId SubmoduleId="GenericGPIO" />
+      </SelectedModuleId>
+      <SelectedModuleId ModuleId="GenericSacePR">
+        <SelectedSubmoduleId SubmoduleId="GenericControl-SacePR" />
+        <SelectedSubmoduleId SubmoduleId="GenericCBRCurrent" />
+        <SelectedSubmoduleId SubmoduleId="GenericCBRVoltage" />
+        <SelectedSubmoduleId SubmoduleId="GenericCBRPower" />
+        <SelectedSubmoduleId SubmoduleId="GenericGPIO" />
+      </SelectedModuleId>
+    </SelectedDapId>
+  </GsdmlMerge>
+  <Hwd>
+    <HardwareUnit guid="486e9df0-3700-44c4-9294-be359d1c5361" hwGsdmlUnitID="DEV_GenericMLink" description="MLink" information="MNS iS PNIO Device" icon="RackAdapterType" />
+    <HardwareUnit guid="0fe13a43-c569-4641-8d97-2199e6800f47" hwGsdmlUnitID="DAP_GenericMLink" description="MLink_DAP" information="MNS iS PNIO Device" icon="RackIOType" />
+    <HardwareUnit guid="f200619a-f934-4c47-b006-9c80391ca9c2" hwGsdmlUnitID="SUB_GenericDAPStatus" description="MLink Status" information="Provides IOXS status for MNS iS MLink DAP" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="0" GSDMLHash="" />
+        <OutputArea AreaByteSize="0" GSDMLHash="" />
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="ac48b51a-37dc-4b6f-8fd4-daf9ab52280c" hwGsdmlUnitID="SUB_GenericRedundancyControl1" description="Redundancy Control 1" information="Interface for redundant MLinks for Controller 1" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="1" GSDMLHash="MYVHWNiz++PELCKoxlL2ZQ==">
+          <Channel Name="Redundancy Status" StartBit="0" EndBit="7" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </InputArea>
+        <OutputArea AreaByteSize="1" GSDMLHash="gK42IqSDoMvPRRXvXzPwfg==">
+          <Channel Name="Redundancy Command" StartBit="0" EndBit="7" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </OutputArea>
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="cc1c552e-65b6-4f1e-b5a0-bd8fd77d088b" hwGsdmlUnitID="SUB_GenericRedundancyControl2" description="Redundancy Control 2" information="Interface for redundant MLinks for Controller 2" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="1" GSDMLHash="MYVHWNiz++PELCKoxlL2ZQ==">
+          <Channel Name="Redundancy Status" StartBit="0" EndBit="7" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </InputArea>
+        <OutputArea AreaByteSize="1" GSDMLHash="gK42IqSDoMvPRRXvXzPwfg==">
+          <Channel Name="Redundancy Command" StartBit="0" EndBit="7" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </OutputArea>
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="ed70b114-5eda-4e04-a635-3fb565ee60c2" hwGsdmlUnitID="SUB_GenericRedundancyControl3" description="Redundancy Control 3" information="Interface for redundant MLinks for Controller 3" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="1" GSDMLHash="MYVHWNiz++PELCKoxlL2ZQ==">
+          <Channel Name="Redundancy Status" StartBit="0" EndBit="7" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </InputArea>
+        <OutputArea AreaByteSize="1" GSDMLHash="gK42IqSDoMvPRRXvXzPwfg==">
+          <Channel Name="Redundancy Command" StartBit="0" EndBit="7" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </OutputArea>
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="2dbc9384-8a7c-443d-b43f-7e83967e0dec" hwGsdmlUnitID="SUB_GenericRedundancyControl4" description="Redundancy Control 4" information="Interface for redundant MLinks for Controller 4" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="1" GSDMLHash="MYVHWNiz++PELCKoxlL2ZQ==">
+          <Channel Name="Redundancy Status" StartBit="0" EndBit="7" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </InputArea>
+        <OutputArea AreaByteSize="1" GSDMLHash="gK42IqSDoMvPRRXvXzPwfg==">
+          <Channel Name="Redundancy Command" StartBit="0" EndBit="7" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </OutputArea>
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="52ad72df-a857-45e1-bd6d-5794aea99cd0" hwGsdmlUnitID="MOD_GenericNrDol" description="NrDol" information="Non Reversing Direct On Line Motor Starter" icon="RackIOType" />
+    <HardwareUnit guid="255b10f7-0f85-45a6-9a51-6421ebf26760" hwGsdmlUnitID="SUB_GenericControl-DOL" description="NrDol Control" information="Control of Direct On Line Motor Starter" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="2" GSDMLHash="BPParvfsvBOXSyHH/uE2Hg==">
+          <Channel Name="Status" StartBit="0" EndBit="15" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </InputArea>
+        <OutputArea AreaByteSize="2" GSDMLHash="MGX0MswXQXlbeHh/9q3xhQ==">
+          <Channel Name="Command" StartBit="0" EndBit="15" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </OutputArea>
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="3ecd087b-8c75-46e6-a89d-2ee959dfbb27" hwGsdmlUnitID="SUB_GenericMeasurements" description="Measurements" information="Measurement Values" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="10" GSDMLHash="wzsOV5SDhJ7xIvPDPSCSQg==">
+          <Channel Name="Current Phase L1 in %" StartBit="0" EndBit="15" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Active Power" StartBit="16" EndBit="47" Type="ChannelFloatIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Cos Phi" StartBit="48" EndBit="79" Type="ChannelFloatIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </InputArea>
+        <OutputArea AreaByteSize="0" GSDMLHash="" />
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="a94ef476-e194-41b1-8aae-cb58b8527b4d" hwGsdmlUnitID="SUB_GenericThermalOverload" description="Thermal Overload" information="Thermal Overload Measurement Values" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="6" GSDMLHash="bqovYI2kTmiBTnbSh3RGbA==">
+          <Channel Name="Thermal Image" StartBit="0" EndBit="15" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Time To Trip" StartBit="16" EndBit="31" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Time To Reset" StartBit="32" EndBit="47" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </InputArea>
+        <OutputArea AreaByteSize="0" GSDMLHash="" />
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="5317d6b2-9846-46bf-a67f-b86546417ca8" hwGsdmlUnitID="SUB_GenericGPIO" description="General Purpose IO" information="General Purpose IO Control" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="1" GSDMLHash="Gfd0qe+kTTWv8rKrR0B0Zw==">
+          <Channel Name="GPI 1" StartBit="7" EndBit="7" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="GPI 2" StartBit="6" EndBit="6" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="GPI 3" StartBit="5" EndBit="5" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="GPI 4" StartBit="4" EndBit="4" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="GPI 5" StartBit="3" EndBit="3" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="GPI 6" StartBit="2" EndBit="2" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="GPI 7" StartBit="1" EndBit="1" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="GPI 8" StartBit="0" EndBit="0" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="General Purpose In" StartBit="0" EndBit="7" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </InputArea>
+        <OutputArea AreaByteSize="1" GSDMLHash="zq4DxyzpX+O5gs9esdtH9A==">
+          <Channel Name="GPO 1" StartBit="7" EndBit="7" Type="ChannelBitBoolean" />
+          <Channel Name="GPO 2" StartBit="6" EndBit="6" Type="ChannelBitBoolean" />
+          <Channel Name="GPO 3" StartBit="5" EndBit="5" Type="ChannelBitBoolean" />
+          <Channel Name="GPO 4" StartBit="4" EndBit="4" Type="ChannelBitBoolean" />
+          <Channel Name="GPO 5" StartBit="3" EndBit="3" Type="ChannelBitBoolean" />
+          <Channel Name="GPO 6" StartBit="2" EndBit="2" Type="ChannelBitBoolean" />
+          <Channel Name="GPO 7" StartBit="1" EndBit="1" Type="ChannelBitBoolean" />
+          <Channel Name="GPO 8" StartBit="0" EndBit="0" Type="ChannelBitBoolean" />
+          <Channel Name="General Purpose Out" StartBit="0" EndBit="7" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </OutputArea>
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="6117b1cf-b194-4d1c-baca-9b3b1a469409" hwGsdmlUnitID="MOD_GenericRevDol" description="RevDol" information="Reversing Direct On Line Motor Starter" icon="RackIOType" />
+    <HardwareUnit guid="4201ef18-86eb-4e25-bce6-e589cc753605" hwGsdmlUnitID="SUB_GenericControl-REVDOL" description="RevDol Control" information="Control of Reversing Direct On Line Motor Starter" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="2" GSDMLHash="BPParvfsvBOXSyHH/uE2Hg==">
+          <Channel Name="Status" StartBit="0" EndBit="15" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </InputArea>
+        <OutputArea AreaByteSize="2" GSDMLHash="MGX0MswXQXlbeHh/9q3xhQ==">
+          <Channel Name="Command" StartBit="0" EndBit="15" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </OutputArea>
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="6f6de066-fb1e-46b5-9ecb-0c0eaa920a46" hwGsdmlUnitID="MOD_GenericNrDolRcu" description="NrDol RCU" information="Non Reversing Direct On Line Motor Starter with Remote Control Unit" icon="RackIOType" />
+    <HardwareUnit guid="553fedac-0cb3-4a3a-97c0-1209bfcb928e" hwGsdmlUnitID="MOD_GenericRevDolRcu" description="RevDol RCU" information="Reversing Direct On Line Motor Starter with Remote Control Unit" icon="RackIOType" />
+    <HardwareUnit guid="5e663f03-68b8-4533-9200-aef51ecacc0a" hwGsdmlUnitID="MOD_GenericActuator" description="Actuator" information="Actuator Motor Starter" icon="RackIOType" />
+    <HardwareUnit guid="6835cbd6-fe46-4cd9-96b5-1b8ee81ff783" hwGsdmlUnitID="SUB_GenericControl-Actuator" description="Actuator Control" information="Control of Actuator Motor Starter" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="2" GSDMLHash="BPParvfsvBOXSyHH/uE2Hg==">
+          <Channel Name="Status" StartBit="0" EndBit="15" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </InputArea>
+        <OutputArea AreaByteSize="2" GSDMLHash="MGX0MswXQXlbeHh/9q3xhQ==">
+          <Channel Name="Command" StartBit="0" EndBit="15" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </OutputArea>
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="75b3efa4-c720-446d-a148-5f83890aeb83" hwGsdmlUnitID="MOD_GenericNrDolSd" description="NrDol SD" information="Non Reversing Direct On Line Star/Delta Motor Starter" icon="RackIOType" />
+    <HardwareUnit guid="abdfb1da-65b3-44b4-8fc8-9d2323c33b43" hwGsdmlUnitID="MOD_GenericNoStarterModule" description="No Starter Module" information="No Starter Module" icon="RackIOType" />
+    <HardwareUnit guid="fee66d99-b4e4-42e7-ae33-cffa437444de" hwGsdmlUnitID="SUB_GenericControl-NoStarterModule" description="No Starter Module Control" information="Control of No Stater Module" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="2" GSDMLHash="BPParvfsvBOXSyHH/uE2Hg==">
+          <Channel Name="Status" StartBit="0" EndBit="15" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </InputArea>
+        <OutputArea AreaByteSize="2" GSDMLHash="MGX0MswXQXlbeHh/9q3xhQ==">
+          <Channel Name="Command" StartBit="0" EndBit="15" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </OutputArea>
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="72172536-af7d-45cb-b3ae-c1ccdf295bca" hwGsdmlUnitID="SUB_GenericGPIOExtended" description="General Purpose IO Extended" information="Extended General Purpose IO Control" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="2" GSDMLHash="dpIOiImI5d4yBwCFz7bzZg==">
+          <Channel Name="GPI 1" StartBit="15" EndBit="15" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="GPI 2" StartBit="14" EndBit="14" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="GPI 3" StartBit="13" EndBit="13" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="GPI 4" StartBit="12" EndBit="12" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="GPI 5" StartBit="11" EndBit="11" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="GPI 6" StartBit="10" EndBit="10" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="GPI 7" StartBit="9" EndBit="9" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="GPI 8" StartBit="8" EndBit="8" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="GPI 9" StartBit="7" EndBit="7" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="GPI 10" StartBit="6" EndBit="6" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="GPI 11" StartBit="5" EndBit="5" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="GPI 12" StartBit="4" EndBit="4" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="GPI 13" StartBit="3" EndBit="3" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="GPI 14" StartBit="2" EndBit="2" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="GPI 15" StartBit="1" EndBit="1" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="GPI 16" StartBit="0" EndBit="0" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="General Purpose In" StartBit="0" EndBit="15" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </InputArea>
+        <OutputArea AreaByteSize="1" GSDMLHash="zq4DxyzpX+O5gs9esdtH9A==">
+          <Channel Name="GPO 1" StartBit="7" EndBit="7" Type="ChannelBitBoolean" />
+          <Channel Name="GPO 2" StartBit="6" EndBit="6" Type="ChannelBitBoolean" />
+          <Channel Name="GPO 3" StartBit="5" EndBit="5" Type="ChannelBitBoolean" />
+          <Channel Name="GPO 4" StartBit="4" EndBit="4" Type="ChannelBitBoolean" />
+          <Channel Name="GPO 5" StartBit="3" EndBit="3" Type="ChannelBitBoolean" />
+          <Channel Name="GPO 6" StartBit="2" EndBit="2" Type="ChannelBitBoolean" />
+          <Channel Name="GPO 7" StartBit="1" EndBit="1" Type="ChannelBitBoolean" />
+          <Channel Name="GPO 8" StartBit="0" EndBit="0" Type="ChannelBitBoolean" />
+          <Channel Name="General Purpose Out" StartBit="0" EndBit="7" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </OutputArea>
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="4c516c56-4a08-411f-a26b-a881764acdf8" hwGsdmlUnitID="MOD_GenericTransparent" description="Transparent" information="Transparent Motor Starter" icon="RackIOType" />
+    <HardwareUnit guid="200dcafe-69a2-4fcf-afcd-f501ec7ce123" hwGsdmlUnitID="SUB_GenericControl-Transparent" description="Transparent Control" information="Control of Transparent Motor Starter" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="2" GSDMLHash="BPParvfsvBOXSyHH/uE2Hg==">
+          <Channel Name="Status" StartBit="0" EndBit="15" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </InputArea>
+        <OutputArea AreaByteSize="2" GSDMLHash="MGX0MswXQXlbeHh/9q3xhQ==">
+          <Channel Name="Command" StartBit="0" EndBit="15" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </OutputArea>
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="3d97cedb-a54c-4422-ad0e-fe96fefab44c" hwGsdmlUnitID="MOD_GenericNrDolSoftstarter" description="NrSoftStarter" information="Non Reversing Soft Starter" icon="RackIOType" />
+    <HardwareUnit guid="29e6cbb1-bb7b-40f9-b676-67c37a764e19" hwGsdmlUnitID="MOD_GenericMFeed" description="MFeed" information="Feeder with no control" icon="RackIOType" />
+    <HardwareUnit guid="339031a9-f362-450f-9270-adf33350a3e1" hwGsdmlUnitID="SUB_GenericControl-MFeed" description="MFeed Control" information="Control of MFeed" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="2" GSDMLHash="BPParvfsvBOXSyHH/uE2Hg==">
+          <Channel Name="Status" StartBit="0" EndBit="15" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </InputArea>
+        <OutputArea AreaByteSize="2" GSDMLHash="MGX0MswXQXlbeHh/9q3xhQ==">
+          <Channel Name="Command" StartBit="0" EndBit="15" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </OutputArea>
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="c2022ce9-4a7e-4106-a05a-5a117a60130b" hwGsdmlUnitID="MOD_GenericCFeed" description="CFeed" information="Feeder with control" icon="RackIOType" />
+    <HardwareUnit guid="1c7c6f5a-8457-4413-ad75-71541e8cc416" hwGsdmlUnitID="SUB_GenericControl-CFeed" description="CFeed Control" information="Control of Contactor Feeder" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="2" GSDMLHash="BPParvfsvBOXSyHH/uE2Hg==">
+          <Channel Name="Status" StartBit="0" EndBit="15" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </InputArea>
+        <OutputArea AreaByteSize="2" GSDMLHash="MGX0MswXQXlbeHh/9q3xhQ==">
+          <Channel Name="Command" StartBit="0" EndBit="15" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </OutputArea>
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="d6df87bc-fc53-4987-86ac-81f6f0a91759" hwGsdmlUnitID="MOD_GenericCFeedRCU" description="CFeed RCU" information="Feeder with control and Remote Control Unit" icon="RackIOType" />
+    <HardwareUnit guid="a475beac-4063-480e-a514-629fd0a510d7" hwGsdmlUnitID="MOD_GenericTransparentCFeed" description="Transparent CFeed" information="Transparent Motor Starter with control" icon="RackIOType" />
+    <HardwareUnit guid="4e952954-4825-4cf2-81f9-02ed598ed709" hwGsdmlUnitID="SUB_GenericControl-TransparentCFeed" description="Transparent CFeed Control" information="Transparent control of Contactor Feeder" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="2" GSDMLHash="BPParvfsvBOXSyHH/uE2Hg==">
+          <Channel Name="Status" StartBit="0" EndBit="15" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </InputArea>
+        <OutputArea AreaByteSize="2" GSDMLHash="MGX0MswXQXlbeHh/9q3xhQ==">
+          <Channel Name="Command" StartBit="0" EndBit="15" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </OutputArea>
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="f5a178e5-8567-4516-be75-c28980d56285" hwGsdmlUnitID="MOD_GenericTransparentMFeed" description="Transparent MFeed" information="Transparent Motor Starter with no control" icon="RackIOType" />
+    <HardwareUnit guid="0f544476-0244-4598-b088-191f24486761" hwGsdmlUnitID="SUB_GenericControl-TransparentMFeed" description="Transparent MFeed Control" information="Transparent control of MFeeder" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="2" GSDMLHash="BPParvfsvBOXSyHH/uE2Hg==">
+          <Channel Name="Status" StartBit="0" EndBit="15" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </InputArea>
+        <OutputArea AreaByteSize="0" GSDMLHash="" />
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="150b4905-d59c-4c25-8fbc-ff6646ffad0c" hwGsdmlUnitID="MOD_GenericSacePR" description="Sace CBR" information="SACE Circuit Breaker with PR122 or PR123" icon="RackIOType" />
+    <HardwareUnit guid="698e28e0-73c5-4ff0-910b-038e1dafdcb8" hwGsdmlUnitID="SUB_GenericControl-SacePR" description="CBR Control" information="Control of SACE Circuit Breaker with PR122 or PR123" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="2" GSDMLHash="KwEBVzeMB15w0nqJY91aJA==">
+          <Channel Name="CBR State" StartBit="0" EndBit="15" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </InputArea>
+        <OutputArea AreaByteSize="2" GSDMLHash="MGX0MswXQXlbeHh/9q3xhQ==">
+          <Channel Name="Off" StartBit="15" EndBit="15" Type="ChannelBitBoolean" />
+          <Channel Name="On" StartBit="14" EndBit="14" Type="ChannelBitBoolean" />
+          <Channel Name="Trip Reset" StartBit="13" EndBit="13" Type="ChannelBitBoolean" />
+          <Channel Name="CB Reset" StartBit="12" EndBit="12" Type="ChannelBitBoolean" />
+          <Channel Name="Set To Remote" StartBit="10" EndBit="10" Type="ChannelBitBoolean" />
+          <Channel Name="Command" StartBit="0" EndBit="15" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </OutputArea>
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="2378277d-ff3b-451a-ae8f-70d9c813ce85" hwGsdmlUnitID="SUB_GenericCBRCurrent" description="CBR Current" information="CBR Current Values" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="12" GSDMLHash="luI2Z4Z0zh5MSvlcIexFeA==">
+          <Channel Name="L1 Phase Current" StartBit="0" EndBit="31" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="L2 Phase Current" StartBit="32" EndBit="63" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="L3 Phase Current" StartBit="64" EndBit="95" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </InputArea>
+        <OutputArea AreaByteSize="0" GSDMLHash="" />
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="d01d268f-922d-4a78-b175-b10203dbce1e" hwGsdmlUnitID="SUB_GenericCBRVoltage" description="CBR Voltage" information="CBR Voltage Values" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="12" GSDMLHash="EsEl0BV7yRUMpNJxZ1x/tQ==">
+          <Channel Name="L1-L2 Voltage" StartBit="0" EndBit="31" Type="ChannelFloatIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="L2-L3 Voltage" StartBit="32" EndBit="63" Type="ChannelFloatIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="L3-L1 Voltage" StartBit="64" EndBit="95" Type="ChannelFloatIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </InputArea>
+        <OutputArea AreaByteSize="0" GSDMLHash="" />
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="97af9eb4-1dca-434d-b4c0-30dd6c9c4ac4" hwGsdmlUnitID="SUB_GenericCBRPower" description="CBR Power" information="CBR Power Values" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="16" GSDMLHash="c9+pemhvbEqlBSFOh269Bw==">
+          <Channel Name="Power Factor" StartBit="0" EndBit="31" Type="ChannelFloatIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Active Power" StartBit="32" EndBit="63" Type="ChannelFloatIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Reactive Power" StartBit="64" EndBit="95" Type="ChannelFloatIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Apparent Power" StartBit="96" EndBit="127" Type="ChannelFloatIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </InputArea>
+        <OutputArea AreaByteSize="0" GSDMLHash="" />
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="d40d6f9e-7da5-4082-abef-cb453df7144a" hwGsdmlUnitID="MOD_GenericMFeedDc" description="DC MFeed" information="DC Feeder with no control" icon="RackIOType" />
+    <HardwareUnit guid="f0382d43-d5a1-4bea-9954-84b23a552ae6" hwGsdmlUnitID="SUB_GenericControl-DCFeed" description="DCFeed Control" information="Control of DCFeeder" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="2" GSDMLHash="BPParvfsvBOXSyHH/uE2Hg==">
+          <Channel Name="Off" StartBit="14" EndBit="14" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="On" StartBit="13" EndBit="13" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Auto Mode" StartBit="10" EndBit="10" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Fault" StartBit="9" EndBit="9" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Warning" StartBit="8" EndBit="8" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Trip Reset Possible" StartBit="3" EndBit="3" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Test" StartBit="2" EndBit="2" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Life Bit" StartBit="0" EndBit="0" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Status" StartBit="0" EndBit="15" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </InputArea>
+        <OutputArea AreaByteSize="2" GSDMLHash="MGX0MswXQXlbeHh/9q3xhQ==">
+          <Channel Name="Auto" StartBit="10" EndBit="10" Type="ChannelBitBoolean" />
+          <Channel Name="Trip Reset" StartBit="9" EndBit="9" Type="ChannelBitBoolean" />
+          <Channel Name="Soft Local" StartBit="5" EndBit="5" Type="ChannelBitBoolean" />
+          <Channel Name="Bus Local" StartBit="4" EndBit="4" Type="ChannelBitBoolean" />
+          <Channel Name="Command" StartBit="0" EndBit="15" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </OutputArea>
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="52a49e81-ba31-49d3-9080-f44b0c02d92b" hwGsdmlUnitID="SUB_GenericMeasurementsDC" description="Measurements DC" information="DC Measurement Values" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="6" GSDMLHash="BU8sPzSn9QLlAjiW1rYmyQ==">
+          <Channel Name="DC Current in %" StartBit="0" EndBit="15" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Active Power" StartBit="16" EndBit="47" Type="ChannelFloatIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </InputArea>
+        <OutputArea AreaByteSize="0" GSDMLHash="" />
+      </Channels>
+    </HardwareUnit>
+    <HwdGlobalSettings MaxNumberSubUnits="65536" />
+  </Hwd>
+  <HWDHeaderComment>Modified : 2010-02-16 10:59
+Modified : 2010-03-08 14:38
+Modified : 2010-03-25 16:04
+Modified : 2010-05-07 13:44
+Modified : 2010-05-07 14:01
+Modified : 2010-05-11 11:08
+Modified : 2012-03-12 14:18
+Modified : 2013-01-31 12:49</HWDHeaderComment>
+  <SessionDataVersion>1</SessionDataVersion>
+  <SessionID>d2ea4b6b-69fe-43e0-8406-35492fafb797</SessionID>
+  <DIW_BLOB_Version>1</DIW_BLOB_Version>
+  <DeviceIdentity VendorId="0x001A" DeviceId="0x0010" />
+</DeviceImportWizard>

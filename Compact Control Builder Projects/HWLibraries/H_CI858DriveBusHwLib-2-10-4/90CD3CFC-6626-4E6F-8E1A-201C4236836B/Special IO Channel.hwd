@@ -1,0 +1,57 @@
+HwUnitInfo  (* Special IO Channel*)
+   HWUnitID {453DCB34-61E3-4232-A78C-8FB03DD43B32}
+   Description "Special IO Channel"
+   Information "Special IO connected to CI858"
+(*###HelpProject CI858.xxx *)
+   Icons ChannelType
+   ModuleType  16#500C
+   InterfaceInfo
+     Interface CIGInterface
+     CLSID_CB   {6FBF3F0D-6D1B-4C2D-A55D-8EB36EB2A274} (*  CLSID_CB = GUID for CI858 Protocol handler (PH) in Control builder CB *)
+     CLSID_CTRL {8D9E7478-89A5-4ADA-B10A-4D3A82652E9C} (* CLSID_CTRL  = GUID for CI858 Protocol handler (PH) in Controler *)
+     HWConfig Fail     (* Change of net parameters affect subunits *)
+   End InterfaceInfo
+   DiscreteNumbers  (*Special IO slave addresses*)
+     1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 
+     16 17 18 19 20 21 22 23 24 25 26 27 28 29 30
+     31 32 33 34 35 36 37 38 39 40 41 42 43 44 45
+     46 47 48 49 50 51 52 53 54 55 56 57 58 59 60
+     61 62 63 64 65 66 67 68 69 70 71 72 73 74 75
+     76 77 78 79 80 81 82 83 84 85 86 87 88 89 90
+     91 92 93 94 95 96 97 98 99
+     100 101 102 103 104 105 106 107 108 109 110 
+     111 112 113 114 115 116 117 118 119 120 121 
+     122 123 124 125
+   End DiscreteNumbers
+   SubUnitTypes
+      HWUnitID {63C1375A-44D4-4714-B194-76FAC5BED498} Instances 12  (* Template Special I/O *)
+      HWUnitID {5DC4822A-1661-433e-9D94-0993DF10F888} Instances 12  (* NBIO-21 *)
+      HWUnitID {773F218B-7374-4d2c-AF56-AC4AD3746BAE} Instances 12  (* NBIO-31 *)
+      HWUnitID {0EFCC109-3810-476f-BC31-1D41ECEEC4F7} Instances 12  (* NWIO *)
+      HWUnitID {FFF4DC77-B9F6-46c9-B4C9-E3E14FEA0C03} Instances 12  (* NAIO *)
+      HWUnitID {C0339B39-61C8-48fb-890F-C8A6AB37035B} Instances 12  (* NDIO *)
+      HWUnitID {04D13DE1-56CF-492d-9755-63B951A0BB3D} Instances 12  (* NTAC *)
+      HWUnitID {EF0878FF-6238-4fd6-99BC-25E430C00F38} Instances 12  (* NPCT *)
+      HWUnitID {A4E69606-EF19-4b16-B328-5216C0D991D8} Instances 12  (* NDSC *)
+      HWUnitID {25EB53CB-0636-4abd-9E95-BE71EE99CD59} Instances 12  (* NCTI *)
+   End SubUnitTypes
+   Parameters    
+      ParamInfo 
+         Name SubUnitType
+         Description "Type of connected subunit is 1=SpecialCH"
+         Hidden
+         CompileType HWConfig
+         Datatype INT
+         Default 1
+         ParValIndex 0
+         ParamType Numbered 0
+      End ParamInfo
+   End Parameters   
+   ParValList
+      ParVal
+         ParValIndex 0
+         INT 1 1 1 1
+      End ParVal
+   End ParValList
+  HWUnitInfoCRC 16#0C61
+End HWUnitInfo (* Special IO Channel *)

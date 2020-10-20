@@ -1,0 +1,154 @@
+HWUnitInfo (* RAID16 *)
+   HWUnitID {3C2D5AD9-3785-4F98-BEDF-C732F609B4AC}
+   Description "RAID16"
+   Information "Digital input module, 16 channels"
+   Icons RackIOType
+   Attributes IoUnit DigitalIn
+   Channels
+      ChannelInfo
+         Number 0 
+         ChannelName "Input 0"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30001 16#8000
+      End ChannelInfo
+      ChannelInfo
+         Number 1
+         ChannelName "Input 1"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30001 16#4000
+      End ChannelInfo
+      ChannelInfo
+         Number 2
+         ChannelName "Input 2"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30001 16#2000
+      End ChannelInfo
+      ChannelInfo
+         Number 3
+         ChannelName "Input 3"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30001 16#1000
+      End ChannelInfo
+      ChannelInfo
+         Number 4
+         ChannelName "Input 4"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30001 16#0800
+      End ChannelInfo
+      ChannelInfo
+         Number 5
+         ChannelName "Input 5"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30001 16#0400
+      End ChannelInfo
+      ChannelInfo
+         Number 6
+         ChannelName "Input 6"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30001 16#0200
+      End ChannelInfo
+      ChannelInfo
+         Number 7
+         ChannelName "Input 7"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30001 16#0100
+      End ChannelInfo
+      ChannelInfo
+         Number 10
+         ChannelName "Input 10"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30001 16#0080
+      End ChannelInfo
+      ChannelInfo
+         Number 11
+         ChannelName "Input 11"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30001 16#0040
+      End ChannelInfo
+      ChannelInfo
+         Number 12
+         ChannelName "Input 12"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30001 16#0020
+      End ChannelInfo
+      ChannelInfo
+         Number 13
+         ChannelName "Input 13"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30001 16#0010
+      End ChannelInfo
+      ChannelInfo
+         Number 14
+         ChannelName "Input 14"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30001 16#0008
+      End ChannelInfo
+      ChannelInfo
+         Number 15
+         ChannelName "Input 15"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30001 16#0004
+      End ChannelInfo
+      ChannelInfo
+         Number 16
+         ChannelName "Input 16"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30001 16#0002
+      End ChannelInfo
+      ChannelInfo
+         Number 17
+         ChannelName "Input 17"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30001 16#0001
+      End ChannelInfo
+      ChannelInfo
+         Number 18
+         ChannelName "All inputs"
+         Datatype Dword_In
+         Routine 500
+         CopyParameters 0 0 16#30001 16#0 
+      End ChannelInfo
+      ChannelInfo
+         Number 19
+         ChannelName "UnitStatus"
+         Datatype Status_In
+         Routine 900
+         CopyParameters 0 0 16#50000
+      End ChannelInfo
+   End Channels
+   IoUnitStatus
+      StatusType WrongModuleType 
+      StatusData 16#30000 16#1FFF 16#05 16#40
+      StatusType ModuleMissing
+      StatusData 16#30000 16#8000 16#00 16#0
+      StatusType IoError
+      StatusData 16#30000 16#2000 16#00 16#0
+   End IoUnitStatus
+   Configuration
+      ConfigInfo
+         ModuleKey   16#40
+         InAreaSize  2
+         OutAreaSize 0
+         InWord 
+            WORD 16#A040 0
+            WORD 0       1 
+      End ConfigInfo
+   End Configuration
+  HWUnitInfoCRC 16#AA09
+End HWUnitInfo (* RAID16 *)

@@ -1,0 +1,6552 @@
+(****************************************************************************)
+(* FILE            MHAI.hwd                                                 *)
+(*                                                                          *)
+(* DESCRIPTION     Hardware definition file for MHAI                        *)
+(*                                                                          *)
+(* AUTHOR          Akhilesh Patel                                           *)
+(*                                                                          *)
+(* All rights reserved. Reproduction, modification, use or disclosure       *)
+(* to third parties without express authority, is forbidden.                *)
+(* Copyright ABB Inc. 2011.                                                 *)
+(*                                                                          *)
+(*                                                                          *)
+(* 02-02-2012 Akhilesh Patel                 Initial version                *)
+(*                                                                          *)
+(****************************************************************************)
+FileHeader
+   Contents               "MHAI"
+   Date                   "2012-02-02"
+   Version                "1.0-0"
+  RequiredSyntaxVersion "3.0"
+End FileHeader
+
+HWUnitInfo  (* MHAI *)
+   HWUnitID {D75D72CB-46E2-4315-9F0D-43989446F48E} (* GUID for MHAI *)
+   Description "MHAI"
+   Information "MHAI for Harmonics or interharmonics"
+   Icons LNType
+   InterfaceInfo
+     IoSysType    CIGIO
+     CLSID_CB    {53315084-E413-4c55-92E1-C2E1FAF19460} (*  CLSID_CB  = GUID for CI868 PH in Control builder CB *)
+     CLSID_CTRL  {4AB844AC-2BEE-4910-BA08-CA109A5D7E81}  (* CLSID_CTRL = GUID for CI868 PH in Controler *)
+   End InterfaceInfo
+
+   ConnectionInfo
+      ConnectType OwnUnit
+      IOConnect Fail
+      IoConfig  NoFail
+   End ConnectionInfo
+
+   ExternalConfigInfo
+      ShowExternalChannelDescriptionColumn
+   End ExternalConfigInfo
+
+   Parameters
+      ParamInfo
+         Name IALADDREEHEALTH_STVAL
+         Description "IALaddr for EEHealth_stVal"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 1
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEEEHEALTH_STVAL
+         Description "DMCD Type for EEHealth_stVal"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 12
+         ParValIndex 2
+         ParamType Numbered 2
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOEEHEALTH_STVAL
+         Description "Protocol Info for EEHealth_stVal"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 3
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHZ_MAG_F
+         Description "IALaddr for Hz_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 4
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHZ_MAG_F
+         Description "DMCD Type for Hz_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 5
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHZ_MAG_F
+         Description "Protocol Info for Hz_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 6
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHRMSA_PHSA_CVAL_MAG_F
+         Description "IALaddr for HRmsA_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 7
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHRMSA_PHSA_CVAL_MAG_F
+         Description "DMCD Type for HRmsA_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 8
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHRMSA_PHSA_CVAL_MAG_F
+         Description "Protocol Info for HRmsA_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 9
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHRMSA_PHSB_CVAL_MAG_F
+         Description "IALaddr for HRmsA_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 10
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHRMSA_PHSB_CVAL_MAG_F
+         Description "DMCD Type for HRmsA_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 11
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHRMSA_PHSB_CVAL_MAG_F
+         Description "Protocol Info for HRmsA_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 12
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHRMSA_PHSC_CVAL_MAG_F
+         Description "IALaddr for HRmsA_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 13
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHRMSA_PHSC_CVAL_MAG_F
+         Description "DMCD Type for HRmsA_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 14
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHRMSA_PHSC_CVAL_MAG_F
+         Description "Protocol Info for HRmsA_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 15
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHRMSA_NEUT_CVAL_MAG_F
+         Description "IALaddr for HRmsA_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 16
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHRMSA_NEUT_CVAL_MAG_F
+         Description "DMCD Type for HRmsA_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 17
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHRMSA_NEUT_CVAL_MAG_F
+         Description "Protocol Info for HRmsA_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 18
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHRMSA_NET_CVAL_MAG_F
+         Description "IALaddr for HRmsA_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 19
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHRMSA_NET_CVAL_MAG_F
+         Description "DMCD Type for HRmsA_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 20
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHRMSA_NET_CVAL_MAG_F
+         Description "Protocol Info for HRmsA_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 21
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHRMSA_RES_CVAL_MAG_F
+         Description "IALaddr for HRmsA_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 22
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHRMSA_RES_CVAL_MAG_F
+         Description "DMCD Type for HRmsA_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 23
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHRMSA_RES_CVAL_MAG_F
+         Description "Protocol Info for HRmsA_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 24
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHRMSPHV_PHSA_CVAL_MAG_F
+         Description "IALaddr for HRmsPhV_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 25
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHRMSPHV_PHSA_CVAL_MAG_F
+         Description "DMCD Type for HRmsPhV_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 26
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHRMSPHV_PHSA_CVAL_MAG_F
+         Description "Protocol Info for HRmsPhV_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 27
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHRMSPHV_PHSB_CVAL_MAG_F
+         Description "IALaddr for HRmsPhV_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 28
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHRMSPHV_PHSB_CVAL_MAG_F
+         Description "DMCD Type for HRmsPhV_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 29
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHRMSPHV_PHSB_CVAL_MAG_F
+         Description "Protocol Info for HRmsPhV_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 30
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHRMSPHV_PHSC_CVAL_MAG_F
+         Description "IALaddr for HRmsPhV_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 31
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHRMSPHV_PHSC_CVAL_MAG_F
+         Description "DMCD Type for HRmsPhV_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 32
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHRMSPHV_PHSC_CVAL_MAG_F
+         Description "Protocol Info for HRmsPhV_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 33
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHRMSPHV_NEUT_CVAL_MAG_F
+         Description "IALaddr for HRmsPhV_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 34
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHRMSPHV_NEUT_CVAL_MAG_F
+         Description "DMCD Type for HRmsPhV_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 35
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHRMSPHV_NEUT_CVAL_MAG_F
+         Description "Protocol Info for HRmsPhV_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 36
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHRMSPHV_NET_CVAL_MAG_F
+         Description "IALaddr for HRmsPhV_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 37
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHRMSPHV_NET_CVAL_MAG_F
+         Description "DMCD Type for HRmsPhV_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 38
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHRMSPHV_NET_CVAL_MAG_F
+         Description "Protocol Info for HRmsPhV_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 39
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHRMSPHV_RES_CVAL_MAG_F
+         Description "IALaddr for HRmsPhV_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 40
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHRMSPHV_RES_CVAL_MAG_F
+         Description "DMCD Type for HRmsPhV_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 41
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHRMSPHV_RES_CVAL_MAG_F
+         Description "Protocol Info for HRmsPhV_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 42
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHRMSPPV_PHSAB_CVAL_MAG_F
+         Description "IALaddr for HRmsPPV_phsAB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 43
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHRMSPPV_PHSAB_CVAL_MAG_F
+         Description "DMCD Type for HRmsPPV_phsAB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 44
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHRMSPPV_PHSAB_CVAL_MAG_F
+         Description "Protocol Info for HRmsPPV_phsAB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 45
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHRMSPPV_PHSBC_CVAL_MAG_F
+         Description "IALaddr for HRmsPPV_phsBC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 46
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHRMSPPV_PHSBC_CVAL_MAG_F
+         Description "DMCD Type for HRmsPPV_phsBC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 47
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHRMSPPV_PHSBC_CVAL_MAG_F
+         Description "Protocol Info for HRmsPPV_phsBC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 48
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHRMSPPV_PHSCA_CVAL_MAG_F
+         Description "IALaddr for HRmsPPV_phsCA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 49
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHRMSPPV_PHSCA_CVAL_MAG_F
+         Description "DMCD Type for HRmsPPV_phsCA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 50
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHRMSPPV_PHSCA_CVAL_MAG_F
+         Description "Protocol Info for HRmsPPV_phsCA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 51
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHTUW_PHSA_CVAL_MAG_F
+         Description "IALaddr for HTuW_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 52
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHTUW_PHSA_CVAL_MAG_F
+         Description "DMCD Type for HTuW_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 53
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHTUW_PHSA_CVAL_MAG_F
+         Description "Protocol Info for HTuW_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 54
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHTUW_PHSB_CVAL_MAG_F
+         Description "IALaddr for HTuW_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 55
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHTUW_PHSB_CVAL_MAG_F
+         Description "DMCD Type for HTuW_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 56
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHTUW_PHSB_CVAL_MAG_F
+         Description "Protocol Info for HTuW_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 57
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHTUW_PHSC_CVAL_MAG_F
+         Description "IALaddr for HTuW_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 58
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHTUW_PHSC_CVAL_MAG_F
+         Description "DMCD Type for HTuW_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 59
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHTUW_PHSC_CVAL_MAG_F
+         Description "Protocol Info for HTuW_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 60
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHTUW_NEUT_CVAL_MAG_F
+         Description "IALaddr for HTuW_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 61
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHTUW_NEUT_CVAL_MAG_F
+         Description "DMCD Type for HTuW_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 62
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHTUW_NEUT_CVAL_MAG_F
+         Description "Protocol Info for HTuW_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 63
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHTUW_NET_CVAL_MAG_F
+         Description "IALaddr for HTuW_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 64
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHTUW_NET_CVAL_MAG_F
+         Description "DMCD Type for HTuW_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 65
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHTUW_NET_CVAL_MAG_F
+         Description "Protocol Info for HTuW_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 66
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHTUW_RES_CVAL_MAG_F
+         Description "IALaddr for HTuW_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 67
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHTUW_RES_CVAL_MAG_F
+         Description "DMCD Type for HTuW_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 68
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHTUW_RES_CVAL_MAG_F
+         Description "Protocol Info for HTuW_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 69
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHTSW_PHSA_CVAL_MAG_F
+         Description "IALaddr for HTsW_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 70
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHTSW_PHSA_CVAL_MAG_F
+         Description "DMCD Type for HTsW_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 71
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHTSW_PHSA_CVAL_MAG_F
+         Description "Protocol Info for HTsW_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 72
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHTSW_PHSB_CVAL_MAG_F
+         Description "IALaddr for HTsW_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 73
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHTSW_PHSB_CVAL_MAG_F
+         Description "DMCD Type for HTsW_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 74
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHTSW_PHSB_CVAL_MAG_F
+         Description "Protocol Info for HTsW_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 75
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHTSW_PHSC_CVAL_MAG_F
+         Description "IALaddr for HTsW_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 76
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHTSW_PHSC_CVAL_MAG_F
+         Description "DMCD Type for HTsW_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 77
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHTSW_PHSC_CVAL_MAG_F
+         Description "Protocol Info for HTsW_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 78
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHTSW_NEUT_CVAL_MAG_F
+         Description "IALaddr for HTsW_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 79
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHTSW_NEUT_CVAL_MAG_F
+         Description "DMCD Type for HTsW_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 80
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHTSW_NEUT_CVAL_MAG_F
+         Description "Protocol Info for HTsW_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 81
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHTSW_NET_CVAL_MAG_F
+         Description "IALaddr for HTsW_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 82
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHTSW_NET_CVAL_MAG_F
+         Description "DMCD Type for HTsW_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 83
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHTSW_NET_CVAL_MAG_F
+         Description "Protocol Info for HTsW_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 84
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHTSW_RES_CVAL_MAG_F
+         Description "IALaddr for HTsW_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 85
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHTSW_RES_CVAL_MAG_F
+         Description "DMCD Type for HTsW_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 86
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHTSW_RES_CVAL_MAG_F
+         Description "Protocol Info for HTsW_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 87
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHATM_PHSA_CVAL_MAG_F
+         Description "IALaddr for HATm_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 88
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHATM_PHSA_CVAL_MAG_F
+         Description "DMCD Type for HATm_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 89
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHATM_PHSA_CVAL_MAG_F
+         Description "Protocol Info for HATm_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 90
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHATM_PHSB_CVAL_MAG_F
+         Description "IALaddr for HATm_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 91
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHATM_PHSB_CVAL_MAG_F
+         Description "DMCD Type for HATm_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 92
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHATM_PHSB_CVAL_MAG_F
+         Description "Protocol Info for HATm_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 93
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHATM_PHSC_CVAL_MAG_F
+         Description "IALaddr for HATm_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 94
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHATM_PHSC_CVAL_MAG_F
+         Description "DMCD Type for HATm_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 95
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHATM_PHSC_CVAL_MAG_F
+         Description "Protocol Info for HATm_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 96
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHATM_NEUT_CVAL_MAG_F
+         Description "IALaddr for HATm_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 97
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHATM_NEUT_CVAL_MAG_F
+         Description "DMCD Type for HATm_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 98
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHATM_NEUT_CVAL_MAG_F
+         Description "Protocol Info for HATm_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 99
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHATM_NET_CVAL_MAG_F
+         Description "IALaddr for HATm_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 100
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHATM_NET_CVAL_MAG_F
+         Description "DMCD Type for HATm_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 101
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHATM_NET_CVAL_MAG_F
+         Description "Protocol Info for HATm_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 102
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHATM_RES_CVAL_MAG_F
+         Description "IALaddr for HATm_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 103
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHATM_RES_CVAL_MAG_F
+         Description "DMCD Type for HATm_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 104
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHATM_RES_CVAL_MAG_F
+         Description "Protocol Info for HATm_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 105
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHKF_PHSA_CVAL_MAG_F
+         Description "IALaddr for HKf_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 106
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHKF_PHSA_CVAL_MAG_F
+         Description "DMCD Type for HKf_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 107
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHKF_PHSA_CVAL_MAG_F
+         Description "Protocol Info for HKf_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 108
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHKF_PHSB_CVAL_MAG_F
+         Description "IALaddr for HKf_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 109
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHKF_PHSB_CVAL_MAG_F
+         Description "DMCD Type for HKf_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 110
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHKF_PHSB_CVAL_MAG_F
+         Description "Protocol Info for HKf_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 111
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHKF_PHSC_CVAL_MAG_F
+         Description "IALaddr for HKf_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 112
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHKF_PHSC_CVAL_MAG_F
+         Description "DMCD Type for HKf_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 113
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHKF_PHSC_CVAL_MAG_F
+         Description "Protocol Info for HKf_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 114
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHKF_NEUT_CVAL_MAG_F
+         Description "IALaddr for HKf_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 115
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHKF_NEUT_CVAL_MAG_F
+         Description "DMCD Type for HKf_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 116
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHKF_NEUT_CVAL_MAG_F
+         Description "Protocol Info for HKf_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 117
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHKF_NET_CVAL_MAG_F
+         Description "IALaddr for HKf_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 118
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHKF_NET_CVAL_MAG_F
+         Description "DMCD Type for HKf_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 119
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHKF_NET_CVAL_MAG_F
+         Description "Protocol Info for HKf_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 120
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHKF_RES_CVAL_MAG_F
+         Description "IALaddr for HKf_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 121
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHKF_RES_CVAL_MAG_F
+         Description "DMCD Type for HKf_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 122
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHKF_RES_CVAL_MAG_F
+         Description "Protocol Info for HKf_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 123
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHTDF_PHSA_CVAL_MAG_F
+         Description "IALaddr for HTdf_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 124
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHTDF_PHSA_CVAL_MAG_F
+         Description "DMCD Type for HTdf_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 125
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHTDF_PHSA_CVAL_MAG_F
+         Description "Protocol Info for HTdf_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 126
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHTDF_PHSB_CVAL_MAG_F
+         Description "IALaddr for HTdf_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 127
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHTDF_PHSB_CVAL_MAG_F
+         Description "DMCD Type for HTdf_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 128
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHTDF_PHSB_CVAL_MAG_F
+         Description "Protocol Info for HTdf_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 129
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHTDF_PHSC_CVAL_MAG_F
+         Description "IALaddr for HTdf_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 130
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHTDF_PHSC_CVAL_MAG_F
+         Description "DMCD Type for HTdf_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 131
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHTDF_PHSC_CVAL_MAG_F
+         Description "Protocol Info for HTdf_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 132
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHTDF_NEUT_CVAL_MAG_F
+         Description "IALaddr for HTdf_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 133
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHTDF_NEUT_CVAL_MAG_F
+         Description "DMCD Type for HTdf_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 134
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHTDF_NEUT_CVAL_MAG_F
+         Description "Protocol Info for HTdf_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 135
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHTDF_NET_CVAL_MAG_F
+         Description "IALaddr for HTdf_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 136
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHTDF_NET_CVAL_MAG_F
+         Description "DMCD Type for HTdf_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 137
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHTDF_NET_CVAL_MAG_F
+         Description "Protocol Info for HTdf_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 138
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHTDF_RES_CVAL_MAG_F
+         Description "IALaddr for HTdf_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 139
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHTDF_RES_CVAL_MAG_F
+         Description "DMCD Type for HTdf_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 140
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHTDF_RES_CVAL_MAG_F
+         Description "Protocol Info for HTdf_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 141
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTHDA_PHSA_CVAL_MAG_F
+         Description "IALaddr for ThdA_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 142
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETHDA_PHSA_CVAL_MAG_F
+         Description "DMCD Type for ThdA_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 143
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTHDA_PHSA_CVAL_MAG_F
+         Description "Protocol Info for ThdA_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 144
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTHDA_PHSB_CVAL_MAG_F
+         Description "IALaddr for ThdA_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 145
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETHDA_PHSB_CVAL_MAG_F
+         Description "DMCD Type for ThdA_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 146
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTHDA_PHSB_CVAL_MAG_F
+         Description "Protocol Info for ThdA_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 147
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTHDA_PHSC_CVAL_MAG_F
+         Description "IALaddr for ThdA_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 148
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETHDA_PHSC_CVAL_MAG_F
+         Description "DMCD Type for ThdA_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 149
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTHDA_PHSC_CVAL_MAG_F
+         Description "Protocol Info for ThdA_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 150
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTHDA_NEUT_CVAL_MAG_F
+         Description "IALaddr for ThdA_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 151
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETHDA_NEUT_CVAL_MAG_F
+         Description "DMCD Type for ThdA_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 152
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTHDA_NEUT_CVAL_MAG_F
+         Description "Protocol Info for ThdA_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 153
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTHDA_NET_CVAL_MAG_F
+         Description "IALaddr for ThdA_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 154
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETHDA_NET_CVAL_MAG_F
+         Description "DMCD Type for ThdA_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 155
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTHDA_NET_CVAL_MAG_F
+         Description "Protocol Info for ThdA_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 156
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTHDA_RES_CVAL_MAG_F
+         Description "IALaddr for ThdA_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 157
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETHDA_RES_CVAL_MAG_F
+         Description "DMCD Type for ThdA_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 158
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTHDA_RES_CVAL_MAG_F
+         Description "Protocol Info for ThdA_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 159
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTHDODDA_PHSA_CVAL_MAG_F
+         Description "IALaddr for ThdOddA_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 160
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETHDODDA_PHSA_CVAL_MAG_F
+         Description "DMCD Type for ThdOddA_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 161
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTHDODDA_PHSA_CVAL_MAG_F
+         Description "Protocol Info for ThdOddA_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 162
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTHDODDA_PHSB_CVAL_MAG_F
+         Description "IALaddr for ThdOddA_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 163
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETHDODDA_PHSB_CVAL_MAG_F
+         Description "DMCD Type for ThdOddA_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 164
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTHDODDA_PHSB_CVAL_MAG_F
+         Description "Protocol Info for ThdOddA_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 165
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTHDODDA_PHSC_CVAL_MAG_F
+         Description "IALaddr for ThdOddA_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 166
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETHDODDA_PHSC_CVAL_MAG_F
+         Description "DMCD Type for ThdOddA_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 167
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTHDODDA_PHSC_CVAL_MAG_F
+         Description "Protocol Info for ThdOddA_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 168
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTHDODDA_NEUT_CVAL_MAG_F
+         Description "IALaddr for ThdOddA_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 169
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETHDODDA_NEUT_CVAL_MAG_F
+         Description "DMCD Type for ThdOddA_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 170
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTHDODDA_NEUT_CVAL_MAG_F
+         Description "Protocol Info for ThdOddA_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 171
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTHDODDA_NET_CVAL_MAG_F
+         Description "IALaddr for ThdOddA_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 172
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETHDODDA_NET_CVAL_MAG_F
+         Description "DMCD Type for ThdOddA_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 173
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTHDODDA_NET_CVAL_MAG_F
+         Description "Protocol Info for ThdOddA_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 174
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTHDODDA_RES_CVAL_MAG_F
+         Description "IALaddr for ThdOddA_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 175
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETHDODDA_RES_CVAL_MAG_F
+         Description "DMCD Type for ThdOddA_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 176
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTHDODDA_RES_CVAL_MAG_F
+         Description "Protocol Info for ThdOddA_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 177
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTHDEVNA_PHSA_CVAL_MAG_F
+         Description "IALaddr for ThdEvnA_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 178
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETHDEVNA_PHSA_CVAL_MAG_F
+         Description "DMCD Type for ThdEvnA_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 179
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTHDEVNA_PHSA_CVAL_MAG_F
+         Description "Protocol Info for ThdEvnA_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 180
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTHDEVNA_PHSB_CVAL_MAG_F
+         Description "IALaddr for ThdEvnA_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 181
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETHDEVNA_PHSB_CVAL_MAG_F
+         Description "DMCD Type for ThdEvnA_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 182
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTHDEVNA_PHSB_CVAL_MAG_F
+         Description "Protocol Info for ThdEvnA_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 183
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTHDEVNA_PHSC_CVAL_MAG_F
+         Description "IALaddr for ThdEvnA_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 184
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETHDEVNA_PHSC_CVAL_MAG_F
+         Description "DMCD Type for ThdEvnA_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 185
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTHDEVNA_PHSC_CVAL_MAG_F
+         Description "Protocol Info for ThdEvnA_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 186
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTHDEVNA_NEUT_CVAL_MAG_F
+         Description "IALaddr for ThdEvnA_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 187
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETHDEVNA_NEUT_CVAL_MAG_F
+         Description "DMCD Type for ThdEvnA_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 188
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTHDEVNA_NEUT_CVAL_MAG_F
+         Description "Protocol Info for ThdEvnA_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 189
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTHDEVNA_NET_CVAL_MAG_F
+         Description "IALaddr for ThdEvnA_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 190
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETHDEVNA_NET_CVAL_MAG_F
+         Description "DMCD Type for ThdEvnA_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 191
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTHDEVNA_NET_CVAL_MAG_F
+         Description "Protocol Info for ThdEvnA_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 192
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTHDEVNA_RES_CVAL_MAG_F
+         Description "IALaddr for ThdEvnA_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 193
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETHDEVNA_RES_CVAL_MAG_F
+         Description "DMCD Type for ThdEvnA_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 194
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTHDEVNA_RES_CVAL_MAG_F
+         Description "Protocol Info for ThdEvnA_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 195
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTDDA_PHSA_CVAL_MAG_F
+         Description "IALaddr for TddA_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 196
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETDDA_PHSA_CVAL_MAG_F
+         Description "DMCD Type for TddA_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 197
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTDDA_PHSA_CVAL_MAG_F
+         Description "Protocol Info for TddA_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 198
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTDDA_PHSB_CVAL_MAG_F
+         Description "IALaddr for TddA_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 199
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETDDA_PHSB_CVAL_MAG_F
+         Description "DMCD Type for TddA_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 200
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTDDA_PHSB_CVAL_MAG_F
+         Description "Protocol Info for TddA_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 201
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTDDA_PHSC_CVAL_MAG_F
+         Description "IALaddr for TddA_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 202
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETDDA_PHSC_CVAL_MAG_F
+         Description "DMCD Type for TddA_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 203
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTDDA_PHSC_CVAL_MAG_F
+         Description "Protocol Info for TddA_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 204
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTDDA_NEUT_CVAL_MAG_F
+         Description "IALaddr for TddA_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 205
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETDDA_NEUT_CVAL_MAG_F
+         Description "DMCD Type for TddA_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 206
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTDDA_NEUT_CVAL_MAG_F
+         Description "Protocol Info for TddA_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 207
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTDDA_NET_CVAL_MAG_F
+         Description "IALaddr for TddA_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 208
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETDDA_NET_CVAL_MAG_F
+         Description "DMCD Type for TddA_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 209
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTDDA_NET_CVAL_MAG_F
+         Description "Protocol Info for TddA_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 210
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTDDA_RES_CVAL_MAG_F
+         Description "IALaddr for TddA_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 211
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETDDA_RES_CVAL_MAG_F
+         Description "DMCD Type for TddA_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 212
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTDDA_RES_CVAL_MAG_F
+         Description "Protocol Info for TddA_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 213
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTDDODDA_PHSA_CVAL_MAG_F
+         Description "IALaddr for TddOddA_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 214
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETDDODDA_PHSA_CVAL_MAG_F
+         Description "DMCD Type for TddOddA_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 215
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTDDODDA_PHSA_CVAL_MAG_F
+         Description "Protocol Info for TddOddA_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 216
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTDDODDA_PHSB_CVAL_MAG_F
+         Description "IALaddr for TddOddA_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 217
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETDDODDA_PHSB_CVAL_MAG_F
+         Description "DMCD Type for TddOddA_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 218
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTDDODDA_PHSB_CVAL_MAG_F
+         Description "Protocol Info for TddOddA_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 219
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTDDODDA_PHSC_CVAL_MAG_F
+         Description "IALaddr for TddOddA_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 220
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETDDODDA_PHSC_CVAL_MAG_F
+         Description "DMCD Type for TddOddA_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 221
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTDDODDA_PHSC_CVAL_MAG_F
+         Description "Protocol Info for TddOddA_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 222
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTDDODDA_NEUT_CVAL_MAG_F
+         Description "IALaddr for TddOddA_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 223
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETDDODDA_NEUT_CVAL_MAG_F
+         Description "DMCD Type for TddOddA_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 224
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTDDODDA_NEUT_CVAL_MAG_F
+         Description "Protocol Info for TddOddA_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 225
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTDDODDA_NET_CVAL_MAG_F
+         Description "IALaddr for TddOddA_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 226
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETDDODDA_NET_CVAL_MAG_F
+         Description "DMCD Type for TddOddA_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 227
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTDDODDA_NET_CVAL_MAG_F
+         Description "Protocol Info for TddOddA_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 228
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTDDODDA_RES_CVAL_MAG_F
+         Description "IALaddr for TddOddA_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 229
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETDDODDA_RES_CVAL_MAG_F
+         Description "DMCD Type for TddOddA_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 230
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTDDODDA_RES_CVAL_MAG_F
+         Description "Protocol Info for TddOddA_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 231
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTDDEVNA_PHSA_CVAL_MAG_F
+         Description "IALaddr for TddEvnA_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 232
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETDDEVNA_PHSA_CVAL_MAG_F
+         Description "DMCD Type for TddEvnA_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 233
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTDDEVNA_PHSA_CVAL_MAG_F
+         Description "Protocol Info for TddEvnA_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 234
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTDDEVNA_PHSB_CVAL_MAG_F
+         Description "IALaddr for TddEvnA_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 235
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETDDEVNA_PHSB_CVAL_MAG_F
+         Description "DMCD Type for TddEvnA_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 236
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTDDEVNA_PHSB_CVAL_MAG_F
+         Description "Protocol Info for TddEvnA_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 237
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTDDEVNA_PHSC_CVAL_MAG_F
+         Description "IALaddr for TddEvnA_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 238
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETDDEVNA_PHSC_CVAL_MAG_F
+         Description "DMCD Type for TddEvnA_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 239
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTDDEVNA_PHSC_CVAL_MAG_F
+         Description "Protocol Info for TddEvnA_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 240
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTDDEVNA_NEUT_CVAL_MAG_F
+         Description "IALaddr for TddEvnA_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 241
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETDDEVNA_NEUT_CVAL_MAG_F
+         Description "DMCD Type for TddEvnA_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 242
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTDDEVNA_NEUT_CVAL_MAG_F
+         Description "Protocol Info for TddEvnA_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 243
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTDDEVNA_NET_CVAL_MAG_F
+         Description "IALaddr for TddEvnA_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 244
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETDDEVNA_NET_CVAL_MAG_F
+         Description "DMCD Type for TddEvnA_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 245
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTDDEVNA_NET_CVAL_MAG_F
+         Description "Protocol Info for TddEvnA_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 246
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTDDEVNA_RES_CVAL_MAG_F
+         Description "IALaddr for TddEvnA_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 247
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETDDEVNA_RES_CVAL_MAG_F
+         Description "DMCD Type for TddEvnA_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 248
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTDDEVNA_RES_CVAL_MAG_F
+         Description "Protocol Info for TddEvnA_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 249
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTHDPHV_PHSA_CVAL_MAG_F
+         Description "IALaddr for ThdPhV_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 250
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETHDPHV_PHSA_CVAL_MAG_F
+         Description "DMCD Type for ThdPhV_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 251
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTHDPHV_PHSA_CVAL_MAG_F
+         Description "Protocol Info for ThdPhV_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 252
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTHDPHV_PHSB_CVAL_MAG_F
+         Description "IALaddr for ThdPhV_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 253
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETHDPHV_PHSB_CVAL_MAG_F
+         Description "DMCD Type for ThdPhV_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 254
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTHDPHV_PHSB_CVAL_MAG_F
+         Description "Protocol Info for ThdPhV_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 255
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTHDPHV_PHSC_CVAL_MAG_F
+         Description "IALaddr for ThdPhV_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 256
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETHDPHV_PHSC_CVAL_MAG_F
+         Description "DMCD Type for ThdPhV_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 257
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTHDPHV_PHSC_CVAL_MAG_F
+         Description "Protocol Info for ThdPhV_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 258
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTHDPHV_NEUT_CVAL_MAG_F
+         Description "IALaddr for ThdPhV_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 259
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETHDPHV_NEUT_CVAL_MAG_F
+         Description "DMCD Type for ThdPhV_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 260
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTHDPHV_NEUT_CVAL_MAG_F
+         Description "Protocol Info for ThdPhV_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 261
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTHDPHV_NET_CVAL_MAG_F
+         Description "IALaddr for ThdPhV_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 262
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETHDPHV_NET_CVAL_MAG_F
+         Description "DMCD Type for ThdPhV_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 263
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTHDPHV_NET_CVAL_MAG_F
+         Description "Protocol Info for ThdPhV_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 264
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTHDPHV_RES_CVAL_MAG_F
+         Description "IALaddr for ThdPhV_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 265
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETHDPHV_RES_CVAL_MAG_F
+         Description "DMCD Type for ThdPhV_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 266
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTHDPHV_RES_CVAL_MAG_F
+         Description "Protocol Info for ThdPhV_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 267
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTHDODDPHV_PHSA_CVAL_MAG_F
+         Description "IALaddr for ThdOddPhV_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 268
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETHDODDPHV_PHSA_CVAL_MAG_F
+         Description "DMCD Type for ThdOddPhV_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 269
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTHDODDPHV_PHSA_CVAL_MAG_F
+         Description "Protocol Info for ThdOddPhV_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 270
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTHDODDPHV_PHSB_CVAL_MAG_F
+         Description "IALaddr for ThdOddPhV_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 271
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETHDODDPHV_PHSB_CVAL_MAG_F
+         Description "DMCD Type for ThdOddPhV_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 272
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTHDODDPHV_PHSB_CVAL_MAG_F
+         Description "Protocol Info for ThdOddPhV_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 273
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTHDODDPHV_PHSC_CVAL_MAG_F
+         Description "IALaddr for ThdOddPhV_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 274
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETHDODDPHV_PHSC_CVAL_MAG_F
+         Description "DMCD Type for ThdOddPhV_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 275
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTHDODDPHV_PHSC_CVAL_MAG_F
+         Description "Protocol Info for ThdOddPhV_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 276
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTHDODDPHV_NEUT_CVAL_MAG_F
+         Description "IALaddr for ThdOddPhV_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 277
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETHDODDPHV_NEUT_CVAL_MAG_F
+         Description "DMCD Type for ThdOddPhV_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 278
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTHDODDPHV_NEUT_CVAL_MAG_F
+         Description "Protocol Info for ThdOddPhV_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 279
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTHDODDPHV_NET_CVAL_MAG_F
+         Description "IALaddr for ThdOddPhV_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 280
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETHDODDPHV_NET_CVAL_MAG_F
+         Description "DMCD Type for ThdOddPhV_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 281
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTHDODDPHV_NET_CVAL_MAG_F
+         Description "Protocol Info for ThdOddPhV_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 282
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTHDODDPHV_RES_CVAL_MAG_F
+         Description "IALaddr for ThdOddPhV_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 283
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETHDODDPHV_RES_CVAL_MAG_F
+         Description "DMCD Type for ThdOddPhV_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 284
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTHDODDPHV_RES_CVAL_MAG_F
+         Description "Protocol Info for ThdOddPhV_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 285
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTHDEVNPHV_PHSA_CVAL_MAG_F
+         Description "IALaddr for ThdEvnPhV_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 286
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETHDEVNPHV_PHSA_CVAL_MAG_F
+         Description "DMCD Type for ThdEvnPhV_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 287
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTHDEVNPHV_PHSA_CVAL_MAG_F
+         Description "Protocol Info for ThdEvnPhV_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 288
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTHDEVNPHV_PHSB_CVAL_MAG_F
+         Description "IALaddr for ThdEvnPhV_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 289
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETHDEVNPHV_PHSB_CVAL_MAG_F
+         Description "DMCD Type for ThdEvnPhV_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 290
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTHDEVNPHV_PHSB_CVAL_MAG_F
+         Description "Protocol Info for ThdEvnPhV_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 291
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTHDEVNPHV_PHSC_CVAL_MAG_F
+         Description "IALaddr for ThdEvnPhV_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 292
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETHDEVNPHV_PHSC_CVAL_MAG_F
+         Description "DMCD Type for ThdEvnPhV_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 293
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTHDEVNPHV_PHSC_CVAL_MAG_F
+         Description "Protocol Info for ThdEvnPhV_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 294
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTHDEVNPHV_NEUT_CVAL_MAG_F
+         Description "IALaddr for ThdEvnPhV_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 295
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETHDEVNPHV_NEUT_CVAL_MAG_F
+         Description "DMCD Type for ThdEvnPhV_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 296
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTHDEVNPHV_NEUT_CVAL_MAG_F
+         Description "Protocol Info for ThdEvnPhV_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 297
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTHDEVNPHV_NET_CVAL_MAG_F
+         Description "IALaddr for ThdEvnPhV_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 298
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETHDEVNPHV_NET_CVAL_MAG_F
+         Description "DMCD Type for ThdEvnPhV_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 299
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTHDEVNPHV_NET_CVAL_MAG_F
+         Description "Protocol Info for ThdEvnPhV_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 300
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTHDEVNPHV_RES_CVAL_MAG_F
+         Description "IALaddr for ThdEvnPhV_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 301
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETHDEVNPHV_RES_CVAL_MAG_F
+         Description "DMCD Type for ThdEvnPhV_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 302
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTHDEVNPHV_RES_CVAL_MAG_F
+         Description "Protocol Info for ThdEvnPhV_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 303
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTHDPPV_PHSAB_CVAL_MAG_F
+         Description "IALaddr for ThdPPV_phsAB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 304
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETHDPPV_PHSAB_CVAL_MAG_F
+         Description "DMCD Type for ThdPPV_phsAB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 305
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTHDPPV_PHSAB_CVAL_MAG_F
+         Description "Protocol Info for ThdPPV_phsAB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 306
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTHDPPV_PHSBC_CVAL_MAG_F
+         Description "IALaddr for ThdPPV_phsBC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 307
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETHDPPV_PHSBC_CVAL_MAG_F
+         Description "DMCD Type for ThdPPV_phsBC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 308
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTHDPPV_PHSBC_CVAL_MAG_F
+         Description "Protocol Info for ThdPPV_phsBC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 309
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTHDPPV_PHSCA_CVAL_MAG_F
+         Description "IALaddr for ThdPPV_phsCA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 310
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETHDPPV_PHSCA_CVAL_MAG_F
+         Description "DMCD Type for ThdPPV_phsCA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 311
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTHDPPV_PHSCA_CVAL_MAG_F
+         Description "Protocol Info for ThdPPV_phsCA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 312
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTHDODDPPV_PHSAB_CVAL_MAG_F
+         Description "IALaddr for ThdOddPPV_phsAB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 313
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETHDODDPPV_PHSAB_CVAL_MAG_F
+         Description "DMCD Type for ThdOddPPV_phsAB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 314
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTHDODDPPV_PHSAB_CVAL_MAG_F
+         Description "Protocol Info for ThdOddPPV_phsAB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 315
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTHDODDPPV_PHSBC_CVAL_MAG_F
+         Description "IALaddr for ThdOddPPV_phsBC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 316
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETHDODDPPV_PHSBC_CVAL_MAG_F
+         Description "DMCD Type for ThdOddPPV_phsBC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 317
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTHDODDPPV_PHSBC_CVAL_MAG_F
+         Description "Protocol Info for ThdOddPPV_phsBC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 318
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTHDODDPPV_PHSCA_CVAL_MAG_F
+         Description "IALaddr for ThdOddPPV_phsCA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 319
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETHDODDPPV_PHSCA_CVAL_MAG_F
+         Description "DMCD Type for ThdOddPPV_phsCA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 320
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTHDODDPPV_PHSCA_CVAL_MAG_F
+         Description "Protocol Info for ThdOddPPV_phsCA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 321
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTHDEVNPPV_PHSAB_CVAL_MAG_F
+         Description "IALaddr for ThdEvnPPV_phsAB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 322
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETHDEVNPPV_PHSAB_CVAL_MAG_F
+         Description "DMCD Type for ThdEvnPPV_phsAB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 323
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTHDEVNPPV_PHSAB_CVAL_MAG_F
+         Description "Protocol Info for ThdEvnPPV_phsAB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 324
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTHDEVNPPV_PHSBC_CVAL_MAG_F
+         Description "IALaddr for ThdEvnPPV_phsBC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 325
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETHDEVNPPV_PHSBC_CVAL_MAG_F
+         Description "DMCD Type for ThdEvnPPV_phsBC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 326
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTHDEVNPPV_PHSBC_CVAL_MAG_F
+         Description "Protocol Info for ThdEvnPPV_phsBC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 327
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTHDEVNPPV_PHSCA_CVAL_MAG_F
+         Description "IALaddr for ThdEvnPPV_phsCA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 328
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETHDEVNPPV_PHSCA_CVAL_MAG_F
+         Description "DMCD Type for ThdEvnPPV_phsCA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 329
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTHDEVNPPV_PHSCA_CVAL_MAG_F
+         Description "Protocol Info for ThdEvnPPV_phsCA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 330
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHCFPHV_PHSA_CVAL_MAG_F
+         Description "IALaddr for HCfPhV_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 331
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHCFPHV_PHSA_CVAL_MAG_F
+         Description "DMCD Type for HCfPhV_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 332
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHCFPHV_PHSA_CVAL_MAG_F
+         Description "Protocol Info for HCfPhV_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 333
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHCFPHV_PHSB_CVAL_MAG_F
+         Description "IALaddr for HCfPhV_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 334
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHCFPHV_PHSB_CVAL_MAG_F
+         Description "DMCD Type for HCfPhV_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 335
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHCFPHV_PHSB_CVAL_MAG_F
+         Description "Protocol Info for HCfPhV_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 336
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHCFPHV_PHSC_CVAL_MAG_F
+         Description "IALaddr for HCfPhV_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 337
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHCFPHV_PHSC_CVAL_MAG_F
+         Description "DMCD Type for HCfPhV_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 338
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHCFPHV_PHSC_CVAL_MAG_F
+         Description "Protocol Info for HCfPhV_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 339
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHCFPHV_NEUT_CVAL_MAG_F
+         Description "IALaddr for HCfPhV_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 340
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHCFPHV_NEUT_CVAL_MAG_F
+         Description "DMCD Type for HCfPhV_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 341
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHCFPHV_NEUT_CVAL_MAG_F
+         Description "Protocol Info for HCfPhV_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 342
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHCFPHV_NET_CVAL_MAG_F
+         Description "IALaddr for HCfPhV_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 343
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHCFPHV_NET_CVAL_MAG_F
+         Description "DMCD Type for HCfPhV_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 344
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHCFPHV_NET_CVAL_MAG_F
+         Description "Protocol Info for HCfPhV_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 345
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHCFPHV_RES_CVAL_MAG_F
+         Description "IALaddr for HCfPhV_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 346
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHCFPHV_RES_CVAL_MAG_F
+         Description "DMCD Type for HCfPhV_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 347
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHCFPHV_RES_CVAL_MAG_F
+         Description "Protocol Info for HCfPhV_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 348
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHCFPPV_PHSAB_CVAL_MAG_F
+         Description "IALaddr for HCfPPV_phsAB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 349
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHCFPPV_PHSAB_CVAL_MAG_F
+         Description "DMCD Type for HCfPPV_phsAB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 350
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHCFPPV_PHSAB_CVAL_MAG_F
+         Description "Protocol Info for HCfPPV_phsAB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 351
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHCFPPV_PHSBC_CVAL_MAG_F
+         Description "IALaddr for HCfPPV_phsBC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 352
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHCFPPV_PHSBC_CVAL_MAG_F
+         Description "DMCD Type for HCfPPV_phsBC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 353
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHCFPPV_PHSBC_CVAL_MAG_F
+         Description "Protocol Info for HCfPPV_phsBC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 354
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHCFPPV_PHSCA_CVAL_MAG_F
+         Description "IALaddr for HCfPPV_phsCA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 355
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHCFPPV_PHSCA_CVAL_MAG_F
+         Description "DMCD Type for HCfPPV_phsCA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 356
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHCFPPV_PHSCA_CVAL_MAG_F
+         Description "Protocol Info for HCfPPV_phsCA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 357
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHCFA_PHSA_CVAL_MAG_F
+         Description "IALaddr for HCfA_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 358
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHCFA_PHSA_CVAL_MAG_F
+         Description "DMCD Type for HCfA_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 359
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHCFA_PHSA_CVAL_MAG_F
+         Description "Protocol Info for HCfA_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 360
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHCFA_PHSB_CVAL_MAG_F
+         Description "IALaddr for HCfA_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 361
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHCFA_PHSB_CVAL_MAG_F
+         Description "DMCD Type for HCfA_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 362
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHCFA_PHSB_CVAL_MAG_F
+         Description "Protocol Info for HCfA_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 363
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHCFA_PHSC_CVAL_MAG_F
+         Description "IALaddr for HCfA_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 364
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHCFA_PHSC_CVAL_MAG_F
+         Description "DMCD Type for HCfA_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 365
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHCFA_PHSC_CVAL_MAG_F
+         Description "Protocol Info for HCfA_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 366
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHCFA_NEUT_CVAL_MAG_F
+         Description "IALaddr for HCfA_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 367
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHCFA_NEUT_CVAL_MAG_F
+         Description "DMCD Type for HCfA_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 368
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHCFA_NEUT_CVAL_MAG_F
+         Description "Protocol Info for HCfA_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 369
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHCFA_NET_CVAL_MAG_F
+         Description "IALaddr for HCfA_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 370
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHCFA_NET_CVAL_MAG_F
+         Description "DMCD Type for HCfA_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 371
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHCFA_NET_CVAL_MAG_F
+         Description "Protocol Info for HCfA_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 372
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHCFA_RES_CVAL_MAG_F
+         Description "IALaddr for HCfA_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 373
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHCFA_RES_CVAL_MAG_F
+         Description "DMCD Type for HCfA_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 374
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHCFA_RES_CVAL_MAG_F
+         Description "Protocol Info for HCfA_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 375
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHTIF_PHSA_CVAL_MAG_F
+         Description "IALaddr for HTif_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 376
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHTIF_PHSA_CVAL_MAG_F
+         Description "DMCD Type for HTif_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 377
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHTIF_PHSA_CVAL_MAG_F
+         Description "Protocol Info for HTif_phsA_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 378
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHTIF_PHSB_CVAL_MAG_F
+         Description "IALaddr for HTif_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 379
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHTIF_PHSB_CVAL_MAG_F
+         Description "DMCD Type for HTif_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 380
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHTIF_PHSB_CVAL_MAG_F
+         Description "Protocol Info for HTif_phsB_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 381
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHTIF_PHSC_CVAL_MAG_F
+         Description "IALaddr for HTif_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 382
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHTIF_PHSC_CVAL_MAG_F
+         Description "DMCD Type for HTif_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 383
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHTIF_PHSC_CVAL_MAG_F
+         Description "Protocol Info for HTif_phsC_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 384
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHTIF_NEUT_CVAL_MAG_F
+         Description "IALaddr for HTif_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 385
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHTIF_NEUT_CVAL_MAG_F
+         Description "DMCD Type for HTif_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 386
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHTIF_NEUT_CVAL_MAG_F
+         Description "Protocol Info for HTif_neut_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 387
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHTIF_NET_CVAL_MAG_F
+         Description "IALaddr for HTif_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 388
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHTIF_NET_CVAL_MAG_F
+         Description "DMCD Type for HTif_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 389
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHTIF_NET_CVAL_MAG_F
+         Description "Protocol Info for HTif_net_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 390
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHTIF_RES_CVAL_MAG_F
+         Description "IALaddr for HTif_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 391
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHTIF_RES_CVAL_MAG_F
+         Description "DMCD Type for HTif_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 392
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHTIF_RES_CVAL_MAG_F
+         Description "Protocol Info for HTif_res_cVal_mag_f"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 393
+      End ParamInfo
+      ParamInfo
+         Name HWDVERSION
+         Description "Version of HWD File"
+         ExternalVisible
+         Datatype STRING
+         Default " 1.0-0 "
+         ParamType Numbered 395
+      End ParamInfo
+      ParamInfo
+         Name LNNAME
+         Description "LN Name"
+         Datatype STRING
+         Default ""100
+         ParamType Numbered 397
+      End ParamInfo
+
+(***************************************************)
+
+      ParamInfo
+      Name SAFECONTROL
+      Description "Safe State Control"
+      Hidden
+      CompileType IOConnect
+      Datatype ENUMCONTROL
+      Default 1
+      ParValIndex 3
+      ParamType Numbered 399
+      SafeStateInfo
+         SafeStateType   SafeStateControl
+         SafeStateRef    Unit
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE1
+      Description "Safe State Value1"
+      Hidden
+      CompileType IOConnect
+      Datatype INT
+      Default 0
+      ParValIndex 4
+      ParamType Numbered 401
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 1
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE2
+      Description "Safe State Value2"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 403
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 2
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE3
+      Description "Safe State Value3"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 405
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 3
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE4
+      Description "Safe State Value4"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 407
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 4
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE5
+      Description "Safe State Value5"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 409
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 5
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE6
+      Description "Safe State Value6"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 411
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 6
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE7
+      Description "Safe State Value7"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 413
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 7
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE8
+      Description "Safe State Value8"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 415
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 8
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE9
+      Description "Safe State Value9"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 417
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 9
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE10
+      Description "Safe State Value10"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 419
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 10
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE11
+      Description "Safe State Value11"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 421
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 11
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE12
+      Description "Safe State Value12"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 423
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 12
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE13
+      Description "Safe State Value13"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 425
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 13
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE14
+      Description "Safe State Value14"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 427
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 14
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE15
+      Description "Safe State Value15"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 429
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 15
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE16
+      Description "Safe State Value16"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 431
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 16
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE17
+      Description "Safe State Value17"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 433
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 17
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE18
+      Description "Safe State Value18"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 435
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 18
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE19
+      Description "Safe State Value19"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 437
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 19
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE20
+      Description "Safe State Value20"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 439
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 20
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE21
+      Description "Safe State Value21"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 441
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 21
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE22
+      Description "Safe State Value22"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 443
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 22
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE23
+      Description "Safe State Value23"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 445
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 23
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE24
+      Description "Safe State Value24"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 447
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 24
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE25
+      Description "Safe State Value25"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 449
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 25
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE26
+      Description "Safe State Value26"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 451
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 26
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE27
+      Description "Safe State Value27"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 453
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 27
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE28
+      Description "Safe State Value28"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 455
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 28
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE29
+      Description "Safe State Value29"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 457
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 29
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE30
+      Description "Safe State Value30"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 459
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 30
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE31
+      Description "Safe State Value31"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 461
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 31
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE32
+      Description "Safe State Value32"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 463
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 32
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE33
+      Description "Safe State Value33"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 465
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 33
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE34
+      Description "Safe State Value34"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 467
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 34
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE35
+      Description "Safe State Value35"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 469
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 35
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE36
+      Description "Safe State Value36"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 471
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 36
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE37
+      Description "Safe State Value37"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 473
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 37
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE38
+      Description "Safe State Value38"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 475
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 38
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE39
+      Description "Safe State Value39"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 477
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 39
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE40
+      Description "Safe State Value40"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 479
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 40
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE41
+      Description "Safe State Value41"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 481
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 41
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE42
+      Description "Safe State Value42"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 483
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 42
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE43
+      Description "Safe State Value43"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 485
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 43
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE44
+      Description "Safe State Value44"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 487
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 44
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE45
+      Description "Safe State Value45"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 489
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 45
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE46
+      Description "Safe State Value46"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 491
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 46
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE47
+      Description "Safe State Value47"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 493
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 47
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE48
+      Description "Safe State Value48"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 495
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 48
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE49
+      Description "Safe State Value49"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 497
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 49
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE50
+      Description "Safe State Value50"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 499
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 50
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE51
+      Description "Safe State Value51"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 501
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 51
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE52
+      Description "Safe State Value52"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 503
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 52
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE53
+      Description "Safe State Value53"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 505
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 53
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE54
+      Description "Safe State Value54"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 507
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 54
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE55
+      Description "Safe State Value55"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 509
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 55
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE56
+      Description "Safe State Value56"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 511
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 56
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE57
+      Description "Safe State Value57"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 513
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 57
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE58
+      Description "Safe State Value58"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 515
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 58
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE59
+      Description "Safe State Value59"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 517
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 59
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE60
+      Description "Safe State Value60"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 519
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 60
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE61
+      Description "Safe State Value61"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 521
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 61
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE62
+      Description "Safe State Value62"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 523
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 62
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE63
+      Description "Safe State Value63"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 525
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 63
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE64
+      Description "Safe State Value64"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 527
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 64
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE65
+      Description "Safe State Value65"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 529
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 65
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE66
+      Description "Safe State Value66"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 531
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 66
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE67
+      Description "Safe State Value67"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 533
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 67
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE68
+      Description "Safe State Value68"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 535
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 68
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE69
+      Description "Safe State Value69"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 537
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 69
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE70
+      Description "Safe State Value70"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 539
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 70
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE71
+      Description "Safe State Value71"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 541
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 71
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE72
+      Description "Safe State Value72"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 543
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 72
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE73
+      Description "Safe State Value73"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 545
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 73
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE74
+      Description "Safe State Value74"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 547
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 74
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE75
+      Description "Safe State Value75"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 549
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 75
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE76
+      Description "Safe State Value76"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 551
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 76
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE77
+      Description "Safe State Value77"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 553
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 77
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE78
+      Description "Safe State Value78"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 555
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 78
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE79
+      Description "Safe State Value79"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 557
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 79
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE80
+      Description "Safe State Value80"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 559
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 80
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE81
+      Description "Safe State Value81"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 561
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 81
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE82
+      Description "Safe State Value82"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 563
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 82
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE83
+      Description "Safe State Value83"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 565
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 83
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE84
+      Description "Safe State Value84"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 567
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 84
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE85
+      Description "Safe State Value85"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 569
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 85
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE86
+      Description "Safe State Value86"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 571
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 86
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE87
+      Description "Safe State Value87"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 573
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 87
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE88
+      Description "Safe State Value88"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 575
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 88
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE89
+      Description "Safe State Value89"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 577
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 89
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE90
+      Description "Safe State Value90"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 579
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 90
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE91
+      Description "Safe State Value91"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 581
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 91
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE92
+      Description "Safe State Value92"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 583
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 92
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE93
+      Description "Safe State Value93"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 585
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 93
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE94
+      Description "Safe State Value94"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 587
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 94
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE95
+      Description "Safe State Value95"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 589
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 95
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE96
+      Description "Safe State Value96"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 591
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 96
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE97
+      Description "Safe State Value97"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 593
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 97
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE98
+      Description "Safe State Value98"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 595
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 98
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE99
+      Description "Safe State Value99"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 597
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 99
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE100
+      Description "Safe State Value100"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 599
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 100
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE101
+      Description "Safe State Value101"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 601
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 101
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE102
+      Description "Safe State Value102"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 603
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 102
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE103
+      Description "Safe State Value103"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 605
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 103
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE104
+      Description "Safe State Value104"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 607
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 104
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE105
+      Description "Safe State Value105"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 609
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 105
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE106
+      Description "Safe State Value106"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 611
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 106
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE107
+      Description "Safe State Value107"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 613
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 107
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE108
+      Description "Safe State Value108"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 615
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 108
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE109
+      Description "Safe State Value109"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 617
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 109
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE110
+      Description "Safe State Value110"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 619
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 110
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE111
+      Description "Safe State Value111"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 621
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 111
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE112
+      Description "Safe State Value112"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 623
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 112
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE113
+      Description "Safe State Value113"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 625
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 113
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE114
+      Description "Safe State Value114"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 627
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 114
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE115
+      Description "Safe State Value115"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 629
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 115
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE116
+      Description "Safe State Value116"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 631
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 116
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE117
+      Description "Safe State Value117"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 633
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 117
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE118
+      Description "Safe State Value118"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 635
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 118
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE119
+      Description "Safe State Value119"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 637
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 119
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE120
+      Description "Safe State Value120"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 639
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 120
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE121
+      Description "Safe State Value121"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 641
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 121
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE122
+      Description "Safe State Value122"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 643
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 122
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE123
+      Description "Safe State Value123"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 645
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 123
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE124
+      Description "Safe State Value124"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 647
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 124
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE125
+      Description "Safe State Value125"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 649
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 125
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE126
+      Description "Safe State Value126"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 651
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 126
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE127
+      Description "Safe State Value127"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 653
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 127
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE128
+      Description "Safe State Value128"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 655
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 128
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE129
+      Description "Safe State Value129"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 657
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 129
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE130
+      Description "Safe State Value130"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 659
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 130
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE131
+      Description "Safe State Value131"
+      Hidden
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 661
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 131
+      End SafeStateInfo
+      End ParamInfo
+   End Parameters
+
+   ParValList
+   ParVal
+        ParValIndex 2
+        UnitText    ""
+        INT 0 255 0 255
+     End ParVal
+     ParVal
+      ParValIndex 3      (* Output Hold State  *)
+      UnitText   " "
+      ENUMCONTROL
+      "UseSafeValue"  0 ResetValue
+      "HoldLastValue" 1 HoldLastValue
+      "UseSafeValue"  2 UseSafeValue
+    End ParVal
+    ParVal
+       ParValIndex 4
+       UnitText    ""
+       INT 0 2147483647 0 2147483647
+    End ParVal
+    ParVal
+       ParValIndex 5
+       UnitText    ""
+       REAL 0.0 100.0 0.0 100.0
+    End ParVal
+   End ParValList
+
+   Channels
+    ChannelInfo
+      Number         1
+      ChannelName   "EEHealth_stVal"
+      Datatype       Int_In
+      Routine        308
+      CopyParameters 16#30000 0 16#30004 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         2
+      ChannelName   "Hz_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30008 0 16#3000C 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         3
+      ChannelName   "HRmsA_phsA_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30010 0 16#30014 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         4
+      ChannelName   "HRmsA_phsB_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30018 0 16#3001C 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         5
+      ChannelName   "HRmsA_phsC_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30020 0 16#30024 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         6
+      ChannelName   "HRmsA_neut_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30028 0 16#3002C 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         7
+      ChannelName   "HRmsA_net_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30030 0 16#30034 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         8
+      ChannelName   "HRmsA_res_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30038 0 16#3003C 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         9
+      ChannelName   "HRmsPhV_phsA_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30040 0 16#30044 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         10
+      ChannelName   "HRmsPhV_phsB_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30048 0 16#3004C 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         11
+      ChannelName   "HRmsPhV_phsC_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30050 0 16#30054 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         12
+      ChannelName   "HRmsPhV_neut_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30058 0 16#3005C 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         13
+      ChannelName   "HRmsPhV_net_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30060 0 16#30064 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         14
+      ChannelName   "HRmsPhV_res_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30068 0 16#3006C 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         15
+      ChannelName   "HRmsPPV_phsAB_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30070 0 16#30074 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         16
+      ChannelName   "HRmsPPV_phsBC_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30078 0 16#3007C 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         17
+      ChannelName   "HRmsPPV_phsCA_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30080 0 16#30084 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         18
+      ChannelName   "HTuW_phsA_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30088 0 16#3008C 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         19
+      ChannelName   "HTuW_phsB_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30090 0 16#30094 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         20
+      ChannelName   "HTuW_phsC_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30098 0 16#3009C 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         21
+      ChannelName   "HTuW_neut_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#300A0 0 16#300A4 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         22
+      ChannelName   "HTuW_net_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#300A8 0 16#300AC 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         23
+      ChannelName   "HTuW_res_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#300B0 0 16#300B4 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         24
+      ChannelName   "HTsW_phsA_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#300B8 0 16#300BC 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         25
+      ChannelName   "HTsW_phsB_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#300C0 0 16#300C4 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         26
+      ChannelName   "HTsW_phsC_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#300C8 0 16#300CC 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         27
+      ChannelName   "HTsW_neut_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#300D0 0 16#300D4 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         28
+      ChannelName   "HTsW_net_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#300D8 0 16#300DC 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         29
+      ChannelName   "HTsW_res_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#300E0 0 16#300E4 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         30
+      ChannelName   "HATm_phsA_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#300E8 0 16#300EC 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         31
+      ChannelName   "HATm_phsB_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#300F0 0 16#300F4 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         32
+      ChannelName   "HATm_phsC_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#300F8 0 16#300FC 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         33
+      ChannelName   "HATm_neut_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30100 0 16#30104 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         34
+      ChannelName   "HATm_net_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30108 0 16#3010C 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         35
+      ChannelName   "HATm_res_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30110 0 16#30114 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         36
+      ChannelName   "HKf_phsA_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30118 0 16#3011C 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         37
+      ChannelName   "HKf_phsB_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30120 0 16#30124 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         38
+      ChannelName   "HKf_phsC_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30128 0 16#3012C 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         39
+      ChannelName   "HKf_neut_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30130 0 16#30134 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         40
+      ChannelName   "HKf_net_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30138 0 16#3013C 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         41
+      ChannelName   "HKf_res_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30140 0 16#30144 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         42
+      ChannelName   "HTdf_phsA_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30148 0 16#3014C 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         43
+      ChannelName   "HTdf_phsB_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30150 0 16#30154 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         44
+      ChannelName   "HTdf_phsC_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30158 0 16#3015C 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         45
+      ChannelName   "HTdf_neut_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30160 0 16#30164 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         46
+      ChannelName   "HTdf_net_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30168 0 16#3016C 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         47
+      ChannelName   "HTdf_res_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30170 0 16#30174 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         48
+      ChannelName   "ThdA_phsA_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30178 0 16#3017C 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         49
+      ChannelName   "ThdA_phsB_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30180 0 16#30184 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         50
+      ChannelName   "ThdA_phsC_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30188 0 16#3018C 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         51
+      ChannelName   "ThdA_neut_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30190 0 16#30194 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         52
+      ChannelName   "ThdA_net_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30198 0 16#3019C 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         53
+      ChannelName   "ThdA_res_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#301A0 0 16#301A4 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         54
+      ChannelName   "ThdOddA_phsA_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#301A8 0 16#301AC 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         55
+      ChannelName   "ThdOddA_phsB_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#301B0 0 16#301B4 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         56
+      ChannelName   "ThdOddA_phsC_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#301B8 0 16#301BC 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         57
+      ChannelName   "ThdOddA_neut_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#301C0 0 16#301C4 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         58
+      ChannelName   "ThdOddA_net_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#301C8 0 16#301CC 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         59
+      ChannelName   "ThdOddA_res_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#301D0 0 16#301D4 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         60
+      ChannelName   "ThdEvnA_phsA_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#301D8 0 16#301DC 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         61
+      ChannelName   "ThdEvnA_phsB_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#301E0 0 16#301E4 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         62
+      ChannelName   "ThdEvnA_phsC_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#301E8 0 16#301EC 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         63
+      ChannelName   "ThdEvnA_neut_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#301F0 0 16#301F4 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         64
+      ChannelName   "ThdEvnA_net_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#301F8 0 16#301FC 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         65
+      ChannelName   "ThdEvnA_res_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30200 0 16#30204 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         66
+      ChannelName   "TddA_phsA_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30208 0 16#3020C 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         67
+      ChannelName   "TddA_phsB_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30210 0 16#30214 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         68
+      ChannelName   "TddA_phsC_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30218 0 16#3021C 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         69
+      ChannelName   "TddA_neut_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30220 0 16#30224 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         70
+      ChannelName   "TddA_net_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30228 0 16#3022C 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         71
+      ChannelName   "TddA_res_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30230 0 16#30234 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         72
+      ChannelName   "TddOddA_phsA_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30238 0 16#3023C 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         73
+      ChannelName   "TddOddA_phsB_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30240 0 16#30244 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         74
+      ChannelName   "TddOddA_phsC_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30248 0 16#3024C 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         75
+      ChannelName   "TddOddA_neut_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30250 0 16#30254 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         76
+      ChannelName   "TddOddA_net_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30258 0 16#3025C 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         77
+      ChannelName   "TddOddA_res_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30260 0 16#30264 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         78
+      ChannelName   "TddEvnA_phsA_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30268 0 16#3026C 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         79
+      ChannelName   "TddEvnA_phsB_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30270 0 16#30274 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         80
+      ChannelName   "TddEvnA_phsC_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30278 0 16#3027C 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         81
+      ChannelName   "TddEvnA_neut_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30280 0 16#30284 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         82
+      ChannelName   "TddEvnA_net_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30288 0 16#3028C 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         83
+      ChannelName   "TddEvnA_res_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30290 0 16#30294 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         84
+      ChannelName   "ThdPhV_phsA_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30298 0 16#3029C 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         85
+      ChannelName   "ThdPhV_phsB_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#302A0 0 16#302A4 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         86
+      ChannelName   "ThdPhV_phsC_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#302A8 0 16#302AC 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         87
+      ChannelName   "ThdPhV_neut_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#302B0 0 16#302B4 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         88
+      ChannelName   "ThdPhV_net_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#302B8 0 16#302BC 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         89
+      ChannelName   "ThdPhV_res_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#302C0 0 16#302C4 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         90
+      ChannelName   "ThdOddPhV_phsA_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#302C8 0 16#302CC 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         91
+      ChannelName   "ThdOddPhV_phsB_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#302D0 0 16#302D4 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         92
+      ChannelName   "ThdOddPhV_phsC_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#302D8 0 16#302DC 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         93
+      ChannelName   "ThdOddPhV_neut_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#302E0 0 16#302E4 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         94
+      ChannelName   "ThdOddPhV_net_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#302E8 0 16#302EC 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         95
+      ChannelName   "ThdOddPhV_res_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#302F0 0 16#302F4 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         96
+      ChannelName   "ThdEvnPhV_phsA_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#302F8 0 16#302FC 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         97
+      ChannelName   "ThdEvnPhV_phsB_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30300 0 16#30304 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         98
+      ChannelName   "ThdEvnPhV_phsC_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30308 0 16#3030C 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         99
+      ChannelName   "ThdEvnPhV_neut_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30310 0 16#30314 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         100
+      ChannelName   "ThdEvnPhV_net_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30318 0 16#3031C 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         101
+      ChannelName   "ThdEvnPhV_res_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30320 0 16#30324 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         102
+      ChannelName   "ThdPPV_phsAB_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30328 0 16#3032C 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         103
+      ChannelName   "ThdPPV_phsBC_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30330 0 16#30334 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         104
+      ChannelName   "ThdPPV_phsCA_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30338 0 16#3033C 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         105
+      ChannelName   "ThdOddPPV_phsAB_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30340 0 16#30344 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         106
+      ChannelName   "ThdOddPPV_phsBC_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30348 0 16#3034C 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         107
+      ChannelName   "ThdOddPPV_phsCA_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30350 0 16#30354 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         108
+      ChannelName   "ThdEvnPPV_phsAB_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30358 0 16#3035C 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         109
+      ChannelName   "ThdEvnPPV_phsBC_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30360 0 16#30364 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         110
+      ChannelName   "ThdEvnPPV_phsCA_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30368 0 16#3036C 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         111
+      ChannelName   "HCfPhV_phsA_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30370 0 16#30374 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         112
+      ChannelName   "HCfPhV_phsB_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30378 0 16#3037C 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         113
+      ChannelName   "HCfPhV_phsC_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30380 0 16#30384 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         114
+      ChannelName   "HCfPhV_neut_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30388 0 16#3038C 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         115
+      ChannelName   "HCfPhV_net_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30390 0 16#30394 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         116
+      ChannelName   "HCfPhV_res_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30398 0 16#3039C 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         117
+      ChannelName   "HCfPPV_phsAB_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#303A0 0 16#303A4 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         118
+      ChannelName   "HCfPPV_phsBC_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#303A8 0 16#303AC 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         119
+      ChannelName   "HCfPPV_phsCA_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#303B0 0 16#303B4 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         120
+      ChannelName   "HCfA_phsA_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#303B8 0 16#303BC 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         121
+      ChannelName   "HCfA_phsB_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#303C0 0 16#303C4 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         122
+      ChannelName   "HCfA_phsC_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#303C8 0 16#303CC 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         123
+      ChannelName   "HCfA_neut_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#303D0 0 16#303D4 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         124
+      ChannelName   "HCfA_net_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#303D8 0 16#303DC 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         125
+      ChannelName   "HCfA_res_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#303E0 0 16#303E4 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         126
+      ChannelName   "HTif_phsA_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#303E8 0 16#303EC 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         127
+      ChannelName   "HTif_phsB_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#303F0 0 16#303F4 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         128
+      ChannelName   "HTif_phsC_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#303F8 0 16#303FC 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         129
+      ChannelName   "HTif_neut_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30400 0 16#30404 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         130
+      ChannelName   "HTif_net_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30408 0 16#3040C 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         131
+      ChannelName   "HTif_res_cVal_mag_f"
+      Datatype       Real_In
+      Routine        722
+      CopyParameters 16#30410 0 16#30414 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         132
+      ChannelName   "UnitStatus"
+      Datatype       Status_In
+      Routine        900
+      CopyParameters 16#50000
+    End ChannelInfo
+ End Channels
+
+    UnitStatusText
+     DeviceSpecific10 "Connection Failed with this LN Representation"
+   End UnitStatusText
+
+   UnitStatusSeverity
+     DeviceSpecific10   GeneralError TriggerAlarm SeverityHigh
+   End UnitStatusSeverity
+
+ Configuration
+    ConfigInfo
+      ModuleKey       16#57
+      InAreaSize      1048 BYTE
+    CIGIOConnData
+      SyncronizeDataExchange
+    End CIGIOConnData
+    End ConfigInfo
+ End Configuration
+  HWUnitInfoCRC 16#27CA
+End HWUnitInfo 

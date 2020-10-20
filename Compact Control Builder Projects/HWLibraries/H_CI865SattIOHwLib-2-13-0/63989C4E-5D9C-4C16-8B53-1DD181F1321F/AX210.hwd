@@ -1,0 +1,219 @@
+HWUnitInfo (* AX210 / ControlNet *)
+   HWUnitID {2CA93251-564C-468F-8E0C-18CC0FD41588}
+   Description "AX210"
+   Information "Analog combo module, 4 input channels and 2 output channels"
+   Icons Ser200CompactIoType
+   Attributes IoUnit AnalogIn AnalogOut
+   Parameters
+      ParamInfo 
+         Name RANGE_0
+         Description "Range Channel 0"
+         CompileType IOConfig
+         Datatype ENUMRANGE
+         default 1
+         ParValIndex 0
+         ParamType ConfArea 0 0
+      End ParamInfo 
+      ParamInfo 
+         Name RANGE_1
+         Description "Range Channel 1"
+         CompileType IOConfig
+         Datatype ENUMRANGE
+         default 1
+         ParValIndex 0
+         ParamType ConfArea 0 1
+      End ParamInfo 
+      ParamInfo 
+         Name RANGE_2
+         Description "Range Channel 2"
+         CompileType IOConfig
+         Datatype ENUMRANGE
+         default 1
+         ParValIndex 0
+         ParamType ConfArea 0 2
+      End ParamInfo 
+      ParamInfo 
+         Name RANGE_3
+         Description "Range Channel 3"
+         CompileType IOConfig
+         Datatype ENUMRANGE
+         default 1
+         ParValIndex 0
+         ParamType ConfArea 0 3
+      End ParamInfo 
+      ParamInfo 
+         Name RANGE_4
+         Description "Range Channel 4"
+         CompileType IOConfig
+         Datatype ENUMRANGE
+         Default 0
+         ParValIndex 1
+         ParamType ConfArea 0 4
+      End ParamInfo 
+      ParamInfo 
+         Name RANGE_5
+         Description "Range Channel 5"
+         CompileType IOConfig
+         Datatype ENUMRANGE
+         Default 0
+         ParValIndex 1
+         ParamType ConfArea 0 5
+      End ParamInfo
+      ParamInfo 
+         Name SAFESTATE
+         Description "SafeState"
+         CompileType IOConfig
+         Datatype ENUMCONTROL
+         Default 0
+         ParValIndex 2
+         ParamType Numbered 100
+         SafeStateInfo
+           SafeStateType SafeStateControl
+           SafeStateRef Unit
+         End SafeStateInfo
+      End ParamInfo 
+      ParamInfo 
+         Name SAFEVALUE_4
+         Description "Safe value channel 4"
+         Corresponding 4
+         CompileType IOConfig
+         Datatype REAL
+         Default 0
+         ParValIndex 3
+         (* CNSafeData *)
+         ParamType CIGIOData 1 0 0 WordParam WordOffset ScaleToRange
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 4
+         End SafeStateInfo
+      End ParamInfo 
+      ParamInfo 
+         Name SAFEVALUE_5
+         Description "Safe value channel 5"
+         Corresponding 5
+         CompileType IOConfig
+         Datatype REAL
+         Default 0
+         ParValIndex 3
+         (* CNSafeData *)
+         ParamType CIGIOData 2 0 0 WordParam WordOffset ScaleToRange
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 5
+         End SafeStateInfo
+      End ParamInfo 
+   End Parameters
+   ParValList
+      ParVal
+         ParValIndex 0
+         ENUMRANGE
+         "off"     0 0 0 0 0
+         "0-20mA"  16#0001 16#79E8 16#0000 16#7FE0 16#0000
+         "4-20mA"  16#0001 16#79E8 16#1860 16#7FE0 16#1248
+      End ParVal
+      ParVal
+         ParValIndex 1
+         ENUMRANGE   
+         "off"     0 0 0 0 0
+         "0-20mA"  16#0001 16#79E8 16#0000 0 0
+         "4-20mA"  16#0001 16#79E8 16#1860 0 0
+      End ParVal
+      ParVal
+         ParValIndex 2
+         ENUMCONTROL
+         "Resetoutputs"  0 ResetValue
+         "Holdlaststate" 1 HoldLastValue
+         "Safevalues"    2 UseSafeValue
+      End ParVal
+      ParVal
+         ParValIndex 3
+         UnitText    "%"
+         REAL 0.0 100.0 0.0 100.0
+      End ParVal
+   End ParValList
+   Channels
+     ChannelInfo
+         Number 0
+         ChannelName "Input 0"
+         Datatype Real_In
+         Routine 701
+         CopyParameters 0 0 16#30001 16#FFFF 0 16#0 16#50000 16#30005 16#8000 
+      End ChannelInfo
+     ChannelInfo
+         Number 1
+         ChannelName "Input 1"
+         Datatype Real_In
+         Routine 701
+         CopyParameters 0 0 16#30002 16#FFFF 1 16#0 16#50000 16#30005 16#8000 
+      End ChannelInfo
+     ChannelInfo
+         Number 2
+         ChannelName "Input 2"
+         Datatype Real_In
+         Routine 701
+         CopyParameters 0 0 16#30003 16#FFFF 2 16#0 16#50000 16#30005 16#8000 
+      End ChannelInfo
+     ChannelInfo
+         Number 3
+         ChannelName "Input 3"
+         Datatype Real_In
+         Routine 701
+         CopyParameters 0 0 16#30004 16#FFFF 3 16#0 16#50000 16#30005 16#8000 
+      End ChannelInfo
+     ChannelInfo
+         Number 4
+         ChannelName "Output 4"
+         Datatype Real_Out
+         Routine 803
+         CopyParameters 0 0 16#40000 4 16#0 16#50000 16#30005 16#8000 16#30005 16#4000 16#0 16#0 
+      End ChannelInfo
+     ChannelInfo
+         Number 5
+         ChannelName "Output 5"
+         Datatype Real_Out
+         Routine 803
+         CopyParameters 0 0 16#40001 5 16#0 16#50000 16#30005 16#8000 16#30005 16#4000 16#0 16#0
+      End ChannelInfo     
+      ChannelInfo
+         Number 6
+         ChannelName "UnitStatus"
+         Datatype Status_In
+         Routine 900
+         CopyParameters 0 0 16#50000
+      End ChannelInfo     
+   End Channels
+   IoUnitStatus
+      StatusType WrongModuleType 
+      StatusData 16#30000 16#1FFF 16#5 16#1500
+      StatusType ModuleMissing
+      StatusData 16#30000 16#8000 16#0 16#0
+      StatusType IoError
+      StatusData 16#30000 16#2000 16#0 16#0
+   End IoUnitStatus
+   Configuration
+      ConfigInfo
+         ModuleKey   16#1500
+         InAreaSize  6
+         OutAreaSize 4
+         InWord
+            WORD 16#B500 0 
+            WORD 0       1
+            WORD 0       2 
+            WORD 0       3 
+            WORD 0       4 
+            WORD 0       5            
+         OutWord
+            WORD 0       0 
+            WORD 0       1              
+            WORD 0       2
+         ConfWord
+            WORD 0       3 
+         CIGIOConnData
+            CIGIOData    16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 (* CNSafeData *)
+            CIGIOData    16#03 16#00 16#30 16#7D 16#00 16#00 16#0C 16#10 16#07 16#09 16#00 16#05  (* Out data *)
+            CIGIOData    16#04 16#00 16#10 16#07 16#00 16#00 16#05 16#50 16#7D 16#00 16#00 16#0A  (* In data  *)
+         End CIGIOConnData
+      End ConfigInfo
+   End Configuration
+  HWUnitInfoCRC 16#5A29
+End HWUnitInfo (* AX210 / ControlNet *)

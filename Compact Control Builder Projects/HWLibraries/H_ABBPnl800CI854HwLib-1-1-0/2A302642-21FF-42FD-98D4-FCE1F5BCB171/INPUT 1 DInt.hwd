@@ -1,0 +1,41 @@
+
+
+
+(*========================================================*)
+(*                                                        *)
+(*            INPUT: 1 DInt DPV1                          *)
+(*                                                        *)
+(*========================================================*)
+
+HWUnitInfo
+  HWUnitID         16#11D509DA
+  Description      "INPUT 1 DInt"
+  Information      "double word (32 bit) including the sign bi"
+  Icons            ProtocolType
+  Attributes       IoUnit 
+
+  Channels
+    ChannelInfo
+      Number            0
+      ChannelName      "Input DInt 0"
+      Datatype          Int_In
+      Routine           303
+      CopyParameters    16#0 16#0 16#30000 16#0
+    End ChannelInfo
+  End Channels
+
+  Configuration
+    ConfigInfo
+      ModuleKey        16#11
+      InAreaSize       2 WORD
+      OutAreaSize      0 WORD
+      InWord
+        WORD  0    0
+        WORD  0    1
+      CIGIOConnData
+        CIGIOData        16#01 16#51
+      End CIGIOConnData
+    End ConfigInfo
+  End Configuration
+  HWUnitInfoCRC 16#10A2
+End HWUnitInfo (* INPUT: 1 DInt *)

@@ -1,0 +1,128 @@
+(* CR #9947 - The definition for "Serial without PPP" for *)
+(* soft controller has been extracted to a seperate file  *)
+(* Unsupported/asc_comserial.hwd / Jludvigs 2003-10-01    *)
+
+HwUnitInfo  (* Serial *)
+   HWUnitID 16#03000001
+   Description "Com"
+   Information "Serial channel"
+   Icons ChannelType
+   Attributes CompileAlways
+   InterfaceInfo
+     Interface SerialDriver
+     HWConfig Fail
+   End InterfaceInfo
+   SubUnits 1
+   SubUnitTypes
+      HWUnitID 16#03000007 (* PPP *)
+      HWUnitID 16#03000009 (* COMLI *)
+      HWUnitID 16#03000003 (* 3964R *)
+      HWUnitID 16#03000011 (* MODBUS *)
+      HWUnitID 16#03000002 (* SerialProtocol *)
+      HWUnitID 16#03000006 (* Printer *)
+      HWUnitID 16#03000008 (* Modem *)
+   End SubUnitTypes
+   Parameters
+      ParamInfo 
+         Name BAUDRATE
+         Description "Baudrate"
+         CompileType HWConfig
+         Datatype ENUM
+         Default 5 (* 9600 *)
+         ParValIndex 0
+         ParamType Numbered 0
+      End ParamInfo 
+      ParamInfo                    
+         Name PARITY
+         Description "Parity"
+         CompileType HWConfig
+         Datatype ENUM
+         Default 0
+         ParValIndex 1
+         ParamType Numbered 1
+      End ParamInfo
+      ParamInfo                    
+         Name DATABITS
+         Description "Databits"
+         CompileType HWConfig
+         Datatype ENUM
+         Default 0
+         ParValIndex 2
+         ParamType Numbered 2
+      End ParamInfo
+      ParamInfo                    
+         Name STOPBITS
+         Description "Stopbits"
+         CompileType HWConfig
+         Datatype ENUM
+         Default 0
+         ParValIndex 3
+         ParamType Numbered 3
+      End ParamInfo
+      ParamInfo 
+         Name HANDSHAKE 
+         Description "Flow control"
+         CompileType HWConfig
+         Datatype ENUM       
+         Default 0
+         ParValIndex 4
+         ParamType Numbered 4
+      End ParamInfo
+      ParamInfo 
+         Name RTSDELAY     
+         Description "Delay of the RTS-signal"
+         CompileType HWConfig
+         Datatype INT      
+         Default 0
+         ParValIndex 5
+         ParamType Numbered 5
+      End ParamInfo
+   End Parameters
+   ParValList
+      ParVal
+         ParValIndex 0
+         UnitText    "KBIT/S"
+         ENUM
+         "0.3"   300  
+         "0.6"   600  
+         "1.2"   1200
+         "2.4"   2400
+         "4.8"   4800
+         "9.6"   9600
+         "19.2"  19200
+      End ParVal
+      ParVal
+         ParValIndex 1
+         ENUM
+         "none" 0
+         "even" 1
+         "odd" 2
+      End ParVal
+      ParVal
+         ParValIndex 2
+         ENUM
+         "8" 8
+         "7" 7
+      End ParVal
+      ParVal
+         ParValIndex 3
+         ENUM
+         "1" 1
+         "2" 2
+      End ParVal
+      ParVal
+         ParValIndex 4
+         ENUM
+         "None" 0
+         "Xon/Xoff" 1           
+         "Hardware" 6
+         "Modem" 7
+      End ParVal
+      ParVal
+         ParValIndex 5
+         UnitText    "msec"
+         INT 0 255 0 255 
+      End ParVal
+   End ParValList
+  HWUnitInfoCRC 16#00ED
+End HWUnitInfo (* Serial *)

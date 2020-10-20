@@ -1,0 +1,222 @@
+
+(****************************************************************************)
+(* FILE            TT ATCC2.hwd                                             *)
+(*                                                                          *)
+(* DESCRIPTION     Hardware definition file for TT ATCC2                    *)
+(*                                                                          *)
+(* AUTHOR          Ramachandragowda G                                       *)
+(*                                                                          *)
+(* All rights reserved. Reproduction, modification, use or disclosure       *)
+(* to third parties without express authority, is forbidden.                *)
+(* Copyright ABB Inc. 2006.                                                 *)
+(*                                                                          *)
+(*                                                                          *)
+(* 27-04-2006 Ramachandragowda G            Initial version                 *)
+(*                                                                          *)
+(****************************************************************************)
+FileHeader
+   Contents               "TC2 ATCC"
+   Date                   "2007-04-27"
+   Version                "1.0-0"
+  RequiredSyntaxVersion "3.0"
+End FileHeader
+
+HWUnitInfo  (* TC2 ATCC *)
+   HWUnitID {6D3C608C-57F7-4426-A17F-25382C9190A4} (* GUID for TT ATCC, Transformer Tap Control *)
+   Description "TC2 ATCC"
+   Information "Transformer tap changer control 2"
+   Icons LNType
+   Attributes IoUnit AdapterUnit DigitalOut
+   InterfaceInfo
+     IoSysType    CIGIO
+     CLSID_CB    {53315084-E413-4c55-92E1-C2E1FAF19460} (*  CLSID_CB  = GUID for CI868 PH in Control builder CB *)
+     CLSID_CTRL  {4AB844AC-2BEE-4910-BA08-CA109A5D7E81}  (* CLSID_CTRL = GUID for CI868 PH in Controler *)
+   End InterfaceInfo
+
+   ConnectionInfo
+      ConnectType OwnUnit
+      IOConnect Fail
+      IoConfig  NoFail
+   End ConnectionInfo
+
+   ExternalConfigInfo
+      ShowExternalChannelDescriptionColumn
+   End ExternalConfigInfo
+
+   Parameters
+      ParamInfo
+         Name IALADDRLOC
+         Description "IALaddr for Loc"
+         ExternalVisible
+         CompileType IOConnect  
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 1
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPELOC
+         Description "DMCD Type for Loc"
+         ExternalVisible
+         CompileType IOConnect  
+         Datatype INT
+         Default 1
+         ParValIndex 2
+         ParamType Numbered 2
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOLOC
+         Description "ProtocolInfo for Loc"
+         ExternalVisible
+         CompileType IOConnect  
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 3
+      End ParamInfo
+      ParamInfo
+         Name IALADDRPAROP
+         Description "IALaddr for ParOp"
+         ExternalVisible
+         CompileType IOConnect  
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 4
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEPAROP
+         Description "DMCD Type for ParOp"
+         ExternalVisible
+         CompileType IOConnect  
+         Datatype INT
+         Default 3
+         ParValIndex 2
+         ParamType Numbered 5
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOPAROP
+         Description "ProtocolInfo for ParOp"
+         ExternalVisible
+         CompileType IOConnect  
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 6
+      End ParamInfo
+      ParamInfo
+         Name IALADDRISCSO
+         Description "IALaddr for ISCSO"
+         ExternalVisible
+         CompileType IOConnect  
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 7
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEISCSO
+         Description "DMCD Type for ISCSO"
+         ExternalVisible
+         CompileType IOConnect  
+         Datatype INT
+         Default 12
+         ParValIndex 2
+         ParamType Numbered 8
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOISCSO
+         Description "ProtocolInfo for ISCSO"
+         ExternalVisible
+         CompileType IOConnect  
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 9
+      End ParamInfo
+      ParamInfo
+         Name IALADDRVOL
+         Description "IALaddr for Vol"
+         ExternalVisible
+         CompileType IOConnect  
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 10
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEVOL
+         Description "DMCD Type for Vol"
+         ExternalVisible
+         CompileType IOConnect  
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 11
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOVOL
+         Description "Protocol Info for Vol"
+         ExternalVisible
+         CompileType IOConnect  
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 12
+      End ParamInfo
+      ParamInfo
+         Name HWDVERSION
+         Description "Version of HWD File"
+         ExternalVisible
+         Datatype STRING
+         Default " 1.0-0 "
+         ParamType Numbered 14
+      End ParamInfo
+      ParamInfo
+         Name LNNAME
+         Description "LN Name"
+         Datatype STRING
+         Default " "100
+         ParamType Numbered 16
+      End ParamInfo
+   End Parameters
+
+   ParValList
+     ParVal
+        ParValIndex 2
+        UnitText    ""
+        INT 0 255 0 255
+     End ParVal
+   End ParValList
+
+   Channels
+   ChannelInfo
+      Number         1
+      ChannelName   "Loc"
+      Datatype       Bool_Out
+      Routine        201
+      CopyParameters 16#40000 16#0003
+    End ChannelInfo
+    ChannelInfo
+      Number         2
+      ChannelName   "ParOp"
+      Datatype       Int_Out
+      Routine        400
+      CopyParameters 16#40008 0
+    End ChannelInfo
+    ChannelInfo
+      Number         3
+      ChannelName   "ISCSO"
+      Datatype       Int_Out
+      Routine        408
+      CopyParameters 16#40010 0 16#4001C 16#0000
+    End ChannelInfo
+    ChannelInfo
+      Number         4
+      ChannelName   "Vol"
+      Datatype       Real_Out
+      Routine        820
+      CopyParameters 16#40018 0
+    End ChannelInfo
+ End Channels
+
+Configuration
+    ConfigInfo
+      ModuleKey       16#0A
+      OutAreaSize     32 BYTE
+    End ConfigInfo
+  End Configuration
+  HWUnitInfoCRC 16#58F8
+End HWUnitInfo

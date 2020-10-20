@@ -1,0 +1,146 @@
+
+
+
+
+(*========================================================*)
+(*                                                        *)
+(*            INPUT: 16 Bool                              *)
+(*                                                        *)
+(*========================================================*)
+
+HWUnitInfo
+  HWUnitID         16#06D51002
+  Description      "INPUT 16 Bool"
+  Information      "Bool"
+  Icons            ProtocolType
+  Attributes       IoUnit 
+
+  Channels
+    ChannelInfo
+      Number            0
+      ChannelName      "Input Bool 0"
+      Datatype          Bool_In
+      Routine           100
+      CopyParameters    16#0 16#0 16#30000 16#1 16#1
+    End ChannelInfo
+    ChannelInfo
+      Number            1
+      ChannelName      "Input Bool 1"
+      Datatype          Bool_In
+      Routine           100
+      CopyParameters    16#0 16#0 16#30000 16#2 16#1
+    End ChannelInfo
+    ChannelInfo
+      Number            2
+      ChannelName      "Input Bool 2"
+      Datatype          Bool_In
+      Routine           100
+      CopyParameters    16#0 16#0 16#30000 16#4 16#1
+    End ChannelInfo
+    ChannelInfo
+      Number            3
+      ChannelName      "Input Bool 3"
+      Datatype          Bool_In
+      Routine           100
+      CopyParameters    16#0 16#0 16#30000 16#8 16#1
+    End ChannelInfo
+    ChannelInfo
+      Number            4
+      ChannelName      "Input Bool 4"
+      Datatype          Bool_In
+      Routine           100
+      CopyParameters    16#0 16#0 16#30000 16#10 16#1
+    End ChannelInfo
+    ChannelInfo
+      Number            5
+      ChannelName      "Input Bool 5"
+      Datatype          Bool_In
+      Routine           100
+      CopyParameters    16#0 16#0 16#30000 16#20 16#1
+    End ChannelInfo
+    ChannelInfo
+      Number            6
+      ChannelName      "Input Bool 6"
+      Datatype          Bool_In
+      Routine           100
+      CopyParameters    16#0 16#0 16#30000 16#40 16#1
+    End ChannelInfo
+    ChannelInfo
+      Number            7
+      ChannelName      "Input Bool 7"
+      Datatype          Bool_In
+      Routine           100
+      CopyParameters    16#0 16#0 16#30000 16#80 16#1
+    End ChannelInfo
+    ChannelInfo
+      Number            8
+      ChannelName      "Input Bool 8"
+      Datatype          Bool_In
+      Routine           100
+      CopyParameters    16#0 16#0 16#30000 16#100 16#1
+    End ChannelInfo
+    ChannelInfo
+      Number            9
+      ChannelName      "Input Bool 9"
+      Datatype          Bool_In
+      Routine           100
+      CopyParameters    16#0 16#0 16#30000 16#200 16#1
+    End ChannelInfo
+    ChannelInfo
+      Number            10
+      ChannelName      "Input Bool 10"
+      Datatype          Bool_In
+      Routine           100
+      CopyParameters    16#0 16#0 16#30000 16#400 16#1
+    End ChannelInfo
+    ChannelInfo
+      Number            11
+      ChannelName      "Input Bool 11"
+      Datatype          Bool_In
+      Routine           100
+      CopyParameters    16#0 16#0 16#30000 16#800 16#1
+    End ChannelInfo
+    ChannelInfo
+      Number            12
+      ChannelName      "Input Bool 12"
+      Datatype          Bool_In
+      Routine           100
+      CopyParameters    16#0 16#0 16#30000 16#1000 16#1
+    End ChannelInfo
+    ChannelInfo
+      Number            13
+      ChannelName      "Input Bool 13"
+      Datatype          Bool_In
+      Routine           100
+      CopyParameters    16#0 16#0 16#30000 16#2000 16#1
+    End ChannelInfo
+    ChannelInfo
+      Number            14
+      ChannelName      "Input Bool 14"
+      Datatype          Bool_In
+      Routine           100
+      CopyParameters    16#0 16#0 16#30000 16#4000 16#1
+    End ChannelInfo
+    ChannelInfo
+      Number            15
+      ChannelName      "Input Bool 15"
+      Datatype          Bool_In
+      Routine           100
+      CopyParameters    16#0 16#0 16#30000 16#8000 16#1
+    End ChannelInfo
+  End Channels
+
+  Configuration
+    ConfigInfo
+      ModuleKey        16#6
+      InAreaSize       1 WORD
+      OutAreaSize      0 WORD
+      InWord
+        WORD  0    0
+      CIGIOConnData
+        CIGIOData        16#01 16#50
+      End CIGIOConnData
+    End ConfigInfo
+  End Configuration
+  HWUnitInfoCRC 16#5444
+End HWUnitInfo (* INPUT: 16 Bool *)

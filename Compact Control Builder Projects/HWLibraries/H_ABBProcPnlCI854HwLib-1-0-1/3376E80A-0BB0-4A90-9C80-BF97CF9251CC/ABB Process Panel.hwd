@@ -1,0 +1,147 @@
+(*-----------------------------------------------------------------*)
+(* 2007-12-12  Alfred Theorin                                      *)
+(*             PRC #31009                                          *)
+(*             * Byte split CIGIOData 16#03 due to overflow.       *)
+(*             * Decreased CIGIOData 16#08 from 400 to 255 due     *)
+(*               to overlow.                                       *)
+(*               OK since the value is unused and byte splitting,  *)
+(*               is currently not supported here by CI854.         *)
+(*             * Added FileHeader, assuming previous version 1.0-0 *)
+(*-----------------------------------------------------------------*)
+
+FileHeader
+  Contents              "ABB Process Panel"
+  Date                  "2008-01-29"
+  Version               "Version 1.0-1"
+  RequiredSyntaxVersion "3.0"
+End FileHeader
+
+(*========================================================*)
+(*                                                        *)
+(*      ABB Process Panel for CI854                       *)
+(*                                                        *)
+(*========================================================*)
+
+HWUnitInfo
+  HWUnitID         16#00D51002
+  Description      "ABB Process Panel"
+  Information      "ABB Process Panel"
+  Icons            OpPanel
+  Attributes       AdapterUnit  AutoAttach 
+
+  InterfaceInfo
+    IoSysType  CIGIO
+    CLSID_CB   {70AC2B68-4487-48e3-9957-EA25FD20A55F}
+    CLSID_CTRL {7a59948b-4432-4d69-9f66-2ca7ed7f9db5}
+    HWConfig   Fail
+  End InterfaceInfo
+
+  ConnectionInfo
+    ConnectType AllUnits
+    IOConnect   Fail
+    IOConfig    NoFail
+  End ConnectionInfo
+
+  SubUnits  40
+
+  SubUnitTypes
+    SubMenu "Bool"
+      HWUnitID 16#06D51002  (* INPUT:16 Bool*)
+      Separator
+      HWUnitID 16#07D51002  (* OUTPUT:16 Bool*)
+    SubMenuEnd
+    SubMenu "Byte"
+      HWUnitID 16#02D51002 (* INPUT: 2 Byte*)
+      HWUnitID 16#03D51002 (* INPUT: 16 Byte*)
+      Separator
+      HWUnitID 16#04D51002 (* OUTPUT:2 Byte *)
+      HWUnitID 16#05D51002 (* OUTPUT:16 Byte *)
+    SubMenuEnd
+    SubMenu "Int"
+      HWUnitID 16#08D51002 (*INPUT:1 Int*)
+      HWUnitID 16#09D51002(* INPUT:  4 Int*)
+      HWUnitID 16#0AD51002 (* INPUT:16 Int*)
+      Separator
+      HWUnitID 16#0BD51002 (* OUTPUT:1 Int *)
+      HWUnitID 16#0CD51002 (* OUTPUT:4 Int *)
+      HWUnitID 16#0DD51002 (* OUTPUT:16 Int *)
+    SubMenuEnd
+    SubMenu "Word" 
+      HWUnitID 16#0ED51002 (*INPUT:1 Word*)
+      HWUnitID 16#0FD51002(* INPUT: 4 Word*)
+      HWUnitID 16#10D51002 (* INPUT:16 Word*)
+      Separator
+      HWUnitID 16#14D51002 (* OUTPUT:1 Word *)
+      HWUnitID 16#15D51002 (* OUTPUT:4 Word *)
+      HWUnitID 16#16D51002 (* OUTPUT:16 Word *)
+    SubMenuEnd
+    SubMenu "DInt"
+      HWUnitID 16#11D51002   (*INPUT:1 DInt*)
+      HWUnitID 16#12D51002   (*INPUT:4 DInt*)
+      HWUnitID 16#13D51002   (*INPUT:16 DInt*)
+      Separator
+      HWUnitID 16#17D51002  (*OUTPUT:1 DInt*)
+      HWUnitID 16#18D51002  (*OUTPUT:4 DInt*)
+      HWUnitID 16#19D51002  (*OUTPUT:16 DInt*)
+    SubMenuEnd
+  End SubUnitTypes
+
+  Channels
+    ChannelInfo
+      Number            0
+      ChannelName      "UnitStatus"
+      Datatype          Status_In
+      Routine           900
+      CopyParameters    16#0 16#0 16#50000
+    End ChannelInfo
+  End Channels
+
+  UnitStatusText
+    ExtendedStatus1  "Slave does not exist"
+    ExtendedStatus2  "Configuration data fault"
+    ExtendedStatus3  "Parameter data fault"
+    ExtendedStatus4  "Static diagnostic"
+    ExtendedStatus5  "Redundant slave does not exist"
+    ExtendedStatus6  "Diagnostic configuration data fault"
+    ExtendedStatus7  "Report Diagnostics fault"
+    ExtendedStatus8  "ExtendedStatus8"
+    ExtendedStatus9  "ExtendedStatus9"
+    ExtendedStatus10 "ExtendedStatus10"
+  End UnitStatusText
+
+  UnitStatusSeverity
+    ExtendedStatus1   GeneralError   TriggerAlarm SeverityMedium
+    ExtendedStatus2   GeneralError   TriggerAlarm SeverityHigh
+    ExtendedStatus3   GeneralError   TriggerAlarm SeverityHigh
+    ExtendedStatus4   GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus5   GeneralWarning TriggerEvent SeverityMedium
+    ExtendedStatus6   GeneralWarning TriggerEvent SeverityMedium
+    ExtendedStatus7   GeneralWarning TriggerEvent SeverityMedium
+  End UnitStatusSeverity
+
+  Configuration
+    ConfigInfo
+      ModuleKey        16#1002
+      InAreaSize       0 BYTE
+      OutAreaSize      0 BYTE
+      CIGIOConnData
+        CIGIOData        16#02 16#88 16#00 16#00 16#00 16#10 16#2 16#01
+        CIGIOData        16#03 16#00 16#3C 16#00 16#3C 16#00 16#3C 16#00 16#3C 16#00 16#64 16#00 16#00 16#00 16#96 16#00 16#FA 16#01 16#C2 16#03 16#20
+        CIGIOData        16#04 1
+        CIGIOData        16#06 200
+        CIGIOData        16#07 200
+        CIGIOData        16#08 255
+        CIGIOData        16#09 0
+        SyncronizeDataExchange
+      End CIGIOConnData
+    End ConfigInfo
+    ConfigInfo
+      EmptyConfig
+      ModuleKey        16#FFFF
+      InAreaSize       0
+      OutAreaSize      0
+    End ConfigInfo
+  End Configuration
+
+  HWUnitInfoCRC 16#A145
+End HWUnitInfo (* Process Panel with CI-PP10 *)

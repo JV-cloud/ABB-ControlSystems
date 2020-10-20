@@ -1,0 +1,145 @@
+(*=============================*)
+(* Modified : 2010-02-16 10:59 *)
+(* Modified : 2010-03-08 14:38 *)
+(* Modified : 2010-03-25 16:04 *)
+(* Modified : 2010-05-07 13:44 *)
+(* Modified : 2010-05-07 14:01 *)
+(* Modified : 2010-05-11 11:08 *)
+(* Modified : 2012-03-12 14:18 *)
+(* Modified : 2013-01-31 12:49 *)
+(*=============================*)
+FileHeader
+  Contents              "MLink"
+  Date                  "31.01.2013"
+  Version               "Version 1.4.9" (* Device Import Wizard *)
+  (* Parser             "Profinet 1.0.17.0" *)
+  RequiredSyntaxVersion "3.0"
+End FileHeader
+
+SessionID d2ea4b6b-69fe-43e0-8406-35492fafb797
+
+(*========================================================*)
+(*                         MLink                          *)
+(*========================================================*)
+
+HWUnitInfo
+  HWUnitID         {0fe13a43-c569-4641-8d97-2199e6800f47}
+  Description      "MLink_DAP"
+  Information      "MNS iS PNIO Device"
+  Icons            RackIOType
+  Attributes       AdapterUnit
+  DownloadInstanceNamesForSubUnits
+
+  InterfaceInfo
+    IoSysType  CIGIO
+    CLSID_CB   {D9720536-1BB9-4f74-A5CD-DCDDED2398CA}
+    CLSID_CTRL {38CEFCC8-23D7-43f9-BE6D-4251F87BF421}
+  End InterfaceInfo
+
+  ConnectionInfo
+    ConnectType  AllUnits
+    IOConnect    Fail
+    IOConfig     NoFail
+  End ConnectionInfo
+
+  DiscreteNumbers
+    1 2 3 4 5 6 7 8 9 10
+  End DiscreteNumbers
+
+  SubUnitTypes
+    HWUnitID {f200619a-f934-4c47-b006-9c80391ca9c2} Positions 1 FixedPositions 1
+    HWUnitID {ac48b51a-37dc-4b6f-8fd4-daf9ab52280c} Positions 2
+    HWUnitID {cc1c552e-65b6-4f1e-b5a0-bd8fd77d088b} Positions 3
+    HWUnitID {ed70b114-5eda-4e04-a635-3fb565ee60c2} Positions 4
+    HWUnitID {2dbc9384-8a7c-443d-b43f-7e83967e0dec} Positions 5
+  End SubUnitTypes
+
+  Parameters
+    ParamInfo
+      Name            UpdateTimeInputs
+      Description     "Update Time Inputs"
+      CompileType     IOConnect
+      Datatype        ENUM
+      Default         5
+      ParValIndex     0
+      ParamType       CIGIOData 19 0 2 WordParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            UpdateTimeOutputs
+      Description     "Update Time Outputs"
+      CompileType     IOConnect
+      Datatype        ENUM
+      Default         5
+      ParValIndex     0
+      ParamType       CIGIOData 35 0 2 WordParam ByteOffset
+    End ParamInfo
+  End Parameters
+
+  ParValList
+    ParVal
+      ParValIndex     0
+      UnitText        ""
+      ENUM
+      "1 ms" 1
+      "2 ms" 2
+      "4 ms" 4
+      "8 ms" 8
+      "16 ms" 16
+      "32 ms" 32
+      "64 ms" 64
+      "128 ms" 128
+      "256 ms" 256
+      "512 ms" 512
+    End ParVal
+  End ParValList
+
+  Channels
+    ChannelInfo
+      Number                1
+      ChannelName           "UnitStatus"
+      Datatype              Status_In
+      Routine               900
+      CopyParameters        16#0 16#0 16#50000
+    End ChannelInfo
+  End Channels
+
+  UnitStatusText
+    DeviceSpecific1  "Maintenance required"
+    DeviceSpecific2  "Maintenance demanded"
+    DeviceSpecific3  "Diagnosis data available"
+    DeviceSpecific4  "Locked by other controller/supervisor"
+    DeviceSpecific6  "Parametrization fault"
+  End UnitStatusText
+
+  UnitStatusSeverity
+    DeviceSpecific1  GeneralWarning TriggerEvent SeverityMedium
+    DeviceSpecific2  GeneralWarning TriggerEvent SeverityMedium
+    DeviceSpecific3  GeneralWarning TriggerEvent SeverityMedium
+    DeviceSpecific4  GeneralWarning TriggerEvent SeverityMedium
+    DeviceSpecific6  GeneralError TriggerAlarm SeverityHigh
+  End UnitStatusSeverity
+
+  Configuration
+    ConfigInfo
+      ModuleKey        1
+      InAreaSize       0 BYTE
+      OutAreaSize      0 BYTE
+      CIGIOConnData
+        CIGIOData      16#10 16#a5 16#5a 16#0 16#1 16#2 16#1 16#2 16#1 
+        CIGIOData      16#1 16#0 16#20 16#5 16#a0 16#5 16#a0 16#b 16#40 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#0 
+        CIGIOData      16#2 16#f0 16#0 16#0 16#1 16#0 16#1a 16#0 16#10 16#1 16#0 16#1 16#0 16#1 16#0 16#1 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#0 _
+ 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#0 
+        CIGIOData      16#11 16#0 16#1 
+        SyncronizeDataExchange
+      End CIGIOConnData
+    End ConfigInfo
+    ConfigInfo
+      EmptyConfig
+      ModuleKey        16#FFFF
+      InAreaSize       0 BYTE
+      OutAreaSize      0 BYTE
+    End ConfigInfo
+  End Configuration
+
+  HWUnitInfoCRC 16#2c88
+End HWUnitInfo

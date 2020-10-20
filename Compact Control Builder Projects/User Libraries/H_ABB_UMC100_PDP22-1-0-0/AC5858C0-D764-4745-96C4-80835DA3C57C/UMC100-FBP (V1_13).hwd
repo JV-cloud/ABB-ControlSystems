@@ -1,0 +1,1477 @@
+(*=============================*)
+(* Modified : 2020-10-20 00:37 *)
+(* Modified : 2020-10-20 00:39 *)
+(*=============================*)
+FileHeader
+  Contents              "PDP22-FBP with UMC100"
+  Date                  "20.10.2020"
+  Version               "Version 1.5.2" (* Device Import Wizard *)
+  (* Parser             "Profibus 1.6.2" *)
+  RequiredSyntaxVersion "3.0"
+End FileHeader
+
+(*========================================================*)
+(*                 PDP22-FBP with UMC100                  *)
+(*========================================================*)
+
+HWUnitInfo
+  HWUnitID         {fe9ba976-cd94-48e1-a2a0-4b70d14ec3a2}
+  Description      "UMC100-FBP (V1_13)"
+  Information      "none"
+  Icons            DefaultIOType
+  Attributes       IoUnit DigitalIn DigitalOut
+
+  Parameters
+    ParamInfo
+      Name            SETTING_IE_1__0_01A__PARAM000
+      Description     "Setting Ie 1 [0.01A]"
+      CompileType     IOConnect
+      Datatype        int
+      Default         50
+      ParValIndex     0
+      ParamType       CIGIOData 1 0 0 IntParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            SETTING_IE_2__0_01A__PARAM001
+      Description     "Setting Ie 2 [0.01A]"
+      CompileType     IOConnect
+      Datatype        int
+      Default         50
+      ParValIndex     0
+      ParamType       CIGIOData 5 0 0 IntParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            YD_STARTING_TIME__0_1S__PARAM002
+      Description     "YD Starting Time [0.1s]"
+      CompileType     IOConnect
+      Datatype        int
+      Default         600
+      ParValIndex     1
+      ParamType       CIGIOData 9 0 0 WordParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            CURRENT_FACTOR_____PARAM003
+      Description     "Current Factor [%]"
+      CompileType     IOConnect
+      Datatype        int
+      Default         100
+      ParValIndex     2
+      ParamType       CIGIOData 11 0 0 WordParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            COOLING_TIME__S__PARAM004
+      Description     "Cooling Time [s]"
+      CompileType     IOConnect
+      Datatype        int
+      Default         120
+      ParValIndex     3
+      ParamType       CIGIOData 13 0 0 WordParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            LANGUAGE_PARAM005
+      Description     "Language"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         0
+      ParValIndex     4
+      ParamType       CIGIOData 17 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            REV_LOCK_OUT_TIME__S__PARAM006
+      Description     "Rev Lock-Out Time [s]"
+      CompileType     IOConnect
+      Datatype        int
+      Default         1
+      ParValIndex     5
+      ParamType       CIGIOData 18 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            FAULT_OUTPUT_PARAM007
+      Description     "Fault Output"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         0
+      ParValIndex     6
+      ParamType       CIGIOData 19 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            TRIP_CLASS_PARAM008
+      Description     "Trip Class"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         1
+      ParValIndex     7
+      ParamType       CIGIOData 20 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            LOW_CURR_WARN_LEVEL__5___PARAM009
+      Description     "Low Curr Warn Level [5%]"
+      CompileType     IOConnect
+      Datatype        int
+      Default         10
+      ParValIndex     8
+      ParamType       CIGIOData 21 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            LOW_CURR_TRIP_LEVEL__5___PARAM010
+      Description     "Low Curr Trip Level [5%]"
+      CompileType     IOConnect
+      Datatype        int
+      Default         0
+      ParValIndex     8
+      ParamType       CIGIOData 22 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            HIGH_CURR_WARN_LEVEL__5___PARAM011
+      Description     "High Curr Warn Level [5%]"
+      CompileType     IOConnect
+      Datatype        int
+      Default         30
+      ParValIndex     9
+      ParamType       CIGIOData 23 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            HIGH_CURR_TRIP_LEVEL__5___PARAM012
+      Description     "High Curr Trip Level [5%]"
+      CompileType     IOConnect
+      Datatype        int
+      Default         160
+      ParValIndex     9
+      ParamType       CIGIOData 24 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            LOCKED_ROTOR_LEVEL__5___PARAM013
+      Description     "Locked Rotor Level [5%]"
+      CompileType     IOConnect
+      Datatype        int
+      Default         160
+      ParValIndex     9
+      ParamType       CIGIOData 25 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            LOCKED_ROTOR_DELAY__0_1S__PARAM014
+      Description     "Locked Rotor Delay [0.1s]"
+      CompileType     IOConnect
+      Datatype        int
+      Default         5
+      ParValIndex     10
+      ParamType       CIGIOData 26 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            CUSTOM_APP_PARAMETER_PARAM015
+      Description     "Custom App Parameter"
+      CompileType     IOConnect
+      Datatype        int
+      Default         0
+      ParValIndex     10
+      ParamType       CIGIOData 27 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            MULTIF_IN_0_PARAM016
+      Description     "Multif In 0"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         0
+      ParValIndex     11
+      ParamType       CIGIOData 28 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            MULTIF_IN_1_PARAM017
+      Description     "Multif In 1"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         0
+      ParValIndex     11
+      ParamType       CIGIOData 29 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            MULTIF_IN_2_PARAM018
+      Description     "Multif In 2"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         0
+      ParValIndex     11
+      ParamType       CIGIOData 30 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            MULTIF_IN_0_DELAY__0_1S__PARAM019
+      Description     "Multif In 0 Delay [0.1s]"
+      CompileType     IOConnect
+      Datatype        int
+      Default         0
+      ParValIndex     10
+      ParamType       CIGIOData 31 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            MULTIF_IN_1_DELAY__0_1S__PARAM020
+      Description     "Multif In 1 Delay [0.1s]"
+      CompileType     IOConnect
+      Datatype        int
+      Default         0
+      ParValIndex     10
+      ParamType       CIGIOData 32 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            MULTIF_IN_2_DELAY__0_1S__PARAM021
+      Description     "Multif In 2 Delay [0.1s]"
+      CompileType     IOConnect
+      Datatype        int
+      Default         0
+      ParValIndex     10
+      ParamType       CIGIOData 33 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            CONTROL_FUNCTION_PARAM022
+      Description     "Control Function"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         2
+      ParValIndex     12
+      ParamType       CIGIOData 34 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            BUSFAULT_REACTION_PARAM023
+      Description     "Busfault Reaction"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         0
+      ParValIndex     13
+      ParamType       CIGIOData 35 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            AUX_INP_1_REACTION_PARAM024
+      Description     "Aux Inp 1 Reaction"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         0
+      ParValIndex     14
+      ParamType       CIGIOData 36 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            AUX_INP_2_REACTION_PARAM025
+      Description     "Aux Inp 2 Reaction"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         0
+      ParValIndex     14
+      ParamType       CIGIOData 36 4 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            AUX_INP_3_REACTION_PARAM026
+      Description     "Aux Inp 3 Reaction"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         0
+      ParValIndex     14
+      ParamType       CIGIOData 37 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            AUX_INP_4_REACTION_PARAM027
+      Description     "Aux Inp 4 Reaction"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         0
+      ParValIndex     14
+      ParamType       CIGIOData 37 4 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            AUX_INP_5_REACTION_PARAM028
+      Description     "Aux Inp 5 Reaction"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         0
+      ParValIndex     14
+      ParamType       CIGIOData 38 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            AUX_INP_6_REACTION_PARAM029
+      Description     "Aux Inp 6 Reaction"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         0
+      ParValIndex     14
+      ParamType       CIGIOData 38 4 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            PTC__THERMISTOR_PARAM030
+      Description     "PTC, Thermistor"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         0
+      ParValIndex     15
+      ParamType       CIGIOData 39 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            CHECK_BACK_PARAM031
+      Description     "Check-Back"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         1
+      ParValIndex     16
+      ParamType       CIGIOData 39 2 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            CHECK_PHASE_SEQUENCE_PARAM032
+      Description     "Check Phase Sequence"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         0
+      ParValIndex     17
+      ParamType       CIGIOData 39 4 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            FAULT_AUTO_RESET_PARAM033
+      Description     "Fault Auto Reset"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         0
+      ParValIndex     18
+      ParamType       CIGIOData 40 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            EMERGENCY_START_PARAM034
+      Description     "Emergency Start"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         0
+      ParValIndex     18
+      ParamType       CIGIOData 40 1 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            ADDRESS_CHECK_PARAM035
+      Description     "Address Check"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         0
+      ParValIndex     18
+      ParamType       CIGIOData 40 3 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            ENABLE_CUSTOM_LOGIC_PARAM036
+      Description     "Enable Custom Logic"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         0
+      ParValIndex     19
+      ParamType       CIGIOData 40 4 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            YD_CHANGE_OVER_MODE_PARAM037
+      Description     "YD Change-Over Mode"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         1
+      ParValIndex     20
+      ParamType       CIGIOData 40 5 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            PHASE_LOSS_PROT__PARAM038
+      Description     "Phase Loss Prot."
+      CompileType     IOConnect
+      Datatype        enum
+      Default         1
+      ParValIndex     21
+      ParamType       CIGIOData 40 6 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            DX1XX_ENABLED_PARAM039
+      Description     "DX1xx Enabled"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         0
+      ParValIndex     21
+      ParamType       CIGIOData 41 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            MISSING_MODULE_REACT__PARAM040
+      Description     "Missing Module React."
+      CompileType     IOConnect
+      Datatype        enum
+      Default         0
+      ParValIndex     22
+      ParamType       CIGIOData 41 7 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            AUX_INP_1_ACK_MODE_PARAM041
+      Description     "Aux Inp 1 Ack Mode"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         0
+      ParValIndex     23
+      ParamType       CIGIOData 42 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            AUX_INP_2_ACK_MODE_PARAM042
+      Description     "Aux Inp 2 Ack Mode"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         0
+      ParValIndex     23
+      ParamType       CIGIOData 42 1 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            AUX_INP_3_ACK_MODE_PARAM043
+      Description     "Aux Inp 3 Ack Mode"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         0
+      ParValIndex     23
+      ParamType       CIGIOData 42 2 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            AUX_INP_4_ACK_MODE_PARAM044
+      Description     "Aux Inp 4 Ack Mode"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         0
+      ParValIndex     23
+      ParamType       CIGIOData 42 3 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            AUX_INP_5_ACK_MODE_PARAM045
+      Description     "Aux Inp 5 Ack Mode"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         0
+      ParValIndex     23
+      ParamType       CIGIOData 42 4 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            AUX_INP_6_ACK_MODE_PARAM046
+      Description     "Aux Inp 6 Ack Mode"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         0
+      ParValIndex     23
+      ParamType       CIGIOData 42 5 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            COOLING_MODE_PARAM047
+      Description     "Cooling Mode"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         0
+      ParValIndex     24
+      ParamType       CIGIOData 42 7 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            INVERT_DI_START_INP__PARAM048
+      Description     "Invert DI Start Inp."
+      CompileType     IOConnect
+      Datatype        enum
+      Default         0
+      ParValIndex     25
+      ParamType       CIGIOData 43 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            INVERT_DI_STOP_INP__PARAM049
+      Description     "Invert DI Stop Inp."
+      CompileType     IOConnect
+      Datatype        enum
+      Default         1
+      ParValIndex     25
+      ParamType       CIGIOData 43 1 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            INCHING_DI_START_INP_PARAM050
+      Description     "Inching DI Start Inp"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         0
+      ParValIndex     25
+      ParamType       CIGIOData 43 4 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            LOC_1_START_BUS_CYC_PARAM051
+      Description     "Loc 1 Start Bus Cyc"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         0
+      ParValIndex     25
+      ParamType       CIGIOData 44 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            LOC_1_STOP_BUS_CYC_PARAM052
+      Description     "Loc 1 Stop Bus Cyc"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         1
+      ParValIndex     25
+      ParamType       CIGIOData 44 1 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            LOC_1_START_DI_PARAM053
+      Description     "Loc 1 Start DI"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         1
+      ParValIndex     25
+      ParamType       CIGIOData 44 2 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            LOC_1_STOP_DI_PARAM054
+      Description     "Loc 1 Stop DI"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         1
+      ParValIndex     25
+      ParamType       CIGIOData 44 3 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            LOC_1_START_LCD_PARAM055
+      Description     "Loc 1 Start LCD"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         1
+      ParValIndex     25
+      ParamType       CIGIOData 44 4 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            LOC_1_STOP_LCD_PARAM056
+      Description     "Loc 1 Stop LCD"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         1
+      ParValIndex     25
+      ParamType       CIGIOData 44 5 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            LOC_1_START_BUS_ACYC_PARAM057
+      Description     "Loc 1 Start Bus Acyc"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         0
+      ParValIndex     25
+      ParamType       CIGIOData 44 6 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            LOC_1_STOP_BUS_ACYC_PARAM058
+      Description     "Loc 1 Stop Bus Acyc"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         1
+      ParValIndex     25
+      ParamType       CIGIOData 44 7 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            AUTO_START_BUS_CYC_PARAM059
+      Description     "Auto Start Bus Cyc"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         1
+      ParValIndex     25
+      ParamType       CIGIOData 45 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            AUTO_STOP_BUS_CYC_PARAM060
+      Description     "Auto Stop Bus Cyc"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         1
+      ParValIndex     25
+      ParamType       CIGIOData 45 1 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            AUTO_START_DI_PARAM061
+      Description     "Auto Start DI"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         0
+      ParValIndex     25
+      ParamType       CIGIOData 45 2 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            AUTO_STOP_DI_PARAM062
+      Description     "Auto Stop DI"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         1
+      ParValIndex     25
+      ParamType       CIGIOData 45 3 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            AUTO_START_LCD_PARAM063
+      Description     "Auto Start LCD"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         0
+      ParValIndex     25
+      ParamType       CIGIOData 45 4 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            AUTO_STOP_LCD_PARAM064
+      Description     "Auto Stop LCD"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         1
+      ParValIndex     25
+      ParamType       CIGIOData 45 5 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            AUTO_START_BUS_ACYC_PARAM065
+      Description     "Auto Start Bus Acyc"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         1
+      ParValIndex     25
+      ParamType       CIGIOData 45 6 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            AUTO_STOP_BUS_ACYC_PARAM066
+      Description     "Auto Stop Bus Acyc"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         1
+      ParValIndex     25
+      ParamType       CIGIOData 45 7 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            LOC_2_START_BUS_CYC_PARAM067
+      Description     "Loc 2 Start Bus Cyc"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         0
+      ParValIndex     25
+      ParamType       CIGIOData 46 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            LOC_2_STOP_BUS_CYC_PARAM068
+      Description     "Loc 2 Stop Bus Cyc"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         1
+      ParValIndex     25
+      ParamType       CIGIOData 46 1 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            LOC_2_START_DI_PARAM069
+      Description     "Loc 2 Start DI"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         1
+      ParValIndex     25
+      ParamType       CIGIOData 46 2 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            LOC_2_STOP_DI_PARAM070
+      Description     "Loc 2 Stop DI"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         1
+      ParValIndex     25
+      ParamType       CIGIOData 46 3 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            LOC_2_START_LCD_PARAM071
+      Description     "Loc 2 Start LCD"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         1
+      ParValIndex     25
+      ParamType       CIGIOData 46 4 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            LOC_2_STOP_LCD_PARAM072
+      Description     "Loc 2 Stop LCD"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         1
+      ParValIndex     25
+      ParamType       CIGIOData 46 5 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            LOC_2_START_BUS_ACYC_PARAM073
+      Description     "Loc 2 Start Bus Acyc"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         0
+      ParValIndex     25
+      ParamType       CIGIOData 46 6 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            LOC_2_STOP_BUS_ACYC_PARAM074
+      Description     "Loc 2 Stop Bus Acyc"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         1
+      ParValIndex     25
+      ParamType       CIGIOData 46 7 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            MULTIF_IN_0_AUTORESET_PARAM075
+      Description     "Multif In 0 Autoreset"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         0
+      ParValIndex     25
+      ParamType       CIGIOData 47 4 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            MULTIF_IN_1_AUTORESET_PARAM076
+      Description     "Multif In 1 Autoreset"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         0
+      ParValIndex     25
+      ParamType       CIGIOData 47 5 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            MULTIF_IN_2_AUTORESET_PARAM077
+      Description     "Multif In 2 Autoreset"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         0
+      ParValIndex     25
+      ParamType       CIGIOData 47 6 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            AUX_INP_1_DELAY__0_1S__PARAM078
+      Description     "Aux Inp 1 Delay [0.1s]"
+      CompileType     IOConnect
+      Datatype        int
+      Default         0
+      ParValIndex     10
+      ParamType       CIGIOData 51 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            AUX_INP_2_DELAY__0_1S__PARAM079
+      Description     "Aux Inp 2 Delay [0.1s]"
+      CompileType     IOConnect
+      Datatype        int
+      Default         0
+      ParValIndex     10
+      ParamType       CIGIOData 52 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            AUX_INP_3_DELAY__0_1S__PARAM080
+      Description     "Aux Inp 3 Delay [0.1s]"
+      CompileType     IOConnect
+      Datatype        int
+      Default         0
+      ParValIndex     10
+      ParamType       CIGIOData 53 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            AUX_INP_4_DELAY__0_1S__PARAM081
+      Description     "Aux Inp 4 Delay [0.1s]"
+      CompileType     IOConnect
+      Datatype        int
+      Default         0
+      ParValIndex     10
+      ParamType       CIGIOData 54 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            AUX_INP_5_DELAY__0_1S__PARAM082
+      Description     "Aux Inp 5 Delay [0.1s]"
+      CompileType     IOConnect
+      Datatype        int
+      Default         0
+      ParValIndex     10
+      ParamType       CIGIOData 55 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            AUX_INP_6_DELAY__0_1S__PARAM083
+      Description     "Aux Inp 6 Delay [0.1s]"
+      CompileType     IOConnect
+      Datatype        int
+      Default         0
+      ParValIndex     10
+      ParamType       CIGIOData 56 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            CHECK_BACK_TIME__0_1S__PARAM084
+      Description     "Check-Back Time [0.1s]"
+      CompileType     IOConnect
+      Datatype        int
+      Default         5
+      ParValIndex     5
+      ParamType       CIGIOData 57 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            LOW_CURR_WARN_DELAY__0_1S__PARAM085
+      Description     "Low Curr Warn Delay [0.1s]"
+      CompileType     IOConnect
+      Datatype        int
+      Default         5
+      ParValIndex     10
+      ParamType       CIGIOData 58 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            LOW_CURR_TRIP_DELAY__0_1S__PARAM086
+      Description     "Low Curr Trip Delay [0.1s]"
+      CompileType     IOConnect
+      Datatype        int
+      Default         5
+      ParValIndex     10
+      ParamType       CIGIOData 59 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            HIGH_CURR_WARN_DELAY__0_1S__PARAM087
+      Description     "High Curr Warn Delay [0.1s]"
+      CompileType     IOConnect
+      Datatype        int
+      Default         5
+      ParValIndex     10
+      ParamType       CIGIOData 60 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            HIGH_CURR_TRIP_DELAY__0_1S__PARAM088
+      Description     "High Curr Trip Delay [0.1s]"
+      CompileType     IOConnect
+      Datatype        int
+      Default         5
+      ParValIndex     10
+      ParamType       CIGIOData 61 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            PHASE_IMB_TRIP_LEVEL_____PARAM089
+      Description     "Phase Imb Trip Level [%]"
+      CompileType     IOConnect
+      Datatype        int
+      Default         50
+      ParValIndex     26
+      ParamType       CIGIOData 62 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            PHASE_IMB_WARN_LEVEL_____PARAM090
+      Description     "Phase Imb Warn Level [%]"
+      CompileType     IOConnect
+      Datatype        int
+      Default         100
+      ParValIndex     26
+      ParamType       CIGIOData 63 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            PHASE_REVERSAL_PARAM091
+      Description     "Phase Reversal"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         0
+      ParValIndex     27
+      ParamType       CIGIOData 64 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            RESTART_LEVEL_____PARAM092
+      Description     "Restart Level [%]"
+      CompileType     IOConnect
+      Datatype        int
+      Default         30
+      ParValIndex     28
+      ParamType       CIGIOData 65 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            USER_DISPLAY_1_PARAM093
+      Description     "User Display 1"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         0
+      ParValIndex     29
+      ParamType       CIGIOData 66 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            USER_DISPLAY_2_PARAM094
+      Description     "User Display 2"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         6
+      ParValIndex     29
+      ParamType       CIGIOData 67 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            USER_DISPLAY_3_PARAM095
+      Description     "User Display 3"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         7
+      ParValIndex     29
+      ParamType       CIGIOData 68 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            USER_DISPLAY_4_PARAM096
+      Description     "User Display 4"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         4
+      ParValIndex     30
+      ParamType       CIGIOData 69 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            USER_DISPLAY_5_PARAM097
+      Description     "User Display 5"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         5
+      ParValIndex     30
+      ParamType       CIGIOData 70 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            DIP_DURATION__0_1S__PARAM098
+      Description     "Dip Duration [0.1s]"
+      CompileType     IOConnect
+      Datatype        int
+      Default         5
+      ParValIndex     5
+      ParamType       CIGIOData 72 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            DIP_AUTORESTART_WINDOW__0_1S__PARAM099
+      Description     "Dip Autorestart Window [0.1s]"
+      CompileType     IOConnect
+      Datatype        int
+      Default         1
+      ParValIndex     31
+      ParamType       CIGIOData 73 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            DIP_AUTORESTART_DELAY__S__PARAM100
+      Description     "Dip Autorestart Delay [s]"
+      CompileType     IOConnect
+      Datatype        int
+      Default         0
+      ParValIndex     10
+      ParamType       CIGIOData 74 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            THERMAL_LOAD_WARNLEV_____PARAM101
+      Description     "Thermal Load Warnlev [%]"
+      CompileType     IOConnect
+      Datatype        int
+      Default         100
+      ParValIndex     32
+      ParamType       CIGIOData 75 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            DX1XX_DI_DELAY__MS__PARAM102
+      Description     "DX1xx DI Delay [ms]"
+      CompileType     IOConnect
+      Datatype        int
+      Default         20
+      ParValIndex     33
+      ParamType       CIGIOData 84 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            DX1XX_AO_TYPE_PARAM103
+      Description     "DX1xx AO Type"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         0
+      ParValIndex     34
+      ParamType       CIGIOData 113 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            DX1XX_AO_ERR_REAC_PARAM104
+      Description     "DX1xx AO Err Reac"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         0
+      ParValIndex     17
+      ParamType       CIGIOData 113 2 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            BACKLIGHT_PARAM105
+      Description     "Backlight"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         1
+      ParValIndex     35
+      ParamType       CIGIOData 118 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            PASSWORD_PROTECTION_PARAM106
+      Description     "Password Protection"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         0
+      ParValIndex     36
+      ParamType       CIGIOData 118 1 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            DIP_ENABLE_PARAM107
+      Description     "Dip Enable"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         0
+      ParValIndex     37
+      ParamType       CIGIOData 118 3 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            DIP_AUTORESTART_ENABLE_PARAM108
+      Description     "Dip Autorestart Enable"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         0
+      ParValIndex     35
+      ParamType       CIGIOData 118 5 0 ByteParam ByteOffset
+    End ParamInfo
+  End Parameters
+
+  ParValList
+    ParVal
+      ParValIndex     0
+      UnitText        ""
+      int 24 320000 24 320000
+    End ParVal
+    ParVal
+      ParValIndex     1
+      UnitText        ""
+      int 10 36000 10 36000
+    End ParVal
+    ParVal
+      ParValIndex     2
+      UnitText        ""
+      int 2 64000 2 64000
+    End ParVal
+    ParVal
+      ParValIndex     3
+      UnitText        ""
+      int 30 64000 30 64000
+    End ParVal
+    ParVal
+      ParValIndex     4
+      UnitText        ""
+      enum
+      "English" 0
+      "Deutsch" 1
+      "Francais" 2
+      "Espanol" 3
+      "Italiano" 4
+      "Portugues" 5
+    End ParVal
+    ParVal
+      ParValIndex     5
+      UnitText        ""
+      int 1 255 1 255
+    End ParVal
+    ParVal
+      ParValIndex     6
+      UnitText        ""
+      enum
+      "Off" 0
+      "Flash DO2" 1
+      "On DO2" 2
+      "Invert DO2" 3
+      "Flash DO3" 4
+      "On DO3" 5
+      "Invert DO3" 6
+    End ParVal
+    ParVal
+      ParValIndex     7
+      UnitText        ""
+      enum
+      "Class 5" 0
+      "Class 10" 1
+      "Class 20" 2
+      "Class 30" 3
+      "Class 40" 4
+    End ParVal
+    ParVal
+      ParValIndex     8
+      UnitText        ""
+      int 0 20 0 20
+    End ParVal
+    ParVal
+      ParValIndex     9
+      UnitText        ""
+      int 20 160 20 160
+    End ParVal
+    ParVal
+      ParValIndex     10
+      UnitText        ""
+      int 0 255 0 255
+    End ParVal
+    ParVal
+      ParValIndex     11
+      UnitText        ""
+      enum
+      "Off" 0
+      "Stop (NC)" 1
+      "Stop (NO)" 2
+      "Ext. Flt (NC) always" 3
+      "Ext. Flt (NO) always" 4
+      "Ext. Flt (NC) Motor on" 5
+      "Ext. Flt (NO) Motor on" 6
+      "Prep. emerg. Start (NC)" 7
+      "Prep. emerg. Start (NO)" 8
+      "Testposition (NC)" 9
+      "Testposition (NO)" 10
+      "Force local (NC)" 11
+      "Force local (NO)" 12
+      "Fault reset (NC)" 13
+      "Fault reset (NO)" 14
+      "Voltage DIP (NC)" 15
+      "Voltage DIP (NO)" 16
+      "CEM11 always (Warning)" 17
+      "CEM11 after startup (Warning)" 18
+      "CEM11 always (Fault)" 19
+      "CEM11 after startup time (Fault)" 20
+    End ParVal
+    ParVal
+      ParValIndex     12
+      UnitText        ""
+      enum
+      "Transparent" 1
+      "Overload Relay" 2
+      "Direct Starter" 3
+      "Reverse Starter" 4
+      "Star-delta Starter" 5
+      "Pole-Changing Starter" 7
+      "Actuator 1" 9
+      "Actuator 2" 10
+      "Actuator 3" 11
+      "Actuator 4" 12
+    End ParVal
+    ParVal
+      ParValIndex     13
+      UnitText        ""
+      enum
+      "Motor Off" 0
+      "Retain" 1
+      "Start Forward" 2
+      "Start Reverse" 3
+    End ParVal
+    ParVal
+      ParValIndex     14
+      UnitText        ""
+      enum
+      "Disabled" 0
+      "Fault (NC) Motor in On/Off" 1
+      "Fault (NO) Motor in On/Off" 2
+      "Fault (NC) Motor in On" 3
+      "Fault (NO) Motor in On" 4
+      "Warning (NC) Motor in On/Off" 5
+      "Warning (NO) Motor in On/Off" 6
+      "Warning (NC) Motor in On" 7
+      "Warning (NO) Motor in On" 8
+    End ParVal
+    ParVal
+      ParValIndex     15
+      UnitText        ""
+      enum
+      "Disabled" 0
+      "Trip" 1
+      "Warning" 2
+    End ParVal
+    ParVal
+      ParValIndex     16
+      UnitText        ""
+      enum
+      "Contact DI0" 1
+      "Current" 2
+      "Simulation" 3
+    End ParVal
+    ParVal
+      ParValIndex     17
+      UnitText        ""
+      enum
+      "Disabled" 0
+      "Trip" 1
+      "Warning" 2
+    End ParVal
+    ParVal
+      ParValIndex     18
+      UnitText        ""
+      enum
+      "Off" 0
+      "On" 1
+    End ParVal
+    ParVal
+      ParValIndex     19
+      UnitText        ""
+      enum
+      "No" 0
+      "Yes" 1
+    End ParVal
+    ParVal
+      ParValIndex     20
+      UnitText        ""
+      enum
+      "Time" 0
+      "Current" 1
+    End ParVal
+    ParVal
+      ParValIndex     21
+      UnitText        ""
+      enum
+      "Off" 0
+      "On" 1
+    End ParVal
+    ParVal
+      ParValIndex     22
+      UnitText        ""
+      enum
+      "Error" 0
+      "Warning" 1
+    End ParVal
+    ParVal
+      ParValIndex     23
+      UnitText        ""
+      enum
+      "Manual Reset" 0
+      "Auto Reset" 1
+    End ParVal
+    ParVal
+      ParValIndex     24
+      UnitText        ""
+      enum
+      "Time" 0
+      "x% Therm. Load" 1
+    End ParVal
+    ParVal
+      ParValIndex     25
+      UnitText        ""
+      enum
+      "No" 0
+      "Yes" 1
+    End ParVal
+    ParVal
+      ParValIndex     26
+      UnitText        ""
+      int 0 100 0 100
+    End ParVal
+    ParVal
+      ParValIndex     27
+      UnitText        ""
+      enum
+      "Phase Sequence L1 L2 L3" 0
+      "Phase Sequence L3 L2 L1" 1
+    End ParVal
+    ParVal
+      ParValIndex     28
+      UnitText        ""
+      int 10 100 10 100
+    End ParVal
+    ParVal
+      ParValIndex     29
+      UnitText        ""
+      enum
+      "Thermal Load" 0
+      "DX1xx DI" 1
+      "DX1xx DO" 2
+      "Operating Hours" 3
+      "Number of Trips" 4
+      "Number of Starts" 5
+      "max. Startup Current" 6
+      "Real Startup Time" 7
+    End ParVal
+    ParVal
+      ParValIndex     30
+      UnitText        ""
+      enum
+      "Binary 0" 0
+      "Binary 1" 1
+      "Analog 0" 2
+      "Analog 1" 3
+      "Time to Trip" 4
+      "Time to Cool" 5
+    End ParVal
+    ParVal
+      ParValIndex     31
+      UnitText        ""
+      int 1 10 1 10
+    End ParVal
+    ParVal
+      ParValIndex     32
+      UnitText        ""
+      int 20 100 20 100
+    End ParVal
+    ParVal
+      ParValIndex     33
+      UnitText        ""
+      int 3 200 3 200
+    End ParVal
+    ParVal
+      ParValIndex     34
+      UnitText        ""
+      enum
+      "0-20mA" 0
+      "4-20mA" 1
+      "0-10mA" 2
+      "0-10V" 3
+    End ParVal
+    ParVal
+      ParValIndex     35
+      UnitText        ""
+      enum
+      "Off" 0
+      "On" 1
+    End ParVal
+    ParVal
+      ParValIndex     36
+      UnitText        ""
+      enum
+      "Off" 0
+      "On for Parameters" 1
+      "On for Param. + Motor Control" 2
+    End ParVal
+    ParVal
+      ParValIndex     37
+      UnitText        ""
+      enum
+      "Off" 0
+      "On" 1
+      "On + Rapid Cycle Lockout" 2
+    End ParVal
+  End ParValList
+
+  Channels
+    ChannelInfo
+      Number                0
+      ChannelName           "Input 1"
+      Datatype              Int_In
+      Routine               300
+      CopyParameters        16#0 16#0 16#30000 16#00
+    End ChannelInfo
+    ChannelInfo
+      Number                1
+      ChannelName           "Input 2"
+      Datatype              Int_In
+      Routine               300
+      CopyParameters        16#0 16#0 16#30002 16#00
+    End ChannelInfo
+    ChannelInfo
+      Number                2
+      ChannelName           "Input 3"
+      Datatype              Int_In
+      Routine               300
+      CopyParameters        16#0 16#0 16#30004 16#00
+    End ChannelInfo
+    ChannelInfo
+      Number                3
+      ChannelName           "Input 4"
+      Datatype              Int_In
+      Routine               300
+      CopyParameters        16#0 16#0 16#30006 16#00
+    End ChannelInfo
+    ChannelInfo
+      Number                4
+      ChannelName           "Input 5"
+      Datatype              Int_In
+      Routine               300
+      CopyParameters        16#0 16#0 16#30008 16#00
+    End ChannelInfo
+    ChannelInfo
+      Number                5
+      ChannelName           "Input 6"
+      Datatype              Int_In
+      Routine               300
+      CopyParameters        16#0 16#0 16#3000A 16#00
+    End ChannelInfo
+    ChannelInfo
+      Number                6
+      ChannelName           "Input 7"
+      Datatype              Int_In
+      Routine               300
+      CopyParameters        16#0 16#0 16#3000C 16#00
+    End ChannelInfo
+    ChannelInfo
+      Number                7
+      ChannelName           "Input 8"
+      Datatype              Int_In
+      Routine               300
+      CopyParameters        16#0 16#0 16#3000E 16#00
+    End ChannelInfo
+    ChannelInfo
+      Number                8
+      ChannelName           "Output 1"
+      Datatype              Int_Out
+      Routine               400
+      CopyParameters        16#0 16#0 16#40000 16#00
+    End ChannelInfo
+    ChannelInfo
+      Number                9
+      ChannelName           "Output 2"
+      Datatype              Int_Out
+      Routine               400
+      CopyParameters        16#0 16#0 16#40002 16#00
+    End ChannelInfo
+    ChannelInfo
+      Number                10
+      ChannelName           "Output 3"
+      Datatype              Int_Out
+      Routine               400
+      CopyParameters        16#0 16#0 16#40004 16#00
+    End ChannelInfo
+    ChannelInfo
+      Number                11
+      ChannelName           "Output 4"
+      Datatype              Int_Out
+      Routine               400
+      CopyParameters        16#0 16#0 16#40006 16#00
+    End ChannelInfo
+    ChannelInfo
+      Number                12
+      ChannelName           "Output 5"
+      Datatype              Int_Out
+      Routine               400
+      CopyParameters        16#0 16#0 16#40008 16#00
+    End ChannelInfo
+    ChannelInfo
+      Number                13
+      ChannelName           "Output 6"
+      Datatype              Int_Out
+      Routine               400
+      CopyParameters        16#0 16#0 16#4000A 16#00
+    End ChannelInfo
+    ChannelInfo
+      Number                14
+      ChannelName           "UnitStatus"
+      Datatype              Status_In
+      Routine               900
+      CopyParameters        16#0 16#0 16#50000
+    End ChannelInfo
+  End Channels
+
+  (* ===== No diagnostic information delivered from the parser ===== *)
+
+  Configuration
+    ConfigInfo
+      ModuleKey        16#1
+      InAreaSize       16 BYTE
+      OutAreaSize      12 BYTE
+      InByte
+        BYTE 0 0
+        BYTE 0 1
+        BYTE 0 2
+        BYTE 0 3
+        BYTE 0 4
+        BYTE 0 5
+        BYTE 0 6
+        BYTE 0 7
+        BYTE 0 8
+        BYTE 0 9
+        BYTE 0 10
+        BYTE 0 11
+        BYTE 0 12
+        BYTE 0 13
+        BYTE 0 14
+        BYTE 0 15
+      OutByte
+        BYTE 0 0
+        BYTE 0 1
+        BYTE 0 2
+        BYTE 0 3
+        BYTE 0 4
+        BYTE 0 5
+        BYTE 0 6
+        BYTE 0 7
+        BYTE 0 8
+        BYTE 0 9
+        BYTE 0 10
+        BYTE 0 11
+      CIGIOConnData
+        CIGIOData      16#05 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#05 16#00 16#00 16#00 16#00 16#00 _
+ 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 _
+ 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 _
+ 16#00 16#00 16#00 16#64 16#0a 16#00 16#05 16#64 16#64 16#00 16#00 16#14 16#14 16#14 16#00 16#00 16#05 16#0a 16#05 16#78 16#05 16#64 16#05 16#e0 16#05 16#e0 _
+ 16#05 16#e0 16#05 16#e0 16#05 16#e0 16#05 16#e0 16#05 16#00 16#14 16#00 16#14 16#40 16#44 16#00 16#00 16#00 16#00 16#01 16#7c 16#00 16#00 16#00 16#00 16#00 _
+ 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 _
+ 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 _
+ 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 _
+ 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00
+        CIGIOData      16#01 16#11 16#23 16#56 16#63
+      End CIGIOConnData
+    End ConfigInfo
+  End Configuration
+
+  HWUnitInfoCRC 16#be1a
+End HWUnitInfo

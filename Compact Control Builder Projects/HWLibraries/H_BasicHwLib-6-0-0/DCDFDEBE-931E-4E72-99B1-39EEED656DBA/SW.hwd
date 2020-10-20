@@ -1,0 +1,43 @@
+FileHeader
+  Contents              "SW"
+  Date                  "2012-10-11"
+  Version               "5.1-1"
+  RequiredSyntaxVersion "3.0"
+End FileHeader
+
+HwUnitInfo  (* SW *)
+   HWUnitID {E28FB414-29C6-40bf-8B16-B5DF0BE4A052}
+   Description "SW"
+   Information "SW protocol handler"
+   Icons PCBoardType
+   InterfaceInfo   
+     Interface CIGInterface
+     CLSID_CB     {768A955C-4CAB-4086-9B41-F19E87D559F1}
+     CLSID_CTRL   {0D6CC3E2-FDAF-45e9-990F-39FB25988F99}      
+     HWConfig NoFail
+   End InterfaceInfo 
+   AutoAttachInfo
+    AutoAttach {68E58DF1-7FA1-41da-B807-E650E1836956}
+   End AutoAttachInfo
+   SubUnits  1
+   Parameters
+    ParamInfo
+      Name DummyData
+      Description "DummyData"
+      Hidden
+      CompileType HWConfig
+      Datatype INT
+      Default 3333
+      ParValIndex 0
+      ParamType Numbered 9114
+    End ParamInfo
+   End Parameters
+   ParValList
+    ParVal
+      ParValIndex 0
+      UnitText    "DummyCode"
+      INT 0 16383 0 16383
+    End ParVal
+   End ParValList
+  HWUnitInfoCRC 16#5CC6
+End HWUnitInfo (* SW *)

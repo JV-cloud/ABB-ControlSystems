@@ -1,0 +1,166 @@
+(*============================*)
+(* Created : 2019-05-23 10:25 *)
+(*============================*)
+FileHeader
+  Contents              "FPNO-21"
+  Date                  "23.05.2019"
+  Version               "Version 1.4.9" (* Device Import Wizard *)
+  (* Parser             "Profinet 1.0.17.0" *)
+  RequiredSyntaxVersion "3.0"
+End FileHeader
+
+SessionID d83db8e3-1aff-4b36-973c-5686cf5439c9
+
+(*========================================================*)
+(*                        FPNO-21                         *)
+(*========================================================*)
+
+HWUnitInfo
+  HWUnitID         {6e89327d-107d-489a-99c9-5ed3dad699fe}
+  Description      "PPO3 Data Object"
+  Information      "Control/Reference and Status/Actual values"
+  Icons            ProtocolType
+  Attributes       IOUnit DigitalIn DigitalOut
+  DownloadInstanceNamesForSubUnits
+
+  Parameters
+    ParamInfo
+      Name            Stop_Mode_Action_selection
+      Description     "Stop Mode Action selection"
+      CompileType     IOConfig
+      Datatype        ENUM
+      Default         1
+      ParValIndex     0
+      ParamType       CIGIOData 7 0 2 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            Control_zero_mode_selection
+      Description     "Control-zero mode selection"
+      CompileType     IOConfig
+      Datatype        ENUM
+      Default         0
+      ParValIndex     1
+      ParamType       CIGIOData 8 0 2 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            Fail_safe_Control_Word
+      Description     "Fail safe Control Word"
+      CompileType     IOConfig
+      Datatype        INT
+      Default         0
+      ParValIndex     2
+      ParamType       CIGIOData 9 0 2 WordParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            Fail_safe_Reference
+      Description     "Fail safe Reference"
+      CompileType     IOConfig
+      Datatype        INT
+      Default         0
+      ParValIndex     2
+      ParamType       CIGIOData 11 0 2 WordParam ByteOffset
+    End ParamInfo
+  End Parameters
+
+  ParValList
+    ParVal
+      ParValIndex     0
+      UnitText        ""
+      ENUM
+      "Stop" 0
+      "Freeze data" 1
+      "Use Fail-safe values" 2
+    End ParVal
+    ParVal
+      ParValIndex     1
+      UnitText        ""
+      ENUM
+      "Use data" 0
+      "Ignore data" 1
+    End ParVal
+    ParVal
+      ParValIndex     2
+      UnitText        ""
+      INT
+      0 65535 0 65535 
+    End ParVal
+  End ParValList
+
+  Channels
+    ChannelInfo
+      Number                0
+      ChannelName           "Status"
+      Datatype              DInt_In
+      Routine               323
+      CopyParameters        16#30000 16#10 16#10 16#00 16#00 16#00 16#30004
+    End ChannelInfo
+    ChannelInfo
+      Number                1
+      ChannelName           "Speed Actual"
+      Datatype              DInt_In
+      Routine               323
+      CopyParameters        16#30002 16#10 16#10 16#01 16#00 16#00 16#30004
+    End ChannelInfo
+    ChannelInfo
+      Number                2
+      ChannelName           "Command"
+      Datatype              Int_Out
+      Routine               400
+      CopyParameters        16#0 16#0 16#40000 16#00
+    End ChannelInfo
+    ChannelInfo
+      Number                3
+      ChannelName           "Speed Reference"
+      Datatype              Int_Out
+      Routine               410
+      CopyParameters        16#0 16#0 16#40002 16#00
+    End ChannelInfo
+    ChannelInfo
+      Number                4
+      ChannelName           "UnitStatus"
+      Datatype              Status_In
+      Routine               900
+      CopyParameters        16#0 16#0 16#50000
+    End ChannelInfo
+  End Channels
+
+  UnitStatusText
+    DeviceSpecific1  "Maintenance required"
+    DeviceSpecific2  "Maintenance demanded"
+    DeviceSpecific3  "Diagnosis data available"
+    DeviceSpecific4  "Locked by other controller/supervisor"
+    DeviceSpecific6  "Parametrization fault"
+  End UnitStatusText
+
+  UnitStatusSeverity
+    DeviceSpecific1  GeneralWarning TriggerEvent SeverityMedium
+    DeviceSpecific2  GeneralWarning TriggerEvent SeverityMedium
+    DeviceSpecific3  GeneralWarning TriggerEvent SeverityMedium
+    DeviceSpecific4  GeneralWarning TriggerEvent SeverityMedium
+    DeviceSpecific6  GeneralError TriggerAlarm SeverityHigh
+  End UnitStatusSeverity
+
+  Configuration
+    ConfigInfo
+      ModuleKey        1
+      InAreaSize       6 BYTE
+      OutAreaSize      6 BYTE
+      OutByte
+        BYTE  16#80    4  (* IOPS_Out *)
+        BYTE  16#80    5  (* IOCS_Out *)
+      CIGIOConnData
+        CIGIOData      16#10 16#a5 16#5a 16#0 16#1 16#2 16#21 16#2 16#2 
+        CIGIOData      16#6 16#0 16#0 16#1 16#3 16#0 16#0 16#0 16#0 16#1 16#1 16#0 16#4 16#0 16#4 
+        CIGIOData      16#7 16#0 16#1 16#0 16#6 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#0
+      End CIGIOConnData
+    End ConfigInfo
+    ConfigInfo
+      EmptyConfig
+      ModuleKey        16#FFFF
+      InAreaSize       0 BYTE
+      OutAreaSize      0 BYTE
+    End ConfigInfo
+  End Configuration
+
+  HWUnitInfoCRC 16#b810
+End HWUnitInfo

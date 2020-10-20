@@ -1,0 +1,353 @@
+(*--------------------------------------------------------------------------------------*)
+(* Revision History:                                                                    *)
+(* 2008-04-18 [XA/AHC sepewah] ExtendedStatus reorder                                   *)
+(* -"CDP error" moved from ExtendedStatus11 to to 9 in                                  *)
+(* sections UnitStatusText and UnitStatusSeverity.                                      *)
+(*                                                                                      *)
+(* 2008-12-18 [XA/AHM sepewah]                                                          *)
+(* ParValIndex removed for parameter "MASTER" & ParValIndex 4 added for MAXSUPPORTEDDSP *)
+(* 2009-02-26 xa/ahm/sepewah                                                            *)
+(* - New SubUnit "MyAF100 Station with Status" added.                                   *)
+(* - Parameter "CycleTime" added.                                                       *)
+(* - Parameter "Max Supported DSPs" increased from 512 to 4000                          *)
+(*                                                                                      *)
+(* 2009-12-07 [XAAT/sebjjoh2]                                                           *)
+(* - #39384 Added file header and removed leading (unused) zeros from copy routine      *)
+(*          parameters.                                                                 *)
+(*                                                                                      *)
+(* 2010-03-19 [XAAT/sebjjoj2]                                                           *)
+(* -#40890 Changed default value of time synch parameter from TimeSynchSlave to         *)
+(*  NoTimeSynch                                                                         *)
+(* 2010-04-12 [XAAT/sebjjoj2]                                                           *)                                                                                 
+(*  -#41828 Added space between AF and 100 in  information.                             *)
+(*--------------------------------------------------------------------------------------*)
+FileHeader
+   Contents               "CI869"
+   Date                   "2009-12-07"
+   Version                "2.0-0"
+   RequiredSyntaxVersion  "3.8"
+End FileHeader
+
+
+
+HWUnitInfo  (* CI8659 *)
+   HWUnitID {C321D11D-EFD1-46c7-8F11-FC97B8DF0F40}
+   Description "CI869"
+   Information "Communication Interface AF 100"
+   Icons AC800ComType  
+   Attributes SystemUnit
+   ModuleType  16#5016
+
+   InterfaceInfo
+     Interface CIGInterface
+     CLSID_CB   {B74AAC83-4502-4a6b-BE9E-E403B0921092} (* CLSID_CB   = GUID for AF100 Protocol handler (PH) in Control builder CB *)
+     CLSID_CTRL {25799801-FB26-4b0a-8762-90F005C39CCF} (* CLSID_CTRL = GUID for AF100 Protocol handler (PH) in Controller *)
+     HWConfig Fail     (* Change of net parameters affect subunits *)
+   End InterfaceInfo
+
+   RedundancyInfo
+     RedundancyIcon RedundantCI
+     Consequence HWConfig
+     SupportSwitchover 
+   End RedundancyInfo
+
+   DiscreteNumbers
+      1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
+      19 20 21 22 23 24 25 26 27 28 29 30 31 32 33
+      34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 
+      49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 
+      64 65 66 67 68 69 70 71 72 73 74 75 76 77 78
+      79 80 4000 4001 4002 4003 4004 4005 4006 4007 4008 4009 
+      4010 4011 4012 4013 4014 4015 4016 4017 4018 4019
+      4020 4021 4022 4023 4024 4025 4026 4027 4028 4029
+      4030 4031 4032 4033 4034 4035 4036 4037 4038 4039
+      4040 4041 4042 4043 4044 4045 4046 4047 4048 4049
+      4050 4051 4052 4053 4054 4055 4056 4057 4058 4059
+      4060 4061 4062 4063 4064 4065 4066 4067 4068 4069
+      4070 4071 4072 4073 4074 4075 4076 4077 4078 4079
+      4080
+   End DiscreteNumbers
+
+   SubUnitTypes 
+      HWUnitID {1DC8BC9F-C900-4032-81C2-15CD5BD22ACB} (* MyAF100 Station with Status *)
+                Positions 4000     
+      HWUnitID {49A0A6D9-975D-481c-A9B4-5639508C504A} (* AF100 Station *)
+                Positions 4001 4002 4003 4004 4005 4006 4007 4008 4009 
+                4010 4011 4012 4013 4014 4015 4016 4017 4018 4019
+                4020 4021 4022 4023 4024 4025 4026 4027 4028 4029
+                4030 4031 4032 4033 4034 4035 4036 4037 4038 4039
+                4040 4041 4042 4043 4044 4045 4046 4047 4048 4049
+                4050 4051 4052 4053 4054 4055 4056 4057 4058 4059
+                4060 4061 4062 4063 4064 4065 4066 4067 4068 4069
+                4070 4071 4072 4073 4074 4075 4076 4077 4078 4079
+                4080      
+      HWUnitID {209EBE20-0165-4bc3-9202-F3A67BB71F7E} (* AF100 Station with DSPs*)
+                Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
+                      20 21 22 23 24 25 26 27 28 29 
+                      30 31 32 33 34 35 36 37 38 39 
+                      40 41 42 43 44 45 46 47 48 49
+                      50 51 52 53 54 55 56 57 58 59
+                      60 61 62 63 64 65 66 67 68 69
+                      70 71 72 73 74 75 76 77 78 79 80
+      HWUnitID {C16FB525-0533-4342-95F5-4126DD8B6F59} (* DSP Group *)
+                Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
+                      20 21 22 23 24 25 26 27 28 29 
+                      30 31 32 33 34 35 36 37 38 39 
+                      40 41 42 43 44 45 46 47 48 49
+                      50 51 52 53 54 55 56 57 58 59
+                      60 61 62 63 64 65 66 67 68 69
+                      70 71 72 73 74 75 76 77 78 79 80
+      HWUnitID {78F068BF-7DCE-400a-87A2-41DE8BB00949} (* My DSP Group *)
+                Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
+                      20 21 22 23 24 25 26 27 28 29 
+                      30 31 32 33 34 35 36 37 38 39 
+                      40 41 42 43 44 45 46 47 48 49
+                      50 51 52 53 54 55 56 57 58 59
+                      60 61 62 63 64 65 66 67 68 69
+                      70 71 72 73 74 75 76 77 78 79 80
+   End SubUnitTypes
+
+   Parameters
+      ParamInfo 
+         Name HWTYPE                  (* Let this parameter always be the 1st parameter i.e "ParamType Numbered 1" *)
+         Description "HW unit type"
+         Hidden
+         CompileType HWConfig
+         Datatype INT
+         Default 1              (* Bit 0 *)
+         ParValIndex 4
+         ParamType Numbered 1
+      End ParamInfo
+      ParamInfo 
+         Name BUSIDENTITY
+         Description "Bus identity"
+         CompileType HWConfig
+         Datatype STRING
+         Default "" 8
+         ParamType Numbered 2
+      End ParamInfo
+      ParamInfo 
+         Name STATIONNUMBER
+         Description "Station Number"
+         CompileType HWConfig
+         Datatype INT
+         Default 1
+         ParValIndex 0
+         ParamType Numbered 3
+      End ParamInfo 
+      ParamInfo 
+         Name TIMESYNC
+         Description "Time sync"
+         CompileType HWConfig
+         Datatype ENUM
+         Default 0
+         ParValIndex 1
+         ParamType Numbered 4
+      End ParamInfo
+      ParamInfo 
+         Name CABLE
+         Description "Cable"
+         CompileType HWConfig
+         Datatype ENUM
+         Default 0
+         ParValIndex 3
+         ParamType Numbered 5
+      End ParamInfo 
+      ParamInfo 
+         Name DOUBLEDSPTIMEOUT
+         Description "Double DSP Timeout"
+         CompileType HWConfig
+         Datatype BOOL
+         Default FALSE
+         ParamType Numbered 6
+      End ParamInfo
+      ParamInfo 
+         Name BUSLENGTH
+         Description "Bus length"
+         Hidden
+         CompileType HWConfig
+         Datatype ENUM
+         Default 3
+         ParValIndex 2
+         ParamType Numbered 7
+      End ParamInfo 
+      ParamInfo 
+         Name MAXSUPPORTEDDSP
+         Description "Max Supported Amount Of DSPs"
+         Hidden
+         CompileType HWConfig
+         Datatype INT
+         Default 4000
+         ParValIndex 4
+         ParamType Numbered 8
+      End ParamInfo
+      ParamInfo 
+         Name CYCLETIME
+         Description "Cycletime"
+         Hidden
+         CompileType HWConfig
+         Datatype ENUM
+         Default 10
+         ParValIndex 5
+         ParamType Numbered 9
+      End ParamInfo
+      ParamInfo 
+         Name MASTER
+         Description "Master"
+         Hidden
+         CompileType HWConfig
+         Datatype BOOL
+         Default FALSE
+         ParamType Numbered 10
+      End ParamInfo 
+      ParamInfo 
+         Name STNNAME
+         Description "Name"
+         Hidden
+         CompileType HWConfig
+         Datatype STRING
+         Default "AC 800M" 11
+         ParamType Numbered 11
+      End ParamInfo
+      ParamInfo 
+         Name NOTCFGSTNS
+         Description "Detection of not configured stations"
+         Hidden
+         CompileType HWConfig
+         Datatype BOOL
+         Default FALSE
+         ParamType Numbered 12
+      End ParamInfo 
+      ParamInfo 
+         Name SKIPBUSSCANLISTCALL     (* This parameter is used for turning off BusScanList additions for test purposes *)
+         Description "Turns call to BusScanList() On and Off for testing"
+         Hidden
+         CompileType HWConfig
+         Datatype BOOL
+         Default FALSE
+         ParamType Numbered 13
+      End ParamInfo 
+
+   End Parameters
+
+   ParValList
+      ParVal
+         ParValIndex 0
+         INT 1 80 1 80
+      End ParVal
+      ParVal
+         ParValIndex 1
+         ENUM 
+         "NO Time-sync"          0
+         "AF100 Slave"           1
+         "AF100 Master"          2
+      End ParVal
+      ParVal
+         ParValIndex 2
+         UnitText    "m"
+         ENUM 
+         "300"           300
+         "600"           600
+         "1200"          1200
+         "2000"          2000
+      (*   "8500"          8500 *)
+      (*   "15000"         15000 *)
+      End ParVal
+      ParVal
+         ParValIndex 3
+         ENUM 
+         "Single"           0
+         "Redundant"        1
+      End ParVal
+     ParVal
+        ParValIndex 4
+        INT 0 2147483647 0 2147483647
+     End ParVal
+      ParVal
+        ParValIndex 5
+        UnitText    "ms"
+        ENUM 
+        "1"            0
+        "2"            1
+        "4"            2
+        "8"            3
+        "16"           4
+        "32"           5
+        "64"           6
+        "128"          7
+        "256"          8
+        "512"          9
+        "1024"        10
+        "2048"        11
+        "4096"        12
+      End ParVal
+
+   End ParValList
+
+   Channels
+      ChannelInfo
+         Number 0
+         ChannelName "UnitStatus"
+         Datatype Status_In
+         Routine 900
+         CopyParameters 16#50000
+      End ChannelInfo
+   End Channels
+
+   UnitStatusText
+     DeviceSpecific1    "Internal HW Error"
+     DeviceSpecific2    "Internal FW Error"
+     DeviceSpecific3    "Error task is not responding"
+     ExtendedStatus1    "BAP DMA error"
+     ExtendedStatus2    "BAP Failure"
+     ExtendedStatus3    "Traffic Memory Corrupt"
+     ExtendedStatus4    "Redundant Line A error"
+     ExtendedStatus5    "Redundant Line B error"
+     ExtendedStatus6    "No bus traffic"
+     ExtendedStatus7    "Time Sync Lost"
+     ExtendedStatus8    "Multiple Time Masters"
+     ExtendedStatus9    "Stn Status CDP not polled"
+     ExtendedStatus10   "Stn Status CDP config err"
+     ExtendedStatus11   "Stn Status CDP not addressed"
+     ExtendedStatus12   "Backup address is 255"
+     ExtendedStatus13   "Partner sup not active"
+     ExtendedStatus14   "Backup unreachable"
+     ExtendedStatus15   "Invalid bus length"
+     ExtendedStatus16   "Too many CDPs on the bus"
+     ExtendedStatus17   "Too many CDPs on CI869"
+     ExtendedStatus18   "No bus traffic on backup"
+     ExtendedStatus19   "Redundant Line A error on backup"
+     ExtendedStatus20   "Redundant Line B error on backup"
+     ExtendedStatus21   "Permanent sender detected"
+   End UnitStatusText
+
+   UnitStatusSeverity
+     DeviceSpecific1    GeneralError TriggerAlarm SeverityHigh
+     DeviceSpecific2    GeneralError TriggerAlarm SeverityHigh
+     DeviceSpecific3    GeneralError TriggerAlarm SeverityHigh
+     ExtendedStatus1    GeneralError  TriggerAlarm SeverityMedium
+     ExtendedStatus2    GeneralError  TriggerAlarm SeverityMedium
+     ExtendedStatus3    GeneralError  TriggerAlarm SeverityMedium
+     ExtendedStatus4    GeneralWarning 
+     ExtendedStatus5    GeneralWarning
+     ExtendedStatus6    GeneralWarning  TriggerAlarm SeverityLow
+     ExtendedStatus7    GeneralError  TriggerAlarm SeverityMedium
+     ExtendedStatus8    GeneralError  TriggerAlarm SeverityMedium
+     ExtendedStatus9    GeneralWarning
+     ExtendedStatus10   GeneralError  TriggerAlarm SeverityMedium
+     ExtendedStatus11   GeneralError  TriggerAlarm SeverityMedium
+     ExtendedStatus12   GeneralWarning
+     ExtendedStatus13   GeneralWarning
+     ExtendedStatus14   GeneralWarning
+     ExtendedStatus15   GeneralWarning
+     ExtendedStatus16   GeneralWarning
+     ExtendedStatus17   GeneralWarning
+     ExtendedStatus18   GeneralWarning TriggerAlarm SeverityLow
+     ExtendedStatus19   GeneralWarning
+     ExtendedStatus20   GeneralWarning
+     ExtendedStatus21   GeneralWarning
+   End UnitStatusSeverity
+
+
+  HWUnitInfoCRC 16#060E
+End HWUnitInfo  (* CI869 *)

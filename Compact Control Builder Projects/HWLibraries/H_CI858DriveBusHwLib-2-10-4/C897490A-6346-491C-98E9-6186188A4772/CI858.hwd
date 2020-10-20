@@ -1,0 +1,143 @@
+(****************************************************************************)
+(* FILE            CI858.hwd                                                *)
+(*                                                                          *)
+(* DESCRIPTION     Hardware definition file for CI858 DriveBus              *)
+(*                                                                          *)
+(* AUTHOR          XA/AHC Per Sahlqvist                                     *)
+(*                                                                          *)
+(* All rights reserved. Reproduction, modification, use or disclosure       *)
+(* to third parties without express authority, is forbidden.                *)
+(* Copyright ABB AB, Sweden, 2008.                                          *)
+(*                                                                          *)
+(*                                                                          *)
+(****************************************************************************)
+
+HwUnitInfo
+  HWUnitID {23A5048F-8AFC-4E71-ABBB-D5B2B1D69D5A}
+  Description "CI858"
+  Information "DriveBus"
+(*###HelpProject CI858.xxx *)
+  Icons AC800ComType  
+  Attributes SystemUnit
+  ModuleType  16#500C
+
+  InterfaceInfo
+    Interface CIGInterface
+    CLSID_CB   {6FBF3F0D-6D1B-4C2D-A55D-8EB36EB2A274} (*  CLSID_CB = GUID for CI858 Protocol handler (PH) in Control builder CB *)
+    CLSID_CTRL {8D9E7478-89A5-4ADA-B10A-4D3A82652E9C} (* CLSID_CTRL  = GUID for CI858 Protocol handler (PH) in Controler *)
+    HWConfig Fail     (* Change of net parameters affect subunits *)
+  End InterfaceInfo
+
+  DiscreteNumbers  (*DriveBus slave addresses*)
+    0  1 (* 2 Virtual IO*) 3
+  End DiscreteNumbers
+
+  SubUnitTypes
+     HWUnitID {ABD24E11-B0D3-4427-9745-A30F2FD0AE8A} Positions 0 (* Drives             *)
+     HWUnitID {453DCB34-61E3-4232-A78C-8FB03DD43B32} Positions 1 (* Special IO         *)
+  (* HWUnitID {76A4C1D4-C61F-44A2-9FB2-6E505022B4FE} Positions 2  Virtual IO           *)
+     HWUnitID {1BCBC2BB-258B-4b2c-930D-FF9F09837C48} Positions 3 (* Redundancy Control *)
+  End SubUnitTypes
+
+  Parameters    
+     ParamInfo 
+        Name LIGHTINTDB
+        Description "Light intensity Drivebus"
+        CompileType HWConfig
+        Datatype INT
+        Default 15
+        ParValIndex 0
+        ParamType Numbered 0
+     End ParamInfo
+     ParamInfo 
+        Name ALLOWEDBREAK
+        Description "Max allowed break time"
+        CompileType HWConfig
+        Datatype INT
+        Default 2000
+        ParValIndex 1
+        ParamType Numbered 1
+     End ParamInfo
+     ParamInfo 
+        Name LIGHTINTIO
+        Description "Light intensity I/O"
+        CompileType HWConfig
+        Datatype INT
+        Default 15
+        ParValIndex 0
+        ParamType Numbered 2
+     End ParamInfo
+     ParamInfo 
+        Name TIMESYNC
+        Description "Broadcast timesync"
+        CompileType HWConfig
+        Datatype BOOL
+        Default TRUE
+        ParamType Numbered 3
+     End ParamInfo
+     ParamInfo 
+        Name TIMESYNCFORMAT
+        Description "Time sync format"
+        Hidden
+        CompileType HWConfig
+        Datatype ENUM
+        Default 0
+        ParValIndex 2
+        ParamType Numbered 4
+     End ParamInfo
+     ParamInfo 
+        Name BUSMANAGER
+        Description "Use Busmanager"
+        Hidden
+        CompileType HWConfig
+        Datatype BOOL
+        Default FALSE
+        ParamType Numbered 5
+     End ParamInfo
+     ParamInfo 
+        Name COMSPEED
+        Description "Communication speed"
+        Hidden
+        CompileType HWConfig
+        Datatype ENUM
+        Default 1
+        ParValIndex 3
+        ParamType Numbered 6
+     End ParamInfo
+  End Parameters
+  ParValList
+     ParVal
+        ParValIndex 0
+        INT 1 15 1 15
+     End ParVal
+     ParVal
+        ParValIndex 1
+        UnitText    "ms"
+        INT 0 32767 0 32767
+     End ParVal
+     ParVal
+        ParValIndex 2
+        ENUM
+        "From 1.1.1980"  0
+     End ParVal
+     ParVal
+        ParValIndex 3
+        UnitText    "Mbit/s"
+        ENUM
+        "8"  0
+        "4"  1
+        "2"  2
+        "1"  3 
+     End ParVal
+  End ParValList
+  Channels
+    ChannelInfo
+        Number 1
+        ChannelName "UnitStatus"
+        Datatype Status_In
+        Routine 900
+        CopyParameters 0 0 16#50000
+    End ChannelInfo
+  End Channels
+  HWUnitInfoCRC 16#A4B3
+End HWUnitInfo (* CI858V2 *)

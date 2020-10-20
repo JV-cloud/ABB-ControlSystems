@@ -1,0 +1,165 @@
+(* -------------------------------------------------------------- *)
+(*   Module: ACS600  FCI:CI830  CI:CI854                          *)
+(* -------------------------------------------------------------- *)
+
+(* Version 1.0/2                                                  *)
+(* 2006-08-28     K Gardin                                        *)
+(* AC800M #26023  Changed copy routine for Ref2                   *) 
+(* -------------------------------------------------------------- *)
+(* Version 1.0/1                                                  *)
+(* 2006-08-10     K Gardin                                        *)
+(* AC800M #24287  Changed copy routine for Ref1                   *) 
+(* -------------------------------------------------------------- *)
+(* Version 1.0/0 based on io_acs600_p.hwd version 5.2/5           *)
+(* 2005-09-01    K Gardin                                         *)
+
+
+
+HWUnitInfo (* ACS600 / CI830 / CI854 *)
+  HWUnitID    {862C97F7-E05F-482e-B41A-76861A84A894}
+  Description "ABB Standard Drive"
+  Information "ABB Standard drive"
+  Icons       MotorType
+  Attributes  IoUnit
+  Channels
+    ChannelInfo
+      Number         1
+      ChannelName   "Status"
+      Datatype       Int_In
+      Routine        310
+      CopyParameters 0 0 16#30001 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number         2
+      ChannelName   "Actual 1"
+      DataType       Int_In
+      Routine        310
+      CopyParameters 0 0 16#30002 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number         3
+      ChannelName   "Actual 2"
+      DataType       Int_In
+      Routine        310
+      CopyParameters 0 0 16#30003 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number         4
+      ChannelName   "Actual 3"
+      DataType       Int_In
+      Routine        310
+      CopyParameters 0 0 16#30004 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number         5
+      ChannelName   "Actual 4"
+      DataType       Int_In
+      Routine        310
+      CopyParameters 0 0 16#30005 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number         6
+      ChannelName   "Actual 5"
+      DataType       Int_In
+      Routine        310
+      CopyParameters 0 0 16#30006 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number         7
+      ChannelName   "Command"
+      DataType       Int_Out
+      Routine        400
+      CopyParameters 0 0 16#40000 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number         8
+      ChannelName   "Ref 1"
+      DataType       Int_Out
+      Routine        410
+      CopyParameters 0 0 16#40001 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number         9
+      ChannelName   "Ref 2"
+      DataType       Int_Out
+      Routine        410
+      CopyParameters 0 0 16#40002 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number         10
+      ChannelName   "Ref 3"
+      DataType       Int_Out
+      Routine        400
+      CopyParameters 0 0 16#40003 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number         11
+      ChannelName   "Ref 4"
+      DataType       Int_Out
+      Routine        400
+      CopyParameters 0 0 16#40004 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number         12
+      ChannelName   "Ref 5"
+      DataType       Int_Out
+      Routine        400
+      CopyParameters 0 0 16#40005 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number         13
+      ChannelName   "UnitStatus"
+      Datatype       Status_In
+      Routine        900
+      CopyParameters 0 0 16#50000
+    End ChannelInfo  
+  End Channels
+  IoUnitStatus
+    StatusType IoWarning
+    StatusData 16#30000 16#0020 16#00 16#00
+    StatusType IoError
+    StatusData 16#30000 16#0010 16#00 16#00
+    StatusType WrongModuleType 
+    StatusData 16#30000 16#000F 16#04 16#000A
+    StatusType ModuleMissing
+    StatusData 16#30000 16#000F 16#04 16#000D
+  End IoUnitStatus
+
+ UnitstatusText
+    ExtendedStatus1 "Communication broken"
+    ExtendedStatus2 "Wrong drive type"
+    ExtendedStatus3 "Wrong application ID"
+    ExtendedStatus4 "Undefined error"
+  End UnitStatusText
+
+ UnitStatusSeverity
+  End UnitStatusSeverity
+
+  Configuration
+    ConfigInfo
+      ModuleKey   16#0F
+      InAreaSize  7
+      OutAreaSize 6
+      InWord
+        WORD 0        0 (*MODULE STATUS*)
+        WORD 0        1 (*STATUS*)
+        WORD 0        2 (*ACTUAL 1*)
+        WORD 0        3 (*ACTUAL 2*)
+        WORD 0        4 (*ACTUAL 3*)
+        WORD 0        5 (*ACTUAL 4*)
+        WORD 0        6 (*ACTUAL 5*)
+      OutWord
+        WORD 0        0 (*COMMAND*)
+        WORD 0        1 (*REF 1*)
+        WORD 0        2 (*REF 2*)
+        WORD 0        3 (*REF 3*)
+        WORD 0        4 (*REF 4*)
+        WORD 0        5 (*REF 5*)
+      CIGIOConnData
+        CIGIOData   16#01 16#C0 16#C5 16#C6    (* ConfigData *)
+        CIGIOData   16#05 16#89 16#0A 16#00 
+      End CIGIOConnData
+    End ConfigInfo
+  End Configuration
+  HWUnitInfoCRC 16#BD9E
+End HWUnitInfo (* ACS600 / CI830 / CI854 *)

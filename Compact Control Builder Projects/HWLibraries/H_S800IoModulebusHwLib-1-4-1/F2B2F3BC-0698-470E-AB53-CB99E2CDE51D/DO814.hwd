@@ -1,0 +1,833 @@
+FileHeader
+    Contents               "DO814/Modulebus"
+    Date                   "2014-01-29"
+    Version                "1.0-4"
+    RequiredSyntaxVersion  "3.3"
+End FileHeader
+(* SIL class: SIL-0 *)
+
+
+(* -------------------------------------------------------------- *)
+(*    Module: DO814  Modulebus                                    *)
+(* -------------------------------------------------------------- *)
+
+(* Version 1.0/4                                                  *)
+(* 2014-01-29     N Ljungberg                                     *)
+(* AC800M #52905  Add reading of eA-bits in the device related    *)
+(*                diagnostics area and set bit22 in extended      *)
+(*                status.                                         *)
+(* -------------------------------------------------------------- *)
+(* Version 1.0/3                                                  *)
+(* 2010-02-08     N Ljungberg                                     *)
+(* AC800M #38723  The UnitStatusSeverity section was changed back *)
+(*                to the state it had before #36455 was           *)
+(*                implemented. This to achieve compatibility with *)
+(*                SV5.0                                           *)
+(* -------------------------------------------------------------- *)
+(* Version 1.0/2                                                  *)
+(* 2009-03-03     N Ljungberg                                     *)
+(* AC800M #36455  Unit status texts and unit status severity      *)
+(*                which is not used has been removed.             *)
+(* -------------------------------------------------------------- *)
+(* Version 1.0/1                                                  *)
+(* 2006-02-03     K Gardin                                        *)
+(* AC800M #22647  Changed priorities on Alarms and Events         *)
+(* -------------------------------------------------------------- *)
+(* Version 1.0/0 based on io_do814m.hwd version 5.0/3             *)
+(* 2005-09-01    N Ljungberg                                      *)
+
+HWUnitInfo (* DO814 *)
+  HWUnitID 16#0088020E
+  Description "DO814"
+  Information "Digital output module, 16 channels 24 VDC, 0,5A current sinking"
+  Icons S800IoType
+  Attributes AdapterUnit IoUnit DigitalOut
+  InterfaceInfo
+    IoSysType CIGIO
+    CLSID_CB     {02A678FA-CA7D-4e4b-ABEA-888CF8CCE2F8}
+    CLSID_CTRL   {90F15C58-7EFA-4565-B572-246C19BBBB85}
+  End InterfaceInfo
+  ConnectionInfo
+    ConnectType OwnUnit
+    IOConnect   NoFail
+    IOConfig    NoFail
+  End ConnectionInfo
+  Parameters
+    ParamInfo
+      Name POWER_SUP
+      Description "External power supervision"
+      CompileType IoConfig
+      DataType BOOL
+      Default TRUE
+      ParamType CIGIOData 0 3 6 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name ACTIVATE1
+      Description "Activate channel 1"
+      CompileType IoConfig
+      DataType BOOL
+      Default TRUE
+      ParamType CIGIOData 0 7 7 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name ACTIVATE2
+      Description "Activate channel 2"
+      CompileType IoConfig
+      DataType BOOL
+      Default TRUE
+      ParamType CIGIOData 0 7 8 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name ACTIVATE3
+      Description "Activate channel 3"
+      CompileType IoConfig
+      DataType BOOL
+      Default TRUE
+      ParamType CIGIOData 0 7 9 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name ACTIVATE4
+      Description "Activate channel 4"
+      CompileType IoConfig
+      DataType BOOL
+      Default TRUE
+      ParamType CIGIOData 0 7 10 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name ACTIVATE5
+      Description "Activate channel 5"
+      CompileType IoConfig
+      DataType BOOL
+      Default TRUE
+      ParamType CIGIOData 0 7 11 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name ACTIVATE6
+      Description "Activate channel 6"
+      CompileType IoConfig
+      DataType BOOL
+      Default TRUE
+      ParamType CIGIOData 0 7 12 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name ACTIVATE7
+      Description "Activate channel 7"
+      CompileType IoConfig
+      DataType BOOL
+      Default TRUE
+      ParamType CIGIOData 0 7 13 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name ACTIVATE8
+      Description "Activate channel 8"
+      CompileType IoConfig
+      DataType BOOL
+      Default TRUE
+      ParamType CIGIOData 0 7 14 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name ACTIVATE9
+      Description "Activate channel 9"
+      CompileType IoConfig
+      DataType BOOL
+      Default TRUE
+      ParamType CIGIOData 0 7 15 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name ACTIVATE10
+      Description "Activate channel 10"
+      CompileType IoConfig
+      DataType BOOL
+      Default TRUE
+      ParamType CIGIOData 0 7 16 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name ACTIVATE11
+      Description "Activate channel 11"
+      CompileType IoConfig
+      DataType BOOL
+      Default TRUE
+      ParamType CIGIOData 0 7 17 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name ACTIVATE12
+      Description "Activate channel 12"
+      CompileType IoConfig
+      DataType BOOL
+      Default TRUE
+      ParamType CIGIOData 0 7 18 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name ACTIVATE13
+      Description "Activate channel 13"
+      CompileType IoConfig
+      DataType BOOL
+      Default TRUE
+      ParamType CIGIOData 0 7 19 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name ACTIVATE14
+      Description "Activate channel 14"
+      CompileType IoConfig
+      DataType BOOL
+      Default TRUE
+      ParamType CIGIOData 0 7 20 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name ACTIVATE15
+      Description "Activate channel 15"
+      CompileType IoConfig
+      DataType BOOL
+      Default TRUE
+      ParamType CIGIOData 0 7 21 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name ACTIVATE16
+      Description "Activate channel 16"
+      CompileType IoConfig
+      DataType BOOL
+      Default TRUE
+      ParamType CIGIOData 0 7 22 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name OSP_CTRL1
+      Description "OSP control channel 1"
+      CompileType IoConfig
+      DataType ENUM
+      Default 1
+      ParValIndex 1
+      ParamType CIGIOData 0 5 7 ByteParam ByteOffset
+      OSPInfo
+        OSPType OSPControl
+        OSPRef Channel OSP_VALUE1
+      End OSPInfo
+    End ParamInfo
+    ParamInfo
+      Name OSP_CTRL2
+      Description "OSP control channel 2"
+      CompileType IoConfig
+      DataType ENUM
+      Default 1
+      ParValIndex 1
+      ParamType CIGIOData 0 5 8 ByteParam ByteOffset
+      OSPInfo
+        OSPType OSPControl
+        OSPRef Channel OSP_VALUE2
+      End OSPInfo
+    End ParamInfo
+    ParamInfo
+      Name OSP_CTRL3
+      Description "OSP control channel 3"
+      CompileType IoConfig
+      DataType ENUM
+      Default 1
+      ParValIndex 1
+      ParamType CIGIOData 0 5 9 ByteParam ByteOffset
+      OSPInfo
+        OSPType OSPControl
+        OSPRef Channel OSP_VALUE3
+      End OSPInfo
+    End ParamInfo
+    ParamInfo
+      Name OSP_CTRL4
+      Description "OSP control channel 4"
+      CompileType IoConfig
+      DataType ENUM
+      Default 1
+      ParValIndex 1
+      ParamType CIGIOData 0 5 10 ByteParam ByteOffset
+      OSPInfo
+        OSPType OSPControl
+        OSPRef Channel OSP_VALUE4
+      End OSPInfo
+    End ParamInfo
+    ParamInfo
+      Name OSP_CTRL5
+      Description "OSP control channel 5"
+      CompileType IoConfig
+      DataType ENUM
+      Default 1
+      ParValIndex 1
+      ParamType CIGIOData 0 5 11 ByteParam ByteOffset
+      OSPInfo
+        OSPType OSPControl
+        OSPRef Channel OSP_VALUE5
+      End OSPInfo
+    End ParamInfo
+    ParamInfo
+      Name OSP_CTRL6
+      Description "OSP control channel 6"
+      CompileType IoConfig
+      DataType ENUM
+      Default 1
+      ParValIndex 1
+      ParamType CIGIOData 0 5 12 ByteParam ByteOffset
+      OSPInfo
+        OSPType OSPControl
+        OSPRef Channel OSP_VALUE6
+      End OSPInfo
+    End ParamInfo
+    ParamInfo
+      Name OSP_CTRL7
+      Description "OSP control channel 7"
+      CompileType IoConfig
+      DataType ENUM
+      Default 1
+      ParValIndex 1
+      ParamType CIGIOData 0 5 13 ByteParam ByteOffset
+      OSPInfo
+        OSPType OSPControl
+        OSPRef Channel OSP_VALUE7
+      End OSPInfo
+    End ParamInfo
+    ParamInfo
+      Name OSP_CTRL8
+      Description "OSP control channel 8"
+      CompileType IoConfig
+      DataType ENUM
+      Default 1
+      ParValIndex 1
+      ParamType CIGIOData 0 5 14 ByteParam ByteOffset
+      OSPInfo
+        OSPType OSPControl
+        OSPRef Channel OSP_VALUE8
+      End OSPInfo
+    End ParamInfo
+    ParamInfo
+      Name OSP_CTRL9
+      Description "OSP control channel 9"
+      CompileType IoConfig
+      DataType ENUM
+      Default 1
+      ParValIndex 1
+      ParamType CIGIOData 0 5 15 ByteParam ByteOffset
+      OSPInfo
+        OSPType OSPControl
+        OSPRef Channel OSP_VALUE9
+      End OSPInfo
+    End ParamInfo
+    ParamInfo
+      Name OSP_CTRL10
+      Description "OSP control channel 10"
+      CompileType IoConfig
+      DataType ENUM
+      Default 1
+      ParValIndex 1
+      ParamType CIGIOData 0 5 16 ByteParam ByteOffset
+      OSPInfo
+        OSPType OSPControl
+        OSPRef Channel OSP_VALUE10
+      End OSPInfo
+    End ParamInfo
+    ParamInfo
+      Name OSP_CTRL11
+      Description "OSP control channel 11"
+      CompileType IoConfig
+      DataType ENUM
+      Default 1
+      ParValIndex 1
+      ParamType CIGIOData 0 5 17 ByteParam ByteOffset
+      OSPInfo
+        OSPType OSPControl
+        OSPRef Channel OSP_VALUE11
+      End OSPInfo
+    End ParamInfo
+    ParamInfo
+      Name OSP_CTRL12
+      Description "OSP control channel 12"
+      CompileType IoConfig
+      DataType ENUM
+      Default 1
+      ParValIndex 1
+      ParamType CIGIOData 0 5 18 ByteParam ByteOffset
+      OSPInfo
+        OSPType OSPControl
+        OSPRef Channel OSP_VALUE12
+      End OSPInfo
+    End ParamInfo
+    ParamInfo
+      Name OSP_CTRL13
+      Description "OSP control channel 13"
+      CompileType IoConfig
+      DataType ENUM
+      Default 1
+      ParValIndex 1
+      ParamType CIGIOData 0 5 19 ByteParam ByteOffset
+      OSPInfo
+        OSPType OSPControl
+        OSPRef Channel OSP_VALUE13
+      End OSPInfo
+    End ParamInfo
+    ParamInfo
+      Name OSP_CTRL14
+      Description "OSP control channel 14"
+      CompileType IoConfig
+      DataType ENUM
+      Default 1
+      ParValIndex 1
+      ParamType CIGIOData 0 5 20 ByteParam ByteOffset
+      OSPInfo
+        OSPType OSPControl
+        OSPRef Channel OSP_VALUE14
+      End OSPInfo
+    End ParamInfo
+    ParamInfo
+      Name OSP_CTRL15
+      Description "OSP control channel 15"
+      CompileType IoConfig
+      DataType ENUM
+      Default 1
+      ParValIndex 1
+      ParamType CIGIOData 0 5 21 ByteParam ByteOffset
+      OSPInfo
+        OSPType OSPControl
+        OSPRef Channel OSP_VALUE15
+      End OSPInfo
+    End ParamInfo
+    ParamInfo
+      Name OSP_CTRL16
+      Description "OSP control channel 16"
+      CompileType IoConfig
+      DataType ENUM
+      Default 1
+      ParValIndex 1
+      ParamType CIGIOData 0 5 22 ByteParam ByteOffset
+      OSPInfo
+        OSPType OSPControl
+        OSPRef Channel OSP_VALUE16
+      End OSPInfo
+    End ParamInfo
+    ParamInfo
+      Name OSP_VALUE1
+      Description "OSP value channel 1"
+      CompileType IoConfig
+      DataType BOOL
+      Default FALSE
+      ParamType CIGIOData 0 4 7 ByteParam ByteOffset
+      OSPInfo
+        OSPType OSPValue
+        OSPData 0 0
+      End OSPInfo
+    End ParamInfo
+    ParamInfo
+      Name OSP_VALUE2
+      Description "OSP value channel 2"
+      CompileType IoConfig
+      DataType BOOL
+      Default FALSE
+      ParamType CIGIOData 0 4 8 ByteParam ByteOffset
+      OSPInfo
+        OSPType OSPValue
+        OSPData 0 1
+      End OSPInfo
+    End ParamInfo
+    ParamInfo
+      Name OSP_VALUE3
+      Description "OSP value channel 3"
+      CompileType IoConfig
+      DataType BOOL
+      Default FALSE
+      ParamType CIGIOData 0 4 9 ByteParam ByteOffset
+      OSPInfo
+        OSPType OSPValue
+        OSPData 0 2
+      End OSPInfo
+    End ParamInfo
+    ParamInfo
+      Name OSP_VALUE4
+      Description "OSP value channel 4"
+      CompileType IoConfig
+      DataType BOOL
+      Default FALSE
+      ParamType CIGIOData 0 4 10 ByteParam ByteOffset
+      OSPInfo
+        OSPType OSPValue
+        OSPData 0 3
+      End OSPInfo
+    End ParamInfo
+    ParamInfo
+      Name OSP_VALUE5
+      Description "OSP value channel 5"
+      CompileType IoConfig
+      DataType BOOL
+      Default FALSE
+      ParamType CIGIOData 0 4 11 ByteParam ByteOffset
+      OSPInfo
+        OSPType OSPValue
+        OSPData 0 4
+      End OSPInfo
+    End ParamInfo
+    ParamInfo
+      Name OSP_VALUE6
+      Description "OSP value channel 6"
+      CompileType IoConfig
+      DataType BOOL
+      Default FALSE
+      ParamType CIGIOData 0 4 12 ByteParam ByteOffset
+      OSPInfo
+        OSPType OSPValue
+        OSPData 0 5
+      End OSPInfo
+    End ParamInfo
+    ParamInfo
+      Name OSP_VALUE7
+      Description "OSP value channel 7"
+      CompileType IoConfig
+      DataType BOOL
+      Default FALSE
+      ParamType CIGIOData 0 4 13 ByteParam ByteOffset
+      OSPInfo
+        OSPType OSPValue
+        OSPData 0 6
+      End OSPInfo
+    End ParamInfo
+    ParamInfo
+      Name OSP_VALUE8
+      Description "OSP value channel 8"
+      CompileType IoConfig
+      DataType BOOL
+      Default FALSE
+      ParamType CIGIOData 0 4 14 ByteParam ByteOffset
+      OSPInfo
+        OSPType OSPValue
+        OSPData 0 7
+      End OSPInfo
+    End ParamInfo
+    ParamInfo
+      Name OSP_VALUE9
+      Description "OSP value channel 9"
+      CompileType IoConfig
+      DataType BOOL
+      Default FALSE
+      ParamType CIGIOData 0 4 15 ByteParam ByteOffset
+      OSPInfo
+        OSPType OSPValue
+        OSPData 0 8
+      End OSPInfo
+    End ParamInfo
+    ParamInfo
+      Name OSP_VALUE10
+      Description "OSP value channel 10"
+      CompileType IoConfig
+      DataType BOOL
+      Default FALSE
+      ParamType CIGIOData 0 4 16 ByteParam ByteOffset
+      OSPInfo
+        OSPType OSPValue
+        OSPData 0 9
+      End OSPInfo
+    End ParamInfo
+    ParamInfo
+      Name OSP_VALUE11
+      Description "OSP value channel 11"
+      CompileType IoConfig
+      DataType BOOL
+      Default FALSE
+      ParamType CIGIOData 0 4 17 ByteParam ByteOffset
+      OSPInfo
+        OSPType OSPValue
+        OSPData 0 10
+      End OSPInfo
+    End ParamInfo
+    ParamInfo
+      Name OSP_VALUE12
+      Description "OSP value channel 12"
+      CompileType IoConfig
+      DataType BOOL
+      Default FALSE
+      ParamType CIGIOData 0 4 18 ByteParam ByteOffset
+      OSPInfo
+        OSPType OSPValue
+        OSPData 0 11
+      End OSPInfo
+    End ParamInfo
+    ParamInfo
+      Name OSP_VALUE13
+      Description "OSP value channel 13"
+      CompileType IoConfig
+      DataType BOOL
+      Default FALSE
+      ParamType CIGIOData 0 4 19 ByteParam ByteOffset
+      OSPInfo
+        OSPType OSPValue
+        OSPData 0 12
+      End OSPInfo
+    End ParamInfo
+    ParamInfo
+      Name OSP_VALUE14
+      Description "OSP value channel 14"
+      CompileType IoConfig
+      DataType BOOL
+      Default FALSE
+      ParamType CIGIOData 0 4 20 ByteParam ByteOffset
+      OSPInfo
+        OSPType OSPValue
+        OSPData 0 13
+      End OSPInfo
+    End ParamInfo
+    ParamInfo
+      Name OSP_VALUE15
+      Description "OSP value channel 15"
+      CompileType IoConfig
+      DataType BOOL
+      Default FALSE
+      ParamType CIGIOData 0 4 21 ByteParam ByteOffset
+      OSPInfo
+        OSPType OSPValue
+        OSPData 0 14
+      End OSPInfo
+    End ParamInfo
+    ParamInfo
+      Name OSP_VALUE16
+      Description "OSP value channel 16"
+      CompileType IoConfig
+      DataType BOOL
+      Default FALSE
+      ParamType CIGIOData 0 4 22 ByteParam ByteOffset
+      OSPInfo
+        OSPType OSPValue
+        OSPData 0 15
+      End OSPInfo
+    End ParamInfo
+  End Parameters
+  ParValList
+    ParVal
+      ParValIndex 1
+      ENUM
+      "Keep current value"  0
+      "Set OSP value"       1
+    End ParVal
+  End ParValList
+  Channels
+    ChannelInfo
+      Number 1
+      ChannelName "Output 1"
+      DataType Bool_Out
+      Routine 251
+      CopyParameters 0 0 16#40000 16#0001 16#30005 16#0001
+      ConflictInfo 16#0201
+    End ChannelInfo
+    ChannelInfo
+      Number 2
+      ChannelName "Output 2"
+      DataType Bool_Out
+      Routine 251
+      CopyParameters 0 0 16#40000 16#0002 16#30005 16#0002
+      ConflictInfo 16#0201
+    End ChannelInfo
+    ChannelInfo
+      Number 3
+      ChannelName "Output 3"
+      DataType Bool_Out
+      Routine 251
+      CopyParameters 0 0 16#40000 16#0004 16#30005 16#0004
+      ConflictInfo 16#0201
+    End ChannelInfo
+    ChannelInfo
+      Number 4
+      ChannelName "Output 4"
+      DataType Bool_Out
+      Routine 251
+      CopyParameters 0 0 16#40000 16#0008 16#30005 16#0008
+      ConflictInfo 16#0201
+    End ChannelInfo
+    ChannelInfo
+      Number 5
+      ChannelName "Output 5"
+      DataType Bool_Out
+      Routine 251
+      CopyParameters 0 0 16#40000 16#0010  16#30005 16#0010
+      ConflictInfo 16#0201
+    End ChannelInfo
+    ChannelInfo
+      Number 6
+      ChannelName "Output 6"
+      DataType Bool_Out
+      Routine 251
+      CopyParameters 0 0 16#40000 16#0020 16#30005 16#0020
+      ConflictInfo 16#0201
+    End ChannelInfo
+    ChannelInfo
+      Number 7
+      ChannelName "Output 7"
+      DataType Bool_Out
+      Routine 251
+      CopyParameters 0 0 16#40000 16#0040 16#30005 16#0040
+      ConflictInfo 16#0201
+    End ChannelInfo
+    ChannelInfo
+      Number 8
+      ChannelName "Output 8"
+      DataType Bool_Out
+      Routine 251
+      CopyParameters 0 0 16#40000 16#0080 16#30005 16#0080
+      ConflictInfo 16#0201
+    End ChannelInfo
+    ChannelInfo
+      Number 9
+      ChannelName "Output 9"
+      DataType Bool_Out
+      Routine 251
+      CopyParameters 0 0 16#40000 16#0100 16#30005 16#0100
+      ConflictInfo 16#0201
+    End ChannelInfo
+    ChannelInfo
+      Number 10
+      ChannelName "Output 10"
+      DataType Bool_Out
+      Routine 251
+      CopyParameters 0 0 16#40000 16#0200 16#30005 16#0200
+      ConflictInfo 16#0201
+    End ChannelInfo
+    ChannelInfo
+      Number 11
+      ChannelName "Output 11"
+      DataType Bool_Out
+      Routine 251
+      CopyParameters 0 0 16#40000 16#0400 16#30005 16#0400
+      ConflictInfo 16#0201
+    End ChannelInfo
+    ChannelInfo
+      Number 12
+      ChannelName "Output 12"
+      DataType Bool_Out
+      Routine 251
+      CopyParameters 0 0 16#40000 16#0800 16#30005 16#0800
+      ConflictInfo 16#0201
+    End ChannelInfo
+    ChannelInfo
+      Number 13
+      ChannelName "Output 13"
+      DataType Bool_Out
+      Routine 251
+      CopyParameters 0 0 16#40000 16#1000 16#30005 16#1000
+      ConflictInfo 16#0201
+    End ChannelInfo
+    ChannelInfo
+      Number 14
+      ChannelName "Output 14"
+      DataType Bool_Out
+      Routine 251
+      CopyParameters 0 0 16#40000 16#2000 16#30005 16#2000
+      ConflictInfo 16#0201
+    End ChannelInfo
+    ChannelInfo
+      Number 15
+      ChannelName "Output 15"
+      DataType Bool_Out
+      Routine 251
+      CopyParameters 0 0 16#40000 16#4000 16#30005 16#4000
+      ConflictInfo 16#0201
+    End ChannelInfo
+    ChannelInfo
+      Number 16
+      ChannelName "Output 16"
+      DataType Bool_Out
+      Routine 251
+      CopyParameters 0 0 16#40000 16#8000 16#30005 16#8000
+      ConflictInfo 16#0201
+    End ChannelInfo
+    ChannelInfo
+      Number 17
+      ChannelName "All Outputs"
+      DataType DWord_Out
+      Routine 600
+      CopyParameters 0 0 16#40000 16#0
+      ConflictInfo 16#0102
+    End ChannelInfo
+    ChannelInfo
+      Number 18
+      ChannelName "Channel status"
+      DataType DWord_In
+      Routine 500
+      CopyParameters 0 0 16#30004 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number 19
+      ChannelName "UnitStatus"
+      Datatype Status_In
+      Routine 900
+      CopyParameters 0 0 16#50000
+    End ChannelInfo     
+  End Channels
+
+  IoUnitStatus
+    StatusType IoError
+    StatusData 16#30000 16#1000 16#00 16#00
+    StatusType WrongModuleType 
+    StatusData 16#30000 16#0F00 16#04 16#0A00
+    StatusType ModuleMissing
+    StatusData 16#30000 16#0F00 16#04 16#0D00
+    StatusType IoWarning
+    StatusData 16#30000 16#2000 16#00 16#00
+    StatusType eA
+    StatusData 16#30002 16#0100 16#00 16#00
+  End IoUnitStatus
+
+ UnitStatusSeverity
+
+    DeviceSpecific1  GeneralError   TriggerAlarm SeverityHigh
+    DeviceSpecific2  GeneralWarning TriggerEvent SeverityLow
+    DeviceSpecific3  GeneralWarning TriggerAlarm SeverityMedium
+    DeviceSpecific4  GeneralWarning TriggerAlarm SeverityMedium
+    DeviceSpecific5  GeneralWarning TriggerAlarm SeverityMedium
+    DeviceSpecific6  GeneralWarning TriggerEvent SeverityLow
+
+    ExtendedStatus1  GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus2  GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus3  GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus4  GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus5  GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus6  GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus7  GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus8  GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus9  GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus10  GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus11  GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus12  GeneralWarning TriggerEvent SeverityLow
+
+  End UnitStatusSeverity
+
+  Configuration
+    ConfigInfo
+      ModuleKey   16#06
+      InAreaSize  6
+      OutAreaSize 1
+      InWord
+      (*WORD 16#1000  0 (* MODULE STATUS   *)*)
+      (*WORD 0        1 (* Backup Module Status + Extended Module Status *)*)
+      (*WORD 0        2 (* Spare  *)*)
+        WORD 0        3 (* READBACK VALUES *)
+        WORD 0        4 (* CHANNEL STATUS  *)
+        WORD 0        5 (* Quality bits *)
+      OutWord
+        WORD 0        0 (* OUTPUTS *)
+      CIGIOConnData
+        CIGIOData    16#02  (* FamilyType *)
+        CIGIOData    16#0E  (* ModuleNumber *)
+        CIGIOData    16#00  (* ModuleRevision *)
+        CIGIOData    16#00  (* TreatmentType *)
+        CIGIOData    16#01  (* Length of module parameter *)
+        CIGIOData    16#10  (* Number of channels *)
+        CIGIOData    16#40  (* ModuleParam  OSP Timeout = 256 ms *)
+        CIGIOData    16#40  (* ChannelParam *)
+        CIGIOData    16#40  (* ChannelParam *)
+        CIGIOData    16#40  (* ChannelParam *)
+        CIGIOData    16#40  (* ChannelParam *)
+        CIGIOData    16#40  (* ChannelParam *)
+        CIGIOData    16#40  (* ChannelParam *)
+        CIGIOData    16#40  (* ChannelParam *)
+        CIGIOData    16#40  (* ChannelParam *)
+        CIGIOData    16#40  (* ChannelParam *)
+        CIGIOData    16#40  (* ChannelParam *)
+        CIGIOData    16#40  (* ChannelParam *)
+        CIGIOData    16#40  (* ChannelParam *)
+        CIGIOData    16#40  (* ChannelParam *)
+        CIGIOData    16#40  (* ChannelParam *)
+        CIGIOData    16#40  (* ChannelParam *)
+        CIGIOData    16#40  (* ChannelParam *)
+      End CIGIOConnData
+    End ConfigInfo
+  End Configuration
+  HWUnitInfoCRC 16#F6CD
+End HWUnitInfo (* DO814 *)

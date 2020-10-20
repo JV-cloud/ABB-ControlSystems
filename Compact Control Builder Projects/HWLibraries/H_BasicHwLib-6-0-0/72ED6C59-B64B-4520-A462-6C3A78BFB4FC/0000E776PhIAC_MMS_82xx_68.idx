@@ -1,0 +1,937 @@
+<HEAD>
+Index of symbols created 2019-09-17 20:52:26.72 
+</HEAD>
+<SECTIONS=15>
+00010000 00030060 .text
+00030060 000305a0 .got2
+000305a0 00030c2c .fixup
+00030c2c 00030de8 .bss
+00030de8 00030e30 .data
+00030e30 00035daa .debug_abbrev
+00035daa 0006c528 .debug_info
+0006c528 0007624c .debug_line
+0007624c 0007b65c .debug_frame
+0007b65c 00090b95 .debug_loc
+00090b95 00095d1b .debug_pubnames
+00095d1b 00096173 .debug_aranges
+00096173 00097cf3 .debug_ranges
+00097cf3 000a62aa .debug_str
+000a62aa 000a62aa .comment
+</SECTIONS>
+<SYMBOLS=915>
+00000000 PhIAC_MMS_82xx_68.elf EXE_HEAD
+00000064 PhIAC_MMS_82xx_68.elf CIAC_Duration::UpdateOSDuration(IACDuration_OSTime&)
+00000110 PhIAC_MMS_82xx_68.elf CIAC_Duration::ElapsedOS_Ms(IACDuration_OSTime const&)
+00000188 PhIAC_MMS_82xx_68.elf CIAC_Duration::ElapsedOS_Ms(IACDuration_OSTime const&, IACDuration_OSTime&)
+00000200 PhIAC_MMS_82xx_68.elf CIAC_Duration::ElapsedOS_Us(IACDuration_OSTime const&)
+0000026c PhIAC_MMS_82xx_68.elf CIAC_Duration::UpdateThreadDuration(IACDuration_ThreadTime&, unsigned long)
+0000034c PhIAC_MMS_82xx_68.elf CIAC_Duration::ElapsedThreadUs(IACDuration_ThreadTime const&, unsigned long)
+00000440 PhIAC_MMS_82xx_68.elf CIAC_Duration::ElapsedThreadMs(IACDuration_ThreadTime const&, unsigned long)
+00000540 PhIAC_MMS_82xx_68.elf non-virtual thunk to CPhIAC_MMS::RemoveHWConfiguration(trHWFAddress, teHWFErrorCode*)
+00000548 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::RemoveHWConfiguration(trHWFAddress, teHWFErrorCode*)
+00000570 PhIAC_MMS_82xx_68.elf non-virtual thunk to CPhIAC_MMS::KickWatchdog(unsigned short*, teHWFErrorCode*)
+00000578 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::KickWatchdog(unsigned short*, teHWFErrorCode*)
+000005b8 PhIAC_MMS_82xx_68.elf non-virtual thunk to CPhIAC_MMS::GetStatus(trHWFAddress, teHWFUnitKind, unsigned long*, unsigned long*, teHWFErrorCode*)
+000005c0 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::GetStatus(trHWFAddress, teHWFUnitKind, unsigned long*, unsigned long*, teHWFErrorCode*)
+0000061c PhIAC_MMS_82xx_68.elf non-virtual thunk to CPhIAC_MMS::PrepareForFirmwareDownload(trHWFAddress const*, unsigned long, eOLUStatus*)
+00000624 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::PrepareForFirmwareDownload(trHWFAddress const*, unsigned long, eOLUStatus*)
+0000064c PhIAC_MMS_82xx_68.elf non-virtual thunk to CPhIAC_MMS::PrepareForApplicationStop(trHWFAddress const*, eOLUStatus*)
+00000654 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::PrepareForApplicationStop(trHWFAddress const*, eOLUStatus*)
+00000688 PhIAC_MMS_82xx_68.elf non-virtual thunk to CPhIAC_MMS::ResumeOperation(trHWFAddress const*, eOLUStatus*)
+00000690 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::ResumeOperation(trHWFAddress const*, eOLUStatus*)
+000006c4 PhIAC_MMS_82xx_68.elf non-virtual thunk to CPhIAC_MMS::InformPhIsInSwitch(trHWFAddress const*, eOLUStatus*)
+000006cc PhIAC_MMS_82xx_68.elf CPhIAC_MMS::InformPhIsInSwitch(trHWFAddress const*, eOLUStatus*)
+00000700 PhIAC_MMS_82xx_68.elf non-virtual thunk to CPhIAC_MMS::PrepareForAppAndConfigDownload(trHWFAddress const*, eOLUStatus*)
+00000708 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::PrepareForAppAndConfigDownload(trHWFAddress const*, eOLUStatus*)
+00000730 PhIAC_MMS_82xx_68.elf non-virtual thunk to CPhIAC_MMS::WriteVarReq(unsigned long, int*)
+00000738 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::WriteVarReq(unsigned long, int*)
+0000076c PhIAC_MMS_82xx_68.elf CPhIAC_MMS::StartEngine()
+000007d0 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::GetCycleTime(unsigned long)
+0000086c PhIAC_MMS_82xx_68.elf CPhIAC_MMS::ReadIACSysCmd(int&) const
+000008c8 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::WriteIACSysCmd(int) const
+00000920 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::SetStatus(trHWFAddress const&, unsigned long, unsigned long, teHWFErrorCode*) const
+000009c0 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::ResetStatus(trHWFAddress const&, unsigned long, unsigned long, teHWFErrorCode*) const
+00000a60 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::IsHwSimulated() const
+00000ab8 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::IsClientEnabled() const
+00000ac8 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::IsServerDisabled() const
+00000ae0 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::ServerEncodeVariable(char const*, unsigned char*, unsigned char, int&, bool, teIACDirection, int&)
+00000b90 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::StatData::operator new(unsigned int, IHeapCallback*)
+00000c54 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::StatData::operator delete(void*)
+00000cac PhIAC_MMS_82xx_68.elf CPhIAC_MMS::StatData::~StatData()
+00000cb8 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::StatData::~StatData()
+00000cc4 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::StatData::GetMax()
+00000cd4 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::StatData::GetMin()
+00000d10 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::StatData::GetAve()
+00000d98 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::StatData::GetFilter()
+00000da8 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::StatData::SetFilter(unsigned short)
+00000db8 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::StatData::GetLastResetTime()
+00000dcc PhIAC_MMS_82xx_68.elf CPhIAC_MMS::StatData::GetLimit()
+00000ddc PhIAC_MMS_82xx_68.elf CPhIAC_MMS::StatData::SetLimit(float)
+00000dec PhIAC_MMS_82xx_68.elf CPhIAC_MMS::StatData::GetMaxCount()
+00000dfc PhIAC_MMS_82xx_68.elf CPhIAC_MMS::StatData::SetMaxCount(unsigned long)
+00000e0c PhIAC_MMS_82xx_68.elf CPhIAC_MMS::StatData::GetStatusBit()
+00000e20 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::StatData::CheckIntervalTime(int, int)
+00000fa4 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::StatData::UpdateData(int, int)
+000010c4 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::GetStatDataRef(teIACCycleTime)
+00001198 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::StatData::ResetData()
+000011fc PhIAC_MMS_82xx_68.elf CPhIAC_MMS::StatData::StatData(short, trHWFAddress const&, teHWFExtStatusType)
+000012a4 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::StatData::StatData(short, trHWFAddress const&, teHWFExtStatusType)
+0000134c PhIAC_MMS_82xx_68.elf CPhIAC_MMS::SetupIACSysVars()
+000013f0 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::WriteMessage(teWriteMessageType, char const*) const
+00001488 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::WriteError(char const*) const
+0000149c PhIAC_MMS_82xx_68.elf CPhIAC_MMS::WriteWarning(char const*) const
+000014b4 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::ShouldTerminateThread()
+00001584 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::StopWork()
+00001654 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::IsThreadTerminated()
+00001724 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::SetThreadStatus(bool)
+000017f8 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::SetThreadRunning()
+00001808 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::SetThreadTerminated()
+0000181c PhIAC_MMS_82xx_68.elf CPhIAC_MMS::SetConnectionStatus(unsigned int, unsigned short, bool)
+0000190c PhIAC_MMS_82xx_68.elf CPhIAC_MMS::WriteInformation(char const*) const
+00001924 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::DoConfigPrint(int)
+00001c14 PhIAC_MMS_82xx_68.elf CfgPrtWrk(int, int, int, int)
+00001c28 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::ResetConnectionStatus(unsigned int, unsigned short)
+00001d18 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::RegisterInVar(unsigned long, int*)
+00001e70 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::PollSendQueues()
+000021b8 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::PollConnections()
+00002264 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::HandleCyclicActivity(teIACCycleTime)
+000023fc PhIAC_MMS_82xx_68.elf CPhIAC_MMS::ResetAllConnDiagData()
+0000248c PhIAC_MMS_82xx_68.elf CPhIAC_MMS::ResetDiagData()
+00002524 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::DoWork(int)
+00002e44 PhIAC_MMS_82xx_68.elf Wrk(int, int, int, int)
+00002e54 PhIAC_MMS_82xx_68.elf non-virtual thunk to CPhIAC_MMS::PrepareForLeavingOLU(trHWFAddress const*, eOLUStatus*)
+00002e60 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::PrepareForLeavingOLU(trHWFAddress const*, eOLUStatus*)
+00002ee0 PhIAC_MMS_82xx_68.elf CreateMessageStart(trHWFAddress const&)
+00002fe8 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::Configure(trHWFAddress const&)
+0000364c PhIAC_MMS_82xx_68.elf CPhIAC_MMS::SetCommonCallbackInterface(ICommonCallback*)
+00003988 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::GetProductInfo(unsigned char*, unsigned char*, unsigned char*, unsigned long)
+00003a78 PhIAC_MMS_82xx_68.elf IAC_InitiateErrorCon(unsigned long)
+00003aec PhIAC_MMS_82xx_68.elf IAC_InitiateCon(unsigned long)
+00003b60 PhIAC_MMS_82xx_68.elf IAC_ReadUnnamedInd(unsigned long, int, unsigned char*, short, short, int&)
+00003e98 PhIAC_MMS_82xx_68.elf non-virtual thunk to CPhIAC_MMS::AbortVarReq(unsigned long, int*)
+00003ea4 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::AbortVarReq(unsigned long, int*)
+00004098 PhIAC_MMS_82xx_68.elf non-virtual thunk to CPhIAC_MMS::RegisterVarReq(unsigned long, int*)
+000040a4 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::RegisterVarReq(unsigned long, int*)
+00004210 PhIAC_MMS_82xx_68.elf non-virtual thunk to CPhIAC_MMS::ReadVarReq(unsigned long, int*)
+0000421c PhIAC_MMS_82xx_68.elf CPhIAC_MMS::ReadVarReq(unsigned long, int*)
+00004930 PhIAC_MMS_82xx_68.elf non-virtual thunk to CPhIAC_MMS::DisconnectReq(unsigned long, unsigned long, int*)
+0000493c PhIAC_MMS_82xx_68.elf CPhIAC_MMS::DisconnectReq(unsigned long, unsigned long, int*)
+00004a74 PhIAC_MMS_82xx_68.elf non-virtual thunk to CPhIAC_MMS::ConnectReq(unsigned long, unsigned long*, int*)
+00004a80 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::ConnectReq(unsigned long, unsigned long*, int*)
+00004c7c PhIAC_MMS_82xx_68.elf non-virtual thunk to CPhIAC_MMS::OLUDisablePhCom(trHWFAddress const*, eOLUStatus*)
+00004c88 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::OLUDisablePhCom(trHWFAddress const*, eOLUStatus*)
+00004d5c PhIAC_MMS_82xx_68.elf non-virtual thunk to CPhIAC_MMS::OLUEnablePhCom(trHWFAddress const*, eOLUStatus*)
+00004d68 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::OLUEnablePhCom(trHWFAddress const*, eOLUStatus*)
+00004ea4 PhIAC_MMS_82xx_68.elf non-virtual thunk to CPhIAC_MMS::PhResponsibilityForOLU(trHWFAddress const*, eOLUStatus*)
+00004eb0 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::PhResponsibilityForOLU(trHWFAddress const*, eOLUStatus*)
+00005040 PhIAC_MMS_82xx_68.elf non-virtual thunk to CPhIAC_MMS::PhResponsibility(trHWFAddress, teHWFErrorCode*)
+0000504c PhIAC_MMS_82xx_68.elf CPhIAC_MMS::PhResponsibility(trHWFAddress, teHWFErrorCode*)
+00005224 PhIAC_MMS_82xx_68.elf non-virtual thunk to CPhIAC_MMS::PhResponsibilityForRestart(trHWFAddress, teHWFErrorCode*)
+00005230 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::PhResponsibilityForRestart(trHWFAddress, teHWFErrorCode*)
+00005410 PhIAC_MMS_82xx_68.elf non-virtual thunk to CPhIAC_MMS::PrepareForTermination(teHWFErrorCode*)
+0000541c PhIAC_MMS_82xx_68.elf CPhIAC_MMS::PrepareForTermination(teHWFErrorCode*)
+000054ec PhIAC_MMS_82xx_68.elf IAC_ReadUnnamedErrorCon(unsigned long, int, tMMSStatus)
+000055ec PhIAC_MMS_82xx_68.elf IAC_ReadUnnamedCon(unsigned long, int, unsigned char*, short, short)
+00005714 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::CPhIAC_MMS()
+00005950 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::CPhIAC_MMS()
+00005b8c PhIAC_MMS_82xx_68.elf CPhIAC_MMS::~CPhIAC_MMS()
+00005da0 PhIAC_MMS_82xx_68.elf non-virtual thunk to CPhIAC_MMS::~CPhIAC_MMS()
+00005da8 PhIAC_MMS_82xx_68.elf non-virtual thunk to CPhIAC_MMS::~CPhIAC_MMS()
+00005db0 PhIAC_MMS_82xx_68.elf non-virtual thunk to CPhIAC_MMS::~CPhIAC_MMS()
+00005db8 PhIAC_MMS_82xx_68.elf non-virtual thunk to CPhIAC_MMS::~CPhIAC_MMS()
+00005dc4 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::~CPhIAC_MMS()
+00005fe0 PhIAC_MMS_82xx_68.elf non-virtual thunk to CPhIAC_MMS::~CPhIAC_MMS()
+00005fe8 PhIAC_MMS_82xx_68.elf non-virtual thunk to CPhIAC_MMS::~CPhIAC_MMS()
+00005ff0 PhIAC_MMS_82xx_68.elf non-virtual thunk to CPhIAC_MMS::~CPhIAC_MMS()
+00005ff8 PhIAC_MMS_82xx_68.elf non-virtual thunk to CPhIAC_MMS::~CPhIAC_MMS()
+00006004 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::~CPhIAC_MMS()
+0000621c PhIAC_MMS_82xx_68.elf ObjectFactory
+00006334 PhIAC_MMS_82xx_68.elf MMSStackRegisterMem(char*)
+00006424 PhIAC_MMS_82xx_68.elf MMSStackUnRegisterMem(char*)
+00006594 PhIAC_MMS_82xx_68.elf MMSStackRegisterList(unsigned long)
+00006684 PhIAC_MMS_82xx_68.elf MMSStackUnRegisterList(unsigned long)
+000067f4 PhIAC_MMS_82xx_68.elf InitMMSStackMemTrack()
+000068b8 PhIAC_MMS_82xx_68.elf TerminateMMSStackHeapAllocs()
+00006c08 PhIAC_MMS_82xx_68.elf IsEmptySet(unsigned char*, unsigned int)
+00006c5c PhIAC_MMS_82xx_68.elf ItemResetHeapTagAfterPWFail()
+00006c9c PhIAC_MMS_82xx_68.elf TagItem(unsigned long*, tId)
+00006cc4 PhIAC_MMS_82xx_68.elf ContextTagItem(unsigned long*, int)
+00006ce8 PhIAC_MMS_82xx_68.elf IntoItem(unsigned long, unsigned long)
+00006d64 PhIAC_MMS_82xx_68.elf SetInteger(unsigned long, int)
+00006d74 PhIAC_MMS_82xx_68.elf SetPrimInteger(unsigned long, int)
+00006d8c PhIAC_MMS_82xx_68.elf SetBitString(unsigned long, unsigned long)
+00006d9c PhIAC_MMS_82xx_68.elf SetOctetString(unsigned long, unsigned long*, short, short)
+00006db8 PhIAC_MMS_82xx_68.elf EncodeASN1Id(tId, short*, unsigned char*, short, bool*)
+00006f20 PhIAC_MMS_82xx_68.elf EncodeASN1Length(short, short*, unsigned char*, short, bool*)
+00006fd8 PhIAC_MMS_82xx_68.elf _DecodeBoolean(bool*, short*, unsigned char*, short, bool*)
+00007030 PhIAC_MMS_82xx_68.elf DecodeInt(int*, short*, unsigned char*, short, bool*)
+00007118 PhIAC_MMS_82xx_68.elf _ConstructId(tId*, Classes, int, ItemTypes)
+00007134 PhIAC_MMS_82xx_68.elf _DecodeId(tId*, short*, unsigned char*, short, bool*)
+00007360 PhIAC_MMS_82xx_68.elf ChkId(tId*, short*, unsigned char*, short, bool*)
+00007548 PhIAC_MMS_82xx_68.elf NxtId(tId*, short*, unsigned char*, short)
+0000777c PhIAC_MMS_82xx_68.elf DecodeLength(short*, short*, unsigned char*, short, bool*)
+000078dc PhIAC_MMS_82xx_68.elf Decode_Tagged(short*, unsigned char*, short, short*, bool*)
+00007984 PhIAC_MMS_82xx_68.elf Decode_Null(short*, unsigned char*, short, bool*)
+000079e8 PhIAC_MMS_82xx_68.elf _DecodeOctetStringPos(short*, short*, short*, unsigned char*, short, bool*)
+00007a84 PhIAC_MMS_82xx_68.elf DecodeBitString(unsigned long*, short*, unsigned char*, short, bool*)
+00007b98 PhIAC_MMS_82xx_68.elf RecEncodePDU(unsigned long, tLengthEncoding, short*, unsigned char*, short, bool*)
+00008230 PhIAC_MMS_82xx_68.elf EncodePDU(unsigned long, tLengthEncoding, short*, unsigned char*, short, bool*)
+00008248 PhIAC_MMS_82xx_68.elf PushItem(unsigned long*)
+00008428 PhIAC_MMS_82xx_68.elf DeleteItem(unsigned long*)
+00008608 PhIAC_MMS_82xx_68.elf CreateItem(int)
+00008728 PhIAC_MMS_82xx_68.elf PopConstructedItem(unsigned long*)
+0000885c PhIAC_MMS_82xx_68.elf DecodeNewTagged(tId, unsigned long*, short*, unsigned char*, short, short*, bool*)
+00008918 PhIAC_MMS_82xx_68.elf PopPrimitiveItem(unsigned long*)
+000089ec PhIAC_MMS_82xx_68.elf CreateItems(int*)
+00008a90 PhIAC_MMS_82xx_68.elf InitiateASN1(IHeapCallback*)
+00008bec PhIAC_MMS_82xx_68.elf DecodeNewInteger(tId, unsigned long*, short*, unsigned char*, short, bool*)
+00008cc0 PhIAC_MMS_82xx_68.elf NewConstructedItem(unsigned long*)
+00008df0 PhIAC_MMS_82xx_68.elf NewTaggedItem(unsigned long*, tId)
+00008e54 PhIAC_MMS_82xx_68.elf NewContextTaggedItem(unsigned long*, int)
+00008ebc PhIAC_MMS_82xx_68.elf NewSequenceItem(unsigned long*)
+00008f28 PhIAC_MMS_82xx_68.elf NewPrimitiveItem(unsigned long*)
+00008ffc PhIAC_MMS_82xx_68.elf NewNullItem(unsigned long*)
+00009058 PhIAC_MMS_82xx_68.elf NewOctetStringItem(unsigned long*, unsigned long*, short, short)
+000090e4 PhIAC_MMS_82xx_68.elf NewBitStrItem(unsigned long*, unsigned long)
+00009150 PhIAC_MMS_82xx_68.elf NewIntegerItem(unsigned long*, int)
+000091c0 PhIAC_MMS_82xx_68.elf OctetStringResetHeapTagAfterPWFail()
+00009200 PhIAC_MMS_82xx_68.elf DeleteOctetString(unsigned long*, IHeapCallback*)
+00009278 PhIAC_MMS_82xx_68.elf IAC_DeleteOctetString(rOctetString**)
+000092b8 PhIAC_MMS_82xx_68.elf BitStringResetHeapTagAfterPWFail()
+000092fc PhIAC_MMS_82xx_68.elf DeleteBitString(unsigned long*)
+00009388 PhIAC_MMS_82xx_68.elf BitStringLength(unsigned long)
+00009398 PhIAC_MMS_82xx_68.elf SetBit(unsigned long, short, bool)
+00009404 PhIAC_MMS_82xx_68.elf ValidBit(unsigned long, short)
+00009444 PhIAC_MMS_82xx_68.elf AndBitStrings(unsigned long, unsigned long)
+00009534 PhIAC_MMS_82xx_68.elf NumberOfOcts(short)
+0000955c PhIAC_MMS_82xx_68.elf ClearBitString(unsigned long)
+000095b8 PhIAC_MMS_82xx_68.elf InitiateASN1TYPES(IHeapCallback*)
+00009620 PhIAC_MMS_82xx_68.elf CreateBitString(short)
+0000971c PhIAC_MMS_82xx_68.elf _NewBitString(short)
+00009800 PhIAC_MMS_82xx_68.elf CopyBitString(unsigned long)
+000098a0 PhIAC_MMS_82xx_68.elf NewOctetString(unsigned int, IHeapCallback*)
+00009968 PhIAC_MMS_82xx_68.elf IAC_GetOctetStringSize()
+00009990 PhIAC_MMS_82xx_68.elf IAC_GetOctetString()
+000099e8 PhIAC_MMS_82xx_68.elf VarAccConcludeCon(unsigned long)
+000099f8 PhIAC_MMS_82xx_68.elf InitiateCONTEXT_PH()
+00009fe0 PhIAC_MMS_82xx_68.elf ParseConcludeRes(unsigned long, int, tId*, short*, unsigned char*, short, bool*, bool*)
+0000a0b4 PhIAC_MMS_82xx_68.elf ReduceAssocCallingPar(unsigned long, int, short, int, int, int, unsigned long, unsigned long, unsigned char)
+0000a16c PhIAC_MMS_82xx_68.elf ReduceAssocCalledPar(unsigned long, int, short, int, int, int, unsigned long, unsigned long, unsigned char)
+0000a220 PhIAC_MMS_82xx_68.elf VarAccInitiateCon(unsigned long)
+0000a240 PhIAC_MMS_82xx_68.elf ParseInitiateRes(unsigned long, int, tId*, short*, unsigned char*, short, bool*, bool*)
+0000a6f0 PhIAC_MMS_82xx_68.elf ConcludeRes(unsigned long, tMMSStatus*)
+0000a748 PhIAC_MMS_82xx_68.elf VarAccConcludeInd(unsigned long)
+0000a7b8 PhIAC_MMS_82xx_68.elf ParseConcludeReq(unsigned long, int, tId*, short*, unsigned char*, short, bool*, bool*)
+0000a8c4 PhIAC_MMS_82xx_68.elf ConcludeReq(unsigned long, tMMSStatus*)
+0000a934 PhIAC_MMS_82xx_68.elf IAC_ConcludeReq(unsigned long, tMMSStatus*)
+0000a95c PhIAC_MMS_82xx_68.elf InitiateRes(unsigned long, tMMSStatus*)
+0000ab48 PhIAC_MMS_82xx_68.elf InitiateInd(unsigned short, unsigned long)
+0000aba0 PhIAC_MMS_82xx_68.elf ParseInitiateReq(unsigned long, int, tId*, short*, unsigned char*, short, bool*, bool*)
+0000b080 PhIAC_MMS_82xx_68.elf InitiateReq(tTPAddress, unsigned short, unsigned long*, tMMSStatus*)
+0000b284 PhIAC_MMS_82xx_68.elf IAC_InitiateReq(unsigned int, unsigned short, unsigned long, unsigned long*, tMMSStatus*)
+0000b310 PhIAC_MMS_82xx_68.elf NewVarAccSpecListOfVar(unsigned long*)
+0000b334 PhIAC_MMS_82xx_68.elf NewDataOctetString(unsigned long*, unsigned long*, short, short)
+0000b384 PhIAC_MMS_82xx_68.elf InitiateVARACC_PH()
+0000b5b0 PhIAC_MMS_82xx_68.elf _StandardReadUnnamedResSize()
+0000b600 PhIAC_MMS_82xx_68.elf ReadUnnamedOctetStringRes(unsigned long, int, unsigned long*, short, short, tMMSStatus*)
+0000b6dc PhIAC_MMS_82xx_68.elf IAC_ReadUnnamedRes(unsigned long, int, unsigned long*, short, tMMSStatus*)
+0000b6f8 PhIAC_MMS_82xx_68.elf ReadUnnamedReq(unsigned long, int*, unsigned long*, short, short, unsigned long, tMMSStatus*)
+0000b85c PhIAC_MMS_82xx_68.elf IAC_ReadUnnamedReq(unsigned long, int*, unsigned long*, unsigned short, unsigned long, tMMSStatus*)
+0000b87c PhIAC_MMS_82xx_68.elf PhReadUnnamedOctetStringCon(unsigned long, int, unsigned char*, short, short)
+0000b89c PhIAC_MMS_82xx_68.elf PhParseReadRes(unsigned long, int, tTransacInfo, tId*, short*, unsigned char*, short, bool*, bool*)
+0000bcd4 PhIAC_MMS_82xx_68.elf PhReadUnnamedInd(unsigned long, int, unsigned char*, short, short)
+0000bd4c PhIAC_MMS_82xx_68.elf PhParseReadReq(unsigned long, int, tId*, short*, unsigned char*, short, bool*, bool*)
+0000c2a4 PhIAC_MMS_82xx_68.elf _StandardReadUnnamedReqSize()
+0000c2f4 PhIAC_MMS_82xx_68.elf IToMMSStatus(tIStatus)
+0000c36c PhIAC_MMS_82xx_68.elf Transac::Transac(IHeapCallback*)
+0000c3a8 PhIAC_MMS_82xx_68.elf Transac::Transac(IHeapCallback*)
+0000c3e8 PhIAC_MMS_82xx_68.elf MMSAssoc::MMSAssoc(IHeapCallback*, INCAInterface*)
+0000c4d8 PhIAC_MMS_82xx_68.elf MMSAssoc::MMSAssoc(IHeapCallback*, INCAInterface*)
+0000c5c4 PhIAC_MMS_82xx_68.elf MMSAssoc::GetAssocData(tTPAddress*, tTPAddress*, unsigned short*, unsigned long*)
+0000c600 PhIAC_MMS_82xx_68.elf MMSAssoc::GetIdentMMSUsers(tTPAddress*, tTPAddress*, unsigned short*)
+0000c634 PhIAC_MMS_82xx_68.elf MMSAssoc::GetAssocCallingPar(bool*, int*, short*, int*, int*, int*, unsigned long*, unsigned long*, int*)
+0000c6b4 PhIAC_MMS_82xx_68.elf MMSAssoc::GetAssocCalledPar(bool*, int*, short*, int*, int*, int*, unsigned long*, unsigned long*, int*)
+0000c734 PhIAC_MMS_82xx_68.elf IAC_SetMMSUserRef(unsigned long, unsigned long)
+0000c74c PhIAC_MMS_82xx_68.elf IAC_GetMMSUserRef(unsigned long)
+0000c76c PhIAC_MMS_82xx_68.elf IAC_GetMsgVersion(unsigned long)
+0000c78c PhIAC_MMS_82xx_68.elf IAC_MsgVersionOk(unsigned char)
+0000c7ac PhIAC_MMS_82xx_68.elf MMSAssoc::ReleaseTransac(unsigned long, tTransacType)
+0000c8cc PhIAC_MMS_82xx_68.elf MMSAssoc::IntoFreeList(unsigned long, tTransacType)
+0000c978 PhIAC_MMS_82xx_68.elf MMSAssoc::IntoUsedList(unsigned long, tTransacType)
+0000ca24 PhIAC_MMS_82xx_68.elf MMSAssoc::SearchTransacInvokeID(int, unsigned long)
+0000cabc PhIAC_MMS_82xx_68.elf MMSAssoc::PutTransacInfo(int, tTransacInfo)
+0000caf8 PhIAC_MMS_82xx_68.elf MMSAssoc::SearchTransacMMSPDUType(tMMSPDUType, unsigned long)
+0000cb90 PhIAC_MMS_82xx_68.elf MMSAssoc::RemoveUserTransaction(int)
+0000cbf0 PhIAC_MMS_82xx_68.elf MMSAssoc::MoreUserTransactions() const
+0000cc10 PhIAC_MMS_82xx_68.elf MMSAssoc::InitMMSPDUTypeLogg()
+0000cc68 PhIAC_MMS_82xx_68.elf MMSAssoc::WriteMMSPDUTypeLogg()
+0000cc74 PhIAC_MMS_82xx_68.elf MMSAssoc::UpdateMMSVarAccType()
+0000cca0 PhIAC_MMS_82xx_68.elf MMSAssoc::CalculateMMSPDUTypeLogg(int)
+0000cd74 PhIAC_MMS_82xx_68.elf GetCorrespondingReqMMSPDUType(tMMSPDUType)
+0000cdc0 PhIAC_MMS_82xx_68.elf Transac::MatchRequestResponse(tTransacEvent, tMMSService, tMMSPDUType, tMMSStatus*)
+0000ce58 PhIAC_MMS_82xx_68.elf MMSAssoc::GetNewInvokeID()
+0000ce94 PhIAC_MMS_82xx_68.elf MMSAssoc::ReleaseInvokeID(int)
+0000ceb4 PhIAC_MMS_82xx_68.elf MMSAssoc::InitInvokeIDHandler()
+0000cec8 PhIAC_MMS_82xx_68.elf INCAInterface::BeginReq(unsigned long, int*, tMMSStatus*)
+0000cf78 PhIAC_MMS_82xx_68.elf INCAInterface::BeginInitiateRes(tMMSStatus*)
+0000cf8c PhIAC_MMS_82xx_68.elf INCAInterface::GetAssocCallingPar(unsigned long, bool*, int*, short*, int*, int*, int*, unsigned long*, unsigned long*, int*)
+0000cfc8 PhIAC_MMS_82xx_68.elf INCAInterface::GetAssocCalledPar(unsigned long, bool*, int*, short*, int*, int*, int*, unsigned long*, unsigned long*, int*)
+0000d004 PhIAC_MMS_82xx_68.elf INCAInterface::GetIdentMMSUsers(unsigned long, tTPAddress*, tTPAddress*, unsigned short*)
+0000d024 PhIAC_MMS_82xx_68.elf INCAInterface::operator delete(void*)
+0000d07c PhIAC_MMS_82xx_68.elf INCAInterface::InsertIntoCleanList(unsigned long)
+0000d0f0 PhIAC_MMS_82xx_68.elf INCAInterface::IsMMSEnvironment(unsigned long)
+0000d10c PhIAC_MMS_82xx_68.elf INCAInterface::IsMMSNoEnvironment(unsigned long)
+0000d124 PhIAC_MMS_82xx_68.elf INCAInterface::GetServerAssocInfo(int, int&, unsigned short&, int&, float&, float&, float&, bool&)
+0000d2cc PhIAC_MMS_82xx_68.elf INCAInterface::DisposeTransac(unsigned long)
+0000d340 PhIAC_MMS_82xx_68.elf INCAInterface::DisposeTransactions(unsigned long)
+0000d3d8 PhIAC_MMS_82xx_68.elf MMSAssoc::DisposeFreeTransactions(tTransacType, int)
+0000d4f8 PhIAC_MMS_82xx_68.elf INCAInterface::UpdateMMSVarAccType(unsigned long)
+0000d508 PhIAC_MMS_82xx_68.elf INCAInterface::UpdateNumberOfVariables(unsigned long, int)
+0000d520 PhIAC_MMS_82xx_68.elf INCAInterface::ChangeAssocIPAddress(unsigned long, unsigned int)
+0000d538 PhIAC_MMS_82xx_68.elf INCAInterface::SetTimeoutValue(unsigned long, unsigned long)
+0000d550 PhIAC_MMS_82xx_68.elf INCAInterface::ResetIConnectionInAssoc(unsigned long)
+0000d564 PhIAC_MMS_82xx_68.elf INCAInterface::PutTransacInfo(unsigned long, int, tTransacInfo)
+0000d580 PhIAC_MMS_82xx_68.elf INCAInterface::SetServiceSupported(tMMSService)
+0000d5cc PhIAC_MMS_82xx_68.elf INCAInterface::InitParametersSupported()
+0000d6b4 PhIAC_MMS_82xx_68.elf INCAInterface::InitServicesSupported()
+0000d720 PhIAC_MMS_82xx_68.elf INCAInterface::InitAssoc()
+0000d840 PhIAC_MMS_82xx_68.elf Transac::Init()
+0000d8b8 PhIAC_MMS_82xx_68.elf MMSAssoc::NewTransac(unsigned long*, tTransacType, tMMSStatus*)
+0000da54 PhIAC_MMS_82xx_68.elf INCAInterface::InitiateTRANSAC()
+0000db40 PhIAC_MMS_82xx_68.elf INCAInterface::InitiateMMSLLC()
+0000db9c PhIAC_MMS_82xx_68.elf INCAInterface::UpdateLastReadIndTime(unsigned long)
+0000dbcc PhIAC_MMS_82xx_68.elf INCAInterface::DisconnectAllConnections()
+0000dca0 PhIAC_MMS_82xx_68.elf INCAInterface::EqualDestIdent(tTPAddress*, tTPAddress*)
+0000dd0c PhIAC_MMS_82xx_68.elf MMSAssoc::CheckCallingAssoc(tTPAddress*, unsigned short)
+0000dd90 PhIAC_MMS_82xx_68.elf INCAInterface::SearchCallingAssoc(tTPAddress*, unsigned short)
+0000de5c PhIAC_MMS_82xx_68.elf MMSAssoc::GetMaxMessageSize()
+0000dea0 PhIAC_MMS_82xx_68.elf INCAInterface::ResetHeapTagsAfterPWFAIL()
+0000df18 PhIAC_MMS_82xx_68.elf INCAInterface::~INCAInterface()
+0000df64 PhIAC_MMS_82xx_68.elf IAC_TerminateINCA::Terminate()
+0000dfd0 PhIAC_MMS_82xx_68.elf IAC_INCATermination()
+0000dfe0 PhIAC_MMS_82xx_68.elf INCAInterface::~INCAInterface()
+0000e02c PhIAC_MMS_82xx_68.elf INCAInterface::INCAInterface(IHeapCallback*, IVOSCallback2*, ISocketCallback2*, ISocketCallback1*)
+0000e114 PhIAC_MMS_82xx_68.elf INCAInterface::INCAInterface(IHeapCallback*, IVOSCallback2*, ISocketCallback2*, ISocketCallback1*)
+0000e1fc PhIAC_MMS_82xx_68.elf INCAInterface::operator new(unsigned int, IHeapCallback*)
+0000e2f4 PhIAC_MMS_82xx_68.elf IAC_CreateINCA(IHeapCallback*, IVOSCallback2*, ISocketCallback2*, ISocketCallback1*)
+0000e394 PhIAC_MMS_82xx_68.elf MMSAssoc::operator new(unsigned int, IHeapCallback*)
+0000e460 PhIAC_MMS_82xx_68.elf Transac::operator new(unsigned int, IHeapCallback*)
+0000e528 PhIAC_MMS_82xx_68.elf INCAInterface::CreateTransac()
+0000e5f8 PhIAC_MMS_82xx_68.elf MMSAssoc::ChkConnectionTimeOut()
+0000e70c PhIAC_MMS_82xx_68.elf MMSAssoc::ChkTransactionTimeOut()
+0000e810 PhIAC_MMS_82xx_68.elf MMSAssoc::EncodeMessage(unsigned long, tTSDU*, tMMSStatus*)
+0000e910 PhIAC_MMS_82xx_68.elf MMSAssoc::ExecutePassConnectRequest(unsigned long*, tIStatus*, unsigned long*, tMMSStatus*)
+0000ea80 PhIAC_MMS_82xx_68.elf MMSAssoc::CleanAssoc()
+0000eb6c PhIAC_MMS_82xx_68.elf INCAInterface::DisposeAssoc(unsigned long*)
+0000ebec PhIAC_MMS_82xx_68.elf INCAInterface::DisposeCleanedAssocs()
+0000ec98 PhIAC_MMS_82xx_68.elf MMSAssoc::ReduceAssocCalledPar(int, short, int, int, int, unsigned long, unsigned long, unsigned char)
+0000ee24 PhIAC_MMS_82xx_68.elf INCAInterface::ReduceAssocCalledPar(unsigned long, int, short, int, int, int, unsigned long, unsigned long, unsigned char)
+0000ee58 PhIAC_MMS_82xx_68.elf MMSAssoc::ReduceAssocCallingPar(int, short, int, int, int, unsigned long, unsigned long, unsigned char)
+0000efe4 PhIAC_MMS_82xx_68.elf INCAInterface::ReduceAssocCallingPar(unsigned long, int, short, int, int, int, unsigned long, unsigned long, unsigned char)
+0000f01c PhIAC_MMS_82xx_68.elf MMSAssoc::PutIntoCleanList()
+0000f10c PhIAC_MMS_82xx_68.elf INCAInterface::CleanupAssoc(unsigned long)
+0000f178 PhIAC_MMS_82xx_68.elf INCAInterface::SuperviseAssocs()
+0000f2e8 PhIAC_MMS_82xx_68.elf INCAInterface::UpdateINCA()
+0000f350 PhIAC_MMS_82xx_68.elf IAC_UpdateINCA()
+0000f38c PhIAC_MMS_82xx_68.elf MMSAssoc::AbortAssoc()
+0000f3c8 PhIAC_MMS_82xx_68.elf INCAInterface::TDisconnectInd(unsigned long)
+0000f3ec PhIAC_MMS_82xx_68.elf MMSAssoc::AbortAssocReq()
+0000f458 PhIAC_MMS_82xx_68.elf INCAInterface::AbortAssocReq(unsigned long)
+0000f47c PhIAC_MMS_82xx_68.elf MMSAssoc::SetupAssoc(bool, tTPAddress*, tTPAddress*, unsigned short, tMMSUser, tMMSStatus*)
+0000f7a4 PhIAC_MMS_82xx_68.elf INCAInterface::CreateAssoc(unsigned long*, tTPAddress*, tTPAddress*, unsigned short, tMMSUser, tMMSStatus*)
+0000f970 PhIAC_MMS_82xx_68.elf INCAInterface::AbortOldAndCreateNewAssoc(unsigned long, tMMSStatus*)
+0000fa84 PhIAC_MMS_82xx_68.elf ParseMMSPDUPar(tTSDU, tMMSPDUType, tMMSService, int, tTransacInfo, unsigned long, bool*, bool*)
+0000fd0c PhIAC_MMS_82xx_68.elf Transac::ExecuteTransac(tTransacEvent, unsigned long, tTSDU, tMMSService, tMMSPDUType, int, tMMSStatus*)
+0000ffdc PhIAC_MMS_82xx_68.elf MMSAssoc::ExecuteSendResponse(tSearchKey, tTransacEvent*, tTSDU*, tMMSService*, tMMSPDUType*, int*, unsigned long*, unsigned long*, tIStatus*, tMMSStatus*)
+00010194 PhIAC_MMS_82xx_68.elf MMSAssoc::ExecuteReceiveConfirmedRequest(tTransacEvent*, tTSDU*, tMMSService*, tMMSPDUType*, int*, unsigned long*, tMMSStatus*)
+000102ac PhIAC_MMS_82xx_68.elf MMSAssoc::ExecuteReceiveResponse(tSearchKey, tTransacEvent*, tTSDU*, tMMSService*, tMMSPDUType*, int*, unsigned long*, tMMSStatus*)
+000103f0 PhIAC_MMS_82xx_68.elf MMSAssoc::ExecuteSendConfirmedRequest(tTransacEvent*, tTSDU*, tMMSService*, tMMSPDUType*, int*, unsigned long*, unsigned long*, tIStatus*, unsigned long, tMMSStatus*)
+000105e0 PhIAC_MMS_82xx_68.elf MMSAssoc::ExecuteSendConcludeRequest(tTransacEvent*, tTSDU*, tMMSService*, tMMSPDUType*, int*, unsigned long*, unsigned long*, tIStatus*, tMMSStatus*)
+00010810 PhIAC_MMS_82xx_68.elf MMSAssoc::ExecuteReceiveInitiateResponse(tTransacEvent*, tTSDU*, tMMSService*, tMMSPDUType*, int*, unsigned long*, tMMSStatus*)
+0001091c PhIAC_MMS_82xx_68.elf MMSAssoc::ExecuteReceiveInitiateRequest(tTransacEvent*, tTSDU*, tMMSService*, tMMSPDUType*, int*, unsigned long*, tMMSStatus*)
+00010a40 PhIAC_MMS_82xx_68.elf MMSAssoc::ExecuteSendInitiateResponse(tSearchKey, tTransacEvent*, tTSDU*, tMMSService*, tMMSPDUType*, int*, unsigned long*, unsigned long*, tIStatus*, tMMSStatus*)
+00010bfc PhIAC_MMS_82xx_68.elf MMSAssoc::ExecuteReceiveConnectConfirm(tMMSService*, int*, unsigned long*, tMMSStatus*)
+00010d54 PhIAC_MMS_82xx_68.elf MMSAssoc::ExecuteAssoc(tTransacEvent, tTSDU, tMMSService, tMMSPDUType, bool, int, unsigned long, unsigned long, tMMSStatus*)
+00011410 PhIAC_MMS_82xx_68.elf INCAInterface::EndConcludeRes(unsigned long, unsigned long, tMMSStatus*)
+00011494 PhIAC_MMS_82xx_68.elf INCAInterface::EndConcludeReq(unsigned long, unsigned long, tMMSStatus*)
+00011518 PhIAC_MMS_82xx_68.elf INCAInterface::EndInitiateRes(unsigned long, unsigned long, tMMSStatus*)
+0001158c PhIAC_MMS_82xx_68.elf INCAInterface::EndInitiateReq(unsigned long, unsigned long, tMMSStatus*)
+00011600 PhIAC_MMS_82xx_68.elf INCAInterface::EndRes(unsigned long, int, tMMSService, unsigned long, tMMSStatus*)
+00011688 PhIAC_MMS_82xx_68.elf INCAInterface::EndReq(unsigned long, int, tMMSService, unsigned long, unsigned long, tMMSStatus*)
+000116f4 PhIAC_MMS_82xx_68.elf INCAInterface::BeginInitiateReq(tTPAddress*, unsigned short, unsigned long*, tMMSStatus*)
+00011818 PhIAC_MMS_82xx_68.elf IAC_SetOwnIPAddress(unsigned int)
+0001185c PhIAC_MMS_82xx_68.elf IAC_IsConnectBlocked()
+000118a0 PhIAC_MMS_82xx_68.elf IAC_Rollback()
+000118e8 PhIAC_MMS_82xx_68.elf IAC_DisconnectAllConnections()
+00011928 PhIAC_MMS_82xx_68.elf IAC_ResetAssocInfo()
+00011970 PhIAC_MMS_82xx_68.elf IAC_GetServerAssocInfo(int, int&, unsigned short&, int&, float&, float&, float&, bool&)
+00011a18 PhIAC_MMS_82xx_68.elf IAC_ResetHeapTagsAfterPWFAIL()
+00011a58 PhIAC_MMS_82xx_68.elf INCAInterface::TDataInd(unsigned long, unsigned long*, tTSDU)
+000120b4 PhIAC_MMS_82xx_68.elf INCAInterface::TConnectCon(unsigned long)
+00012150 PhIAC_MMS_82xx_68.elf TPC::TPC()
+00012190 PhIAC_MMS_82xx_68.elf TPC::TPC()
+000121d0 PhIAC_MMS_82xx_68.elf TransportLayer::TransportLayer(IHeapCallback*)
+000121ec PhIAC_MMS_82xx_68.elf TransportLayer::TransportLayer(IHeapCallback*)
+00012208 PhIAC_MMS_82xx_68.elf TPC::GetTPAddresses(tTPAddress*, tTPAddress*, unsigned short*)
+0001223c PhIAC_MMS_82xx_68.elf TransportLayer::SearchTPCAddress(unsigned long*, tTPAddress, tTPAddress, unsigned short)
+00012358 PhIAC_MMS_82xx_68.elf TransportLayer::FindTPCAddress(unsigned long*, unsigned short)
+00012424 PhIAC_MMS_82xx_68.elf TransportLayer::SetTPUser(unsigned long, unsigned long)
+00012434 PhIAC_MMS_82xx_68.elf TransportLayer::GetTPUser(unsigned long)
+00012444 PhIAC_MMS_82xx_68.elf TransportLayer::GetTPAddresses(unsigned long, tTPAddress*, tTPAddress*, unsigned short*)
+00012460 PhIAC_MMS_82xx_68.elf TransportLayer::TP0GetPriority(unsigned long)
+00012470 PhIAC_MMS_82xx_68.elf TransportLayer::TP0GetTSAP(unsigned long)
+00012480 PhIAC_MMS_82xx_68.elf TransportLayer::InitTSDU(tTSDU*)
+00012494 PhIAC_MMS_82xx_68.elf TransportLayer::EqualTPAddress(tTPAddress, tTPAddress)
+000124d0 PhIAC_MMS_82xx_68.elf TransportLayer::StandardTSDUSize()
+000124e0 PhIAC_MMS_82xx_68.elf TransportLayer::StandardTPDUSize()
+0001250c PhIAC_MMS_82xx_68.elf GetNextSourceRef(unsigned short*)
+0001255c PhIAC_MMS_82xx_68.elf TransportLayer::ResetHeapTagAfterPWFAIL()
+000125a4 PhIAC_MMS_82xx_68.elf NWStatusToTPStatus(tUDPStatus)
+000125d8 PhIAC_MMS_82xx_68.elf SetTPDUAttributes(tTPDU*, short, short)
+000125fc PhIAC_MMS_82xx_68.elf TransportLayer::SetTSDUAttributes(tTSDU*, short, short)
+00012614 PhIAC_MMS_82xx_68.elf GetTPDUAttributes(tTPDU*, unsigned char**, short*, short*)
+00012660 PhIAC_MMS_82xx_68.elf TransportLayer::GetTSDUAttributes(tTSDU, unsigned char**, short*, short*)
+00012690 PhIAC_MMS_82xx_68.elf TransportLayer::EqualTSDU(tTSDU, tTSDU)
+00012724 PhIAC_MMS_82xx_68.elf TransportLayer::TSDUsAvailable(int, tIStatus*)
+0001276c PhIAC_MMS_82xx_68.elf GetTPDU(tTPDU*, tIStatus*)
+000127b0 PhIAC_MMS_82xx_68.elf TransportLayer::GetTSDU(tTSDU*, tIStatus*)
+000127c4 PhIAC_MMS_82xx_68.elf TransportLayer::ReleaseTSDU(tTSDU*)
+00012808 PhIAC_MMS_82xx_68.elf TransportLayer::DisposeTPC(unsigned long*)
+000128d4 PhIAC_MMS_82xx_68.elf TransportLayer::TDISCONNECTind(unsigned long, tDisConReason, tDisConLocation)
+00012928 PhIAC_MMS_82xx_68.elf TransportLayer::TDATAind(unsigned long, tTSDU, tIStatus*)
+00012990 PhIAC_MMS_82xx_68.elf TransportLayer::TCONNECTcon(unsigned long)
+000129d8 PhIAC_MMS_82xx_68.elf TransportLayer::InitTransportLayer()
+00012aa4 PhIAC_MMS_82xx_68.elf TPC::SendTPDU(tTPDU)
+00012ae0 PhIAC_MMS_82xx_68.elf TPC::ExecuteTPC(tTPEvent, tTSDU, bool, tDisConReason, tIStatus*)
+00013598 PhIAC_MMS_82xx_68.elf TransportLayer::NDISCONNECTind(unsigned long, tDisConReason, tIStatus*)
+00013608 PhIAC_MMS_82xx_68.elf TransportLayer::NCONNECTConf(unsigned long, tIStatus*)
+00013670 PhIAC_MMS_82xx_68.elf TransportLayer::TDISCONNECTreq(unsigned long, tDisConReason, tIStatus*)
+000136d4 PhIAC_MMS_82xx_68.elf TransportLayer::TDATAreq(unsigned long, tTSDU, tIStatus*)
+00013738 PhIAC_MMS_82xx_68.elf TransportLayer::TCONNECTres(unsigned long, tIStatus*)
+0001379c PhIAC_MMS_82xx_68.elf TransportLayer::TCONNECTind(unsigned long, unsigned char, unsigned char, unsigned short)
+000138f8 PhIAC_MMS_82xx_68.elf TPC::operator new(unsigned int, IHeapCallback*)
+000139c0 PhIAC_MMS_82xx_68.elf TransportLayer::CreateTPC(tTPAddress, tTPAddress, unsigned short, bool)
+00013b50 PhIAC_MMS_82xx_68.elf TransportLayer::TCONNECTreq(unsigned long*, tTPAddress, tTPAddress, unsigned short, tIStatus*)
+00013c30 PhIAC_MMS_82xx_68.elf TransportLayer::operator new(unsigned int, IHeapCallback*)
+00013d2c PhIAC_MMS_82xx_68.elf InitiateTP0(IHeapCallback*)
+00013d94 PhIAC_MMS_82xx_68.elf TransportLayer::NDATAind(unsigned long, unsigned int, unsigned int, tIStatus*)
+000144c0 PhIAC_MMS_82xx_68.elf UDPSDUResetHeapTagAfterPWFail()
+00014504 PhIAC_MMS_82xx_68.elf DeleteUDPSDU(unsigned long*)
+00014588 PhIAC_MMS_82xx_68.elf InitUDPSDU(unsigned long, short)
+000145c8 PhIAC_MMS_82xx_68.elf _UDPSDUsAvailable(int, tUDPStatus*)
+00014680 PhIAC_MMS_82xx_68.elf IAC_GetNoOfAllocatedUDPSDUs()
+000146c0 PhIAC_MMS_82xx_68.elf ReleaseUDPSDU(unsigned long*)
+0001483c PhIAC_MMS_82xx_68.elf GetUDPSDUAttributes(unsigned long, unsigned char**, short*, short*)
+00014860 PhIAC_MMS_82xx_68.elf SetUDPSDUAttributes(unsigned long, short, short)
+00014878 PhIAC_MMS_82xx_68.elf DoTheUDPSending(unsigned long)
+000149fc PhIAC_MMS_82xx_68.elf UDPSendTo(unsigned int, unsigned char, unsigned long, tUDPStatus*)
+00014b20 PhIAC_MMS_82xx_68.elf GetOwnUDPPortNumber()
+00014b34 PhIAC_MMS_82xx_68.elf PollUDPStack()
+00014d38 PhIAC_MMS_82xx_68.elf CreateUDPSDU()
+00014e48 PhIAC_MMS_82xx_68.elf InitiateUDP(IHeapCallback*, ISocketCallback2*, ISocketCallback1*)
+00015060 PhIAC_MMS_82xx_68.elf CloseSockets()
+000151f0 PhIAC_MMS_82xx_68.elf GetUDPSDU(unsigned long*, tUDPStatus*)
+000153d4 PhIAC_MMS_82xx_68.elf CommGroup::operator new(unsigned int, IHeapCallback*)
+00015498 PhIAC_MMS_82xx_68.elf CommGroup::operator delete(void*)
+000154f4 PhIAC_MMS_82xx_68.elf CommGroup::SetStatusForAllCommVar(int)
+00015600 PhIAC_MMS_82xx_68.elf CommGroup::ResetHeapTagAfterPWFail()
+00015644 PhIAC_MMS_82xx_68.elf CommGroup::PrintConfig(ISystemUtilitiesCallback4 const*, IHeapCallback const*, char*, unsigned int) const
+00015918 PhIAC_MMS_82xx_68.elf CommGroup::EncodeReadReqHeader(unsigned short&)
+000159a0 PhIAC_MMS_82xx_68.elf CommGroup::BuildReadRequest()
+00015a6c PhIAC_MMS_82xx_68.elf CommGroup::QueueReadRequest()
+00015af4 PhIAC_MMS_82xx_68.elf CommGroup::~CommGroup()
+00015c7c PhIAC_MMS_82xx_68.elf CommGroup::MoveToLastInCommVarList(CommVar*)
+00015d18 PhIAC_MMS_82xx_68.elf CommGroup::ReadCon(unsigned char*, short, short)
+000160b4 PhIAC_MMS_82xx_68.elf CommGroup::FindCommVar(char const*) const
+000161b4 PhIAC_MMS_82xx_68.elf CommGroup::~CommGroup()
+0001633c PhIAC_MMS_82xx_68.elf CommGroup::CommGroup(PHConnection*, teIACCycleTime, bool&)
+00016448 PhIAC_MMS_82xx_68.elf CommGroup::CommGroup(PHConnection*, teIACCycleTime, bool&)
+00016554 PhIAC_MMS_82xx_68.elf CommGroup::AddCommVar(CommVar*)
+00016600 PhIAC_MMS_82xx_68.elf CommGroup::CheckForSpace(CommVar const*) const
+000166b4 PhIAC_MMS_82xx_68.elf CommGroup::RemoveCommVar(CommVar const*)
+000167e4 PhIAC_MMS_82xx_68.elf CommGroup::DoReadRequest(tMMSStatus&)
+000169f4 PhIAC_MMS_82xx_68.elf CommGroup::HandleLoopbackRequest()
+00016bec PhIAC_MMS_82xx_68.elf CommGroup::ReadErrorCon(tMMSStatus)
+00016c40 PhIAC_MMS_82xx_68.elf IACAction::operator new(unsigned int, IHeapCallback*)
+00016d00 PhIAC_MMS_82xx_68.elf IACAction::IACAction(CommGroup*)
+00016d20 PhIAC_MMS_82xx_68.elf IACAction::IACAction(CommGroup*)
+00016d44 PhIAC_MMS_82xx_68.elf IACAction::ResetHeapTagAfterPWFail()
+00016d88 PhIAC_MMS_82xx_68.elf IACAction::PrintConfig(ISystemUtilitiesCallback4 const*, IHeapCallback const*, char*, unsigned int) const
+00016e40 PhIAC_MMS_82xx_68.elf IACAction::operator delete(void*)
+00016e9c PhIAC_MMS_82xx_68.elf IACAction::~IACAction()
+00016f08 PhIAC_MMS_82xx_68.elf IACAction::~IACAction()
+00016f74 PhIAC_MMS_82xx_68.elf CommVar::DecodeDataAccessError(tDataAccessError)
+00017028 PhIAC_MMS_82xx_68.elf CommVar::operator new(unsigned int, IHeapCallback*)
+000170ec PhIAC_MMS_82xx_68.elf CommVar::operator delete(void*)
+00017148 PhIAC_MMS_82xx_68.elf CommVar::GetFastestCycleTimeInPHVarDataList()
+00017218 PhIAC_MMS_82xx_68.elf CommVar::EncodeCommVar(rOctetString*, unsigned short&)
+00017270 PhIAC_MMS_82xx_68.elf CommVar::DecodeCommVar(unsigned char const*, int&, int, char*)
+000172f4 PhIAC_MMS_82xx_68.elf CommVar::SkipResponseForThisCV(unsigned char const*, short&, short)
+000173e8 PhIAC_MMS_82xx_68.elf CommVar::ResetHeapTagAfterPWFail()
+0001742c PhIAC_MMS_82xx_68.elf CommVar::PrintConfig(ISystemUtilitiesCallback4 const*, IHeapCallback const*, char*, unsigned int) const
+00017544 PhIAC_MMS_82xx_68.elf CommVar::CVNameMatches(unsigned char const*, int, int&)
+000175a8 PhIAC_MMS_82xx_68.elf CommVar::~CommVar()
+000176d0 PhIAC_MMS_82xx_68.elf CommVar::AddPHVarData(unsigned long, teIACCycleTime)
+00017790 PhIAC_MMS_82xx_68.elf CommVar::~CommVar()
+000178b8 PhIAC_MMS_82xx_68.elf CommVar::CommVar(char const*, teIACCycleTime, int, unsigned long, unsigned long, teIACDirection, bool&)
+00017a7c PhIAC_MMS_82xx_68.elf CommVar::CommVar(char const*, teIACCycleTime, int, unsigned long, unsigned long, teIACDirection, bool&)
+00017c40 PhIAC_MMS_82xx_68.elf CommVar::RemovePHVarData(PHVarData*)
+00017e00 PhIAC_MMS_82xx_68.elf CommVar::CheckSize(unsigned char const*, short, unsigned char, int&)
+00017fd8 PhIAC_MMS_82xx_68.elf PHVarData::operator new(unsigned int, IHeapCallback*)
+0001809c PhIAC_MMS_82xx_68.elf PHVarData::ResetHeapTagAfterPWFail()
+000180dc PhIAC_MMS_82xx_68.elf PHVarData::AbortCommVariable()
+00018108 PhIAC_MMS_82xx_68.elf PHVarData::operator delete(void*)
+00018164 PhIAC_MMS_82xx_68.elf PHVarData::FetchAccessData(unsigned long, char const*&, teIACCycleTime&, int&, unsigned long&, teIACDirection&, int*)
+000183c4 PhIAC_MMS_82xx_68.elf PHVarData::SetVarSize(unsigned short)
+00018434 PhIAC_MMS_82xx_68.elf PHVarData::PHVarData(unsigned long, teIACCycleTime, CommVar*)
+00018510 PhIAC_MMS_82xx_68.elf PHVarData::PHVarData(unsigned long, teIACCycleTime, CommVar*)
+000185ec PhIAC_MMS_82xx_68.elf PHVarData::~PHVarData()
+0001868c PhIAC_MMS_82xx_68.elf PHVarData::~PHVarData()
+0001872c PhIAC_MMS_82xx_68.elf PHConnection::operator delete(void*)
+00018788 PhIAC_MMS_82xx_68.elf PHConnection::GetFastestCycleTime()
+0001884c PhIAC_MMS_82xx_68.elf PHConnection::RemovePendingTransactions()
+00018944 PhIAC_MMS_82xx_68.elf PHConnection::PutInTransactionQueue(IACAction*)
+000189d4 PhIAC_MMS_82xx_68.elf PHConnection::GetTimeoutValue() const
+00018a10 PhIAC_MMS_82xx_68.elf PHConnection::InitMMSClientPDUTypeLogg()
+00018a7c PhIAC_MMS_82xx_68.elf PHConnection::UpdateMMSClientVarAccType(teIACCycleTime)
+00018ab0 PhIAC_MMS_82xx_68.elf PHConnection::CalculateMMSClientPDUTypeLogg(int)
+00018b9c PhIAC_MMS_82xx_68.elf PHConnection::ResetDiagnosticData()
+00018be0 PhIAC_MMS_82xx_68.elf PHConnection::ResetHeapTagsAfterPWFail()
+00018c34 PhIAC_MMS_82xx_68.elf PHConnection::PrintConfig(ISystemUtilitiesCallback4 const*, IHeapCallback const*, char*, unsigned int) const
+00019230 PhIAC_MMS_82xx_68.elf PHConnection::PollSendQueue(int)
+00019378 PhIAC_MMS_82xx_68.elf PHConnection::FindCommGroupWithSpaceForCommVar(teIACCycleTime, CommVar const*)
+000195bc PhIAC_MMS_82xx_68.elf PHConnection::~PHConnection()
+00019790 PhIAC_MMS_82xx_68.elf PHConnection::SendRequests(teIACCycleTime)
+0001997c PhIAC_MMS_82xx_68.elf PHConnection::FindCommVar(char const*, teIACCycleTime)
+00019b4c PhIAC_MMS_82xx_68.elf PHConnection::operator new(unsigned int, IHeapCallback*)
+00019c18 PhIAC_MMS_82xx_68.elf PHConnection::PutInSendQueue(IACAction*)
+00019cac PhIAC_MMS_82xx_68.elf PHConnection::~PHConnection()
+00019e80 PhIAC_MMS_82xx_68.elf PHConnection::PHConnection(bool&)
+0001a010 PhIAC_MMS_82xx_68.elf PHConnection::PHConnection(bool&)
+0001a1a0 PhIAC_MMS_82xx_68.elf PHConnection::ChkConnection()
+0001a338 PhIAC_MMS_82xx_68.elf PHConnection::RegisterCommVariable(unsigned long, int*)
+0001a628 PhIAC_MMS_82xx_68.elf PHConnection::InitiateErrorCon()
+0001a730 PhIAC_MMS_82xx_68.elf PHConnection::InitiateCon()
+0001a914 PhIAC_MMS_82xx_68.elf PHConnection::DisconnectReq(unsigned long, int*)
+0001aa0c PhIAC_MMS_82xx_68.elf PHConnection::ConnectReq(unsigned long, unsigned int, unsigned short, int*)
+0001ab58 PhIAC_MMS_82xx_68.elf PHConnection::FetchConnectData(unsigned long, unsigned int&, unsigned short&, unsigned int&, int*)
+0001ad28 PhIAC_MMS_82xx_68.elf PHConnection::ReadCon(int, unsigned char*, short, short, tMMSStatus)
+0001afa8 PhIAC_MMS_82xx_68.elf PHConnection::CalculateExpectedCommRate()
+0001b0dc PhIAC_MMS_82xx_68.elf PHConnection::CheckInactivityTimer()
+0001b220 PhIAC_MMS_82xx_68.elf operator delete(void*)
+0001b260 PhIAC_MMS_82xx_68.elf __cxa_pure_virtual
+0001b29c PhIAC_MMS_82xx_68.elf CPhCommon_Base::CPhCommon_Base()
+0001b300 PhIAC_MMS_82xx_68.elf CPhCommon_Base::CPhCommon_Base()
+0001b360 PhIAC_MMS_82xx_68.elf CPhCommon_Base::GetProductInfo(unsigned char*, unsigned char*, unsigned char*, unsigned long)
+0001b39c PhIAC_MMS_82xx_68.elf CPhCommon_Base::SetCommonCallbackInterface(ICommonCallback*)
+0001b3cc PhIAC_MMS_82xx_68.elf CPhConfig_Base1::PrepareForTermination(teHWFErrorCode*)
+0001b3fc PhIAC_MMS_82xx_68.elf CPhConfig_Base1::RemoveHWConfiguration(trHWFAddress, teHWFErrorCode*)
+0001b42c PhIAC_MMS_82xx_68.elf CPhConfig_Base1::RemoveIoConnection(unsigned long, teHWFErrorCode*)
+0001b460 PhIAC_MMS_82xx_68.elf CPhConfig_Base1::PhResponsibilityForRestart(trHWFAddress, teHWFErrorCode*)
+0001b490 PhIAC_MMS_82xx_68.elf CPhConfig_Base1::PhResponsibility(trHWFAddress, teHWFErrorCode*)
+0001b4c0 PhIAC_MMS_82xx_68.elf CPhConfig_Base1::StartUsingIoConnection(trHWFAddress, unsigned long, teHWFErrorCode*)
+0001b4f4 PhIAC_MMS_82xx_68.elf CPhConfig_Base1::PhResponsibilityForBackupDevice(trHWFAddress, teHWFErrorCode*)
+0001b524 PhIAC_MMS_82xx_68.elf CPhConfig_Base1::PhResponsibilityForHotInsert(trHWFAddress, teHWFErrorCode*)
+0001b554 PhIAC_MMS_82xx_68.elf CPhConfig_Base1::PerformSwitchover(trHWFAddress, teHWFErrorCode*)
+0001b584 PhIAC_MMS_82xx_68.elf CPhConfig_Base1::StartUsingDevice(trHWFAddress, teHWFErrorCode*)
+0001b5b4 PhIAC_MMS_82xx_68.elf CPhConfig_Base1::PerformFailover(trHWFAddress, teHWFErrorCode*)
+0001b5e4 PhIAC_MMS_82xx_68.elf CPhClient_Base::ConnectReq(unsigned long, unsigned long*, int*)
+0001b61c PhIAC_MMS_82xx_68.elf CPhClient_Base::DisconnectReq(unsigned long, unsigned long, int*)
+0001b654 PhIAC_MMS_82xx_68.elf CPhClient_Base::ReadVarReq(unsigned long, int*)
+0001b688 PhIAC_MMS_82xx_68.elf CPhClient_Base::WriteVarReq(unsigned long, int*)
+0001b6bc PhIAC_MMS_82xx_68.elf CPhClient_Base::ReadRawReq(unsigned long, int*)
+0001b6f0 PhIAC_MMS_82xx_68.elf CPhClient_Base::WriteRawReq(unsigned long, int*)
+0001b724 PhIAC_MMS_82xx_68.elf CPhClient_Base::AbortRawReq(unsigned long, int*)
+0001b758 PhIAC_MMS_82xx_68.elf CPhClient_Base::AbortVarReq(unsigned long, int*)
+0001b78c PhIAC_MMS_82xx_68.elf CPhClient_Base::GetExtendedStatusSize(unsigned long, int*, int*)
+0001b7c4 PhIAC_MMS_82xx_68.elf CPhClient_Base::GetExtendedStatus(unsigned long, int, teIEC1131Type*, tGCValue*, int*)
+0001b804 PhIAC_MMS_82xx_68.elf CPhClient_Base::SetStatus(unsigned long, int, int*)
+0001b83c PhIAC_MMS_82xx_68.elf CPhClient_Base::ReadRes(unsigned long, int, int*)
+0001b874 PhIAC_MMS_82xx_68.elf CPhClient_Base::WriteRes(unsigned long, int, int*)
+0001b8ac PhIAC_MMS_82xx_68.elf CPhClient_Base1::ConnectReq(unsigned long, unsigned long*, int*)
+0001b8e4 PhIAC_MMS_82xx_68.elf CPhClient_Base1::DisconnectReq(unsigned long, unsigned long, int*)
+0001b91c PhIAC_MMS_82xx_68.elf CPhClient_Base1::ReadVarReq(unsigned long, int*)
+0001b950 PhIAC_MMS_82xx_68.elf CPhClient_Base1::WriteVarReq(unsigned long, int*)
+0001b984 PhIAC_MMS_82xx_68.elf CPhClient_Base1::RegisterVarReq(unsigned long, int*)
+0001b9b8 PhIAC_MMS_82xx_68.elf CPhClient_Base1::ReadRawReq(unsigned long, int*)
+0001b9ec PhIAC_MMS_82xx_68.elf CPhClient_Base1::WriteRawReq(unsigned long, int*)
+0001ba20 PhIAC_MMS_82xx_68.elf CPhClient_Base1::AbortRawReq(unsigned long, int*)
+0001ba54 PhIAC_MMS_82xx_68.elf CPhClient_Base1::AbortVarReq(unsigned long, int*)
+0001ba88 PhIAC_MMS_82xx_68.elf CPhClient_Base1::TimeoutAbortVarReq(unsigned long, int*)
+0001baec PhIAC_MMS_82xx_68.elf CPhClient_Base1::GetExtendedStatusSize(unsigned long, int*, int*)
+0001bb24 PhIAC_MMS_82xx_68.elf CPhClient_Base1::GetExtendedStatus(unsigned long, int, teIEC1131Type*, tGCValue*, int*)
+0001bb64 PhIAC_MMS_82xx_68.elf CPhClient_Base1::BufferTakeForReceive(unsigned long, int*)
+0001bb98 PhIAC_MMS_82xx_68.elf CPhClient_Base1::BufferGiveForReceive(unsigned long, int, int*)
+0001bbd0 PhIAC_MMS_82xx_68.elf CPhClient_Base1::BufferTakeForSend(unsigned long, unsigned int, int*)
+0001bc08 PhIAC_MMS_82xx_68.elf CPhClient_Base1::BufferGiveForSend(unsigned long, unsigned int, int, int*)
+0001bc44 PhIAC_MMS_82xx_68.elf CPhClient_Base1::SetStatus(unsigned long, int, int*)
+0001bc7c PhIAC_MMS_82xx_68.elf CPhClient_Base1::ReadRes(unsigned long, int, int*)
+0001bcb4 PhIAC_MMS_82xx_68.elf CPhClient_Base1::WriteRes(unsigned long, int, int*)
+0001bcec PhIAC_MMS_82xx_68.elf CPhStatus_Base1::KickWatchdog(unsigned short*, teHWFErrorCode*)
+0001bd20 PhIAC_MMS_82xx_68.elf CPhStatus_Base1::GetStatus(trHWFAddress, teHWFUnitKind, unsigned long*, unsigned long*, teHWFErrorCode*)
+0001bd5c PhIAC_MMS_82xx_68.elf CPhIOAccess_Base::GetCopyRoutineReference(unsigned int, void (**)(short, void*, void*), IOAccessErrorCode*)
+0001bd94 PhIAC_MMS_82xx_68.elf CPhIOAccess_Base::ObtainDPM(eAreaType, trHWFAddress, IOAccessErrorCode*)
+0001bdc8 PhIAC_MMS_82xx_68.elf CPhIOAccess_Base::ReleaseDPM(eAreaType, trHWFAddress, IOAccessErrorCode*)
+0001bdfc PhIAC_MMS_82xx_68.elf CPhDiagnostics_Base::PhDiagnosticsTableNew(teDiagErrorCode*)
+0001be2c PhIAC_MMS_82xx_68.elf CPhDiagnostics_Base::PhDiagnosticsTableCleared(teDiagErrorCode*)
+0001be5c PhIAC_MMS_82xx_68.elf CPhOLU_Base::PrepareForFirmwareDownload(trHWFAddress const*, unsigned long, eOLUStatus*)
+0001be94 PhIAC_MMS_82xx_68.elf CPhOLU_Base::PrepareForApplicationStop(trHWFAddress const*, eOLUStatus*)
+0001bec8 PhIAC_MMS_82xx_68.elf CPhOLU_Base::ResumeOperation(trHWFAddress const*, eOLUStatus*)
+0001befc PhIAC_MMS_82xx_68.elf CPhOLU_Base::PhResponsibilityForOLU(trHWFAddress const*, eOLUStatus*)
+0001bf30 PhIAC_MMS_82xx_68.elf CPhOLU_Base::PrepareForLeavingOLU(trHWFAddress const*, eOLUStatus*)
+0001bf64 PhIAC_MMS_82xx_68.elf CPhOLU_Base::PrepareForAppAndConfigDownload(trHWFAddress const*, eOLUStatus*)
+0001bf98 PhIAC_MMS_82xx_68.elf CPhOLU_Base1::PrepareForFirmwareDownload(trHWFAddress const*, unsigned long, eOLUStatus*)
+0001bfd0 PhIAC_MMS_82xx_68.elf CPhOLU_Base1::PrepareForApplicationStop(trHWFAddress const*, eOLUStatus*)
+0001c004 PhIAC_MMS_82xx_68.elf CPhOLU_Base1::ResumeOperation(trHWFAddress const*, eOLUStatus*)
+0001c038 PhIAC_MMS_82xx_68.elf CPhOLU_Base1::PhResponsibilityForOLU(trHWFAddress const*, eOLUStatus*)
+0001c06c PhIAC_MMS_82xx_68.elf CPhOLU_Base1::PrepareForLeavingOLU(trHWFAddress const*, eOLUStatus*)
+0001c0a0 PhIAC_MMS_82xx_68.elf CPhOLU_Base1::PrepareForAppAndConfigDownload(trHWFAddress const*, eOLUStatus*)
+0001c0d4 PhIAC_MMS_82xx_68.elf CPhOLU_Base1::OLUEnablePhCom(trHWFAddress const*, eOLUStatus*)
+0001c108 PhIAC_MMS_82xx_68.elf CPhOLU_Base1::OLUDisablePhCom(trHWFAddress const*, eOLUStatus*)
+0001c13c PhIAC_MMS_82xx_68.elf CPhOLU_Base1::InformPhIsInSwitch(trHWFAddress const*, eOLUStatus*)
+0001c174 PhIAC_MMS_82xx_68.elf CPhCommon_Base::~CPhCommon_Base()
+0001c1f0 PhIAC_MMS_82xx_68.elf CPhCommon_Base::~CPhCommon_Base()
+0001c26c PhIAC_MMS_82xx_68.elf CPhCommon_Base::~CPhCommon_Base()
+0001c2e4 PhIAC_MMS_82xx_68.elf non-virtual thunk to CPhIAC_MMS::AddRef()
+0001c2ec PhIAC_MMS_82xx_68.elf non-virtual thunk to CPhIAC_MMS::AddRef()
+0001c2f4 PhIAC_MMS_82xx_68.elf non-virtual thunk to CPhIAC_MMS::AddRef()
+0001c2fc PhIAC_MMS_82xx_68.elf non-virtual thunk to CPhIAC_MMS::AddRef()
+0001c304 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::AddRef()
+0001c324 PhIAC_MMS_82xx_68.elf IUnknown::~IUnknown()
+0001c368 PhIAC_MMS_82xx_68.elf IUnknown::~IUnknown()
+0001c3a8 PhIAC_MMS_82xx_68.elf IPhClient1::~IPhClient1()
+0001c3f0 PhIAC_MMS_82xx_68.elf IPhConfig1::~IPhConfig1()
+0001c43c PhIAC_MMS_82xx_68.elf IPhConfig1::~IPhConfig1()
+0001c484 PhIAC_MMS_82xx_68.elf IPhStatus1::~IPhStatus1()
+0001c4d0 PhIAC_MMS_82xx_68.elf IPhStatus1::~IPhStatus1()
+0001c518 PhIAC_MMS_82xx_68.elf IPhOLU::~IPhOLU()
+0001c564 PhIAC_MMS_82xx_68.elf IPhOLU::~IPhOLU()
+0001c5ac PhIAC_MMS_82xx_68.elf IPhClient1::~IPhClient1()
+0001c5f4 PhIAC_MMS_82xx_68.elf non-virtual thunk to CPhIAC_MMS::QueryInterface(_GUID const&, void**)
+0001c5fc PhIAC_MMS_82xx_68.elf non-virtual thunk to CPhIAC_MMS::QueryInterface(_GUID const&, void**)
+0001c604 PhIAC_MMS_82xx_68.elf non-virtual thunk to CPhIAC_MMS::QueryInterface(_GUID const&, void**)
+0001c60c PhIAC_MMS_82xx_68.elf non-virtual thunk to CPhIAC_MMS::QueryInterface(_GUID const&, void**)
+0001c618 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::QueryInterface(_GUID const&, void**)
+0001c748 PhIAC_MMS_82xx_68.elf IPhOLU1::~IPhOLU1()
+0001c798 PhIAC_MMS_82xx_68.elf IPhOLU1::~IPhOLU1()
+0001c7e8 PhIAC_MMS_82xx_68.elf non-virtual thunk to CPhIAC_MMS::Release()
+0001c7f0 PhIAC_MMS_82xx_68.elf non-virtual thunk to CPhIAC_MMS::Release()
+0001c7f8 PhIAC_MMS_82xx_68.elf non-virtual thunk to CPhIAC_MMS::Release()
+0001c800 PhIAC_MMS_82xx_68.elf non-virtual thunk to CPhIAC_MMS::Release()
+0001c808 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::Release()
+0001c878 PhIAC_MMS_82xx_68.elf IUnknown::IUnknown()
+0001c8d0 PhIAC_MMS_82xx_68.elf IPhCommon::IPhCommon()
+0001c934 PhIAC_MMS_82xx_68.elf IUnknown::~IUnknown()
+0001c9a4 PhIAC_MMS_82xx_68.elf IPhConfig1::~IPhConfig1()
+0001ca20 PhIAC_MMS_82xx_68.elf CPhConfig_Base1::~CPhConfig_Base1()
+0001ca9c PhIAC_MMS_82xx_68.elf CPhConfig_Base1::~CPhConfig_Base1()
+0001cb18 PhIAC_MMS_82xx_68.elf IPhClient::~IPhClient()
+0001cb94 PhIAC_MMS_82xx_68.elf CPhClient_Base::~CPhClient_Base()
+0001cc10 PhIAC_MMS_82xx_68.elf IPhClient::~IPhClient()
+0001cc8c PhIAC_MMS_82xx_68.elf IPhClient::~IPhClient()
+0001cd08 PhIAC_MMS_82xx_68.elf CPhClient_Base::~CPhClient_Base()
+0001cd84 PhIAC_MMS_82xx_68.elf IPhClient1::~IPhClient1()
+0001ce00 PhIAC_MMS_82xx_68.elf CPhClient_Base1::~CPhClient_Base1()
+0001ce7c PhIAC_MMS_82xx_68.elf CPhClient_Base1::~CPhClient_Base1()
+0001cef8 PhIAC_MMS_82xx_68.elf IPhStatus1::~IPhStatus1()
+0001cf74 PhIAC_MMS_82xx_68.elf CPhStatus_Base1::~CPhStatus_Base1()
+0001cff0 PhIAC_MMS_82xx_68.elf CPhStatus_Base1::~CPhStatus_Base1()
+0001d06c PhIAC_MMS_82xx_68.elf IPhIOAccess::~IPhIOAccess()
+0001d0e8 PhIAC_MMS_82xx_68.elf CPhIOAccess_Base::~CPhIOAccess_Base()
+0001d164 PhIAC_MMS_82xx_68.elf IPhIOAccess::~IPhIOAccess()
+0001d1e0 PhIAC_MMS_82xx_68.elf IPhIOAccess::~IPhIOAccess()
+0001d25c PhIAC_MMS_82xx_68.elf CPhIOAccess_Base::~CPhIOAccess_Base()
+0001d2d8 PhIAC_MMS_82xx_68.elf IPhDiagnostics::~IPhDiagnostics()
+0001d354 PhIAC_MMS_82xx_68.elf CPhDiagnostics_Base::~CPhDiagnostics_Base()
+0001d3d0 PhIAC_MMS_82xx_68.elf IPhDiagnostics::~IPhDiagnostics()
+0001d44c PhIAC_MMS_82xx_68.elf IPhDiagnostics::~IPhDiagnostics()
+0001d4c8 PhIAC_MMS_82xx_68.elf CPhDiagnostics_Base::~CPhDiagnostics_Base()
+0001d544 PhIAC_MMS_82xx_68.elf IPhOLU::~IPhOLU()
+0001d5c0 PhIAC_MMS_82xx_68.elf CPhOLU_Base::~CPhOLU_Base()
+0001d63c PhIAC_MMS_82xx_68.elf CPhOLU_Base::~CPhOLU_Base()
+0001d6b8 PhIAC_MMS_82xx_68.elf IPhOLU1::~IPhOLU1()
+0001d734 PhIAC_MMS_82xx_68.elf CPhOLU_Base1::~CPhOLU_Base1()
+0001d7b0 PhIAC_MMS_82xx_68.elf CPhOLU_Base1::~CPhOLU_Base1()
+0001d82c PhIAC_MMS_82xx_68.elf IPhCommon::~IPhCommon()
+0001d8a8 PhIAC_MMS_82xx_68.elf IPhCommon::~IPhCommon()
+0001d924 PhIAC_MMS_82xx_68.elf IPhCommon::~IPhCommon()
+0001d9f8 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::DoConfigPrint(int)::__FUNCTION__
+0001da08 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::ShouldTerminateThread()::__FUNCTION__
+0001da20 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::StopWork()::__FUNCTION__
+0001da2c PhIAC_MMS_82xx_68.elf CPhIAC_MMS::IsThreadTerminated()::__FUNCTION__
+0001da40 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::SetThreadStatus(bool)::__FUNCTION__
+0001da50 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::DoWork(int)::__FUNCTION__
+0001da58 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::PollSendQueues()::__FUNCTION__
+0001da68 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::Configure(trHWFAddress const&)::__FUNCTION__
+0001da74 PhIAC_MMS_82xx_68.elf CompanyName
+0001da78 PhIAC_MMS_82xx_68.elf ProductName
+0001da84 PhIAC_MMS_82xx_68.elf ProductVersion
+0001da9c PhIAC_MMS_82xx_68.elf CLSID_CPhIAC_MMS
+0001ddd0 PhIAC_MMS_82xx_68.elf GetCorrespondingReqMMSPDUType(tMMSPDUType)::CorrespondingReq
+0001df4c PhIAC_MMS_82xx_68.elf IID_IPhCommonCB
+0001df5c PhIAC_MMS_82xx_68.elf IID_IPhConfigCB
+0001df6c PhIAC_MMS_82xx_68.elf IID_IPhConfigCB1
+0001df7c PhIAC_MMS_82xx_68.elf IID_IPhIOAccessCB
+0001df8c PhIAC_MMS_82xx_68.elf IID_IPhExternalConfigCB1
+0001df9c PhIAC_MMS_82xx_68.elf IID_IPhExternalConfigCB2
+0001dfac PhIAC_MMS_82xx_68.elf IID_IPhExternalConfigCB3
+0001dfbc PhIAC_MMS_82xx_68.elf IID_IPhOLUCB
+0001dfcc PhIAC_MMS_82xx_68.elf IID_IPhCommon
+0001dfdc PhIAC_MMS_82xx_68.elf IID_IPhConfig1
+0001dfec PhIAC_MMS_82xx_68.elf IID_IPhStatus1
+0001dffc PhIAC_MMS_82xx_68.elf IID_IPhClient
+0001e00c PhIAC_MMS_82xx_68.elf IID_IPhClient1
+0001e01c PhIAC_MMS_82xx_68.elf IID_IPhDiagnostics
+0001e02c PhIAC_MMS_82xx_68.elf IID_IPhIOAccess
+0001e03c PhIAC_MMS_82xx_68.elf IID_IPhSafeConfig
+0001e04c PhIAC_MMS_82xx_68.elf IID_IPhSafeConfig1
+0001e05c PhIAC_MMS_82xx_68.elf IID_IPhSafeConfig2
+0001e06c PhIAC_MMS_82xx_68.elf IID_IPhSimulation
+0001e07c PhIAC_MMS_82xx_68.elf IID_IPhOLU
+0001e08c PhIAC_MMS_82xx_68.elf IID_IPhOLU1
+0001e09c PhIAC_MMS_82xx_68.elf IID_IHeapCallback
+0001e0ac PhIAC_MMS_82xx_68.elf IID_ISystemUtilitiesCallback
+0001e0bc PhIAC_MMS_82xx_68.elf IID_ISystemUtilitiesCallback1
+0001e0cc PhIAC_MMS_82xx_68.elf IID_ISystemUtilitiesCallback2
+0001e0dc PhIAC_MMS_82xx_68.elf IID_ISystemUtilitiesCallback3
+0001e0ec PhIAC_MMS_82xx_68.elf IID_ISystemUtilitiesCallback4
+0001e0fc PhIAC_MMS_82xx_68.elf IID_IEventMgrCallback
+0001e10c PhIAC_MMS_82xx_68.elf IID_IEventMgrCallback1
+0001e11c PhIAC_MMS_82xx_68.elf IID_ISysClockCallback
+0001e12c PhIAC_MMS_82xx_68.elf IID_ISysClockCallback1
+0001e13c PhIAC_MMS_82xx_68.elf IID_ISysClockCallback2
+0001e14c PhIAC_MMS_82xx_68.elf IID_ISysClockCallback3
+0001e15c PhIAC_MMS_82xx_68.elf IID_INetwClockSynchCallback
+0001e16c PhIAC_MMS_82xx_68.elf IID_IConfigCBCallback1
+0001e17c PhIAC_MMS_82xx_68.elf IID_IConfigCBCallback2
+0001e18c PhIAC_MMS_82xx_68.elf IID_IConfigCBCallback3
+0001e19c PhIAC_MMS_82xx_68.elf IID_IExternalConfigCBCallback
+0001e1ac PhIAC_MMS_82xx_68.elf IID_IExternalConfigCBCallback2
+0001e1bc PhIAC_MMS_82xx_68.elf IID_IExternalConfigCBCallback3
+0001e1cc PhIAC_MMS_82xx_68.elf IID_IExternalConfigCBCallback4
+0001e1dc PhIAC_MMS_82xx_68.elf IID_IMessagesCBCallback
+0001e1ec PhIAC_MMS_82xx_68.elf IID_IAIPAccessCBCallback
+0001e1fc PhIAC_MMS_82xx_68.elf IID_IOLUCBCallback
+0001e20c PhIAC_MMS_82xx_68.elf IID_IOLUCBCallback1
+0001e21c PhIAC_MMS_82xx_68.elf IID_ISystemUtilitiesCBCallback1
+0001e22c PhIAC_MMS_82xx_68.elf IID_IConfigCallback1
+0001e23c PhIAC_MMS_82xx_68.elf IID_IConfigCallback2
+0001e24c PhIAC_MMS_82xx_68.elf IID_IStatusCallback1
+0001e25c PhIAC_MMS_82xx_68.elf IID_IGenClientCallback
+0001e26c PhIAC_MMS_82xx_68.elf IID_IGenClientCallback1
+0001e27c PhIAC_MMS_82xx_68.elf IID_IGenClientCallback2
+0001e28c PhIAC_MMS_82xx_68.elf IID_IIACClientCallback
+0001e29c PhIAC_MMS_82xx_68.elf IID_IDriverFactoryCallback
+0001e2ac PhIAC_MMS_82xx_68.elf IID_IDiagnosticsCallback
+0001e2bc PhIAC_MMS_82xx_68.elf IID_ISafeConfigCallback
+0001e2cc PhIAC_MMS_82xx_68.elf IID_ISafeConfigCallback1
+0001e2dc PhIAC_MMS_82xx_68.elf IID_ISafeConfigCallback2
+0001e2ec PhIAC_MMS_82xx_68.elf IID_ICRCCallback
+0001e2fc PhIAC_MMS_82xx_68.elf IID_IIOAccessCallback
+0001e30c PhIAC_MMS_82xx_68.elf IID_CriticalRegionCallback
+0001e31c PhIAC_MMS_82xx_68.elf IID_VOSExceptionCallback
+0001e32c PhIAC_MMS_82xx_68.elf IID_DrvCommonCallback
+0001e33c PhIAC_MMS_82xx_68.elf IID_ProtectedMirroredHeapCallback
+0001e34c PhIAC_MMS_82xx_68.elf IID_SharedMirroredHeapCallback
+0001e35c PhIAC_MMS_82xx_68.elf IID_TemporaryMirroredHeapCallback
+0001e36c PhIAC_MMS_82xx_68.elf IID_IVarServerCallback
+0001e37c PhIAC_MMS_82xx_68.elf IID_IVarServerCallback1
+0001e38c PhIAC_MMS_82xx_68.elf IID_IVarServerCallback2
+0001e39c PhIAC_MMS_82xx_68.elf IID_ISOCKETCallback
+0001e3ac PhIAC_MMS_82xx_68.elf IID_ISOCKETCallback1
+0001e3bc PhIAC_MMS_82xx_68.elf IID_ISOCKETCallback2
+0001e3cc PhIAC_MMS_82xx_68.elf IID_IVOSCallback2
+0001f920 V vtable for CPhIAC_MMS PhIAC_MMS_82xx_68.elf 
+0001fab0 V vtable for IPhOLU1 PhIAC_MMS_82xx_68.elf 
+0001faf0 V vtable for IPhOLU PhIAC_MMS_82xx_68.elf 
+0001fb28 V vtable for IUnknown PhIAC_MMS_82xx_68.elf 
+0001fb48 V vtable for IPhClient1 PhIAC_MMS_82xx_68.elf 
+0001fbb0 V vtable for IPhStatus1 PhIAC_MMS_82xx_68.elf 
+0001fbd8 V vtable for IPhConfig1 PhIAC_MMS_82xx_68.elf 
+0001fc20 V vtable for CPhOLU_Base1 PhIAC_MMS_82xx_68.elf 
+0001fc60 V vtable for CPhOLU_Base PhIAC_MMS_82xx_68.elf 
+0001fc98 V vtable for CPhDiagnostics_Base PhIAC_MMS_82xx_68.elf 
+0001fcc0 V vtable for CPhIOAccess_Base PhIAC_MMS_82xx_68.elf 
+0001fce8 V vtable for CPhStatus_Base1 PhIAC_MMS_82xx_68.elf 
+0001fd10 V vtable for CPhClient_Base1 PhIAC_MMS_82xx_68.elf 
+0001fd78 V vtable for CPhClient_Base PhIAC_MMS_82xx_68.elf 
+0001fdc8 V vtable for CPhConfig_Base1 PhIAC_MMS_82xx_68.elf 
+0001fe10 V vtable for CPhCommon_Base PhIAC_MMS_82xx_68.elf 
+0001fe38 V vtable for IPhClient PhIAC_MMS_82xx_68.elf 
+0001fe88 V vtable for IPhIOAccess PhIAC_MMS_82xx_68.elf 
+0001feb0 V vtable for IPhDiagnostics PhIAC_MMS_82xx_68.elf 
+0001fed8 V vtable for IPhCommon PhIAC_MMS_82xx_68.elf 
+0001fefc PhIAC_MMS_82xx_68.elf CRTFuncTabBegin
+0001fefc PhIAC_MMS_82xx_68.elf scprocs
+0001ff08 PhIAC_MMS_82xx_68.elf printf
+0001ff0c PhIAC_MMS_82xx_68.elf sprintf
+0001ff10 PhIAC_MMS_82xx_68.elf sscanf
+0001ff14 PhIAC_MMS_82xx_68.elf memcpy
+0001ff18 PhIAC_MMS_82xx_68.elf memset
+0001ff1c PhIAC_MMS_82xx_68.elf strcat
+0001ff20 PhIAC_MMS_82xx_68.elf strcmp
+0001ff24 PhIAC_MMS_82xx_68.elf strlen
+0001ff28 PhIAC_MMS_82xx_68.elf strncmp
+0001ff2c PhIAC_MMS_82xx_68.elf strncpy
+0001ff30 PhIAC_MMS_82xx_68.elf memchr
+0001ff34 PhIAC_MMS_82xx_68.elf memcmp
+0001ff38 PhIAC_MMS_82xx_68.elf memmove
+0001ff3c PhIAC_MMS_82xx_68.elf strchr
+0001ff40 PhIAC_MMS_82xx_68.elf strcoll
+0001ff44 PhIAC_MMS_82xx_68.elf strcpy
+0001ff48 PhIAC_MMS_82xx_68.elf strcspn
+0001ff4c PhIAC_MMS_82xx_68.elf strncat
+0001ff50 PhIAC_MMS_82xx_68.elf strpbrk
+0001ff54 PhIAC_MMS_82xx_68.elf strrchr
+0001ff58 PhIAC_MMS_82xx_68.elf strspn
+0001ff5c PhIAC_MMS_82xx_68.elf strstr
+0001ff60 PhIAC_MMS_82xx_68.elf strtok
+0001ff64 PhIAC_MMS_82xx_68.elf strxfrm
+0001ff68 PhIAC_MMS_82xx_68.elf strerror
+0001ff6c PhIAC_MMS_82xx_68.elf pow
+0001ff70 PhIAC_MMS_82xx_68.elf acos
+0001ff74 PhIAC_MMS_82xx_68.elf asin
+0001ff78 PhIAC_MMS_82xx_68.elf atan
+0001ff7c PhIAC_MMS_82xx_68.elf atan2
+0001ff80 PhIAC_MMS_82xx_68.elf ceil
+0001ff84 PhIAC_MMS_82xx_68.elf cos
+0001ff88 PhIAC_MMS_82xx_68.elf cosh
+0001ff8c PhIAC_MMS_82xx_68.elf exp
+0001ff90 PhIAC_MMS_82xx_68.elf fabs
+0001ff94 PhIAC_MMS_82xx_68.elf floor
+0001ff98 PhIAC_MMS_82xx_68.elf fmod
+0001ff9c PhIAC_MMS_82xx_68.elf frexp
+0001ffa0 PhIAC_MMS_82xx_68.elf ldexp
+0001ffa4 PhIAC_MMS_82xx_68.elf log
+0001ffa8 PhIAC_MMS_82xx_68.elf log10
+0001ffac PhIAC_MMS_82xx_68.elf modf
+0001ffb0 PhIAC_MMS_82xx_68.elf sin
+0001ffb4 PhIAC_MMS_82xx_68.elf sinh
+0001ffb8 PhIAC_MMS_82xx_68.elf sqrt
+0001ffbc PhIAC_MMS_82xx_68.elf tan
+0001ffc0 PhIAC_MMS_82xx_68.elf tanh
+0001ffc4 PhIAC_MMS_82xx_68.elf div_r
+0001ffc8 PhIAC_MMS_82xx_68.elf labs
+0001ffcc PhIAC_MMS_82xx_68.elf strtol
+0001ffd0 PhIAC_MMS_82xx_68.elf free
+0001ffd4 PhIAC_MMS_82xx_68.elf abort
+0001ffd8 PhIAC_MMS_82xx_68.elf abs
+0001ffdc PhIAC_MMS_82xx_68.elf atof
+0001ffe0 PhIAC_MMS_82xx_68.elf atoi
+0001ffe4 PhIAC_MMS_82xx_68.elf atol
+0001ffe8 PhIAC_MMS_82xx_68.elf bsearch
+0001ffec PhIAC_MMS_82xx_68.elf ldiv_r
+0001fff0 PhIAC_MMS_82xx_68.elf qsort
+0001fff4 PhIAC_MMS_82xx_68.elf rand
+0001fff8 PhIAC_MMS_82xx_68.elf srand
+0001fffc PhIAC_MMS_82xx_68.elf strtod
+00020000 PhIAC_MMS_82xx_68.elf strtoul
+00020004 PhIAC_MMS_82xx_68.elf malloc
+00020008 PhIAC_MMS_82xx_68.elf __assert
+0002000c PhIAC_MMS_82xx_68.elf time
+00020010 PhIAC_MMS_82xx_68.elf asctime
+00020014 PhIAC_MMS_82xx_68.elf gmtime
+00020018 PhIAC_MMS_82xx_68.elf clock
+0002001c PhIAC_MMS_82xx_68.elf ctime
+00020020 PhIAC_MMS_82xx_68.elf difftime
+00020024 PhIAC_MMS_82xx_68.elf localtime
+00020028 PhIAC_MMS_82xx_68.elf mktime
+0002002c PhIAC_MMS_82xx_68.elf strftime
+00020030 PhIAC_MMS_82xx_68.elf eventcollSem
+00020034 PhIAC_MMS_82xx_68.elf intLock
+00020038 PhIAC_MMS_82xx_68.elf intUnlock
+00020044 PhIAC_MMS_82xx_68.elf fprintf
+00020048 PhIAC_MMS_82xx_68.elf __stdout
+0002004c PhIAC_MMS_82xx_68.elf __stderr
+00020050 PhIAC_MMS_82xx_68.elf setjmp
+00020054 PhIAC_MMS_82xx_68.elf longjmp
+00020058 PhIAC_MMS_82xx_68.elf operator new[](unsigned int)
+0002005c PhIAC_MMS_82xx_68.elf operator delete[](void*)
+00020060 PhIAC_MMS_82xx_68.elf CRTFuncTabEnd
+00020060 PhIAC_MMS_82xx_68.elf ecprocs
+00020060 PhIAC_MMS_82xx_68.elf etext
+00020060 PhIAC_MMS_82xx_68.elf sgot2
+000205a0 PhIAC_MMS_82xx_68.elf egot2
+000205a0 PhIAC_MMS_82xx_68.elf sfixup
+00020c2c PhIAC_MMS_82xx_68.elf CPhIAC_MMS::m_instance
+00020c2c PhIAC_MMS_82xx_68.elf efixup
+00020c30 PhIAC_MMS_82xx_68.elf msgTag
+00020c34 PhIAC_MMS_82xx_68.elf msg
+00020c38 PhIAC_MMS_82xx_68.elf CPhIAC_MMS::StatData::m_IACExecStatDataTag
+00020c3c PhIAC_MMS_82xx_68.elf TimeOfLastCalculatedStat
+00020c44 PhIAC_MMS_82xx_68.elf CMirroredObject::c_pMirroredObjectMgrImpl
+00020c48 PhIAC_MMS_82xx_68.elf CMirroredObjectAgent::c_pHeapCallback
+00020c4c PhIAC_MMS_82xx_68.elf CMirroredObjectAgent::c_AgentTag
+00020c50 PhIAC_MMS_82xx_68.elf MemList
+00020c54 PhIAC_MMS_82xx_68.elf ListList
+00020c58 PhIAC_MMS_82xx_68.elf my_HCB
+00020c5c PhIAC_MMS_82xx_68.elf MemHandTagList
+00020c60 PhIAC_MMS_82xx_68.elf MemHandTagElem
+00020c64 PhIAC_MMS_82xx_68.elf pASNHeapCallback
+00020c68 PhIAC_MMS_82xx_68.elf ClassCode
+00020c6c PhIAC_MMS_82xx_68.elf ItemTypeCode
+00020c70 PhIAC_MMS_82xx_68.elf MaxintDiv256
+00020c74 PhIAC_MMS_82xx_68.elf MaxintDiv128
+00020c78 PhIAC_MMS_82xx_68.elf PoolsInitilized
+00020c7c PhIAC_MMS_82xx_68.elf PushPopPrimitiveItemPool
+00020c80 PhIAC_MMS_82xx_68.elf PushPopConstructedItemPool
+00020c84 PhIAC_MMS_82xx_68.elf PrimitiveItemPool
+00020c88 PhIAC_MMS_82xx_68.elf ConstructedItemPool
+00020c8c PhIAC_MMS_82xx_68.elf m_TagItem
+00020c90 PhIAC_MMS_82xx_68.elf m_pASN1TypeHeapCallback
+00020c94 PhIAC_MMS_82xx_68.elf BitStringPool
+00020c98 PhIAC_MMS_82xx_68.elf m_TagBitString
+00020c9c PhIAC_MMS_82xx_68.elf m_TagOctetString
+00020ca0 PhIAC_MMS_82xx_68.elf vInitiateReq
+00020cc0 PhIAC_MMS_82xx_68.elf vInitiateReqV2
+00020ce4 PhIAC_MMS_82xx_68.elf vInitiateRes
+00020d04 PhIAC_MMS_82xx_68.elf vInitiateResV2
+00020d28 PhIAC_MMS_82xx_68.elf vConcludeReq
+00020d2c PhIAC_MMS_82xx_68.elf vConcludeRes
+00020d30 PhIAC_MMS_82xx_68.elf ReadOctetStringResHeadASN1Size
+00020d34 PhIAC_MMS_82xx_68.elf ReadUnnamedReqHeadASN1Size
+00020d38 PhIAC_MMS_82xx_68.elf vReadUnnamedReq
+00020d44 PhIAC_MMS_82xx_68.elf vReadUnnamedOctetStringRes
+00020d50 PhIAC_MMS_82xx_68.elf Transac::m_TagTransac
+00020d54 PhIAC_MMS_82xx_68.elf MMSAssoc::m_TagAssoc
+00020d58 PhIAC_MMS_82xx_68.elf INCAInterface::m_TagINCA
+00020d5c PhIAC_MMS_82xx_68.elf INCAInterface::m_pINCA
+00020d60 PhIAC_MMS_82xx_68.elf ServicesSupported
+00020d64 PhIAC_MMS_82xx_68.elf MMSISParametersSupported
+00020d68 PhIAC_MMS_82xx_68.elf MMSDISParametersSupported
+00020d6c PhIAC_MMS_82xx_68.elf DefMaxServOutstanding
+00020d70 PhIAC_MMS_82xx_68.elf DummyMMSPDU
+00020d74 PhIAC_MMS_82xx_68.elf TempMMSStatus
+00020d77 PhIAC_MMS_82xx_68.elf MMSParseErrors
+00020d7c PhIAC_MMS_82xx_68.elf TimeOfLastCalculated
+00020d84 PhIAC_MMS_82xx_68.elf TempIStatus
+00020d88 PhIAC_MMS_82xx_68.elf TransportLayer::m_TagTransport
+00020d8c PhIAC_MMS_82xx_68.elf TPC::m_TagTPCon
+00020d90 PhIAC_MMS_82xx_68.elf TransportLayer::m_pTransport
+00020d94 PhIAC_MMS_82xx_68.elf GetNextSourceRef(unsigned short*)::NxtUnusedSourceRef
+00020d96 PhIAC_MMS_82xx_68.elf NullEndOfTSDU
+00020d98 PhIAC_MMS_82xx_68.elf NullDisConReason
+00020d9c PhIAC_MMS_82xx_68.elf NullTSDU
+00020da0 PhIAC_MMS_82xx_68.elf PermIStatus
+00020da4 PhIAC_MMS_82xx_68.elf UDPSDUPendingQueue
+00020da8 PhIAC_MMS_82xx_68.elf m_pUDPSocketCallback1
+00020dac PhIAC_MMS_82xx_68.elf m_pUDPSocketCallback2
+00020db0 PhIAC_MMS_82xx_68.elf m_pUDPHeapCallback
+00020db4 PhIAC_MMS_82xx_68.elf UDPSDUPool
+00020db8 PhIAC_MMS_82xx_68.elf UDPBufferPool
+00020dbc PhIAC_MMS_82xx_68.elf NoOfAllocatedUDPSDUs
+00020dc0 PhIAC_MMS_82xx_68.elf UDPSDUTransmitQueue
+00020dc4 PhIAC_MMS_82xx_68.elf theUDPReceiveBuffer
+00020dc8 PhIAC_MMS_82xx_68.elf InUDPSendTo
+00020dcc PhIAC_MMS_82xx_68.elf m_TagUDPSDU
+00020dd0 PhIAC_MMS_82xx_68.elf CommGroup::m_tag
+00020dd4 PhIAC_MMS_82xx_68.elf IACAction::m_tag
+00020dd8 PhIAC_MMS_82xx_68.elf CommVar::m_tag
+00020ddc PhIAC_MMS_82xx_68.elf PHVarData::m_tag
+00020de0 PhIAC_MMS_82xx_68.elf PHConnection::m_tag
+00020de4 V CComCoClass<CPhIAC_MMS, &(CLSID_CPhIAC_MMS)>::m_HeapTag PhIAC_MMS_82xx_68.elf 
+00020de8 PhIAC_MMS_82xx_68.elf PHproperties
+00020df0 PhIAC_MMS_82xx_68.elf SocketID
+00020df4 PhIAC_MMS_82xx_68.elf CommGroup::ReadCon(unsigned char*, short, short)::C$53
+00020e2c PhIAC_MMS_82xx_68.elf useEXEHEAD
+</SYMBOLS>

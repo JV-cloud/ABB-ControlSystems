@@ -1,0 +1,110 @@
+HWUnitInfo  (* RACN *)
+   HWUnitID {32BEB2B9-DDD8-4D2E-9F5F-6408603A5E61}
+   Description "200-RACN"
+   Information "ControlNet adapter for Rack I/O"
+   Icons RackAdapterType
+   Attributes AdapterUnit
+   InterfaceInfo   
+      Interface CIGInterface
+      IoSysType CIGIO
+      CLSID_CB   {3EACE835-A8D1-4581-8FA1-F85144768CF2} (* CLSID_CB   = GUID for CICN Protocol handler (PH) in Control builder CB *)
+      CLSID_CTRL {A3AE7532-6EC1-4636-A0D9-2AD4D5A0D798} (* CLSID_CTRL = GUID for CICN Protocol handler (PH) in Controller *)
+      HWConfig  Fail      
+   End InterfaceInfo
+   ConnectionInfo
+      ConnectType SeveralUnits
+      IOConnect Fail
+      IOConfig NoFail
+   End ConnectionInfo  
+   LogicalNumbers
+         0   40  100  140  200  240  300  340  400  440  500  540  600  640  700  740
+   End LogicalNumbers
+   SubUnitTypes
+      HWUnitID {3C2D5AD9-3785-4F98-BEDF-C732F609B4AC} (* RAIB16 *)
+      HWUnitID {AC64D850-5E15-4A3A-B529-60F623FF9089} (* RAIB32 *)
+      HWUnitID {A57DCB75-9DA5-46F3-9A6C-C295F303B0A6} (* RAIPA4 *)
+      HWUnitID {C712960C-8B6B-46CF-B4C8-0B0DAA8403CC} (* RAOB16 *)
+      HWUnitID {C38B9BF2-5E13-48B9-8672-4573E1497D35} (* RAOB32 *)
+      HWUnitID {87633699-879C-47F9-8C3C-FA0099F4CAF0} (* RAIA8  *)
+      HWUnitID {B0EF2037-EB4A-4E8D-B99F-0C20819CDC35} (* RAOA2  *)
+      HWUnitID {3A946C80-67C1-4A24-85C8-CB97C6254BA9} (* RAOA4  *)
+      HWUnitID {C925F845-38C7-4391-A57A-8468B4D62A24} (* RAOAH4 *)
+   End SubUnitTypes
+   Parameters
+      ParamInfo 
+         Name EPR
+         Description "Expected packet rate"
+         CompileType HWConfig
+         Datatype ENUM
+         Default 0 (* use default *)
+         ParValIndex 0
+         ParamType Numbered 1
+      End ParamInfo
+      ParamInfo
+         Name SAFESTATE
+         Description "SafeState"
+         Hidden
+         CompileType IOConfig
+         Datatype ENUMCONTROL
+         Default 1
+         ParValIndex 1
+         ParamType Numbered 100
+         SafeStateInfo
+           SafeStateType SafeStateControl
+           SafeStateRef Connection
+         End SafeStateInfo
+      End ParamInfo
+   End Parameters
+   ParValList
+      ParVal
+         ParValIndex 0
+         UnitText    "ms"
+         ENUM 
+         "Use default" 0
+         "5"           5
+         "10"         10
+         "15"         15
+         "20"         20
+         "25"         25
+         "30"         30
+         "40"         40
+         "50"         50
+         "60"         60
+      End ParVal
+      ParVal
+         ParValIndex 1
+         ENUMCONTROL
+         "Resetoutputs"  0 ResetValue
+         "Holdlaststate" 1 HoldLastValue
+         "Safevalues"    2 UseSafeValue
+      End ParVal
+   End ParValList
+   Channels
+      ChannelInfo
+         Number 0
+         ChannelName "UnitStatus"
+         Datatype Status_In
+         Routine 900
+         CopyParameters 0 0 16#50000
+      End ChannelInfo
+   End Channels
+   Configuration
+      ConfigInfo
+         ModuleKey     16#0001
+         InAreaSize    0
+         OutAreaSize   1
+         ConfWord
+            WORD       16#40 0      
+         CIGIOConnData
+            CIGIOData  16#01 16#00 16#20 16#04 16#24 16#03                            (* Class data *)
+            CIGIOData  16#02 16#00 16#1D 16#00 16#0C 16#00 16#01 16#00 16#81 16#01    (* Device key *)
+         End CIGIOConnData
+      End ConfigInfo
+      ConfigInfo
+         EmptyConfig
+         ModuleKey     0
+         InAreaSize    0
+         OutAreaSize   0
+      End ConfigInfo   End Configuration
+  HWUnitInfoCRC 16#6534
+End HWUnitInfo (* RACN *)

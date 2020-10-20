@@ -1,0 +1,68 @@
+
+
+
+(*========================================================*)
+(*                                                        *)
+(*            INPUT: 4 DInt                               *)
+(*                                                        *)
+(*========================================================*)
+
+HWUnitInfo
+  HWUnitID         16#12D51002
+  Description      "INPUT 4 DInt"
+  Information      "double word (32 bit) including the sign bi"
+  Icons            ProtocolType
+  Attributes       IoUnit 
+
+  Channels
+    ChannelInfo
+      Number            0
+      ChannelName      "Input DInt 0"
+      Datatype          Int_In
+      Routine           303
+      CopyParameters    16#0 16#0 16#30000 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number            1
+      ChannelName      "Input DInt 1"
+      Datatype          Int_In
+      Routine           303
+      CopyParameters    16#0 16#0 16#30002 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number            2
+      ChannelName      "Input DInt 2"
+      Datatype          Int_In
+      Routine           303
+      CopyParameters    16#0 16#0 16#30004 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number            3
+      ChannelName      "Input DInt 3"
+      Datatype          Int_In
+      Routine           303
+      CopyParameters    16#0 16#0 16#30006 16#0
+    End ChannelInfo
+  End Channels
+
+  Configuration
+    ConfigInfo
+      ModuleKey        16#12
+      InAreaSize       8 WORD
+      OutAreaSize      0 WORD
+      InWord
+        WORD  0    0
+        WORD  0    1
+        WORD  0    2
+        WORD  0    3
+        WORD  0    4
+        WORD  0    5
+        WORD  0    6
+        WORD  0    7
+      CIGIOConnData
+        CIGIOData        16#01 16#57
+      End CIGIOConnData
+    End ConfigInfo
+  End Configuration
+  HWUnitInfoCRC 16#5C25
+End HWUnitInfo (* INPUT: 4 DInt *)

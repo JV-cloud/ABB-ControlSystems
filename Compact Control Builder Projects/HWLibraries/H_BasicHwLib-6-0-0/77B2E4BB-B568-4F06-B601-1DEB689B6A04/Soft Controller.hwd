@@ -1,0 +1,96 @@
+HWUnitInfo  (* Soft Controller *)
+   HWUnitID 16#0F200000
+   Description "Soft Controller"
+   Information "Product type Soft Controller"
+   Icons PCSystemType
+   SubUnits 100
+   SubUnitTypes
+      HWUnitID 16#02202700 (* CPU               *)
+      HWUnitID 16#02216969 (* ISA CIIO          *) Instances 4
+      HWUnitID 16#02230001 (* PCI CIPB/DP       *) Instances 4
+      HWUnitID 16#022400FF (* PCI CIFF          *) Instances 4
+      HWUnitID 16#03200071 (* SattBus           *) Instances 4
+   End SubUnitTypes
+   Parameters
+      ParamInfo 
+         Name BACKGROUNDCOPY
+         Description "Copy unconnected channels"
+         Datatype ENUM
+         Default 0
+         ParValIndex 0
+         ParamType Numbered 1000
+      End ParamInfo 
+      ParamInfo 
+         Name LATCHEDHWSTATE
+         Description "Latched hardware state"
+         Datatype ENUM
+         Default 1
+         ParValIndex 1
+         ParamType Numbered 2000
+      End ParamInfo        
+      ParamInfo
+        Name ENABLESYSTEMALARMS
+        Description "System alarms on hardware units"
+        Datatype ENUM
+        Default 1
+        ParValIndex 1
+        ParamType Numbered 4000
+      End ParamInfo
+      ParamInfo
+        Name ENABLESIMPLEEVENTS
+        Description "Simple events on hardware units"
+        Datatype ENUM
+        Default 1
+        ParValIndex 1
+        ParamType Numbered 4001
+      End ParamInfo
+      ParamInfo
+        Name HWBACKGROUNDCYCLETIME
+        Description "HwStatus update cycle time"
+        Datatype INT
+        Default 1000
+        ParValIndex 2
+        ParamType Numbered 1100
+      End ParamInfo
+      ParamInfo
+        Name IAC_HWADDRESS
+        Description "IAC Active HW"
+        ReadOnlyVisible
+        CompileType HWConfig
+        Datatype STRING
+        Default "0.5.1"
+        ParamType Numbered 5000
+      End ParamInfo
+   End Parameters
+   ParValList
+      ParVal
+         ParValIndex 0
+         ENUM
+         "None"   0
+         "Inputs"     1
+         "Outputs"    2
+         "Inputs/Outputs" 3
+      End ParVal
+      ParVal
+         ParValIndex 1
+         ENUM
+         "Disabled"   0
+         "Enabled"    1
+      End ParVal      
+      ParVal
+         ParValIndex 2
+         UnitText "ms"
+         INT 500 30000 500 30000
+      End ParVal      
+   End ParValList
+   Channels
+      ChannelInfo
+         Number 0
+         ChannelName "AllUnitStatus"
+         Datatype Status_In
+         Routine 900
+         CopyParameters 0 0 16#50000
+      End ChannelInfo
+   End Channels
+  HWUnitInfoCRC 16#0611
+End HWUnitInfo (* Soft Controller *)

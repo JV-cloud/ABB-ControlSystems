@@ -1,0 +1,584 @@
+<HEAD>
+Index of symbols created Sun 03/06/2011 15:46:11.68 
+</HEAD>
+<SECTIONS=10>
+00010000 0001891c .text
+0001891c 00018ccc .got2
+00018ccc 00019048 .fixup
+00019048 000190a0 .bss
+000190a0 0001bd70 .data
+0001bd70 0001bd70 .sdata
+0001bd70 0002e1f0 .stab
+0002e1f0 0001891c .comment
+0001891c 0002e4f0 .sdata2
+0002e4f0 0002e4f0 .stabstr
+</SECTIONS>
+<SYMBOLS=567>
+00000000 PhCOMLI_860.elf EXE_HEAD
+00000064 PhCOMLI_860.elf CPhCOMLI::CPhCOMLI(void)
+000001e8 PhCOMLI_860.elf CPhCOMLI::~CPhCOMLI(void)
+000002f4 PhCOMLI_860.elf vosThread(int, int, int, int)
+00000318 PhCOMLI_860.elf CPhCOMLI::GetProductInfo(unsigned char *, unsigned char *, unsigned char *, unsigned long)
+000003b0 PhCOMLI_860.elf CPhCOMLI::SetCommonCallbackInterface(ICommonCallback *)
+0000073c PhCOMLI_860.elf CPhCOMLI::StartThread(trHWFAddress)
+00000864 PhCOMLI_860.elf CPhCOMLI::Deletethread(void)
+00000988 PhCOMLI_860.elf CPhCOMLI::createSemaphore(void)
+00000a7c PhCOMLI_860.elf CPhCOMLI::deleteSemaphore(void)
+00000c0c PhCOMLI_860.elf CPhCOMLI::PrepareMessage(char *, char *, char *, unsigned int)
+00000d54 PhCOMLI_860.elf CPhCOMLI::Info(char *, char *, unsigned int)
+00000e34 PhCOMLI_860.elf CPhCOMLI::Error(char *, char *, unsigned int)
+00000f14 PhCOMLI_860.elf CPhCOMLI::ComliGetTraceLevel(void)
+00000f98 PhCOMLI_860.elf CPhCOMLI::ComliLogMethodCall(int, char *)
+00001038 PhCOMLI_860.elf CPhCOMLI::operator new(unsigned int, IHeapCallback *)
+000010ec PhCOMLI_860.elf CPhCOMLI::heap_delete(void)
+00001158 PhCOMLI_860.elf CPhCOMLI::QueryInterface(_GUID const &, void **)
+00001298 PhCOMLI_860.elf CPhCOMLI::AddRef(void)
+000012b0 PhCOMLI_860.elf CPhCOMLI::Release(void)
+0000132c PhCOMLI_860.elf CPhCOMLI::CheckPartnerString(char const *)
+0000132c PhCOMLI_860.elf Letext
+000013a8 PhCOMLI_860.elf CPhCOMLI::ConnectReq(unsigned long, unsigned long *, int *)
+000015e0 PhCOMLI_860.elf CPhCOMLI::DisconnectReq(unsigned long, unsigned long, int *)
+000019c8 PhCOMLI_860.elf CPhCOMLI::ReadVarReq(unsigned long, int *)
+00001cdc PhCOMLI_860.elf CPhCOMLI::WriteVarReq(unsigned long, int *)
+00002070 PhCOMLI_860.elf CPhCOMLI::ReadRawReq(unsigned long, int *)
+00002078 PhCOMLI_860.elf CPhCOMLI::WriteRawReq(unsigned long, int *)
+00002080 PhCOMLI_860.elf CPhCOMLI::AbortRawReq(unsigned long, int *)
+00002088 PhCOMLI_860.elf CPhCOMLI::GetExtendedStatusSize(unsigned long, int *, int *)
+00002090 PhCOMLI_860.elf CPhCOMLI::GetExtendedStatus(unsigned long, int, teIEC1131Type *, tGCValue *, int *)
+00002098 PhCOMLI_860.elf CPhCOMLI::SetStatus(unsigned long, int, int *)
+000020a0 PhCOMLI_860.elf CPhCOMLI::ReadRes(unsigned long, int, int *)
+000020a8 PhCOMLI_860.elf CPhCOMLI::WriteRes(unsigned long, int, int *)
+000020b4 PhCOMLI_860.elf CPhCOMLI::TimeoutAbortVarReq(unsigned long, int *)
+0000214c PhCOMLI_860.elf CPhCOMLI::AbortVarReq(unsigned long, int *)
+0000235c PhCOMLI_860.elf Letext
+00002360 PhCOMLI_860.elf CPhCOMLI::PrepareForTermination(teHWFErrorCode *)
+000024a4 PhCOMLI_860.elf CPhCOMLI::PerformSwitchover(trHWFAddress, teHWFErrorCode *)
+000024f0 PhCOMLI_860.elf CPhCOMLI::PerformFailover(trHWFAddress, teHWFErrorCode *)
+0000253c PhCOMLI_860.elf CPhCOMLI::StartUsingDevice(trHWFAddress, teHWFErrorCode *)
+00002588 PhCOMLI_860.elf CPhCOMLI::RemoveHWConfiguration(trHWFAddress, teHWFErrorCode *)
+000026b4 PhCOMLI_860.elf CPhCOMLI::RemoveIoConnection(unsigned long, teHWFErrorCode *)
+00002700 PhCOMLI_860.elf CPhCOMLI::PhResponsibilityForRestart(trHWFAddress, teHWFErrorCode *)
+000027b8 PhCOMLI_860.elf CPhCOMLI::PhResponsibility(trHWFAddress, teHWFErrorCode *)
+00002cbc PhCOMLI_860.elf CPhCOMLI::PhResponsibilityForBackupDevice(trHWFAddress, teHWFErrorCode *)
+00002d08 PhCOMLI_860.elf CPhCOMLI::PhResponsibilityForHotInsert(trHWFAddress, teHWFErrorCode *)
+0000312c PhCOMLI_860.elf CPhCOMLI::StartUsingIoConnection(trHWFAddress, unsigned long, teHWFErrorCode *)
+00003174 PhCOMLI_860.elf Letext
+00003178 PhCOMLI_860.elf CPhCOMLI::KickWatchdog(unsigned short *, teHWFErrorCode *)
+0000327c PhCOMLI_860.elf CPhCOMLI::GetStatus(trHWFAddress, teHWFUnitKind, unsigned long *, unsigned long *, teHWFErrorCode *)
+00003288 PhCOMLI_860.elf CPhCOMLI::Free_Node(node *)
+000033f4 PhCOMLI_860.elf CPhCOMLI::Insert_Node(unsigned long, node *, int *)
+000035f4 PhCOMLI_860.elf Letext
+000035f8 PhCOMLI_860.elf CPhCOMLI::ThreadWork(void)
+00003c44 PhCOMLI_860.elf CPhCOMLI::ProcessVarData(unsigned long)
+00003ed0 PhCOMLI_860.elf CPhCOMLI::ASCIIHexToInt(unsigned char *, unsigned int, unsigned int, unsigned int *)
+00003fb0 PhCOMLI_860.elf CPhCOMLI::ComliMasterReceiveTelegram(unsigned long, int *)
+0000462c PhCOMLI_860.elf CPhCOMLI::ComliSlaveReceiveTelegram(int *)
+00004c00 PhCOMLI_860.elf CPhCOMLI::Handle_OtherSlaves_Packet(unsigned char *, unsigned int &, unsigned int)
+00004d14 PhCOMLI_860.elf CPhCOMLI::Process_SlaveIdMatches(unsigned char *, unsigned int &, unsigned int, int *)
+00004f8c PhCOMLI_860.elf CPhCOMLI::ValidateMsgType(unsigned char)
+0000500c PhCOMLI_860.elf CPhCOMLI::ComliForwardDataTo1131FB(unsigned long, int *)
+000054b0 PhCOMLI_860.elf CPhCOMLI::ComliBuildTelegram(unsigned long, int *)
+00005d60 PhCOMLI_860.elf CPhCOMLI::ComliSendTelegram(int *)
+00005e4c PhCOMLI_860.elf CPhCOMLI::UpdateStamp(int)
+00005e8c PhCOMLI_860.elf CPhCOMLI::PutDecNrInAsciiCodeBuffer(unsigned char *, int, int, int, int *)
+00005f74 PhCOMLI_860.elf CPhCOMLI::BCC(unsigned char *, unsigned int, unsigned int, bool *)
+0000604c PhCOMLI_860.elf CPhCOMLI::ProcessMessageAndSend(int *)
+000069c8 PhCOMLI_860.elf CPhCOMLI::WriteToSerial(unsigned char *, unsigned int *)
+00006aac PhCOMLI_860.elf CPhCOMLI::SlaveBuildResponseMessage(int *)
+00006cfc PhCOMLI_860.elf CPhCOMLI::ComliFlipDataBytes(unsigned char *, unsigned char *)
+00006d7c PhCOMLI_860.elf CPhCOMLI::EmptyVardataQueue(void)
+00006f50 PhCOMLI_860.elf Letext
+00006f54 PhCOMLI_860.elf ObjectFactory
+00007098 PhCOMLI_860.elf Letext
+00007098 PhCOMLI_860.elf CComliSerialDriver::CComliSerialDriver(void)
+000070e4 PhCOMLI_860.elf CComliSerialDriver::Init(ISerialDrvCallback *, ISystemUtilitiesCallback *, bool)
+000070f4 PhCOMLI_860.elf CComliSerialDriver::Write(unsigned char *, unsigned int *)
+0000713c PhCOMLI_860.elf CComliSerialDriver::Read(unsigned char *, unsigned int *)
+00007184 PhCOMLI_860.elf CComliSerialDriver::ReadBlocked(unsigned char *, unsigned int *, unsigned int)
+000071d8 PhCOMLI_860.elf CComliSerialDriver::ModifyTxBuffer(int, unsigned char *, unsigned int *)
+000072ac PhCOMLI_860.elf CComliSerialDriver::BCC(unsigned char *, unsigned int, unsigned int)
+000072d0 PhCOMLI_860.elf CComliSerialDriver::ModifyRxBuffer(int, unsigned char *, unsigned int *)
+000073ac PhCOMLI_860.elf CComliSerialDriver::operator new(unsigned int, IHeapCallback *)
+00007488 PhCOMLI_860.elf CComliSerialDriver::operator delete(void *)
+000074f4 PhCOMLI_860.elf Letext
+000074f4 PhCOMLI_860.elf CSerialDriver::CSerialDriver(void)
+00007504 PhCOMLI_860.elf CSerialDriver::IsModemIdle(bool *)
+00007540 PhCOMLI_860.elf CSerialDriver::GetStatus(int *)
+0000757c PhCOMLI_860.elf CSerialDriver::OpenChannel(void)
+000075c4 PhCOMLI_860.elf CSerialDriver::CloseChannel(void)
+00007600 PhCOMLI_860.elf CSerialDriver::AbortChannel(void)
+0000763c PhCOMLI_860.elf CSerialDriver::wd(int *)
+0000767c PhCOMLI_860.elf CSerialDriver::GetFITLevel(void)
+000076fc PhCOMLI_860.elf CSerialDriver::CheckSerialInterfacePtr(void)
+0000770c PhCOMLI_860.elf Letext
+00007710 PhCOMLI_860.elf __pure_virtual
+00007774 PhCOMLI_860.elf __builtin_delete
+000077d4 PhCOMLI_860.elf Letext
+000077d4 PhCOMLI_860.elf Letext
+000077d4 PhCOMLI_860.elf Letext
+000077d8 PhCOMLI_860.elf CPhCommon_Base::CPhCommon_Base(void)
+00007844 PhCOMLI_860.elf CPhCommon_Base::~CPhCommon_Base(void)
+000078bc PhCOMLI_860.elf CPhCommon_Base::GetProductInfo(unsigned char *, unsigned char *, unsigned char *, unsigned long)
+000078f8 PhCOMLI_860.elf CPhCommon_Base::SetCommonCallbackInterface(ICommonCallback *)
+00007928 PhCOMLI_860.elf CPhConfig_Base1::PrepareForTermination(teHWFErrorCode *)
+00007958 PhCOMLI_860.elf CPhConfig_Base1::RemoveHWConfiguration(trHWFAddress, teHWFErrorCode *)
+0000798c PhCOMLI_860.elf CPhConfig_Base1::RemoveIoConnection(unsigned long, teHWFErrorCode *)
+000079c0 PhCOMLI_860.elf CPhConfig_Base1::PhResponsibilityForRestart(trHWFAddress, teHWFErrorCode *)
+000079f4 PhCOMLI_860.elf CPhConfig_Base1::PhResponsibility(trHWFAddress, teHWFErrorCode *)
+00007a28 PhCOMLI_860.elf CPhConfig_Base1::StartUsingIoConnection(trHWFAddress, unsigned long, teHWFErrorCode *)
+00007a60 PhCOMLI_860.elf CPhConfig_Base1::PhResponsibilityForBackupDevice(trHWFAddress, teHWFErrorCode *)
+00007a94 PhCOMLI_860.elf CPhConfig_Base1::PhResponsibilityForHotInsert(trHWFAddress, teHWFErrorCode *)
+00007ac8 PhCOMLI_860.elf CPhConfig_Base1::PerformSwitchover(trHWFAddress, teHWFErrorCode *)
+00007afc PhCOMLI_860.elf CPhConfig_Base1::StartUsingDevice(trHWFAddress, teHWFErrorCode *)
+00007b30 PhCOMLI_860.elf CPhConfig_Base1::PerformFailover(trHWFAddress, teHWFErrorCode *)
+00007b64 PhCOMLI_860.elf CPhClient_Base::ConnectReq(unsigned long, unsigned long *, int *)
+00007b9c PhCOMLI_860.elf CPhClient_Base::DisconnectReq(unsigned long, unsigned long, int *)
+00007bd4 PhCOMLI_860.elf CPhClient_Base::ReadVarReq(unsigned long, int *)
+00007c08 PhCOMLI_860.elf CPhClient_Base::WriteVarReq(unsigned long, int *)
+00007c3c PhCOMLI_860.elf CPhClient_Base::ReadRawReq(unsigned long, int *)
+00007c70 PhCOMLI_860.elf CPhClient_Base::WriteRawReq(unsigned long, int *)
+00007ca4 PhCOMLI_860.elf CPhClient_Base::AbortRawReq(unsigned long, int *)
+00007cd8 PhCOMLI_860.elf CPhClient_Base::AbortVarReq(unsigned long, int *)
+00007d0c PhCOMLI_860.elf CPhClient_Base::GetExtendedStatusSize(unsigned long, int *, int *)
+00007d44 PhCOMLI_860.elf CPhClient_Base::GetExtendedStatus(unsigned long, int, teIEC1131Type *, tGCValue *, int *)
+00007d84 PhCOMLI_860.elf CPhClient_Base::SetStatus(unsigned long, int, int *)
+00007dbc PhCOMLI_860.elf CPhClient_Base::ReadRes(unsigned long, int, int *)
+00007df4 PhCOMLI_860.elf CPhClient_Base::WriteRes(unsigned long, int, int *)
+00007e2c PhCOMLI_860.elf CPhClient_Base1::ConnectReq(unsigned long, unsigned long *, int *)
+00007e64 PhCOMLI_860.elf CPhClient_Base1::DisconnectReq(unsigned long, unsigned long, int *)
+00007e9c PhCOMLI_860.elf CPhClient_Base1::ReadVarReq(unsigned long, int *)
+00007ed0 PhCOMLI_860.elf CPhClient_Base1::WriteVarReq(unsigned long, int *)
+00007f04 PhCOMLI_860.elf CPhClient_Base1::RegisterVarReq(unsigned long, int *)
+00007f38 PhCOMLI_860.elf CPhClient_Base1::ReadRawReq(unsigned long, int *)
+00007f6c PhCOMLI_860.elf CPhClient_Base1::WriteRawReq(unsigned long, int *)
+00007fa0 PhCOMLI_860.elf CPhClient_Base1::AbortRawReq(unsigned long, int *)
+00007fd4 PhCOMLI_860.elf CPhClient_Base1::AbortVarReq(unsigned long, int *)
+00008008 PhCOMLI_860.elf CPhClient_Base1::TimeoutAbortVarReq(unsigned long, int *)
+00008098 PhCOMLI_860.elf CPhClient_Base1::GetExtendedStatusSize(unsigned long, int *, int *)
+000080d0 PhCOMLI_860.elf CPhClient_Base1::GetExtendedStatus(unsigned long, int, teIEC1131Type *, tGCValue *, int *)
+00008110 PhCOMLI_860.elf CPhClient_Base1::BufferTakeForReceive(unsigned long, int *)
+00008144 PhCOMLI_860.elf CPhClient_Base1::BufferGiveForReceive(unsigned long, int, int *)
+0000817c PhCOMLI_860.elf CPhClient_Base1::BufferTakeForSend(unsigned long, unsigned int, int *)
+000081b4 PhCOMLI_860.elf CPhClient_Base1::BufferGiveForSend(unsigned long, unsigned int, int, int *)
+000081f0 PhCOMLI_860.elf CPhClient_Base1::SetStatus(unsigned long, int, int *)
+00008228 PhCOMLI_860.elf CPhClient_Base1::ReadRes(unsigned long, int, int *)
+00008260 PhCOMLI_860.elf CPhClient_Base1::WriteRes(unsigned long, int, int *)
+00008298 PhCOMLI_860.elf CPhStatus_Base1::KickWatchdog(unsigned short *, teHWFErrorCode *)
+000082cc PhCOMLI_860.elf CPhStatus_Base1::GetStatus(trHWFAddress, teHWFUnitKind, unsigned long *, unsigned long *, teHWFErrorCode *)
+00008300 G _SDA2_BASE_ PhCOMLI_860.elf 
+0000830c PhCOMLI_860.elf CPhIOAccess_Base::GetCopyRoutineReference(unsigned int, void (**)(short, void *, void *), IOAccessErrorCode *)
+00008344 PhCOMLI_860.elf CPhIOAccess_Base::ObtainDPM(eAreaType, trHWFAddress, IOAccessErrorCode *)
+0000837c PhCOMLI_860.elf CPhIOAccess_Base::ReleaseDPM(eAreaType, trHWFAddress, IOAccessErrorCode *)
+000083b4 PhCOMLI_860.elf CPhDiagnostics_Base::PhDiagnosticsTableNew(teDiagErrorCode *)
+000083e4 PhCOMLI_860.elf CPhDiagnostics_Base::PhDiagnosticsTableCleared(teDiagErrorCode *)
+00008414 PhCOMLI_860.elf CPhOLU_Base::PrepareForFirmwareDownload(trHWFAddress const *, unsigned long, eOLUStatus *)
+0000844c PhCOMLI_860.elf CPhOLU_Base::PrepareForApplicationStop(trHWFAddress const *, eOLUStatus *)
+00008480 PhCOMLI_860.elf CPhOLU_Base::ResumeOperation(trHWFAddress const *, eOLUStatus *)
+000084b4 PhCOMLI_860.elf CPhOLU_Base::PhResponsibilityForOLU(trHWFAddress const *, eOLUStatus *)
+000084e8 PhCOMLI_860.elf CPhOLU_Base::PrepareForLeavingOLU(trHWFAddress const *, eOLUStatus *)
+0000851c PhCOMLI_860.elf CPhOLU_Base::PrepareForAppAndConfigDownload(trHWFAddress const *, eOLUStatus *)
+00008554 PhCOMLI_860.elf IPhCommon::IPhCommon(void)
+000085c0 PhCOMLI_860.elf IUnknown::IUnknown(void)
+00008618 PhCOMLI_860.elf CRTFuncTabBegin
+00008618 PhCOMLI_860.elf Letext
+00008618 PhCOMLI_860.elf scprocs
+00008624 PhCOMLI_860.elf printf
+00008628 PhCOMLI_860.elf sprintf
+0000862c PhCOMLI_860.elf sscanf
+00008630 PhCOMLI_860.elf memcpy
+00008634 PhCOMLI_860.elf memset
+00008638 PhCOMLI_860.elf strcat
+0000863c PhCOMLI_860.elf strcmp
+00008640 PhCOMLI_860.elf strlen
+00008644 PhCOMLI_860.elf strncmp
+00008648 PhCOMLI_860.elf strncpy
+0000864c PhCOMLI_860.elf memchr
+00008650 PhCOMLI_860.elf memcmp
+00008654 PhCOMLI_860.elf memmove
+00008658 PhCOMLI_860.elf strchr
+0000865c PhCOMLI_860.elf strcoll
+00008660 PhCOMLI_860.elf strcpy
+00008664 PhCOMLI_860.elf strcspn
+00008668 PhCOMLI_860.elf strncat
+0000866c PhCOMLI_860.elf strpbrk
+00008670 PhCOMLI_860.elf strrchr
+00008674 PhCOMLI_860.elf strspn
+00008678 PhCOMLI_860.elf strstr
+0000867c PhCOMLI_860.elf strtok
+00008680 PhCOMLI_860.elf strxfrm
+00008684 PhCOMLI_860.elf strerror
+00008688 PhCOMLI_860.elf pow
+0000868c PhCOMLI_860.elf acos
+00008690 PhCOMLI_860.elf asin
+00008694 PhCOMLI_860.elf atan
+00008698 PhCOMLI_860.elf atan2
+0000869c PhCOMLI_860.elf ceil
+000086a0 PhCOMLI_860.elf cos
+000086a4 PhCOMLI_860.elf cosh
+000086a8 PhCOMLI_860.elf exp
+000086ac PhCOMLI_860.elf fabs
+000086b0 PhCOMLI_860.elf floor
+000086b4 PhCOMLI_860.elf fmod
+000086b8 PhCOMLI_860.elf frexp
+000086bc PhCOMLI_860.elf ldexp
+000086c0 PhCOMLI_860.elf log
+000086c4 PhCOMLI_860.elf log10
+000086c8 PhCOMLI_860.elf modf
+000086cc PhCOMLI_860.elf sin
+000086d0 PhCOMLI_860.elf sinh
+000086d4 PhCOMLI_860.elf sqrt
+000086d8 PhCOMLI_860.elf tan
+000086dc PhCOMLI_860.elf tanh
+000086e0 PhCOMLI_860.elf acosf
+000086e4 PhCOMLI_860.elf asinf
+000086e8 PhCOMLI_860.elf atanf
+000086ec PhCOMLI_860.elf atan2f
+000086f0 PhCOMLI_860.elf ceilf
+000086f4 PhCOMLI_860.elf cosf
+000086f8 PhCOMLI_860.elf coshf
+000086fc PhCOMLI_860.elf expf
+00008700 PhCOMLI_860.elf fabsf
+00008704 PhCOMLI_860.elf floorf
+00008708 PhCOMLI_860.elf fmodf
+0000870c PhCOMLI_860.elf logf
+00008710 PhCOMLI_860.elf log10f
+00008714 PhCOMLI_860.elf powf
+00008718 PhCOMLI_860.elf sinf
+0000871c PhCOMLI_860.elf sinhf
+00008720 PhCOMLI_860.elf sqrtf
+00008724 PhCOMLI_860.elf tanf
+00008728 PhCOMLI_860.elf tanhf
+0000872c PhCOMLI_860.elf div_r
+00008730 PhCOMLI_860.elf labs
+00008734 PhCOMLI_860.elf strtol
+00008738 PhCOMLI_860.elf free
+0000873c PhCOMLI_860.elf abort
+00008740 PhCOMLI_860.elf abs
+00008744 PhCOMLI_860.elf atof
+00008748 PhCOMLI_860.elf atoi
+0000874c PhCOMLI_860.elf atol
+00008750 PhCOMLI_860.elf bsearch
+00008754 PhCOMLI_860.elf ldiv_r
+00008758 PhCOMLI_860.elf qsort
+0000875c PhCOMLI_860.elf rand
+00008760 PhCOMLI_860.elf srand
+00008764 PhCOMLI_860.elf strtod
+00008768 PhCOMLI_860.elf strtoul
+0000876c PhCOMLI_860.elf malloc
+00008770 PhCOMLI_860.elf __assert
+00008774 PhCOMLI_860.elf time
+00008778 PhCOMLI_860.elf asctime
+0000877c PhCOMLI_860.elf gmtime
+00008780 PhCOMLI_860.elf clock
+00008784 PhCOMLI_860.elf ctime
+00008788 PhCOMLI_860.elf difftime
+0000878c PhCOMLI_860.elf localtime
+00008790 PhCOMLI_860.elf mktime
+00008794 PhCOMLI_860.elf strftime
+00008798 PhCOMLI_860.elf eventcollSem
+0000879c PhCOMLI_860.elf intLock
+000087a0 PhCOMLI_860.elf intUnlock
+000087a4 PhCOMLI_860.elf _fabs
+000087a8 PhCOMLI_860.elf _ddec
+000087ac PhCOMLI_860.elf _d_mul
+000087b0 PhCOMLI_860.elf __floatsidf
+000087b4 PhCOMLI_860.elf _d_sub
+000087b8 PhCOMLI_860.elf _d_add
+000087bc PhCOMLI_860.elf __fixunsdfsi
+000087c0 PhCOMLI_860.elf __extendsfdf2
+000087c4 PhCOMLI_860.elf __adddf3
+000087c8 PhCOMLI_860.elf _dinc
+000087cc PhCOMLI_860.elf __fixdfsi
+000087d0 PhCOMLI_860.elf _d_neg
+000087d4 PhCOMLI_860.elf _d_dtof
+000087d8 PhCOMLI_860.elf _f_qtof
+000087dc PhCOMLI_860.elf _dpfabs
+000087e0 PhCOMLI_860.elf _d_dtoq
+000087e4 PhCOMLI_860.elf _d_div
+000087e8 PhCOMLI_860.elf __negdf2
+000087ec PhCOMLI_860.elf __divdf3
+000087f0 PhCOMLI_860.elf __muldf3
+000087f4 PhCOMLI_860.elf _d_dtoi
+000087f8 PhCOMLI_860.elf _f_ftoq
+000087fc PhCOMLI_860.elf __truncdfsf2
+00008800 PhCOMLI_860.elf _fp_round
+00008804 PhCOMLI_860.elf _d_utod
+00008808 PhCOMLI_860.elf _d_qtod
+0000880c PhCOMLI_860.elf _d_dtou
+00008810 PhCOMLI_860.elf _d_itod
+00008814 PhCOMLI_860.elf __subdf3
+00008818 PhCOMLI_860.elf _f_ftod
+0000881c PhCOMLI_860.elf _d_feq
+00008820 PhCOMLI_860.elf __gtdf2
+00008824 PhCOMLI_860.elf _d_fne
+00008828 PhCOMLI_860.elf _d_cmp
+0000882c PhCOMLI_860.elf _d_flt
+00008830 PhCOMLI_860.elf _d_cmpe
+00008834 PhCOMLI_860.elf __nedf2
+00008838 PhCOMLI_860.elf _d_fgt
+0000883c PhCOMLI_860.elf _d_fle
+00008840 PhCOMLI_860.elf _d_fge
+00008844 PhCOMLI_860.elf _fdec
+00008848 PhCOMLI_860.elf _f_add
+0000884c PhCOMLI_860.elf __divsf3
+00008850 PhCOMLI_860.elf __fixsfsi
+00008854 PhCOMLI_860.elf __subsf3
+00008858 PhCOMLI_860.elf _finc
+0000885c PhCOMLI_860.elf _f_neg
+00008860 PhCOMLI_860.elf _f_sub
+00008864 PhCOMLI_860.elf _f_itof
+00008868 PhCOMLI_860.elf _fabsf
+0000886c PhCOMLI_860.elf _f_utof
+00008870 PhCOMLI_860.elf _fpfabs
+00008874 PhCOMLI_860.elf __floatsisf
+00008878 PhCOMLI_860.elf _f_div
+0000887c PhCOMLI_860.elf __negsf2
+00008880 PhCOMLI_860.elf __mulsf3
+00008884 PhCOMLI_860.elf _f_ftoi
+00008888 PhCOMLI_860.elf _f_mul
+0000888c PhCOMLI_860.elf __fixunssfsi
+00008890 PhCOMLI_860.elf _f_ftou
+00008894 PhCOMLI_860.elf __addsf3
+00008898 PhCOMLI_860.elf _f_feq
+0000889c PhCOMLI_860.elf _f_flt
+000088a0 PhCOMLI_860.elf _f_fle
+000088a4 PhCOMLI_860.elf __nesf2
+000088a8 PhCOMLI_860.elf __gtsf2
+000088ac PhCOMLI_860.elf _f_fge
+000088b0 PhCOMLI_860.elf _f_fgt
+000088b4 PhCOMLI_860.elf _f_fne
+000088b8 PhCOMLI_860.elf _f_cmp
+000088bc PhCOMLI_860.elf _f_cmpe
+000088c0 PhCOMLI_860.elf ldexpf
+000088c4 PhCOMLI_860.elf modff
+000088c8 PhCOMLI_860.elf frexpf
+000088cc PhCOMLI_860.elf exadd
+000088d0 PhCOMLI_860.elf exmul
+000088d4 PhCOMLI_860.elf sigmax
+000088d8 PhCOMLI_860.elf exdiv
+000088dc PhCOMLI_860.elf exsub
+000088e0 PhCOMLI_860.elf __eqdf2
+000088e4 PhCOMLI_860.elf __ltdf2
+000088e8 PhCOMLI_860.elf __lesf2
+000088ec PhCOMLI_860.elf __ledf2
+000088f0 PhCOMLI_860.elf __eqsf2
+000088f4 PhCOMLI_860.elf __ltsf2
+000088f8 PhCOMLI_860.elf __gesf2
+000088fc PhCOMLI_860.elf __gedf2
+00008900 PhCOMLI_860.elf __builtin_vec_new
+00008904 PhCOMLI_860.elf __builtin_vec_delete
+00008908 PhCOMLI_860.elf fprintf
+0000890c PhCOMLI_860.elf __stdout
+00008910 PhCOMLI_860.elf __stderr
+00008914 PhCOMLI_860.elf setjmp
+00008918 PhCOMLI_860.elf longjmp
+0000891c PhCOMLI_860.elf CRTFuncTabEnd
+0000891c PhCOMLI_860.elf ecprocs
+0000891c PhCOMLI_860.elf etext
+0000891c PhCOMLI_860.elf sgot2
+00008ccc PhCOMLI_860.elf egot2
+00008ccc PhCOMLI_860.elf sfixup
+00009048 PhCOMLI_860.elf LAST_INDEX_0F_M_COMLIMESS_BUFFER
+00009048 PhCOMLI_860.elf efixup
+0000904c PhCOMLI_860.elf BCC_INDEX
+00009050 PhCOMLI_860.elf m_ComliLLTag
+00009054 PhCOMLI_860.elf LAST_INDEX_0F_M_COMLIMESS_BUFFER
+00009058 PhCOMLI_860.elf BCC_INDEX
+0000905c PhCOMLI_860.elf m_ComliLLTag
+00009060 PhCOMLI_860.elf LAST_INDEX_0F_M_COMLIMESS_BUFFER
+00009064 PhCOMLI_860.elf BCC_INDEX
+00009068 PhCOMLI_860.elf m_ComliLLTag
+0000906c PhCOMLI_860.elf LAST_INDEX_0F_M_COMLIMESS_BUFFER
+00009070 PhCOMLI_860.elf BCC_INDEX
+00009074 PhCOMLI_860.elf m_ComliLLTag
+00009078 PhCOMLI_860.elf LAST_INDEX_0F_M_COMLIMESS_BUFFER
+0000907c PhCOMLI_860.elf BCC_INDEX
+00009080 PhCOMLI_860.elf m_ComliLLTag
+00009084 PhCOMLI_860.elf LAST_INDEX_0F_M_COMLIMESS_BUFFER
+00009088 PhCOMLI_860.elf BCC_INDEX
+0000908c PhCOMLI_860.elf m_ComliLLTag
+00009090 PhCOMLI_860.elf LAST_INDEX_0F_M_COMLIMESS_BUFFER
+00009094 PhCOMLI_860.elf BCC_INDEX
+00009098 PhCOMLI_860.elf m_ComliLLTag
+0000909c PhCOMLI_860.elf useEXEHEAD
+000090b8 PhCOMLI_860.elf CComCoClass<CPhCOMLI, &CLSID_CPhCOMLI>::m_HeapTag
+000090bc PhCOMLI_860.elf g_pHeapCallback
+00009288 PhCOMLI_860.elf CPhCOMLI::CPhClient_Base1 virtual table
+00009348 PhCOMLI_860.elf CPhCOMLI::CPhClient_Base virtual table
+000093d8 PhCOMLI_860.elf CPhCOMLI::CPhStatus_Base1 virtual table
+00009410 PhCOMLI_860.elf CPhCOMLI::CPhConfig_Base1 virtual table
+00009490 PhCOMLI_860.elf CPhCOMLI virtual table
+000094d0 PhCOMLI_860.elf IPhClient1 virtual table
+00009590 PhCOMLI_860.elf IPhClient virtual table
+00009620 PhCOMLI_860.elf IPhStatus1 virtual table
+00009658 PhCOMLI_860.elf IPhConfig1 virtual table
+000096d8 PhCOMLI_860.elf IUnknown virtual table
+00009700 PhCOMLI_860.elf CompanyName
+00009704 PhCOMLI_860.elf ProductName
+0000970c PhCOMLI_860.elf ProductVersion
+0000a4f8 PhCOMLI_860.elf FlipDataByte
+0000b408 PhCOMLI_860.elf CLSID_CPhCOMLI
+0000b424 PhCOMLI_860.elf PHproperties
+0000b42c PhCOMLI_860.elf CMirroredObject::c_pMirroredObjectMgrImpl
+0000b430 PhCOMLI_860.elf CMirroredObjectAgent::c_pHeapCallback
+0000b434 PhCOMLI_860.elf CMirroredObjectAgent::c_AgentTag
+0000b450 PhCOMLI_860.elf CComliSerialDriver::m_TagComli
+0000b4bc PhCOMLI_860.elf GUID_NULL
+0000b4d0 PhCOMLI_860.elf IID_IPhCommonCB
+0000b4e0 PhCOMLI_860.elf IID_IPhConfigCB
+0000b4f0 PhCOMLI_860.elf IID_IPhConfigCB1
+0000b500 PhCOMLI_860.elf IID_IPhIOAccessCB
+0000b510 PhCOMLI_860.elf IID_IPhExternalConfigCB1
+0000b520 PhCOMLI_860.elf IID_IPhExternalConfigCB2
+0000b530 PhCOMLI_860.elf IID_IPhExternalConfigCB3
+0000b540 PhCOMLI_860.elf IID_IPhOLUCB
+0000b550 PhCOMLI_860.elf IID_IPhCommon
+0000b560 PhCOMLI_860.elf IID_IPhConfig1
+0000b570 PhCOMLI_860.elf IID_IPhStatus1
+0000b580 PhCOMLI_860.elf IID_IPhClient
+0000b590 PhCOMLI_860.elf IID_IPhClient1
+0000b5a0 PhCOMLI_860.elf IID_IPhDiagnostics
+0000b5b0 PhCOMLI_860.elf IID_IPhIOAccess
+0000b5c0 PhCOMLI_860.elf IID_IPhSafeConfig
+0000b5d0 PhCOMLI_860.elf IID_IPhSafeConfig1
+0000b5e0 PhCOMLI_860.elf IID_IPhSimulation
+0000b5f0 PhCOMLI_860.elf IID_IPhOLU
+0000b600 PhCOMLI_860.elf IID_IHeapCallback
+0000b610 PhCOMLI_860.elf IID_ISystemUtilitiesCallback
+0000b620 PhCOMLI_860.elf IID_ISystemUtilitiesCallback1
+0000b630 PhCOMLI_860.elf IID_ISystemUtilitiesCallback2
+0000b640 PhCOMLI_860.elf IID_IEventMgrCallback
+0000b650 PhCOMLI_860.elf IID_IEventMgrCallback1
+0000b660 PhCOMLI_860.elf IID_ISysClockCallback
+0000b670 PhCOMLI_860.elf IID_ISysClockCallback1
+0000b680 PhCOMLI_860.elf IID_ISysClockCallback2
+0000b690 PhCOMLI_860.elf IID_ISysClockCallback3
+0000b6a0 PhCOMLI_860.elf IID_IVarServerCallback
+0000b6b0 PhCOMLI_860.elf IID_IVOSCallback
+0000b6c0 PhCOMLI_860.elf IID_INetwClockSynchCallback
+0000b6d0 PhCOMLI_860.elf IID_IConfigCBCallback1
+0000b6e0 PhCOMLI_860.elf IID_IConfigCBCallback2
+0000b6f0 PhCOMLI_860.elf IID_IConfigCBCallback3
+0000b700 PhCOMLI_860.elf IID_IExternalConfigCBCallback
+0000b710 PhCOMLI_860.elf IID_IExternalConfigCBCallback2
+0000b720 PhCOMLI_860.elf IID_IExternalConfigCBCallback3
+0000b730 PhCOMLI_860.elf IID_IExternalConfigCBCallback4
+0000b740 PhCOMLI_860.elf IID_IMessagesCBCallback
+0000b750 PhCOMLI_860.elf IID_IAIPAccessCBCallback
+0000b760 PhCOMLI_860.elf IID_IOLUCBCallback
+0000b770 PhCOMLI_860.elf IID_ISystemUtilitiesCBCallback1
+0000b780 PhCOMLI_860.elf IID_IConfigCallback1
+0000b790 PhCOMLI_860.elf IID_IConfigCallback2
+0000b7a0 PhCOMLI_860.elf IID_IStatusCallback1
+0000b7b0 PhCOMLI_860.elf IID_IGenClientCallback
+0000b7c0 PhCOMLI_860.elf IID_IGenClientCallback1
+0000b7d0 PhCOMLI_860.elf IID_IDriverFactoryCallback
+0000b7e0 PhCOMLI_860.elf IID_IDiagnosticsCallback
+0000b7f0 PhCOMLI_860.elf IID_ISafeConfigCallback
+0000b800 PhCOMLI_860.elf IID_ISafeConfigCallback1
+0000b810 PhCOMLI_860.elf IID_ICRCCallback
+0000b820 PhCOMLI_860.elf IID_IIOAccessCallback
+0000b830 PhCOMLI_860.elf IID_CriticalRegionCallback
+0000b840 PhCOMLI_860.elf IID_VOSExceptionCallback
+0000b850 PhCOMLI_860.elf IID_DrvCommonCallback
+0000b860 PhCOMLI_860.elf IID_ProtectedMirroredHeapCallback
+0000b870 PhCOMLI_860.elf IID_SharedMirroredHeapCallback
+0000b880 PhCOMLI_860.elf IID_TemporaryMirroredHeapCallback
+0000b890 PhCOMLI_860.elf IID_IRestrictedVOSCallback
+0000b8a0 PhCOMLI_860.elf CPhOLU_Base virtual table
+0000b8f8 PhCOMLI_860.elf CPhDiagnostics_Base virtual table
+0000b930 PhCOMLI_860.elf CPhIOAccess_Base virtual table
+0000b970 PhCOMLI_860.elf CPhStatus_Base1 virtual table
+0000b9a8 PhCOMLI_860.elf CPhClient_Base1 virtual table
+0000ba68 PhCOMLI_860.elf CPhClient_Base virtual table
+0000baf8 PhCOMLI_860.elf CPhConfig_Base1 virtual table
+0000bb78 PhCOMLI_860.elf CPhCommon_Base virtual table
+0000bbb8 PhCOMLI_860.elf GUID_NULL
+0000bbc8 PhCOMLI_860.elf MaxCompanyNameLen
+0000bbcc PhCOMLI_860.elf MaxProductNameLen
+0000bbd0 PhCOMLI_860.elf MaxProductVersionLen
+0000bbd4 PhCOMLI_860.elf cMaxNrOfHWFAdrLevels
+0000bbd8 PhCOMLI_860.elf cGCWrite
+0000bbdc PhCOMLI_860.elf cGCRead
+0000bbe0 PhCOMLI_860.elf cGCSubscription
+0000bbe4 PhCOMLI_860.elf cGCRegistration
+0000bbe8 PhCOMLI_860.elf cGCAddMemoryAreaArrayNumberPlaces
+0000bbec PhCOMLI_860.elf cPONotFound
+0000bbf0 PhCOMLI_860.elf cGCBusyDisconnecting
+0000bbf4 PhCOMLI_860.elf cGCRemovingPO
+0000bbf8 PhCOMLI_860.elf cGCParametersMissing
+0000bbfc PhCOMLI_860.elf cGCAlreadyDefined
+0000bc00 PhCOMLI_860.elf cGCTypeNotSupported
+0000bc04 PhCOMLI_860.elf cGCIndexOutOfRange
+0000bc08 PhCOMLI_860.elf cGCTypeNotDefined
+0000bc0c PhCOMLI_860.elf cGCStringMismatch
+0000bc10 PhCOMLI_860.elf cGCFacadeError
+0000bc14 PhCOMLI_860.elf cGCInvalidHandle
+0000bc18 PhCOMLI_860.elf cGCAddedMemoryAreaError
+0000bc1c PhCOMLI_860.elf cGCBSErrorDetected
+0000bc20 PhCOMLI_860.elf cAborted
+0000bc24 PhCOMLI_860.elf cSuccess
+0000bc28 PhCOMLI_860.elf cPending
+0000bc2c PhCOMLI_860.elf cGCDisconnected
+0000bc30 PhCOMLI_860.elf cGCExtendedStatus
+0000bc34 PhCOMLI_860.elf cPHHeapFull
+0000bc38 PhCOMLI_860.elf cPHTypeMismatch
+0000bc3c PhCOMLI_860.elf cPHSizeMismatch
+0000bc40 PhCOMLI_860.elf cPHErrAccessData
+0000bc44 PhCOMLI_860.elf cPHErrProtocolData
+0000bc48 PhCOMLI_860.elf cPHAccessVarNotFound
+0000bc4c PhCOMLI_860.elf cPHErrInvalidPar
+0000bc50 PhCOMLI_860.elf cPHDirAddrFormatNotSupported
+0000bc54 PhCOMLI_860.elf cPHGenericFormatNotSupported
+0000bc58 PhCOMLI_860.elf cPHNotImplemented
+0000bc5c PhCOMLI_860.elf cPHVarDataUnsupportedDirection
+0000bc60 PhCOMLI_860.elf cPHVarDataNotSupported
+0000bc64 PhCOMLI_860.elf cPHRawDataNotSupported
+0000bc68 PhCOMLI_860.elf cPHDriverError
+0000bc6c PhCOMLI_860.elf cPHHardwareError
+0000bc70 PhCOMLI_860.elf cPHTRAdisconnect
+0000bc74 PhCOMLI_860.elf cLegacyFormat
+0000bc78 PhCOMLI_860.elf cDirAddrFormat
+0000bc7c PhCOMLI_860.elf cGenericFormat
+0000bc80 PhCOMLI_860.elf eHWFDeviceSpecific1
+0000bc84 PhCOMLI_860.elf eHWFUnitBPrimary
+0000bc88 PhCOMLI_860.elf cHWFOPCMask
+0000bc8c PhCOMLI_860.elf cHWFOPCChannelOk
+0000bc90 PhCOMLI_860.elf cHWFOPCChannelError
+0000bc94 PhCOMLI_860.elf cHWFOPCChannelForced
+0000bc98 PhCOMLI_860.elf cHWFOPCDeviceError
+0000bc9c PhCOMLI_860.elf cHWFOPCChannelErrorLow
+0000bca0 PhCOMLI_860.elf cHWFOPCChannelErrorHigh
+0000bca4 PhCOMLI_860.elf cHWFOPCChannelHigh
+0000bca8 PhCOMLI_860.elf cHWFOPCChannelLow
+0000bcac PhCOMLI_860.elf cHWFChannelRedundant
+0000bcb0 PhCOMLI_860.elf cHWFUnitBPrimary
+0000bcb4 PhCOMLI_860.elf cHWFBackupUnitError
+0000bcb8 PhCOMLI_860.elf cHWFXSPValueUsed
+0000bcbc PhCOMLI_860.elf cHWFChannelSimulated
+0000bcc0 PhCOMLI_860.elf cHWFChannelForced
+0000bcc4 PhCOMLI_860.elf cHWFChannelInverted
+0000bcc8 PhCOMLI_860.elf cHWFXSPMask
+0000bccc PhCOMLI_860.elf cHWFXSPNoSetting
+0000bcd0 PhCOMLI_860.elf cHWFXSPValue
+0000bcd4 PhCOMLI_860.elf cHWFXSPClear
+0000bcd8 PhCOMLI_860.elf cHWFXSPFreeze
+0000bcdc PhCOMLI_860.elf cHWFXSPInvert
+0000bce0 PhCOMLI_860.elf cHWFXSPInitDPM
+0000bce4 PhCOMLI_860.elf HWFNO_XSP_FORCE
+0000bce5 PhCOMLI_860.elf HWFFORCE_OSP
+0000bce6 PhCOMLI_860.elf HWFFORCE_CLEAR
+0000bce7 PhCOMLI_860.elf HWFFORCE_BLOCK_IO_DPM_OUT_WRITE
+0000bce8 PhCOMLI_860.elf HWFFORCE_BLOCK_SM_DPM_OUT_WRITE
+0000bcec PhCOMLI_860.elf cHWFMaxNrOfChannels
+0000bcf0 PhCOMLI_860.elf cHWFStatusErrorsMask
+0000bcf4 PhCOMLI_860.elf cHWFRootStatusErrorMask
+0000bcf8 PhCOMLI_860.elf cHWFDoNotCopyUnitErrorMask
+0000bcfc PhCOMLI_860.elf cFWUpgradePrimary
+0000bd00 PhCOMLI_860.elf cFWUpgradeBackup
+0000bd04 PhCOMLI_860.elf cNewPhVersion
+0000bd08 PhCOMLI_860.elf cNewPMFirmware
+0000bd10 PhCOMLI_860.elf IPhCommon virtual table
+0000bd48 PhCOMLI_860.elf IUnknown virtual table
+00013d70 G _SDA_BASE_ PhCOMLI_860.elf 
+</SYMBOLS>

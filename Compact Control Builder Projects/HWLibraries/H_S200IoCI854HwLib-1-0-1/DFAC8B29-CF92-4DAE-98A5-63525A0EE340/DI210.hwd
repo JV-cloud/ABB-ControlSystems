@@ -1,0 +1,204 @@
+HWUnitInfo (* DI210 / ProfiBusDP Full Format *)
+   HWUnitID {7156F2FC-DD79-440d-98A8-E1D47D2BEF47}
+   Description "DI210"
+   Information "Digital input module, 16 channels 24 VDC, current sink"
+   Icons Ser200CompactIoType
+   Attributes IoUnit DigitalIn
+   Parameters
+      ParamInfo 
+         Name FILTER0_11
+         Description "Filter constant channel 0 - 11"
+         CompileType IOConnect
+         Datatype ENUM
+         Default 0
+         ParValIndex 0
+         ParamType CIGIOData  5  0 1  ByteParam ByteOffset 
+      End ParamInfo
+      ParamInfo 
+         Name FILTER12_15
+         Description "Filter constant channel 12 - 15"
+         CompileType IOConnect
+         Datatype ENUM
+         Default 0
+         ParValIndex 0
+         ParamType CIGIOData  5  3 1  ByteParam ByteOffset 
+      End ParamInfo
+      ParamInfo 
+         Name FASTCOUNTER
+         Description "Fast Counter"
+         CompileType IOConnect
+         Datatype BOOL
+         Default FALSE
+         ParamType CIGIOData  4  5 1  ByteParam ByteOffset 
+      End ParamInfo
+   End Parameters
+   ParValList
+      ParVal
+         ParValIndex 0
+         UnitText    "ms"
+         ENUM
+         "0.25"  0
+         "0.5"   1
+         "1"     2
+         "2"     3
+         "4"     4
+         "8"     5
+         "16"    6
+         "32"    7 
+      End ParVal
+   End ParValList
+Channels
+      ChannelInfo
+         Number 0 
+         ChannelName "Input 0"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30000 16#1
+      End ChannelInfo
+      ChannelInfo
+         Number 1
+         ChannelName "Input 1"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30000 16#2
+      End ChannelInfo
+      ChannelInfo
+         Number 2
+         ChannelName "Input 2"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30000 16#4
+      End ChannelInfo
+      ChannelInfo
+         Number 3
+         ChannelName "Input 3"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30000 16#8
+      End ChannelInfo
+      ChannelInfo
+         Number 4
+         ChannelName "Input 4"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30000 16#10
+      End ChannelInfo
+      ChannelInfo
+         Number 5
+         ChannelName "Input 5"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30000 16#20
+      End ChannelInfo
+      ChannelInfo
+         Number 6
+         ChannelName "Input 6"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30000 16#40
+      End ChannelInfo
+      ChannelInfo
+         Number 7
+         ChannelName "Input 7"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30000 16#80
+      End ChannelInfo
+      ChannelInfo
+         Number 8
+         ChannelName "Input 8"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30000 16#100
+      End ChannelInfo
+      ChannelInfo
+         Number 9
+         ChannelName "Input 9"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30000 16#200
+      End ChannelInfo
+      ChannelInfo
+         Number 10
+         ChannelName "Input 10"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30000 16#400
+      End ChannelInfo
+      ChannelInfo
+         Number 11
+         ChannelName "Input 11"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30000 16#800
+      End ChannelInfo
+      ChannelInfo
+         Number 12
+         ChannelName "Input 12"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30000 16#1000
+      End ChannelInfo
+      ChannelInfo
+         Number 13
+         ChannelName "Input 13"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30000 16#2000
+      End ChannelInfo
+      ChannelInfo
+         Number 14
+         ChannelName "Input 14"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30000 16#4000
+      End ChannelInfo
+      ChannelInfo
+         Number 15
+         ChannelName "Input 15"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30000 16#8000
+      End ChannelInfo
+      ChannelInfo
+         Number 16
+         ChannelName "Counter"
+         Datatype Int_In
+         Routine 300
+         CopyParameters 0 0 16#30001 16#0
+      End ChannelInfo 
+      ChannelInfo
+         Number 17
+         ChannelName "All inputs"
+         Datatype Dword_In
+         Routine 500
+         CopyParameters 0 0 16#30000 16#0
+      End ChannelInfo
+      ChannelInfo
+         Number 18
+         ChannelName "UnitStatus"
+         Datatype Status_In
+         Routine 900
+         CopyParameters 0 0 16#50000
+      End ChannelInfo
+   End Channels
+   IoUnitStatus
+      StatusType IoError
+      StatusData 16#10000 16#100100 16#0 16#0
+   End IoUnitStatus
+   Configuration
+      ConfigInfo
+         ModuleKey   16#0210
+         InAreaSize  2
+         OutAreaSize 0
+         InWord 
+            WORD 0       0
+            WORD 0       1
+         CIGIOConnData
+            CIGIOData     16#01 16#51 16#00
+            CIGIOData     16#05 16#02 16#10 16#10 16#00 16#00 
+         End CIGIOConnData
+      End ConfigInfo
+   End Configuration
+  HWUnitInfoCRC 16#77DD
+End HWUnitInfo (* DI210 / ProfiBusDP Full Format *)

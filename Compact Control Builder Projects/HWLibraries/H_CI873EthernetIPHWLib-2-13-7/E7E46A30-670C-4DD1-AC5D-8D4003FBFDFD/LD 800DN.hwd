@@ -1,0 +1,1003 @@
+(****************************************************************************)
+(* FILE            LD800DN.hwd                                              *)
+(*                                                                          *)
+(* DESCRIPTION     Hardware definition file for LD800DN                     *)
+(*                                                                          *)
+(* AUTHOR          Archana Sadasivan                                        *)
+(*                                                                          *)
+(* All rights reserved. Reproduction, modification, use or disclosure       *)
+(* to third parties without express authority, is forbidden.                *)
+(* Copyright ABB Inc. 2008.                                                 *)
+(*                                                                          *)
+(* Date : 03-03-2009                            Initial Version             *)                                                         
+(*                                                                          *)
+(****************************************************************************)
+
+HWUnitInfo
+  HWUnitID         {62f75134-f156-4d8b-b0d8-6c1df8c6cd69}
+  Description      "LD 800DN"
+  Information      "Communication Adapter, Vendor Code 1083, Product Code 12, Product Type 731, Revision 1.2"
+  Icons            ETHERNETIP_LINKINGDEVICEType
+
+  InterfaceInfo
+     Interface    CIGInterface
+     CLSID_CB    {4CDF91C2-C5C4-4153-8502-15783AA2384B} (*  CLSID_CB  = GUID for CI873 PH in Control builder CB *)
+     CLSID_CTRL  {2DA9F31E-56AB-4ffa-A07B-CC488F4F88BC}  (* CLSID_CTRL = GUID for CI873 PH in Controler *)
+    HWConfig   Fail
+  End InterfaceInfo
+
+  AutoAttachInfo
+   AutoAttach {d3bffb51-ab4d-4d5a-a855-f633c5751a85} Positions 1..63
+  End AutoAttachInfo 
+
+  DiscreteNumbers  
+  1..64
+  End DiscreteNumbers
+
+  SubUnitTypes
+      HWUnitID {E9B3898E-6B27-4f5e-A457-3EC2BECCDC39} Positions 64 Instances 1 (*LD800 DN Diagnostics*)      
+  End SubUnitTypes 
+
+ Parameters
+
+ (* Hidden Parameters - Node Type *)
+   ParamInfo 
+     Name            NODE_TYPE
+     Description     "Node Type"
+     Hidden
+     CompileType     HWConfig
+     Datatype        ENUM
+     Default         4
+     ParValIndex     1
+     ParamType       Numbered 1
+   End ParamInfo
+
+ (* Hidden Parameters - Product Identity Info *)
+   ParamInfo 
+     Name            VENDORID
+     Description     "Vendor ID"
+     ReadOnlyVisible
+     CompileType     HWConfig
+     Datatype        INT
+     Default         1083
+     ParValIndex     0
+     ParamType       Numbered 2
+   End ParamInfo
+   ParamInfo 
+     Name            PRODTYPE
+     Description     "Product Type"
+     ReadOnlyVisible
+     CompileType     HWConfig
+     Datatype        INT
+     Default         12
+     ParValIndex     0
+     ParamType       Numbered 3
+   End ParamInfo
+   ParamInfo 
+     Name            PRODCODE
+     Description     "Product Code"
+     ReadOnlyVisible
+     CompileType     HWConfig
+     Datatype        INT
+     Default         731
+     ParValIndex     0
+     ParamType       Numbered 4
+   End ParamInfo
+   ParamInfo 
+     Name            MAJORREV
+     Description     "Major Revision"
+     ReadOnlyVisible
+     CompileType     HWConfig
+     Datatype        INT
+     Default         1
+     ParValIndex     0
+     ParamType       Numbered 5
+   End ParamInfo
+   ParamInfo 
+     Name            MINREV
+     Description     "Minor Revision"
+     ReadOnlyVisible
+     CompileType     HWConfig
+     Datatype        INT
+     Default         4
+     ParValIndex     0
+     ParamType       Numbered 6
+   End ParamInfo
+
+
+   (* Identity check parameters *)
+    ParamInfo
+      Name            EKEYVENDORID
+      Description     "Electronic Key VendorID"      
+      CompileType     HWConfig
+      Datatype        ENUM
+      Default         1
+      ParValIndex     25
+      ParamType        Numbered 7
+    End ParamInfo
+    ParamInfo
+      Name            EKEYPRODTYPE
+      Description     "Electronic Key Product Type"      
+      CompileType     HWConfig
+      Datatype        ENUM
+      Default         1
+      ParValIndex     25
+      ParamType        Numbered 8
+    End ParamInfo
+    ParamInfo
+      Name            EKEYPRODCODE
+      Description     "Electronic Key Product Code"      
+      CompileType     HWConfig
+      Datatype        ENUM
+      Default         1
+      ParValIndex     25
+      ParamType        Numbered 9
+    End ParamInfo
+    ParamInfo
+      Name            EKEYMAJREV
+      Description     "Electronic Key Major Revision"     
+      CompileType     HWConfig
+      Datatype        ENUM
+      Default         2
+      ParValIndex     26
+      ParamType        Numbered 10
+    End ParamInfo
+
+   (* Hidden Parameters - Parameter Class Descriptor from [ParamaClass] section of EDS *)
+   ParamInfo 
+     Name PRMCLSDSCRPTR
+     Description "Parameter Class Descriptor"
+     Hidden
+     CompileType HWConfig
+     Datatype INT
+     Default 16#0000
+     ParValIndex 19
+     ParamType Numbered 11
+  End ParamInfo
+
+  (* Hidden Parameters - Parameters from [Port] section of EDS *)
+  ParamInfo 
+     Name NOOFPORTS
+     Description "Number of Port Objects"
+     Hidden
+     CompileType HWConfig
+     Datatype INT
+     Default 1
+     ParValIndex 0
+     ParamType Numbered 12
+  End ParamInfo
+  ParamInfo 
+     Name DEVICENET_PORTTYPE
+     Description "Port Type"
+     Hidden
+     CompileType HWConfig
+     Datatype ENUM
+     Default 1
+     ParValIndex 2
+     ParamType Numbered 50
+  End ParamInfo
+  ParamInfo 
+     Name DEVICENET_PORTNUM
+     Description "Port Number"
+     Hidden
+     CompileType HWConfig
+     Datatype INT
+     Default 3
+     ParValIndex 0
+     ParamType Numbered 51
+  End ParamInfo
+
+  (*Hard coded parameters*)
+  (* IP Address *)
+   ParamInfo 
+     Name IPADDRESS
+     Description "IP Address"
+     CompileType HWConfig
+     Datatype STRING
+     Default ""
+     ParamType Numbered 100
+   End ParamInfo
+
+ (* EtherNet speed and Duplex *)
+   ParamInfo 
+     Name SPEED_DUPLEX
+     Description "EtherNet Speed and Duplex"
+     CompileType HWConfig
+     Datatype ENUM
+     Default 4
+     ParValIndex 3
+     ParamType Numbered 101
+   End ParamInfo
+
+   (* MAC Id *)
+   ParamInfo 
+     Name MAC_ID
+     Description "MAC Id"
+     CompileType HWConfig
+     Datatype INT
+     Default 0
+     ParValIndex 4
+     ParamType Numbered 102
+   End ParamInfo
+
+   (* Baud Rate *)
+   ParamInfo 
+     Name BAUDRATE
+     Description "Baud Rate"
+     CompileType HWConfig
+     Datatype ENUM
+     Default 0
+     ParValIndex 5
+     ParamType Numbered 103
+   End ParamInfo
+
+  (* Inter scan delay *)
+  ParamInfo 
+   Name INR_SCN_DELAY
+   Description "Inter Scan Delay"
+   CompileType HWConfig
+   Datatype INT
+   Default 25
+   ParValIndex 7
+   ParamType Numbered 104
+  End ParamInfo
+
+  (* Expected packet rate *)
+  ParamInfo 
+   Name EPR
+   Description "Expected Packet Rate"
+   CompileType HWConfig
+   Datatype INT
+   Default 75
+   ParValIndex 8
+   ParamType Numbered 105
+  End ParamInfo
+
+  (* poll ratio *)
+   ParamInfo 
+     Name POLL_RATIO
+     Description "Foreground to Background Poll Ratio"
+     CompileType HWConfig
+     Datatype INT
+     Default 3
+     ParValIndex 9
+     ParamType Numbered 106
+  End ParamInfo
+
+    (* Number of connection objects *)
+   ParamInfo 
+     Name NR_OF_CNCTN_OBJECTS
+     Description "Nr Of Connection Objects"
+     Hidden
+     CompileType HWConfig
+     Datatype INT
+     Default 2
+     ParValIndex 0
+     ParamType Numbered 107
+   End ParamInfo
+
+   (* ADR *)
+   ParamInfo 
+     Name ADR
+     Description "ADR"
+     CompileType HWConfig
+     Datatype ENUM
+     Default 1
+     ParValIndex 10
+     ParamType Numbered 108
+   End ParamInfo
+
+   (* Connection Manager section parameters - I/O Connection *)
+   ParamInfo 
+     Name I_O_CONNECTION_ENABLE
+     Description "I/O Connection Enable"
+     Hidden
+     CompileType HWConfig
+     Datatype ENUM
+     Default 1
+     ParValIndex 10
+     ParamType Numbered 200
+   End ParamInfo
+   ParamInfo 
+     Name I_O_CONNECTION_TRANS
+     Description "I/O Connection - Transport"
+     Hidden
+     CompileType HWConfig
+     Datatype INT
+     Default 2
+     ParValIndex 0
+     ParamType Numbered 201
+   End ParamInfo
+   ParamInfo 
+     Name I_O_CONNECTION_TRIGGER
+     Description "I/O Connection - Trigger"
+     ReadOnlyVisible
+     CompileType HWConfig
+     Datatype ENUM
+     Default 0
+     ParValIndex 18
+     ParamType Numbered 202
+   End ParamInfo
+   ParamInfo 
+     Name I_O_CONN_PARAMS
+     Description "I/O Connection - Connection Parameters"
+     Hidden
+     CompileType HWConfig
+     Datatype INT
+     Default 16#44244405
+     ParValIndex 11
+     ParamType Numbered 203
+   End ParamInfo
+   ParamInfo 
+     Name I_O_CONN_TYPE_O2T
+     Description "I/O Connection - O2T Connection Type"
+     Hidden
+     CompileType HWConfig
+     Datatype ENUM
+     Default 1
+     ParValIndex     27
+     ParamType Numbered 204
+   End ParamInfo
+   ParamInfo 
+     Name I_O_CONN_TYPE_T2O
+     Description "I/O Connection - T2OConnection Type"
+     Hidden
+     CompileType HWConfig
+     Datatype ENUM
+     Default 1
+     ParValIndex     27
+     ParamType Numbered 205
+   End ParamInfo
+   ParamInfo 
+     Name I_O_CONNECTION_O2TRPI
+     Description "I/O Connection - O to T RPI"
+     CompileType HWConfig
+     Datatype INT
+     Default 10
+     ParValIndex 12
+     ParamType Numbered 206
+   End ParamInfo
+   ParamInfo 
+     Name I_O_CONNECTION_O2TSIZE
+     Description "I/O Connection - O to T Size"
+     ReadOnlyVisible
+     CompileType HWConfig
+     Datatype INT
+     Default 496
+     ParValIndex 14
+     ParamType Numbered 207
+   End ParamInfo
+   ParamInfo 
+     Name I_O_CONNECTION_T2ORPI
+     Description "I/O Connection - T to O RPI"
+     CompileType HWConfig
+     Datatype INT
+     Default 10
+     ParValIndex 12
+     ParamType Numbered 208
+   End ParamInfo
+   ParamInfo 
+     Name I_O_CONNECTION_T2OSIZE
+     Description "I/O Connection - T to O Size"
+     ReadOnlyVisible
+     CompileType HWConfig
+     Datatype INT
+     Default 500
+     ParValIndex 14
+     ParamType Numbered 209
+   End ParamInfo
+   ParamInfo 
+     Name I_O_CONNECTION_TIMEOUT_MULTIPLIER
+     Description "I/O Connection - Timeout multiplier"
+     Hidden
+     CompileType HWConfig
+     Datatype INT
+     Default 2
+     ParValIndex 15
+     ParamType Numbered 210
+  End ParamInfo
+  ParamInfo 
+     Name I_O_CONNECTION_PATH_SIZE
+     Description "I/O Connection - Connection Path Size"
+     Hidden
+     CompileType HWConfig
+     Datatype INT
+     Default 8
+     ParValIndex 0
+     ParamType Numbered 211
+   End ParamInfo
+   ParamInfo
+      Name            IOCONNECTION_O2TCONNPOINT
+      Description     "I/O Connection - O2T Connection Point"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         16#96
+      ParValIndex     15
+      ParamType        Numbered 212
+    End ParamInfo
+    ParamInfo
+      Name            IOCONNECTION_T2OCONNPOINT
+      Description     "I/O Connection - T2O Connection Point"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         16#64
+      ParValIndex     15
+      ParamType        Numbered 213
+    End ParamInfo
+   ParamInfo 
+     Name I_O_CONNECTION_PATH
+     Description "I/O Connection - Connection Path"
+     Hidden
+     CompileType HWConfig
+     Datatype STRING
+     Default "20 04 24 01 2C 96 2C 64"
+     ParamType Numbered 214
+   End ParamInfo   
+
+  (* Connection Manager section parameters - Status Connection - all hidden *)
+   ParamInfo 
+     Name STATUS_CONNECTION_ENABLE
+     Description "Status Connection Enable"
+     Hidden
+     CompileType HWConfig
+     Datatype ENUM
+     Default 1
+     ParValIndex 10
+     ParamType Numbered 215
+   End ParamInfo
+   ParamInfo 
+     Name STATUS_CONNECTION_TRANS
+     Description "Status Connection - Transport"
+     Hidden
+     CompileType HWConfig
+     Datatype INT
+     Default 2
+     ParValIndex 0
+     ParamType Numbered 216
+   End ParamInfo
+   ParamInfo 
+     Name STATUS_CONNECTION_TRIGGER
+     Description "Status Connection - Trigger"
+     Hidden
+     CompileType HWConfig
+     Datatype ENUM
+     Default 0
+     ParValIndex 18
+     ParamType Numbered 217
+   End ParamInfo
+   ParamInfo 
+     Name STATUS_CONN_PARAMS
+     Description "Status Connection - Connection Parameters"
+     Hidden
+     CompileType HWConfig
+     Datatype INT
+     Default 16#21240305
+     ParValIndex 11
+     ParamType Numbered 218
+   End ParamInfo
+   ParamInfo 
+     Name I_O_CONN_TYPE_O2T_STATUS
+     Description "Status Connection - O2T Connection Type"
+     Hidden
+     CompileType HWConfig
+     Datatype ENUM
+     Default 1
+     ParValIndex     27
+     ParamType Numbered 219
+   End ParamInfo
+   ParamInfo 
+     Name I_O_CONN_TYPE_T2O_STATUS
+     Description "Status Connection - T2O Connection Type"
+     Hidden
+     CompileType HWConfig
+     Datatype ENUM
+     Default 1
+     ParValIndex     27
+     ParamType Numbered 220
+   End ParamInfo
+   ParamInfo 
+     Name STATUS_CONNECTION_O2TRPI
+     Description "Status Connection - O to T RPI"
+     Hidden
+     CompileType HWConfig
+     Datatype INT
+     Default 500
+     ParValIndex 12
+     ParamType Numbered 221
+   End ParamInfo
+   ParamInfo 
+     Name STATUS_CONNECTION_O2TSIZE
+     Description "Status Connection - O to T Size"
+     Hidden     
+     CompileType HWConfig
+     Datatype INT
+     Default 0
+     ParValIndex 14
+     ParamType Numbered 222
+   End ParamInfo
+   ParamInfo 
+     Name STATUS_CONNECTION_T2ORPI
+     Description "Status Connection - T to O RPI"
+     Hidden
+     CompileType HWConfig
+     Datatype INT
+     Default 500
+     ParValIndex 12
+     ParamType Numbered 223
+   End ParamInfo
+   ParamInfo 
+     Name STATUS_CONNECTION_T2OSIZE
+     Description "Status Connection - T to O Size"
+     Hidden
+     CompileType HWConfig
+     Datatype INT
+     Default 128
+     ParValIndex 14
+     ParamType Numbered 224
+   End ParamInfo
+   ParamInfo 
+     Name STATUS_CONNECTION_TIMEOUT_MULTIPLIER
+     Description "Status Connection - Timeout multiplier"
+     Hidden
+     CompileType HWConfig
+     Datatype INT
+     Default 2
+     ParValIndex 15
+     ParamType Numbered 225
+   End ParamInfo
+   ParamInfo 
+     Name STATUS_CONNECTION_PATH_SIZE
+     Description "Status Connection - Connection Path Size"
+     Hidden
+     CompileType HWConfig
+     Datatype INT
+     Default 8
+     ParValIndex 0
+     ParamType Numbered 226
+   End ParamInfo
+   ParamInfo
+      Name            STATUSCONNECTION_O2TCONNPOINT
+      Description     "Status Connection - O2T Connection Point"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         16#C6
+      ParValIndex     15
+      ParamType        Numbered 227
+    End ParamInfo
+    ParamInfo
+      Name            STATUSCONNECTION_T2OCONNPOINT
+      Description     "Status Connection - T2O Connection Point"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         16#65
+      ParValIndex     15
+      ParamType        Numbered 228
+    End ParamInfo
+   ParamInfo 
+     Name STATUS_CONNECTION_PATH
+     Description "Status Connection - Connection Path"
+     Hidden
+     CompileType HWConfig
+     Datatype STRING
+     Default "20 04 24 01 2C C6 2C 65"
+     ParamType Numbered 229
+   End ParamInfo
+
+
+   (* Parameters taken from the params section *)
+   ParamInfo
+     Name            NUMBER_OF_PARAM_OBJECTS
+     Description     "Number of parameters"
+     Hidden
+     CompileType     HWConfig
+     Datatype        INT
+     Default         0
+     ParValIndex     19
+     ParamType        Numbered 3000
+   End ParamInfo  
+   ParamInfo 
+     Name RUN_IDLE_MODE_PATH_SIZE
+     Description "Run/Idle Mode parameter path size"
+     Hidden
+     CompileType HWConfig
+     Datatype INT
+     Default 6
+     ParValIndex 19
+     ParamType Numbered 3001
+   End ParamInfo
+   ParamInfo 
+     Name RUN_IDLE_MODE_PATH
+     Description "Run/Idle Mode parameter path"
+     Hidden
+     CompileType HWConfig
+     Datatype STRING
+     Default "20 01 24 01 30 67"
+     ParamType Numbered 3002
+   End ParamInfo   
+   ParamInfo 
+     Name RUN_IDLE_MODE_DATASIZE
+     Description "Run/Idle Mode Data Size"
+     Hidden
+     CompileType HWConfig
+     Datatype INT
+     Default 1
+     ParValIndex 19
+     ParamType Numbered 3003
+   End ParamInfo
+   ParamInfo 
+     Name RUN_IDLE_MODE_DATATYPE
+     Description "Run/Idle Mode Data Type"
+     Hidden
+     CompileType HWConfig
+     Datatype ENUM
+     Default 1
+     ParValIndex 24
+     ParamType Numbered 3004
+   End ParamInfo   
+   ParamInfo 
+     Name RUN_IDLE_MODE_DATAVAL
+     Description "Run/Idle Mode"
+     Hidden
+     CompileType HWConfig
+     Datatype INT
+     Default 0
+     ParValIndex 23
+     ParamType Numbered 3005
+   End ParamInfo
+
+   ParamInfo 
+     Name INPUT_SAFE_STATE_PATH_SIZE
+     Description "Input Safe State parameter path size"
+     Hidden
+     CompileType HWConfig
+     Datatype INT
+     Default 6
+     ParValIndex 19     
+     ParamType Numbered 3006
+   End ParamInfo
+   ParamInfo 
+     Name INPUT_SAFE_STATE_PATH
+     Description "Input Safe State path"
+     Hidden
+     CompileType HWConfig
+     Datatype STRING
+     Default "20 03 24 01 30 68"
+     ParamType Numbered 3007
+   End ParamInfo   
+   ParamInfo 
+     Name INPUT_SAFE_STATE_DATASIZE
+     Description "Input Safe State parameter Data Size"
+     Hidden
+     CompileType HWConfig
+     Datatype INT
+     Default 1
+     ParValIndex 19     
+     ParamType Numbered 3008
+   End ParamInfo
+   ParamInfo 
+     Name INPUT_SAFE_STATE_DATATYPE
+     Description "Input Safe State Data Type"
+     Hidden
+     CompileType HWConfig
+     Datatype ENUM
+     Default 1
+     ParValIndex 24
+     ParamType Numbered 3009
+   End ParamInfo    
+   ParamInfo 
+     Name INPUT_SAFE_STATE_DATAVAL
+     Description "Input Safe State"
+     Hidden
+     CompileType HWConfig
+     Datatype INT
+     Default 0
+     ParValIndex 23
+     ParamType Numbered 3010
+   End ParamInfo
+
+   ParamInfo 
+     Name ETHERNET_IP_I_O_PATH_SIZE
+     Description "EtherNet/IP I/O Size parameter path size"
+     Hidden
+     CompileType HWConfig
+     Datatype INT
+     Default 6
+     ParValIndex 19     
+     ParamType Numbered 3011
+   End ParamInfo
+   ParamInfo 
+     Name ETHERNET_IP_I_O_PATH
+     Description "EtherNet/IP I/O Size parameter path"
+     Hidden
+     CompileType HWConfig
+     Datatype STRING
+     Default "20 8D 24 01 30 02"
+     ParamType Numbered 3012
+   End ParamInfo   
+   ParamInfo 
+     Name ETHERNET_IP_I_O_SIZE_DATASIZE
+     Description "EtherNet/IP I/O Size parameter Data Size"
+     Hidden
+     CompileType HWConfig
+     Datatype INT
+     Default 2
+     ParValIndex 19     
+     ParamType Numbered 3013
+   End ParamInfo
+   ParamInfo 
+     Name ETHERNET_IP_I_O_SIZE_DATATYPE
+     Description "EtherNet/IP I/O Size parameter Data Type"
+     Hidden
+     CompileType HWConfig
+     Datatype ENUM
+     Default 1
+     ParValIndex 24
+     ParamType Numbered 3014
+   End ParamInfo    
+   ParamInfo 
+     Name ETHERNET_IP_I_O_DATAVAL
+     Description "EtherNet/IP I/O Size"
+     Hidden
+     CompileType HWConfig
+     Datatype INT
+     Default 500
+     ParValIndex 22
+     ParamType Numbered 3015
+   End ParamInfo
+ End Parameters
+
+
+ ParValList
+
+     ParVal
+        ParValIndex 0
+        INT 1 65535 1 65535
+     End ParVal
+
+     ParVal
+        ParValIndex 1
+        ENUM
+          "Node_CI873"                      1
+          "Node_CI_Diagnostics"             2
+          "Node_EIPDevice"                  3
+          "Node_EIPMAdapter"                4
+          "Node_LD800DN"                    5
+          "Node_DNetDevice"                 6
+          "Node_DNetMAdapter"               7
+          "Node_EIPIoModule"                8
+          "Node_DNetIoModule"               9
+          "Node_LD_Diagnostics"             10
+     End ParVal
+
+     ParVal
+        ParValIndex 2
+        ENUM
+          "Ethernet_IP"                     1
+          "DeviceNet"                       2
+          "Vendor_Specific"                 3
+     End ParVal
+
+     ParVal
+        ParValIndex 3
+        UnitText    ""
+        ENUM
+         "100 Mbps, Full Duplex"             0
+         "100 Mbps, Half Duplex"             1
+         "10  Mbps, Full Duplex"             2
+         "10  Mbps, Half Duplex"             3
+         "AutoNegotiation"                   4
+     End ParVal
+
+     ParVal
+        ParValIndex 4
+        UnitText    ""
+        INT 0 63 0 63
+     End ParVal
+
+     ParVal
+        ParValIndex 5
+        UnitText "kBaud"
+        ENUM
+          "125"                             0
+          "250"                             1
+          "500"                             2
+     End ParVal
+
+     ParVal
+        ParValIndex 6
+        INT 0 496 0 496
+     End ParVal
+
+     ParVal
+        ParValIndex 7
+        UnitText    "ms"
+        INT 2 9000 2 9000
+     End ParVal
+
+     ParVal
+        ParValIndex 8
+        UnitText    "ms"
+        INT 10 32000 10 32000
+     End ParVal
+
+     ParVal
+        ParValIndex 9
+        UnitText    ""
+        INT 1 32000 1 32000
+     End ParVal
+
+     ParVal
+        ParValIndex 10
+        ENUM
+         "Disabled"                         0
+         "Enabled"                          1
+     End ParVal
+
+     ParVal
+        ParValIndex 11
+        INT 1 2147483647 1 2147483647
+     End ParVal
+
+     ParVal
+        ParValIndex 12
+        UnitText    "ms"
+        INT 10 1000 10 1000
+     End ParVal
+
+     ParVal
+        ParValIndex 14
+        UnitText    ""
+        INT 0 500 0 500
+     End ParVal
+
+     ParVal
+        ParValIndex 15
+        UnitText    ""
+        INT 0 255 0 255
+     End ParVal
+
+
+     ParVal
+        ParValIndex 18
+        ENUM
+         "Cyclic"                          0        
+     End ParVal
+
+     ParVal
+        ParValIndex 19
+        INT 0 65535 0 65535
+     End ParVal
+
+     ParVal
+        ParValIndex 20
+        ENUM 
+         "Idle"                             0
+         "Run"                              1
+     End ParVal
+
+     ParVal
+        ParValIndex 21
+        ENUM 
+         "Retain Last State"                0
+         "Zero Data"                        1
+     End ParVal
+
+     ParVal
+        ParValIndex 22
+        UnitText    ""
+        INT 8 500 8 500
+     End ParVal
+
+     ParVal
+        ParValIndex 23
+        UnitText    ""
+        INT 0 1 0 1
+     End ParVal
+
+     ParVal
+        ParValIndex 24
+        UnitText ""
+        ENUM
+          "bool"                            0
+          "int"                             1
+          "enum"                            2
+          "scaled"                          3
+     End ParVal
+
+     ParVal
+        ParValIndex     25
+        UnitText        ""
+        enum
+          "Disable Keying"                  0
+          "Enable Keying"                   1
+     End ParVal
+
+     ParVal
+        ParValIndex     26
+        UnitText        ""
+        enum
+          "Disable Keying"                  0
+          "Exact Match"                     1
+          "Current and Higher"              2
+     End ParVal     
+     ParVal
+      ParValIndex     27
+      UnitText        ""
+      ENUM
+      "Multicast" 8192
+      "Point to Point" 16384
+    End ParVal
+
+ End ParValList
+
+
+Channels
+    ChannelInfo
+        Number              0
+        ChannelName         "UnitStatus"
+        Datatype            Status_In
+        Routine             900
+        CopyParameters      0 0 16#50000
+    End ChannelInfo
+End Channels
+
+UnitStatusText
+    DeviceSpecific1  "Device Not Found"
+    DeviceSpecific2  "Wrong Device Type"
+    DeviceSpecific3  "Internal Config Error"
+    DeviceSpecific4  "Internal Device Error"
+    DeviceSpecific5  "Duplicate MAC Id"
+    DeviceSpecific6  "Major Recoverable Error"
+    DeviceSpecific7  "Major Unrecoverable Error"
+    DeviceSpecific8  "ADR Error"
+    DeviceSpecific9  "No DeviceNet Power"
+    DeviceSpecific10 "CAN Bus Off"
+
+    ExtendedStatus1  "Minor Revision Missmatch"
+    ExtendedStatus2  "No Messages for Scanner"
+    ExtendedStatus3  "In Idle Mode"
+    ExtendedStatus4  "Duplicate MAC Id Check in progress"    
+    ExtendedStatus5  "In Fault Mode"
+    ExtendedStatus6  "Wrong MacID"
+    ExtendedStatus7  "Duplicate MAC Id Check Error"
+
+  End UnitStatusText
+
+  UnitStatusSeverity
+    DeviceSpecific1   GeneralError      TriggerAlarm   SeverityHigh
+    DeviceSpecific2   GeneralError      TriggerAlarm   SeverityHigh
+    DeviceSpecific3   GeneralWarning
+    DeviceSpecific4   GeneralError      TriggerAlarm   SeverityHigh
+    DeviceSpecific5   GeneralError      TriggerAlarm   SeverityHigh
+    DeviceSpecific6   GeneralError      TriggerAlarm   SeverityHigh
+    DeviceSpecific7   GeneralError      TriggerAlarm   SeverityHigh
+    DeviceSpecific8   GeneralError      TriggerAlarm   SeverityHigh
+    DeviceSpecific9   GeneralError      TriggerAlarm   SeverityHigh
+    DeviceSpecific10  GeneralError      TriggerAlarm   SeverityHigh
+
+    ExtendedStatus1   GeneralWarning    TriggerAlarm   SeverityLow
+    ExtendedStatus2   GeneralWarning    TriggerAlarm   SeverityLow
+    ExtendedStatus3   GeneralWarning    TriggerAlarm   SeverityLow
+    ExtendedStatus4   GeneralError      TriggerAlarm   SeverityMedium
+    ExtendedStatus5   GeneralError      TriggerAlarm   SeverityHigh
+    ExtendedStatus6   GeneralError      TriggerAlarm   SeverityHigh
+    ExtendedStatus7   GeneralError      TriggerAlarm   SeverityMedium
+
+
+  End UnitStatusSeverity
+
+
+Configuration
+    ConfigInfo
+      ModuleKey       16#01
+      InAreaSize      0  BYTE
+      OutAreaSize     0 BYTE
+    End ConfigInfo
+  End Configuration
+
+  HWUnitInfoCRC 16#FA65
+End HWUnitInfo

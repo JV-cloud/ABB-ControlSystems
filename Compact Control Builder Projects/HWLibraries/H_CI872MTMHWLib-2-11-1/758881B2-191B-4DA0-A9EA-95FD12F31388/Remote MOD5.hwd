@@ -1,0 +1,91 @@
+(****************************************************************************)
+(* All rights reserved. Reproduction, modification, use or disclosure       *)
+(* to third parties without express authority, is forbidden.                *)
+(* Copyright ABB Inc. 2008.                                                 *)
+(*                                                                          *)
+(* Filename:       RemoteMOD5.hwd                                           *)
+(*                                                                          *)
+(* Abstract:       Hardware definition file for RemoteMOD5                  *)
+(*                                                                          *)
+(* Description     This file contains the parameter defintions and error    *)
+(*                 status for the RemoteMOD5 under Fiber Optic Ports        *)
+(*                                                                          *)
+(* History:                                                                 *)
+(*      Date          Modified by           Modification                    *)
+(*   ==========     ===============       =================                 *) 
+(*   17-Jan-2008     Meenoo Sharma          File Creation                   *)
+(*   22-Jan-2008     Meenoo Sharma          File Header Modified            *)
+(*   15-Dec-2008     Vinod Pradhan          Modified Extended status        *)
+(*   09-Feb-2008     Venkata RKA            Modified to add backup status   *)
+(*                                                                          *)
+(****************************************************************************)
+
+FileHeader
+   Contents               "Remote MOD5 System"
+   Date                   "2008-01-22"
+   Version                "1.0-0"
+  RequiredSyntaxVersion "3.0"
+End FileHeader
+
+HwUnitInfo                                                      (* Remote MOD5 System *)
+   HWUnitID            {D12A8F8F-946D-4ff2-B4F5-B3F09B45AC3C}
+   Description         "Remote MOD5"
+   Information         "Remote MOD5 system"
+   Icons               Ser200AdapterType
+   InterfaceInfo
+      Interface        CIGInterface
+      CLSID_CB         {EBDD0CD9-06F2-4959-B997-3DA0C8585D89}
+      CLSID_CTRL       {FE845BEE-5EA6-40ef-8876-416E51380D11}
+      HWConfig Fail
+   End InterfaceInfo
+   Channels
+      ChannelInfo
+        Number           0
+        ChannelName      "UnitStatus"
+        Datatype         Status_In
+        Routine          900
+        CopyParameters   0 0 16#50000
+      End ChannelInfo
+   End Channels
+
+   UnitStatusText
+     ExtendedStatus1    "Remote MOD5: Is in RIGHT FOX state on primary"
+     ExtendedStatus2    "Remote MOD5: Is in RIGHT DOG state on primary"
+     ExtendedStatus3    "Remote MOD5: Is in RIGHT ECHO state on primary"
+     ExtendedStatus4    "Remote MOD5: Is in LEFT FOX state on primary"
+     ExtendedStatus5    "Remote MOD5: Is in LEFT DOG state on primary"
+     ExtendedStatus6    "Remote MOD5: Is in LEFT ECHO state on primary"
+     ExtendedStatus7    "No successful Eye Contact with Remote MOD5 System on primary"
+
+     ExtendedStatus8    "Remote MOD5: Is in RIGHT FOX state on backup"
+     ExtendedStatus9    "Remote MOD5: Is in RIGHT DOG state on backup"
+     ExtendedStatus10   "Remote MOD5: Is in RIGHT ECHO state on backup"
+     ExtendedStatus11   "Remote MOD5: Is in LEFT FOX state on backup"
+     ExtendedStatus12   "Remote MOD5: Is in LEFT DOG state on backup"
+     ExtendedStatus13   "Remote MOD5: Is in LEFT ECHO state on backup"
+     ExtendedStatus14   "No successful Eye Contact with Remote MOD5 System on backup"
+
+   End UnitStatusText
+
+  UnitStatusSeverity
+    ExtendedStatus1                                                   (*Status*)
+    ExtendedStatus2                                                   (*Status*)
+    ExtendedStatus3                                                   (*Status*) 
+    ExtendedStatus4                                                   (*Status*)
+    ExtendedStatus5                                                   (*Status*)
+    ExtendedStatus6                                                   (*Status*) 
+    ExtendedStatus7     GeneralWarning   TriggerAlarm SeverityMedium  (*Warning*)
+
+    ExtendedStatus8                                                   (*Status*)
+    ExtendedStatus9                                                   (*Status*)
+    ExtendedStatus10                                                  (*Status*) 
+    ExtendedStatus11                                                  (*Status*)
+    ExtendedStatus12                                                  (*Status*)
+    ExtendedStatus13                                                  (*Status*) 
+    ExtendedStatus14    GeneralWarning   TriggerAlarm SeverityMedium  (*Warning*)
+
+  End UnitStatusSeverity
+
+
+  HWUnitInfoCRC 16#1C3F
+End HWUnitInfo                                              (* Remote MOD5 System*)

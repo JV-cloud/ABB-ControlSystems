@@ -1,0 +1,134 @@
+(****************************************************************************)
+(* FILE            LPHD.hwd                                                 *)
+(*                                                                          *)
+(* DESCRIPTION     Hardware definition file for LPHD                        *)
+(*                                                                          *)
+(* AUTHOR          Ramachandragowda G                                       *)
+(*                                                                          *)
+(* All rights reserved. Reproduction, modification, use or disclosure       *)
+(* to third parties without express authority, is forbidden.                *)
+(* Copyright ABB Inc. 2006.                                                 *)
+(*                                                                          *)
+(*                                                                          *)
+(* 27-04-2006 Ramachandragowda G            Initial version                 *)
+(* 05-Feb-14  Karthick Raja P        Added InAreaSize for #53247            *)
+(****************************************************************************)
+FileHeader
+   Contents               "LPHD"
+   Date                   "2007-04-27"
+   Version                "1.0-0"
+  RequiredSyntaxVersion "3.0"
+End FileHeader
+
+HWUnitInfo  (* LPHD *)
+   HWUnitID {90C610CF-BCAB-4ae3-8424-7922FC9A94D1} (* GUID for LPHD *)
+   Description "LPHD"
+   Information "Physical Device Information"
+   Icons LNType
+   Attributes IoUnit AdapterUnit DigitalOut
+   InstanceNameDisable
+   InterfaceInfo
+     IoSysType    CIGIO
+     CLSID_CB    {53315084-E413-4c55-92E1-C2E1FAF19460} (*  CLSID_CB  = GUID for CI868 PH in Control builder CB *)
+     CLSID_CTRL  {4AB844AC-2BEE-4910-BA08-CA109A5D7E81}  (* CLSID_CTRL = GUID for CI868 PH in Controler *)
+   End InterfaceInfo
+
+   ConnectionInfo
+      ConnectType OwnUnit
+      IOConnect Fail
+      IoConfig  NoFail
+   End ConnectionInfo
+
+   ExternalConfigInfo
+      ShowExternalChannelDescriptionColumn
+   End ExternalConfigInfo
+   Parameters
+      ParamInfo
+         Name IALADDRPHYHEALTH
+         Description "IALaddr for PhyHealth"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 1
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEPHYHEALTH
+         Description "DMCD Type for PhyHealth"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype INT
+         Default 12
+         ParValIndex 2
+         ParamType Numbered 2
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOPHYHEALTH
+         Description "Protocol Info for PhyHealth"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 3
+      End ParamInfo
+      ParamInfo
+         Name HWDVERSION
+         Description "Version of HWD File"
+         ExternalVisible
+         Datatype STRING
+         Default " 1.0-0 "
+         ParamType Numbered 5
+      End ParamInfo
+      ParamInfo
+         Name LNNAME
+         Description "LN Name"
+         Datatype STRING
+         Default ""100
+         ParamType Numbered 7
+      End ParamInfo
+      ParamInfo
+         Name H_LNNAME
+         Description "Hidden LN Name"
+         ExternalVisible
+         Datatype STRING
+         Default "HIDDENLNNAME"100
+         ParamType Numbered 9
+      End ParamInfo
+      ParamInfo
+         Name H_LNPOSITION
+         Description "Hidden LN Position"
+         ExternalVisible
+         Datatype INT
+         Default 255
+         ParValIndex 2
+         ParamType Numbered 11
+      End ParamInfo
+   End Parameters
+
+   ParValList
+     ParVal
+        ParValIndex 2
+        UnitText    "addr"
+        INT 0 255 0 255
+     End ParVal
+   End ParValList
+
+   Channels
+    ChannelInfo
+      Number         1
+      ChannelName   "PhyHealth"
+      Datatype       Int_Out
+      Routine        400
+      CopyParameters 16#40000 0
+    End ChannelInfo
+ End Channels
+
+Configuration
+    ConfigInfo
+      ModuleKey       16#01
+      InAreaSize      8 BYTE
+      OutAreaSize     8 BYTE
+    End ConfigInfo
+  End Configuration
+  HWUnitInfoCRC 16#2F75
+End HWUnitInfo

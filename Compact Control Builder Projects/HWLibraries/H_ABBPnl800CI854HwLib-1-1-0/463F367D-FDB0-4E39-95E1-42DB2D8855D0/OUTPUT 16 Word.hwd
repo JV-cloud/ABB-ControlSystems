@@ -1,0 +1,160 @@
+
+
+
+(*========================================================*)
+(*                                                        *)
+(*            OUTPUT: 16 Word DPV1                        *)
+(*                                                        *)
+(*========================================================*)
+
+HWUnitInfo
+  HWUnitID         16#16D509DA
+  Description      "OUTPUT 16 Word"
+  Information      "Word(16 bit) unsign"
+  Icons            ProtocolType
+  Attributes       IoUnit 
+
+  Channels
+    ChannelInfo
+      Number            0
+      ChannelName      "Output Word 0"
+      Datatype          Dword_Out
+      Routine           600
+      CopyParameters    16#0 16#0 16#40000 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number            1
+      ChannelName      "Output Word 1"
+      Datatype          Dword_Out
+      Routine           600
+      CopyParameters    16#0 16#0 16#40001 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number            2
+      ChannelName      "Output Word 2"
+      Datatype          Dword_Out
+      Routine           600
+      CopyParameters    16#0 16#0 16#40002 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number            3
+      ChannelName      "Output Word 3"
+      Datatype          Dword_Out
+      Routine           600
+      CopyParameters    16#0 16#0 16#40003 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number            4
+      ChannelName      "Output Word 4"
+      Datatype          Dword_Out
+      Routine           600
+      CopyParameters    16#0 16#0 16#40004 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number            5
+      ChannelName      "Output Word 5"
+      Datatype          Dword_Out
+      Routine           600
+      CopyParameters    16#0 16#0 16#40005 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number            6
+      ChannelName      "Output Word 6"
+      Datatype          Dword_Out
+      Routine           600
+      CopyParameters    16#0 16#0 16#40006 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number            7
+      ChannelName      "Output Word 7"
+      Datatype          Dword_Out
+      Routine           600
+      CopyParameters    16#0 16#0 16#40007 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number            8
+      ChannelName      "Output Word 8"
+      Datatype          Dword_Out
+      Routine           600
+      CopyParameters    16#0 16#0 16#40008 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number            9
+      ChannelName      "Output Word 9"
+      Datatype          Dword_Out
+      Routine           600
+      CopyParameters    16#0 16#0 16#40009 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number            10
+      ChannelName      "Output Word 10"
+      Datatype          Dword_Out
+      Routine           600
+      CopyParameters    16#0 16#0 16#4000A 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number            11
+      ChannelName      "Output Word 11"
+      Datatype          Dword_Out
+      Routine           600
+      CopyParameters    16#0 16#0 16#4000B 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number            12
+      ChannelName      "Output Word 12"
+      Datatype          Dword_Out
+      Routine           600
+      CopyParameters    16#0 16#0 16#4000C 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number            13
+      ChannelName      "Output Word 13"
+      Datatype          Dword_Out
+      Routine           600
+      CopyParameters    16#0 16#0 16#4000D 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number            14
+      ChannelName      "Output Word 14"
+      Datatype          Dword_Out
+      Routine           600
+      CopyParameters    16#0 16#0 16#4000E 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number            15
+      ChannelName      "Output Word 15"
+      Datatype          Dword_Out
+      Routine           600
+      CopyParameters    16#0 16#0 16#4000F 16#0
+    End ChannelInfo
+  End Channels
+
+  Configuration
+    ConfigInfo
+      ModuleKey        16#16
+      InAreaSize       0 WORD
+      OutAreaSize      16 WORD
+      OutWord
+        WORD  0    0
+        WORD  0    1
+        WORD  0    2
+        WORD  0    3
+        WORD  0    4
+        WORD  0    5
+        WORD  0    6
+        WORD  0    7
+        WORD  0    8
+        WORD  0    9
+        WORD  0    10
+        WORD  0    11
+        WORD  0    12
+        WORD  0    13
+        WORD  0    14
+        WORD  0    15
+      CIGIOConnData
+        CIGIOData        16#01 16#6F
+      End CIGIOConnData
+    End ConfigInfo
+  End Configuration
+  HWUnitInfoCRC 16#A0BC
+End HWUnitInfo (* OUTPUT: 16 Word *)

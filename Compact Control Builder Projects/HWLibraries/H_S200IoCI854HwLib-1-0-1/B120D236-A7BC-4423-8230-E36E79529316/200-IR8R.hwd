@@ -1,0 +1,198 @@
+HWUnitInfo (* 200-IR8R / Profibus DP Full Format *)
+   HWUnitID {D5396562-4053-4e3b-8F30-2F98B7BA505A}
+   Description "200-IR8R"
+   Information "Analog RTD input module, 8 channels, Pt100 4 wire"
+   Icons Ser200IOType
+   Attributes IoUnit AnalogIn
+   Parameters
+      ParamInfo 
+         Name SENSOR_0
+         Description "Sensor type 0"
+         CompileType IOConnect
+         Datatype ENUMRANGE
+         Default 0
+         ParValIndex 0
+         ParamType CIGIOData  3  0 1  ByteOffset
+      End ParamInfo 
+      ParamInfo 
+         Name SENSOR_1
+         Description "Sensor type 1"
+         CompileType IOConnect
+         Datatype ENUMRANGE
+         Default 0
+         ParValIndex 0
+         ParamType CIGIOData  3  1 1  ByteOffset
+      End ParamInfo 
+      ParamInfo 
+         Name SENSOR_2
+         Description "Sensor type 2"
+         CompileType IOConnect
+         Datatype ENUMRANGE
+         Default 0
+         ParValIndex 0
+         ParamType CIGIOData  3  2 1  ByteOffset
+      End ParamInfo 
+      ParamInfo 
+         Name SENSOR_3
+         Description "Sensor type 3"
+         CompileType IOConnect
+         Datatype ENUMRANGE
+         Default 0
+         ParValIndex 0
+         ParamType CIGIOData  3  3 1  ByteOffset
+      End ParamInfo 
+      ParamInfo 
+         Name SENSOR_4
+         Description "Sensor type 4"
+         CompileType IOConnect
+         Datatype ENUMRANGE
+         Default 0
+         ParValIndex 0
+         ParamType CIGIOData  3  4 1  ByteOffset
+      End ParamInfo 
+      ParamInfo 
+         Name SENSOR_5
+         Description "Sensor type 5"
+         CompileType IOConnect
+         Datatype ENUMRANGE
+         Default 0
+         ParValIndex 0
+         ParamType CIGIOData  3  5 1  ByteOffset
+      End ParamInfo 
+      ParamInfo 
+         Name SENSOR_6
+         Description "Sensor type 6"
+         CompileType IOConnect
+         Datatype ENUMRANGE
+         Default 0
+         ParValIndex 0
+         ParamType CIGIOData  3  6 1  ByteOffset
+      End ParamInfo 
+      ParamInfo 
+         Name SENSOR_7
+         Description "Sensor type 7"
+         CompileType IOConnect
+         Datatype ENUMRANGE
+         Default 0
+         ParValIndex 0
+         ParamType CIGIOData  3  7 1  ByteOffset
+      End ParamInfo 
+      ParamInfo 
+         Name FILTER
+         Description "Filter cutoff"
+         CompileType IOConnect
+         Datatype ENUM
+         Default 1
+         ParValIndex 1
+         ParamType CIGIOData  5  3 1  ByteParam ByteOffset
+      End ParamInfo 
+   End Parameters
+   ParValList
+      ParVal
+         ParValIndex 0
+         UnitText    ""
+         ENUMRANGE
+         "Off"    16#0 16#FFFF 16#0000 16#FFFF 16#0000
+         "Pt100"  16#1 16#FFFF 16#0000 16#FFFF 16#0000
+      End ParVal
+      ParVal
+         ParValIndex 1
+         UnitText    ""
+         ENUM
+         "10 Hz"    16#1 
+         "50 Hz"    16#2
+         "60 Hz"    16#3 
+      End ParVal
+   End ParValList
+   Channels
+    ChannelInfo
+       Number 0 
+       ChannelName "Input 0"
+       Datatype Real_In
+       Routine 703
+       CopyParameters 0 0 16#30000 16#FFFF 0 16#0 16#50000 16#30008 16#100 16#30008 16#F0 16#0 16#0
+    End ChannelInfo
+    ChannelInfo
+       Number 1 
+       ChannelName "Input 1"
+       Datatype Real_In
+       Routine 703
+       CopyParameters 0 0 16#30001 16#FFFF 1 16#0 16#50000 16#30008 16#200 16#30008 16#F0 16#0 16#0
+    End ChannelInfo
+    ChannelInfo
+       Number 2 
+       ChannelName "Input 2"
+       Datatype Real_In
+       Routine 703
+       CopyParameters 0 0 16#30002 16#FFFF 2 16#0 16#50000 16#30008 16#400 16#30008 16#F0 16#0 16#0
+    End ChannelInfo
+    ChannelInfo
+       Number 3
+       ChannelName "Input 3"
+       Datatype Real_In
+       Routine 703
+       CopyParameters 0 0 16#30003 16#FFFF 3 16#0 16#50000 16#30008 16#800 16#30008 16#F0 16#0 16#0
+    End ChannelInfo
+    ChannelInfo
+       Number 4
+       ChannelName "Input 4"
+       Datatype Real_In
+       Routine 703
+       CopyParameters 0 0 16#30004 16#FFFF 4 16#0 16#50000 16#30008 16#1000 16#30008 16#F0 16#0 16#0
+    End ChannelInfo
+    ChannelInfo
+       Number 5
+       ChannelName "Input 5"
+       Datatype Real_In
+       Routine 703
+       CopyParameters 0 0 16#30005 16#FFFF 5 16#0 16#50000 16#30008 16#2000 16#30008 16#F0 16#0 16#0
+    End ChannelInfo
+    ChannelInfo
+       Number 6
+       ChannelName "Input 6"
+       Datatype Real_In
+       Routine 703
+       CopyParameters 0 0 16#30006 16#FFFF 6 16#0 16#50000 16#30008 16#4000 16#30008 16#F0 16#0 16#0
+    End ChannelInfo
+    ChannelInfo
+       Number 7
+       ChannelName "Input 7"
+       Datatype Real_In
+       Routine 703
+       CopyParameters 0 0 16#30007 16#FFFF 7 16#0 16#50000 16#30008 16#8000 16#30008 16#F0 16#0 16#0
+    End ChannelInfo
+    ChannelInfo
+       Number 8
+       ChannelName "UnitStatus"
+       Datatype Status_In
+       Routine 900
+       CopyParameters 0 0 16#50000
+    End ChannelInfo
+  End Channels
+   IoUnitStatus
+      StatusType IoError
+      StatusData 16#10000 16#100100 16#0 16#0
+   End IoUnitStatus
+  Configuration
+    ConfigInfo
+       ModuleKey   16#1900
+       InAreaSize  9
+       OutAreaSize 0
+       InWord
+          WORD 0       16#0
+          WORD 0       16#1 
+          WORD 0       16#2 
+          WORD 0       16#3 
+          WORD 0       16#4 
+          WORD 0       16#5 
+          WORD 0       16#6
+          WORD 0       16#7
+          WORD 0       16#8
+       CIGIOConnData
+          CIGIOData     16#01 16#58 16#00
+          CIGIOData     16#05 16#19 16#00 16#10 16#00 16#00
+       End CIGIOConnData
+    End ConfigInfo
+  End Configuration
+  HWUnitInfoCRC 16#9579
+End HWUnitInfo (* 200-IR8R / Profibus DP Full Format *)

@@ -1,0 +1,234 @@
+HWUnitInfo (* RAOAH4 *)
+   HWUnitID {C925F845-38C7-4391-A57A-8468B4D62A24}
+   Description "RAOAH4"
+   Information "Analog output/manual module with readback, 4 channels"
+   Icons RackIOType
+   Attributes IoUnit AnalogOut AnalogIn
+   Parameters
+      ParamInfo 
+         Name SAFESTATE
+         Description "SafeState"
+         CompileType IOConfig
+         Datatype ENUMCONTROL
+         Default 0
+         ParValIndex 2
+         ParamType Numbered 100
+         SafeStateInfo
+           SafeStateType SafeStateControl
+           SafeStateRef Unit
+         End SafeStateInfo
+      End ParamInfo 
+      ParamInfo 
+      Name SAFEVALUE_0
+         Description "Safe value channel 0"
+         Corresponding 0
+         CompileType IOConfig
+         Datatype REAL
+         Default 0
+         ParValIndex 0
+         (* CNSafeData *)
+         ParamType CIGIOData 1 0 0 WordParam WordOffset ScaleToRange
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 0
+         End SafeStateInfo
+      End ParamInfo 
+      ParamInfo 
+         Name SAFEVALUE_1
+         Description "Safe value channel 1"
+         Corresponding 0
+         CompileType IOConfig
+         Datatype REAL
+         Default 0
+         ParValIndex 0
+         (* CNSafeData *)
+         ParamType CIGIOData 2 0 0 WordParam WordOffset ScaleToRange
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 1
+         End SafeStateInfo
+      End ParamInfo 
+      ParamInfo 
+         Name SAFEVALUE_2
+         Description "Safe value channel 2"
+         Corresponding 0
+         CompileType IOConfig
+         Datatype REAL
+         Default 0
+         ParValIndex 0
+         (* CNSafeData *)
+         ParamType CIGIOData 3 0 0 WordParam WordOffset ScaleToRange
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 2
+         End SafeStateInfo
+      End ParamInfo 
+      ParamInfo 
+         Name SAFEVALUE_3
+         Description "Safe value channel 3"
+         Corresponding 0
+         CompileType IOConfig
+         Datatype REAL
+         Default 0
+         ParValIndex 0
+         (* CNSafeData *)
+         ParamType CIGIOData 4 0 0 WordParam WordOffset ScaleToRange
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 3
+         End SafeStateInfo
+      End ParamInfo 
+      ParamInfo 
+         Name RANGE (* dummy parameter for range setting purposes *)
+         Description "Range"
+         Hidden
+         Datatype ENUMRANGE
+         Default 0
+         ParValIndex 1
+         ParamType Numbered 0
+      End ParamInfo 
+   End Parameters
+   ParValList
+      ParVal
+         ParValIndex 0
+         UnitText    "%"
+         REAL 0.0 100.0 0.0 100.0
+      End ParVal
+      ParVal
+         ParValIndex 1
+         ENUMRANGE
+         "Fixed range"  16#0000 16#FFFF 16#0000 16#FFFF 16#0000
+      End ParVal
+      ParVal
+         ParValIndex 2
+         ENUMCONTROL
+         "Resetoutputs"  0 ResetValue
+         "Holdlaststate" 1 HoldLastValue
+         "Safevalues"    2 UseSafeValue      
+      End ParVal
+   End ParValList
+   Channels
+      ChannelInfo
+         Number 0
+         ChannelName "Output 0"
+         Datatype Real_Out
+         Routine 890
+         CopyParameters 0 0 16#40000 0 16#0 16#50000
+      End ChannelInfo
+      ChannelInfo
+         Number 1
+         ChannelName "Output 1"
+         Datatype Real_Out
+         Routine 890
+         CopyParameters 0 0 16#40001 0 16#0 16#50000
+      End ChannelInfo
+      ChannelInfo
+         Number 2
+         ChannelName "Output 2"
+         Datatype Real_Out
+         Routine 890
+         CopyParameters 0 0 16#40002 0 16#0 16#50000
+      End ChannelInfo
+      ChannelInfo
+         Number 3
+         ChannelName "Output 3"
+         Datatype Real_Out
+         Routine 890
+         CopyParameters 0 0 16#40003 0 16#0 16#50000
+      End ChannelInfo
+      ChannelInfo
+         Number 4
+         ChannelName "Input 0"
+         Datatype Real_In
+         Routine 700
+         CopyParameters 0 0 16#30002 16#FFFF 0 16#0 16#50000
+      End ChannelInfo
+      ChannelInfo
+         Number 5
+         ChannelName "Input 1"
+         Datatype Real_In
+         Routine 700
+         CopyParameters 0 0 16#30003 16#FFFF 0 16#0 16#50000
+      End ChannelInfo
+      ChannelInfo
+         Number 6
+         ChannelName "Input 2"
+         Datatype Real_In
+         Routine 700
+         CopyParameters 0 0 16#30004 16#FFFF 0 16#0 16#50000
+      End ChannelInfo
+      ChannelInfo
+         Number 7
+         ChannelName "Input 3"
+         Datatype Real_In
+         Routine 700
+         CopyParameters 0 0 16#30005 16#FFFF 0 16#0 16#50000
+      End ChannelInfo
+      ChannelInfo
+         Number 8
+         ChannelName "Auto Mode 0"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30001 16#0001
+      End ChannelInfo
+      ChannelInfo
+         Number 9
+         ChannelName "Auto Mode 1"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30001 16#0004
+      End ChannelInfo
+      ChannelInfo
+         Number 10
+         ChannelName "Auto Mode 2"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30001 16#0010
+      End ChannelInfo
+      ChannelInfo
+         Number 11
+         ChannelName "Auto Mode 3"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30001 16#0040
+      End ChannelInfo
+      ChannelInfo
+         Number 12
+         ChannelName "UnitStatus"
+         Datatype Status_In
+         Routine 900
+         CopyParameters 0 0 16#50000
+      End ChannelInfo
+   End Channels
+   IoUnitStatus
+      StatusType WrongModuleType 
+      StatusData 16#30000 16#1FFF 16#05 16#46
+      StatusType ModuleMissing
+      StatusData 16#30000 16#8000 16#00 16#0
+      StatusType IoError
+      StatusData 16#30000 16#2000 16#00 16#0
+   End IoUnitStatus
+   Configuration
+      ConfigInfo
+         ModuleKey   16#46
+         InAreaSize  6
+         OutAreaSize 4
+         InWord 
+            WORD 16#A046 0
+            WORD 0       1
+            WORD 0       2
+            WORD 0       3
+            WORD 0       4
+            WORD 0       5
+         OutWord 
+            WORD 0       0
+            WORD 0       1
+            WORD 0       2
+            WORD 0       3
+         CIGIOConnData
+            CIGIOData    16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 (* CNSafeData *)
+         End CIGIOConnData
+      End ConfigInfo
+   End Configuration
+  HWUnitInfoCRC 16#CBD6
+End HWUnitInfo (* RAOAH4 *)

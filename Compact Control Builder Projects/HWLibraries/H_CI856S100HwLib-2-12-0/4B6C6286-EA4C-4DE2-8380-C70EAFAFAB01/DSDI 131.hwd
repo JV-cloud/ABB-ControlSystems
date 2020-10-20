@@ -1,0 +1,657 @@
+(****************************************************************************)
+(* FILE            dsdi131.hwd                                              *)
+(*                                                                          *)
+(* DESCRIPTION     Hardware definition file for S100 I/O module DSDI 131    *)
+(*                                                                          *)
+(* AUTHOR          INCRC/800xA  Akhilesh Patel                              *)
+(*                                                                          *)
+(* All rights reserved. Reproduction, modification, use or disclosure       *)
+(* to third parties without express authority, is forbidden.                *)
+(* Copyright ABB Process Industries AB, Sweden, 2014.                       *)
+(*                                                                          *)
+(*                                                                          *)
+(* HISTORY $Log: /S100/workplace/current/source/hwdefinitions               *)
+(*                           /definitionfiles/s100/dsdi131.hwd $            *)
+(*                                                                          *)
+(*                                                                          *)
+(* Reference Document num:3BSE026125                                        *)
+(*                                                                          *)
+(* 1     08-07-2013 Akhilesh Patel                                          *)
+(* Initial version                                                          *)
+(* 2      010-11-2014 Venkata RKA                                           *)
+(* Tr# 51845 Modified Inword structure after unit testing.                  *)
+(*                                                                          *)
+(* 3 2-2-2015  12:26 Sneha S                                                *)                                                       *)
+(*   Version 3                                                              *)
+(*   Updated Reference Document num,added comment for module specific       *) 
+(*  parameters and  channel specific parameters                             *)
+(*                                                                          *)
+(* ABSTRACT                                                                 *)
+(*                                                                          *)
+(****************************************************************************)
+
+HWUnitInfo (* DSDI 131 *)
+  HWUnitID {1DDA0024-A739-4135-B5FE-615B8D671158}
+  Description "DSDI 131"
+  Information "Digital input module, 16 channels 110 V AC/DC" 
+  Icons RackIOType
+  Attributes AdapterUnit IoUnit DigitalIn
+
+  InterfaceInfo
+    (*Interface CIGInterface*)                          (* If GetDeviceStatus is wanted or Numbered parameters specified *)
+    IoSysType CIGIO                                     (* GetConnStatus will be called from framework *)
+    CLSID_CB {E15630B2-7F2A-4fab-ACDC-9A46839D335B}     (* CLSID_CB = GUID for S100 Protocol handler (PH) in Control builder CB *)
+    CLSID_CTRL   {41ACBED2-973D-48d1-B5B5-51836FEF4B26} (* CLSID_CTRL   = GUID for S100 Protocol handler (PH) in Controller *)
+    HWConfig Fail                                       (* Change of net parameters affect subunits *)
+  End InterfaceInfo 
+
+  ConnectionInfo
+    ConnectType OwnUnit
+    IOConnect   Fail
+    IOConfig    NoFail
+  End ConnectionInfo
+
+(*The below parameters are per module based parameters*)  
+
+   Parameters
+    ParamInfo 
+      Name Ver
+      Description "Version"
+      Hidden
+      CompileType IOConnect
+      Datatype INT
+      Default 1 
+      ParValIndex 4
+      ParamType CIGIOData 0 0 0 ByteParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name AccessMode
+      Description "Access Mode"
+      Hidden
+      CompileType IOConnect
+      Datatype INT
+      Default 0 
+      ParValIndex 4
+      ParamType CIGIOData 1 0 0 ByteParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name NoOfAddresses
+      Description "No of Address"
+      Hidden
+      CompileType IOConnect
+      Datatype INT
+      Default 1 
+      ParValIndex 0
+      ParamType CIGIOData 2 0 0 ByteParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name Address
+      Description "Address"
+      CompileType IOConnect
+      Datatype INT
+      Default 96
+      ParValIndex 1
+      ParamType CIGIOData 3 0 0 ByteParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ModType
+      Description "Module type"
+      Hidden
+      CompileType IOConnect
+      Datatype INT
+      Default 41 
+      ParValIndex 4
+      ParamType CIGIOData 4 0 0 ByteParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ScanInterval
+      Description "Scan interval"
+      CompileType IOConnect
+      Datatype INT
+      Default 0
+      ParValIndex 2
+      ParamType CIGIOData 2 0 1 WordParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo 
+      Name ACFilter
+      Description "AC Filter"
+      CompileType IOConfig
+      Datatype BOOL
+      Default FALSE
+      ParamType CIGIOData 4 0 1 ByteParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name FilterGroup1Channel1To8
+      Description "Filter group 1 ch 1 to ch 8"
+      CompileType IOConfig
+      Datatype INT
+      Default 10
+      ParValIndex 3
+      ParamType CIGIOData 6 0 1 ByteParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name FilterGroup2Channel9To16
+      Description "Filter group 2 ch 9 to ch 16"
+      CompileType IOConfig
+      Datatype INT
+      Default 10
+      ParValIndex 3
+      ParamType CIGIOData 7 0 1 ByteParam ByteOffset
+    End ParamInfo    
+
+(*The below parameters are w.r.t to each channel*)
+
+    ParamInfo 
+      Name ActiveChannel1
+      Description "Active channel 1"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 12 0 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel2
+      Description "Active channel 2"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 12 1 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel3
+      Description "Active channel 3"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 12 2 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel4
+      Description "Active channel 4"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 12 3 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel5
+      Description "Active channel 5"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 12 4 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel6
+      Description "Active channel 6"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 12 5 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel7
+      Description "Active channel 7"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 12 6 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel8
+      Description "Active channel 8"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 12 7 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel9
+      Description "Active channel 9"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 12 8 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel10
+      Description "Active channel 10"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 12 9 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel11
+      Description "Active channel 11"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 12 10 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel12
+      Description "Active channel 12"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 12 11 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel13
+      Description "Active channel 13"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 12 12 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel14
+      Description "Active channel 14"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 12 13 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel15
+      Description "Active channel 15"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 12 14 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel16
+      Description "Active channel 16"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 12 15 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name EnableEventChannel1
+      Description "Enable event channel 1"
+      CompileType IOConfig
+      Datatype BOOL
+      Default FALSE
+      ParamType CIGIOData 16 0 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name EnableEventChannel2
+      Description "Enable event channel 2"
+      CompileType IOConfig
+      Datatype BOOL
+      Default FALSE
+      ParamType CIGIOData 16 1 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name EnableEventChannel3
+      Description "Enable event channel 3"
+      CompileType IOConfig
+      Datatype BOOL
+      Default FALSE
+      ParamType CIGIOData 16 2 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name EnableEventChannel4
+      Description "Enable event channel 4"
+      CompileType IOConfig
+      Datatype BOOL
+      Default FALSE
+      ParamType CIGIOData 16 3 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name EnableEventChannel5
+      Description "Enable event channel 5"
+      CompileType IOConfig
+      Datatype BOOL
+      Default FALSE
+      ParamType CIGIOData 16 4 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name EnableEventChannel6
+      Description "Enable event channel 6"
+      CompileType IOConfig
+      Datatype BOOL
+      Default FALSE
+      ParamType CIGIOData 16 5 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name EnableEventChannel7
+      Description "Enable event channel 7"
+      CompileType IOConfig
+      Datatype BOOL
+      Default FALSE
+      ParamType CIGIOData 16 6 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name EnableEventChannel8
+      Description "Enable event channel 8"
+      CompileType IOConfig
+      Datatype BOOL
+      Default FALSE
+      ParamType CIGIOData 16 7 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name EnableEventChannel9
+      Description "Enable event channel 9"
+      CompileType IOConfig
+      Datatype BOOL
+      Default FALSE
+      ParamType CIGIOData 16 8 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name EnableEventChannel10
+      Description "Enable event channel 10"
+      CompileType IOConfig
+      Datatype BOOL
+      Default FALSE
+      ParamType CIGIOData 16 9 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name EnableEventChannel11
+      Description "Enable event channel 11"
+      CompileType IOConfig
+      Datatype BOOL
+      Default FALSE
+      ParamType CIGIOData 16 10 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name EnableEventChannel12
+      Description "Enable event channel 12"
+      CompileType IOConfig
+      Datatype BOOL
+      Default FALSE
+      ParamType CIGIOData 16 11 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name EnableEventChannel13
+      Description "Enable event channel 13"
+      CompileType IOConfig
+      Datatype BOOL
+      Default FALSE
+      ParamType CIGIOData 16 12 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name EnableEventChannel14
+      Description "Enable event channel 14"
+      CompileType IOConfig
+      Datatype BOOL
+      Default FALSE
+      ParamType CIGIOData 16 13 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name EnableEventChannel15
+      Description "Enable event channel 15"
+      CompileType IOConfig
+      Datatype BOOL
+      Default FALSE
+      ParamType CIGIOData 16 14 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name EnableEventChannel16
+      Description "Enable event channel 16"
+      CompileType IOConfig
+      Datatype BOOL
+      Default FALSE
+      ParamType CIGIOData 16 15 1 WordParam ByteOffset
+    End ParamInfo
+  End Parameters
+
+  ParValList
+    ParVal
+      ParValIndex 0      (* No of addresses which this unit uses *)
+      UnitText    " "
+      INT 1 4 1 4
+    End ParVal
+
+    ParVal
+      ParValIndex 1      (* Strapped adress interval *)
+      UnitText    " "
+      INT 96 143 96 143
+    End ParVal
+
+    ParVal
+      ParValIndex 2      (* Scan interval *)
+      UnitText    "0.1 ms"
+      INT 0 50000 0 50000
+    End ParVal
+
+    ParVal
+      ParValIndex 3      (* Filter time *)
+      UnitText    "ms"
+      INT 0 127 0 127
+    End ParVal
+
+    ParVal
+      ParValIndex 4      (* General INT type *)
+      UnitText    " "
+      INT 0 65535 0 65535
+    End ParVal
+  End ParValList
+
+  Channels
+    ChannelInfo
+      Number 1 
+      ChannelName "Input channel 1"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30005 16#0001 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 2 
+      ChannelName "Input channel 2"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30005 16#0002 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 3 
+      ChannelName "Input channel 3"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30005 16#0004 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 4 
+      ChannelName "Input channel 4"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30005 16#0008 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 5
+      ChannelName "Input channel 5"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30005 16#0010 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 6 
+      ChannelName "Input channel 6"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30005 16#0020 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 7 
+      ChannelName "Input channel 7"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30005 16#0040 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 8 
+      ChannelName "Input channel 8"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30005 16#0080 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 9 
+      ChannelName "Input channel 9"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30005 16#0100 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 10 
+      ChannelName "Input channel 10"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30005 16#0200 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 11 
+      ChannelName "Input channel 11"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30005 16#0400 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 12 
+      ChannelName "Input channel 12"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30005 16#0800 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 13 
+      ChannelName "Input channel 13"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30005 16#1000 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 14 
+      ChannelName "Input channel 14"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30005 16#2000 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 15 
+      ChannelName "Input channel 15"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30005 16#4000 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 16 
+      ChannelName "Input channel 16"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30005 16#8000 
+    End ChannelInfo         
+
+    ChannelInfo
+      Number 17
+      ChannelName "All inputs"
+      Datatype Dword_In
+      Routine 510
+      CopyParameters 0 0 0 0 0 0 0 0 16#30005 8 16#FF00 16#30005 0 16#00FF 0
+    End ChannelInfo
+
+    ChannelInfo
+      Number 18
+      ChannelName "Channel status"
+      Datatype Dword_In
+      Routine 510
+      CopyParameters 0 0 0 0 0 0 0 0 16#30003 8 16#FF00 16#30003 0 16#00FF 0
+    End ChannelInfo
+
+    ChannelInfo
+      Number 19
+      ChannelName "UnitStatus"
+      Datatype Status_In
+      Routine 900
+      CopyParameters 0 0 16#50000
+    End ChannelInfo      
+  End Channels
+
+  IoUnitStatus
+    StatusType ModuleMissing
+    StatusData 16#30001 16#0001 16#0 16#0
+    StatusType WrongModuleType 
+    StatusData 16#30001 16#0002 16#0 16#0
+    StatusType IoError
+    StatusData 16#30001 16#0004 16#0 16#0
+  End IoUnitStatus
+
+  Configuration
+    ConfigInfo
+      ModuleKey   16#0000
+      InAreaSize  6
+      OutAreaSize 0
+
+      InWord 
+        WORD 0        0  (* State                   *)
+        WORD 0        1  (* Module status           *)
+        WORD 0        2  (* Channel status 17 to 32 not used for DSDI131 *)
+        WORD 0        3  (* Channel status 1 to 16 *)
+        WORD 0        4  (* Channel value 17 to 32 not used for DSDI131  *)
+        WORD 0        5  (* Channel value 1 to 16  *)
+
+      CIGIOConnData
+        CIGIOData 0 0 0 0 0
+        CIGIOData 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+      End CIGIOConnData
+    End ConfigInfo
+  End Configuration
+  HWUnitInfoCRC 16#0D63
+End HWUnitInfo (* DSDI 131 *)

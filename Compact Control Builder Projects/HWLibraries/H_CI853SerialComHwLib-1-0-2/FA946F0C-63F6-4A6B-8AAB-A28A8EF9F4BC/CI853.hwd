@@ -1,0 +1,29 @@
+HwUnitInfo  (* CI853 *)
+   HWUnitID 16#02400853
+   Description "CI853"
+   Information "Communication Interface RS232"
+   Icons AC800ComType
+   Attributes SystemUnit
+   ModuleType  16#3200
+   InterfaceInfo
+     Interface   CI853Driver
+   End InterfaceInfo
+   AutoCreateSubUnits
+   DiscreteNumbers 
+     1 2
+   End DiscreteNumbers
+   SubUnitTypes
+      HWUnitID 16#03000001 (* Serial *)
+      HWUnitID 16#03000001 (* Serial *)
+   End SubUnitTypes
+   Channels
+      ChannelInfo
+         Number 0
+         ChannelName "UnitStatus"
+         Datatype Status_In
+         Routine 900
+         CopyParameters 0 0 16#50000
+      End ChannelInfo
+   End Channels
+  HWUnitInfoCRC 16#E7F4
+End HWUnitInfo (* CI853 *)

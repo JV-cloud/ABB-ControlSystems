@@ -1,0 +1,2915 @@
+(*---------------------------------------------------------------*)
+
+(* Revision History:                                             *)
+(* 2008-04-18 [XA/AHC sepewah] ExtendedStatus reorder            *)
+(* - ExtendedStatus4 to 6 moved to 5 to 7. ExtendedStatus4       *)
+(* is removed in sections UnitStatusText and UnitStatusSeverity. *)
+(* - ExtendedStatus6 and 7 added in UnitStatusSeverity section.  *)
+(* 2008-08-28 [XA/AHM sepewah]                                   *)
+(* - Attributes is added with "NoBackgroundCopy".                *)
+(* - ChannelInfo for DSP 6-8 address changed from DEC to HEX.    *)
+(* 2009-09-27 [XAAT] sebjjoh2                                    *)
+(* - ExtendedStatus6 Configuerd should not give warning          *)
+(* 2009-10-02 [XAAT] sebjjoh2                                    *)
+(* -DeviceSpecfic7 Consistent DSP transfer not updated should not*)
+(*  give error                                                   *)  
+(* 2009-10-05 [XAAT] sebjjoh2                                    *)
+(* - Status channel mask changed from 16#100 to 16#1 and         *)
+(*   consistency channel to 16#400 from 16#4                     *)
+(* 2009-10-20 [XAAT] sebjjoh2                                    *)
+(* - Changed channel status mask to 16#10. Since FW is prepared  *)
+(*   for OPC channel status (QQSSSSLL). IO copy routines should  *)
+(*   be changed when correcting #39105                           *)
+(* 2009-12-07 [XAAT/sebjjoh2]                                    *)
+(* - #39384 Added file header, removed leading (unused) zeros    *)
+(*          from copy routine parameters and removed attributes  *)
+(*          obsolete in SV5.1                                    *)
+(* - #39105 Changed IO copy routines.                            *)
+(* - #39385 Corrected the size of the IO area.                   *)
+(* - #39216 Changed the default value of cycle time to 512ms     *)
+(* - #39190 Added DSP not Active bit                             *)
+(* 2010-04-12 [XAAT/sebjjoj2]                                    *)                                                                                   
+(*  -#41828 Added space between AF and 100 in  information.      *)
+(*---------------------------------------------------------------*)
+
+
+FileHeader
+   Contents               "DSP Receive"
+   Date                   "2009-12-07"
+   Version                "2.0-0"
+   RequiredSyntaxVersion  "3.8"
+End FileHeader
+
+HWUnitInfo  (* DSP Receive *)
+   HWUnitID {5BAC673E-C4AD-4c0a-BB0B-A4B969F414C2}
+   Description "DSP Receive"
+   Information "AF 100 communication unit - sink"
+   Icons S800IOType  
+   Attributes NoBackgroundCopy
+
+   InterfaceInfo
+     Interface CIGInterface
+     IoSysType CIGIO
+     CLSID_CB   {B74AAC83-4502-4a6b-BE9E-E403B0921092} (* CLSID_CB   = GUID for AF100 Protocol handler (PH) in Control builder CB *)
+     CLSID_CTRL {25799801-FB26-4b0a-8762-90F005C39CCF} (* CLSID_CTRL = GUID for AF100 Protocol handler (PH) in Controller *)
+     HWConfig Fail     (* Change of net parameters affect subunits *)
+   End InterfaceInfo
+
+   ConnectionInfo
+      ConnectType OwnUnit  (* was AllUnits *)
+      IOConnect Fail
+      IOConfig NoFail
+   End ConnectionInfo  
+
+   ExternalConfigInfo
+      ShowExternalChannelDescriptionColumn
+   End ExternalConfigInfo
+
+   Parameters
+      ParamInfo 
+         Name HWTYPE                  (* Let this parameter always be the 1st parameter i.e "ParamType Numbered 1" *)
+         Description "HW unit type"
+         Hidden
+         CompileType HWConfig
+         Datatype INT
+         Default 128             (* Bit 7 *)
+         ParValIndex 5
+         ParamType Numbered 1
+      End ParamInfo
+      ParamInfo 
+         Name SIZE
+         Description "Size"
+         CompileType HWConfig
+         Datatype ENUM
+         Default 4
+         ParValIndex 0
+         ParamType Numbered 2
+      End ParamInfo 
+      ParamInfo 
+         Name CYCLETIME
+         Description "Cycletime"
+         CompileType HWConfig
+         Datatype ENUM
+         Default 9
+         ParValIndex 4
+         ParamType Numbered 3
+      End ParamInfo 
+      ParamInfo 
+         Name OWNER
+         Description "Owner"
+         CompileType HWConfig
+         Datatype bool
+         Default FALSE
+         ParamType Numbered 4
+      End ParamInfo
+      ParamInfo 
+         Name CONSISTENCY
+         Description "32 byte Data Consistency"
+         CompileType HWConfig
+         Datatype BOOL
+         Default FALSE
+         ParamType Numbered 5
+      End ParamInfo 
+      ParamInfo 
+         Name DATORDER
+         Description "DAT order"
+         CompileType HWConfig
+         Datatype ENUM
+         Default 1
+         ParValIndex 1
+         ParamType Numbered 6
+      End ParamInfo
+      ParamInfo 
+         Name DATTYPE1
+         Description "Type for DAT 1"
+         CompileType HWConfig
+         Datatype ENUM
+         Default 4
+         ParValIndex 3
+         ParamType Numbered 7
+      End ParamInfo
+      ParamInfo 
+         Name DATTYPE2
+         Description "Type for DAT 2"
+         CompileType HWConfig
+         Datatype ENUM
+         Default 6
+         ParValIndex 3
+         ParamType Numbered 8
+      End ParamInfo
+      ParamInfo 
+         Name DATTYPE3
+         Description "Type for DAT 3"
+         CompileType HWConfig
+         Datatype ENUM
+         Default 6
+         ParValIndex 3
+         ParamType Numbered 9
+      End ParamInfo
+      ParamInfo 
+         Name DATTYPE4
+         Description "Type for DAT 4"
+         CompileType HWConfig
+         Datatype ENUM
+         Default 6
+         ParValIndex 3
+         ParamType Numbered 10
+      End ParamInfo
+      ParamInfo 
+         Name DATTYPE5
+         Description "Type for DAT 5"
+         CompileType HWConfig
+         Datatype ENUM
+         Default 6
+         ParValIndex 3
+         ParamType Numbered 11
+      End ParamInfo
+      ParamInfo 
+         Name DATTYPE6
+         Description "Type for DAT 6"
+         CompileType HWConfig
+         Datatype ENUM
+         Default 6
+         ParValIndex 3
+         ParamType Numbered 12
+      End ParamInfo
+      ParamInfo 
+         Name DATTYPE7
+         Description "Type for DAT 7"
+         CompileType HWConfig
+         Datatype ENUM
+         Default 6
+         ParValIndex 3
+         ParamType Numbered 13
+      End ParamInfo
+      ParamInfo 
+         Name DATTYPE8
+         Description "Type for DAT 8"
+         CompileType HWConfig
+         Datatype ENUM
+         Default 6
+         ParValIndex 3
+         ParamType Numbered 14
+      End ParamInfo
+      ParamInfo 
+         Name SAFESTATE
+         Description "SafeState"
+         Hidden
+         CompileType HWConfig
+         Datatype ENUMCONTROL
+         Default 1
+         ParValIndex 2
+         ParamType Numbered 15
+         SafeStateInfo
+           SafeStateType SafeStateControl
+           SafeStateRef Connection
+         End SafeStateInfo
+      End ParamInfo 
+   End Parameters
+
+   ParValList
+      ParVal
+         ParValIndex 0
+         UnitText    "Number of DATs"
+         ENUM 
+         "1"       0
+         "2"       1
+         "4"       2
+         "8"       3
+         "Auto"    4
+      End ParVal
+      ParVal
+         ParValIndex 1
+         ENUM 
+         "Advant"       0
+         "Free"         1
+      End ParVal
+      ParVal
+         ParValIndex 2
+         ENUMCONTROL
+         "Resetoutputs"  0 ResetValue
+         "Holdlaststate" 1 HoldLastValue
+         "Safevalues"    2 UseSafeValue
+      End ParVal
+      ParVal
+         ParValIndex 3
+         UnitText    "BOOL, DWORD, INTx or  REAL"
+         ENUM 
+         "BOOL"         0
+         "BOOL_DWORD"   1
+         "INT"          2
+         "INT2"         3
+         "INTL"         4
+         "REAL"         5
+         "NONE"         6
+      End ParVal
+      ParVal
+         ParValIndex 4
+         UnitText    "ms"
+         ENUM 
+         "1"            0
+         "2"            1
+         "4"            2
+         "8"            3
+         "16"           4
+         "32"           5
+         "64"           6
+         "128"          7
+         "256"          8
+         "512"          9
+         "1024"        10
+         "2048"        11
+         "4096"        12
+     End ParVal
+     ParVal
+         ParValIndex 5
+         INT 0 2147483647 0 2147483647
+     End ParVal
+   End ParValList
+
+   Channels
+
+      (* DAT 1 - BEGIN *)
+      (* BOOL 32 bits *)
+      ChannelInfo
+         Number 101 
+         ChannelName "Bit 1 in DAT 1"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30003 16#1 16#20001 0
+         ExcludesChannels 133 134 135 136 141 142
+      End ChannelInfo
+      ChannelInfo
+         Number 102
+         ChannelName "Bit 2 in DAT 1"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30003 16#2 16#20001 0
+         ExcludesChannels 133 134 135 136 141 142
+      End ChannelInfo
+      ChannelInfo
+         Number 103
+         ChannelName "Bit 3 in DAT 1"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30003 16#4 16#20001 0
+         ExcludesChannels 133 134 135 136 141 142
+      End ChannelInfo
+      ChannelInfo
+         Number 104
+         ChannelName "Bit 4 in DAT 1"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30003 16#8 16#20001 0
+         ExcludesChannels 133 134 135 136 141 142
+      End ChannelInfo
+      ChannelInfo
+         Number 105
+         ChannelName "Bit 5 in DAT 1"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30003 16#10 16#20001 0
+         ExcludesChannels 133 134 135 136 141 142
+      End ChannelInfo
+      ChannelInfo
+         Number 106
+         ChannelName "Bit 6 in DAT 1"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30003 16#20 16#20001 0
+         ExcludesChannels 133 134 135 136 141 142
+      End ChannelInfo
+      ChannelInfo
+         Number 107
+         ChannelName "Bit 7 in DAT 1"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30003 16#40 16#20001 0
+         ExcludesChannels 133 134 135 136 141 142
+      End ChannelInfo
+      ChannelInfo
+         Number 108
+         ChannelName "Bit 8 in DAT 1"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30003 16#80 16#20001 0
+         ExcludesChannels 133 134 135 136 141 142
+      End ChannelInfo
+      ChannelInfo
+         Number 109
+         ChannelName "Bit 9 in DAT 1"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30002 16#1 16#20001 0
+         ExcludesChannels 133 134 135 136 141 142
+      End ChannelInfo
+      ChannelInfo
+         Number 110
+         ChannelName "Bit 10 in DAT 1"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30002 16#2 16#20001 0
+         ExcludesChannels 133 134 135 136 141 142
+      End ChannelInfo
+      ChannelInfo
+         Number 111
+         ChannelName "Bit 11 in DAT 1"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30002 16#4 16#20001 0
+         ExcludesChannels 133 134 135 136 141 142
+      End ChannelInfo
+      ChannelInfo
+         Number 112
+         ChannelName "Bit 12 in DAT 1"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30002 16#8 16#20001 0
+         ExcludesChannels 133 134 135 136 141 142
+      End ChannelInfo
+      ChannelInfo
+         Number 113
+         ChannelName "Bit 13 in DAT 1"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30002 16#10 16#20001 0
+         ExcludesChannels 133 134 135 136 141 142
+      End ChannelInfo
+      ChannelInfo
+         Number 114
+         ChannelName "Bit 14 in DAT 1"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30002 16#20 16#20001 0
+         ExcludesChannels 133 134 135 136 141 142
+      End ChannelInfo
+      ChannelInfo
+         Number 115
+         ChannelName "Bit 15 in DAT 1"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30002 16#40 16#20001 0
+         ExcludesChannels 133 134 135 136 141 142
+      End ChannelInfo
+      ChannelInfo
+         Number 116
+         ChannelName "Bit 16 in DAT 1"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30002 16#80 16#20001 0
+         ExcludesChannels 133 134 135 136 141 142
+      End ChannelInfo
+      ChannelInfo
+         Number 117
+         ChannelName "Bit 17 in DAT 1"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30001 16#1 16#20001 0
+         ExcludesChannels 133 134 135 136 141 142
+      End ChannelInfo
+      ChannelInfo
+         Number 118
+         ChannelName "Bit 18 in DAT 1"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30001 16#2 16#20001 0
+         ExcludesChannels 133 134 135 136 141 142
+      End ChannelInfo
+      ChannelInfo
+         Number 119
+         ChannelName "Bit 19 in DAT 1"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30001 16#4 16#20001 0
+         ExcludesChannels 133 134 135 136 141 142
+      End ChannelInfo
+      ChannelInfo
+         Number 120
+         ChannelName "Bit 20 in DAT 1"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30001 16#8 16#20001 0
+         ExcludesChannels 133 134 135 136 141 142
+      End ChannelInfo
+      ChannelInfo
+         Number 121
+         ChannelName "Bit 21 in DAT 1"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30001 16#10 16#20001 0
+         ExcludesChannels 133 134 135 136 141 142
+      End ChannelInfo
+      ChannelInfo
+         Number 122
+         ChannelName "Bit 22 in DAT 1"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30001 16#20 16#20001 0
+         ExcludesChannels 133 134 135 136 141 142
+      End ChannelInfo
+      ChannelInfo
+         Number 123
+         ChannelName "Bit 23 in DAT 1"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30001 16#40 16#20001 0
+         ExcludesChannels 133 134 135 136 141 142
+      End ChannelInfo
+      ChannelInfo
+         Number 124
+         ChannelName "Bit 24 in DAT 1"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30001 16#80 16#20001 0
+         ExcludesChannels 133 134 135 136 141 142
+      End ChannelInfo
+      ChannelInfo
+         Number 125
+         ChannelName "Bit 25 in DAT 1"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30000 16#01 16#20001 0
+         ExcludesChannels 133 134 135 136 141 142
+      End ChannelInfo
+      ChannelInfo
+         Number 126
+         ChannelName "Bit 26 in DAT 1"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30000 16#02 16#20001 0
+         ExcludesChannels 133 134 135 136 141 142
+      End ChannelInfo
+      ChannelInfo
+         Number 127
+         ChannelName "Bit 27 in DAT 1"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30000 16#04 16#20001 0
+         ExcludesChannels 133 134 135 136 141 142
+      End ChannelInfo
+      ChannelInfo
+         Number 128
+         ChannelName "Bit 28 in DAT 1"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30000 16#08 16#20001 0
+         ExcludesChannels 133 134 135 136 141 142
+      End ChannelInfo
+      ChannelInfo
+         Number 129
+         ChannelName "Bit 29 in DAT 1"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30000 16#10 16#20001 0
+         ExcludesChannels 133 134 135 136 141 142
+      End ChannelInfo
+      ChannelInfo
+         Number 130
+         ChannelName "Bit 30 in DAT 1"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30000 16#20 16#20001 0
+         ExcludesChannels 133 134 135 136 141 142
+      End ChannelInfo
+      ChannelInfo
+         Number 131
+         ChannelName "Bit 31 in DAT 1"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30000 16#40 16#20001 0
+         ExcludesChannels 133 134 135 136 141 142
+      End ChannelInfo
+      ChannelInfo
+         Number 132
+         ChannelName "Bit 32 in DAT 1"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30000 16#80 16#20001 0
+         ExcludesChannels 133 134 135 136 141 142
+      End ChannelInfo
+
+      (* BOOL DWORD *)
+      ChannelInfo
+         Number 133
+         ChannelName "All Bits in DAT 1"
+         Datatype Dword_In
+         Routine 523
+         CopyParameters 16#30000 16#FFFFFFFF 0 0 16#20001 0
+         ExcludesChannels 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 134 135 136 141 142
+      End ChannelInfo
+
+      (* INT Short *)
+      ChannelInfo
+         Number 134
+         ChannelName "Integer Short DAT 1"
+         Datatype Int_In
+         Routine 323
+         CopyParameters 16#30000 16 16 1 0 16#20001 0
+         ExcludesChannels 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 135 136 141 142
+      End ChannelInfo
+
+      (* INT Long *)
+      ChannelInfo
+         Number 135
+         ChannelName "Integer Long DAT 1"
+         Datatype DInt_In
+         Routine 323
+         CopyParameters 16#30000 0 32 1 0 16#20001 0
+         ExcludesChannels 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 136 141 142
+      End ChannelInfo
+
+      (* REAL *)
+      ChannelInfo
+         Number 136
+         ChannelName "Real DAT 1"
+         Datatype Real_In
+         Routine 723
+         CopyParameters 16#30000 0 16#20001 0
+         ExcludesChannels 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 141 142
+      End ChannelInfo
+
+      (* INT2 Short *)
+      ChannelInfo
+         Number 141
+         ChannelName "Integer Short (LSW) DAT 1"
+         Datatype Int_In
+         Routine 323
+         CopyParameters 16#30000 16 16 1 0 16#20001 0
+         ExcludesChannels 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136
+      End ChannelInfo
+      ChannelInfo
+         Number 142
+         ChannelName "Integer Short (MSW) DAT 1"
+         Datatype Int_In
+         Routine 323
+         CopyParameters 16#30000 0 16 1 0 16#20001 0
+         ExcludesChannels 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136
+      End ChannelInfo
+      (* DAT 1 - END *)
+
+      (* DAT 2 - BEGIN *)
+      (* BOOL 32 bits *)
+      ChannelInfo
+         Number 201 
+         ChannelName "Bit 1 in DAT 2"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30007 16#1 16#20001 0
+         ExcludesChannels 233 234 235 236 241 242
+      End ChannelInfo
+      ChannelInfo
+         Number 202
+         ChannelName "Bit 2 in DAT 2"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30007 16#2 16#20001 0
+         ExcludesChannels 233 234 235 236 241 242
+      End ChannelInfo
+      ChannelInfo
+         Number 203
+         ChannelName "Bit 3 in DAT 2"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30007 16#4 16#20001 0
+         ExcludesChannels 233 234 235 236 241 242
+      End ChannelInfo
+      ChannelInfo
+         Number 204
+         ChannelName "Bit 4 in DAT 2"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30007 16#8 16#20001 0
+         ExcludesChannels 233 234 235 236 241 242
+      End ChannelInfo
+      ChannelInfo
+         Number 205
+         ChannelName "Bit 5 in DAT 2"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30007 16#10 16#20001 0
+         ExcludesChannels 233 234 235 236 241 242
+      End ChannelInfo
+      ChannelInfo
+         Number 206
+         ChannelName "Bit 6 in DAT 2"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30007 16#20 16#20001 0
+         ExcludesChannels 233 234 235 236 241 242
+      End ChannelInfo
+      ChannelInfo
+         Number 207
+         ChannelName "Bit 7 in DAT 2"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30007 16#40 16#20001 0
+         ExcludesChannels 233 234 235 236 241 242
+      End ChannelInfo
+      ChannelInfo
+         Number 208
+         ChannelName "Bit 8 in DAT 2"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30007 16#80 16#20001 0
+         ExcludesChannels 233 234 235 236 241 242
+      End ChannelInfo
+      ChannelInfo
+         Number 209
+         ChannelName "Bit 9 in DAT 2"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30006 16#1 16#20001 0
+         ExcludesChannels 233 234 235 236 241 242
+      End ChannelInfo
+      ChannelInfo
+         Number 210
+         ChannelName "Bit 10 in DAT 2"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30006 16#2 16#20001 0
+         ExcludesChannels 233 234 235 236 241 242
+      End ChannelInfo
+      ChannelInfo
+         Number 211
+         ChannelName "Bit 11 in DAT 2"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30006 16#4 16#20001 0
+         ExcludesChannels 233 234 235 236 241 242
+      End ChannelInfo
+      ChannelInfo
+         Number 212
+         ChannelName "Bit 12 in DAT 2"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30006 16#8 16#20001 0
+         ExcludesChannels 233 234 235 236 241 242
+      End ChannelInfo
+      ChannelInfo
+         Number 213
+         ChannelName "Bit 13 in DAT 2"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30006 16#10 16#20001 0
+         ExcludesChannels 233 234 235 236 241 242
+      End ChannelInfo
+      ChannelInfo
+         Number 214
+         ChannelName "Bit 14 in DAT 2"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30006 16#20 16#20001 0
+         ExcludesChannels 233 234 235 236 241 242
+      End ChannelInfo
+      ChannelInfo
+         Number 215
+         ChannelName "Bit 15 in DAT 2"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30006 16#40 16#20001 0
+         ExcludesChannels 233 234 235 236 241 242
+      End ChannelInfo
+      ChannelInfo
+         Number 216
+         ChannelName "Bit 16 in DAT 2"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30006 16#80 16#20001 0
+         ExcludesChannels 233 234 235 236 241 242
+      End ChannelInfo
+      ChannelInfo
+         Number 217
+         ChannelName "Bit 17 in DAT 2"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30005 16#1 16#20001 0
+         ExcludesChannels 233 234 235 236 241 242
+      End ChannelInfo
+      ChannelInfo
+         Number 218
+         ChannelName "Bit 18 in DAT 2"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30005 16#2 16#20001 0
+         ExcludesChannels 233 234 235 236 241 242
+      End ChannelInfo
+      ChannelInfo
+         Number 219
+         ChannelName "Bit 19 in DAT 2"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30005 16#4 16#20001 0
+         ExcludesChannels 233 234 235 236 241 242
+      End ChannelInfo
+      ChannelInfo
+         Number 220
+         ChannelName "Bit 20 in DAT 2"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30005 16#8 16#20001 0
+         ExcludesChannels 233 234 235 236 241 242
+      End ChannelInfo
+      ChannelInfo
+         Number 221
+         ChannelName "Bit 21 in DAT 2"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30005 16#10 16#20001 0
+         ExcludesChannels 233 234 235 236 241 242
+      End ChannelInfo
+      ChannelInfo
+         Number 222
+         ChannelName "Bit 22 in DAT 2"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30005 16#20 16#20001 0
+         ExcludesChannels 233 234 235 236 241 242
+      End ChannelInfo
+      ChannelInfo
+         Number 223
+         ChannelName "Bit 23 in DAT 2"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30005 16#40 16#20001 0
+         ExcludesChannels 233 234 235 236 241 242
+      End ChannelInfo
+      ChannelInfo
+         Number 224
+         ChannelName "Bit 24 in DAT 2"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30005 16#80 16#20001 0
+         ExcludesChannels 233 234 235 236 241 242
+      End ChannelInfo
+      ChannelInfo
+         Number 225
+         ChannelName "Bit 25 in DAT 2"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30004 16#1 16#20001 0
+         ExcludesChannels 233 234 235 236 241 242
+      End ChannelInfo
+      ChannelInfo
+         Number 226
+         ChannelName "Bit 26 in DAT 2"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30004 16#2 16#20001 0
+         ExcludesChannels 233 234 235 236 241 242
+      End ChannelInfo
+      ChannelInfo
+         Number 227
+         ChannelName "Bit 27 in DAT 2"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30004 16#4 16#20001 0
+         ExcludesChannels 233 234 235 236 241 242
+      End ChannelInfo
+      ChannelInfo
+         Number 228
+         ChannelName "Bit 28 in DAT 2"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30004 16#8 16#20001 0
+         ExcludesChannels 233 234 235 236 241 242
+      End ChannelInfo
+      ChannelInfo
+         Number 229
+         ChannelName "Bit 29 in DAT 2"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30004 16#10 16#20001 0
+         ExcludesChannels 233 234 235 236 241 242
+      End ChannelInfo
+      ChannelInfo
+         Number 230
+         ChannelName "Bit 30 in DAT 2"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30004 16#20 16#20001 0
+         ExcludesChannels 233 234 235 236 241 242
+      End ChannelInfo
+      ChannelInfo
+         Number 231
+         ChannelName "Bit 31 in DAT 2"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30004  16#40 16#20001 0
+         ExcludesChannels 233 234 235 236 241 242
+      End ChannelInfo
+      ChannelInfo
+         Number 232
+         ChannelName "Bit 32 in DAT 2"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30004 16#80 16#20001 0
+         ExcludesChannels 233 234 235 236 241 242
+      End ChannelInfo
+
+      (* BOOL DWORD *)
+      ChannelInfo
+         Number 233
+         ChannelName "All Bits in DAT 2"
+         Datatype Dword_In
+         Routine 523
+         CopyParameters 16#30004 16#FFFFFFFF 0 0 16#20001 0
+         ExcludesChannels 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 234 235 236 241 242
+      End ChannelInfo
+
+      (* INT Short *)
+      ChannelInfo
+         Number 234
+         ChannelName "Integer Short DAT 2"
+         Datatype Int_In
+         Routine 323
+         CopyParameters 16#30004 16 16 1 0 16#20001 0
+         ExcludesChannels 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 235 236 241 242
+      End ChannelInfo
+
+      (* INT Long *)
+      ChannelInfo
+         Number 235
+         ChannelName "Integer Long DAT 2"
+         Datatype DInt_In
+         Routine 323
+         CopyParameters 16#30004 0 32 1 0 16#20001 0
+         ExcludesChannels 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 236 241 242
+      End ChannelInfo
+
+      (* REAL *)
+      ChannelInfo
+         Number 236
+         ChannelName "Real DAT 2"
+         Datatype Real_In
+         Routine 723
+         CopyParameters 16#30004 0 16#20001 0
+         ExcludesChannels 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 241 242
+      End ChannelInfo
+
+      (* INT2 Short *)
+      ChannelInfo
+         Number 241
+         ChannelName "Integer Short (LSW) DAT 2"
+         Datatype Int_In
+         Routine 323
+         CopyParameters 16#30004 16 16 1 0 16#20001 0
+         ExcludesChannels 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236
+      End ChannelInfo
+      ChannelInfo
+         Number 242
+         ChannelName "Integer Short (MSW) DAT 2"
+         Datatype Int_In
+         Routine 323
+         CopyParameters 16#30004 0 16 1 0 16#20001 0
+         ExcludesChannels 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236
+      End ChannelInfo
+      (* DAT 2 - END *)
+
+      (* DAT 3 - BEGIN *)
+      (* BOOL 32 bits *)
+      ChannelInfo
+         Number 301 
+         ChannelName "Bit 1 in DAT 3"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3000B 16#1 16#20001 0
+         ExcludesChannels 333 334 335 336 341 342
+      End ChannelInfo
+      ChannelInfo
+         Number 302
+         ChannelName "Bit 2 in DAT 3"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3000B 16#2 16#20001 0
+         ExcludesChannels 333 334 335 336 341 342
+      End ChannelInfo
+      ChannelInfo
+         Number 303
+         ChannelName "Bit 3 in DAT 3"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3000B 16#4 16#20001 0
+         ExcludesChannels 333 334 335 336 341 342
+      End ChannelInfo
+      ChannelInfo
+         Number 304
+         ChannelName "Bit 4 in DAT 3"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3000B 16#8 16#20001 0
+         ExcludesChannels 333 334 335 336 341 342
+      End ChannelInfo
+      ChannelInfo
+         Number 305
+         ChannelName "Bit 5 in DAT 3"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3000B 16#10 16#20001 0
+         ExcludesChannels 333 334 335 336 341 342
+      End ChannelInfo
+      ChannelInfo
+         Number 306
+         ChannelName "Bit 6 in DAT 3"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3000B 16#20 16#20001 0
+         ExcludesChannels 333 334 335 336 341 342
+      End ChannelInfo
+      ChannelInfo
+         Number 307
+         ChannelName "Bit 7 in DAT 3"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3000B 16#40 16#20001 0
+         ExcludesChannels 333 334 335 336 341 342
+      End ChannelInfo
+      ChannelInfo
+         Number 308
+         ChannelName "Bit 8 in DAT 3"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3000B 16#80 16#20001 0
+         ExcludesChannels 333 334 335 336 341 342
+      End ChannelInfo
+      ChannelInfo
+         Number 309
+         ChannelName "Bit 9 in DAT 3"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3000A 16#1 16#20001 0
+         ExcludesChannels 333 334 335 336 341 342
+      End ChannelInfo
+      ChannelInfo
+         Number 310
+         ChannelName "Bit 10 in DAT 3"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3000A 16#2 16#20001 0
+         ExcludesChannels 333 334 335 336 341 342
+      End ChannelInfo
+      ChannelInfo
+         Number 311
+         ChannelName "Bit 11 in DAT 3"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3000A 16#4 16#20001 0
+         ExcludesChannels 333 334 335 336 341 342
+      End ChannelInfo
+      ChannelInfo
+         Number 312
+         ChannelName "Bit 12 in DAT 3"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3000A 16#8 16#20001 0
+         ExcludesChannels 333 334 335 336 341 342
+      End ChannelInfo
+      ChannelInfo
+         Number 313
+         ChannelName "Bit 13 in DAT 3"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3000A 16#10 16#20001 0
+         ExcludesChannels 333 334 335 336 341 342
+      End ChannelInfo
+      ChannelInfo
+         Number 314
+         ChannelName "Bit 14 in DAT 3"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3000A 16#20 16#20001 0
+         ExcludesChannels 333 334 335 336 341 342
+      End ChannelInfo
+      ChannelInfo
+         Number 315
+         ChannelName "Bit 15 in DAT 3"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3000A 16#40 16#20001 0
+         ExcludesChannels 333 334 335 336 341 342
+      End ChannelInfo
+      ChannelInfo
+         Number 316
+         ChannelName "Bit 16 in DAT 3"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3000A 16#80 16#20001 0
+         ExcludesChannels 333 334 335 336 341 342
+      End ChannelInfo
+      ChannelInfo
+         Number 317
+         ChannelName "Bit 17 in DAT 3"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30009 16#1 16#20001 0
+         ExcludesChannels 333 334 335 336 341 342
+      End ChannelInfo
+      ChannelInfo
+         Number 318
+         ChannelName "Bit 18 in DAT 3"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30009 16#2 16#20001 0
+         ExcludesChannels 333 334 335 336 341 342
+      End ChannelInfo
+      ChannelInfo
+         Number 319
+         ChannelName "Bit 19 in DAT 3"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30009 16#4 16#20001 0
+         ExcludesChannels 333 334 335 336 341 342
+      End ChannelInfo
+      ChannelInfo
+         Number 320
+         ChannelName "Bit 20 in DAT 3"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30009 16#8 16#20001 0
+         ExcludesChannels 333 334 335 336 341 342
+      End ChannelInfo
+      ChannelInfo
+         Number 321
+         ChannelName "Bit 21 in DAT 3"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30009 16#10 16#20001 0
+         ExcludesChannels 333 334 335 336 341 342
+      End ChannelInfo
+      ChannelInfo
+         Number 322
+         ChannelName "Bit 22 in DAT 3"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30009 16#20 16#20001 0
+         ExcludesChannels 333 334 335 336 341 342
+      End ChannelInfo
+      ChannelInfo
+         Number 323
+         ChannelName "Bit 23 in DAT 3"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30009 16#40 16#20001 0
+         ExcludesChannels 333 334 335 336 341 342
+      End ChannelInfo
+      ChannelInfo
+         Number 324
+         ChannelName "Bit 24 in DAT 3"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30009 16#80 16#20001 0
+         ExcludesChannels 333 334 335 336 341 342
+      End ChannelInfo
+      ChannelInfo
+         Number 325
+         ChannelName "Bit 25 in DAT 3"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30008 16#1 16#20001 0
+         ExcludesChannels 333 334 335 336 341 342
+      End ChannelInfo
+      ChannelInfo
+         Number 326
+         ChannelName "Bit 26 in DAT 3"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30008 16#2 16#20001 0
+         ExcludesChannels 333 334 335 336 341 342
+      End ChannelInfo
+      ChannelInfo
+         Number 327
+         ChannelName "Bit 27 in DAT 3"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30008 16#4 16#20001 0
+         ExcludesChannels 333 334 335 336 341 342
+      End ChannelInfo
+      ChannelInfo
+         Number 328
+         ChannelName "Bit 28 in DAT 3"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30008 16#8 16#20001 0
+         ExcludesChannels 333 334 335 336 341 342
+      End ChannelInfo
+      ChannelInfo
+         Number 329
+         ChannelName "Bit 29 in DAT 3"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30008 16#10 16#20001 0
+         ExcludesChannels 333 334 335 336 341 342
+      End ChannelInfo
+      ChannelInfo
+         Number 330
+         ChannelName "Bit 30 in DAT 3"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30008 16#20 16#20001 0
+         ExcludesChannels 333 334 335 336 341 342
+      End ChannelInfo
+      ChannelInfo
+         Number 331
+         ChannelName "Bit 31 in DAT 3"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30008 16#40 16#20001 0
+         ExcludesChannels 333 334 335 336 341 342
+      End ChannelInfo
+      ChannelInfo
+         Number 332
+         ChannelName "Bit 32 in DAT 3"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30008 16#80 16#20001 0
+         ExcludesChannels 333 334 335 336 341 342
+      End ChannelInfo
+
+      (* BOOL DWORD *)
+      ChannelInfo
+         Number 333
+         ChannelName "All Bits in DAT 3"
+         Datatype Dword_In
+         Routine 523
+         CopyParameters 16#30008 16#FFFFFFFF 0 0 16#20001 0
+         ExcludesChannels 301 302 303 304 305 306 307 308 309 310 311 312 313 314 315 316 317 318 319 320 321 322 323 324 325 326 327 328 329 330 331 332 334 335 336 341 342
+      End ChannelInfo
+
+      (* INT Short *)
+      ChannelInfo
+         Number 334
+         ChannelName "Integer Short DAT 3"
+         Datatype Int_In
+         Routine 323
+         CopyParameters 16#30008 16 16 1 0 16#20001 0
+         ExcludesChannels 301 302 303 304 305 306 307 308 309 310 311 312 313 314 315 316 317 318 319 320 321 322 323 324 325 326 327 328 329 330 331 332 333 335 336 341 342
+      End ChannelInfo
+
+      (* INT Long *)
+      ChannelInfo
+         Number 335
+         ChannelName "Integer Long DAT 3"
+         Datatype DInt_In
+         Routine 323
+         CopyParameters 16#30008 0 32 1 0 16#20001 0
+         ExcludesChannels 301 302 303 304 305 306 307 308 309 310 311 312 313 314 315 316 317 318 319 320 321 322 323 324 325 326 327 328 329 330 331 332 333 334 336 341 342
+      End ChannelInfo
+
+      (* REAL *)
+      ChannelInfo
+         Number 336 
+         ChannelName "Real DAT 3"
+         Datatype Real_In
+         Routine 723
+         CopyParameters 16#30008 0 16#20001 0
+         ExcludesChannels 301 302 303 304 305 306 307 308 309 310 311 312 313 314 315 316 317 318 319 320 321 322 323 324 325 326 327 328 329 330 331 332 333 334 335 341 342
+      End ChannelInfo
+
+      (* INT2 Short *)
+      ChannelInfo
+         Number 341
+         ChannelName "Integer Short (LSW) DAT 3"
+         Datatype Int_In
+         Routine 323
+         CopyParameters 16#30008 16 16 1 0 16#20001 0
+         ExcludesChannels 301 302 303 304 305 306 307 308 309 310 311 312 313 314 315 316 317 318 319 320 321 322 323 324 325 326 327 328 329 330 331 332 333 334 335 336
+      End ChannelInfo
+      ChannelInfo
+         Number 342
+         ChannelName "Integer Short (MSW) DAT 3"
+         Datatype Int_In
+         Routine 323
+         CopyParameters 16#30008 0 16 1 0 16#20001 0
+         ExcludesChannels 301 302 303 304 305 306 307 308 309 310 311 312 313 314 315 316 317 318 319 320 321 322 323 324 325 326 327 328 329 330 331 332 333 334 335 336
+      End ChannelInfo
+      (* DAT 3 - END *)
+
+      (* DAT 4 - BEGIN *)
+      (* BOOL 32 bits *)
+      ChannelInfo
+         Number 401 
+         ChannelName "Bit 1 in DAT 4"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3000F 16#1 16#20001 0
+         ExcludesChannels 433 434 435 436 441 442
+      End ChannelInfo
+      ChannelInfo
+         Number 402
+         ChannelName "Bit 2 in DAT 4"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3000F 16#2 16#20001 0
+         ExcludesChannels 433 434 435 436 441 442
+      End ChannelInfo
+      ChannelInfo
+         Number 403
+         ChannelName "Bit 3 in DAT 4"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3000F 16#4 16#20001 0
+         ExcludesChannels 433 434 435 436 441 442
+      End ChannelInfo
+      ChannelInfo
+         Number 404
+         ChannelName "Bit 4 in DAT 4"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3000F 16#8 16#20001 0
+         ExcludesChannels 433 434 435 436 441 442
+      End ChannelInfo
+      ChannelInfo
+         Number 405
+         ChannelName "Bit 5 in DAT 4"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3000F 16#10 16#20001 0
+         ExcludesChannels 433 434 435 436 441 442
+      End ChannelInfo
+      ChannelInfo
+         Number 406
+         ChannelName "Bit 6 in DAT 4"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3000F 16#20 16#20001 0
+         ExcludesChannels 433 434 435 436 441 442
+      End ChannelInfo
+      ChannelInfo
+         Number 407
+         ChannelName "Bit 7 in DAT 4"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3000F 16#40 16#20001 0
+         ExcludesChannels 433 434 435 436 441 442
+      End ChannelInfo
+      ChannelInfo
+         Number 408
+         ChannelName "Bit 8 in DAT 4"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3000F 16#80 16#20001 0
+         ExcludesChannels 433 434 435 436 441 442
+      End ChannelInfo
+      ChannelInfo
+         Number 409
+         ChannelName "Bit 9 in DAT 4"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3000E 16#1 16#20001 0
+         ExcludesChannels 433 434 435 436 441 442
+      End ChannelInfo
+      ChannelInfo
+         Number 410
+         ChannelName "Bit 10 in DAT 4"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3000E 16#2 16#20001 0
+         ExcludesChannels 433 434 435 436 441 442
+      End ChannelInfo
+      ChannelInfo
+         Number 411
+         ChannelName "Bit 11 in DAT 4"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3000E 16#4 16#20001 0
+         ExcludesChannels 433 434 435 436 441 442
+      End ChannelInfo
+      ChannelInfo
+         Number 412
+         ChannelName "Bit 12 in DAT 4"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3000E 16#8 16#20001 0
+         ExcludesChannels 433 434 435 436 441 442
+      End ChannelInfo
+      ChannelInfo
+         Number 413
+         ChannelName "Bit 13 in DAT 4"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3000E 16#10 16#20001 0
+         ExcludesChannels 433 434 435 436 441 442
+      End ChannelInfo
+      ChannelInfo
+         Number 414
+         ChannelName "Bit 14 in DAT 4"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3000E 16#20 16#20001 0
+         ExcludesChannels 433 434 435 436 441 442
+      End ChannelInfo
+      ChannelInfo
+         Number 415
+         ChannelName "Bit 15 in DAT 4"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3000E 16#40 16#20001 0
+         ExcludesChannels 433 434 435 436 441 442
+      End ChannelInfo
+      ChannelInfo
+         Number 416
+         ChannelName "Bit 16 in DAT 4"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3000E 16#80 16#20001 0
+         ExcludesChannels 433 434 435 436 441 442
+      End ChannelInfo
+      ChannelInfo
+         Number 417
+         ChannelName "Bit 17 in DAT 4"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3000D 16#1 16#20001 0
+         ExcludesChannels 433 434 435 436 441 442
+      End ChannelInfo
+      ChannelInfo
+         Number 418
+         ChannelName "Bit 18 in DAT 4"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3000D 16#2 16#20001 0
+         ExcludesChannels 433 434 435 436 441 442
+      End ChannelInfo
+      ChannelInfo
+         Number 419
+         ChannelName "Bit 19 in DAT 4"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3000D 16#4 16#20001 0
+         ExcludesChannels 433 434 435 436 441 442
+      End ChannelInfo
+      ChannelInfo
+         Number 420
+         ChannelName "Bit 20 in DAT 4"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3000D 16#8 16#20001 0
+         ExcludesChannels 433 434 435 436 441 442
+      End ChannelInfo
+      ChannelInfo
+         Number 421
+         ChannelName "Bit 21 in DAT 4"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3000D 16#10 16#20001 0
+         ExcludesChannels 433 434 435 436 441 442
+      End ChannelInfo
+      ChannelInfo
+         Number 422
+         ChannelName "Bit 22 in DAT 4"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3000D 16#20 16#20001 0
+         ExcludesChannels 433 434 435 436 441 442
+      End ChannelInfo
+      ChannelInfo
+         Number 423
+         ChannelName "Bit 23 in DAT 4"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3000D 16#40 16#20001 0
+         ExcludesChannels 433 434 435 436 441 442
+      End ChannelInfo
+      ChannelInfo
+         Number 424
+         ChannelName "Bit 24 in DAT 4"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3000D 16#80 16#20001 0
+         ExcludesChannels 433 434 435 436 441 442
+      End ChannelInfo
+      ChannelInfo
+         Number 425
+         ChannelName "Bit 25 in DAT 4"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3000C 16#1 16#20001 0
+         ExcludesChannels 433 434 435 436 441 442
+      End ChannelInfo
+      ChannelInfo
+         Number 426
+         ChannelName "Bit 26 in DAT 4"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3000C 16#2 16#20001 0
+         ExcludesChannels 433 434 435 436 441 442
+      End ChannelInfo
+      ChannelInfo
+         Number 427
+         ChannelName "Bit 27 in DAT 4"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3000C 16#4 16#20001 0
+         ExcludesChannels 433 434 435 436 441 442
+      End ChannelInfo
+      ChannelInfo
+         Number 428
+         ChannelName "Bit 28 in DAT 4"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3000C 16#8 16#20001 0
+         ExcludesChannels 433 434 435 436 441 442
+      End ChannelInfo
+      ChannelInfo
+         Number 429
+         ChannelName "Bit 29 in DAT 4"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3000C 16#10 16#20001 0
+         ExcludesChannels 433 434 435 436 441 442
+      End ChannelInfo
+      ChannelInfo
+         Number 430
+         ChannelName "Bit 30 in DAT 4"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3000C 16#20 16#20001 0
+         ExcludesChannels 433 434 435 436 441 442
+      End ChannelInfo
+      ChannelInfo
+         Number 431
+         ChannelName "Bit 31 in DAT 4"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3000C 16#40 16#20001 0
+         ExcludesChannels 433 434 435 436 441 442
+      End ChannelInfo
+      ChannelInfo
+         Number 432
+         ChannelName "Bit 32 in DAT 4"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3000C 16#80 16#20001 0
+         ExcludesChannels 433 434 435 436 441 442
+      End ChannelInfo
+
+      (* BOOL DWORD *)
+      ChannelInfo
+         Number 433
+         ChannelName "All Bits in DAT 4"
+         Datatype Dword_In
+         Routine 523
+         CopyParameters 16#3000C 16#FFFFFFFF 0 0 16#20001 0
+         ExcludesChannels 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 434 435 436 441 442 
+      End ChannelInfo
+
+      (* INT Short *)
+      ChannelInfo
+         Number 434 
+         ChannelName "Integer Short DAT 4"
+         Datatype Int_In
+         Routine 323
+         CopyParameters 16#3000C 16 16 1 0 16#20001 0
+         ExcludesChannels 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 435 436 441 442
+      End ChannelInfo
+
+      (* INT Long *)
+      ChannelInfo
+         Number 435 
+         ChannelName "Integer Long DAT 4"
+         Datatype DInt_In
+         Routine 323
+         CopyParameters 16#3000C 0 32 1 0 16#20001 0
+         ExcludesChannels 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 436 441 442
+      End ChannelInfo
+
+      (* REAL *)
+      ChannelInfo
+         Number 436 
+         ChannelName "Real DAT 4"
+         Datatype Real_In
+         Routine 723
+         CopyParameters 16#3000C 0 16#20001 0
+         ExcludesChannels 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 441 442
+      End ChannelInfo
+
+      (* INT2 Short *)
+      ChannelInfo
+         Number 441 
+         ChannelName "Integer Short (LSW) DAT 4"
+         Datatype Int_In
+         Routine 323
+         CopyParameters 16#3000C 16 16 1 0 16#20001 0
+         ExcludesChannels 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436
+      End ChannelInfo
+      ChannelInfo
+         Number 442
+         ChannelName "Integer Short (MSW) DAT 4"
+         Datatype Int_In
+         Routine 323
+         CopyParameters 16#3000C 0 16 1 0 16#20001 0
+         ExcludesChannels 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436
+      End ChannelInfo
+      (* DAT 4 - END *)
+
+      (* DAT 5 - BEGIN *)
+      (* BOOL 32 bits *)
+      ChannelInfo
+         Number 501 
+         ChannelName "Bit 1 in DAT 5"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30013 16#1 16#20001 0
+         ExcludesChannels 533 534 535 536 541 542
+      End ChannelInfo
+      ChannelInfo
+         Number 502
+         ChannelName "Bit 2 in DAT 5"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30013 16#2 16#20001 0
+         ExcludesChannels 533 534 535 536 541 542
+      End ChannelInfo
+      ChannelInfo
+         Number 503
+         ChannelName "Bit 3 in DAT 5"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30013 16#4 16#20001 0
+         ExcludesChannels 533 534 535 536 541 542
+      End ChannelInfo
+      ChannelInfo
+         Number 504
+         ChannelName "Bit 4 in DAT 5"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30013 16#8 16#20001 0
+         ExcludesChannels 533 534 535 536 541 542
+      End ChannelInfo
+      ChannelInfo
+         Number 505
+         ChannelName "Bit 5 in DAT 5"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30013 16#10 16#20001 0
+         ExcludesChannels 533 534 535 536 541 542
+      End ChannelInfo
+      ChannelInfo
+         Number 506
+         ChannelName "Bit 6 in DAT 5"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30013 16#20 16#20001 0
+         ExcludesChannels 533 534 535 536 541 542
+      End ChannelInfo
+      ChannelInfo
+         Number 507
+         ChannelName "Bit 7 in DAT 5"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30013 16#40 16#20001 0
+         ExcludesChannels 533 534 535 536 541 542
+      End ChannelInfo
+      ChannelInfo
+         Number 508
+         ChannelName "Bit 8 in DAT 5"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30013 16#80 16#20001 0
+         ExcludesChannels 533 534 535 536 541 542
+      End ChannelInfo
+      ChannelInfo
+         Number 509
+         ChannelName "Bit 9 in DAT 5"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30012 16#01 16#20001 0
+         ExcludesChannels 533 534 535 536 541 542
+      End ChannelInfo
+      ChannelInfo
+         Number 510
+         ChannelName "Bit 10 in DAT 5"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30012 16#02 16#20001 0
+         ExcludesChannels 533 534 535 536 541 542
+      End ChannelInfo
+      ChannelInfo
+         Number 511
+         ChannelName "Bit 11 in DAT 5"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30012 16#04 16#20001 0
+         ExcludesChannels 533 534 535 536 541 542
+      End ChannelInfo
+      ChannelInfo
+         Number 512
+         ChannelName "Bit 12 in DAT 5"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30012 16#08 16#20001 0
+         ExcludesChannels 533 534 535 536 541 542
+      End ChannelInfo
+      ChannelInfo
+         Number 513
+         ChannelName "Bit 13 in DAT 5"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30012 16#10 16#20001 0
+         ExcludesChannels 533 534 535 536 541 542
+      End ChannelInfo
+      ChannelInfo
+         Number 514
+         ChannelName "Bit 14 in DAT 5"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30012 16#20 16#20001 0
+         ExcludesChannels 533 534 535 536 541 542
+      End ChannelInfo
+      ChannelInfo
+         Number 515
+         ChannelName "Bit 15 in DAT 5"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30012 16#40 16#20001 0
+         ExcludesChannels 533 534 535 536 541 542
+      End ChannelInfo
+      ChannelInfo
+         Number 516
+         ChannelName "Bit 16 in DAT 5"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30012 16#80 16#20001 0
+         ExcludesChannels 533 534 535 536 541 542
+      End ChannelInfo
+      ChannelInfo
+         Number 517
+         ChannelName "Bit 17 in DAT 5"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30011 16#1 16#20001 0
+         ExcludesChannels 533 534 535 536 541 542
+      End ChannelInfo
+      ChannelInfo
+         Number 518
+         ChannelName "Bit 18 in DAT 5"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30011 16#2 16#20001 0
+         ExcludesChannels 533 534 535 536 541 542
+      End ChannelInfo
+      ChannelInfo
+         Number 519
+         ChannelName "Bit 19 in DAT 5"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30011 16#4 16#20001 0
+         ExcludesChannels 533 534 535 536 541 542
+      End ChannelInfo
+      ChannelInfo
+         Number 520
+         ChannelName "Bit 20 in DAT 5"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30011 16#8 16#20001 0
+         ExcludesChannels 533 534 535 536 541 542
+      End ChannelInfo
+      ChannelInfo
+         Number 521
+         ChannelName "Bit 21 in DAT 5"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30011 16#10 16#20001 0
+         ExcludesChannels 533 534 535 536 541 542
+      End ChannelInfo
+      ChannelInfo
+         Number 522
+         ChannelName "Bit 22 in DAT 5"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30011 16#20 16#20001 0
+         ExcludesChannels 533 534 535 536 541 542
+      End ChannelInfo
+      ChannelInfo
+         Number 523
+         ChannelName "Bit 23 in DAT 5"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30011 16#40 16#20001 0
+         ExcludesChannels 533 534 535 536 541 542
+      End ChannelInfo
+      ChannelInfo
+         Number 524
+         ChannelName "Bit 24 in DAT 5"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30011 16#80 16#20001 0
+         ExcludesChannels 533 534 535 536 541 542
+      End ChannelInfo
+      ChannelInfo
+         Number 525
+         ChannelName "Bit 25 in DAT 5"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30010 16#01 16#20001 0
+         ExcludesChannels 533 534 535 536 541 542
+      End ChannelInfo
+      ChannelInfo
+         Number 526
+         ChannelName "Bit 26 in DAT 5"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30010 16#02 16#20001 0
+         ExcludesChannels 533 534 535 536 541 542
+      End ChannelInfo
+      ChannelInfo
+         Number 527
+         ChannelName "Bit 27 in DAT 5"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30010 16#04 16#20001 0
+         ExcludesChannels 533 534 535 536 541 542
+      End ChannelInfo
+      ChannelInfo
+         Number 528
+         ChannelName "Bit 28 in DAT 5"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30010 16#08 16#20001 0
+         ExcludesChannels 533 534 535 536 541 542
+      End ChannelInfo
+      ChannelInfo
+         Number 529
+         ChannelName "Bit 29 in DAT 5"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30010 16#10 16#20001 0
+         ExcludesChannels 533 534 535 536 541 542
+      End ChannelInfo
+      ChannelInfo
+         Number 530
+         ChannelName "Bit 30 in DAT 5"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30010 16#20 16#20001 0
+         ExcludesChannels 533 534 535 536 541 542
+      End ChannelInfo
+      ChannelInfo
+         Number 531
+         ChannelName "Bit 31 in DAT 5"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30010 16#40 16#20001 0
+         ExcludesChannels 533 534 535 536 541 542
+      End ChannelInfo
+      ChannelInfo
+         Number 532
+         ChannelName "Bit 32 in DAT 5"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30010 16#80 16#20001 0
+         ExcludesChannels 533 534 535 536 541 542
+      End ChannelInfo
+
+      (* BOOL DWORD *)
+      ChannelInfo
+         Number 533
+         ChannelName "All Bits in DAT 5"
+         Datatype Dword_In
+         Routine 523
+         CopyParameters 16#30010 16#FFFFFFFF 0 0 16#20001 0
+         ExcludesChannels 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 520 521 522 523 524 525 526 527 528 529 530 531 532 534 535 536 541 542
+      End ChannelInfo
+
+      (* INT Short *)
+      ChannelInfo
+         Number 534 
+         ChannelName "Integer Short DAT 5"
+         Datatype Int_In
+         Routine 323
+         CopyParameters 16#30010 16 16 1 0 16#20001 0
+         ExcludesChannels 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 520 521 522 523 524 525 526 527 528 529 530 531 532 533 535 536 541 542
+      End ChannelInfo
+
+      (* INT Long *)
+      ChannelInfo
+         Number 535 
+         ChannelName "Integer Long DAT 5"
+         Datatype DInt_In
+         Routine 323
+         CopyParameters 16#30010 0 32 1 0 16#20001 0
+         ExcludesChannels 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 520 521 522 523 524 525 526 527 528 529 530 531 532 533 534 536 541 542
+      End ChannelInfo
+
+      (* REAL *)
+      ChannelInfo
+         Number 536 
+         ChannelName "Real DAT 5"
+         Datatype Real_In
+         Routine 723
+         CopyParameters 16#30010 0 16#20001 0
+         ExcludesChannels 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 520 521 522 523 524 525 526 527 528 529 530 531 532 533 534 535 541 542
+      End ChannelInfo
+
+      (* INT2 Short *)
+      ChannelInfo
+         Number 541 
+         ChannelName "Integer Short (LSW) DAT 5"
+         Datatype Int_In
+         Routine 323
+         CopyParameters 16#30010 16 16 1 0 16#20001 0
+         ExcludesChannels 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 520 521 522 523 524 525 526 527 528 529 530 531 532 533 534 535 536
+      End ChannelInfo
+      ChannelInfo
+         Number 542
+         ChannelName "Integer Short (MSW) DAT 5"
+         Datatype Int_In
+         Routine 323
+         CopyParameters 16#30010 0 16 1 0 16#20001 0
+         ExcludesChannels 501 502 503 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 520 521 522 523 524 525 526 527 528 529 530 531 532 533 534 535 536
+      End ChannelInfo
+      (* DAT 5 - END *)
+
+      (* DAT 6 - BEGIN *)
+      (* BOOL 32 bits *)
+      ChannelInfo
+         Number 601 
+         ChannelName "Bit 1 in DAT 6"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30017 16#1 16#20001 0
+         ExcludesChannels 633 634 635 636 641 642
+      End ChannelInfo
+      ChannelInfo
+         Number 602
+         ChannelName "Bit 2 in DAT 6"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30017 16#2 16#20001 0
+         ExcludesChannels 633 634 635 636 641 642
+      End ChannelInfo
+      ChannelInfo
+         Number 603
+         ChannelName "Bit 3 in DAT 6"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30017 16#4 16#20001 0
+         ExcludesChannels 633 634 635 636 641 642
+      End ChannelInfo
+      ChannelInfo
+         Number 604
+         ChannelName "Bit 4 in DAT 6"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30017 16#8 16#20001 0
+         ExcludesChannels 633 634 635 636 641 642
+      End ChannelInfo
+      ChannelInfo
+         Number 605
+         ChannelName "Bit 5 in DAT 6"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30017 16#10 16#20001 0
+         ExcludesChannels 633 634 635 636 641 642
+      End ChannelInfo
+      ChannelInfo
+         Number 606
+         ChannelName "Bit 6 in DAT 6"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30017 16#20 16#20001 0
+         ExcludesChannels 633 634 635 636 641 642
+      End ChannelInfo
+      ChannelInfo
+         Number 607
+         ChannelName "Bit 7 in DAT 6"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30017 16#40 16#20001 0
+         ExcludesChannels 633 634 635 636 641 642
+      End ChannelInfo
+      ChannelInfo
+         Number 608
+         ChannelName "Bit 8 in DAT 6"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30017 16#80 16#20001 0
+         ExcludesChannels 633 634 635 636 641 642
+      End ChannelInfo
+      ChannelInfo
+         Number 609
+         ChannelName "Bit 9 in DAT 6"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30016 16#01 16#20001 0
+         ExcludesChannels 633 634 635 636 641 642
+      End ChannelInfo
+      ChannelInfo
+         Number 610
+         ChannelName "Bit 10 in DAT 6"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30016 16#02 16#20001 0
+         ExcludesChannels 633 634 635 636 641 642
+      End ChannelInfo
+      ChannelInfo
+         Number 611
+         ChannelName "Bit 11 in DAT 6"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30016 16#04 16#20001 0
+         ExcludesChannels 633 634 635 636 641 642
+      End ChannelInfo
+      ChannelInfo
+         Number 612
+         ChannelName "Bit 12 in DAT 6"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30016 16#08 16#20001 0
+         ExcludesChannels 633 634 635 636 641 642
+      End ChannelInfo
+      ChannelInfo
+         Number 613
+         ChannelName "Bit 13 in DAT 6"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30016 16#10 16#20001 0
+         ExcludesChannels 633 634 635 636 641 642
+      End ChannelInfo
+      ChannelInfo
+         Number 614
+         ChannelName "Bit 14 in DAT 6"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30016 16#20 16#20001 0
+         ExcludesChannels 633 634 635 636 641 642
+      End ChannelInfo
+      ChannelInfo
+         Number 615
+         ChannelName "Bit 15 in DAT 6"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30016 16#40 16#20001 0
+         ExcludesChannels 633 634 635 636 641 642
+      End ChannelInfo
+      ChannelInfo
+         Number 616
+         ChannelName "Bit 16 in DAT 6"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30016 16#80 16#20001 0
+         ExcludesChannels 633 634 635 636 641 642
+      End ChannelInfo
+      ChannelInfo
+         Number 617
+         ChannelName "Bit 17 in DAT 6"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30015 16#1 16#20001 0
+         ExcludesChannels 633 634 635 636 641 642
+      End ChannelInfo
+      ChannelInfo
+         Number 618
+         ChannelName "Bit 18 in DAT 6"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30015 16#2 16#20001 0
+         ExcludesChannels 633 634 635 636 641 642
+      End ChannelInfo
+      ChannelInfo
+         Number 619
+         ChannelName "Bit 19 in DAT 6"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30015 16#4 16#20001 0
+         ExcludesChannels 633 634 635 636 641 642
+      End ChannelInfo
+      ChannelInfo
+         Number 620
+         ChannelName "Bit 20 in DAT 6"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters  16#30015 16#8 16#20001 0
+         ExcludesChannels 633 634 635 636 641 642
+      End ChannelInfo
+      ChannelInfo
+         Number 621
+         ChannelName "Bit 21 in DAT 6"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30015 16#10 16#20001 0
+         ExcludesChannels 633 634 635 636 641 642
+      End ChannelInfo
+      ChannelInfo
+         Number 622
+         ChannelName "Bit 22 in DAT 6"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30015 16#20 16#20001 0
+         ExcludesChannels 633 634 635 636 641 642
+      End ChannelInfo
+      ChannelInfo
+         Number 623
+         ChannelName "Bit 23 in DAT 6"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30015 16#40 16#20001 0
+         ExcludesChannels 633 634 635 636 641 642
+      End ChannelInfo
+      ChannelInfo
+         Number 624
+         ChannelName "Bit 24 in DAT 6"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30015 16#80 16#20001 0
+         ExcludesChannels 633 634 635 636 641 642
+      End ChannelInfo
+      ChannelInfo
+         Number 625
+         ChannelName "Bit 25 in DAT 6"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30014 16#01 16#20001 0
+         ExcludesChannels 633 634 635 636 641 642
+      End ChannelInfo
+      ChannelInfo
+         Number 626
+         ChannelName "Bit 26 in DAT 6"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30014 16#02 16#20001 0
+         ExcludesChannels 633 634 635 636 641 642
+      End ChannelInfo
+      ChannelInfo
+         Number 627
+         ChannelName "Bit 27 in DAT 6"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30014 16#04 16#20001 0
+         ExcludesChannels 633 634 635 636 641 642
+      End ChannelInfo
+      ChannelInfo
+         Number 628
+         ChannelName "Bit 28 in DAT 6"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30014 16#08 16#20001 0
+         ExcludesChannels 633 634 635 636 641 642
+      End ChannelInfo
+      ChannelInfo
+         Number 629
+         ChannelName "Bit 29 in DAT 6"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30014 16#10 16#20001 0
+         ExcludesChannels 633 634 635 636 641 642
+      End ChannelInfo
+      ChannelInfo
+         Number 630
+         ChannelName "Bit 30 in DAT 6"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30014 16#20 16#20001 0
+         ExcludesChannels 633 634 635 636 641 642
+      End ChannelInfo
+      ChannelInfo
+         Number 631
+         ChannelName "Bit 31 in DAT 6"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30014 16#40 16#20001 0
+         ExcludesChannels 633 634 635 636 641 642
+      End ChannelInfo
+      ChannelInfo
+         Number 632
+         ChannelName "Bit 32 in DAT 6"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30014 16#80 16#20001 0
+         ExcludesChannels 633 634 635 636 641 642
+      End ChannelInfo
+
+      (* BOOL DWORD *)
+      ChannelInfo
+         Number 633
+         ChannelName "All Bits in DAT 6"
+         Datatype Dword_In
+         Routine 523
+         CopyParameters 16#30014 16#FFFFFFFF 0 0 16#20001 0
+         ExcludesChannels 601 602 603 604 605 606 607 608 609 610 611 612 613 614 615 616 617 618 619 620 621 622 623 624 625 626 627 628 629 630 631 632 634 635 636 641 642
+      End ChannelInfo
+
+      (* INT Short *)
+      ChannelInfo
+         Number 634
+         ChannelName "Integer Short DAT 6"
+         Datatype Int_In
+         Routine 323
+         CopyParameters 16#30014 16 16 1 0 16#20001 0
+         ExcludesChannels 601 602 603 604 605 606 607 608 609 610 611 612 613 614 615 616 617 618 619 620 621 622 623 624 625 626 627 628 629 630 631 632 633 635 636 641 642
+      End ChannelInfo
+
+      (* INT Long *)
+      ChannelInfo
+         Number 635
+         ChannelName "Integer Long DAT 6"
+         Datatype DInt_In
+         Routine 323
+         CopyParameters 16#30014 0 32 1 0 16#20001 0
+         ExcludesChannels 601 602 603 604 605 606 607 608 609 610 611 612 613 614 615 616 617 618 619 620 621 622 623 624 625 626 627 628 629 630 631 632 633 634 636 641 642
+      End ChannelInfo
+
+      (* REAL *)
+      ChannelInfo
+         Number 636
+         ChannelName "Real DAT 6"
+         Datatype Real_In
+         Routine 723
+         CopyParameters 16#30014 0 16#20001 0
+         ExcludesChannels 601 602 603 604 605 606 607 608 609 610 611 612 613 614 615 616 617 618 619 620 621 622 623 624 625 626 627 628 629 630 631 632 633 634 635 641 642
+      End ChannelInfo
+
+      (* INT2 Short *)
+      ChannelInfo
+         Number 641
+         ChannelName "Integer Short (LSW) DAT 6"
+         Datatype Int_In
+         Routine 323
+         CopyParameters 16#30014 16 16 1 0 16#20001 0
+         ExcludesChannels 601 602 603 604 605 606 607 608 609 610 611 612 613 614 615 616 617 618 619 620 621 622 623 624 625 626 627 628 629 630 631 632 633 634 635 636
+      End ChannelInfo
+      ChannelInfo
+         Number 642
+         ChannelName "Integer Short (MSW) DAT 6"
+         Datatype Int_In
+         Routine 323
+         CopyParameters 16#30014 0 16 1 0 16#20001 0
+         ExcludesChannels 601 602 603 604 605 606 607 608 609 610 611 612 613 614 615 616 617 618 619 620 621 622 623 624 625 626 627 628 629 630 631 632 633 634 635 636
+      End ChannelInfo
+      (* DAT 6 - END *)
+
+      (* DAT 7 - BEGIN *)
+      (* BOOL 32 bits *)
+      ChannelInfo
+         Number 701 
+         ChannelName "Bit 1 in DAT 7"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3001B 16#1 16#20001 0
+         ExcludesChannels 733 734 735 736 741 742
+      End ChannelInfo
+      ChannelInfo
+         Number 702
+         ChannelName "Bit 2 in DAT 7"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3001B 16#2 16#20001 0
+         ExcludesChannels 733 734 735 736 741 742
+      End ChannelInfo
+      ChannelInfo
+         Number 703
+         ChannelName "Bit 3 in DAT 7"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3001B 16#4 16#20001 0
+         ExcludesChannels 733 734 735 736 741 742
+      End ChannelInfo
+      ChannelInfo
+         Number 704
+         ChannelName "Bit 4 in DAT 7"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3001B 16#8 16#20001 0
+         ExcludesChannels 733 734 735 736 741 742
+      End ChannelInfo
+      ChannelInfo
+         Number 705
+         ChannelName "Bit 5 in DAT 7"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3001B 16#10 16#20001 0
+         ExcludesChannels 733 734 735 736 741 742
+      End ChannelInfo
+      ChannelInfo
+         Number 706
+         ChannelName "Bit 6 in DAT 7"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3001B 16#20 16#20001 0
+         ExcludesChannels 733 734 735 736 741 742
+      End ChannelInfo
+      ChannelInfo
+         Number 707
+         ChannelName "Bit 7 in DAT 7"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3001B 16#40 16#20001 0
+         ExcludesChannels 733 734 735 736 741 742
+      End ChannelInfo
+      ChannelInfo
+         Number 708
+         ChannelName "Bit 8 in DAT 7"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3001B 16#80 16#20001 0
+         ExcludesChannels 733 734 735 736 741 742
+      End ChannelInfo
+      ChannelInfo
+         Number 709
+         ChannelName "Bit 9 in DAT 7"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3001A 16#01 16#20001 0
+         ExcludesChannels 733 734 735 736 741 742
+      End ChannelInfo
+      ChannelInfo
+         Number 710
+         ChannelName "Bit 10 in DAT 7"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3001A 16#02 16#20001 0
+         ExcludesChannels 733 734 735 736 741 742
+      End ChannelInfo
+      ChannelInfo
+         Number 711
+         ChannelName "Bit 11 in DAT 7"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3001A 16#04 16#20001 0
+         ExcludesChannels 733 734 735 736 741 742
+      End ChannelInfo
+      ChannelInfo
+         Number 712
+         ChannelName "Bit 12 in DAT 7"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3001A 16#08 16#20001 0
+         ExcludesChannels 733 734 735 736 741 742
+      End ChannelInfo
+      ChannelInfo
+         Number 713
+         ChannelName "Bit 13 in DAT 7"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3001A 16#10 16#20001 0
+         ExcludesChannels 733 734 735 736 741 742
+      End ChannelInfo
+      ChannelInfo
+         Number 714
+         ChannelName "Bit 14 in DAT 7"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3001A 16#20 16#20001 0
+         ExcludesChannels 733 734 735 736 741 742
+      End ChannelInfo
+      ChannelInfo
+         Number 715
+         ChannelName "Bit 15 in DAT 7"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3001A 16#40 16#20001 0
+         ExcludesChannels 733 734 735 736 741 742
+      End ChannelInfo
+      ChannelInfo
+         Number 716
+         ChannelName "Bit 16 in DAT 7"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3001A 16#80 16#20001 0
+         ExcludesChannels 733 734 735 736 741 742
+      End ChannelInfo
+      ChannelInfo
+         Number 717
+         ChannelName "Bit 17 in DAT 7"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30019 16#1 16#20001 0
+         ExcludesChannels 733 734 735 736 741 742
+      End ChannelInfo
+      ChannelInfo
+         Number 718
+         ChannelName "Bit 18 in DAT 7"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30019 16#2 16#20001 0
+         ExcludesChannels 733 734 735 736 741 742
+      End ChannelInfo
+      ChannelInfo
+         Number 719
+         ChannelName "Bit 19 in DAT 7"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30019 16#4 16#20001 0
+         ExcludesChannels 733 734 735 736 741 742
+      End ChannelInfo
+      ChannelInfo
+         Number 720
+         ChannelName "Bit 20 in DAT 7"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30019 16#8 16#20001 0
+         ExcludesChannels 733 734 735 736 741 742
+      End ChannelInfo
+      ChannelInfo
+         Number 721
+         ChannelName "Bit 21 in DAT 7"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30019 16#10 16#20001 0
+         ExcludesChannels 733 734 735 736 741 742
+      End ChannelInfo
+      ChannelInfo
+         Number 722
+         ChannelName "Bit 22 in DAT 7"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30019 16#20 16#20001 0
+         ExcludesChannels 733 734 735 736 741 742
+      End ChannelInfo
+      ChannelInfo
+         Number 723
+         ChannelName "Bit 23 in DAT 7"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30019 16#40 16#20001 0
+         ExcludesChannels 733 734 735 736 741 742
+      End ChannelInfo
+      ChannelInfo
+         Number 724
+         ChannelName "Bit 24 in DAT 7"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30019 16#80 16#20001 0
+         ExcludesChannels 733 734 735 736 741 742
+      End ChannelInfo
+      ChannelInfo
+         Number 725
+         ChannelName "Bit 25 in DAT 7"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30018 16#01 16#20001 0
+         ExcludesChannels 733 734 735 736 741 742
+      End ChannelInfo
+      ChannelInfo
+         Number 726
+         ChannelName "Bit 26 in DAT 7"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30018 16#02 16#20001 0
+         ExcludesChannels 733 734 735 736 741 742
+      End ChannelInfo
+      ChannelInfo
+         Number 727
+         ChannelName "Bit 27 in DAT 7"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30018 16#04 16#20001 0
+         ExcludesChannels 733 734 735 736 741 742
+      End ChannelInfo
+      ChannelInfo
+         Number 728
+         ChannelName "Bit 28 in DAT 7"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30018 16#08 16#20001 0
+         ExcludesChannels 733 734 735 736 741 742
+      End ChannelInfo
+      ChannelInfo
+         Number 729
+         ChannelName "Bit 29 in DAT 7"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30018 16#10 16#20001 0
+         ExcludesChannels 733 734 735 736 741 742
+      End ChannelInfo
+      ChannelInfo
+         Number 730
+         ChannelName "Bit 30 in DAT 7"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30018 16#20 16#20001 0
+         ExcludesChannels 733 734 735 736 741 742
+      End ChannelInfo
+      ChannelInfo
+         Number 731
+         ChannelName "Bit 31 in DAT 7"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30018 16#40 16#20001 0
+         ExcludesChannels 733 734 735 736 741 742
+      End ChannelInfo
+      ChannelInfo
+         Number 732
+         ChannelName "Bit 32 in DAT 7"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#30018 16#80 16#20001 0
+         ExcludesChannels 733 734 735 736 741 742
+      End ChannelInfo
+
+      (* BOOL DWORD *)
+      ChannelInfo
+         Number 733
+         ChannelName "All Bits in DAT 7"
+         Datatype Dword_In
+         Routine 523
+         CopyParameters 16#30018 16#FFFFFFFF 0 0 16#20001 0
+         ExcludesChannels 701 702 703 704 705 706 707 708 709 710 711 712 713 714 715 716 717 718 719 720 721 722 723 724 725 726 727 728 729 730 731 732 734 735 736 741 742 
+      End ChannelInfo
+
+      (* INT Short *)
+      ChannelInfo
+         Number 734 
+         ChannelName "Integer Short DAT 7"
+         Datatype Int_In
+         Routine 323
+         CopyParameters 16#30018 16 16 1 0 16#20001 0
+         ExcludesChannels 701 702 703 704 705 706 707 708 709 710 711 712 713 714 715 716 717 718 719 720 721 722 723 724 725 726 727 728 729 730 731 732 733 735 736 741 742
+      End ChannelInfo
+
+      (* INT Long *)
+      ChannelInfo
+         Number 735 
+         ChannelName "Integer Long DAT 7"
+         Datatype DInt_In
+         Routine 323
+         CopyParameters 16#30018 0 32 1 0 16#20001 0
+         ExcludesChannels 701 702 703 704 705 706 707 708 709 710 711 712 713 714 715 716 717 718 719 720 721 722 723 724 725 726 727 728 729 730 731 732 733 734 736 741 742
+      End ChannelInfo
+
+      (* REAL *)
+      ChannelInfo
+         Number 736 
+         ChannelName "Real DAT 7"
+         Datatype Real_In
+         Routine 723
+         CopyParameters 16#30018 0 16#20001 0
+         ExcludesChannels 701 702 703 704 705 706 707 708 709 710 711 712 713 714 715 716 717 718 719 720 721 722 723 724 725 726 727 728 729 730 731 732 733 734 735 741 742
+      End ChannelInfo
+
+      (* INT2 Short *)
+      ChannelInfo
+         Number 741 
+         ChannelName "Integer Short (LSW) DAT 7"
+         Datatype Int_In
+         Routine 323
+         CopyParameters 16#30018 16 16 1 0 16#20001 0
+         ExcludesChannels 701 702 703 704 705 706 707 708 709 710 711 712 713 714 715 716 717 718 719 720 721 722 723 724 725 726 727 728 729 730 731 732 733 734 735 736
+      End ChannelInfo
+      ChannelInfo
+         Number 742
+         ChannelName "Integer Short (MSW) DAT 7"
+         Datatype Int_In
+         Routine 323
+         CopyParameters 16#30018 0 16 1 0 16#20001 0
+         ExcludesChannels 701 702 703 704 705 706 707 708 709 710 711 712 713 714 715 716 717 718 719 720 721 722 723 724 725 726 727 728 729 730 731 732 733 734 735 736
+      End ChannelInfo
+      (* DAT 7 - END *)
+
+      (* DAT 8 - BEGIN *)
+      (* BOOL 32 bits *)
+      ChannelInfo
+         Number 801 
+         ChannelName "Bit 1 in DAT 8"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3001F 16#1 16#20001 0
+         ExcludesChannels 833 834 835 836 841 842
+      End ChannelInfo
+      ChannelInfo
+         Number 802
+         ChannelName "Bit 2 in DAT 8"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3001F 16#2 16#20001 0
+         ExcludesChannels 833 834 835 836 841 842
+      End ChannelInfo
+      ChannelInfo
+         Number 803
+         ChannelName "Bit 3 in DAT 8"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3001F 16#4 16#20001 0
+         ExcludesChannels 833 834 835 836 841 842
+      End ChannelInfo
+      ChannelInfo
+         Number 804
+         ChannelName "Bit 4 in DAT 8"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3001F 16#8 16#20001 0
+         ExcludesChannels 833 834 835 836 841 842
+      End ChannelInfo
+      ChannelInfo
+         Number 805
+         ChannelName "Bit 5 in DAT 8"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3001F 16#10 16#20001 0
+         ExcludesChannels 833 834 835 836 841 842
+      End ChannelInfo
+      ChannelInfo
+         Number 806
+         ChannelName "Bit 6 in DAT 8"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3001F 16#20 16#20001 0
+         ExcludesChannels 833 834 835 836 841 842
+      End ChannelInfo
+      ChannelInfo
+         Number 807
+         ChannelName "Bit 7 in DAT 8"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3001F 16#40 16#20001 0
+         ExcludesChannels 833 834 835 836 841 842
+      End ChannelInfo
+      ChannelInfo
+         Number 808
+         ChannelName "Bit 8 in DAT 8"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3001F 16#80 16#20001 0
+         ExcludesChannels 833 834 835 836 841 842
+      End ChannelInfo
+      ChannelInfo
+         Number 809
+         ChannelName "Bit 9 in DAT 8"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3001E 16#01 16#20001 0
+         ExcludesChannels 833 834 835 836 841 842
+      End ChannelInfo
+      ChannelInfo
+         Number 810
+         ChannelName "Bit 10 in DAT 8"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3001E 16#02 16#20001 0
+         ExcludesChannels 833 834 835 836 841 842
+      End ChannelInfo
+      ChannelInfo
+         Number 811
+         ChannelName "Bit 11 in DAT 8"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3001E 16#04 16#20001 0
+         ExcludesChannels 833 834 835 836 841 842
+      End ChannelInfo
+      ChannelInfo
+         Number 812
+         ChannelName "Bit 12 in DAT 8"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3001E 16#08 16#20001 0
+         ExcludesChannels 833 834 835 836 841 842
+      End ChannelInfo
+      ChannelInfo
+         Number 813
+         ChannelName "Bit 13 in DAT 8"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3001E 16#10 16#20001 0
+         ExcludesChannels 833 834 835 836 841 842
+      End ChannelInfo
+      ChannelInfo
+         Number 814
+         ChannelName "Bit 14 in DAT 8"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3001E 16#20 16#20001 0
+         ExcludesChannels 833 834 835 836 841 842
+      End ChannelInfo
+      ChannelInfo
+         Number 815
+         ChannelName "Bit 15 in DAT 8"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3001E 16#40 16#20001 0
+         ExcludesChannels 833 834 835 836 841 842
+      End ChannelInfo
+      ChannelInfo
+         Number 816
+         ChannelName "Bit 16 in DAT 8"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3001E 16#80 16#20001 0
+         ExcludesChannels 833 834 835 836 841 842
+      End ChannelInfo
+      ChannelInfo
+         Number 817
+         ChannelName "Bit 17 in DAT 8"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3001D 16#1 16#20001 0
+         ExcludesChannels 833 834 835 836 841 842
+      End ChannelInfo
+      ChannelInfo
+         Number 818
+         ChannelName "Bit 18 in DAT 8"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3001D 16#2 16#20001 0
+         ExcludesChannels 833 834 835 836 841 842
+      End ChannelInfo
+      ChannelInfo
+         Number 819
+         ChannelName "Bit 19 in DAT 8"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3001D 16#4 16#20001 0
+         ExcludesChannels 833 834 835 836 841 842
+      End ChannelInfo
+      ChannelInfo
+         Number 820
+         ChannelName "Bit 20 in DAT 8"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3001D 16#8 16#20001 0
+         ExcludesChannels 833 834 835 836 841 842
+      End ChannelInfo
+      ChannelInfo
+         Number 821
+         ChannelName "Bit 21 in DAT 8"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3001D 16#10 16#20001 0
+         ExcludesChannels 833 834 835 836 841 842
+      End ChannelInfo
+      ChannelInfo
+         Number 822
+         ChannelName "Bit 22 in DAT 8"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3001D 16#20 16#20001 0
+         ExcludesChannels 833 834 835 836 841 842
+      End ChannelInfo
+      ChannelInfo
+         Number 823
+         ChannelName "Bit 23 in DAT 8"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3001D 16#40 16#20001 0
+         ExcludesChannels 833 834 835 836 841 842
+      End ChannelInfo
+      ChannelInfo
+         Number 824
+         ChannelName "Bit 24 in DAT 8"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3001D 16#80 16#20001 0
+         ExcludesChannels 833 834 835 836 841 842
+      End ChannelInfo
+      ChannelInfo
+         Number 825
+         ChannelName "Bit 25 in DAT 8"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3001C 16#01 16#20001 0
+         ExcludesChannels 833 834 835 836 841 842
+      End ChannelInfo
+      ChannelInfo
+         Number 826
+         ChannelName "Bit 26 in DAT 8"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3001C 16#02 16#20001 0
+         ExcludesChannels 833 834 835 836 841 842
+      End ChannelInfo
+      ChannelInfo
+         Number 827
+         ChannelName "Bit 27 in DAT 8"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3001C 16#04 16#20001 0
+         ExcludesChannels 833 834 835 836 841 842
+      End ChannelInfo
+      ChannelInfo
+         Number 828
+         ChannelName "Bit 28 in DAT 8"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3001C 16#08 16#20001 0
+         ExcludesChannels 833 834 835 836 841 842
+      End ChannelInfo
+      ChannelInfo
+         Number 829
+         ChannelName "Bit 29 in DAT 8"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3001C 16#10 16#20001 0
+         ExcludesChannels 833 834 835 836 841 842
+      End ChannelInfo
+      ChannelInfo
+         Number 830
+         ChannelName "Bit 30 in DAT 8"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3001C 16#20 16#20001 0
+         ExcludesChannels 833 834 835 836 841 842
+      End ChannelInfo
+      ChannelInfo
+         Number 831
+         ChannelName "Bit 31 in DAT 8"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3001C 16#40 16#20001 0
+         ExcludesChannels 833 834 835 836 841 842
+      End ChannelInfo
+      ChannelInfo
+         Number 832
+         ChannelName "Bit 32 in DAT 8"
+         Datatype Bool_In
+         Routine 123
+         CopyParameters 16#3001C 16#80 16#20001 0
+         ExcludesChannels 833 834 835 836 841 842
+      End ChannelInfo
+
+      (* BOOL DWORD *)
+      ChannelInfo
+         Number 833
+         ChannelName "All Bits in DAT 8"
+         Datatype Dword_In
+         Routine 523
+         CopyParameters 16#3001C 16#FFFFFFFF 0 0 16#20001 0
+         ExcludesChannels 801 802 803 804 805 806 807 808 809 810 811 812 813 814 815 816 817 818 819 820 821 822 823 824 825 826 827 828 829 830 831 832 834 835 836 841 842 
+      End ChannelInfo
+
+      (* INT Short *)
+      ChannelInfo
+         Number 834 
+         ChannelName "Integer Short DAT 8"
+         Datatype Int_In
+         Routine 323
+         CopyParameters 16#3001C 16 16 1 0 16#20001 0
+         ExcludesChannels 801 802 803 804 805 806 807 808 809 810 811 812 813 814 815 816 817 818 819 820 821 822 823 824 825 826 827 828 829 830 831 832 833 835 836 841 842
+      End ChannelInfo
+
+      (* INT Long *)
+      ChannelInfo
+         Number 835 
+         ChannelName "Integer Long DAT 8"
+         Datatype DInt_In
+         Routine 323
+         CopyParameters 16#3001C 0 32 1 0 16#20001 0
+         ExcludesChannels 801 802 803 804 805 806 807 808 809 810 811 812 813 814 815 816 817 818 819 820 821 822 823 824 825 826 827 828 829 830 831 832 833 834 836 841 842
+      End ChannelInfo
+
+      (* REAL *)
+      ChannelInfo
+         Number 836 
+         ChannelName "Real DAT 8"
+         Datatype Real_In
+         Routine 723
+         CopyParameters 16#3001C 0 16#20001 0
+         ExcludesChannels 801 802 803 804 805 806 807 808 809 810 811 812 813 814 815 816 817 818 819 820 821 822 823 824 825 826 827 828 829 830 831 832 833 834 835 841 842
+      End ChannelInfo
+
+      (* INT2 Short *)
+      ChannelInfo
+         Number 841 
+         ChannelName "Integer Short (LSW) DAT 8"
+         Datatype Int_In
+         Routine 323
+         CopyParameters 16#3001C 16 16 1 0 16#20001 0
+         ExcludesChannels 801 802 803 804 805 806 807 808 809 810 811 812 813 814 815 816 817 818 819 820 821 822 823 824 825 826 827 828 829 830 831 832 833 834 835 836
+      End ChannelInfo
+      ChannelInfo
+         Number 842
+         ChannelName "Integer Short (MSW) DAT 8"
+         Datatype Int_In
+         Routine 323
+         CopyParameters 16#3001C 0 16 1 0 16#20001 0
+         ExcludesChannels 801 802 803 804 805 806 807 808 809 810 811 812 813 814 815 816 817 818 819 820 821 822 823 824 825 826 827 828 829 830 831 832 833 834 835 836
+      End ChannelInfo
+      (* DAT 8 - END *)
+
+      (* 32 byte Consistency *)
+      ChannelInfo
+         Number 900
+         ChannelName "Consistency"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 16#20000 16#400
+      End ChannelInfo
+
+      (* HW Status *)
+     ChannelInfo
+         Number 1000
+         ChannelName "UnitStatus"
+         Datatype Status_In
+         Routine 900
+         CopyParameters 16#50000
+      End ChannelInfo
+
+   End Channels
+
+   UnitStatusText
+     DeviceSpecific1    "Source not polled"
+     DeviceSpecific2    "Source no response"
+     DeviceSpecific3    "Owned by other station"
+     DeviceSpecific4    "Bus full"
+     DeviceSpecific5    "Possible collision"
+     DeviceSpecific6    "DSP OK"
+     DeviceSpecific7    "Consistent DSP transfer not updated"
+     ExtendedStatus1    "Deleted"
+     ExtendedStatus2    "Active"
+     ExtendedStatus3    "Passive"
+     ExtendedStatus5    "Config running"
+     ExtendedStatus6    "Configured"
+     ExtendedStatus7    "Config error"
+     ExtendedStatus8    "DSP not active"
+   End UnitStatusText
+
+   UnitStatusSeverity
+     DeviceSpecific1   GeneralError
+     DeviceSpecific2   GeneralError
+     DeviceSpecific3   GeneralError
+     DeviceSpecific4   GeneralError
+     DeviceSpecific5   GeneralError
+     DeviceSpecific7   GeneralWarning
+     ExtendedStatus7   GeneralError
+     ExtendedStatus8   GeneralWarning
+   End UnitStatusSeverity
+
+   Configuration
+      ConfigInfo
+         ModuleKey    16#0202
+         InAreaSize   32 BYTE
+         OutAreaSize   2 BYTE
+         InByte 
+            BYTE 0       0
+            BYTE 0       1
+            BYTE 0       2
+            BYTE 0       3
+            BYTE 0       4
+            BYTE 0       5
+            BYTE 0       6
+            BYTE 0       7
+            BYTE 0       8
+            BYTE 0       9
+            BYTE 0      10
+            BYTE 0      11
+            BYTE 0      12
+            BYTE 0      13
+            BYTE 0      14
+            BYTE 0      15
+            BYTE 0      16
+            BYTE 0      17
+            BYTE 0      18
+            BYTE 0      19
+            BYTE 0      20
+            BYTE 0      21
+            BYTE 0      22
+            BYTE 0      23
+            BYTE 0      24
+            BYTE 0      25
+            BYTE 0      26
+            BYTE 0      27
+            BYTE 0      28
+            BYTE 0      29
+            BYTE 0      20
+            BYTE 0      31      
+      End ConfigInfo
+      ConfigInfo
+         EmptyConfig
+         ModuleKey     16#FFFF
+         InAreaSize    2
+         InWord 
+            WORD 0       0
+            WORD 0       1
+      End ConfigInfo
+
+   End Configuration
+
+  HWUnitInfoCRC 16#6355
+End HWUnitInfo  (* DSP Receive *)

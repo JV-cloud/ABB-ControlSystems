@@ -1,0 +1,94 @@
+(*=============================*)
+(* Modified : 2013-11-21 15:24 *)
+(* Modified : 2019-03-20 15:27 *)
+(* Modified : 2019-05-23 16:59 *)
+(*=============================*)
+FileHeader
+  Contents              "PNQ22"
+  Date                  "23.05.2019"
+  Version               "Version 1.4.9" (* Device Import Wizard *)
+  (* Parser             "Profinet 1.0.17.0" *)
+  RequiredSyntaxVersion "3.0"
+End FileHeader
+
+SessionID bd07358a-7947-4de8-9c8c-9bc6949e99b2
+
+(*========================================================*)
+(*                         PNQ22                          *)
+(*========================================================*)
+
+HWUnitInfo
+  HWUnitID         {2e840a1c-46bd-4bad-9346-1cf3e5e029e8}
+  Description      "UMC100_3"
+  Information      "UMC100.3"
+  Icons            MotorType
+  Attributes       AdapterUnit
+  DownloadInstanceNamesForSubUnits
+
+  InterfaceInfo
+    IoSysType  CIGIO
+    CLSID_CB   {D9720536-1BB9-4f74-A5CD-DCDDED2398CA}
+    CLSID_CTRL {38CEFCC8-23D7-43f9-BE6D-4251F87BF421}
+  End InterfaceInfo
+
+  ConnectionInfo
+    ConnectType  AllUnits
+    IOConnect    Fail
+    IOConfig     NoFail
+  End ConnectionInfo
+
+  DiscreteNumbers
+    1
+  End DiscreteNumbers
+
+  SubUnitTypes
+    HWUnitID {19a135e1-85a8-4247-a628-1945366c8430} FixedPositions 1
+  End SubUnitTypes
+
+  Channels
+    ChannelInfo
+      Number                1
+      ChannelName           "UnitStatus"
+      Datatype              Status_In
+      Routine               900
+      CopyParameters        16#0 16#0 16#50000
+    End ChannelInfo
+  End Channels
+
+  UnitStatusText
+    DeviceSpecific1  "Maintenance required"
+    DeviceSpecific2  "Maintenance demanded"
+    DeviceSpecific3  "Diagnosis data available"
+    DeviceSpecific4  "Locked by other controller/supervisor"
+    DeviceSpecific6  "Parametrization fault"
+  End UnitStatusText
+
+  UnitStatusSeverity
+    DeviceSpecific1  GeneralWarning TriggerEvent SeverityMedium
+    DeviceSpecific2  GeneralWarning TriggerEvent SeverityMedium
+    DeviceSpecific3  GeneralWarning TriggerEvent SeverityMedium
+    DeviceSpecific4  GeneralWarning TriggerEvent SeverityMedium
+    DeviceSpecific6  GeneralError TriggerAlarm SeverityHigh
+  End UnitStatusSeverity
+
+  Configuration
+    ConfigInfo
+      ModuleKey        1
+      InAreaSize       0 BYTE
+      OutAreaSize      0 BYTE
+      CIGIOConnData
+        CIGIOData      16#10 16#a5 16#5a 16#0 16#1 16#2 16#21 16#2 16#2 
+        CIGIOData      16#5 16#0 16#0 16#2b 16#c1 
+        SyncronizeDataExchange
+      End CIGIOConnData
+    End ConfigInfo
+    ConfigInfo
+      EmptyConfig
+      ModuleKey        16#FFFF
+      InAreaSize       0 BYTE
+      OutAreaSize      0 BYTE
+    End ConfigInfo
+  End Configuration
+
+  HWUnitInfoCRC 16#30ea
+End HWUnitInfo

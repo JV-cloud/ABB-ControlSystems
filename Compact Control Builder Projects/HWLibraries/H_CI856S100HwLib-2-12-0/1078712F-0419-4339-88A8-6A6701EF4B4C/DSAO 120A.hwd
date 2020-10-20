@@ -1,0 +1,692 @@
+(****************************************************************************)
+(* FILE            dsao120a.hwd                                              *)
+(*                                                                          *)
+(* DESCRIPTION     Hardware definition file for S100 I/O module DSAO 120    *)
+(*                                                                          *)
+(* AUTHOR          SEPID/FVT G Ronnback                                     *)
+(*                                                                          *)
+(* All rights reserved. Reproduction, modification, use or disclosure       *)
+(* to third parties without express authority, is forbidden.                *)
+(* Copyright ABB Process Industries AB, Sweden, 2002.                       *)
+(*                                                                          *)
+(*                                                                          *)
+(* HISTORY $Log: /S100/workplace/current/source/hwdefinitions/definitionfiles/s100/dsao120a.hwd $ *)
+(*  *)
+(* 10    07-12-17 08:30 sepewah *)
+(* #30692 Tighter HWD parsing due to SIL-3 *)
+(* ParValIndex 7 added and a reference to this from "Version", *)
+(* "Access Mode" and "Module Type".*)
+(*  *)
+(* 9     02-12-03 21:15 Jruth *)
+(* PRC #7139 *)
+(* CompileType for "Active" parameter changed to IOConfig. *)
+(* CompileType for "Signal range" parameter changed to IOConnect. *)
+(* CompileType for "OSP value" parameter changed to IOConnect.Hidden. *)
+(*  *)
+(* 8     02-10-26 20:17 Jruth *)
+(* PRC #6746 *)
+(* Attribute "Corresponding" added. *)
+(* Attribute "Bipolar" removed for unipolar signal ranges *)
+(*  *)
+(* 7     02-10-02 14:46 Jruth *)
+(* PRC #6439 *)
+(* ScaleToRange attribute added for OSP values *)
+(*  *)
+(* 6     02-09-16 21:06 Jruth *)
+(* PRC #6428 *)
+(* Spaces removed to get F1 button to work for online help *)
+(*  *)
+(* 5     02-07-08 23:16 Jruth *)
+(* Default value for signal range is changed back to 4-20 mA. *)
+(*  *)
+(* 4     02-06-24 22:15 Jruth *)
+(* Added unit text for OSP time-out *)
+(*  *)
+(* 3     02-06-22 16:47 Jruth *)
+(* Default value for signal range changed to 0..20 mA. *)
+(* Added missed ParValIndex 6. *)
+(*  *)
+(* 2     02-06-22 14:41 Jruth *)
+(* Major changes, derived from version 6 of dsao110.hwd *)
+(*  *)
+(* 1     02-03-15 9:52 Gronnbac *)
+(* Initial version *)
+(*                                                                          *)
+(*                                                                          *)
+(* ABSTRACT                                                                 *)
+(*                                                                          *)
+(****************************************************************************)
+
+HWUnitInfo (* DSAO 120A *)
+  HWUnitID {5B2FB297-12D2-4ae5-9F9A-E83B288236EF}
+  Description "DSAO 120A"
+  Information "Analog output module, 8 channels, OSP support" 
+  Icons RackIOType
+  Attributes AdapterUnit IoUnit AnalogOut 
+
+  InterfaceInfo
+    (*Interface CIGInterface*) (* If GetDeviceStatus is wanted or Numbered parameters specified *)
+    IoSysType CIGIO        (* GetConnStatus will be called from framework *)
+    CLSID_CB {E15630B2-7F2A-4fab-ACDC-9A46839D335B} (* CLSID_CB = GUID for S100 Protocol handler (PH) in Control builder CB *)
+    CLSID_CTRL {41ACBED2-973D-48d1-B5B5-51836FEF4B26} (* CLSID_CTRL   = GUID for S100 Protocol handler (PH) in Controller *)
+    HWConfig Fail     (* Change of net parameters affect subunits *)
+  End InterfaceInfo 
+
+  ConnectionInfo
+    ConnectType OwnUnit
+    IOConnect   Fail
+    IOConfig    NoFail
+  End ConnectionInfo
+
+  Parameters
+    ParamInfo 
+      Name Ver
+      Description "Version"
+      Hidden
+      CompileType IOConnect
+      Datatype INT
+      Default 1 
+      ParValIndex 7
+      ParamType CIGIOData 0 0 0 ByteParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name AccessMode
+      Description "Access Mode"
+      Hidden
+      CompileType IOConnect
+      Datatype INT
+      Default 0 
+      ParValIndex 7
+      ParamType CIGIOData 1 0 0 ByteParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name NoOfAddresses
+      Description "No of Address"
+      Hidden
+      CompileType IOConnect
+      Datatype INT
+      Default 1 
+      ParValIndex 0
+      ParamType CIGIOData 2 0 0 ByteParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name Address
+      Description "Address"
+      CompileType IOConnect
+      Datatype INT
+      Default 64
+      ParValIndex 1
+      ParamType CIGIOData 3 0 0 ByteParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ModType
+      Description "Module type"
+      Hidden
+      CompileType IOConnect
+      Datatype INT
+      Default 24 
+      ParValIndex 7
+      ParamType CIGIOData 4 0 0 ByteParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name OSPMode
+      Description "OSP mode"
+      CompileType IOConnect
+      Datatype ENUM
+      Default 1
+      ParValIndex 3
+      ParamType CIGIOData 2 0 1 WordParam ByteOffset
+      OSPInfo
+        OSPType OSPControl
+        OSPRef Unit
+      End OSPInfo
+    End ParamInfo
+
+    ParamInfo 
+      Name OSPTimeout
+      Description "OSP timeout"
+      CompileType IOConnect
+      Datatype ENUM
+      Default 0
+      ParValIndex 4
+      ParamType CIGIOData 6 0 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel1
+      Description "Active channel 1"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 0 0 2 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel2
+      Description "Active channel 2"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 0 0 3 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel3
+      Description "Active channel 3"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 0 0 4 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel4
+      Description "Active channel 4"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 0 0 5 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel5
+      Description "Active channel 5"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 0 0 6 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel6
+      Description "Active channel 6"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 0 0 7 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel7
+      Description "Active channel 7"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 0 0 8 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel8
+      Description "Active channel 8"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 0 0 9 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name UpdateIntervalChannel1
+      Description "Update interval channel 1"
+      CompileType IOConfig
+      Datatype INT
+      Default 10000
+      ParValIndex 2
+      ParamType CIGIOData 4 0 2 WordParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo 
+      Name UpdateIntervalChannel2
+      Description "Update interval channel 2"
+      CompileType IOConfig
+      Datatype INT
+      Default 10000
+      ParValIndex 2
+      ParamType CIGIOData 4 0 3 WordParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo 
+      Name UpdateIntervalChannel3
+      Description "Update interval channel 3"
+      CompileType IOConfig
+      Datatype INT
+      Default 10000
+      ParValIndex 2
+      ParamType CIGIOData 4 0 4 WordParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo 
+      Name UpdateIntervalChannel4
+      Description "Update interval channel 4"
+      CompileType IOConfig
+      Datatype INT
+      Default 10000
+      ParValIndex 2
+      ParamType CIGIOData 4 0 5 WordParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo 
+      Name UpdateIntervalChannel5
+      Description "Update interval channel 5"
+      CompileType IOConfig
+      Datatype INT
+      Default 10000
+      ParValIndex 2
+      ParamType CIGIOData 4 0 6 WordParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo 
+      Name UpdateIntervalChannel6
+      Description "Update interval channel 6"
+      CompileType IOConfig
+      Datatype INT
+      Default 10000
+      ParValIndex 2
+      ParamType CIGIOData 4 0 7 WordParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo 
+      Name UpdateIntervalChannel7
+      Description "Update interval channel 7"
+      CompileType IOConfig
+      Datatype INT
+      Default 10000
+      ParValIndex 2
+      ParamType CIGIOData 4 0 8 WordParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo 
+      Name UpdateIntervalChannel8
+      Description "Update interval channel 8"
+      CompileType IOConfig
+      Datatype INT
+      Default 10000
+      ParValIndex 2
+      ParamType CIGIOData 4 0 9 WordParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo 
+      Name OSPValueChannel1
+      Description "OSP Value channel 1"
+      Corresponding 0
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 6
+      ParamType CIGIOData 6 0 2 WordParam ByteOffset ScaleToRange
+      OSPInfo
+         OSPType OSPValue
+         OSPData 0 0 ScaleToRange
+      End OSPInfo
+    End ParamInfo
+
+    ParamInfo 
+      Name OSPValueChannel2
+      Description "OSP Value channel 2"
+      Corresponding 1
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 6
+      ParamType CIGIOData 6 0 3 WordParam ByteOffset ScaleToRange
+      OSPInfo
+         OSPType OSPValue
+         OSPData 1 0 ScaleToRange
+      End OSPInfo
+    End ParamInfo
+
+    ParamInfo 
+      Name OSPValueChannel3
+      Description "OSP Value channel 3"
+      Corresponding 2
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 6
+      ParamType CIGIOData 6 0 4 WordParam ByteOffset ScaleToRange
+      OSPInfo
+         OSPType OSPValue
+         OSPData 2 0 ScaleToRange
+      End OSPInfo
+    End ParamInfo
+
+    ParamInfo 
+      Name OSPValueChannel4
+      Description "OSP Value channel 4"
+      Corresponding 3
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 6
+      ParamType CIGIOData 6 0 5 WordParam ByteOffset ScaleToRange
+      OSPInfo
+         OSPType OSPValue
+         OSPData 3 0 ScaleToRange
+      End OSPInfo
+    End ParamInfo
+
+    ParamInfo 
+      Name OSPValueChannel5
+      Description "OSP Value channel 5"
+      Corresponding 4
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 6
+      ParamType CIGIOData 6 0 6 WordParam ByteOffset ScaleToRange
+      OSPInfo
+         OSPType OSPValue
+         OSPData 4 0 ScaleToRange
+      End OSPInfo
+    End ParamInfo
+
+    ParamInfo 
+      Name OSPValueChannel6
+      Description "OSP Value channel 6"
+      Corresponding 5
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 6
+      ParamType CIGIOData 6 0 7 WordParam ByteOffset ScaleToRange
+      OSPInfo
+         OSPType OSPValue
+         OSPData 5 0 ScaleToRange
+      End OSPInfo
+    End ParamInfo
+
+    ParamInfo 
+      Name OSPValueChannel7
+      Description "OSP Value channel 7"
+      Corresponding 6
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 6
+      ParamType CIGIOData 6 0 8 WordParam ByteOffset ScaleToRange
+      OSPInfo
+         OSPType OSPValue
+         OSPData 6 0 ScaleToRange
+      End OSPInfo
+    End ParamInfo
+
+    ParamInfo 
+      Name OSPValueChannel8
+      Description "OSP Value channel 8"
+      Corresponding 7
+      CompileType IOConnect
+      Datatype REAL
+      Default 0
+      ParValIndex 6
+      ParamType CIGIOData 6 0 9 WordParam ByteOffset ScaleToRange
+      OSPInfo
+         OSPType OSPValue
+         OSPData 7 0 ScaleToRange
+      End OSPInfo
+    End ParamInfo
+
+    ParamInfo 
+      Name SignalRangeChannel1
+      Description "Signal range channel 1"
+      CompileType IOConnect
+      DataType ENUMRANGE
+      Default 5
+      ParValIndex 5
+      ParamType CIGIOData 10 0 2 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo   
+      Name SignalRangeChannel2
+      Description "Signal range channel 2"
+      CompileType IOConnect
+      DataType ENUMRANGE
+      Default 5
+      ParValIndex 5
+      ParamType CIGIOData 10 0 3 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name SignalRangeChannel3
+      Description "Signal range channel 3"
+      CompileType IOConnect
+      DataType ENUMRANGE
+      Default 5
+      ParValIndex 5
+      ParamType CIGIOData 10 0 4 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name SignalRangeChannel4
+      Description "Signal range channel 4"
+      CompileType IOConnect
+      DataType ENUMRANGE
+      Default 5
+      ParValIndex 5
+      ParamType CIGIOData 10 0 5 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name SignalRangeChannel5
+      Description "Signal range channel 5"
+      CompileType IOConnect
+      DataType ENUMRANGE
+      Default 5
+      ParValIndex 5
+      ParamType CIGIOData 10 0 6 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo   
+      Name SignalRangeChannel6
+      Description "Signal range channel 6"
+      CompileType IOConnect
+      DataType ENUMRANGE
+      Default 5
+      ParValIndex 5
+      ParamType CIGIOData 10 0 7 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name SignalRangeChannel7
+      Description "Signal range channel 7"
+      CompileType IOConnect
+      DataType ENUMRANGE
+      Default 5
+      ParValIndex 5
+      ParamType CIGIOData 10 0 8 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name SignalRangeChannel8
+      Description "Signal range channel 8"
+      CompileType IOConnect
+      DataType ENUMRANGE
+      Default 5
+      ParValIndex 5
+      ParamType CIGIOData 10 0 9 WordParam ByteOffset
+    End ParamInfo
+  End Parameters
+
+  ParValList
+    ParVal
+      ParValIndex 0      (* No of addresses which this unit uses *)
+      UnitText    " "
+      INT 1 4 1 4
+    End ParVal
+
+    ParVal
+      ParValIndex 1      (* Strapped adress interval *)
+      UnitText    " "
+      INT 64 95 64 95
+    End ParVal
+
+    ParVal
+      ParValIndex 2      (* Update interval *)
+      UnitText    "0.1 ms"
+      INT 2 50000 2 50000
+    End ParVal
+
+    ParVal
+      ParValIndex 3      (* OSP modes *)
+      UnitText ""
+      ENUM
+      "Keep current value"  0
+      "Set OSP value"       1
+    End ParVal
+
+    ParVal
+      ParValIndex 4      (* OSP timeouts, in seconds *)
+      UnitText    "s"
+      ENUM
+      "8.389"  0
+      "4.194"  1
+      "2.097"  2
+      "1.049"  3
+    End ParVal
+
+    ParVal
+      ParValIndex 5      (* Signal range *)
+      ENUMRANGE
+      "-10..10V"     16#00 16#7D00 16#8300 16#8000 16#8000   Bipolar 
+      "0..10V"       16#04 16#7D00 16#0000 16#0 16#0 
+      "2..10V"       16#08 16#7D00 16#1900 16#0 16#0 
+      "-20..20mA"    16#0C 16#7D00 16#8300 16#8000 16#8000   Bipolar  
+      "0..20mA"      16#0F 16#7D00 16#0000 16#0 16#0
+      "4..20mA"      16#12 16#7D00 16#1900 16#0 16#0
+    End ParVal
+
+    ParVal
+      ParValIndex 6
+      UnitText    "%"
+      REAL 0.0 100.0 0.0 100.0
+    End ParVal
+
+    ParVal
+      ParValIndex 7      (* General INT type *)
+      UnitText    " "
+      INT 0 65535 0 65535
+    End ParVal
+  End ParValList
+
+  Channels
+    ChannelInfo
+      Number 1 
+      ChannelName "Value channel 1"
+      Datatype Real_Out
+      Routine 800
+      CopyParameters 0 0 16#40000 0 16#0 16#50000 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 2 
+      ChannelName "Value channel 2"
+      Datatype Real_Out
+      Routine 800
+      CopyParameters 0 0 16#40001 1 16#0 16#50000 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 3 
+      ChannelName "Value channel 3"
+      Datatype Real_Out
+      Routine 800
+      CopyParameters 0 0 16#40002 2 16#0 16#50000 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 4 
+      ChannelName "Value channel 4"
+      Datatype Real_Out
+      Routine 800
+      CopyParameters 0 0 16#40003 3 16#0 16#50000 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 5 
+      ChannelName "Value channel 5"
+      Datatype Real_Out
+      Routine 800
+      CopyParameters 0 0 16#40004 4 16#0 16#50000 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 6 
+      ChannelName "Value channel 6"
+      Datatype Real_Out
+      Routine 800
+      CopyParameters 0 0 16#40005 5 16#0 16#50000 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 7 
+      ChannelName "Value channel 7"
+      Datatype Real_Out
+      Routine 800
+      CopyParameters 0 0 16#40006 6 16#0 16#50000 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 8 
+      ChannelName "Value channel 8"
+      Datatype Real_Out
+      Routine 800
+      CopyParameters 0 0 16#40007 7 16#0 16#50000 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 9
+      ChannelName "UnitStatus"
+      Datatype Status_In
+      Routine 900
+      CopyParameters 0 0 16#50000
+    End ChannelInfo      
+  End Channels
+
+  IoUnitStatus
+    StatusType ModuleMissing
+    StatusData 16#30001 16#0001 16#0 16#0
+    StatusType WrongModuleType 
+    StatusData 16#30001 16#0002 16#0 16#0
+    StatusType IoError
+    StatusData 16#30001 16#0004 16#0 16#0
+  End IoUnitStatus
+
+  Configuration
+    ConfigInfo
+      ModuleKey   16#0000
+      InAreaSize  2
+      OutAreaSize 8
+
+      InWord 
+        WORD 0       16#0                   (* State           *)
+        WORD 0       16#1                   (* Status          *)
+
+      OutWord
+        WORD 0       16#0                   (* Channel 1 value *)
+        WORD 0       16#1                   (* Channel 2 value *)
+        WORD 0       16#2                   (* Channel 3 value *)
+        WORD 0       16#3                   (* Channel 4 value *)
+        WORD 0       16#4                   (* Channel 5 value *)
+        WORD 0       16#5                   (* Channel 6 value *)
+        WORD 0       16#6                   (* Channel 7 value *)
+        WORD 0       16#7                   (* Channel 8 value *)
+
+      CIGIOConnData
+        CIGIOData 0 0 0 0 0                 (* Common parameters *)
+        CIGIOData 0 0 0 0 0 0 0 0           (* Common board specific parameters *)
+        CIGIOData 0 0 0 0 0 0 0 0 0 0 0 0   (* Channel 1 parameters *)     
+        CIGIOData 0 0 0 0 0 0 0 0 0 0 0 0   (* Channel 2 parameters *) 
+        CIGIOData 0 0 0 0 0 0 0 0 0 0 0 0   (* Channel 3 parameters *) 
+        CIGIOData 0 0 0 0 0 0 0 0 0 0 0 0   (* Channel 4 parameters *) 
+        CIGIOData 0 0 0 0 0 0 0 0 0 0 0 0   (* Channel 5 parameters *)     
+        CIGIOData 0 0 0 0 0 0 0 0 0 0 0 0   (* Channel 6 parameters *) 
+        CIGIOData 0 0 0 0 0 0 0 0 0 0 0 0   (* Channel 7 parameters *) 
+        CIGIOData 0 0 0 0 0 0 0 0 0 0 0 0   (* Channel 8 parameters *) 
+      End CIGIOConnData
+    End ConfigInfo
+  End Configuration
+  HWUnitInfoCRC 16#25C3
+End HWUnitInfo (* DSAO 120A *)

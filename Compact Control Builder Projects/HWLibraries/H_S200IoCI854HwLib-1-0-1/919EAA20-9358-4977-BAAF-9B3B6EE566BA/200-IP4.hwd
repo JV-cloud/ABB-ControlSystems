@@ -1,0 +1,268 @@
+HWUnitInfo (* 200-IP4 / PROFIBUS-DP Full Format *)
+   HWUnitID {0D7FE0AD-0E87-40e9-A0E7-C1323EA3517E}
+   Description "200-IP4"
+   Information "Digital pulse counter module, 4 channels current sink"
+   Icons Ser200IOType
+   Attributes IoUnit
+   Parameters
+      ParamInfo 
+         Name OPERATING_MODE_0
+         Description "Operating Mode Channel 0"
+         CompileType IoConnect
+         Datatype ENUM
+         Default  0
+         ParValIndex 0
+         ParamType ConfArea 0 0
+      End ParamInfo
+      ParamInfo 
+         Name CLOCK_FREQUENCY_0
+         Description "Clock Frequency Channel 0"
+         CompileType IoConnect
+         Datatype ENUM
+         Default  0
+         ParValIndex 1
+         ParamType ConfArea 1 0
+      End ParamInfo
+      ParamInfo 
+         Name NUMBEROFPERIODS_0
+         Description "Number of Periods Channel 0"
+         CompileType IoConnect
+         Datatype ENUM
+         Default 0
+         ParValIndex 2
+         ParamType ConfArea 1 1
+      End ParamInfo
+      ParamInfo 
+         Name OPERATING_MODE_1
+         Description "Operating Mode Channel 1"
+         CompileType IoConnect
+         Datatype ENUM
+         Default  0
+         ParValIndex 0
+         ParamType ConfArea 0 1
+      End ParamInfo
+      ParamInfo 
+         Name CLOCK_FREQUENCY_1
+         Description "Clock Frequency Channel 1"
+         CompileType IoConnect
+         Datatype ENUM
+         Default  0
+         ParValIndex 1
+         ParamType ConfArea 1 4
+      End ParamInfo
+      ParamInfo 
+         Name NUMBEROFPERIODS_1
+         Description "Number of Periods Channel 1"
+         CompileType IoConnect
+         Datatype ENUM
+         Default 0
+         ParValIndex 2
+         ParamType ConfArea 1 5
+      End ParamInfo
+      ParamInfo 
+         Name OPERATING_MODE_2
+         Description "Operating Mode Channel 2"
+         CompileType IoConnect
+         Datatype ENUM
+         Default  0
+         ParValIndex 0
+         ParamType ConfArea 0 2
+      End ParamInfo
+      ParamInfo 
+         Name CLOCK_FREQUENCY_2
+         Description "Clock Frequency Channel 2"
+         CompileType IoConnect
+         Datatype ENUM
+         Default  0
+         ParValIndex 1
+         ParamType ConfArea 1 8
+      End ParamInfo
+      ParamInfo 
+         Name NUMBEROFPERIODS_2
+         Description "Number of Periods Channel 2"
+         CompileType IoConnect
+         Datatype ENUM
+         Default 0
+         ParValIndex 2
+         ParamType ConfArea 1 9
+      End ParamInfo
+      ParamInfo 
+         Name OPERATING_MODE_3
+         Description "Operating Mode Channel 3"
+         CompileType IoConnect
+         Datatype ENUM
+         Default  0
+         ParValIndex 0
+         ParamType ConfArea 0 3
+      End ParamInfo
+      ParamInfo 
+         Name CLOCK_FREQUENCY_3
+         Description "Clock Frequency Channel 3"
+         CompileType IoConnect
+         Datatype ENUM
+         Default  0
+         ParValIndex 1
+         ParamType ConfArea 1 12
+      End ParamInfo
+      ParamInfo 
+         Name NUMBEROFPERIODS_3
+         Description "Number of Periods Channel 3"
+         CompileType IoConnect
+         Datatype ENUM
+         Default 0
+         ParValIndex 2
+         ParamType ConfArea 1 13
+      End ParamInfo
+   End Parameters
+   ParValList
+      ParVal
+         ParValIndex 0
+         ENUM
+         "Pulse/Period 16 bits"  0
+         "Period 32 bits"        1
+      End ParVal
+      ParVal
+         ParValIndex 1
+         ENUM
+         "1 Mhz"    1
+         "10 Mhz"   0
+      End ParVal
+      ParVal
+         ParValIndex 2
+         UnitText "Periods"
+         ENUM
+         "1"   0
+         "2"   1
+         "4"   2
+         "8"   3
+         "16"  4
+         "32"  5
+         "64"  6
+         "128" 7
+      End ParVal
+   End ParValList
+   Channels
+      ChannelInfo
+         Number 0 
+         ChannelName "Value In 0"
+         Datatype Int_In
+         Routine 303
+         CopyParameters 0 0 16#30000 16#0
+      End ChannelInfo
+      ChannelInfo
+         Number 1
+         ChannelName "Ctrl In 0"
+         Datatype Dword_In
+         Routine 510
+         CopyParameters 0 0 16#30008 0 16#0011 16#40000 0 16#0001 16#40001 0 16#0001 16#40001 1 16#000E 16#0
+      End ChannelInfo
+      ChannelInfo
+         Number 2 
+         ChannelName "Ctrl Out 0"
+         Datatype Dword_Out
+         Routine 601
+         CopyParameters 0 0 16#40002 0 16#0011 16#0
+      End ChannelInfo
+      ChannelInfo
+         Number 3
+         ChannelName "Value In 1"
+         Datatype Int_In
+         Routine 303
+         CopyParameters 0 0 16#30002 16#0
+      End ChannelInfo
+      ChannelInfo
+         Number 4
+         ChannelName "Ctrl In 1"
+         Datatype Dword_In
+         Routine 510
+         CopyParameters 0 0 16#30008 1 16#0022 16#40000 1 16#0002 16#40001 4 16#0010 16#40001 5 16#00E0 16#0
+      End ChannelInfo
+      ChannelInfo
+         Number 5 
+         ChannelName "Ctrl Out 1"
+         Datatype Dword_Out
+         Routine 601
+         CopyParameters 0 0 16#40002 1 16#0022 16#0
+      End ChannelInfo
+      ChannelInfo
+         Number 6
+         ChannelName "Value In 2"
+         Datatype Int_In
+         Routine 303
+         CopyParameters 0 0 16#30004 16#0
+      End ChannelInfo
+      ChannelInfo
+         Number 7
+         ChannelName "Ctrl In 2"
+         Datatype Dword_In
+         Routine 510
+         CopyParameters 0 0 16#30008 2 16#0044 16#40000 2 16#0004 16#40001 8 16#0100 16#40001 9 16#0E00 16#0
+      End ChannelInfo
+      ChannelInfo
+         Number 8 
+         ChannelName "Ctrl Out 2"
+         Datatype Dword_Out
+         Routine 601
+         CopyParameters 0 0 16#40002 2 16#0044 16#0
+      End ChannelInfo
+      ChannelInfo
+         Number 9
+         ChannelName "Value In 3"
+         Datatype Int_In
+         Routine 303
+         CopyParameters 0 0 16#30006 16#0
+      End ChannelInfo
+      ChannelInfo
+         Number 10
+         ChannelName "Ctrl In 3"
+         Datatype Dword_In
+         Routine 510
+         CopyParameters 0 0 16#30008 3 16#0088 16#40000 3 16#0008 16#40001 12 16#1000 16#40001 13 16#E000 16#0
+      End ChannelInfo
+      ChannelInfo
+         Number 11
+         ChannelName "Ctrl Out 3"
+         Datatype Dword_Out
+         Routine 601
+         CopyParameters 0 0 16#40002 3 16#0088 16#0
+      End ChannelInfo
+      ChannelInfo
+         Number 12
+         ChannelName "UnitStatus"
+         Datatype Status_In
+         Routine 900
+         CopyParameters 0 0 16#50000
+      End ChannelInfo
+   End Channels
+   IoUnitStatus
+      StatusType IoError
+      StatusData 16#10000 16#100100 16#0 16#0
+   End IoUnitStatus
+   Configuration
+      ConfigInfo
+         ModuleKey   16#1A00
+         InAreaSize  10
+         OutAreaSize 3
+         InWord 
+            WORD 0       16#0 
+            WORD 0       16#1
+            WORD 0       16#2
+            WORD 0       16#3
+            WORD 0       16#4
+            WORD 0       16#5
+            WORD 0       16#6
+            WORD 0       16#7
+            WORD 0       16#8
+            WORD 0       16#9 
+        ConfWord
+            WORD 0       16#0 
+            WORD 0       16#1  
+            WORD 0       16#2
+        CIGIOConnData
+            CIGIOData     16#01 16#59 16#62
+            CIGIOData     16#05  16#1A 16#00 16#03 16#00 16#00 16#00 16#00 16#00 16#00
+        End CIGIOConnData
+     End ConfigInfo
+   End Configuration
+  HWUnitInfoCRC 16#188E
+End HWUnitInfo (* 200-IP4 / PROFIBUS-DP Full Format *)

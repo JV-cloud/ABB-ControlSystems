@@ -1,0 +1,373 @@
+<HEAD>
+Index of symbols created 2019-09-17 20:53:22.91 
+</HEAD>
+<SECTIONS=15>
+00010000 00013de8 .text
+00013de8 00013e88 .got2
+00013e88 00014340 .fixup
+00014340 00014350 .bss
+00014350 0001435c .data
+0001435c 0001504e .debug_abbrev
+0001504e 0001fc95 .debug_info
+0001fc95 00021148 .debug_line
+00021148 0002238c .debug_frame
+0002238c 000240e1 .debug_loc
+000240e1 00025c92 .debug_pubnames
+00025c92 00025eda .debug_aranges
+00025eda 000260b2 .debug_ranges
+000260b2 0002854a .debug_str
+0002854a 0002854a .comment
+</SECTIONS>
+<SYMBOLS=351>
+00000000 PhIPpin_82xx_68.elf EXE_HEAD
+00000064 PhIPpin_82xx_68.elf CPhIPpin::SetCommonCallbackInterface(ICommonCallback*)
+000001a0 PhIPpin_82xx_68.elf non-virtual thunk to CPhIPpin::PrepareForTermination(teHWFErrorCode*)
+000001a8 PhIPpin_82xx_68.elf CPhIPpin::PrepareForTermination(teHWFErrorCode*)
+000001d0 PhIPpin_82xx_68.elf non-virtual thunk to CPhIPpin::RemoveHWConfiguration(trHWFAddress, teHWFErrorCode*)
+000001d8 PhIPpin_82xx_68.elf CPhIPpin::RemoveHWConfiguration(trHWFAddress, teHWFErrorCode*)
+00000220 PhIPpin_82xx_68.elf non-virtual thunk to CPhIPpin::GetStatus(trHWFAddress, teHWFUnitKind, unsigned long*, unsigned long*, teHWFErrorCode*)
+00000228 PhIPpin_82xx_68.elf CPhIPpin::GetStatus(trHWFAddress, teHWFUnitKind, unsigned long*, unsigned long*, teHWFErrorCode*)
+0000028c PhIPpin_82xx_68.elf CPhIPpin::Configure(trHWFAddress const&, teHWFErrorCode*)
+00000460 PhIPpin_82xx_68.elf non-virtual thunk to CPhIPpin::PhResponsibility(trHWFAddress, teHWFErrorCode*)
+00000468 PhIPpin_82xx_68.elf CPhIPpin::PhResponsibility(trHWFAddress, teHWFErrorCode*)
+000004cc PhIPpin_82xx_68.elf non-virtual thunk to CPhIPpin::PhResponsibilityForRestart(trHWFAddress, teHWFErrorCode*)
+000004d4 PhIPpin_82xx_68.elf CPhIPpin::PhResponsibilityForRestart(trHWFAddress, teHWFErrorCode*)
+0000053c PhIPpin_82xx_68.elf CPhIPpin::GetProductInfo(unsigned char*, unsigned char*, unsigned char*, unsigned long)
+0000062c PhIPpin_82xx_68.elf CPhIPpin::CPhIPpin()
+000006b0 PhIPpin_82xx_68.elf CPhIPpin::CPhIPpin()
+00000730 PhIPpin_82xx_68.elf non-virtual thunk to CPhIPpin::~CPhIPpin()
+00000738 PhIPpin_82xx_68.elf non-virtual thunk to CPhIPpin::~CPhIPpin()
+00000744 PhIPpin_82xx_68.elf CPhIPpin::~CPhIPpin()
+000007a4 PhIPpin_82xx_68.elf CPhIPpin::~CPhIPpin()
+00000800 PhIPpin_82xx_68.elf non-virtual thunk to CPhIPpin::~CPhIPpin()
+00000808 PhIPpin_82xx_68.elf non-virtual thunk to CPhIPpin::~CPhIPpin()
+00000814 PhIPpin_82xx_68.elf CPhIPpin::~CPhIPpin()
+00000888 PhIPpin_82xx_68.elf ObjectFactory
+000009b0 PhIPpin_82xx_68.elf operator delete(void*)
+000009f0 PhIPpin_82xx_68.elf __cxa_pure_virtual
+00000a2c PhIPpin_82xx_68.elf CPhCommon_Base::CPhCommon_Base()
+00000a90 PhIPpin_82xx_68.elf CPhCommon_Base::CPhCommon_Base()
+00000af0 PhIPpin_82xx_68.elf CPhCommon_Base::GetProductInfo(unsigned char*, unsigned char*, unsigned char*, unsigned long)
+00000b2c PhIPpin_82xx_68.elf CPhCommon_Base::SetCommonCallbackInterface(ICommonCallback*)
+00000b5c PhIPpin_82xx_68.elf CPhConfig_Base1::PrepareForTermination(teHWFErrorCode*)
+00000b8c PhIPpin_82xx_68.elf CPhConfig_Base1::RemoveHWConfiguration(trHWFAddress, teHWFErrorCode*)
+00000bbc PhIPpin_82xx_68.elf CPhConfig_Base1::RemoveIoConnection(unsigned long, teHWFErrorCode*)
+00000bf0 PhIPpin_82xx_68.elf CPhConfig_Base1::PhResponsibilityForRestart(trHWFAddress, teHWFErrorCode*)
+00000c20 PhIPpin_82xx_68.elf CPhConfig_Base1::PhResponsibility(trHWFAddress, teHWFErrorCode*)
+00000c50 PhIPpin_82xx_68.elf CPhConfig_Base1::StartUsingIoConnection(trHWFAddress, unsigned long, teHWFErrorCode*)
+00000c84 PhIPpin_82xx_68.elf CPhConfig_Base1::PhResponsibilityForBackupDevice(trHWFAddress, teHWFErrorCode*)
+00000cb4 PhIPpin_82xx_68.elf CPhConfig_Base1::PhResponsibilityForHotInsert(trHWFAddress, teHWFErrorCode*)
+00000ce4 PhIPpin_82xx_68.elf CPhConfig_Base1::PerformSwitchover(trHWFAddress, teHWFErrorCode*)
+00000d14 PhIPpin_82xx_68.elf CPhConfig_Base1::StartUsingDevice(trHWFAddress, teHWFErrorCode*)
+00000d44 PhIPpin_82xx_68.elf CPhConfig_Base1::PerformFailover(trHWFAddress, teHWFErrorCode*)
+00000d74 PhIPpin_82xx_68.elf CPhClient_Base::ConnectReq(unsigned long, unsigned long*, int*)
+00000dac PhIPpin_82xx_68.elf CPhClient_Base::DisconnectReq(unsigned long, unsigned long, int*)
+00000de4 PhIPpin_82xx_68.elf CPhClient_Base::ReadVarReq(unsigned long, int*)
+00000e18 PhIPpin_82xx_68.elf CPhClient_Base::WriteVarReq(unsigned long, int*)
+00000e4c PhIPpin_82xx_68.elf CPhClient_Base::ReadRawReq(unsigned long, int*)
+00000e80 PhIPpin_82xx_68.elf CPhClient_Base::WriteRawReq(unsigned long, int*)
+00000eb4 PhIPpin_82xx_68.elf CPhClient_Base::AbortRawReq(unsigned long, int*)
+00000ee8 PhIPpin_82xx_68.elf CPhClient_Base::AbortVarReq(unsigned long, int*)
+00000f1c PhIPpin_82xx_68.elf CPhClient_Base::GetExtendedStatusSize(unsigned long, int*, int*)
+00000f54 PhIPpin_82xx_68.elf CPhClient_Base::GetExtendedStatus(unsigned long, int, teIEC1131Type*, tGCValue*, int*)
+00000f94 PhIPpin_82xx_68.elf CPhClient_Base::SetStatus(unsigned long, int, int*)
+00000fcc PhIPpin_82xx_68.elf CPhClient_Base::ReadRes(unsigned long, int, int*)
+00001004 PhIPpin_82xx_68.elf CPhClient_Base::WriteRes(unsigned long, int, int*)
+0000103c PhIPpin_82xx_68.elf CPhClient_Base1::ConnectReq(unsigned long, unsigned long*, int*)
+00001074 PhIPpin_82xx_68.elf CPhClient_Base1::DisconnectReq(unsigned long, unsigned long, int*)
+000010ac PhIPpin_82xx_68.elf CPhClient_Base1::ReadVarReq(unsigned long, int*)
+000010e0 PhIPpin_82xx_68.elf CPhClient_Base1::WriteVarReq(unsigned long, int*)
+00001114 PhIPpin_82xx_68.elf CPhClient_Base1::RegisterVarReq(unsigned long, int*)
+00001148 PhIPpin_82xx_68.elf CPhClient_Base1::ReadRawReq(unsigned long, int*)
+0000117c PhIPpin_82xx_68.elf CPhClient_Base1::WriteRawReq(unsigned long, int*)
+000011b0 PhIPpin_82xx_68.elf CPhClient_Base1::AbortRawReq(unsigned long, int*)
+000011e4 PhIPpin_82xx_68.elf CPhClient_Base1::AbortVarReq(unsigned long, int*)
+00001218 PhIPpin_82xx_68.elf CPhClient_Base1::TimeoutAbortVarReq(unsigned long, int*)
+0000127c PhIPpin_82xx_68.elf CPhClient_Base1::GetExtendedStatusSize(unsigned long, int*, int*)
+000012b4 PhIPpin_82xx_68.elf CPhClient_Base1::GetExtendedStatus(unsigned long, int, teIEC1131Type*, tGCValue*, int*)
+000012f4 PhIPpin_82xx_68.elf CPhClient_Base1::BufferTakeForReceive(unsigned long, int*)
+00001328 PhIPpin_82xx_68.elf CPhClient_Base1::BufferGiveForReceive(unsigned long, int, int*)
+00001360 PhIPpin_82xx_68.elf CPhClient_Base1::BufferTakeForSend(unsigned long, unsigned int, int*)
+00001398 PhIPpin_82xx_68.elf CPhClient_Base1::BufferGiveForSend(unsigned long, unsigned int, int, int*)
+000013d4 PhIPpin_82xx_68.elf CPhClient_Base1::SetStatus(unsigned long, int, int*)
+0000140c PhIPpin_82xx_68.elf CPhClient_Base1::ReadRes(unsigned long, int, int*)
+00001444 PhIPpin_82xx_68.elf CPhClient_Base1::WriteRes(unsigned long, int, int*)
+0000147c PhIPpin_82xx_68.elf CPhStatus_Base1::KickWatchdog(unsigned short*, teHWFErrorCode*)
+000014b0 PhIPpin_82xx_68.elf CPhStatus_Base1::GetStatus(trHWFAddress, teHWFUnitKind, unsigned long*, unsigned long*, teHWFErrorCode*)
+000014ec PhIPpin_82xx_68.elf CPhIOAccess_Base::GetCopyRoutineReference(unsigned int, void (**)(short, void*, void*), IOAccessErrorCode*)
+00001524 PhIPpin_82xx_68.elf CPhIOAccess_Base::ObtainDPM(eAreaType, trHWFAddress, IOAccessErrorCode*)
+00001558 PhIPpin_82xx_68.elf CPhIOAccess_Base::ReleaseDPM(eAreaType, trHWFAddress, IOAccessErrorCode*)
+0000158c PhIPpin_82xx_68.elf CPhDiagnostics_Base::PhDiagnosticsTableNew(teDiagErrorCode*)
+000015bc PhIPpin_82xx_68.elf CPhDiagnostics_Base::PhDiagnosticsTableCleared(teDiagErrorCode*)
+000015ec PhIPpin_82xx_68.elf CPhOLU_Base::PrepareForFirmwareDownload(trHWFAddress const*, unsigned long, eOLUStatus*)
+00001624 PhIPpin_82xx_68.elf CPhOLU_Base::PrepareForApplicationStop(trHWFAddress const*, eOLUStatus*)
+00001658 PhIPpin_82xx_68.elf CPhOLU_Base::ResumeOperation(trHWFAddress const*, eOLUStatus*)
+0000168c PhIPpin_82xx_68.elf CPhOLU_Base::PhResponsibilityForOLU(trHWFAddress const*, eOLUStatus*)
+000016c0 PhIPpin_82xx_68.elf CPhOLU_Base::PrepareForLeavingOLU(trHWFAddress const*, eOLUStatus*)
+000016f4 PhIPpin_82xx_68.elf CPhOLU_Base::PrepareForAppAndConfigDownload(trHWFAddress const*, eOLUStatus*)
+00001728 PhIPpin_82xx_68.elf CPhOLU_Base1::PrepareForFirmwareDownload(trHWFAddress const*, unsigned long, eOLUStatus*)
+00001760 PhIPpin_82xx_68.elf CPhOLU_Base1::PrepareForApplicationStop(trHWFAddress const*, eOLUStatus*)
+00001794 PhIPpin_82xx_68.elf CPhOLU_Base1::ResumeOperation(trHWFAddress const*, eOLUStatus*)
+000017c8 PhIPpin_82xx_68.elf CPhOLU_Base1::PhResponsibilityForOLU(trHWFAddress const*, eOLUStatus*)
+000017fc PhIPpin_82xx_68.elf CPhOLU_Base1::PrepareForLeavingOLU(trHWFAddress const*, eOLUStatus*)
+00001830 PhIPpin_82xx_68.elf CPhOLU_Base1::PrepareForAppAndConfigDownload(trHWFAddress const*, eOLUStatus*)
+00001864 PhIPpin_82xx_68.elf CPhOLU_Base1::OLUEnablePhCom(trHWFAddress const*, eOLUStatus*)
+00001898 PhIPpin_82xx_68.elf CPhOLU_Base1::OLUDisablePhCom(trHWFAddress const*, eOLUStatus*)
+000018cc PhIPpin_82xx_68.elf CPhOLU_Base1::InformPhIsInSwitch(trHWFAddress const*, eOLUStatus*)
+00001904 PhIPpin_82xx_68.elf CPhCommon_Base::~CPhCommon_Base()
+00001980 PhIPpin_82xx_68.elf CPhCommon_Base::~CPhCommon_Base()
+000019fc PhIPpin_82xx_68.elf CPhCommon_Base::~CPhCommon_Base()
+00001a74 PhIPpin_82xx_68.elf non-virtual thunk to CPhIPpin::AddRef()
+00001a7c PhIPpin_82xx_68.elf non-virtual thunk to CPhIPpin::AddRef()
+00001a84 PhIPpin_82xx_68.elf CPhIPpin::AddRef()
+00001aa4 PhIPpin_82xx_68.elf IUnknown::~IUnknown()
+00001ae8 PhIPpin_82xx_68.elf IUnknown::~IUnknown()
+00001b28 PhIPpin_82xx_68.elf IPhConfig1::~IPhConfig1()
+00001b74 PhIPpin_82xx_68.elf IPhConfig1::~IPhConfig1()
+00001bbc PhIPpin_82xx_68.elf IPhStatus1::~IPhStatus1()
+00001c08 PhIPpin_82xx_68.elf IPhStatus1::~IPhStatus1()
+00001c4c PhIPpin_82xx_68.elf non-virtual thunk to CPhIPpin::Release()
+00001c54 PhIPpin_82xx_68.elf non-virtual thunk to CPhIPpin::Release()
+00001c5c PhIPpin_82xx_68.elf CPhIPpin::Release()
+00001cc8 PhIPpin_82xx_68.elf non-virtual thunk to CPhIPpin::QueryInterface(_GUID const&, void**)
+00001cd0 PhIPpin_82xx_68.elf non-virtual thunk to CPhIPpin::QueryInterface(_GUID const&, void**)
+00001cdc PhIPpin_82xx_68.elf CPhIPpin::QueryInterface(_GUID const&, void**)
+00001dc8 PhIPpin_82xx_68.elf IUnknown::IUnknown()
+00001e20 PhIPpin_82xx_68.elf IPhCommon::IPhCommon()
+00001e84 PhIPpin_82xx_68.elf IUnknown::~IUnknown()
+00001ef4 PhIPpin_82xx_68.elf IPhConfig1::~IPhConfig1()
+00001f70 PhIPpin_82xx_68.elf CPhConfig_Base1::~CPhConfig_Base1()
+00001fec PhIPpin_82xx_68.elf CPhConfig_Base1::~CPhConfig_Base1()
+00002068 PhIPpin_82xx_68.elf IPhClient::~IPhClient()
+000020e4 PhIPpin_82xx_68.elf CPhClient_Base::~CPhClient_Base()
+00002160 PhIPpin_82xx_68.elf IPhClient::~IPhClient()
+000021dc PhIPpin_82xx_68.elf IPhClient::~IPhClient()
+00002258 PhIPpin_82xx_68.elf CPhClient_Base::~CPhClient_Base()
+000022d4 PhIPpin_82xx_68.elf IPhClient1::~IPhClient1()
+00002350 PhIPpin_82xx_68.elf CPhClient_Base1::~CPhClient_Base1()
+000023cc PhIPpin_82xx_68.elf IPhClient1::~IPhClient1()
+00002448 PhIPpin_82xx_68.elf IPhClient1::~IPhClient1()
+000024c4 PhIPpin_82xx_68.elf CPhClient_Base1::~CPhClient_Base1()
+00002540 PhIPpin_82xx_68.elf IPhStatus1::~IPhStatus1()
+000025bc PhIPpin_82xx_68.elf CPhStatus_Base1::~CPhStatus_Base1()
+00002638 PhIPpin_82xx_68.elf CPhStatus_Base1::~CPhStatus_Base1()
+000026b4 PhIPpin_82xx_68.elf IPhIOAccess::~IPhIOAccess()
+00002730 PhIPpin_82xx_68.elf CPhIOAccess_Base::~CPhIOAccess_Base()
+000027ac PhIPpin_82xx_68.elf IPhIOAccess::~IPhIOAccess()
+00002828 PhIPpin_82xx_68.elf IPhIOAccess::~IPhIOAccess()
+000028a4 PhIPpin_82xx_68.elf CPhIOAccess_Base::~CPhIOAccess_Base()
+00002920 PhIPpin_82xx_68.elf IPhDiagnostics::~IPhDiagnostics()
+0000299c PhIPpin_82xx_68.elf CPhDiagnostics_Base::~CPhDiagnostics_Base()
+00002a18 PhIPpin_82xx_68.elf IPhDiagnostics::~IPhDiagnostics()
+00002a94 PhIPpin_82xx_68.elf IPhDiagnostics::~IPhDiagnostics()
+00002b10 PhIPpin_82xx_68.elf CPhDiagnostics_Base::~CPhDiagnostics_Base()
+00002b8c PhIPpin_82xx_68.elf IPhOLU::~IPhOLU()
+00002c08 PhIPpin_82xx_68.elf CPhOLU_Base::~CPhOLU_Base()
+00002c84 PhIPpin_82xx_68.elf IPhOLU::~IPhOLU()
+00002d00 PhIPpin_82xx_68.elf IPhOLU::~IPhOLU()
+00002d7c PhIPpin_82xx_68.elf CPhOLU_Base::~CPhOLU_Base()
+00002df8 PhIPpin_82xx_68.elf IPhOLU1::~IPhOLU1()
+00002e74 PhIPpin_82xx_68.elf CPhOLU_Base1::~CPhOLU_Base1()
+00002ef0 PhIPpin_82xx_68.elf IPhOLU1::~IPhOLU1()
+00002f6c PhIPpin_82xx_68.elf IPhOLU1::~IPhOLU1()
+00002fe8 PhIPpin_82xx_68.elf CPhOLU_Base1::~CPhOLU_Base1()
+00003064 PhIPpin_82xx_68.elf IPhCommon::~IPhCommon()
+000030e0 PhIPpin_82xx_68.elf IPhCommon::~IPhCommon()
+0000315c PhIPpin_82xx_68.elf IPhCommon::~IPhCommon()
+000031d4 PhIPpin_82xx_68.elf CompanyName
+000031d8 PhIPpin_82xx_68.elf ProductName
+000031e0 PhIPpin_82xx_68.elf ProductVersion
+000031f8 PhIPpin_82xx_68.elf CLSID_CPhIPpin
+00003260 PhIPpin_82xx_68.elf IID_IPhCommonCB
+00003270 PhIPpin_82xx_68.elf IID_IPhConfigCB
+00003280 PhIPpin_82xx_68.elf IID_IPhConfigCB1
+00003290 PhIPpin_82xx_68.elf IID_IPhIOAccessCB
+000032a0 PhIPpin_82xx_68.elf IID_IPhExternalConfigCB1
+000032b0 PhIPpin_82xx_68.elf IID_IPhExternalConfigCB2
+000032c0 PhIPpin_82xx_68.elf IID_IPhExternalConfigCB3
+000032d0 PhIPpin_82xx_68.elf IID_IPhOLUCB
+000032e0 PhIPpin_82xx_68.elf IID_IPhCommon
+000032f0 PhIPpin_82xx_68.elf IID_IPhConfig1
+00003300 PhIPpin_82xx_68.elf IID_IPhStatus1
+00003310 PhIPpin_82xx_68.elf IID_IPhClient
+00003320 PhIPpin_82xx_68.elf IID_IPhClient1
+00003330 PhIPpin_82xx_68.elf IID_IPhDiagnostics
+00003340 PhIPpin_82xx_68.elf IID_IPhIOAccess
+00003350 PhIPpin_82xx_68.elf IID_IPhSafeConfig
+00003360 PhIPpin_82xx_68.elf IID_IPhSafeConfig1
+00003370 PhIPpin_82xx_68.elf IID_IPhSafeConfig2
+00003380 PhIPpin_82xx_68.elf IID_IPhSimulation
+00003390 PhIPpin_82xx_68.elf IID_IPhOLU
+000033a0 PhIPpin_82xx_68.elf IID_IPhOLU1
+000033b0 PhIPpin_82xx_68.elf IID_IHeapCallback
+000033c0 PhIPpin_82xx_68.elf IID_ISystemUtilitiesCallback
+000033d0 PhIPpin_82xx_68.elf IID_ISystemUtilitiesCallback1
+000033e0 PhIPpin_82xx_68.elf IID_ISystemUtilitiesCallback2
+000033f0 PhIPpin_82xx_68.elf IID_ISystemUtilitiesCallback3
+00003400 PhIPpin_82xx_68.elf IID_ISystemUtilitiesCallback4
+00003410 PhIPpin_82xx_68.elf IID_IEventMgrCallback
+00003420 PhIPpin_82xx_68.elf IID_IEventMgrCallback1
+00003430 PhIPpin_82xx_68.elf IID_ISysClockCallback
+00003440 PhIPpin_82xx_68.elf IID_ISysClockCallback1
+00003450 PhIPpin_82xx_68.elf IID_ISysClockCallback2
+00003460 PhIPpin_82xx_68.elf IID_ISysClockCallback3
+00003470 PhIPpin_82xx_68.elf IID_INetwClockSynchCallback
+00003480 PhIPpin_82xx_68.elf IID_IConfigCBCallback1
+00003490 PhIPpin_82xx_68.elf IID_IConfigCBCallback2
+000034a0 PhIPpin_82xx_68.elf IID_IConfigCBCallback3
+000034b0 PhIPpin_82xx_68.elf IID_IExternalConfigCBCallback
+000034c0 PhIPpin_82xx_68.elf IID_IExternalConfigCBCallback2
+000034d0 PhIPpin_82xx_68.elf IID_IExternalConfigCBCallback3
+000034e0 PhIPpin_82xx_68.elf IID_IExternalConfigCBCallback4
+000034f0 PhIPpin_82xx_68.elf IID_IMessagesCBCallback
+00003500 PhIPpin_82xx_68.elf IID_IAIPAccessCBCallback
+00003510 PhIPpin_82xx_68.elf IID_IOLUCBCallback
+00003520 PhIPpin_82xx_68.elf IID_IOLUCBCallback1
+00003530 PhIPpin_82xx_68.elf IID_ISystemUtilitiesCBCallback1
+00003540 PhIPpin_82xx_68.elf IID_IConfigCallback1
+00003550 PhIPpin_82xx_68.elf IID_IConfigCallback2
+00003560 PhIPpin_82xx_68.elf IID_IStatusCallback1
+00003570 PhIPpin_82xx_68.elf IID_IGenClientCallback
+00003580 PhIPpin_82xx_68.elf IID_IGenClientCallback1
+00003590 PhIPpin_82xx_68.elf IID_IGenClientCallback2
+000035a0 PhIPpin_82xx_68.elf IID_IIACClientCallback
+000035b0 PhIPpin_82xx_68.elf IID_IDriverFactoryCallback
+000035c0 PhIPpin_82xx_68.elf IID_IDiagnosticsCallback
+000035d0 PhIPpin_82xx_68.elf IID_ISafeConfigCallback
+000035e0 PhIPpin_82xx_68.elf IID_ISafeConfigCallback1
+000035f0 PhIPpin_82xx_68.elf IID_ISafeConfigCallback2
+00003600 PhIPpin_82xx_68.elf IID_ICRCCallback
+00003610 PhIPpin_82xx_68.elf IID_IIOAccessCallback
+00003620 PhIPpin_82xx_68.elf IID_CriticalRegionCallback
+00003630 PhIPpin_82xx_68.elf IID_VOSExceptionCallback
+00003640 PhIPpin_82xx_68.elf IID_DrvCommonCallback
+00003650 PhIPpin_82xx_68.elf IID_ProtectedMirroredHeapCallback
+00003660 PhIPpin_82xx_68.elf IID_SharedMirroredHeapCallback
+00003670 PhIPpin_82xx_68.elf IID_TemporaryMirroredHeapCallback
+00003680 PhIPpin_82xx_68.elf IID_IVarServerCallback
+00003690 PhIPpin_82xx_68.elf IID_IVarServerCallback1
+000036a0 PhIPpin_82xx_68.elf IID_IVarServerCallback2
+000036b0 PhIPpin_82xx_68.elf IID_ISOCKETCallback
+000036c0 PhIPpin_82xx_68.elf IID_ISOCKETCallback1
+000036d0 PhIPpin_82xx_68.elf IID_ISOCKETCallback2
+000036e0 PhIPpin_82xx_68.elf IID_IVOSCallback2
+00003790 V vtable for CPhIPpin PhIPpin_82xx_68.elf 
+00003838 V vtable for IPhStatus1 PhIPpin_82xx_68.elf 
+00003860 V vtable for IUnknown PhIPpin_82xx_68.elf 
+00003880 V vtable for IPhConfig1 PhIPpin_82xx_68.elf 
+000038c8 V vtable for CPhOLU_Base1 PhIPpin_82xx_68.elf 
+00003908 V vtable for CPhOLU_Base PhIPpin_82xx_68.elf 
+00003940 V vtable for CPhDiagnostics_Base PhIPpin_82xx_68.elf 
+00003968 V vtable for CPhIOAccess_Base PhIPpin_82xx_68.elf 
+00003990 V vtable for CPhStatus_Base1 PhIPpin_82xx_68.elf 
+000039b8 V vtable for CPhClient_Base1 PhIPpin_82xx_68.elf 
+00003a20 V vtable for CPhClient_Base PhIPpin_82xx_68.elf 
+00003a70 V vtable for CPhConfig_Base1 PhIPpin_82xx_68.elf 
+00003ab8 V vtable for CPhCommon_Base PhIPpin_82xx_68.elf 
+00003ae0 V vtable for IPhClient PhIPpin_82xx_68.elf 
+00003b30 V vtable for IPhClient1 PhIPpin_82xx_68.elf 
+00003b98 V vtable for IPhIOAccess PhIPpin_82xx_68.elf 
+00003bc0 V vtable for IPhDiagnostics PhIPpin_82xx_68.elf 
+00003be8 V vtable for IPhOLU PhIPpin_82xx_68.elf 
+00003c20 V vtable for IPhOLU1 PhIPpin_82xx_68.elf 
+00003c60 V vtable for IPhCommon PhIPpin_82xx_68.elf 
+00003c84 PhIPpin_82xx_68.elf CRTFuncTabBegin
+00003c84 PhIPpin_82xx_68.elf scprocs
+00003c90 PhIPpin_82xx_68.elf printf
+00003c94 PhIPpin_82xx_68.elf sprintf
+00003c98 PhIPpin_82xx_68.elf sscanf
+00003c9c PhIPpin_82xx_68.elf memcpy
+00003ca0 PhIPpin_82xx_68.elf memset
+00003ca4 PhIPpin_82xx_68.elf strcat
+00003ca8 PhIPpin_82xx_68.elf strcmp
+00003cac PhIPpin_82xx_68.elf strlen
+00003cb0 PhIPpin_82xx_68.elf strncmp
+00003cb4 PhIPpin_82xx_68.elf strncpy
+00003cb8 PhIPpin_82xx_68.elf memchr
+00003cbc PhIPpin_82xx_68.elf memcmp
+00003cc0 PhIPpin_82xx_68.elf memmove
+00003cc4 PhIPpin_82xx_68.elf strchr
+00003cc8 PhIPpin_82xx_68.elf strcoll
+00003ccc PhIPpin_82xx_68.elf strcpy
+00003cd0 PhIPpin_82xx_68.elf strcspn
+00003cd4 PhIPpin_82xx_68.elf strncat
+00003cd8 PhIPpin_82xx_68.elf strpbrk
+00003cdc PhIPpin_82xx_68.elf strrchr
+00003ce0 PhIPpin_82xx_68.elf strspn
+00003ce4 PhIPpin_82xx_68.elf strstr
+00003ce8 PhIPpin_82xx_68.elf strtok
+00003cec PhIPpin_82xx_68.elf strxfrm
+00003cf0 PhIPpin_82xx_68.elf strerror
+00003cf4 PhIPpin_82xx_68.elf pow
+00003cf8 PhIPpin_82xx_68.elf acos
+00003cfc PhIPpin_82xx_68.elf asin
+00003d00 PhIPpin_82xx_68.elf atan
+00003d04 PhIPpin_82xx_68.elf atan2
+00003d08 PhIPpin_82xx_68.elf ceil
+00003d0c PhIPpin_82xx_68.elf cos
+00003d10 PhIPpin_82xx_68.elf cosh
+00003d14 PhIPpin_82xx_68.elf exp
+00003d18 PhIPpin_82xx_68.elf fabs
+00003d1c PhIPpin_82xx_68.elf floor
+00003d20 PhIPpin_82xx_68.elf fmod
+00003d24 PhIPpin_82xx_68.elf frexp
+00003d28 PhIPpin_82xx_68.elf ldexp
+00003d2c PhIPpin_82xx_68.elf log
+00003d30 PhIPpin_82xx_68.elf log10
+00003d34 PhIPpin_82xx_68.elf modf
+00003d38 PhIPpin_82xx_68.elf sin
+00003d3c PhIPpin_82xx_68.elf sinh
+00003d40 PhIPpin_82xx_68.elf sqrt
+00003d44 PhIPpin_82xx_68.elf tan
+00003d48 PhIPpin_82xx_68.elf tanh
+00003d4c PhIPpin_82xx_68.elf div_r
+00003d50 PhIPpin_82xx_68.elf labs
+00003d54 PhIPpin_82xx_68.elf strtol
+00003d58 PhIPpin_82xx_68.elf free
+00003d5c PhIPpin_82xx_68.elf abort
+00003d60 PhIPpin_82xx_68.elf abs
+00003d64 PhIPpin_82xx_68.elf atof
+00003d68 PhIPpin_82xx_68.elf atoi
+00003d6c PhIPpin_82xx_68.elf atol
+00003d70 PhIPpin_82xx_68.elf bsearch
+00003d74 PhIPpin_82xx_68.elf ldiv_r
+00003d78 PhIPpin_82xx_68.elf qsort
+00003d7c PhIPpin_82xx_68.elf rand
+00003d80 PhIPpin_82xx_68.elf srand
+00003d84 PhIPpin_82xx_68.elf strtod
+00003d88 PhIPpin_82xx_68.elf strtoul
+00003d8c PhIPpin_82xx_68.elf malloc
+00003d90 PhIPpin_82xx_68.elf __assert
+00003d94 PhIPpin_82xx_68.elf time
+00003d98 PhIPpin_82xx_68.elf asctime
+00003d9c PhIPpin_82xx_68.elf gmtime
+00003da0 PhIPpin_82xx_68.elf clock
+00003da4 PhIPpin_82xx_68.elf ctime
+00003da8 PhIPpin_82xx_68.elf difftime
+00003dac PhIPpin_82xx_68.elf localtime
+00003db0 PhIPpin_82xx_68.elf mktime
+00003db4 PhIPpin_82xx_68.elf strftime
+00003db8 PhIPpin_82xx_68.elf eventcollSem
+00003dbc PhIPpin_82xx_68.elf intLock
+00003dc0 PhIPpin_82xx_68.elf intUnlock
+00003dcc PhIPpin_82xx_68.elf fprintf
+00003dd0 PhIPpin_82xx_68.elf __stdout
+00003dd4 PhIPpin_82xx_68.elf __stderr
+00003dd8 PhIPpin_82xx_68.elf setjmp
+00003ddc PhIPpin_82xx_68.elf longjmp
+00003de0 PhIPpin_82xx_68.elf operator new[](unsigned int)
+00003de4 PhIPpin_82xx_68.elf operator delete[](void*)
+00003de8 PhIPpin_82xx_68.elf CRTFuncTabEnd
+00003de8 PhIPpin_82xx_68.elf ecprocs
+00003de8 PhIPpin_82xx_68.elf etext
+00003de8 PhIPpin_82xx_68.elf sgot2
+00003e88 PhIPpin_82xx_68.elf egot2
+00003e88 PhIPpin_82xx_68.elf sfixup
+00004340 PhIPpin_82xx_68.elf CMirroredObject::c_pMirroredObjectMgrImpl
+00004340 PhIPpin_82xx_68.elf efixup
+00004344 PhIPpin_82xx_68.elf CMirroredObjectAgent::c_pHeapCallback
+00004348 PhIPpin_82xx_68.elf CMirroredObjectAgent::c_AgentTag
+0000434c V CComCoClass<CPhIPpin, &(CLSID_CPhIPpin)>::m_HeapTag PhIPpin_82xx_68.elf 
+00004350 PhIPpin_82xx_68.elf PHproperties
+00004358 PhIPpin_82xx_68.elf useEXEHEAD
+</SYMBOLS>

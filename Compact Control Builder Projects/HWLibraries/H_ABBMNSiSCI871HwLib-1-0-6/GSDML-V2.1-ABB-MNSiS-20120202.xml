@@ -1,0 +1,1043 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- MNSiS GSDML Versions: -->
+<!--    5.3   - Default data mapping                                   2008-12-10 / SELVS/U / Daniel Grandin -->
+<!--    5.3.1 - Correcting names (removed Redundancy Module)           2009-03-25 / SELVS/U / Daniel Grandin -->
+<!--    5.3.2 - Fixed Actuator Close,Open,Stop MNSiS Lang Translation  2009-06-01 / SELVS/U / Daniel Grandin -->
+<!--    5.3.3 - Reduced the GPIO submodule                             2009-06-01 / SELVS/U / Daniel Grandin -->
+<!--    5.4   - Added Module/Submodules for missing starter types:     2009-09-13 / SELVS/U / Daniel Grandin -->
+<!--              - MFeed                                                                                    -->
+<!--              - CFeed                                                                                    -->
+<!--              - CFeedRCU                                                                                 -->
+<!--              - TransparentMFeed                                                                         -->
+<!--              - TransparentCFeed                                                                         -->
+<!--    5.4.1 - Modified interfaces MFeed (added trip in read/write)   2009-09-22 / SELVS/U / Daniel Grandin -->
+<!--            and CFeed/CFeedRCU (corrected on/off command)                                                -->
+<!--    5.4.2 - Renamed the existing redundancy submodule and added    2009-10-30 / AP/LS/D / Daniel Grandin -->
+<!--            3 more for the DAP to enable 4 controllers to                                                -->
+<!--            simultaneous be connected to the MLink and have                                              -->
+<!--            write access to the redundancy data (1 submodule for                                         -->
+<!--            each controller). Removed old USI description.                                               -->
+<!--            Added a control submodule for 'NoStarterModule' with                                         -->
+<!--            appropriate data and removed measurement and thermal                                         -->
+<!--            image since they are not interesting for the                                                 -->
+<!--            'NoStarterModule'.                                                                           -->
+<!--    5.4.3 - Added a submodule, extended GPIO, which holds more     2010-02-08 / AP/LS/D / Daniel Grandin -->
+<!--            GPIs than the normal one. This is used for the                                               -->
+<!--            'NoStarterModule' which generally use the IOs on                                             -->
+<!--            MControl. The other modules can't hold all the GPIs                                          -->
+<!--            because then the total amount of data would be too                                           -->
+<!--            much.                                                                                        -->
+<!--            Also removed 'Generic' from the display names of the                                         -->
+<!--            modules and submodules.                                                                      -->
+<!--    5.4.4 - Changed the MNS iS Lang for AutoMode and CmdAutoMode,  2010-02-08 / AP/LS/D / Daniel Grandin -->
+<!--            before there was no variable/command for this so it                                          -->
+<!--            was constructed from scratch, now using the available                                        -->
+<!--            variable/command.                                                                            -->
+<!--    5.4.5 - Changed the name/description of the "Ready" bit, now   2010-05-31 / AP/LS/D / Daniel Grandin -->
+<!--            it says "Ready To Start" which is more accurate for                                          -->
+<!--            what it actually indicates.                                                                  -->
+<!--            Do not change the name of the GSDML file it will still                                       -->
+<!--            say 20100208 since the functionaliy is the same.                                             -->
+<!--    5.4.6 - Changed the MNS iS Lang for the CmdTripReset to        2010-07-21 / LP/LS/D / Daniel Grandin -->
+<!--            support single trip reset.                                                                   -->
+<!--            Do not change the name of the GSDML file it will still                                       -->
+<!--            say 20100208 since the functionality doesn't effect                                          -->
+<!--            DCS system, only internally in MLink.                                                        -->
+<!--    5.5.1 - Added module and submodules for MConnect with SACE     2010-12-08 / LP/LS/D / Daniel Grandin -->
+<!--            circuit breaker                                                                              -->
+<!--    6.1.0 - Added module and submodules for DCFeeder               2012-02-02 / LP/LS/D / Daniel Grandin -->
+<!--    6.1.1 - Change the ID for a DCMFeed to the same as in reality. 2012-02-06 / LP/LS/D / Daniel Grandin -->
+<!--    6.1.2 - Switched the status bits 'Opening' and 'Closing' in    2012-02-21 / LP/LS/D / Daniel Grandin -->
+<!--            Actuator control submodule.                                                                  -->
+<ISO15745Profile xmlns="http://www.profibus.com/GSDML/2003/11/DeviceProfile" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.profibus.com/GSDML/2003/11/DeviceProfile ..\XSD\GSDML-DeviceProfile-v2.1.xsd">
+	<ProfileHeader>
+		<ProfileIdentification>PROFINET Device Profile</ProfileIdentification>
+		<ProfileRevision>1.00</ProfileRevision>
+		<ProfileName>Device Profile for PROFINET Devices</ProfileName>
+		<ProfileSource>PROFIBUS Nutzerorganisation e. V. (PNO)</ProfileSource>
+		<ProfileClassID>Device</ProfileClassID>
+		<ISO15745Reference>
+			<ISO15745Part>4</ISO15745Part>
+			<ISO15745Edition>1</ISO15745Edition>
+			<ProfileTechnology>GSDML</ProfileTechnology>
+		</ISO15745Reference>
+	</ProfileHeader>
+	<ProfileBody> 
+		<DeviceIdentity VendorID="0x001A" DeviceID="0x0010">
+			<InfoText TextId="PROFINET_IO_DEV_DESCRIPTION"/>
+			<VendorName Value="ABB Automation Products GmbH"/>
+		</DeviceIdentity>
+		<DeviceFunction>
+			<Family MainFamily="Switching Devices" ProductFamily="MNS iS"/>
+		</DeviceFunction>
+		<ApplicationProcess>
+			<DeviceAccessPointList>
+				<DeviceAccessPointItem ID="GenericMLink" PhysicalSlots="0..60" PhysicalSubslots="1..10" ModuleIdentNumber="0xF0000001" MinDeviceInterval="32" ImplementationType="Linux RTAI" DNS_CompatibleName="mlink" FixedInSlots="0" ObjectUUID_LocalIndex="1" AddressAssignment="LOCAL">
+					<ModuleInfo>
+						<Name TextId="GenericMLink"/>
+						<InfoText TextId="PROFINET_IO_DEV_DESCRIPTION"/>
+						<VendorName Value="ABB"/>
+						<OrderNumber Value="NA"/>
+						<HardwareRelease Value="NA"/>
+						<SoftwareRelease Value="V2.0.0"/>
+					</ModuleInfo>
+					<IOConfigData MaxInputLength="1440" MaxOutputLength="1440"/>
+					<UseableModules>
+						<ModuleItemRef ModuleItemTarget="GenericNrDol" AllowedInSlots="1..60"/>
+						<ModuleItemRef ModuleItemTarget="GenericRevDol" AllowedInSlots="1..60"/>
+						<ModuleItemRef ModuleItemTarget="GenericNrDolRcu" AllowedInSlots="1..60"/>
+						<ModuleItemRef ModuleItemTarget="GenericRevDolRcu" AllowedInSlots="1..60"/>
+						<ModuleItemRef ModuleItemTarget="GenericActuator" AllowedInSlots="1..60"/>
+						<ModuleItemRef ModuleItemTarget="GenericNrDolSd" AllowedInSlots="1..60"/>
+						<ModuleItemRef ModuleItemTarget="GenericNoStarterModule" AllowedInSlots="1..60"/>
+						<ModuleItemRef ModuleItemTarget="GenericTransparent" AllowedInSlots="1..60"/>
+						<ModuleItemRef ModuleItemTarget="GenericNrDolSoftstarter" AllowedInSlots="1..60"/>
+						<ModuleItemRef ModuleItemTarget="GenericMFeed" AllowedInSlots="1..60"/>
+						<ModuleItemRef ModuleItemTarget="GenericCFeed" AllowedInSlots="1..60"/>
+						<ModuleItemRef ModuleItemTarget="GenericCFeedRCU" AllowedInSlots="1..60"/>
+						<ModuleItemRef ModuleItemTarget="GenericTransparentCFeed" AllowedInSlots="1..60"/>
+						<ModuleItemRef ModuleItemTarget="GenericTransparentMFeed" AllowedInSlots="1..60"/>
+						<ModuleItemRef ModuleItemTarget="GenericSacePR" AllowedInSlots="1..60"/>
+						<ModuleItemRef ModuleItemTarget="GenericMFeedDc" AllowedInSlots="1..60"/>
+					</UseableModules>
+					<UseableSubmodules>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericDAPStatus" FixedInSubslots="1" AllowedInSubslots="1"/>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericRedundancyControl1" AllowedInSubslots="2"/>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericRedundancyControl2" AllowedInSubslots="3"/>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericRedundancyControl3" AllowedInSubslots="4"/>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericRedundancyControl4" AllowedInSubslots="5"/>
+					</UseableSubmodules>
+				</DeviceAccessPointItem>
+			</DeviceAccessPointList>
+			<ModuleList>
+				<ModuleItem PhysicalSubslots="1..10" ID="GenericNrDol" ModuleIdentNumber="0xE0000001">
+					<ModuleInfo>
+						<Name TextId="GenericNrDol"/>
+						<InfoText TextId="GenericNrDolInfo"/>
+					</ModuleInfo>
+					<UseableSubmodules>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericControl-DOL" UsedInSubslots="1" AllowedInSubslots="1"/>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericMeasurements" UsedInSubslots="2" AllowedInSubslots="2"/>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericThermalOverload" AllowedInSubslots="3"/>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericGPIO" AllowedInSubslots="4"/>
+					</UseableSubmodules>
+				</ModuleItem>
+				<ModuleItem PhysicalSubslots="1..10" ID="GenericRevDol" ModuleIdentNumber="0xE0000002">
+					<ModuleInfo>
+						<Name TextId="GenericRevDol"/>
+						<InfoText TextId="GenericRevDolInfo"/>
+					</ModuleInfo>
+					<UseableSubmodules>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericControl-REVDOL" UsedInSubslots="1" AllowedInSubslots="1"/>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericMeasurements" UsedInSubslots="2" AllowedInSubslots="2"/>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericThermalOverload" AllowedInSubslots="3"/>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericGPIO" AllowedInSubslots="4"/>
+					</UseableSubmodules>
+				</ModuleItem>
+				<ModuleItem PhysicalSubslots="1..10" ID="GenericNrDolRcu" ModuleIdentNumber="0xE0000003">
+					<ModuleInfo>
+						<Name TextId="GenericNrDolRcu"/>
+						<InfoText TextId="GenericNrDolRcuInfo"/>
+					</ModuleInfo>
+					<UseableSubmodules>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericControl-DOL" UsedInSubslots="1" AllowedInSubslots="1"/>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericMeasurements" UsedInSubslots="2" AllowedInSubslots="2"/>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericThermalOverload" AllowedInSubslots="3"/>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericGPIO" AllowedInSubslots="4"/>
+					</UseableSubmodules>
+				</ModuleItem>
+				<ModuleItem PhysicalSubslots="1..10" ID="GenericRevDolRcu" ModuleIdentNumber="0xE0000004">
+					<ModuleInfo>
+						<Name TextId="GenericRevDolRcu"/>
+						<InfoText TextId="GenericRevDolRcuInfo"/>
+					</ModuleInfo>
+					<UseableSubmodules>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericControl-REVDOL" UsedInSubslots="1" AllowedInSubslots="1"/>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericMeasurements" UsedInSubslots="2" AllowedInSubslots="2"/>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericThermalOverload" AllowedInSubslots="3"/>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericGPIO" AllowedInSubslots="4"/>
+					</UseableSubmodules>
+				</ModuleItem>
+				<ModuleItem PhysicalSubslots="1..10" ID="GenericActuator" ModuleIdentNumber="0xE0000005">
+					<ModuleInfo>
+						<Name TextId="GenericActuator"/>
+						<InfoText TextId="GenericActuatorInfo"/>
+					</ModuleInfo>
+					<UseableSubmodules>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericControl-Actuator" UsedInSubslots="1" AllowedInSubslots="1"/>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericMeasurements" UsedInSubslots="2" AllowedInSubslots="2"/>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericThermalOverload" AllowedInSubslots="3"/>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericGPIO" AllowedInSubslots="4"/>
+					</UseableSubmodules>
+				</ModuleItem>
+				<ModuleItem PhysicalSubslots="1..10" ID="GenericTransparent" ModuleIdentNumber="0xE0000006">
+					<ModuleInfo>
+						<Name TextId="GenericTransparent"/>
+						<InfoText TextId="GenericTransparentInfo"/>
+					</ModuleInfo>
+					<UseableSubmodules>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericControl-Transparent" UsedInSubslots="1" AllowedInSubslots="1"/>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericMeasurements" UsedInSubslots="2" AllowedInSubslots="2"/>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericThermalOverload" AllowedInSubslots="3"/>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericGPIO" AllowedInSubslots="4"/>
+					</UseableSubmodules>
+				</ModuleItem>
+				<ModuleItem PhysicalSubslots="1..10" ID="GenericNoStarterModule" ModuleIdentNumber="0xE0000007">
+					<ModuleInfo>
+						<Name TextId="GenericNoStarterModule"/>
+						<InfoText TextId="GenericNoStarterModuleInfo"/>
+					</ModuleInfo>
+					<UseableSubmodules>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericControl-NoStarterModule" UsedInSubslots="1" AllowedInSubslots="1"/>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericGPIOExtended" UsedInSubslots="4" AllowedInSubslots="4"/>
+					</UseableSubmodules>
+				</ModuleItem>
+				<ModuleItem PhysicalSubslots="1..10" ID="GenericNrDolSd" ModuleIdentNumber="0xE0000008">
+					<ModuleInfo>
+						<Name TextId="GenericNrDolSd"/>
+						<InfoText TextId="GenericNrDolSdInfo"/>
+					</ModuleInfo>
+					<UseableSubmodules>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericControl-DOL" UsedInSubslots="1" AllowedInSubslots="1"/>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericMeasurements" UsedInSubslots="2" AllowedInSubslots="2"/>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericThermalOverload" AllowedInSubslots="3"/>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericGPIO" AllowedInSubslots="4"/>
+					</UseableSubmodules>
+				</ModuleItem>
+				<ModuleItem PhysicalSubslots="1..10" ID="GenericNrDolSoftstarter" ModuleIdentNumber="0xE0000009">
+					<ModuleInfo>
+						<Name TextId="GenericNrDolSoftstarter"/>
+						<InfoText TextId="GenericNrDolSoftstarterInfo"/>
+					</ModuleInfo>
+					<UseableSubmodules>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericControl-DOL" UsedInSubslots="1" AllowedInSubslots="1"/>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericMeasurements" UsedInSubslots="2" AllowedInSubslots="2"/>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericThermalOverload" AllowedInSubslots="3"/>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericGPIO" AllowedInSubslots="4"/>
+					</UseableSubmodules>
+				</ModuleItem>
+				<ModuleItem PhysicalSubslots="1..10" ID="GenericMFeed" ModuleIdentNumber="0xE000000A">
+					<ModuleInfo>
+						<Name TextId="GenericMFeed"/>
+						<InfoText TextId="GenericMFeedInfo"/>
+					</ModuleInfo>
+					<UseableSubmodules>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericControl-MFeed" UsedInSubslots="1" AllowedInSubslots="1"/>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericMeasurements" UsedInSubslots="2" AllowedInSubslots="2"/>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericThermalOverload" AllowedInSubslots="3"/>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericGPIO" AllowedInSubslots="4"/>
+					</UseableSubmodules>
+				</ModuleItem>
+				<ModuleItem PhysicalSubslots="1..10" ID="GenericCFeed" ModuleIdentNumber="0xE000000B">
+					<ModuleInfo>
+						<Name TextId="GenericCFeed"/>
+						<InfoText TextId="GenericCFeedInfo"/>
+					</ModuleInfo>
+					<UseableSubmodules>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericControl-CFeed" UsedInSubslots="1" AllowedInSubslots="1"/>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericMeasurements" UsedInSubslots="2" AllowedInSubslots="2"/>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericThermalOverload" AllowedInSubslots="3"/>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericGPIO" AllowedInSubslots="4"/>
+					</UseableSubmodules>
+				</ModuleItem>
+				<ModuleItem PhysicalSubslots="1..10" ID="GenericCFeedRCU" ModuleIdentNumber="0xE000000C">
+					<ModuleInfo>
+						<Name TextId="GenericCFeedRCU"/>
+						<InfoText TextId="GenericCFeedRCUInfo"/>
+					</ModuleInfo>
+					<UseableSubmodules>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericControl-CFeed" UsedInSubslots="1" AllowedInSubslots="1"/>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericMeasurements" UsedInSubslots="2" AllowedInSubslots="2"/>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericThermalOverload" AllowedInSubslots="3"/>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericGPIO" AllowedInSubslots="4"/>
+					</UseableSubmodules>
+				</ModuleItem>
+				<ModuleItem PhysicalSubslots="1..10" ID="GenericTransparentCFeed" ModuleIdentNumber="0xE000000D">
+					<ModuleInfo>
+						<Name TextId="GenericTransparentCFeed"/>
+						<InfoText TextId="GenericTransparentCFeedInfo"/>
+					</ModuleInfo>
+					<UseableSubmodules>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericControl-TransparentCFeed" UsedInSubslots="1" AllowedInSubslots="1"/>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericMeasurements" UsedInSubslots="2" AllowedInSubslots="2"/>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericThermalOverload" AllowedInSubslots="3"/>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericGPIO" AllowedInSubslots="4"/>
+					</UseableSubmodules>
+				</ModuleItem>
+				<ModuleItem PhysicalSubslots="1..10" ID="GenericTransparentMFeed" ModuleIdentNumber="0xE000000E">
+					<ModuleInfo>
+						<Name TextId="GenericTransparentMFeed"/>
+						<InfoText TextId="GenericTransparentMFeedInfo"/>
+					</ModuleInfo>
+					<UseableSubmodules>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericControl-TransparentMFeed" UsedInSubslots="1" AllowedInSubslots="1"/>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericMeasurements" UsedInSubslots="2" AllowedInSubslots="2"/>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericThermalOverload" AllowedInSubslots="3"/>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericGPIO" AllowedInSubslots="4"/>
+					</UseableSubmodules>
+				</ModuleItem>
+				<ModuleItem PhysicalSubslots="1..10" ID="GenericSacePR" ModuleIdentNumber="0xE0000010">
+					<ModuleInfo>
+						<Name TextId="GenericSacePR"/>
+						<InfoText TextId="GenericSacePRInfo"/>
+					</ModuleInfo>
+					<UseableSubmodules>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericControl-SacePR" UsedInSubslots="1" AllowedInSubslots="1"/>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericCBRCurrent" UsedInSubslots="2" AllowedInSubslots="2"/>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericCBRVoltage" AllowedInSubslots="3"/>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericCBRPower" AllowedInSubslots="4"/>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericGPIO" AllowedInSubslots="5"/>
+					</UseableSubmodules>
+				</ModuleItem>
+				<ModuleItem PhysicalSubslots="1..10" ID="GenericMFeedDc" ModuleIdentNumber="0xE0000011">
+					<ModuleInfo>
+						<Name TextId="GenericMFeedDc"/>
+						<InfoText TextId="GenericMFeedDcInfo"/>
+					</ModuleInfo>
+					<UseableSubmodules>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericControl-DCFeed" UsedInSubslots="1" AllowedInSubslots="1"/>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericMeasurementsDC" UsedInSubslots="2" AllowedInSubslots="2"/>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericThermalOverload" AllowedInSubslots="3"/>
+						<SubmoduleItemRef SubmoduleItemTarget="GenericGPIO" AllowedInSubslots="4"/>
+					</UseableSubmodules>
+				</ModuleItem>
+			</ModuleList>
+			<SubmoduleList>
+				<SubmoduleItem SubmoduleIdentNumber="0x00000000" ID="GenericDAPStatus">
+					<IOData IOPS_Length="1" IOCS_Length="1"/>
+					<ModuleInfo>
+						<Name TextId="GenericDAPStatus"/>
+						<InfoText TextId="GenericDAPStatusInfo"/>
+					</ModuleInfo>
+				</SubmoduleItem>
+				<SubmoduleItem SubmoduleIdentNumber="0x00000011" ID="GenericRedundancyControl1">
+					<IOData IOPS_Length="1" IOCS_Length="1">
+						<Input>
+							<DataItem TextId="RedundancyStatus" DataType="Unsigned8" UseAsBits="true">
+								<BitDataItem BitOffset="0" TextId="RedundancyPrimary"/>
+								<BitDataItem BitOffset="1" TextId="RedundancyError"/>
+							</DataItem>
+						</Input>
+						<Output>
+							<DataItem TextId="RedundancyCommand" DataType="Unsigned8" UseAsBits="true">
+								<BitDataItem BitOffset="0" TextId="CmdRedundancySwitchOver"/>
+							</DataItem>
+						</Output>
+					</IOData>
+					<ModuleInfo>
+						<Name TextId="GenericRedundancyControl1"/>
+						<InfoText TextId="GenericRedundancyControl1Info"/>
+					</ModuleInfo>
+				</SubmoduleItem>
+				<SubmoduleItem SubmoduleIdentNumber="0x00000012" ID="GenericRedundancyControl2">
+					<IOData IOPS_Length="1" IOCS_Length="1">
+						<Input>
+							<DataItem TextId="RedundancyStatus" DataType="Unsigned8" UseAsBits="true">
+								<BitDataItem BitOffset="0" TextId="RedundancyPrimary"/>
+								<BitDataItem BitOffset="1" TextId="RedundancyError"/>
+							</DataItem>
+						</Input>
+						<Output>
+							<DataItem TextId="RedundancyCommand" DataType="Unsigned8" UseAsBits="true">
+								<BitDataItem BitOffset="0" TextId="CmdRedundancySwitchOver"/>
+							</DataItem>
+						</Output>
+					</IOData>
+					<ModuleInfo>
+						<Name TextId="GenericRedundancyControl2"/>
+						<InfoText TextId="GenericRedundancyControl2Info"/>
+					</ModuleInfo>
+				</SubmoduleItem>
+				<SubmoduleItem SubmoduleIdentNumber="0x00000013" ID="GenericRedundancyControl3">
+					<IOData IOPS_Length="1" IOCS_Length="1">
+						<Input>
+							<DataItem TextId="RedundancyStatus" DataType="Unsigned8" UseAsBits="true">
+								<BitDataItem BitOffset="0" TextId="RedundancyPrimary"/>
+								<BitDataItem BitOffset="1" TextId="RedundancyError"/>
+							</DataItem>
+						</Input>
+						<Output>
+							<DataItem TextId="RedundancyCommand" DataType="Unsigned8" UseAsBits="true">
+								<BitDataItem BitOffset="0" TextId="CmdRedundancySwitchOver"/>
+							</DataItem>
+						</Output>
+					</IOData>
+					<ModuleInfo>
+						<Name TextId="GenericRedundancyControl3"/>
+						<InfoText TextId="GenericRedundancyControl3Info"/>
+					</ModuleInfo>
+				</SubmoduleItem>
+				<SubmoduleItem SubmoduleIdentNumber="0x00000014" ID="GenericRedundancyControl4">
+					<IOData IOPS_Length="1" IOCS_Length="1">
+						<Input>
+							<DataItem TextId="RedundancyStatus" DataType="Unsigned8" UseAsBits="true">
+								<BitDataItem BitOffset="0" TextId="RedundancyPrimary"/>
+								<BitDataItem BitOffset="1" TextId="RedundancyError"/>
+							</DataItem>
+						</Input>
+						<Output>
+							<DataItem TextId="RedundancyCommand" DataType="Unsigned8" UseAsBits="true">
+								<BitDataItem BitOffset="0" TextId="CmdRedundancySwitchOver"/>
+							</DataItem>
+						</Output>
+					</IOData>
+					<ModuleInfo>
+						<Name TextId="GenericRedundancyControl4"/>
+						<InfoText TextId="GenericRedundancyControl4Info"/>
+					</ModuleInfo>
+				</SubmoduleItem>
+				<SubmoduleItem SubmoduleIdentNumber="0x00000001" ID="GenericControl-DOL">
+					<IOData IOPS_Length="1" IOCS_Length="1">
+						<Input>
+							<DataItem TextId="Status" DataType="Unsigned16" UseAsBits="true">
+								<BitDataItem BitOffset="1" TextId="Off"/>
+								<BitDataItem BitOffset="2" TextId="Run"/>
+								<BitDataItem BitOffset="3" TextId="OverloadWarning"/>
+								<BitDataItem BitOffset="5" TextId="AutoMode"/>
+								<BitDataItem BitOffset="6" TextId="Fault"/>
+								<BitDataItem BitOffset="7" TextId="Warning"/>
+								<BitDataItem BitOffset="12" TextId="TripResetPossible"/>
+								<BitDataItem BitOffset="13" TextId="Test"/>
+								<BitDataItem BitOffset="14" TextId="Ready"/>
+								<BitDataItem BitOffset="15" TextId="LifeBit"/>
+							</DataItem>
+						</Input>
+						<Output>
+							<DataItem TextId="Command" DataType="Unsigned16" UseAsBits="true">
+								<BitDataItem BitOffset="1" TextId="CmdOff"/>
+								<BitDataItem BitOffset="2" TextId="CmdRun"/>
+								<BitDataItem BitOffset="5" TextId="CmdAutoMode"/>
+								<BitDataItem BitOffset="6" TextId="CmdTripReset"/>
+								<BitDataItem BitOffset="10" TextId="CmdSoftLocal"/>
+								<BitDataItem BitOffset="11" TextId="CmdBusLocal"/>
+							</DataItem>
+						</Output>
+					</IOData>
+					<ModuleInfo>
+						<Name TextId="GenericControl-DOL"/>
+						<InfoText TextId="GenericControl-DOL-Info"/>
+					</ModuleInfo>
+				</SubmoduleItem>
+				<SubmoduleItem SubmoduleIdentNumber="0x00000002" ID="GenericControl-REVDOL">
+					<IOData IOPS_Length="1" IOCS_Length="1">
+						<Input>
+							<DataItem TextId="Status" DataType="Unsigned16" UseAsBits="true">
+								<BitDataItem BitOffset="0" TextId="RunReverse"/>
+								<BitDataItem BitOffset="1" TextId="Off"/>
+								<BitDataItem BitOffset="2" TextId="RunForward"/>
+								<BitDataItem BitOffset="3" TextId="OverloadWarning"/>
+								<BitDataItem BitOffset="5" TextId="AutoMode"/>
+								<BitDataItem BitOffset="6" TextId="Fault"/>
+								<BitDataItem BitOffset="7" TextId="Warning"/>
+								<BitDataItem BitOffset="12" TextId="TripResetPossible"/>
+								<BitDataItem BitOffset="13" TextId="Test"/>
+								<BitDataItem BitOffset="14" TextId="Ready"/>
+								<BitDataItem BitOffset="15" TextId="LifeBit"/>
+							</DataItem>
+						</Input>
+						<Output>
+							<DataItem TextId="Command" DataType="Unsigned16" UseAsBits="true">
+								<BitDataItem BitOffset="0" TextId="CmdRunReverse"/>
+								<BitDataItem BitOffset="1" TextId="CmdOff"/>
+								<BitDataItem BitOffset="2" TextId="CmdRunForward"/>
+								<BitDataItem BitOffset="5" TextId="CmdAutoMode"/>
+								<BitDataItem BitOffset="6" TextId="CmdTripReset"/>
+								<BitDataItem BitOffset="10" TextId="CmdSoftLocal"/>
+								<BitDataItem BitOffset="11" TextId="CmdBusLocal"/>
+							</DataItem>
+						</Output>
+					</IOData>
+					<ModuleInfo>
+						<Name TextId="GenericControl-REVDOL"/>
+						<InfoText TextId="GenericControl-REVDOL-Info"/>
+					</ModuleInfo>
+				</SubmoduleItem>
+				<SubmoduleItem SubmoduleIdentNumber="0x00000003" ID="GenericControl-Actuator">
+					<IOData IOPS_Length="1" IOCS_Length="1">
+						<Input>
+							<DataItem TextId="Status" DataType="Unsigned16" UseAsBits="true">
+								<BitDataItem BitOffset="0" TextId="Closing"/>
+								<BitDataItem BitOffset="1" TextId="Stopped"/>
+								<BitDataItem BitOffset="2" TextId="Opening"/>
+								<BitDataItem BitOffset="3" TextId="OverloadWarning"/>
+								<BitDataItem BitOffset="5" TextId="AutoMode"/>
+								<BitDataItem BitOffset="6" TextId="Fault"/>
+								<BitDataItem BitOffset="7" TextId="Warning"/>
+								<BitDataItem BitOffset="12" TextId="TripResetPossible"/>
+								<BitDataItem BitOffset="13" TextId="Test"/>
+								<BitDataItem BitOffset="14" TextId="Ready"/>
+								<BitDataItem BitOffset="15" TextId="LifeBit"/>
+							</DataItem>
+						</Input>
+						<Output>
+							<DataItem TextId="Command" DataType="Unsigned16" UseAsBits="true">
+								<BitDataItem BitOffset="0" TextId="CmdClose"/>
+								<BitDataItem BitOffset="1" TextId="CmdStop"/>
+								<BitDataItem BitOffset="2" TextId="CmdOpen"/>
+								<BitDataItem BitOffset="5" TextId="CmdAutoMode"/>
+								<BitDataItem BitOffset="6" TextId="CmdTripReset"/>
+								<BitDataItem BitOffset="10" TextId="CmdSoftLocal"/>
+								<BitDataItem BitOffset="11" TextId="CmdBusLocal"/>
+							</DataItem>
+						</Output>
+					</IOData>
+					<ModuleInfo>
+						<Name TextId="GenericControl-Actuator"/>
+						<InfoText TextId="GenericControl-Actuator-Info"/>
+					</ModuleInfo>
+				</SubmoduleItem>
+				<SubmoduleItem SubmoduleIdentNumber="0x00000004" ID="GenericControl-Transparent">
+					<IOData IOPS_Length="1" IOCS_Length="1">
+						<Input>
+							<DataItem TextId="Status" DataType="Unsigned16" UseAsBits="true">
+								<BitDataItem BitOffset="0" TextId="K1Closed"/>
+								<BitDataItem BitOffset="1" TextId="K2Closed"/>
+								<BitDataItem BitOffset="2" TextId="K3Closed"/>
+								<BitDataItem BitOffset="3" TextId="OverloadWarning"/>
+								<BitDataItem BitOffset="5" TextId="AutoMode"/>
+								<BitDataItem BitOffset="6" TextId="Fault"/>
+								<BitDataItem BitOffset="7" TextId="Warning"/>
+								<BitDataItem BitOffset="12" TextId="TripResetPossible"/>
+								<BitDataItem BitOffset="13" TextId="Test"/>
+								<BitDataItem BitOffset="14" TextId="Ready"/>
+								<BitDataItem BitOffset="15" TextId="LifeBit"/>
+							</DataItem>
+						</Input>
+						<Output>
+							<DataItem TextId="Command" DataType="Unsigned16" UseAsBits="true">
+								<BitDataItem BitOffset="0" TextId="CmdCloseOpenK1"/>
+								<BitDataItem BitOffset="1" TextId="CmdCloseOpenK2"/>
+								<BitDataItem BitOffset="2" TextId="CmdCloseOpenK3"/>
+								<BitDataItem BitOffset="5" TextId="CmdAutoMode"/>
+								<BitDataItem BitOffset="6" TextId="CmdTripReset"/>
+								<BitDataItem BitOffset="10" TextId="CmdSoftLocal"/>
+								<BitDataItem BitOffset="11" TextId="CmdBusLocal"/>
+							</DataItem>
+						</Output>
+					</IOData>
+					<ModuleInfo>
+						<Name TextId="GenericControl-Transparent"/>
+						<InfoText TextId="GenericControl-Transparent-Info"/>
+					</ModuleInfo>
+				</SubmoduleItem>
+				<SubmoduleItem SubmoduleIdentNumber="0x00000005" ID="GenericControl-MFeed">
+					<IOData IOPS_Length="1" IOCS_Length="1">
+						<Input>
+							<DataItem TextId="Status" DataType="Unsigned16" UseAsBits="true">
+								<BitDataItem BitOffset="1" TextId="MFeedOff"/>
+								<BitDataItem BitOffset="2" TextId="MFeedOn"/>
+								<BitDataItem BitOffset="6" TextId="Fault"/>
+								<BitDataItem BitOffset="7" TextId="Warning"/>
+								<BitDataItem BitOffset="12" TextId="TripResetPossible"/>
+								<BitDataItem BitOffset="13" TextId="Test"/>
+								<BitDataItem BitOffset="15" TextId="LifeBit"/>
+							</DataItem>
+						</Input>
+						<Output>
+							<DataItem TextId="Command" DataType="Unsigned16" UseAsBits="true">
+								<BitDataItem BitOffset="6" TextId="CmdTripReset"/>
+							</DataItem>
+						</Output>
+					</IOData>
+					<ModuleInfo>
+						<Name TextId="GenericControl-MFeed"/>
+						<InfoText TextId="GenericControl-MFeed-Info"/>
+					</ModuleInfo>
+				</SubmoduleItem>
+				<SubmoduleItem SubmoduleIdentNumber="0x00000006" ID="GenericControl-CFeed">
+					<IOData IOPS_Length="1" IOCS_Length="1">
+						<Input>
+							<DataItem TextId="Status" DataType="Unsigned16" UseAsBits="true">
+								<BitDataItem BitOffset="1" TextId="CFeedOff"/>
+								<BitDataItem BitOffset="2" TextId="CFeedOn"/>
+								<BitDataItem BitOffset="5" TextId="AutoMode"/>
+								<BitDataItem BitOffset="6" TextId="Fault"/>
+								<BitDataItem BitOffset="7" TextId="Warning"/>
+								<BitDataItem BitOffset="12" TextId="TripResetPossible"/>
+								<BitDataItem BitOffset="13" TextId="Test"/>
+								<BitDataItem BitOffset="14" TextId="Ready"/>
+								<BitDataItem BitOffset="15" TextId="LifeBit"/>
+							</DataItem>
+						</Input>
+						<Output>
+							<DataItem TextId="Command" DataType="Unsigned16" UseAsBits="true">
+								<BitDataItem BitOffset="1" TextId="CmdCFeedOff"/>
+								<BitDataItem BitOffset="2" TextId="CmdCFeedOn"/>
+								<BitDataItem BitOffset="5" TextId="CmdAutoMode"/>
+								<BitDataItem BitOffset="6" TextId="CmdTripReset"/>
+								<BitDataItem BitOffset="10" TextId="CmdSoftLocal"/>
+								<BitDataItem BitOffset="11" TextId="CmdBusLocal"/>
+							</DataItem>
+						</Output>
+					</IOData>
+					<ModuleInfo>
+						<Name TextId="GenericControl-CFeed"/>
+						<InfoText TextId="GenericControl-CFeed-Info"/>
+					</ModuleInfo>
+				</SubmoduleItem>
+				<SubmoduleItem SubmoduleIdentNumber="0x00000007" ID="GenericControl-TransparentMFeed">
+					<IOData IOPS_Length="1" IOCS_Length="1">
+						<Input>
+							<DataItem TextId="Status" DataType="Unsigned16" UseAsBits="true">
+								<BitDataItem BitOffset="1" TextId="TransparentMFeedOff"/>
+								<BitDataItem BitOffset="2" TextId="TransparentMFeedOn"/>
+								<BitDataItem BitOffset="3" TextId="OverloadWarning"/>
+								<BitDataItem BitOffset="6" TextId="Fault"/>
+								<BitDataItem BitOffset="7" TextId="Warning"/>
+								<BitDataItem BitOffset="12" TextId="TripResetPossible"/>
+								<BitDataItem BitOffset="13" TextId="Test"/>
+								<BitDataItem BitOffset="14" TextId="Ready"/>
+								<BitDataItem BitOffset="15" TextId="LifeBit"/>
+							</DataItem>
+						</Input>
+					</IOData>
+					<ModuleInfo>
+						<Name TextId="GenericControl-TransparentMFeed"/>
+						<InfoText TextId="GenericControl-TransparentMFeed-Info"/>
+					</ModuleInfo>
+				</SubmoduleItem>
+				<SubmoduleItem SubmoduleIdentNumber="0x00000008" ID="GenericControl-TransparentCFeed">
+					<IOData IOPS_Length="1" IOCS_Length="1">
+						<Input>
+							<DataItem TextId="Status" DataType="Unsigned16" UseAsBits="true">
+								<BitDataItem BitOffset="1" TextId="TransparentCFeedOff"/>
+								<BitDataItem BitOffset="2" TextId="TransparentCFeedOn"/>
+								<BitDataItem BitOffset="3" TextId="OverloadWarning"/>
+								<BitDataItem BitOffset="5" TextId="AutoMode"/>
+								<BitDataItem BitOffset="6" TextId="Fault"/>
+								<BitDataItem BitOffset="7" TextId="Warning"/>
+								<BitDataItem BitOffset="12" TextId="TripResetPossible"/>
+								<BitDataItem BitOffset="13" TextId="Test"/>
+								<BitDataItem BitOffset="14" TextId="Ready"/>
+								<BitDataItem BitOffset="15" TextId="LifeBit"/>
+							</DataItem>
+						</Input>
+						<Output>
+							<DataItem TextId="Command" DataType="Unsigned16" UseAsBits="true">
+								<BitDataItem BitOffset="1" TextId="CmdTransparentCFeedOff"/>
+								<BitDataItem BitOffset="2" TextId="CmdTransparentCFeedOn"/>
+								<BitDataItem BitOffset="5" TextId="CmdAutoMode"/>
+								<BitDataItem BitOffset="6" TextId="CmdTripReset"/>
+								<BitDataItem BitOffset="10" TextId="CmdSoftLocal"/>
+								<BitDataItem BitOffset="11" TextId="CmdBusLocal"/>
+							</DataItem>
+						</Output>
+					</IOData>
+					<ModuleInfo>
+						<Name TextId="GenericControl-TransparentCFeed"/>
+						<InfoText TextId="GenericControl-TransparentCFeed-Info"/>
+					</ModuleInfo>
+				</SubmoduleItem>
+				<SubmoduleItem SubmoduleIdentNumber="0x00000009" ID="GenericControl-NoStarterModule">
+					<IOData IOPS_Length="1" IOCS_Length="1">
+						<Input>
+							<DataItem TextId="Status" DataType="Unsigned16" UseAsBits="true">
+								<BitDataItem BitOffset="5" TextId="AutoMode"/>
+								<BitDataItem BitOffset="15" TextId="LifeBit"/>
+							</DataItem>
+						</Input>
+						<Output>
+							<DataItem TextId="Command" DataType="Unsigned16" UseAsBits="true">
+								<BitDataItem BitOffset="5" TextId="CmdAutoMode"/>
+								<BitDataItem BitOffset="10" TextId="CmdSoftLocal"/>
+								<BitDataItem BitOffset="11" TextId="CmdBusLocal"/>
+							</DataItem>
+						</Output>
+					</IOData>
+					<ModuleInfo>
+						<Name TextId="GenericControl-NoStarterModule"/>
+						<InfoText TextId="GenericControl-NoStarterModule-Info"/>
+					</ModuleInfo>
+				</SubmoduleItem>
+				<SubmoduleItem SubmoduleIdentNumber="0x0000000A" ID="GenericControl-SacePR">
+					<IOData IOPS_Length="1" IOCS_Length="1">
+						<Input>
+							<DataItem TextId="CBRState" DataType="Unsigned16"></DataItem>
+						</Input>
+						<Output>
+							<DataItem TextId="Command" DataType="Unsigned16" UseAsBits="true">
+								<BitDataItem BitOffset="0" TextId="CmdCBROff"/>
+								<BitDataItem BitOffset="1" TextId="CmdCBROn"/>
+								<BitDataItem BitOffset="2" TextId="CmdCBRTripReset"/>
+								<BitDataItem BitOffset="3" TextId="CmdCBRCBReset"/>
+								<BitDataItem BitOffset="5" TextId="CmdCBRRemote"/>
+							</DataItem>
+						</Output>
+					</IOData>
+					<ModuleInfo>
+						<Name TextId="GenericControl-SacePR"/>
+						<InfoText TextId="GenericControl-SacePR-Info"/>
+					</ModuleInfo>
+				</SubmoduleItem>
+				<SubmoduleItem SubmoduleIdentNumber="0x0000000B" ID="GenericControl-DCFeed">
+					<IOData IOPS_Length="1" IOCS_Length="1">
+						<Input>
+							<DataItem TextId="Status" DataType="Unsigned16" UseAsBits="true">
+								<BitDataItem BitOffset="1" TextId="DCFeedOff"/>
+								<BitDataItem BitOffset="2" TextId="DCFeedOn"/>
+								<BitDataItem BitOffset="5" TextId="AutoMode"/>
+								<BitDataItem BitOffset="6" TextId="Fault"/>
+								<BitDataItem BitOffset="7" TextId="Warning"/>
+								<BitDataItem BitOffset="12" TextId="TripResetPossible"/>
+								<BitDataItem BitOffset="13" TextId="Test"/>
+								<BitDataItem BitOffset="15" TextId="LifeBit"/>
+							</DataItem>
+						</Input>
+						<Output>
+							<DataItem TextId="Command" DataType="Unsigned16" UseAsBits="true">
+								<BitDataItem BitOffset="5" TextId="CmdAutoMode"/>
+								<BitDataItem BitOffset="6" TextId="CmdTripReset"/>
+								<BitDataItem BitOffset="10" TextId="CmdSoftLocal"/>
+								<BitDataItem BitOffset="11" TextId="CmdBusLocal"/>
+							</DataItem>
+						</Output>
+					</IOData>
+					<ModuleInfo>
+						<Name TextId="GenericControl-DCFeed"/>
+						<InfoText TextId="GenericControl-DCFeed-Info"/>
+					</ModuleInfo>
+				</SubmoduleItem>
+				<SubmoduleItem SubmoduleIdentNumber="0x10000010" ID="GenericMeasurements">
+					<IOData IOPS_Length="1" IOCS_Length="1">
+						<Input>
+							<DataItem TextId="CurrentL1Per" DataType="Unsigned16"></DataItem>
+							<DataItem TextId="ActivePower" DataType="Float32"></DataItem>
+							<DataItem TextId="CosPhi" DataType="Float32"></DataItem>
+						</Input>
+					</IOData>
+					<ModuleInfo>
+						<Name TextId="GenericMeasurements"/>
+						<InfoText TextId="GenericMeasurementsInfo"/>
+					</ModuleInfo>
+				</SubmoduleItem>
+				<SubmoduleItem SubmoduleIdentNumber="0x10000011" ID="GenericThermalOverload">
+					<IOData IOPS_Length="1" IOCS_Length="1">
+						<Input>
+							<DataItem TextId="ThermalImage" DataType="Unsigned16"></DataItem>
+							<DataItem TextId="TimeToTrip" DataType="Unsigned16"></DataItem>
+							<DataItem TextId="TimeToReset" DataType="Unsigned16"></DataItem>
+						</Input>
+					</IOData>
+					<ModuleInfo>
+						<Name TextId="GenericThermalOverload"/>
+						<InfoText TextId="GenericThermalOverloadInfo"/>
+					</ModuleInfo>
+				</SubmoduleItem>
+				<SubmoduleItem SubmoduleIdentNumber="0x10000013" ID="GenericGPIO">
+					<IOData IOPS_Length="1" IOCS_Length="1">
+						<Input>
+							<DataItem TextId="GPI" DataType="Unsigned8" UseAsBits="true">
+								<BitDataItem BitOffset="0" TextId="GPI1"/>
+								<BitDataItem BitOffset="1" TextId="GPI2"/>
+								<BitDataItem BitOffset="2" TextId="GPI3"/>
+								<BitDataItem BitOffset="3" TextId="GPI4"/>
+								<BitDataItem BitOffset="4" TextId="GPI5"/>
+								<BitDataItem BitOffset="5" TextId="GPI6"/>
+								<BitDataItem BitOffset="6" TextId="GPI7"/>
+								<BitDataItem BitOffset="7" TextId="GPI8"/>
+							</DataItem>
+						</Input>
+						<Output>
+							<DataItem TextId="GPO" DataType="Unsigned8" UseAsBits="true">
+								<BitDataItem BitOffset="0" TextId="GPO1"/>
+								<BitDataItem BitOffset="1" TextId="GPO2"/>
+								<BitDataItem BitOffset="2" TextId="GPO3"/>
+								<BitDataItem BitOffset="3" TextId="GPO4"/>
+								<BitDataItem BitOffset="4" TextId="GPO5"/>
+								<BitDataItem BitOffset="5" TextId="GPO6"/>
+								<BitDataItem BitOffset="6" TextId="GPO7"/>
+								<BitDataItem BitOffset="7" TextId="GPO8"/>
+							</DataItem>
+						</Output>
+					</IOData>
+					<ModuleInfo>
+						<Name TextId="GenericGPIO"/>
+						<InfoText TextId="GenericGPIOInfo"/>
+					</ModuleInfo>
+				</SubmoduleItem>
+				<SubmoduleItem SubmoduleIdentNumber="0x10000014" ID="GenericGPIOExtended">
+					<IOData IOPS_Length="1" IOCS_Length="1">
+						<Input>
+							<DataItem TextId="GPI" DataType="Unsigned16" UseAsBits="true">
+								<BitDataItem BitOffset="0" TextId="GPI1"/>
+								<BitDataItem BitOffset="1" TextId="GPI2"/>
+								<BitDataItem BitOffset="2" TextId="GPI3"/>
+								<BitDataItem BitOffset="3" TextId="GPI4"/>
+								<BitDataItem BitOffset="4" TextId="GPI5"/>
+								<BitDataItem BitOffset="5" TextId="GPI6"/>
+								<BitDataItem BitOffset="6" TextId="GPI7"/>
+								<BitDataItem BitOffset="7" TextId="GPI8"/>
+								<BitDataItem BitOffset="8" TextId="GPI9"/>
+								<BitDataItem BitOffset="9" TextId="GPI10"/>
+								<BitDataItem BitOffset="10" TextId="GPI11"/>
+								<BitDataItem BitOffset="11" TextId="GPI12"/>
+								<BitDataItem BitOffset="12" TextId="GPI13"/>
+								<BitDataItem BitOffset="13" TextId="GPI14"/>
+								<BitDataItem BitOffset="14" TextId="GPI15"/>
+								<BitDataItem BitOffset="15" TextId="GPI16"/>
+							</DataItem>
+						</Input>
+						<Output>
+							<DataItem TextId="GPO" DataType="Unsigned8" UseAsBits="true">
+								<BitDataItem BitOffset="0" TextId="GPO1"/>
+								<BitDataItem BitOffset="1" TextId="GPO2"/>
+								<BitDataItem BitOffset="2" TextId="GPO3"/>
+								<BitDataItem BitOffset="3" TextId="GPO4"/>
+								<BitDataItem BitOffset="4" TextId="GPO5"/>
+								<BitDataItem BitOffset="5" TextId="GPO6"/>
+								<BitDataItem BitOffset="6" TextId="GPO7"/>
+								<BitDataItem BitOffset="7" TextId="GPO8"/>
+							</DataItem>
+						</Output>
+					</IOData>
+					<ModuleInfo>
+						<Name TextId="GenericGPIOExtended"/>
+						<InfoText TextId="GenericGPIOExtendedInfo"/>
+					</ModuleInfo>
+				</SubmoduleItem>
+				<SubmoduleItem SubmoduleIdentNumber="0x10000015" ID="GenericCBRCurrent">
+					<IOData IOPS_Length="1" IOCS_Length="1">
+						<Input>
+							<DataItem TextId="CBRL1Current" DataType="Unsigned32"></DataItem>
+							<DataItem TextId="CBRL2Current" DataType="Unsigned32"></DataItem>
+							<DataItem TextId="CBRL3Current" DataType="Unsigned32"></DataItem>
+						</Input>
+					</IOData>
+					<ModuleInfo>
+						<Name TextId="GenericCBRCurrent"/>
+						<InfoText TextId="GenericCBRCurrentInfo"/>
+					</ModuleInfo>
+				</SubmoduleItem>
+				<SubmoduleItem SubmoduleIdentNumber="0x10000016" ID="GenericCBRVoltage">
+					<IOData IOPS_Length="1" IOCS_Length="1">
+						<Input>
+							<DataItem TextId="CBRL1L2Voltage" DataType="Float32"></DataItem>
+							<DataItem TextId="CBRL2L3Voltage" DataType="Float32"></DataItem>
+							<DataItem TextId="CBRL3L1Voltage" DataType="Float32"></DataItem>
+						</Input>
+					</IOData>
+					<ModuleInfo>
+						<Name TextId="GenericCBRVoltage"/>
+						<InfoText TextId="GenericCBRVoltageInfo"/>
+					</ModuleInfo>
+				</SubmoduleItem>
+				<SubmoduleItem SubmoduleIdentNumber="0x10000017" ID="GenericCBRPower">
+					<IOData IOPS_Length="1" IOCS_Length="1">
+						<Input>
+							<DataItem TextId="CBRTotalPowerFactor" DataType="Float32"></DataItem>
+							<DataItem TextId="CBRTotalActivePower" DataType="Float32"></DataItem>
+							<DataItem TextId="CBRTotalReactivePower" DataType="Float32"></DataItem>
+							<DataItem TextId="CBRTotalApparentPower" DataType="Float32"></DataItem>
+						</Input>
+					</IOData>
+					<ModuleInfo>
+						<Name TextId="GenericCBRPower"/>
+						<InfoText TextId="GenericCBRPowerInfo"/>
+					</ModuleInfo>
+				</SubmoduleItem>
+				<SubmoduleItem SubmoduleIdentNumber="0x10000018" ID="GenericMeasurementsDC">
+					<IOData IOPS_Length="1" IOCS_Length="1">
+						<Input>
+							<DataItem TextId="CurrentDCPer" DataType="Unsigned16"></DataItem>
+							<DataItem TextId="ActivePower" DataType="Float32"></DataItem>
+						</Input>
+					</IOData>
+					<ModuleInfo>
+						<Name TextId="GenericMeasurementsDC"/>
+						<InfoText TextId="GenericMeasurementsDCInfo"/>
+					</ModuleInfo>
+				</SubmoduleItem>
+			</SubmoduleList>
+			<ExternalTextList>
+				<PrimaryLanguage>
+					<Text TextId="MNSiS" Value="MNS iS"/>
+					<Text TextId="PROFINET_IO_DEV_DESCRIPTION" Value="MNS iS PNIO Device"/>
+					<Text TextId="GenericMLink" Value="MLink"/>
+					<Text TextId="GenericNrDol" Value="NrDol"/>
+					<Text TextId="GenericNrDolInfo" Value="Non Reversing Direct On Line Motor Starter"/>
+					<Text TextId="GenericRevDol" Value="RevDol"/>
+					<Text TextId="GenericRevDolInfo" Value="Reversing Direct On Line Motor Starter"/>
+					<Text TextId="GenericNrDolRcu" Value="NrDol RCU"/>
+					<Text TextId="GenericNrDolRcuInfo" Value="Non Reversing Direct On Line Motor Starter with Remote Control Unit"/>
+					<Text TextId="GenericRevDolRcu" Value="RevDol RCU"/>
+					<Text TextId="GenericRevDolRcuInfo" Value="Reversing Direct On Line Motor Starter with Remote Control Unit"/>
+					<Text TextId="GenericTransparent" Value="Transparent"/>
+					<Text TextId="GenericTransparentInfo" Value="Transparent Motor Starter"/>
+					<Text TextId="GenericActuator" Value="Actuator"/>
+					<Text TextId="GenericActuatorInfo" Value="Actuator Motor Starter"/>
+					<Text TextId="GenericNrDolSd" Value="NrDol SD"/>
+					<Text TextId="GenericNrDolSdInfo" Value="Non Reversing Direct On Line Star/Delta Motor Starter"/>
+					<Text TextId="GenericNoStarterModule" Value="No Starter Module"/>
+					<Text TextId="GenericNoStarterModuleInfo" Value="No Starter Module"/>
+					<Text TextId="GenericNrDolSoftstarter" Value="NrSoftStarter"/>
+					<Text TextId="GenericNrDolSoftstarterInfo" Value="Non Reversing Soft Starter"/>
+					<Text TextId="GenericMFeed" Value="MFeed"/>
+					<Text TextId="GenericMFeedInfo" Value="Feeder with no control"/>
+					<Text TextId="GenericCFeed" Value="CFeed"/>
+					<Text TextId="GenericCFeedInfo" Value="Feeder with control"/>
+					<Text TextId="GenericCFeedRCU" Value="CFeed RCU"/>
+					<Text TextId="GenericCFeedRCUInfo" Value="Feeder with control and Remote Control Unit"/>
+					<Text TextId="GenericTransparentMFeed" Value="Transparent MFeed"/>
+					<Text TextId="GenericTransparentMFeedInfo" Value="Transparent Motor Starter with no control"/>
+					<Text TextId="GenericTransparentCFeed" Value="Transparent CFeed"/>
+					<Text TextId="GenericTransparentCFeedInfo" Value="Transparent Motor Starter with control"/>
+					<Text TextId="GenericSacePR" Value="Sace CBR"/>
+					<Text TextId="GenericSacePRInfo" Value="SACE Circuit Breaker with PR122 or PR123"/>
+					<Text TextId="GenericMFeedDc" Value="DC MFeed"/>
+					<Text TextId="GenericMFeedDcInfo" Value="DC Feeder with no control"/>
+					<Text TextId="GenericDAPStatus" Value="MLink Status" />
+					<Text TextId="GenericDAPStatusInfo" Value="Provides IOXS status for MNS iS MLink DAP" />
+					<Text TextId="GenericRedundancyControl1" Value="Redundancy Control 1"/>
+					<Text TextId="GenericRedundancyControl1Info" Value="Interface for redundant MLinks for Controller 1"/>
+					<Text TextId="GenericRedundancyControl2" Value="Redundancy Control 2"/>
+					<Text TextId="GenericRedundancyControl2Info" Value="Interface for redundant MLinks for Controller 2"/>
+					<Text TextId="GenericRedundancyControl3" Value="Redundancy Control 3"/>
+					<Text TextId="GenericRedundancyControl3Info" Value="Interface for redundant MLinks for Controller 3"/>
+					<Text TextId="GenericRedundancyControl4" Value="Redundancy Control 4"/>
+					<Text TextId="GenericRedundancyControl4Info" Value="Interface for redundant MLinks for Controller 4"/>
+					<Text TextId="GenericControl-DOL" Value="NrDol Control"/>
+					<Text TextId="GenericControl-DOL-Info" Value="Control of Direct On Line Motor Starter"/>
+					<Text TextId="GenericControl-REVDOL" Value="RevDol Control"/>
+					<Text TextId="GenericControl-REVDOL-Info" Value="Control of Reversing Direct On Line Motor Starter"/>
+					<Text TextId="GenericControl-Actuator" Value="Actuator Control"/>
+					<Text TextId="GenericControl-Actuator-Info" Value="Control of Actuator Motor Starter"/>
+					<Text TextId="GenericControl-Transparent" Value="Transparent Control"/>
+					<Text TextId="GenericControl-Transparent-Info" Value="Control of Transparent Motor Starter"/>
+					<Text TextId="GenericControl-MFeed" Value="MFeed Control"/>
+					<Text TextId="GenericControl-MFeed-Info" Value="Control of MFeed"/>
+					<Text TextId="GenericControl-CFeed" Value="CFeed Control"/>
+					<Text TextId="GenericControl-CFeed-Info" Value="Control of Contactor Feeder"/>
+					<Text TextId="GenericControl-TransparentCFeed" Value="Transparent CFeed Control"/>
+					<Text TextId="GenericControl-TransparentCFeed-Info" Value="Transparent control of Contactor Feeder"/>
+					<Text TextId="GenericControl-TransparentMFeed" Value="Transparent MFeed Control"/>
+					<Text TextId="GenericControl-TransparentMFeed-Info" Value="Transparent control of MFeeder"/>
+					<Text TextId="GenericControl-NoStarterModule" Value="No Starter Module Control"/>
+					<Text TextId="GenericControl-NoStarterModule-Info" Value="Control of No Stater Module"/>
+					<Text TextId="GenericControl-SacePR" Value="CBR Control"/>
+					<Text TextId="GenericControl-SacePR-Info" Value="Control of SACE Circuit Breaker with PR122 or PR123"/>
+					<Text TextId="GenericControl-DCFeed" Value="DCFeed Control"/>
+					<Text TextId="GenericControl-DCFeed-Info" Value="Control of DCFeeder"/>
+					<Text TextId="GenericMeasurements" Value="Measurements"/>
+					<Text TextId="GenericMeasurementsInfo" Value="Measurement Values"/>
+					<Text TextId="GenericMeasurementsDC" Value="Measurements DC"/>
+					<Text TextId="GenericMeasurementsDCInfo" Value="DC Measurement Values"/>
+					<Text TextId="GenericThermalOverload" Value="Thermal Overload"/>
+					<Text TextId="GenericThermalOverloadInfo" Value="Thermal Overload Measurement Values"/>
+					<Text TextId="GenericGPIO" Value="General Purpose IO"/>
+					<Text TextId="GenericGPIOInfo" Value="General Purpose IO Control"/>
+					<Text TextId="GenericGPIOExtended" Value="General Purpose IO Extended"/>
+					<Text TextId="GenericGPIOExtendedInfo" Value="Extended General Purpose IO Control"/>
+					<Text TextId="GenericCBRCurrent" Value="CBR Current"/>
+					<Text TextId="GenericCBRCurrentInfo" Value="CBR Current Values"/>
+					<Text TextId="GenericCBRVoltage" Value="CBR Voltage"/>
+					<Text TextId="GenericCBRVoltageInfo" Value="CBR Voltage Values"/>
+					<Text TextId="GenericCBRPower" Value="CBR Power"/>
+					<Text TextId="GenericCBRPowerInfo" Value="CBR Power Values"/>
+					<Text TextId="RedundancyCommand" Value="Redundancy Command"/>
+					<Text TextId="CmdRedundancySwitchOver" Value="Redundancy Switch-Over"/>
+					<Text TextId="Command" Value="Command"/>
+					<Text TextId="CmdRunReverse" Value="Run Reverse"/>
+					<Text TextId="CmdOff" Value="Off"/>
+					<Text TextId="CmdStop" Value="Stop"/>
+					<Text TextId="CmdOpen" Value="Open"/>
+					<Text TextId="CmdRunForward" Value="Run Forward"/>
+					<Text TextId="CmdRun" Value="Run"/>
+					<Text TextId="CmdClose" Value="Close"/>
+					<Text TextId="CmdCloseOpenK1" Value="Close K1"/>
+					<Text TextId="CmdCloseOpenK2" Value="Close K2"/>
+					<Text TextId="CmdCloseOpenK3" Value="Close K3"/>
+					<Text TextId="CmdAutoMode" Value="Auto"/>
+					<Text TextId="CmdTripReset" Value="Trip Reset"/>
+					<Text TextId="CmdSoftLocal" Value="Soft Local"/>
+					<Text TextId="CmdBusLocal" Value="Bus Local"/>
+					<Text TextId="CmdCFeedOn" Value="On"/>
+					<Text TextId="CmdCFeedOff" Value="Off"/>
+					<Text TextId="CmdTransparentCFeedOn" Value="On"/>
+					<Text TextId="CmdTransparentCFeedOff" Value="Off"/>
+					<Text TextId="RedundancyStatus" Value="Redundancy Status"/>
+					<Text TextId="RedundancyPrimary" Value="Primary"/>
+					<Text TextId="RedundancyError" Value="Redundancy Error"/>
+					<Text TextId="Status" Value="Status"/>
+					<Text TextId="Off" Value="Off"/>
+					<Text TextId="Stopped" Value="Stopped"/>
+					<Text TextId="Run" Value="Run"/>
+					<Text TextId="RunForward" Value="Run Forward"/>
+					<Text TextId="Closing" Value="Closing"/>
+					<Text TextId="K1Closed" Value="K1 Closed"/>
+					<Text TextId="RunReverse" Value="Run Reverse"/>
+					<Text TextId="K2Closed" Value="K2 Closed"/>
+					<Text TextId="Opening" Value="Opening"/>
+					<Text TextId="K3Closed" Value="K3 Closed"/>
+					<Text TextId="OverloadWarning" Value="Overload Warning"/>
+					<Text TextId="AutoMode" Value="Auto Mode"/>
+					<Text TextId="Fault" Value="Fault"/>
+					<Text TextId="Warning" Value="Warning"/>
+					<Text TextId="TripResetPossible" Value="Trip Reset Possible"/>
+					<Text TextId="Test" Value="Test"/>
+					<Text TextId="Ready" Value="Ready To Start"/>
+					<Text TextId="LifeBit" Value="Life Bit"/>
+					<Text TextId="MFeedOn" Value="On"/>
+					<Text TextId="MFeedOff" Value="Off"/>
+					<Text TextId="CFeedOn" Value="On"/>
+					<Text TextId="CFeedOff" Value="Off"/>
+					<Text TextId="DCFeedOn" Value="On"/>
+					<Text TextId="DCFeedOff" Value="Off"/>
+					<Text TextId="TransparentCFeedOn" Value="On"/>
+					<Text TextId="TransparentCFeedOff" Value="Off"/>
+					<Text TextId="TransparentMFeedOn" Value="On"/>
+					<Text TextId="TransparentMFeedOff" Value="Off"/>
+					<Text TextId="GPIAnalogue" Value="Analogue In"/>
+					<Text TextId="GPI" Value="General Purpose In"/>
+					<Text TextId="GPI1" Value="GPI 1"/>
+					<Text TextId="GPI2" Value="GPI 2"/>
+					<Text TextId="GPI3" Value="GPI 3"/>
+					<Text TextId="GPI4" Value="GPI 4"/>
+					<Text TextId="GPI5" Value="GPI 5"/>
+					<Text TextId="GPI6" Value="GPI 6"/>
+					<Text TextId="GPI7" Value="GPI 7"/>
+					<Text TextId="GPI8" Value="GPI 8"/>
+					<Text TextId="GPI9" Value="GPI 9"/>
+					<Text TextId="GPI10" Value="GPI 10"/>
+					<Text TextId="GPI11" Value="GPI 11"/>
+					<Text TextId="GPI12" Value="GPI 12"/>
+					<Text TextId="GPI13" Value="GPI 13"/>
+					<Text TextId="GPI14" Value="GPI 14"/>
+					<Text TextId="GPI15" Value="GPI 15"/>
+					<Text TextId="GPI16" Value="GPI 16"/>
+					<Text TextId="GPO" Value="General Purpose Out"/>
+					<Text TextId="GPO1" Value="GPO 1"/>
+					<Text TextId="GPO2" Value="GPO 2"/>
+					<Text TextId="GPO3" Value="GPO 3"/>
+					<Text TextId="GPO4" Value="GPO 4"/>
+					<Text TextId="GPO5" Value="GPO 5"/>
+					<Text TextId="GPO6" Value="GPO 6"/>
+					<Text TextId="GPO7" Value="GPO 7"/>
+					<Text TextId="GPO8" Value="GPO 8"/>
+					<Text TextId="CurrentL1Per" Value="Current Phase L1 in %"/>
+					<Text TextId="CurrentDCPer" Value="DC Current in %"/>
+					<Text TextId="ActivePower" Value="Active Power"/>
+					<Text TextId="CosPhi" Value="Cos Phi"/>
+					<Text TextId="ThermalImage" Value="Thermal Image"/>
+					<Text TextId="TimeToTrip" Value="Time To Trip"/>
+					<Text TextId="TimeToReset" Value="Time To Reset"/>
+					<Text TextId="CBRState" Value="CBR State"/>
+					<Text TextId="CmdCBROff" Value="Off"/>
+					<Text TextId="CmdCBROn" Value="On"/>
+					<Text TextId="CmdCBRTripReset" Value="Trip Reset"/>
+					<Text TextId="CmdCBRCBReset" Value="CB Reset"/>
+					<Text TextId="CmdCBRRemote" Value="Set To Remote"/>
+					<Text TextId="CBRL1Current" Value="L1 Phase Current"/>
+					<Text TextId="CBRL2Current" Value="L2 Phase Current"/>
+					<Text TextId="CBRL3Current" Value="L3 Phase Current"/>
+					<Text TextId="CBRL1L2Voltage" Value="L1-L2 Voltage"/>
+					<Text TextId="CBRL2L3Voltage" Value="L2-L3 Voltage"/>
+					<Text TextId="CBRL3L1Voltage" Value="L3-L1 Voltage"/>
+					<Text TextId="CBRTotalPowerFactor" Value="Power Factor"/>
+					<Text TextId="CBRTotalActivePower" Value="Active Power"/>
+					<Text TextId="CBRTotalReactivePower" Value="Reactive Power"/>
+					<Text TextId="CBRTotalApparentPower" Value="Apparent Power"/>
+				</PrimaryLanguage>
+			</ExternalTextList>
+		</ApplicationProcess>
+	</ProfileBody>
+</ISO15745Profile>

@@ -1,0 +1,311 @@
+(*========================================================*)
+(*                                                        *)
+(*            ProfiBus - DPV1                             *)
+(*                                                        *)
+(*            ABB Drives RPBA-01                          *)
+(*                                                        *)
+(*========================================================*)
+
+HWUnitInfo
+  HWUnitID         16#00850812
+  Description      "RPBA-01"
+  Information      "ABB Drives PROFIBUS Adapter"
+  Icons            MotorType
+  Attributes       AdapterUnit  AutoAttach 
+
+  InterfaceInfo
+    IoSysType  CIGIO
+    CLSID_CB   {70AC2B68-4487-48e3-9957-EA25FD20A55F}
+    CLSID_CTRL {7a59948b-4432-4d69-9f66-2ca7ed7f9db5}
+    HWConfig   Fail
+  End InterfaceInfo
+
+  ConnectionInfo
+    ConnectType AllUnits
+    IOConnect   Fail
+    IOConfig    NoFail
+  End ConnectionInfo
+
+  SubUnits  1
+
+  SubUnitTypes
+    HWUnitID 16#01850812
+    HWUnitID 16#02850812
+    HWUnitID 16#03850812
+    HWUnitID 16#04850812
+    HWUnitID 16#05850812
+  End SubUnitTypes
+
+  Parameters
+    ParamInfo
+      Name            PARAMETER_0
+      Description     "Fail Safe mode"
+      CompileType      IOConnect
+      Datatype         ENUM 
+      Default          0
+      ParValIndex      1
+      ParamType        CIGIOData 2 0 0 ByteParam ByteOffset 
+    End ParamInfo
+    ParamInfo
+      Name            PARAMETER_1
+      Description     "Operation mode"
+      CompileType      IOConnect
+      Datatype         ENUM 
+      Default          1
+      ParValIndex      3
+      ParamType        CIGIOData 2 4 0 ByteParam ByteOffset 
+    End ParamInfo
+    ParamInfo
+      Name            PARAMETER_2
+      Description     "Control-zero mode"
+      CompileType      IOConnect
+      Datatype         ENUM 
+      Default          0
+      ParValIndex      2
+      ParamType        CIGIOData 2 2 0 ByteParam ByteOffset 
+    End ParamInfo
+    ParamInfo
+      Name            PARAMETER_3
+      Description     "Cut-Off time (0 = no cut-off)"
+      CompileType      IOConnect
+      Datatype         INT 
+      Default          1
+      ParValIndex      1003
+      ParamType        CIGIOData 3 0 0 WordParam ByteOffset 
+    End ParamInfo
+    ParamInfo
+      Name            PARAMETER_4
+      Description     "Failsafe Command"
+      CompileType      IOConnect
+      Datatype         INT 
+      Default          0
+      ParValIndex      1004
+      ParamType        CIGIOData 5 0 0 WordParam ByteOffset 
+    End ParamInfo
+    ParamInfo
+      Name            PARAMETER_5
+      Description     "Failsafe Speed Ref"
+      CompileType      IOConnect
+      Datatype         INT 
+      Default          0
+      ParValIndex      1005
+      ParamType        CIGIOData 7 0 0 WordParam ByteOffset 
+    End ParamInfo
+    ParamInfo
+      Name            PARAMETER_6
+      Description     "Failsafe Ref 3"
+      CompileType      IOConnect
+      Datatype         INT 
+      Default          0
+      ParValIndex      1006
+      ParamType        CIGIOData 9 0 0 WordParam ByteOffset 
+    End ParamInfo
+    ParamInfo
+      Name            PARAMETER_7
+      Description     "Failsafe Ref 4"
+      CompileType      IOConnect
+      Datatype         INT 
+      Default          0
+      ParValIndex      1007
+      ParamType        CIGIOData 11 0 0 WordParam ByteOffset 
+    End ParamInfo
+    ParamInfo
+      Name            PARAMETER_8
+      Description     "Failsafe Ref 5"
+      CompileType      IOConnect
+      Datatype         INT 
+      Default          0
+      ParValIndex      1008
+      ParamType        CIGIOData 13 0 0 WordParam ByteOffset 
+    End ParamInfo
+    ParamInfo
+      Name            PARAMETER_9
+      Description     "Failsafe Ref 6"
+      CompileType      IOConnect
+      Datatype         INT 
+      Default          0
+      ParValIndex      1009
+      ParamType        CIGIOData 15 0 0 WordParam ByteOffset 
+    End ParamInfo
+    ParamInfo
+      Name            PARAMETER_10
+      Description     "Failsafe Ref 7"
+      CompileType      IOConnect
+      Datatype         INT 
+      Default          0
+      ParValIndex      1010
+      ParamType        CIGIOData 17 0 0 WordParam ByteOffset 
+    End ParamInfo
+    ParamInfo
+      Name            PARAMETER_11
+      Description     "Failsafe Ref 8"
+      CompileType      IOConnect
+      Datatype         INT 
+      Default          0
+      ParValIndex      1011
+      ParamType        CIGIOData 19 0 0 WordParam ByteOffset 
+    End ParamInfo
+    ParamInfo
+      Name            PARAMETER_12
+      Description     "Failsafe Ref 9"
+      CompileType      IOConnect
+      Datatype         INT 
+      Default          0
+      ParValIndex      1012
+      ParamType        CIGIOData 21 0 0 WordParam ByteOffset 
+    End ParamInfo
+    ParamInfo
+      Name            PARAMETER_13
+      Description     "Failsafe Ref 10"
+      CompileType      IOConnect
+      Datatype         INT 
+      Default          0
+      ParValIndex      1013
+      ParamType        CIGIOData 23 0 0 WordParam ByteOffset 
+    End ParamInfo
+  End Parameters
+  ParValList
+    ParVal
+      ParValIndex      1
+      UnitText         ""
+      ENUM
+      "Stop" 0
+      "Last Speed" 1
+      "Use fail-safe values" 2
+    End ParVal
+    ParVal
+      ParValIndex      3
+      UnitText         ""
+      ENUM
+      "Profidrive" 0
+      "Vendor specific" 1
+    End ParVal
+    ParVal
+      ParValIndex      2
+      UnitText         ""
+      ENUM
+      "Use data" 0
+      "Ignore data" 1
+    End ParVal
+    ParVal
+      ParValIndex      1003
+      UnitText         ""
+      INT 0 65535 0 65535
+    End ParVal
+    ParVal
+      ParValIndex      1004
+      UnitText         ""
+      INT 0 65535 0 65535
+    End ParVal
+    ParVal
+      ParValIndex      1005
+      UnitText         ""
+      INT 0 65535 0 65535
+    End ParVal
+    ParVal
+      ParValIndex      1006
+      UnitText         ""
+      INT 0 65535 0 65535
+    End ParVal
+    ParVal
+      ParValIndex      1007
+      UnitText         ""
+      INT 0 65535 0 65535
+    End ParVal
+    ParVal
+      ParValIndex      1008
+      UnitText         ""
+      INT 0 65535 0 65535
+    End ParVal
+    ParVal
+      ParValIndex      1009
+      UnitText         ""
+      INT 0 65535 0 65535
+    End ParVal
+    ParVal
+      ParValIndex      1010
+      UnitText         ""
+      INT 0 65535 0 65535
+    End ParVal
+    ParVal
+      ParValIndex      1011
+      UnitText         ""
+      INT 0 65535 0 65535
+    End ParVal
+    ParVal
+      ParValIndex      1012
+      UnitText         ""
+      INT 0 65535 0 65535
+    End ParVal
+    ParVal
+      ParValIndex      1013
+      UnitText         ""
+      INT 0 65535 0 65535
+    End ParVal
+  End ParValList
+  Channels
+    ChannelInfo
+      Number            0
+      ChannelName      "UnitStatus"
+      Datatype          Status_In
+      Routine           900
+      CopyParameters    16#0 16#0 16#50000
+    End ChannelInfo
+  End Channels
+
+  UnitStatusText
+  (* start of reserved texts used by CI854 ??*)
+    ExtendedStatus1  "Slave does not exist"
+    ExtendedStatus2  "Configuration data fault"
+    ExtendedStatus3  "Parameter data fault"
+    ExtendedStatus4  "Static diagnostic"
+    ExtendedStatus5  "Redundant slave does not exist"
+    ExtendedStatus6  "Diagnostic configuration data fault" 
+    ExtendedStatus7  "Report diagnostics fault" 
+ (*   ExtendedStatus8  "ExtendedStatus8" *) 
+ (*   ExtendedStatus9  "ExtendedStatus9" *)
+ (*   ExtendedStatus10 "ExtendedStatus10" *) 
+ (* end of reserved texts used by CI854 *)
+  End UnitStatusText
+
+  UnitStatusSeverity
+    ExtendedStatus1      GeneralError TriggerAlarm SeverityMedium
+    ExtendedStatus2      GeneralError TriggerAlarm SeverityHigh
+    ExtendedStatus3      GeneralError TriggerAlarm SeverityHigh
+    ExtendedStatus4      GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus5      GeneralWarning TriggerEvent SeverityMedium
+    ExtendedStatus6      GeneralWarning TriggerEvent SeverityMedium
+    ExtendedStatus7      GeneralWarning TriggerEvent SeverityMedium
+  (*   ExtendedStatus8  GeneralWarning TriggerEvent SeverityLow *) 
+  (*   ExtendedStatus9  GeneralWarning TriggerEvent SeverityLow *)
+  (*   ExtendedStatus10  GeneralWarning TriggerEvent SeverityLow *)
+  End UnitStatusSeverity
+
+  Configuration
+    ConfigInfo
+      ModuleKey        16#812
+      InAreaSize       0 BYTE
+      OutAreaSize      0 BYTE
+      CIGIOConnData
+        CIGIOData        16#05 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00  _
+16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00  _
+16#00 16#00 16#00 16#00
+        CIGIOData        16#02 16#88 16#00 16#00 16#00 16#8 16#12 16#01
+        CIGIOData        16#03 0 60 0 60 0 60 0 60 0 100 0 0 0 150 0 250 1 194 3 32
+        CIGIOData        16#04 1
+        CIGIOData        16#06 28
+        CIGIOData        16#07 28
+        CIGIOData        16#08 56
+        CIGIOData        16#09 24
+        SyncronizeDataExchange
+      End CIGIOConnData
+    End ConfigInfo
+    ConfigInfo
+      EmptyConfig
+      ModuleKey        16#FFFF
+      InAreaSize       0
+      OutAreaSize      0
+    End ConfigInfo
+  End Configuration
+  HWUnitInfoCRC 16#A7EF
+End HWUnitInfo (* ABB Drives RPBA-01 *)

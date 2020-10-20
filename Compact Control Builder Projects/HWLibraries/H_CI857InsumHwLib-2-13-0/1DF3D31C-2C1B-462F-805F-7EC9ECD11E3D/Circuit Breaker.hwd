@@ -1,0 +1,214 @@
+HWUnitInfo  (* INSUM CB Device *)
+   HWUnitID {33D65573-CABE-4f49-BD6A-C95EE6AF5B70} (* GUID for Circuit Breaker *)
+   Description "Circuit Breaker"
+   Information "INSUM Circuit Breaker"
+(* ###HelpProject INSUMHelp.xxx *)
+   Icons INSUMMCUType
+   Attributes AdapterUnit
+   InterfaceInfo
+     Interface CIGInterface
+     CLSID_CB   {1896BB43-3C0D-11d6-891B-006097B83487} (* CLSID_CB = GUID for INSUM PH in Control Builder *)
+     CLSID_CTRL {1896BB44-3C0D-11d6-891B-006097B83487} (* CLSID_CTRL = GUID for INSUM PH in Controller *)
+     HWConfig Fail     (* Change of net parameters affects subunits *)
+   End InterfaceInfo
+
+   SubUnits 0
+
+   Parameters
+      ParamInfo 
+         Name PROGRAMID
+         Description "INSUM Device Program Id"
+         Hidden
+         CompileType HWConfig
+         Datatype STRING
+         Default "90:00:20:8C:0B:02:01:01" 23  (* CB, 23 is max length of string *)
+         ParamType Numbered 1
+      End ParamInfo
+      ParamInfo 
+         Name NUMCHARSTOCHECK
+         Description "Number of characters to check in Program Id"
+         Hidden
+         CompileType HWConfig
+         Datatype INT
+         Default 7 (* Check 7 bytes *)
+         ParValIndex 0
+         ParamType Numbered 2
+      End ParamInfo
+      ParamInfo 
+         Name EVENTHANDLING
+         Description "Generate Alarms"
+         CompileType HWConfig
+         Datatype ENUM
+         Default 0
+(*         Default 1*)              
+         ParValIndex 1
+         ParamType Numbered 3
+      End ParamInfo  
+      ParamInfo 
+         Name NODEALARMREPINDEX
+         Description "NodeAlarmRep index (default 0x2010=8208)"
+         Hidden
+         CompileType HWConfig
+         Datatype INT
+         Default 8208
+         ParValIndex 2
+         ParamType Numbered 4
+      End ParamInfo  
+     ParamInfo 
+         Name WARNINGMASK0
+         Description "NValarmRep W0 mask(default 65535 (0xFFFF))"
+         Hidden
+         CompileType HWConfig
+         Datatype INT
+         Default 65535
+         ParValIndex 2
+         ParamType Numbered 5
+      End ParamInfo  
+      ParamInfo 
+         Name WARNINGMASK1
+         Description "NValarmRep W1 mask(default 65535 (0xFFFF))"
+         Hidden
+         CompileType HWConfig
+         Datatype INT
+         Default 65535
+         ParValIndex 2
+         ParamType Numbered 6
+      End ParamInfo  
+      ParamInfo 
+         Name WARNINGMASK2
+         Description "NValarmRep W2 mask(default 65535 (0xFFFF))"
+         Hidden
+         CompileType HWConfig
+         Datatype INT
+         Default 65535
+         ParValIndex 2
+         ParamType Numbered 7
+      End ParamInfo  
+      ParamInfo 
+         Name WARNINGMASK3
+         Description "NValarmRep W3 mask(default 65535 (0xFFFF))"
+         Hidden
+         CompileType HWConfig
+         Datatype INT
+         Default 65535
+         ParValIndex 2
+         ParamType Numbered 8
+      End ParamInfo  
+      ParamInfo 
+         Name TRIPMASK0
+         Description "NValarmRep T0 mask(default 65535 (0xFFFF))"
+         Hidden
+         CompileType HWConfig
+         Datatype INT
+         Default 65535
+         ParValIndex 2
+         ParamType Numbered 9
+      End ParamInfo  
+      ParamInfo 
+         Name TRIPMASK1
+         Description "NValarmRep T1 mask(default 65535 (0xFFFF))"
+         Hidden
+         CompileType HWConfig
+         Datatype INT
+         Default 65535
+         ParValIndex 2
+         ParamType Numbered 10
+      End ParamInfo  
+      ParamInfo 
+         Name TRIPMASK2
+         Description "NValarmRep T2 mask(default 65535 (0xFFFF))"
+         Hidden
+         CompileType HWConfig
+         Datatype INT
+         Default 65535
+         ParValIndex 2
+         ParamType Numbered 11
+      End ParamInfo  
+      ParamInfo 
+         Name TRIPMASK3
+         Description "NValarmRep T3 mask(default 65535 (0xFFFF))"
+         Hidden
+         CompileType HWConfig
+         Datatype INT
+         Default 65535
+         ParValIndex 2
+         ParamType Numbered 12
+      End ParamInfo  
+   End Parameters
+
+   ParValList
+      ParVal
+         ParValIndex 0
+         INT 0 8 0 8
+      End ParVal
+      ParVal
+         ParValIndex 1
+         ENUM
+         "Disabled" 0
+         "Enabled"  1
+         "Enable detailed" 2
+         "Enabled Trip/Warning" 3
+      End ParVal
+      ParVal
+         ParValIndex 2
+         INT 0 65535 0 65535
+      End ParVal
+   End ParValList
+
+   Channels
+      ChannelInfo
+         Number 0
+         ChannelName "UnitStatus"
+         Datatype Status_In
+         Routine 900
+         CopyParameters 0 0 16#50000
+      End ChannelInfo
+   End Channels
+
+   UnitStatusText
+     DeviceSpecific1    "Error!"
+     DeviceSpecific2    "Warning!"
+     DeviceSpecific3    "INSUM Device not found"
+     DeviceSpecific4    "Wrong INSUM device type"
+     DeviceSpecific5    "CBErr5"
+     DeviceSpecific6    "CBErr6"
+     DeviceSpecific7    "CBErr7"
+     DeviceSpecific8    "CBErr8"
+     DeviceSpecific9    "GW Connection error"
+     DeviceSpecific10   "CBErr10"
+     ExtendedStatus1    "CBNodeStat1"
+     ExtendedStatus2    "CBNodeStat2"
+     ExtendedStatus3    "CBNodeStat3"
+     ExtendedStatus4    "CBNodeStat4"
+     ExtendedStatus5    "CBNodeStat5"
+     ExtendedStatus6    "CBNodeStat6"
+     ExtendedStatus7    "CBNodeStat7"
+     ExtendedStatus8    "LocalOpMode"
+     ExtendedStatus9    "CBsprDischarged"
+     ExtendedStatus10   "CBsprCharged"
+     ExtendedStatus11   "CBclosed"
+     ExtendedStatus12   "CBopen"
+     ExtendedStatus13   "CBisolated"
+     ExtendedStatus14   "CBconnected"
+     ExtendedStatus15   "Tripped"
+     ExtendedStatus16   "Warning"
+     ExtendedStatus17   "CBExtStatus17"
+     ExtendedStatus18   "CBExtStatus18"
+   End UnitStatusText
+
+   UnitStatusSeverity
+     DeviceSpecific1    GeneralError    (*"Error!"*)
+     DeviceSpecific2    GeneralWarning  (*"Warning!"*)
+     DeviceSpecific3    GeneralError    TriggerAlarm SeverityMedium (*"INSUM Device not found"*)
+     DeviceSpecific4    GeneralError    TriggerAlarm SeverityMedium (*"Wrong INSUM device type"*)
+
+     DeviceSpecific9    GeneralError    (*"GW Connection error" No Alarm for 2:nd order errors *)
+
+     ExtendedStatus8    GeneralWarning  (*"LocalOpMode"*)
+
+     ExtendedStatus15   GeneralWarning  (*"Tripped"*)
+     ExtendedStatus16   GeneralWarning  (*"Warning"*)
+   End UnitStatusSeverity
+
+  HWUnitInfoCRC 16#259C
+End HWUnitInfo  (* Generic INSUM Device *)

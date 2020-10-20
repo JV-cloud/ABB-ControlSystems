@@ -1,0 +1,307 @@
+HWUnitInfo (* 200-IB32 / ControlNet *)
+   HWUnitID {A41ED54A-8CCA-409F-B14C-588478710337}
+   Description "200-IB32"
+   Information "Digital input module, 32 channels 24 VDC, current sink"
+   Icons Ser200IOType
+   Attributes IoUnit DigitalIn
+   Parameters
+      ParamInfo 
+         Name FILTER0_31
+         Description "Filter constant channel 0 - 31"
+         CompileType IOConfig
+         Datatype ENUM
+         Default 0
+         ParValIndex 0
+         ParamType ConfArea 0 8
+      End ParamInfo
+   End Parameters
+   ParValList
+      ParVal
+         ParValIndex 0
+         UnitText    "ms"
+         ENUM
+         "0.25"  0
+         "0.5"   1
+         "1"     2
+         "2"     3
+         "4"     4
+         "8"     5
+         "16"    6
+         "32"    7 
+      End ParVal
+   End ParValList
+   Channels
+      ChannelInfo
+         Number 0 
+         ChannelName "Input 0"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30001 16#1
+      End ChannelInfo
+      ChannelInfo
+         Number 1
+         ChannelName "Input 1"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30001 16#2
+      End ChannelInfo
+      ChannelInfo
+         Number 2
+         ChannelName "Input 2"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30001 16#4
+      End ChannelInfo
+      ChannelInfo
+         Number 3
+         ChannelName "Input 3"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30001 16#8
+      End ChannelInfo
+      ChannelInfo
+         Number 4
+         ChannelName "Input 4"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30001 16#10
+      End ChannelInfo
+      ChannelInfo
+         Number 5
+         ChannelName "Input 5"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30001 16#20
+      End ChannelInfo
+      ChannelInfo
+         Number 6
+         ChannelName "Input 6"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30001 16#40
+      End ChannelInfo
+      ChannelInfo
+         Number 7
+         ChannelName "Input 7"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30001 16#80
+      End ChannelInfo
+      ChannelInfo
+         Number 8
+         ChannelName "Input 8"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30001 16#100
+      End ChannelInfo
+      ChannelInfo
+         Number 9
+         ChannelName "Input 9"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30001 16#200
+      End ChannelInfo
+      ChannelInfo
+         Number 10
+         ChannelName "Input 10"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30001 16#400
+      End ChannelInfo
+      ChannelInfo
+         Number 11
+         ChannelName "Input 11"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30001 16#800
+      End ChannelInfo
+      ChannelInfo
+         Number 12
+         ChannelName "Input 12"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30001 16#1000
+      End ChannelInfo
+      ChannelInfo
+         Number 13
+         ChannelName "Input 13"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30001 16#2000
+      End ChannelInfo
+      ChannelInfo
+         Number 14
+         ChannelName "Input 14"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30001  16#4000
+      End ChannelInfo
+      ChannelInfo
+         Number 15
+         ChannelName "Input 15"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30001 16#8000
+      End ChannelInfo
+      ChannelInfo
+         Number 16
+         ChannelName "Input 16"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30002 16#1
+      End ChannelInfo
+      ChannelInfo
+         Number 17
+         ChannelName "Input 17"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30002 16#2
+      End ChannelInfo
+      ChannelInfo
+         Number 18
+         ChannelName "Input 18"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30002 16#4
+      End ChannelInfo
+      ChannelInfo
+         Number 19
+         ChannelName "Input 19"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30002 16#8
+      End ChannelInfo
+      ChannelInfo
+         Number 20
+         ChannelName "Input 20"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30002 16#10
+      End ChannelInfo
+      ChannelInfo
+         Number 21
+         ChannelName "Input 21"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30002 16#20
+      End ChannelInfo
+      ChannelInfo
+         Number 22
+         ChannelName "Input 22"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30002 16#40
+      End ChannelInfo
+      ChannelInfo
+         Number 23
+         ChannelName "Input 23"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30002 16#80
+      End ChannelInfo
+      ChannelInfo
+         Number 24
+         ChannelName "Input 24"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30002 16#100
+      End ChannelInfo
+      ChannelInfo
+         Number 25
+         ChannelName "Input 25"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30002 16#200
+      End ChannelInfo
+      ChannelInfo
+         Number 26
+         ChannelName "Input 26"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30002 16#400
+      End ChannelInfo
+      ChannelInfo
+         Number 27
+         ChannelName "Input 27"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30002 16#800
+      End ChannelInfo
+      ChannelInfo
+         Number 28
+         ChannelName "Input 28"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30002 16#1000
+      End ChannelInfo
+      ChannelInfo
+         Number 29
+         ChannelName "Input 29"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30002 16#2000
+      End ChannelInfo
+      ChannelInfo
+         Number 30
+         ChannelName "Input 30"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30002  16#4000
+      End ChannelInfo
+      ChannelInfo
+         Number 31
+         ChannelName "Input 31"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30002 16#8000
+      End ChannelInfo
+      ChannelInfo
+         Number 32
+         ChannelName "Inputs 0-15"
+         Datatype Dword_In
+         Routine 500
+         CopyParameters 0 0 16#30001 16#0 
+      End ChannelInfo
+      ChannelInfo
+         Number 33
+         ChannelName "Inputs 16-31"
+         Datatype Dword_In
+         Routine 500
+         CopyParameters 0 0 16#30002 16#0 
+      End ChannelInfo
+      ChannelInfo
+         Number 34
+         ChannelName "UnitStatus"
+         Datatype Status_In
+         Routine 900
+         CopyParameters 0 0 16#50000
+      End ChannelInfo
+   End Channels
+   IoUnitStatus
+      StatusType WrongModuleType 
+      StatusData 16#30000 16#1FFF 16#05 16#211
+      StatusType ModuleMissing
+      StatusData 16#30000 16#8000 16#00 16#0
+      StatusType IoError
+      StatusData 16#30000 16#2000 16#00 16#0
+   End IoUnitStatus
+   Configuration
+      ConfigInfo
+         ModuleKey   16#0211
+         InAreaSize  3
+         OutAreaSize 1
+         InWord 
+            WORD 16#A211 0
+            WORD 0       1 
+            WORD 0       2
+         ConfWord
+            WORD 0       0 
+         CIGIOConnData
+            CIGIOData    16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 (* CNSafeData *)
+            CIGIOData    16#03 16#00 16#10 16#07 16#03 16#00 16#05                                (* Out data *)
+            CIGIOData    16#04 16#00 16#10 16#07 16#00 16#00 16#05 16#20 16#7D 16#00 16#00 16#0A  (* In data  *)
+         End CIGIOConnData
+      End ConfigInfo
+   End Configuration
+  HWUnitInfoCRC 16#9C28
+End HWUnitInfo (* 200-IB32 / ControlNet *)

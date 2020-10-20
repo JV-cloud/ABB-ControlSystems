@@ -1,0 +1,199 @@
+(*--------------------------------------------------------------------------------------*)
+(* Revision History:                                                                    *)
+(* 2009-02-26 xa/ahm/sepewah                                                            *)
+(* - New SubUnit "Processor Module with Events" added.                                  *)
+(* - Parameters "CycleTime" and "Name" added.                                           *)
+(*                                                                                      *)
+(* 2009-12-07 [XAAT/sebjjoh2]                                                           *)
+(* - #39384 Added file header, removed leading (unused) zeros from copy routine         *)
+(*          parameters and removed attributes obsolete in SV5.1                         *)
+(*                                                                                      *)
+(* 2010-04-12 [XAAT/sebjjoj2]                                                           *)  
+(*  -#41828 Added space between AF and 100 in description, information and Contents.    *)
+(*--------------------------------------------------------------------------------------*)
+
+FileHeader
+   Contents               "AF 100 Station"
+   Date                   "2009-12-07"
+   Version                "2.0-0"
+   RequiredSyntaxVersion  "3.8"
+End FileHeader
+
+
+HWUnitInfo  (* AF100 Station *)
+   HWUnitID {49A0A6D9-975D-481c-A9B4-5639508C504A}
+   Description "AF 100 Station"
+   Information "Represent an AF 100 bus controller on this bus with its device address + 4000"
+   Icons S800FciType
+
+   InterfaceInfo
+     Interface CIGInterface
+     CLSID_CB   {B74AAC83-4502-4a6b-BE9E-E403B0921092} (* CLSID_CB   = GUID for AF100 Protocol handler (PH) in Control builder CB *)
+     CLSID_CTRL {25799801-FB26-4b0a-8762-90F005C39CCF} (* CLSID_CTRL = GUID for AF100 Protocol handler (PH) in Controller *)
+     HWConfig Fail     (* Change of net parameters affect subunits *)
+   End InterfaceInfo
+
+   (* Processor Module with Events Hardware type is not used in SV5.1. It has been added here so that it can*)
+   (* be easily added if it should be supported in future versions. *)      
+   (* SubUnitTypes *)
+   (*   HWUnitID {43C04BF9-68BB-427c-A414-A9F1B2D64A39}  Processor Module with Events *)
+   (*   Positions 101 102 103 104 105 106 107 108 *)
+   (* End SubUnitTypes *)
+
+   Parameters
+      ParamInfo 
+         Name HWTYPE                  (* Let this parameter always be the 1st parameter i.e "ParamType Numbered 1" *)
+         Description "HW unit type"
+         Hidden
+         CompileType HWConfig
+         Datatype INT
+         Default 2              (* Bit 1 *)
+         ParValIndex 2
+         ParamType Numbered 1
+      End ParamInfo
+      ParamInfo 
+         Name CYCLETIME
+         Description "Cycletime"
+         Hidden
+         CompileType HWConfig
+         Datatype ENUM
+         Default 10
+         ParValIndex 0
+         ParamType Numbered 2
+      End ParamInfo 
+      ParamInfo 
+         Name STNNAME
+         Description "Name"
+         Hidden
+         CompileType HWConfig
+         Datatype ENUM
+         Default 0
+         ParValIndex 1
+         ParamType Numbered 3
+      End ParamInfo
+      ParamInfo 
+         Name FREESTNNAME
+         Description "Free Name"
+         Hidden
+         CompileType HWConfig
+         Datatype STRING
+         Default "" 11
+         ParamType Numbered 4
+      End ParamInfo
+   End Parameters
+
+   ParValList
+      ParVal
+        ParValIndex 0
+        UnitText    "ms"
+        ENUM 
+        "1"            0
+        "2"            1
+        "4"            2
+        "8"            3
+        "16"           4
+        "32"           5
+        "64"           6
+        "128"          7
+        "256"          8
+        "512"          9
+        "1024"        10
+        "2048"        11
+        "4096"        12
+     End ParVal
+     ParVal
+       ParValIndex 1
+       ENUM 
+       "Not used"         0
+       "Use 'Free Name'"  1
+       "AC 800M"          2
+       "AC 450"           3
+       "AC 410"           4
+       "AC 160"           5
+       "AC 110"           6
+       "AC 70"            7
+       "AC 31"            8
+       "ASFW"             9
+       "AF100 OPC"       10
+       "AF100 NT"        11
+       "CI810"           12
+       "CI820"           13
+     End ParVal
+
+     ParVal
+        ParValIndex 2
+        INT 0 2147483647 0 2147483647
+     End ParVal
+   End ParValList
+
+   Channels
+      ChannelInfo
+         Number 0
+         ChannelName "UnitStatus"
+         Datatype Status_In
+         Routine 900
+         CopyParameters 16#50000
+      End ChannelInfo
+   End Channels
+
+
+   UnitStatusText
+     DeviceSpecific1    "Source not polled"
+     DeviceSpecific2    "Source no response"
+     DeviceSpecific3    "Owned by other station"
+     DeviceSpecific4    "Bus full"
+     DeviceSpecific5    "Possible collision"
+     DeviceSpecific6    "Stn status valid"
+     ExtendedStatus1    "Inactive"
+     ExtendedStatus2    "Severe Error"
+     ExtendedStatus3    "HW error"
+     ExtendedStatus4    "SW error"
+     ExtendedStatus5    "Periph. HW error"
+     ExtendedStatus6    "Process Error"
+     ExtendedStatus7    "Line Redund. Available"
+     ExtendedStatus8    "Stn reports line 1 error"
+     ExtendedStatus9    "Stn reports line 2 error"
+     ExtendedStatus10   "Red Power A error"
+     ExtendedStatus11   "Red Power B error"
+     ExtendedStatus12   "Changed Diag"
+     ExtendedStatus13   "Reserved 13"
+     ExtendedStatus14   "Reserved 14"
+     ExtendedStatus15   "Gen Error"
+     ExtendedStatus16   "Gen Warning"
+     ExtendedStatus17   "Identity Failure"
+     ExtendedStatus18   "Id & status not readable"
+     ExtendedStatus19   "No connection"
+     ExtendedStatus20   "No connection cable 1"
+     ExtendedStatus21   "No connection cable 2"
+   End UnitStatusText
+
+   UnitStatusSeverity
+     DeviceSpecific1    GeneralError
+     DeviceSpecific2    GeneralError
+     DeviceSpecific3    GeneralError
+     DeviceSpecific4    GeneralError
+     DeviceSpecific5    GeneralError
+     ExtendedStatus1    GeneralWarning
+     ExtendedStatus2    GeneralError
+     ExtendedStatus3    GeneralWarning
+     ExtendedStatus4    GeneralError
+     ExtendedStatus5    GeneralWarning
+     ExtendedStatus6    GeneralWarning
+     ExtendedStatus8    GeneralWarning
+     ExtendedStatus9    GeneralWarning
+     ExtendedStatus10   GeneralWarning
+     ExtendedStatus11   GeneralWarning
+     ExtendedStatus12   TriggerEvent SeverityLow
+     ExtendedStatus13   GeneralWarning
+     ExtendedStatus14   GeneralWarning
+     ExtendedStatus15   GeneralError
+     ExtendedStatus16   GeneralWarning
+     ExtendedStatus17   GeneralError
+     ExtendedStatus18   GeneralError
+     ExtendedStatus19   GeneralError
+     ExtendedStatus20   GeneralWarning
+     ExtendedStatus21   GeneralWarning
+   End UnitStatusSeverity
+
+  HWUnitInfoCRC 16#B587
+End HWUnitInfo  (* AF100 Station *)

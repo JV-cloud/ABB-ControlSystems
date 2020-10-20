@@ -1,0 +1,216 @@
+(****************************************************************************)
+(* FILE            CI868.hwd                                                *)
+(*                                                                          *)
+(* DESCRIPTION     Hardware definition file for CI868                       *)
+(*                                                                          *)
+(* AUTHOR          Ramachandragowda G                                       *)
+(*                                                                          *)
+(* All rights reserved. Reproduction, modification, use or disclosure       *)
+(* to third parties without express authority, is forbidden.                *)
+(* Copyright ABB Inc. 2006.                                                 *)
+(*                                                                          *)
+(*                                                                          *)
+(* 27-04-2006 Ramachandragowda G            Initial version                 *)
+(* 13-Sep-12  Karthick Raja P               #48552                          *)
+(****************************************************************************)
+FileHeader
+   Contents               "CI868"
+   Date                   "2007-04-27"
+   Version                "1.0-0"
+  RequiredSyntaxVersion "3.0"
+End FileHeader
+
+HwUnitInfo  (* CI868 *) 
+   HWUnitID {BBBC9FB2-FC1E-4509-938A-096556234785}
+   Description "CI868"
+   Information "Communication Interface IEC61850"
+   Icons AC800ComType  
+   Attributes SystemUnit
+   ModuleType  16#5015  (* CI868 OBS Must match CI-CSR RealModuleType and conf.cpp with VICI in Omega *)
+
+   InterfaceInfo
+     Interface   CIGInterface
+     CLSID_CB    {53315084-E413-4c55-92E1-C2E1FAF19460} (*  CLSID_CB  = GUID for CI868 PH in Control builder CB *)
+     CLSID_CTRL  {4AB844AC-2BEE-4910-BA08-CA109A5D7E81}  (* CLSID_CTRL = GUID for CI868 PH in Controler *)
+     HWConfig Fail     (* Change of any parameters affect subunits *)
+   End InterfaceInfo
+
+   SubUnits 152
+
+    ReadOnlyCreateSubUnits
+
+   SubUnitTypes 
+      HWUnitID {F57FBF0A-504C-4b1a-9453-C2EF59B38F79} Positions 1 Instances 1 (* MyIED *)
+      HWUnitID {74B45D7B-2649-4557-89C3-3A45F56E76D6} Positions 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+      17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32
+      33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48
+      49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64
+      65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80
+      81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96
+      97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112
+      113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128
+      129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144
+      145 146 147 148 149 150 151
+   End SubUnitTypes
+
+
+   Parameters
+      ParamInfo 
+         Name ACCESSPOINTNAME
+         Description "Access Point Name"
+         ReadOnlyVisible
+         CompileType HWConfig
+         Datatype STRING
+         Default "AP " 15
+         ParamType Numbered 1
+      End ParamInfo
+      ParamInfo 
+         Name PORT1IPADDR
+         Description "IP address"
+         ReadOnlyVisible
+         CompileType HWConfig
+         Datatype STRING
+         Default "192.168.0.0" 20
+         ParamType Numbered 2
+      End ParamInfo
+      ParamInfo 
+         Name PORT1MASK
+         Description "Subnet Mask"
+         ReadOnlyVisible
+         CompileType HWConfig
+         Datatype STRING
+         Default "255.255.255.0" 20
+         ParamType Numbered 3
+      End ParamInfo
+      ParamInfo 
+        Name DEFAULTGATEWAY
+        Description "Default Gateway"
+        ExternalVisible
+        CompileType HWConfig
+        Datatype STRING
+        Default ""20
+        ParamType Numbered 4
+     End ParamInfo
+      ParamInfo 
+        Name PORT1BACKUPIPADDR
+        Description "Backup IP address offset"
+        Hidden
+        CompileType HWConfig 
+        Datatype STRING
+        Default "0.0.0.100"20
+        ParamType Numbered 5
+     End ParamInfo
+      ParamInfo 
+         Name SNTP1
+         Description "SNTP server 1 IP addr"
+         ExternalVisible
+         CompileType HWConfig
+         Datatype STRING
+         Default "" 20 (* 15 is max length of string *)
+         ParamType Numbered 6
+      End ParamInfo
+      ParamInfo
+         Name SNTP2
+         Description "SNTP server 2 IP addr"
+         ExternalVisible
+         CompileType HWConfig
+         Datatype STRING
+         Default "" 20 (* 15 is max length of string *)
+         ParamType Numbered 7
+      End ParamInfo
+      ParamInfo
+        Name IEC61588
+        Description "IEC61588 Master Enabled"
+        ExternalVisible
+        CompileType HWConfig
+        Datatype BOOL
+        Default FALSE
+        ParamType Numbered 8
+     End ParamInfo
+     ParamInfo 
+        Name CCFPATH
+        Description "CCF File Name"
+        ExternalVisible
+        CompileType HWConfig 
+        Datatype STRING
+        Default ""150
+        ParamType Numbered 9
+     End ParamInfo
+     ParamInfo 
+        Name CCFCHECKSUM
+        Description "CCF File Check Sum"
+        ExternalVisible
+        CompileType HWConfig 
+        Datatype INT
+        Default 0
+        ParValIndex 1
+        ParamType Numbered 10
+     End ParamInfo
+     ParamInfo 
+        Name CCFGUID
+        Description "CCF File GUID"
+        ExternalVisible
+        CompileType HWConfig 
+        Datatype STRING
+        Default ""150
+        ParamType Numbered 11
+     End ParamInfo
+     ParamInfo 
+        Name SCDFILEID
+        Description "SCDFile Identification"
+        ReadOnlyVisible
+        Datatype STRING
+        Default ""150
+        ParamType Numbered 12
+     End ParamInfo
+     ParamInfo
+         Name HWDVERSION
+         Description "Version of HWD File"
+         ExternalVisible
+         Datatype STRING
+         Default " 1.0-0 "
+         ParamType Numbered 13
+      End ParamInfo
+   End Parameters
+   ParValList
+     ParVal
+        ParValIndex 1
+        UnitText    ""
+        INT 0 2147483647 0 2147483647
+     End ParVal
+   End ParValList
+
+   Channels
+      ChannelInfo
+         Number 0
+         ChannelName "UnitStatus"
+         Datatype Status_In
+         Routine 900
+         CopyParameters 0 0 16#50000
+      End ChannelInfo
+   End Channels
+
+   UnitStatusText
+      DeviceSpecific1  "Internal HW Error(see CI Log)"
+      DeviceSpecific2  "Internal FW Error(see CI Log)"
+      DeviceSpecific3  "Error generated by task supervisor"
+      DeviceSpecific4  "IEC61850 Stack Error"
+
+      ExtendedStatus3  "Debug Mode is Activated(see CI Log)"
+      ExtendedStatus2  "Cable break on ethernet port"
+      ExtendedStatus1  "Configuration Warning(see CI Log)"
+   End UnitStatusText
+
+   UnitStatusSeverity
+      DeviceSpecific1    GeneralError TriggerAlarm SeverityHigh
+      DeviceSpecific2    GeneralError TriggerAlarm SeverityHigh
+      DeviceSpecific3    GeneralError TriggerAlarm SeverityHigh
+      DeviceSpecific4    GeneralError TriggerAlarm SeverityHigh
+
+      ExtendedStatus3    GeneralWarning TriggerAlarm SeverityHigh
+      ExtendedStatus2    GeneralWarning TriggerAlarm SeverityHigh
+      ExtendedStatus1    GeneralWarning TriggerAlarm SeverityHigh
+   End UnitStatusSeverity
+
+  HWUnitInfoCRC 16#2648
+End HWUnitInfo

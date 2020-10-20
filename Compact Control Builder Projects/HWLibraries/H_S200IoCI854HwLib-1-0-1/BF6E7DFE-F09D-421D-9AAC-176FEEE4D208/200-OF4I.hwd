@@ -1,0 +1,186 @@
+HWUnitInfo (* 200-OF4I / Profibus DP - Full Format*)
+   HWUnitID {2E7AB23F-E6AB-48c1-B29A-C494023F5114}
+   Description "200-OF4I"
+   Information "Isolated analog output module, 4 channels"
+   Icons Ser200IOType
+   Attributes IoUnit AnalogOut 
+   Parameters
+      ParamInfo 
+         Name RANGE_0
+         Description "Range Output 0"
+         CompileType IOConnect
+         Datatype ENUMRANGE
+         Default 0
+         ParValIndex 0
+         ParamType CIGIOData  14  0 1  ByteOffset
+      End ParamInfo 
+      ParamInfo 
+         Name RANGE_1
+         Description "Range Output 1"
+         CompileType IOConnect
+         Datatype ENUMRANGE
+         Default 0
+         ParValIndex 0
+         ParamType CIGIOData  14  4 1  ByteOffset
+      End ParamInfo 
+      ParamInfo 
+         Name RANGE_2
+         Description "Range Output 2"
+         CompileType IOConnect
+         Datatype ENUMRANGE
+         Default 0
+         ParValIndex 0
+         ParamType CIGIOData  13  0 1  ByteOffset
+      End ParamInfo 
+      ParamInfo 
+         Name RANGE_3
+         Description "Range Output 3"
+         CompileType IOConnect
+         Datatype ENUMRANGE
+         Default 0
+         ParValIndex 0
+         ParamType CIGIOData  13  4 1  ByteOffset
+      End ParamInfo
+      ParamInfo 
+         Name SAFEVALUE_0
+         Description "Safe value channel 0"
+         Corresponding 0
+         CompileType IOConnect
+         Datatype REAL
+         Default 0
+         ParValIndex 1
+         ParamType CIGIOData  6  0 1  ByteOffset ScaleToRange
+         OSPInfo
+           OSPType OSPValue
+           OSPData  1 0 ScaleToRange
+         End OSPInfo
+      End ParamInfo 
+      ParamInfo 
+         Name SAFEVALUE_1
+         Description "Safe value channel 1"
+         Corresponding 1
+         CompileType IOConnect
+         Datatype REAL
+         Default 0
+         ParValIndex 1
+         ParamType CIGIOData  8  0 1  ByteOffset ScaleToRange
+         OSPInfo
+           OSPType OSPValue
+           OSPData   2 0 ScaleToRange
+         End OSPInfo
+      End ParamInfo 
+      ParamInfo 
+         Name SAFEVALUE_2
+         Description "Safe value channel 2"
+         Corresponding 2
+         CompileType IOConnect
+         Datatype REAL
+         Default 0
+         ParValIndex 1
+         ParamType CIGIOData  10  0 1  ByteOffset ScaleToRange
+         OSPInfo
+           OSPType OSPValue
+           OSPData  3 0 ScaleToRange
+         End OSPInfo
+      End ParamInfo 
+      ParamInfo 
+         Name SAFEVALUE_3
+         Description "Safe value channel 3"
+         Corresponding 3
+         CompileType IOConnect
+         Datatype REAL
+         Default 0
+         ParValIndex 1
+         ParamType CIGIOData  12  0 1  ByteOffset ScaleToRange
+         OSPInfo
+           OSPType OSPValue
+           OSPData  4 0 ScaleToRange
+         End OSPInfo
+      End ParamInfo
+   End Parameters
+   ParValList
+      ParVal
+         ParValIndex 0
+         ENUMRANGE
+         "off"     0 0 0 0 0
+         "0-20mA"  16#0008 16#F3CF 16#0000 16#0 16#0
+         "4-20mA"  16#0008 16#F3CF 16#30C3 16#0 16#0
+         "0-10V"   16#000A 16#F3CF 16#0000 16#0 16#0 
+         "0-5V"    16#000B 16#F3CF 16#0000 16#0 16#0 
+         "+/-10V"  16#0002 16#79E8 16#8618 16#0 16#0 Bipolar
+         "+/-5V"   16#0003 16#79E8 16#8618 16#0 16#0 Bipolar
+      End ParVal
+      ParVal
+         ParValIndex 1
+         UnitText    "%"
+         REAL 0.0 100.0 0.0 100.0
+      End ParVal
+   End ParValList
+   Channels
+    ChannelInfo
+       Number 0 
+       ChannelName "Output 0"
+       Datatype Real_out
+       Routine 803
+       (*                                 UnitErr  Wire off      Pwr Up           Field Pwr       *)
+       CopyParameters 0 0 16#40001 0 16#0 16#50000 16#30005 16#1 16#30004 16#8000 16#30004 16#4000
+    End ChannelInfo
+    ChannelInfo
+       Number 1 
+       ChannelName "Output 1"
+       Datatype Real_out
+       Routine 803
+       CopyParameters 0 0 16#40002 1 16#0 16#50000 16#30005 16#2 16#30004 16#8000 16#30004 16#4000
+    End ChannelInfo
+    ChannelInfo
+       Number 2 
+       ChannelName "Output 2"
+       Datatype Real_out
+       Routine 803
+       CopyParameters 0 0 16#40003 2 16#0 16#50000 16#30005 16#4 16#30004 16#8000 16#30004 16#4000
+    End ChannelInfo
+    ChannelInfo
+       Number 3 
+       ChannelName "Output 3"
+       Datatype Real_out
+       Routine 803
+       CopyParameters 0 0 16#40004 3 16#0 16#50000 16#30005 16#8 16#30004 16#8000 16#30004 16#4000
+    End ChannelInfo
+    ChannelInfo
+       Number 4
+       ChannelName "UnitStatus"
+       Datatype Status_In
+       Routine 900
+       CopyParameters 0 0 16#50000
+    End ChannelInfo
+  End Channels
+   IoUnitStatus
+      StatusType IoError
+      StatusData 16#10000 16#100100 16#0 16#0
+   End IoUnitStatus
+  Configuration
+    ConfigInfo
+       ModuleKey   16#1621
+       InAreaSize  6
+       OutAreaSize 5
+       InWord
+          WORD 0         16#0
+          WORD 0         16#1 
+          WORD 0         16#2 
+          WORD 0         16#3 
+          WORD 0         16#4 
+          WORD 0         16#5 
+       OutWord 
+          WORD 16#8000   16#0
+          WORD 0         16#1
+          WORD 0         16#2
+          WORD 0         16#3
+          WORD 0         16#4   
+       CIGIOConnData
+          CIGIOData     16#01 16#55 16#64
+          CIGIOData     16#05 16#16 16#21 16#25 16#80 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#60 16#00 
+       End CIGIOConnData     
+    End ConfigInfo
+  End Configuration
+  HWUnitInfoCRC 16#315D
+End HWUnitInfo (* 200-OF4I / profibus DP - Full Format *)

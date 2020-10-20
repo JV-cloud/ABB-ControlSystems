@@ -1,0 +1,146 @@
+
+
+
+
+(*========================================================*)
+(*                                                        *)
+(*            OUTPUT: 16 Bool                             *)
+(*                                                        *)
+(*========================================================*)
+
+HWUnitInfo
+  HWUnitID         16#07D51002
+  Description      "OUTPUT 16 Bool"
+  Information      "Bool"
+  Icons            ProtocolType
+  Attributes       IoUnit 
+
+  Channels
+    ChannelInfo
+      Number            0
+      ChannelName      "Output Bool 0"
+      Datatype          Bool_Out
+      Routine           200
+      CopyParameters    16#0 16#0 16#40000 16#1 16#1
+    End ChannelInfo
+    ChannelInfo
+      Number            1
+      ChannelName      "Output Bool 1"
+      Datatype          Bool_Out
+      Routine           200
+      CopyParameters    16#0 16#0 16#40000 16#2 16#1
+    End ChannelInfo
+    ChannelInfo
+      Number            2
+      ChannelName      "Output Bool 2"
+      Datatype          Bool_Out
+      Routine           200
+      CopyParameters    16#0 16#0 16#40000 16#4 16#1
+    End ChannelInfo
+    ChannelInfo
+      Number            3
+      ChannelName      "Output Bool 3"
+      Datatype          Bool_Out
+      Routine           200
+      CopyParameters    16#0 16#0 16#40000 16#8 16#1
+    End ChannelInfo
+    ChannelInfo
+      Number            4
+      ChannelName      "Output Bool 4"
+      Datatype          Bool_Out
+      Routine           200
+      CopyParameters    16#0 16#0 16#40000 16#10 16#1
+    End ChannelInfo
+    ChannelInfo
+      Number            5
+      ChannelName      "Output Bool 5"
+      Datatype          Bool_Out
+      Routine           200
+      CopyParameters    16#0 16#0 16#40000 16#20 16#1
+    End ChannelInfo
+    ChannelInfo
+      Number            6
+      ChannelName      "Output Bool 6"
+      Datatype          Bool_Out
+      Routine           200
+      CopyParameters    16#0 16#0 16#40000 16#40 16#1
+    End ChannelInfo
+    ChannelInfo
+      Number            7
+      ChannelName      "Output Bool 7"
+      Datatype          Bool_Out
+      Routine           200
+      CopyParameters    16#0 16#0 16#40000 16#80 16#1
+    End ChannelInfo
+    ChannelInfo
+      Number            8
+      ChannelName      "Output Bool 8"
+      Datatype          Bool_Out
+      Routine           200
+      CopyParameters    16#0 16#0 16#40000 16#100 16#1
+    End ChannelInfo
+    ChannelInfo
+      Number            9
+      ChannelName      "Output Bool 9"
+      Datatype          Bool_Out
+      Routine           200
+      CopyParameters    16#0 16#0 16#40000 16#200 16#1
+    End ChannelInfo
+    ChannelInfo
+      Number            10
+      ChannelName      "Output Bool 10"
+      Datatype          Bool_Out
+      Routine           200
+      CopyParameters    16#0 16#0 16#40000 16#400 16#1
+    End ChannelInfo
+    ChannelInfo
+      Number            11
+      ChannelName      "Output Bool 11"
+      Datatype          Bool_Out
+      Routine           200
+      CopyParameters    16#0 16#0 16#40000 16#800 16#1
+    End ChannelInfo
+    ChannelInfo
+      Number            12
+      ChannelName      "Output Bool 12"
+      Datatype          Bool_Out
+      Routine           200
+      CopyParameters    16#0 16#0 16#40000 16#1000 16#1
+    End ChannelInfo
+    ChannelInfo
+      Number            13
+      ChannelName      "Output Bool 13"
+      Datatype          Bool_Out
+      Routine           200
+      CopyParameters    16#0 16#0 16#40000 16#2000 16#1
+    End ChannelInfo
+    ChannelInfo
+      Number            14
+      ChannelName      "Output Bool 14"
+      Datatype          Bool_Out
+      Routine           200
+      CopyParameters    16#0 16#0 16#40000 16#4000 16#1
+    End ChannelInfo
+    ChannelInfo
+      Number            15
+      ChannelName      "Output Bool 15"
+      Datatype          Bool_Out
+      Routine           200
+      CopyParameters    16#0 16#0 16#40000 16#8000 16#1
+    End ChannelInfo
+  End Channels
+
+  Configuration
+    ConfigInfo
+      ModuleKey        16#7
+      InAreaSize       0 WORD
+      OutAreaSize      1 WORD
+      OutWord
+        WORD  0    0
+      CIGIOConnData
+        CIGIOData        16#01 16#60
+      End CIGIOConnData
+    End ConfigInfo
+  End Configuration
+  HWUnitInfoCRC 16#4B40
+End HWUnitInfo (* OUTPUT: 16 Bool *)

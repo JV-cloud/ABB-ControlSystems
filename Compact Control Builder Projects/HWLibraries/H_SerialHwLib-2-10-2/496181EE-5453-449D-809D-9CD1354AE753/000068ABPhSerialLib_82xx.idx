@@ -1,0 +1,568 @@
+<HEAD>
+Index of symbols created 2013-10-10 22:54:52,91 
+</HEAD>
+<SECTIONS=10>
+00010000 00016d38 .text
+00016d38 00016eec .got2
+00016eec 00017438 .fixup
+00017438 00017440 .bss
+00017440 00018ce0 .data
+00018ce0 00018ce0 .sdata
+00018ce0 0002a8b4 .stab
+0002a8b4 00016d38 .comment
+00016d38 0002abb4 .sdata2
+0002abb4 0002abb4 .stabstr
+</SECTIONS>
+<SYMBOLS=551>
+00000000 PhSerialLib_82xx.elf EXE_HEAD
+00000064 PhSerialLib_82xx.elf CommunicationDevice::operator new(unsigned int, IHeapCallback *)
+00000138 PhSerialLib_82xx.elf CommunicationDevice::DelStringDev(void *)
+00000178 PhSerialLib_82xx.elf CommunicationDevice::CommunicationDevice(IHeapCallback *)
+00000204 PhSerialLib_82xx.elf CommunicationDevice::GetDeviceType(void)
+0000020c PhSerialLib_82xx.elf CommunicationDevice::DisConnect(void)
+00000214 PhSerialLib_82xx.elf CommunicationDevice::Write(tGCString *, DeviceConfiguration *)
+000002cc PhSerialLib_82xx.elf CommunicationDevice::Read(tGCString *, DeviceConfiguration *)
+000005ac PhSerialLib_82xx.elf CommunicationDevice::Abort(DeviceConfiguration *)
+00000634 PhSerialLib_82xx.elf CommunicationDevice::GetMessage(tGCString *, DeviceConfiguration *)
+000006a4 PhSerialLib_82xx.elf CommunicationDevice::Reserve(unsigned long)
+000006c4 PhSerialLib_82xx.elf CommunicationDevice::UnReserve(unsigned long)
+000006e4 PhSerialLib_82xx.elf CommunicationDevice::Update(DeviceConfiguration *)
+00000720 PhSerialLib_82xx.elf CommunicationDevice::~CommunicationDevice(void)
+00000770 PhSerialLib_82xx.elf CommunicationDevice::Connect(ISerialDrvCallback *)
+00000790 PhSerialLib_82xx.elf CommunicationDevice::IsConnected(void)
+000007b0 PhSerialLib_82xx.elf Letext
+000007b4 PhSerialLib_82xx.elf DeviceConfiguration::operator new(unsigned int, IHeapCallback *)
+00000888 PhSerialLib_82xx.elf DeviceConfiguration::DeviceConfiguration(IHeapCallback *)
+0000088c PhSerialLib_82xx.elf DeviceConfiguration::SetCategory(int)
+00000890 PhSerialLib_82xx.elf DeviceConfiguration::UnPackDefaultSetupData(unsigned long, IGenClientCallback1 *)
+00000cdc PhSerialLib_82xx.elf DeviceConfiguration::UnPackSetupData(unsigned long, IGenClientCallback1 *, int *)
+00001324 PhSerialLib_82xx.elf DeviceConfiguration::GetSetupData(tGCString *, bool *, bool *, bool *)
+00001344 PhSerialLib_82xx.elf DeviceConfiguration::GetUpdateData(int *, int *, int *, int *)
+00001368 PhSerialLib_82xx.elf DeviceConfiguration::GetPrintReservationReq(void)
+00001370 PhSerialLib_82xx.elf DeviceConfiguration::GetConfDevice(void)
+000013ac PhSerialLib_82xx.elf Letext
+000013b0 PhSerialLib_82xx.elf Device::Device(void)
+0000140c PhSerialLib_82xx.elf Device::Init(IVOSCallback *)
+00001454 PhSerialLib_82xx.elf Device::Release(void)
+000014a4 PhSerialLib_82xx.elf Device::Connect(ISerialDrvCallback *)
+000014b0 PhSerialLib_82xx.elf Device::DisConnect(void)
+000014c0 PhSerialLib_82xx.elf Device::IsConnected(void)
+000014d0 PhSerialLib_82xx.elf Device::ScanChannel(void)
+00001634 PhSerialLib_82xx.elf Device::readBuffer(tGCString *, unsigned int)
+00001790 PhSerialLib_82xx.elf Device::clearRdBuffer(void)
+00001838 PhSerialLib_82xx.elf Device::Reserve(unsigned long)
+00001840 PhSerialLib_82xx.elf Device::UnReserve(unsigned long)
+00001848 PhSerialLib_82xx.elf ThreadStarter(int, int, int, int)
+0000186c PhSerialLib_82xx.elf DeviceManager::DeviceManager(IHeapCallback *, IGenClientCallback1 *, IDriverFactoryCallback *, IVOSCallback *, ISystemUtilitiesCallback3 *)
+00001a50 PhSerialLib_82xx.elf DeviceManager::operator new(unsigned int, IHeapCallback *)
+00001b24 PhSerialLib_82xx.elf DeviceManager::DelDeviceManager(void *)
+00001b64 PhSerialLib_82xx.elf DeviceManager::OpenChannel(void)
+00001d34 PhSerialLib_82xx.elf DeviceManager::CloseChannel(void)
+00001d98 PhSerialLib_82xx.elf DeviceManager::ReqOpenChannel(int, int)
+00001dac PhSerialLib_82xx.elf DeviceManager::IsReqOpenChannel(void)
+00001db4 PhSerialLib_82xx.elf DeviceManager::ConnectChannel(unsigned long)
+00001ee0 PhSerialLib_82xx.elf DeviceManager::DisConnectChannel(unsigned long)
+00001f94 PhSerialLib_82xx.elf DeviceManager::DisConnectChannel(void)
+000020a8 PhSerialLib_82xx.elf DeviceManager::GetConnection(void)
+000020b0 PhSerialLib_82xx.elf DeviceManager::IsConnected(void)
+0000211c PhSerialLib_82xx.elf DeviceManager::CreateDevice(int)
+00002218 PhSerialLib_82xx.elf DeviceManager::WriteChannel(unsigned long)
+00002304 PhSerialLib_82xx.elf DeviceManager::ReadChannel(unsigned long)
+00002440 PhSerialLib_82xx.elf DeviceManager::AbortChannel(void)
+000024c8 PhSerialLib_82xx.elf DeviceManager::GetMessage(unsigned long)
+0000260c PhSerialLib_82xx.elf DeviceManager::UnPackDefaultSetupData(unsigned long)
+00002638 PhSerialLib_82xx.elf DeviceManager::UnPackSetupData(unsigned long, int *)
+00002668 PhSerialLib_82xx.elf DeviceManager::SetDeviceInUse(void)
+000026b8 PhSerialLib_82xx.elf DeviceManager::ScanChannel(void)
+000026dc PhSerialLib_82xx.elf DeviceManager::wd(void)
+00002758 PhSerialLib_82xx.elf DeviceManager::HotRemove(void)
+00002810 PhSerialLib_82xx.elf DeviceManager::QueueWork(unsigned long, int)
+00002988 PhSerialLib_82xx.elf DeviceManager::DeQueueWork(unsigned long *)
+00002ac0 PhSerialLib_82xx.elf DeviceManager::AbortChannel(unsigned long)
+00002c08 PhSerialLib_82xx.elf DeviceManager::SetAbortStatus(unsigned long)
+00002cf8 PhSerialLib_82xx.elf DeviceManager::PrepareSerialThreadStop(void)
+00002dc8 PhSerialLib_82xx.elf DeviceManager::StopSerialThread(void)
+00002f2c PhSerialLib_82xx.elf DeviceManager::TraceState(void)
+00003590 PhSerialLib_82xx.elf Device::~Device(void)
+000035e0 PhSerialLib_82xx.elf Device::Update(DeviceConfiguration *)
+000035e4 PhSerialLib_82xx.elf Letext
+000035e8 PhSerialLib_82xx.elf PrinterDevice::operator new(unsigned int, IHeapCallback *)
+000036bc PhSerialLib_82xx.elf PrinterDevice::DelStringDev(void *)
+000036fc PhSerialLib_82xx.elf PrinterDevice::PrinterDevice(IHeapCallback *)
+00003778 PhSerialLib_82xx.elf PrinterDevice::GetDeviceType(void)
+00003780 PhSerialLib_82xx.elf PrinterDevice::DisConnect(void)
+000037b4 PhSerialLib_82xx.elf PrinterDevice::Write(tGCString *, DeviceConfiguration *)
+00003834 PhSerialLib_82xx.elf PrinterDevice::Read(tGCString *, DeviceConfiguration *)
+0000383c PhSerialLib_82xx.elf PrinterDevice::Abort(DeviceConfiguration *)
+00003844 PhSerialLib_82xx.elf PrinterDevice::GetMessage(tGCString *, DeviceConfiguration *)
+0000384c PhSerialLib_82xx.elf PrinterDevice::Reserve(unsigned long)
+00003874 PhSerialLib_82xx.elf PrinterDevice::UnReserve(unsigned long)
+0000389c PhSerialLib_82xx.elf PrinterDevice::~PrinterDevice(void)
+000038ec PhSerialLib_82xx.elf PrinterDevice::Connect(ISerialDrvCallback *)
+0000390c PhSerialLib_82xx.elf PrinterDevice::IsConnected(void)
+0000392c PhSerialLib_82xx.elf Letext
+00003930 PhSerialLib_82xx.elf DeviceManager::SerialThread(void)
+00003d94 PhSerialLib_82xx.elf Letext
+00003d98 PhSerialLib_82xx.elf CPhSerialLib::CPhSerialLib(void)
+00003e90 PhSerialLib_82xx.elf CPhSerialLib::~CPhSerialLib(void)
+00003f2c PhSerialLib_82xx.elf CPhSerialLib::GetProductInfo(unsigned char *, unsigned char *, unsigned char *, unsigned long)
+00003fc4 PhSerialLib_82xx.elf CPhSerialLib::SetCommonCallbackInterface(ICommonCallback *)
+000041f0 PhSerialLib_82xx.elf CPhSerialLib::ConnectReq(unsigned long, unsigned long *, int *)
+000042f0 PhSerialLib_82xx.elf CPhSerialLib::DisconnectReq(unsigned long, unsigned long, int *)
+00004338 PhSerialLib_82xx.elf CPhSerialLib::ReadVarReq(unsigned long, int *)
+000043b4 PhSerialLib_82xx.elf CPhSerialLib::WriteVarReq(unsigned long, int *)
+00004404 PhSerialLib_82xx.elf CPhSerialLib::ReadRawReq(unsigned long, int *)
+00004414 PhSerialLib_82xx.elf CPhSerialLib::WriteRawReq(unsigned long, int *)
+00004424 PhSerialLib_82xx.elf CPhSerialLib::AbortRawReq(unsigned long, int *)
+00004434 PhSerialLib_82xx.elf CPhSerialLib::AbortVarReq(unsigned long, int *)
+00004480 PhSerialLib_82xx.elf CPhSerialLib::GetExtendedStatusSize(unsigned long, int *, int *)
+00004490 PhSerialLib_82xx.elf CPhSerialLib::GetExtendedStatus(unsigned long, int, teIEC1131Type *, tGCValue *, int *)
+000044a0 PhSerialLib_82xx.elf CPhSerialLib::SetStatus(unsigned long, int, int *)
+000044b0 PhSerialLib_82xx.elf CPhSerialLib::ReadRes(unsigned long, int, int *)
+000044c0 PhSerialLib_82xx.elf CPhSerialLib::WriteRes(unsigned long, int, int *)
+000044d0 PhSerialLib_82xx.elf CPhSerialLib::PrepareForTermination(teHWFErrorCode *)
+00004514 PhSerialLib_82xx.elf CPhSerialLib::PerformSwitchover(trHWFAddress, teHWFErrorCode *)
+0000454c PhSerialLib_82xx.elf CPhSerialLib::PerformFailover(trHWFAddress, teHWFErrorCode *)
+00004584 PhSerialLib_82xx.elf CPhSerialLib::StartUsingDevice(trHWFAddress, teHWFErrorCode *)
+000045bc PhSerialLib_82xx.elf CPhSerialLib::RemoveHWConfiguration(trHWFAddress, teHWFErrorCode *)
+00004664 PhSerialLib_82xx.elf CPhSerialLib::RemoveIoConnection(unsigned long, teHWFErrorCode *)
+00004698 PhSerialLib_82xx.elf CPhSerialLib::PhResponsibilityForRestart(trHWFAddress, teHWFErrorCode *)
+0000471c PhSerialLib_82xx.elf CPhSerialLib::PhResponsibility(trHWFAddress, teHWFErrorCode *)
+00004a08 PhSerialLib_82xx.elf CPhSerialLib::PhResponsibilityForBackupDevice(trHWFAddress, teHWFErrorCode *)
+00004a38 PhSerialLib_82xx.elf CPhSerialLib::PhResponsibilityForHotInsert(trHWFAddress, teHWFErrorCode *)
+00004b20 PhSerialLib_82xx.elf CPhSerialLib::StartUsingIoConnection(trHWFAddress, unsigned long, teHWFErrorCode *)
+00004b6c PhSerialLib_82xx.elf CPhSerialLib::KickWatchdog(unsigned short *, teHWFErrorCode *)
+00004bdc PhSerialLib_82xx.elf CPhSerialLib::GetStatus(trHWFAddress, teHWFUnitKind, unsigned long *, unsigned long *, teHWFErrorCode *)
+00004c28 PhSerialLib_82xx.elf CPhSerialLib::operator new(unsigned int, IHeapCallback *)
+00004cdc PhSerialLib_82xx.elf CPhSerialLib::heap_delete(void)
+00004d48 PhSerialLib_82xx.elf CPhSerialLib::QueryInterface(_GUID const &, void **)
+00004eb0 PhSerialLib_82xx.elf CPhSerialLib::AddRef(void)
+00004ec8 PhSerialLib_82xx.elf CPhSerialLib::Release(void)
+00004f44 PhSerialLib_82xx.elf Letext
+00004f48 PhSerialLib_82xx.elf ObjectFactory
+0000508c PhSerialLib_82xx.elf Letext
+00005090 PhSerialLib_82xx.elf TerminalDevice::operator new(unsigned int, IHeapCallback *)
+00005164 PhSerialLib_82xx.elf TerminalDevice::DelLineDev(void *)
+000051a0 PhSerialLib_82xx.elf TerminalDevice::GetDeviceType(void)
+000051ac PhSerialLib_82xx.elf TerminalDevice::TerminalDevice(IHeapCallback *)
+0000523c PhSerialLib_82xx.elf TerminalDevice::DisConnect(void)
+00005260 PhSerialLib_82xx.elf TerminalDevice::Write(tGCString *, DeviceConfiguration *)
+000052b0 PhSerialLib_82xx.elf TerminalDevice::Read(tGCString *, DeviceConfiguration *)
+00005404 PhSerialLib_82xx.elf TerminalDevice::Abort(DeviceConfiguration *)
+0000548c PhSerialLib_82xx.elf TerminalDevice::GetMessage(tGCString *, DeviceConfiguration *)
+00005498 PhSerialLib_82xx.elf TerminalDevice::EditLineBuffer(void)
+0000555c PhSerialLib_82xx.elf TerminalDevice::KeyState(void)
+00005654 PhSerialLib_82xx.elf TerminalDevice::DeleteCharacter(void)
+00005708 PhSerialLib_82xx.elf TerminalDevice::LeftArrow(void)
+00005750 PhSerialLib_82xx.elf TerminalDevice::RightArrow(void)
+000057b0 PhSerialLib_82xx.elf TerminalDevice::EndOfLine(void)
+00005804 PhSerialLib_82xx.elf TerminalDevice::BeginOfLine(void)
+00005850 PhSerialLib_82xx.elf TerminalDevice::DeleteLine(void)
+000058a4 PhSerialLib_82xx.elf TerminalDevice::AddCharacter(void)
+000059e4 PhSerialLib_82xx.elf TerminalDevice::ebAddCharacter(char)
+00005a00 PhSerialLib_82xx.elf TerminalDevice::ebDeleteCharacter(void)
+00005a50 PhSerialLib_82xx.elf TerminalDevice::ebCursorBackward(int)
+00005ad8 PhSerialLib_82xx.elf TerminalDevice::ebCursorForward(int)
+00005b60 PhSerialLib_82xx.elf TerminalDevice::ebDeleteLine(void)
+00005bb0 PhSerialLib_82xx.elf TerminalDevice::ebEmptyBuffer(void)
+00005bf4 PhSerialLib_82xx.elf TerminalDevice::Reserve(unsigned long)
+00005c14 PhSerialLib_82xx.elf TerminalDevice::UnReserve(unsigned long)
+00005c38 PhSerialLib_82xx.elf TerminalDevice::~TerminalDevice(void)
+00005c88 PhSerialLib_82xx.elf TerminalDevice::Connect(ISerialDrvCallback *)
+00005ca8 PhSerialLib_82xx.elf TerminalDevice::IsConnected(void)
+00005cc8 PhSerialLib_82xx.elf Letext
+00005ccc PhSerialLib_82xx.elf __pure_virtual
+00005d34 PhSerialLib_82xx.elf __builtin_delete
+00005d98 PhSerialLib_82xx.elf Letext
+00005d98 PhSerialLib_82xx.elf Letext
+00005d98 PhSerialLib_82xx.elf Letext
+00005d9c PhSerialLib_82xx.elf CPhCommon_Base::CPhCommon_Base(void)
+00005e08 PhSerialLib_82xx.elf CPhCommon_Base::~CPhCommon_Base(void)
+00005e80 PhSerialLib_82xx.elf CPhCommon_Base::GetProductInfo(unsigned char *, unsigned char *, unsigned char *, unsigned long)
+00005ebc PhSerialLib_82xx.elf CPhCommon_Base::SetCommonCallbackInterface(ICommonCallback *)
+00005eec PhSerialLib_82xx.elf CPhConfig_Base1::PrepareForTermination(teHWFErrorCode *)
+00005f1c PhSerialLib_82xx.elf CPhConfig_Base1::RemoveHWConfiguration(trHWFAddress, teHWFErrorCode *)
+00005f50 PhSerialLib_82xx.elf CPhConfig_Base1::RemoveIoConnection(unsigned long, teHWFErrorCode *)
+00005f84 PhSerialLib_82xx.elf CPhConfig_Base1::PhResponsibilityForRestart(trHWFAddress, teHWFErrorCode *)
+00005fb8 PhSerialLib_82xx.elf CPhConfig_Base1::PhResponsibility(trHWFAddress, teHWFErrorCode *)
+00005fec PhSerialLib_82xx.elf CPhConfig_Base1::StartUsingIoConnection(trHWFAddress, unsigned long, teHWFErrorCode *)
+00006024 PhSerialLib_82xx.elf CPhConfig_Base1::PhResponsibilityForBackupDevice(trHWFAddress, teHWFErrorCode *)
+00006058 PhSerialLib_82xx.elf CPhConfig_Base1::PhResponsibilityForHotInsert(trHWFAddress, teHWFErrorCode *)
+0000608c PhSerialLib_82xx.elf CPhConfig_Base1::PerformSwitchover(trHWFAddress, teHWFErrorCode *)
+000060c0 PhSerialLib_82xx.elf CPhConfig_Base1::StartUsingDevice(trHWFAddress, teHWFErrorCode *)
+000060f4 PhSerialLib_82xx.elf CPhConfig_Base1::PerformFailover(trHWFAddress, teHWFErrorCode *)
+00006128 PhSerialLib_82xx.elf CPhClient_Base::ConnectReq(unsigned long, unsigned long *, int *)
+00006160 PhSerialLib_82xx.elf CPhClient_Base::DisconnectReq(unsigned long, unsigned long, int *)
+00006198 PhSerialLib_82xx.elf CPhClient_Base::ReadVarReq(unsigned long, int *)
+000061cc PhSerialLib_82xx.elf CPhClient_Base::WriteVarReq(unsigned long, int *)
+00006200 PhSerialLib_82xx.elf CPhClient_Base::ReadRawReq(unsigned long, int *)
+00006234 PhSerialLib_82xx.elf CPhClient_Base::WriteRawReq(unsigned long, int *)
+00006268 PhSerialLib_82xx.elf CPhClient_Base::AbortRawReq(unsigned long, int *)
+0000629c PhSerialLib_82xx.elf CPhClient_Base::AbortVarReq(unsigned long, int *)
+000062d0 PhSerialLib_82xx.elf CPhClient_Base::GetExtendedStatusSize(unsigned long, int *, int *)
+00006308 PhSerialLib_82xx.elf CPhClient_Base::GetExtendedStatus(unsigned long, int, teIEC1131Type *, tGCValue *, int *)
+00006348 PhSerialLib_82xx.elf CPhClient_Base::SetStatus(unsigned long, int, int *)
+00006380 PhSerialLib_82xx.elf CPhClient_Base::ReadRes(unsigned long, int, int *)
+000063b8 PhSerialLib_82xx.elf CPhClient_Base::WriteRes(unsigned long, int, int *)
+000063f0 PhSerialLib_82xx.elf CPhClient_Base1::ConnectReq(unsigned long, unsigned long *, int *)
+00006428 PhSerialLib_82xx.elf CPhClient_Base1::DisconnectReq(unsigned long, unsigned long, int *)
+00006460 PhSerialLib_82xx.elf CPhClient_Base1::ReadVarReq(unsigned long, int *)
+00006494 PhSerialLib_82xx.elf CPhClient_Base1::WriteVarReq(unsigned long, int *)
+000064c8 PhSerialLib_82xx.elf CPhClient_Base1::RegisterVarReq(unsigned long, int *)
+000064fc PhSerialLib_82xx.elf CPhClient_Base1::ReadRawReq(unsigned long, int *)
+00006530 PhSerialLib_82xx.elf CPhClient_Base1::WriteRawReq(unsigned long, int *)
+00006564 PhSerialLib_82xx.elf CPhClient_Base1::AbortRawReq(unsigned long, int *)
+00006598 PhSerialLib_82xx.elf CPhClient_Base1::AbortVarReq(unsigned long, int *)
+000065cc PhSerialLib_82xx.elf CPhClient_Base1::TimeoutAbortVarReq(unsigned long, int *)
+0000665c PhSerialLib_82xx.elf CPhClient_Base1::GetExtendedStatusSize(unsigned long, int *, int *)
+00006694 PhSerialLib_82xx.elf CPhClient_Base1::GetExtendedStatus(unsigned long, int, teIEC1131Type *, tGCValue *, int *)
+000066d4 PhSerialLib_82xx.elf CPhClient_Base1::BufferTakeForReceive(unsigned long, int *)
+00006708 PhSerialLib_82xx.elf CPhClient_Base1::BufferGiveForReceive(unsigned long, int, int *)
+00006740 PhSerialLib_82xx.elf CPhClient_Base1::BufferTakeForSend(unsigned long, unsigned int, int *)
+00006778 PhSerialLib_82xx.elf CPhClient_Base1::BufferGiveForSend(unsigned long, unsigned int, int, int *)
+000067b4 PhSerialLib_82xx.elf CPhClient_Base1::SetStatus(unsigned long, int, int *)
+000067ec PhSerialLib_82xx.elf CPhClient_Base1::ReadRes(unsigned long, int, int *)
+00006824 PhSerialLib_82xx.elf CPhClient_Base1::WriteRes(unsigned long, int, int *)
+0000685c PhSerialLib_82xx.elf CPhStatus_Base1::KickWatchdog(unsigned short *, teHWFErrorCode *)
+00006890 PhSerialLib_82xx.elf CPhStatus_Base1::GetStatus(trHWFAddress, teHWFUnitKind, unsigned long *, unsigned long *, teHWFErrorCode *)
+000068d0 PhSerialLib_82xx.elf CPhIOAccess_Base::GetCopyRoutineReference(unsigned int, void (**)(short, void *, void *), IOAccessErrorCode *)
+00006908 PhSerialLib_82xx.elf CPhIOAccess_Base::ObtainDPM(eAreaType, trHWFAddress, IOAccessErrorCode *)
+00006940 PhSerialLib_82xx.elf CPhIOAccess_Base::ReleaseDPM(eAreaType, trHWFAddress, IOAccessErrorCode *)
+00006978 PhSerialLib_82xx.elf CPhDiagnostics_Base::PhDiagnosticsTableNew(teDiagErrorCode *)
+000069a8 PhSerialLib_82xx.elf CPhDiagnostics_Base::PhDiagnosticsTableCleared(teDiagErrorCode *)
+000069d8 PhSerialLib_82xx.elf CPhOLU_Base::PrepareForFirmwareDownload(trHWFAddress const *, unsigned long, eOLUStatus *)
+00006a10 PhSerialLib_82xx.elf CPhOLU_Base::PrepareForApplicationStop(trHWFAddress const *, eOLUStatus *)
+00006a44 PhSerialLib_82xx.elf CPhOLU_Base::ResumeOperation(trHWFAddress const *, eOLUStatus *)
+00006a78 PhSerialLib_82xx.elf CPhOLU_Base::PhResponsibilityForOLU(trHWFAddress const *, eOLUStatus *)
+00006aac PhSerialLib_82xx.elf CPhOLU_Base::PrepareForLeavingOLU(trHWFAddress const *, eOLUStatus *)
+00006ae0 PhSerialLib_82xx.elf CPhOLU_Base::PrepareForAppAndConfigDownload(trHWFAddress const *, eOLUStatus *)
+00006b18 PhSerialLib_82xx.elf IPhCommon::IPhCommon(void)
+00006b84 PhSerialLib_82xx.elf IUnknown::IUnknown(void)
+00006bdc PhSerialLib_82xx.elf CRTFuncTabBegin
+00006bdc PhSerialLib_82xx.elf Letext
+00006bdc PhSerialLib_82xx.elf scprocs
+00006be8 PhSerialLib_82xx.elf printf
+00006bec PhSerialLib_82xx.elf sprintf
+00006bf0 PhSerialLib_82xx.elf sscanf
+00006bf4 PhSerialLib_82xx.elf memcpy
+00006bf8 PhSerialLib_82xx.elf memset
+00006bfc PhSerialLib_82xx.elf strcat
+00006c00 PhSerialLib_82xx.elf strcmp
+00006c04 PhSerialLib_82xx.elf strlen
+00006c08 PhSerialLib_82xx.elf strncmp
+00006c0c PhSerialLib_82xx.elf strncpy
+00006c10 PhSerialLib_82xx.elf memchr
+00006c14 PhSerialLib_82xx.elf memcmp
+00006c18 PhSerialLib_82xx.elf memmove
+00006c1c PhSerialLib_82xx.elf strchr
+00006c20 PhSerialLib_82xx.elf strcoll
+00006c24 PhSerialLib_82xx.elf strcpy
+00006c28 PhSerialLib_82xx.elf strcspn
+00006c2c PhSerialLib_82xx.elf strncat
+00006c30 PhSerialLib_82xx.elf strpbrk
+00006c34 PhSerialLib_82xx.elf strrchr
+00006c38 PhSerialLib_82xx.elf strspn
+00006c3c PhSerialLib_82xx.elf strstr
+00006c40 PhSerialLib_82xx.elf strtok
+00006c44 PhSerialLib_82xx.elf strxfrm
+00006c48 PhSerialLib_82xx.elf strerror
+00006c4c PhSerialLib_82xx.elf pow
+00006c50 PhSerialLib_82xx.elf acos
+00006c54 PhSerialLib_82xx.elf asin
+00006c58 PhSerialLib_82xx.elf atan
+00006c5c PhSerialLib_82xx.elf atan2
+00006c60 PhSerialLib_82xx.elf ceil
+00006c64 PhSerialLib_82xx.elf cos
+00006c68 PhSerialLib_82xx.elf cosh
+00006c6c PhSerialLib_82xx.elf exp
+00006c70 PhSerialLib_82xx.elf fabs
+00006c74 PhSerialLib_82xx.elf floor
+00006c78 PhSerialLib_82xx.elf fmod
+00006c7c PhSerialLib_82xx.elf frexp
+00006c80 PhSerialLib_82xx.elf ldexp
+00006c84 PhSerialLib_82xx.elf log
+00006c88 PhSerialLib_82xx.elf log10
+00006c8c PhSerialLib_82xx.elf modf
+00006c90 PhSerialLib_82xx.elf sin
+00006c94 PhSerialLib_82xx.elf sinh
+00006c98 PhSerialLib_82xx.elf sqrt
+00006c9c PhSerialLib_82xx.elf tan
+00006ca0 PhSerialLib_82xx.elf tanh
+00006ca4 PhSerialLib_82xx.elf div_r
+00006ca8 PhSerialLib_82xx.elf labs
+00006cac PhSerialLib_82xx.elf strtol
+00006cb0 PhSerialLib_82xx.elf free
+00006cb4 PhSerialLib_82xx.elf abort
+00006cb8 PhSerialLib_82xx.elf abs
+00006cbc PhSerialLib_82xx.elf atof
+00006cc0 PhSerialLib_82xx.elf atoi
+00006cc4 PhSerialLib_82xx.elf atol
+00006cc8 PhSerialLib_82xx.elf bsearch
+00006ccc PhSerialLib_82xx.elf ldiv_r
+00006cd0 PhSerialLib_82xx.elf qsort
+00006cd4 PhSerialLib_82xx.elf rand
+00006cd8 PhSerialLib_82xx.elf srand
+00006cdc PhSerialLib_82xx.elf strtod
+00006ce0 PhSerialLib_82xx.elf strtoul
+00006ce4 PhSerialLib_82xx.elf malloc
+00006ce8 PhSerialLib_82xx.elf __assert
+00006cec PhSerialLib_82xx.elf time
+00006cf0 PhSerialLib_82xx.elf asctime
+00006cf4 PhSerialLib_82xx.elf gmtime
+00006cf8 PhSerialLib_82xx.elf clock
+00006cfc PhSerialLib_82xx.elf ctime
+00006d00 PhSerialLib_82xx.elf difftime
+00006d04 PhSerialLib_82xx.elf localtime
+00006d08 PhSerialLib_82xx.elf mktime
+00006d0c PhSerialLib_82xx.elf strftime
+00006d10 PhSerialLib_82xx.elf eventcollSem
+00006d14 PhSerialLib_82xx.elf intLock
+00006d18 PhSerialLib_82xx.elf intUnlock
+00006d1c PhSerialLib_82xx.elf __builtin_vec_new
+00006d20 PhSerialLib_82xx.elf __builtin_vec_delete
+00006d24 PhSerialLib_82xx.elf fprintf
+00006d28 PhSerialLib_82xx.elf __stdout
+00006d2c PhSerialLib_82xx.elf __stderr
+00006d30 PhSerialLib_82xx.elf setjmp
+00006d34 PhSerialLib_82xx.elf longjmp
+00006d38 PhSerialLib_82xx.elf CRTFuncTabEnd
+00006d38 PhSerialLib_82xx.elf ecprocs
+00006d38 PhSerialLib_82xx.elf etext
+00006d38 PhSerialLib_82xx.elf sgot2
+00006eec PhSerialLib_82xx.elf egot2
+00006eec PhSerialLib_82xx.elf sfixup
+00007438 PhSerialLib_82xx.elf efixup
+00007438 PhSerialLib_82xx.elf useEXEHEAD
+0000744c PhSerialLib_82xx.elf cSWModbusSrcNameSuff
+0000745c PhSerialLib_82xx.elf cSWInsumSrcNameSuff
+0000746c PhSerialLib_82xx.elf cSWProfibusSrcNameSuff
+0000747c PhSerialLib_82xx.elf cSWMB300SrcNameSuff
+00007488 PhSerialLib_82xx.elf cSWS100SrcNameSuff
+0000749c PhSerialLib_82xx.elf CommunicationDevice::m_TagStringDev
+000074b8 PhSerialLib_82xx.elf CommunicationDevice virtual table
+00007534 PhSerialLib_82xx.elf cSWModbusSrcNameSuff
+00007544 PhSerialLib_82xx.elf cSWInsumSrcNameSuff
+00007554 PhSerialLib_82xx.elf cSWProfibusSrcNameSuff
+00007564 PhSerialLib_82xx.elf cSWMB300SrcNameSuff
+00007570 PhSerialLib_82xx.elf cSWS100SrcNameSuff
+00007584 PhSerialLib_82xx.elf DeviceConfiguration::m_DeviceConfig
+000075ac PhSerialLib_82xx.elf cSWModbusSrcNameSuff
+000075bc PhSerialLib_82xx.elf cSWInsumSrcNameSuff
+000075cc PhSerialLib_82xx.elf cSWProfibusSrcNameSuff
+000075dc PhSerialLib_82xx.elf cSWMB300SrcNameSuff
+000075e8 PhSerialLib_82xx.elf cSWS100SrcNameSuff
+000075fc PhSerialLib_82xx.elf DeviceManager::m_TagDevice
+00007a70 PhSerialLib_82xx.elf Device virtual table
+00007aec PhSerialLib_82xx.elf cSWModbusSrcNameSuff
+00007afc PhSerialLib_82xx.elf cSWInsumSrcNameSuff
+00007b0c PhSerialLib_82xx.elf cSWProfibusSrcNameSuff
+00007b1c PhSerialLib_82xx.elf cSWMB300SrcNameSuff
+00007b28 PhSerialLib_82xx.elf cSWS100SrcNameSuff
+00007b3c PhSerialLib_82xx.elf PrinterDevice::m_TagPrintDev
+00007b50 PhSerialLib_82xx.elf PrinterDevice virtual table
+00007bcc PhSerialLib_82xx.elf cSWModbusSrcNameSuff
+00007bdc PhSerialLib_82xx.elf cSWInsumSrcNameSuff
+00007bec PhSerialLib_82xx.elf cSWProfibusSrcNameSuff
+00007bfc PhSerialLib_82xx.elf cSWMB300SrcNameSuff
+00007c08 PhSerialLib_82xx.elf cSWS100SrcNameSuff
+00007c4c PhSerialLib_82xx.elf cSWModbusSrcNameSuff
+00007c5c PhSerialLib_82xx.elf cSWInsumSrcNameSuff
+00007c6c PhSerialLib_82xx.elf cSWProfibusSrcNameSuff
+00007c7c PhSerialLib_82xx.elf cSWMB300SrcNameSuff
+00007c88 PhSerialLib_82xx.elf cSWS100SrcNameSuff
+00007c9c PhSerialLib_82xx.elf CComCoClass<CPhSerialLib, &CLSID_CPhSerialLib>::m_HeapTag
+00007ce0 PhSerialLib_82xx.elf CPhSerialLib::CPhIOAccess_Base virtual table
+00007d20 PhSerialLib_82xx.elf CPhSerialLib::CPhClient_Base1 virtual table
+00007de0 PhSerialLib_82xx.elf CPhSerialLib::CPhClient_Base virtual table
+00007e70 PhSerialLib_82xx.elf CPhSerialLib::CPhStatus_Base1 virtual table
+00007ea8 PhSerialLib_82xx.elf CPhSerialLib::CPhConfig_Base1 virtual table
+00007f28 PhSerialLib_82xx.elf CPhSerialLib virtual table
+00007f68 PhSerialLib_82xx.elf IPhIOAccess virtual table
+00007fa8 PhSerialLib_82xx.elf IPhClient1 virtual table
+00008068 PhSerialLib_82xx.elf IPhClient virtual table
+000080f8 PhSerialLib_82xx.elf IPhStatus1 virtual table
+00008130 PhSerialLib_82xx.elf IPhConfig1 virtual table
+000081b0 PhSerialLib_82xx.elf IUnknown virtual table
+000081d8 PhSerialLib_82xx.elf CompanyName
+000081dc PhSerialLib_82xx.elf ProductName
+000081fc PhSerialLib_82xx.elf ProductVersion
+00008224 PhSerialLib_82xx.elf cSWModbusSrcNameSuff
+00008234 PhSerialLib_82xx.elf cSWInsumSrcNameSuff
+00008244 PhSerialLib_82xx.elf cSWProfibusSrcNameSuff
+00008254 PhSerialLib_82xx.elf cSWMB300SrcNameSuff
+00008260 PhSerialLib_82xx.elf cSWS100SrcNameSuff
+00008274 PhSerialLib_82xx.elf CLSID_CPhSerialLib
+00008290 PhSerialLib_82xx.elf PHproperties
+00008298 PhSerialLib_82xx.elf CMirroredObject::c_pMirroredObjectMgrImpl
+0000829c PhSerialLib_82xx.elf CMirroredObjectAgent::c_pHeapCallback
+000082a0 PhSerialLib_82xx.elf CMirroredObjectAgent::c_AgentTag
+000082bc PhSerialLib_82xx.elf cSWModbusSrcNameSuff
+000082cc PhSerialLib_82xx.elf cSWInsumSrcNameSuff
+000082dc PhSerialLib_82xx.elf cSWProfibusSrcNameSuff
+000082ec PhSerialLib_82xx.elf cSWMB300SrcNameSuff
+000082f8 PhSerialLib_82xx.elf cSWS100SrcNameSuff
+00008300 G _SDA2_BASE_ PhSerialLib_82xx.elf 
+0000830c PhSerialLib_82xx.elf TerminalDevice::m_TagLineDev
+00008340 PhSerialLib_82xx.elf TerminalDevice virtual table
+00008400 PhSerialLib_82xx.elf GUID_NULL
+00008410 PhSerialLib_82xx.elf IID_IPhCommonCB
+00008420 PhSerialLib_82xx.elf IID_IPhConfigCB
+00008430 PhSerialLib_82xx.elf IID_IPhConfigCB1
+00008440 PhSerialLib_82xx.elf IID_IPhIOAccessCB
+00008450 PhSerialLib_82xx.elf IID_IPhExternalConfigCB1
+00008460 PhSerialLib_82xx.elf IID_IPhExternalConfigCB2
+00008470 PhSerialLib_82xx.elf IID_IPhExternalConfigCB3
+00008480 PhSerialLib_82xx.elf IID_IPhOLUCB
+00008490 PhSerialLib_82xx.elf IID_IPhCommon
+000084a0 PhSerialLib_82xx.elf IID_IPhConfig1
+000084b0 PhSerialLib_82xx.elf IID_IPhStatus1
+000084c0 PhSerialLib_82xx.elf IID_IPhClient
+000084d0 PhSerialLib_82xx.elf IID_IPhClient1
+000084e0 PhSerialLib_82xx.elf IID_IPhDiagnostics
+000084f0 PhSerialLib_82xx.elf IID_IPhIOAccess
+00008500 PhSerialLib_82xx.elf IID_IPhSafeConfig
+00008510 PhSerialLib_82xx.elf IID_IPhSafeConfig1
+00008520 PhSerialLib_82xx.elf IID_IPhSimulation
+00008530 PhSerialLib_82xx.elf IID_IPhOLU
+00008540 PhSerialLib_82xx.elf IID_IHeapCallback
+00008550 PhSerialLib_82xx.elf IID_ISystemUtilitiesCallback
+00008560 PhSerialLib_82xx.elf IID_ISystemUtilitiesCallback1
+00008570 PhSerialLib_82xx.elf IID_ISystemUtilitiesCallback2
+00008580 PhSerialLib_82xx.elf IID_ISystemUtilitiesCallback3
+00008590 PhSerialLib_82xx.elf IID_IEventMgrCallback
+000085a0 PhSerialLib_82xx.elf IID_IEventMgrCallback1
+000085b0 PhSerialLib_82xx.elf IID_ISysClockCallback
+000085c0 PhSerialLib_82xx.elf IID_ISysClockCallback1
+000085d0 PhSerialLib_82xx.elf IID_ISysClockCallback2
+000085e0 PhSerialLib_82xx.elf IID_ISysClockCallback3
+000085f0 PhSerialLib_82xx.elf IID_IVOSCallback
+00008600 PhSerialLib_82xx.elf IID_INetwClockSynchCallback
+00008610 PhSerialLib_82xx.elf IID_IConfigCBCallback1
+00008620 PhSerialLib_82xx.elf IID_IConfigCBCallback2
+00008630 PhSerialLib_82xx.elf IID_IConfigCBCallback3
+00008640 PhSerialLib_82xx.elf IID_IExternalConfigCBCallback
+00008650 PhSerialLib_82xx.elf IID_IExternalConfigCBCallback2
+00008660 PhSerialLib_82xx.elf IID_IExternalConfigCBCallback3
+00008670 PhSerialLib_82xx.elf IID_IExternalConfigCBCallback4
+00008680 PhSerialLib_82xx.elf IID_IMessagesCBCallback
+00008690 PhSerialLib_82xx.elf IID_IAIPAccessCBCallback
+000086a0 PhSerialLib_82xx.elf IID_IOLUCBCallback
+000086b0 PhSerialLib_82xx.elf IID_ISystemUtilitiesCBCallback1
+000086c0 PhSerialLib_82xx.elf IID_IConfigCallback1
+000086d0 PhSerialLib_82xx.elf IID_IConfigCallback2
+000086e0 PhSerialLib_82xx.elf IID_IStatusCallback1
+000086f0 PhSerialLib_82xx.elf IID_IGenClientCallback
+00008700 PhSerialLib_82xx.elf IID_IGenClientCallback1
+00008710 PhSerialLib_82xx.elf IID_IDriverFactoryCallback
+00008720 PhSerialLib_82xx.elf IID_IDiagnosticsCallback
+00008730 PhSerialLib_82xx.elf IID_ISafeConfigCallback
+00008740 PhSerialLib_82xx.elf IID_ISafeConfigCallback1
+00008750 PhSerialLib_82xx.elf IID_ICRCCallback
+00008760 PhSerialLib_82xx.elf IID_IIOAccessCallback
+00008770 PhSerialLib_82xx.elf IID_CriticalRegionCallback
+00008780 PhSerialLib_82xx.elf IID_VOSExceptionCallback
+00008790 PhSerialLib_82xx.elf IID_DrvCommonCallback
+000087a0 PhSerialLib_82xx.elf IID_ProtectedMirroredHeapCallback
+000087b0 PhSerialLib_82xx.elf IID_SharedMirroredHeapCallback
+000087c0 PhSerialLib_82xx.elf IID_TemporaryMirroredHeapCallback
+000087d0 PhSerialLib_82xx.elf IID_IRestrictedVOSCallback
+000087e0 PhSerialLib_82xx.elf IID_IVarServerCallback
+000087f0 PhSerialLib_82xx.elf IID_IVarServerCallback1
+00008800 PhSerialLib_82xx.elf IID_ISOCKETCallback
+00008810 PhSerialLib_82xx.elf CPhOLU_Base virtual table
+00008868 PhSerialLib_82xx.elf CPhDiagnostics_Base virtual table
+000088a0 PhSerialLib_82xx.elf CPhIOAccess_Base virtual table
+000088e0 PhSerialLib_82xx.elf CPhStatus_Base1 virtual table
+00008918 PhSerialLib_82xx.elf CPhClient_Base1 virtual table
+000089d8 PhSerialLib_82xx.elf CPhClient_Base virtual table
+00008a68 PhSerialLib_82xx.elf CPhConfig_Base1 virtual table
+00008ae8 PhSerialLib_82xx.elf CPhCommon_Base virtual table
+00008b28 PhSerialLib_82xx.elf GUID_NULL
+00008b38 PhSerialLib_82xx.elf MaxCompanyNameLen
+00008b3c PhSerialLib_82xx.elf MaxProductNameLen
+00008b40 PhSerialLib_82xx.elf MaxProductVersionLen
+00008b44 PhSerialLib_82xx.elf cMaxNrOfHWFAdrLevels
+00008b48 PhSerialLib_82xx.elf cGCWrite
+00008b4c PhSerialLib_82xx.elf cGCRead
+00008b50 PhSerialLib_82xx.elf cGCSubscription
+00008b54 PhSerialLib_82xx.elf cGCRegistration
+00008b58 PhSerialLib_82xx.elf cGCAddMemoryAreaArrayNumberPlaces
+00008b5c PhSerialLib_82xx.elf cPONotFound
+00008b60 PhSerialLib_82xx.elf cGCBusyDisconnecting
+00008b64 PhSerialLib_82xx.elf cGCRemovingPO
+00008b68 PhSerialLib_82xx.elf cGCParametersMissing
+00008b6c PhSerialLib_82xx.elf cGCAlreadyDefined
+00008b70 PhSerialLib_82xx.elf cGCTypeNotSupported
+00008b74 PhSerialLib_82xx.elf cGCIndexOutOfRange
+00008b78 PhSerialLib_82xx.elf cGCTypeNotDefined
+00008b7c PhSerialLib_82xx.elf cGCStringMismatch
+00008b80 PhSerialLib_82xx.elf cGCFacadeError
+00008b84 PhSerialLib_82xx.elf cGCInvalidHandle
+00008b88 PhSerialLib_82xx.elf cGCAddedMemoryAreaError
+00008b8c PhSerialLib_82xx.elf cGCBSErrorDetected
+00008b90 PhSerialLib_82xx.elf cAborted
+00008b94 PhSerialLib_82xx.elf cSuccess
+00008b98 PhSerialLib_82xx.elf cPending
+00008b9c PhSerialLib_82xx.elf cGCDisconnected
+00008ba0 PhSerialLib_82xx.elf cGCExtendedStatus
+00008ba4 PhSerialLib_82xx.elf cPHHeapFull
+00008ba8 PhSerialLib_82xx.elf cPHTypeMismatch
+00008bac PhSerialLib_82xx.elf cPHSizeMismatch
+00008bb0 PhSerialLib_82xx.elf cPHErrAccessData
+00008bb4 PhSerialLib_82xx.elf cPHErrProtocolData
+00008bb8 PhSerialLib_82xx.elf cPHAccessVarNotFound
+00008bbc PhSerialLib_82xx.elf cPHErrInvalidPar
+00008bc0 PhSerialLib_82xx.elf cPHDirAddrFormatNotSupported
+00008bc4 PhSerialLib_82xx.elf cPHGenericFormatNotSupported
+00008bc8 PhSerialLib_82xx.elf cPHNotImplemented
+00008bcc PhSerialLib_82xx.elf cPHVarDataUnsupportedDirection
+00008bd0 PhSerialLib_82xx.elf cPHVarDataNotSupported
+00008bd4 PhSerialLib_82xx.elf cPHRawDataNotSupported
+00008bd8 PhSerialLib_82xx.elf cPHDriverError
+00008bdc PhSerialLib_82xx.elf cPHHardwareError
+00008be0 PhSerialLib_82xx.elf cPHTRAdisconnect
+00008be4 PhSerialLib_82xx.elf cLegacyFormat
+00008be8 PhSerialLib_82xx.elf cDirAddrFormat
+00008bec PhSerialLib_82xx.elf cGenericFormat
+00008bf0 PhSerialLib_82xx.elf eHWFDeviceSpecific1
+00008bf4 PhSerialLib_82xx.elf eHWFUnitBPrimary
+00008bf8 PhSerialLib_82xx.elf cHWFOPCMask
+00008bfc PhSerialLib_82xx.elf cHWFOPCChannelOk
+00008c00 PhSerialLib_82xx.elf cHWFOPCChannelError
+00008c04 PhSerialLib_82xx.elf cHWFOPCChannelForced
+00008c08 PhSerialLib_82xx.elf cHWFOPCDeviceError
+00008c0c PhSerialLib_82xx.elf cHWFOPCChannelErrorLow
+00008c10 PhSerialLib_82xx.elf cHWFOPCChannelErrorHigh
+00008c14 PhSerialLib_82xx.elf cHWFOPCChannelHigh
+00008c18 PhSerialLib_82xx.elf cHWFOPCChannelLow
+00008c1c PhSerialLib_82xx.elf cHWFChannelRedundant
+00008c20 PhSerialLib_82xx.elf cHWFUnitBPrimary
+00008c24 PhSerialLib_82xx.elf cHWFBackupUnitError
+00008c28 PhSerialLib_82xx.elf cHWFXSPValueUsed
+00008c2c PhSerialLib_82xx.elf cHWFChannelSimulated
+00008c30 PhSerialLib_82xx.elf cHWFChannelForced
+00008c34 PhSerialLib_82xx.elf cHWFChannelInverted
+00008c38 PhSerialLib_82xx.elf cHWFXSPMask
+00008c3c PhSerialLib_82xx.elf cHWFXSPNoSetting
+00008c40 PhSerialLib_82xx.elf cHWFXSPValue
+00008c44 PhSerialLib_82xx.elf cHWFXSPClear
+00008c48 PhSerialLib_82xx.elf cHWFXSPFreeze
+00008c4c PhSerialLib_82xx.elf cHWFXSPInvert
+00008c50 PhSerialLib_82xx.elf cHWFXSPInitDPM
+00008c54 PhSerialLib_82xx.elf HWFNO_XSP_FORCE
+00008c55 PhSerialLib_82xx.elf HWFFORCE_OSP
+00008c56 PhSerialLib_82xx.elf HWFFORCE_CLEAR
+00008c57 PhSerialLib_82xx.elf HWFFORCE_BLOCK_IO_DPM_OUT_WRITE
+00008c58 PhSerialLib_82xx.elf HWFFORCE_BLOCK_SM_DPM_OUT_WRITE
+00008c5c PhSerialLib_82xx.elf cHWFMaxNrOfChannels
+00008c60 PhSerialLib_82xx.elf cHWFStatusErrorsMask
+00008c64 PhSerialLib_82xx.elf cHWFRootStatusErrorMask
+00008c68 PhSerialLib_82xx.elf cHWFDoNotCopyUnitErrorMask
+00008c6c PhSerialLib_82xx.elf cFWUpgradePrimary
+00008c70 PhSerialLib_82xx.elf cFWUpgradeBackup
+00008c74 PhSerialLib_82xx.elf cNewPhVersion
+00008c78 PhSerialLib_82xx.elf cNewPMFirmware
+00008c80 PhSerialLib_82xx.elf IPhCommon virtual table
+00008cb8 PhSerialLib_82xx.elf IUnknown virtual table
+00010ce0 G _SDA_BASE_ PhSerialLib_82xx.elf 
+</SYMBOLS>

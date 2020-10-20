@@ -1,0 +1,628 @@
+(*--------------------------------------------------------*)
+
+
+HWUnitInfo
+  HWUnitID         {900A39D2-CC72-11d5-B504-00C04F11556C}
+  Description      "AO930* (AO4H 4H)"
+  Information      "Analog output, 1 x 4 ch., 0/4..20  4 cyclic HART variables"
+  Icons            S900IOType
+  Attributes       IoUnit AnalogOut 
+
+
+  Parameters
+
+    ParamInfo
+      Name            SHORT_DETECT_1
+      Description     "ch. 1: short detect"
+      CompileType      IOConfig
+      Datatype         ENUM 
+      Default          0
+      ParValIndex      1
+      ParamType        CIGIOData  1 7 1 ByteParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo
+      Name            SHORT_DETECT_2
+      Description     "ch. 2: short detect"
+      CompileType      IOConfig
+      Datatype         ENUM 
+      Default          0
+      ParValIndex      1
+      ParamType        CIGIOData  2 7 1 ByteParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo
+      Name            SHORT_DETECT_3
+      Description     "ch. 3: short detect"
+      CompileType      IOConfig
+      Datatype         ENUM 
+      Default          0
+      ParValIndex      1
+      ParamType        CIGIOData  3 7 1 ByteParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo
+      Name            SHORT_DETECT_4
+      Description     "ch. 4: short detect"
+      CompileType      IOConfig
+      Datatype         ENUM 
+      Default          0
+      ParValIndex      1
+      ParamType        CIGIOData  4 7 1 ByteParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo
+      Name            OPEN_LINE_DETECT_1
+      Description     "ch. 1: open line detect"
+      CompileType      IOConfig
+      Datatype         ENUM 
+      Default          0
+      ParValIndex      1
+      ParamType        CIGIOData  1 6 1 ByteParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo
+      Name            OPEN_LINE_DETECT_2
+      Description     "ch. 2: open line detect"
+      CompileType      IOConfig
+      Datatype         ENUM 
+      Default          0
+      ParValIndex      1
+      ParamType        CIGIOData  2 6 1 ByteParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo
+      Name            OPEN_LINE_DETECT_3
+      Description     "ch. 3: open line detect"
+      CompileType      IOConfig
+      Datatype         ENUM 
+      Default          0
+      ParValIndex      1
+      ParamType        CIGIOData  3 6 1 ByteParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo
+      Name            OPEN_LINE_DETECT_4
+      Description     "ch. 4: open line detect"
+      CompileType      IOConfig
+      Datatype         ENUM 
+      Default          0
+      ParValIndex      1
+      ParamType        CIGIOData  4 6 1 ByteParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo
+      Name            FAILSAFE_1
+      Description     "ch. 1: failsafe mode"
+      CompileType      IOConfig
+      Datatype         ENUM 
+      Default          0
+      ParValIndex      71
+      ParamType        CIGIOData  1 4 1 ByteParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo
+      Name            FAILSAFE_2
+      Description     "ch. 2: failsafe mode"
+      CompileType      IOConfig
+      Datatype         ENUM 
+      Default          0
+      ParValIndex      71
+      ParamType        CIGIOData  2 4 1 ByteParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo
+      Name            FAILSAFE_3
+      Description     "ch. 3: failsafe mode"
+      CompileType      IOConfig
+      Datatype         ENUM 
+      Default          0
+      ParValIndex      71
+      ParamType        CIGIOData  3 4 1 ByteParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo
+      Name            FAILSAFE_4
+      Description     "ch. 4: failsafe mode"
+      CompileType      IOConfig
+      Datatype         ENUM 
+      Default          0
+      ParValIndex      71
+      ParamType        CIGIOData  4 4 1 ByteParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo
+      Name            HART_SV_1_1
+      Description     "ch. 1: SV1"
+      CompileType      IOConfig
+      Datatype         ENUM 
+      Default          1
+      ParValIndex      2
+      ParamType        CIGIOData  5 0 1 ByteParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo
+      Name            HART_SV_2_1
+      Description     "ch. 2: SV1"
+      CompileType      IOConfig
+      Datatype         ENUM 
+      Default          1
+      ParValIndex      2
+      ParamType        CIGIOData  5 2 1 ByteParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo
+      Name            HART_SV_3_1
+      Description     "ch. 3: SV1"
+      CompileType      IOConfig
+      Datatype         ENUM 
+      Default          1
+      ParValIndex      2
+      ParamType        CIGIOData  5 4 1 ByteParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo
+      Name            HART_SV_4_1
+      Description     "ch. 4: SV1"
+      CompileType      IOConfig
+      Datatype         ENUM 
+      Default          1
+      ParValIndex      2
+      ParamType        CIGIOData  5 6 1 ByteParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo
+      Name            HART_SV_1_2
+      Description     "ch. 1: SV2"
+      CompileType      IOConfig
+      Datatype         ENUM 
+      Default          0
+      ParValIndex      2
+      ParamType        CIGIOData  5 1 1 ByteParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo
+      Name            HART_SV_2_2
+      Description     "ch. 2: SV2"
+      CompileType      IOConfig
+      Datatype         ENUM 
+      Default          0
+      ParValIndex      2
+      ParamType        CIGIOData  5 3 1 ByteParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo
+      Name            HART_SV_3_2
+      Description     "ch. 3: SV2"
+      CompileType      IOConfig
+      Datatype         ENUM 
+      Default          0
+      ParValIndex      2
+      ParamType        CIGIOData  5 5 1 ByteParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo
+      Name            HART_SV_4_2
+      Description     "ch. 4: SV2"
+      CompileType      IOConfig
+      Datatype         ENUM 
+      Default          0
+      ParValIndex      2
+      ParamType        CIGIOData  5 7 1 ByteParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo
+      Name            HART_SV_1_3
+      Description     "ch. 1: SV3"
+      CompileType      IOConfig
+      Datatype         ENUM 
+      Default          0
+      ParValIndex      2
+      ParamType        CIGIOData  1 2 1 ByteParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo
+      Name            HART_SV_2_3
+      Description     "ch. 2: SV3"
+      CompileType      IOConfig
+      Datatype         ENUM 
+      Default          0
+      ParValIndex      2
+      ParamType        CIGIOData  2 2 1 ByteParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo
+      Name            HART_SV_3_3
+      Description     "ch. 3: SV3"
+      CompileType      IOConfig
+      Datatype         ENUM 
+      Default          0
+      ParValIndex      2
+      ParamType        CIGIOData  3 2 1 ByteParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo
+      Name            HART_SV_4_3
+      Description     "ch. 4: SV3"
+      CompileType      IOConfig
+      Datatype         ENUM 
+      Default          0
+      ParValIndex      2
+      ParamType        CIGIOData  4 2 1 ByteParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo
+      Name            HART_SV_1_4
+      Description     "ch. 1: SV4"
+      CompileType      IOConfig
+      Datatype         ENUM 
+      Default          0
+      ParValIndex      2
+      ParamType        CIGIOData  1 3 1 ByteParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo
+      Name            HART_SV_2_4
+      Description     "ch. 2: SV4"
+      CompileType      IOConfig
+      Datatype         ENUM 
+      Default          0
+      ParValIndex      2
+      ParamType        CIGIOData  2 3 1 ByteParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo
+      Name            HART_SV_3_4
+      Description     "ch. 3: SV4"
+      CompileType      IOConfig
+      Datatype         ENUM 
+      Default          0
+      ParValIndex      2
+      ParamType        CIGIOData  3 3 1 ByteParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo
+      Name            HART_SV_4_4
+      Description     "ch. 4: SV4"
+      CompileType      IOConfig
+      Datatype         ENUM 
+      Default          0
+      ParValIndex      2
+      ParamType        CIGIOData  4 3 1 ByteParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo
+      Name            PARAMETER_32
+      Description     "dummy"
+      Hidden
+      Datatype        ENUMRANGE
+      Default         0
+      ParValIndex     61
+      ParamType       Numbered 0
+    End ParamInfo
+
+  End Parameters
+
+
+  ParValList
+
+    ParVal
+      ParValIndex      1
+      UnitText         ""
+      ENUM
+      "on" 0
+      "off" 1
+    End ParVal
+
+    ParVal
+      ParValIndex      2
+      UnitText         ""
+      ENUM
+      "off" 0
+      "on" 1
+    End ParVal
+
+    ParVal
+      ParValIndex      3
+      UnitText         ""
+      ENUM
+      "on" 0
+      "off" 3
+    End ParVal
+
+    ParVal
+      ParValIndex      71
+      UnitText         ""
+      ENUM
+      "min value" 0
+      "max value" 1
+      "last valid value" 2
+    End ParVal
+
+    ParVal
+      ParValIndex      61
+      UnitText         ""
+      ENUMRANGE
+      "4..20mA / off" 0 16#4E20 16#0FA0 16#5208 16#0E10
+    End ParVal
+
+  End ParValList
+
+
+  Channels
+
+    ChannelInfo
+      Number            1
+      ChannelName      "Output 1"
+      Datatype          Real_Out
+      Routine           800
+      CopyParameters    16#0 16#0 16#40000 16#0 16#0 16#50000
+    End ChannelInfo
+
+    ChannelInfo
+      Number            2
+      ChannelName      "Output 2"
+      Datatype          Real_Out
+      Routine           800
+      CopyParameters    16#0 16#0 16#40001 16#0 16#0 16#50000
+    End ChannelInfo
+
+    ChannelInfo
+      Number            3
+      ChannelName      "Output 3"
+      Datatype          Real_Out
+      Routine           800
+      CopyParameters    16#0 16#0 16#40002 16#0 16#0 16#50000
+    End ChannelInfo
+
+    ChannelInfo
+      Number            4
+      ChannelName      "Output 4"
+      Datatype          Real_Out
+      Routine           800
+      CopyParameters    16#0 16#0 16#40003 16#0 16#0 16#50000
+    End ChannelInfo
+
+    ChannelInfo
+      Number            5
+      ChannelName       "HART 1"
+      Datatype          Real_In
+      Routine           720
+      CopyParameters    16#0 16#0 16#30000 16#0
+    End ChannelInfo
+
+    ChannelInfo
+      Number            6
+      ChannelName       "HART 2"
+      Datatype          Real_In
+      Routine           720
+      CopyParameters    16#0 16#0 16#30002 16#0
+    End ChannelInfo
+
+    ChannelInfo
+      Number            7
+      ChannelName       "HART 3"
+      Datatype          Real_In
+      Routine           720
+      CopyParameters    16#0 16#0 16#30004 16#0
+    End ChannelInfo
+
+    ChannelInfo
+      Number            8
+      ChannelName       "HART 4"
+      Datatype          Real_In
+      Routine           720
+      CopyParameters    16#0 16#0 16#30006 16#0
+    End ChannelInfo
+
+    ChannelInfo
+      Number            9
+      ChannelName       "UnitStatus"
+      Datatype          Status_In
+      Routine           900
+      CopyParameters    0 0 16#50000
+    End ChannelInfo
+
+  End Channels
+
+
+  Diagnostics
+
+    DiagInfo
+      Number            10
+      Description       "Module state"
+      UnitText          ""
+      Datatype          ENUMDIAG
+      DiagValueIndex    1
+      DiagAreaOffset    1 4 16#00020003
+    End DiagInfo
+
+    DiagInfo
+      Number            11
+      Description       "Module"
+      UnitText          ""
+      Datatype          ENUMDIAG
+      DiagValueIndex    2
+      DiagAreaOffset    3 0 0 
+    End DiagInfo
+
+    DiagInfo
+      Number            12
+      Description       "Channel 1"
+      UnitText          ""
+      Datatype          ENUMDIAG
+      DiagValueIndex    3
+      DiagAreaOffset    3 1 0 
+    End DiagInfo
+
+    DiagInfo
+      Number            13
+      Description       "Channel 2"
+      UnitText          ""
+      Datatype          ENUMDIAG
+      DiagValueIndex    4
+      DiagAreaOffset    3 2 0 
+    End DiagInfo
+
+    DiagInfo
+      Number            14
+      Description       "Channel 3"
+      UnitText          ""
+      Datatype          ENUMDIAG
+      DiagValueIndex    5
+      DiagAreaOffset    3 3 0 
+    End DiagInfo
+
+    DiagInfo
+      Number            15
+      Description       "Channel 4"
+      UnitText          ""
+      Datatype          ENUMDIAG
+      DiagValueIndex    6
+      DiagAreaOffset    3 4 0 
+    End DiagInfo
+
+  End Diagnostics
+
+
+  DiagValueList
+
+    DiagValue
+      DiagValueIndex    1
+      DiagDataSize      2
+      ENUMDIAG
+      "OK"              0 NoAction
+      "Module error"    1 DeviceSpecific1
+      "Wrong module"    2 WrongModuleType
+      "Missing module"  3 ModuleMissing
+    End DiagValue
+
+    DiagValue
+      DiagValueIndex    2
+      DiagDataSize      5
+      ENUMDIAG
+      "Internal address conflict" 18 DeviceSpecific2
+      "Unknown module configured" 19 DeviceSpecific3
+      "Unknown module detected"   20 DeviceSpecific4
+      "Parameter inconsistant"    22 DeviceSpecific5
+      "Error"                     10 DeviceSpecific6
+    End DiagValue
+
+    DiagValue
+      DiagValueIndex    3
+      DiagDataSize      5
+      ENUMDIAG
+      "Short circuit ch. 1"         1  ExtendedStatus1
+      "Wire break ch. 1"            6  ExtendedStatus1
+      "HART status error ch. 1"     30 ExtendedStatus13
+      "HART communication error ch. 1" 31 ExtendedStatus17
+    End DiagValue
+
+    DiagValue
+      DiagValueIndex    4
+      DiagDataSize      5
+      ENUMDIAG
+      "Short circuit ch. 2"         1  ExtendedStatus2
+      "Wire break ch. 2"            6  ExtendedStatus2
+      "HART status error ch. 2"     30 ExtendedStatus14
+      "HART communication error ch. 2" 31 ExtendedStatus18
+    End DiagValue
+
+    DiagValue
+      DiagValueIndex    5
+      DiagDataSize      5
+      ENUMDIAG
+      "Short circuit ch. 3"         1  ExtendedStatus3
+      "Wire break ch. 3"            6  ExtendedStatus3
+      "HART status error ch. 3"     30 ExtendedStatus15
+      "HART communication error ch. 3" 31 ExtendedStatus19
+    End DiagValue
+
+    DiagValue
+      DiagValueIndex    6
+      DiagDataSize      5
+      ENUMDIAG
+      "Short circuit ch. 4"         1  ExtendedStatus4
+      "Wire break ch. 4"            6  ExtendedStatus4
+      "HART status error ch. 4"     30 ExtendedStatus16
+      "HART communication error ch. 4" 31 ExtendedStatus20
+    End DiagValue
+
+  End DiagValueList  
+
+
+  UnitStatusText
+    DeviceSpecific1  "Module error"
+    DeviceSpecific2  "Internal address conflict"
+    DeviceSpecific3  "Unknown module configured"
+    DeviceSpecific4  "Unknown module detected"
+    DeviceSpecific5  "Parameter inconsistant"
+    DeviceSpecific6  "Error"
+
+    ExtendedStatus1  "Line fault ch. 1"
+    ExtendedStatus2  "Line fault ch. 2"
+    ExtendedStatus3  "Line fault ch. 3"
+    ExtendedStatus4  "Line fault ch. 4"
+
+    ExtendedStatus13 "HART status available ch. 1"
+    ExtendedStatus14 "HART status available ch. 2"
+    ExtendedStatus15 "HART status available ch. 3"
+    ExtendedStatus16 "HART status available ch. 4"
+
+    ExtendedStatus17 "HART communication error ch. 1"
+    ExtendedStatus18 "HART communication error ch. 2"
+    ExtendedStatus19 "HART communication error ch. 3"
+    ExtendedStatus20 "HART communication error ch. 4"
+  End UnitStatusText
+
+
+  UnitStatusSeverity
+    DeviceSpecific1   GeneralError TriggerAlarm SeverityMedium
+    DeviceSpecific2   GeneralError TriggerAlarm SeverityMedium
+    DeviceSpecific3   GeneralError TriggerAlarm SeverityMedium
+    DeviceSpecific4   GeneralError TriggerAlarm SeverityMedium
+    DeviceSpecific5   GeneralError TriggerAlarm SeverityMedium
+    DeviceSpecific6   GeneralError TriggerAlarm SeverityMedium
+
+    ExtendedStatus1   GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus2   GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus3   GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus4   GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus13  GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus14  GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus15  GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus16  GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus17  GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus18  GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus19  GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus20  GeneralWarning TriggerEvent SeverityLow
+  End UnitStatusSeverity
+
+
+  Configuration
+    ConfigInfo
+      ModuleKey        16#001D
+      InAreaSize       8  WORD
+      OutAreaSize      4  WORD
+      InWord
+        WORD 0   0
+        WORD 0   1
+        WORD 0   2
+        WORD 0   3
+        WORD 0   4
+        WORD 0   5
+        WORD 0   6
+        WORD 0   7
+      OutWord
+        WORD 0   0
+        WORD 0   1
+        WORD 0   2
+        WORD 0   3
+      CIGIOConnData
+        CIGIOData     16#01 16#C1 16#43 16#47 16#1D
+        CIGIOData     16#05 16#00 16#00 16#00 16#00 16#00
+      End CIGIOConnData
+    End ConfigInfo
+  End Configuration
+  HWUnitInfoCRC 16#8EBA
+End HWUnitInfo (* AO930* (AO4H 4H) *)

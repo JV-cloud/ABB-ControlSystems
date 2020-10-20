@@ -1,0 +1,744 @@
+(****************************************************************************)
+(* FILE            dsdi125.hwd                                              *)
+(*                                                                          *)
+(* DESCRIPTION     Hardware definition file for S100 I/O module DSDI 125    *)
+(*                                                                          *)
+(* AUTHOR          ATPA/XA/AHC Per-Ola Persson                              *)
+(*                                                                          *)
+(* All rights reserved. Reproduction, modification, use or disclosure       *)
+(* to third parties without express authority, is forbidden.                *)
+(* Copyright ABB Process Industries AB, Sweden, 2005.                       *)
+(*                                                                          *)
+(*  *)
+(* 1    07-12-17 13:20 sepewah *)
+(* #30692 Tighter HWD parsing due to SIL-3*)
+(* ParValIndex 4 added and a reference to this from "Version", *)
+(* "Access Mode" and "Module Type".*)
+(*  *)
+(*                                                                          *)
+(* ABSTRACT                                                                 *)
+(*                                                                          *)
+(****************************************************************************)
+
+HWUnitInfo (* DSDI 125 *)
+  HWUnitID {8C343DA4-282B-4d6e-8863-BFD00D2106D8}
+  Description "DSDI 125"
+  Information "Digital input module, 32 channels 48 VDC" 
+  Icons RackIOType
+  Attributes AdapterUnit IoUnit DigitalIn
+
+  InterfaceInfo
+    (*Interface CIGInterface*) (* If GetDeviceStatus is wanted or Numbered parameters specified *)
+    IoSysType CIGIO        (* GetConnStatus will be called from framework *)
+    CLSID_CB {E15630B2-7F2A-4fab-ACDC-9A46839D335B} (* CLSID_CB = GUID for S100 Protocol handler (PH) in Control builder CB *)
+    CLSID_CTRL   {41ACBED2-973D-48d1-B5B5-51836FEF4B26} (* CLSID_CTRL   = GUID for S100 Protocol handler (PH) in Controller *)
+    HWConfig Fail     (* Change of net parameters affect subunits *)
+  End InterfaceInfo 
+
+  ConnectionInfo
+    ConnectType OwnUnit
+    IOConnect   Fail
+    IOConfig    NoFail
+  End ConnectionInfo
+
+  Parameters
+    ParamInfo 
+      Name Ver
+      Description "Version"
+      Hidden
+      CompileType IOConnect
+      Datatype INT
+      Default 1 
+      ParValIndex 4
+      ParamType CIGIOData 0 0 0 ByteParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name AccessMode
+      Description "Access Mode"
+      Hidden
+      CompileType IOConnect
+      Datatype INT
+      Default 0 
+      ParValIndex 4
+      ParamType CIGIOData 1 0 0 ByteParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name NoOfAddresses
+      Description "No of Address"
+      Hidden
+      CompileType IOConnect
+      Datatype INT
+      Default 1 
+      ParValIndex 0
+      ParamType CIGIOData 2 0 0 ByteParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name Address
+      Description "Address"
+      CompileType IOConnect
+      Datatype INT
+      Default 96
+      ParValIndex 1
+      ParamType CIGIOData 3 0 0 ByteParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ModType
+      Description "Module type"
+      Hidden
+      CompileType IOConnect
+      Datatype INT
+      Default 45 
+      ParValIndex 4
+      ParamType CIGIOData 4 0 0 ByteParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ScanInterval
+      Description "Scan interval"
+      CompileType IOConnect
+      Datatype INT
+      Default 100
+      ParValIndex 2
+      ParamType CIGIOData 2 0 1 WordParam ByteOffset 
+    End ParamInfo
+
+
+    ParamInfo 
+      Name ActiveChannel1
+      Description "Active channel 1"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 6 0 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel2
+      Description "Active channel 2"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 6 1 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel3
+      Description "Active channel 3"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 6 2 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel4
+      Description "Active channel 4"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 6 3 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel5
+      Description "Active channel 5"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 6 4 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel6
+      Description "Active channel 6"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 6 5 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel7
+      Description "Active channel 7"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 6 6 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel8
+      Description "Active channel 8"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 6 7 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel9
+      Description "Active channel 9"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 6 8 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel10
+      Description "Active channel 10"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 6 9 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel11
+      Description "Active channel 11"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 6 10 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel12
+      Description "Active channel 12"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 6 11 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel13
+      Description "Active channel 13"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 6 12 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel14
+      Description "Active channel 14"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 6 13 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel15
+      Description "Active channel 15"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 6 14 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel16
+      Description "Active channel 16"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 6 15 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel17
+      Description "Active channel 17"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 4 0 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel18
+      Description "Active channel 18"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 4 1 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel19
+      Description "Active channel 19"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 4 2 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel20
+      Description "Active channel 20"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 4 3 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel21
+      Description "Active channel 21"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 4 4 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel22
+      Description "Active channel 22"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 4 5 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel23
+      Description "Active channel 23"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 4 6 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel24
+      Description "Active channel 24"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 4 7 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel25
+      Description "Active channel 25"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 4 8 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel26
+      Description "Active channel 26"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 4 9 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel27
+      Description "Active channel 27"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 4 10 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel28
+      Description "Active channel 28"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 4 11 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel29
+      Description "Active channel 29"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 4 12 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel30
+      Description "Active channel 30"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 4 13 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel31
+      Description "Active channel 31"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 4 14 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel32
+      Description "Active channel 32"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 4 15 1 WordParam ByteOffset
+    End ParamInfo
+
+  End Parameters
+
+  ParValList
+    ParVal
+      ParValIndex 0      (* No of addresses which this unit uses *)
+      UnitText    " "
+      INT 1 4 1 4
+    End ParVal
+
+    ParVal
+      ParValIndex 1      (* Strapped adress interval *)
+      UnitText    " "
+      INT 96 143 96 143
+    End ParVal
+
+    ParVal
+      ParValIndex 2      (* Scan interval *)
+      UnitText    "0.1 ms"
+      INT 100 50000 100 50000
+    End ParVal
+
+    ParVal
+      ParValIndex 3      (* Filter time *)
+      UnitText    "ms"
+      INT 0 127 0 127
+    End ParVal
+
+    ParVal
+      ParValIndex 4      (* General INT type *)
+      UnitText    " "
+      INT 0 65535 0 65535
+    End ParVal
+  End ParValList
+
+  Channels
+    ChannelInfo
+      Number 1 
+      ChannelName "Input channel 1"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30005 16#0001 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 2 
+      ChannelName "Input channel 2"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30005 16#0002 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 3 
+      ChannelName "Input channel 3"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30005 16#0004 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 4 
+      ChannelName "Input channel 4"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30005 16#0008 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 5
+      ChannelName "Input channel 5"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30005 16#0010 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 6 
+      ChannelName "Input channel 6"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30005 16#0020 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 7 
+      ChannelName "Input channel 7"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30005 16#0040 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 8 
+      ChannelName "Input channel 8"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30005 16#0080 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 9 
+      ChannelName "Input channel 9"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30005 16#0100 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 10 
+      ChannelName "Input channel 10"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30005 16#0200 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 11 
+      ChannelName "Input channel 11"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30005 16#0400 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 12 
+      ChannelName "Input channel 12"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30005 16#0800 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 13 
+      ChannelName "Input channel 13"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30005 16#1000 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 14 
+      ChannelName "Input channel 14"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30005 16#2000 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 15 
+      ChannelName "Input channel 15"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30005 16#4000 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 16 
+      ChannelName "Input channel 16"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30005 16#8000 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 17 
+      ChannelName "Input channel 17"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30004 16#0001 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 18 
+      ChannelName "Input channel 18"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30004 16#0002 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 19 
+      ChannelName "Input channel 19"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30004 16#0004 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 20 
+      ChannelName "Input channel 20"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30004 16#0008 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 21 
+      ChannelName "Input channel 21"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30004 16#0010 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 22 
+      ChannelName "Input channel 22"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30004 16#0020 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 23 
+      ChannelName "Input channel 23"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30004 16#0040 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 24 
+      ChannelName "Input channel 24"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30004 16#0080 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 25 
+      ChannelName "Input channel 25"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30004 16#0100 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 26 
+      ChannelName "Input channel 26"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30004 16#0200 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 27 
+      ChannelName "Input channel 27"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30004 16#0400 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 28 
+      ChannelName "Input channel 28"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30004 16#0800 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 29 
+      ChannelName "Input channel 29"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30004 16#1000 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 30 
+      ChannelName "Input channel 30"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30004 16#2000 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 31 
+      ChannelName "Input channel 31"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30004 16#4000 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 32 
+      ChannelName "Input channel 32"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30004 16#8000 
+    End ChannelInfo     
+
+    ChannelInfo
+      Number 33
+      ChannelName "All inputs"
+      Datatype Dword_In
+      Routine 510
+      CopyParameters 0 0 16#30004 8 16#FF00 16#30004 0 16#00FF 16#30005 8 16#FF00 16#30005 0 16#00FF 0
+    End ChannelInfo
+
+    ChannelInfo
+      Number 34
+      ChannelName "Channel status"
+      Datatype Dword_In
+      Routine 510
+      CopyParameters 0 0 16#30002 8 16#FF00 16#30002 0 16#00FF 16#30003 8 16#FF00 16#30003 0 16#00FF 0
+    End ChannelInfo
+
+    ChannelInfo
+      Number 35
+      ChannelName "UnitStatus"
+      Datatype Status_In
+      Routine 900
+      CopyParameters 0 0 16#50000
+    End ChannelInfo      
+  End Channels
+
+  IoUnitStatus
+    StatusType ModuleMissing
+    StatusData 16#30001 16#0001 16#0 16#0
+    StatusType WrongModuleType 
+    StatusData 16#30001 16#0002 16#0 16#0
+    StatusType IoError
+    StatusData 16#30001 16#0004 16#0 16#0
+  End IoUnitStatus
+
+  Configuration
+    ConfigInfo
+      ModuleKey   16#0000
+      InAreaSize  6
+      OutAreaSize 0
+
+      InWord 
+        WORD 0        0  (* State                   *)
+        WORD 0        1  (* Module status           *)
+        WORD 0        2  (* Channel status 1 to 16  *)
+        WORD 0        3  (* Channel status 17 to 32 *)
+        WORD 0        4  (* Channel value 1 to 16   *)
+        WORD 0        5  (* Channel value 17 to 32  *)
+
+      CIGIOConnData
+        CIGIOData 0 0 0 0 0
+        CIGIOData 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+      End CIGIOConnData
+    End ConfigInfo
+  End Configuration
+  HWUnitInfoCRC 16#49C1
+End HWUnitInfo (* DSDI 125 *)

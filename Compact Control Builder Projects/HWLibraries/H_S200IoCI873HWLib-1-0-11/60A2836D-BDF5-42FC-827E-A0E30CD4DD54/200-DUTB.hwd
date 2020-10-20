@@ -1,0 +1,46 @@
+(****************************************************************************)
+(* FILE           200-DUTB.hwd                                              *)
+(*                                                                          *)
+(* DESCRIPTION     Hardware definition file for 200-DUTB.hwd(EtherNet/IP)   *)
+(*                                                                          *)
+(* AUTHOR          Sneha S                                                  *)
+(*                                                                          *)
+(*                                                                          *)
+(* All rights reserved. Reproduction, modification, use or disclosure       *)
+(* to third parties without express authority, is forbidden.                *)
+(* Copyright ABB Inc. 2013.                                                 *)
+(*                                                                          *)
+(*                                                                          *)
+(* 26-09-2013 Sneha S            Initial version                            *)
+(*                                                                          *)
+(****************************************************************************)
+FileHeader
+  Contents              "200-DUTB"
+  Date                  "26.09.2013"
+  Version               "1.0-0"  
+  RequiredSyntaxVersion "3.0"
+End FileHeader
+
+
+   HWUnitInfo  
+   HWUnitID {88b7c44d-0192-4af9-8d37-5b610b3d5b78}
+   Description "200-DUTB"
+   Information "Dummy module covering empty terminal base"
+   Icons Ser200IOType
+   Attributes IoUnit 
+
+
+   UnitStatusText
+    DeviceSpecific1  "Device Not Found"
+   End UnitStatusText
+
+   Configuration
+      ConfigInfo
+         ModuleKey    16#0F00
+         InAreaSize   0
+         OutAreaSize  0
+      End ConfigInfo
+   End Configuration
+
+  HWUnitInfoCRC 16#18E5
+End HWUnitInfo 

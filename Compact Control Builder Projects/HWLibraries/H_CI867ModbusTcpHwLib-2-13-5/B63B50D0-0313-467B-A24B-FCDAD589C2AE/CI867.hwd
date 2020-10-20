@@ -1,0 +1,260 @@
+(****************************************************************************)
+(* FILE            CI867.hwd                                                *)
+(*                                                                          *)
+(* DESCRIPTION     Hardware definition file for CI867                       *)
+(*                                                                          *)
+(* AUTHOR         Premanand K                                               *)
+(*                                                                          *)
+(* All rights reserved. Reproduction, modification, use or disclosure       *)
+(* to third parties without express authority, is forbidden.                *)
+(* Copyright ABB Inc. 2006.                                                 *)
+(*                                                                          *)
+(*                                                                          *)
+(* 16-08-2006 Premanand K     Initial version                               *)
+(* 13-03-2007 Mathias Eng     Updated after DoF review                      *)
+(*                                                                          *)
+(****************************************************************************)
+FileHeader
+   Contents               "CI867"
+   Date                   "2007-03-15"
+   Version                "1.0-0"
+  RequiredSyntaxVersion "3.0"
+End FileHeader
+
+HwUnitInfo  (* MODBUSTCP *)
+   HWUnitID  {2F5EAEAB-BD31-4fa9-A447-2C809250C09F}
+   Description "CI867"
+   Information "CI867"
+   Icons AC800ComType
+   Attributes SystemUnit
+   ModuleType  16#5014
+   InterfaceInfo
+      Interface CIGInterface
+      CLSID_CB   {DD3B11AD-9263-4c69-A8AD-1D0D76BD6E6A}
+      CLSID_CTRL {AA890B2C-6A8D-47ec-8609-147271D1E66F}
+      HWConfig Fail
+   End InterfaceInfo
+  RedundancyInfo
+     RedundancyIcon RedundantCI
+     Consequence IoConfig
+  End RedundancyInfo
+  AutoCreateSubUnits
+  DiscreteNumbers 
+     1 2
+   End DiscreteNumbers
+   SubUnitTypes
+      HWUnitID {ACFB3804-17E4-4c27-A14F-B925C16A463F} (* GUID For Ethernet1 *)
+      HWUnitID {92B1BE22-C81D-4f79-9899-E00ADE1B5659} (* GUID For Ethernet2 *)
+   End SubUnitTypes 
+      Parameters
+      ParamInfo                    
+        Name MODBUSSLAVEENABLED                                            (*ModbusSlaveEnabled*)
+        Description "Modbus slave enabled"
+        CompileType HWConfig
+        Datatype BOOL
+        Default TRUE
+        ParamType Numbered 0
+     End ParamInfo
+     ParamInfo 
+        Name DEFAULTGATEWAY                                                (*Default Gateway*)
+        Description "Default gateway"
+        CompileType HWConfig
+        Datatype STRING
+        Default ""
+        ParamType Numbered 1
+     End ParamInfo
+     ParamInfo                    
+        Name DEFAULTTIMEOUTSERIAL                                          (*DefaultTimeoutSerial*)
+        Description "Default timeout for serial slaves"
+        CompileType HWConfig
+        Datatype INT
+        Default 1000
+        ParValIndex 0
+        ParamType Numbered 2
+     End ParamInfo
+     ParamInfo                    
+        Name DEFAULTNUMBEROFRESENDSSERIAL                                  (*DefaultNumberOfResendsSerial*)
+        Description "Default number of resends for serial slaves"
+        CompileType HWConfig
+        Datatype INT
+        Default 3
+        ParValIndex 1
+        ParamType Numbered 3
+     End ParamInfo
+     ParamInfo                    
+        Name DEFAULTDIAGPOLLFUNCSERIAL                                     (*DefaultDiagPollFuncSerial*)
+        Description "Default diagnostic poll function for serial slaves"
+        CompileType HWConfig
+        Datatype ENUM
+        Default 0
+        ParValIndex 2
+        ParamType Numbered 4
+     End ParamInfo
+     ParamInfo                    
+        Name DEFAULTDIAGPOLLTIMESERIAL                                     (*DefaultDiagPollTimeSerial*)
+        Description "Default diagnostic poll time for serial slaves"
+        CompileType HWConfig
+        Datatype INT
+        Default 4000
+        ParValIndex 3
+        ParamType Numbered 5
+     End ParamInfo
+     ParamInfo                    
+        Name DEFAULTTIMEOUTTCP                                             (*DefaultTimeoutTCP*)
+        Description "Default timeout for TCP slaves"
+        CompileType HWConfig
+        Datatype INT
+        Default 1000
+        ParValIndex 0
+        ParamType Numbered 6
+     End ParamInfo
+     ParamInfo                    
+        Name DEFAULTNUMBEROFRESENDSTCP                                     (*DefaultNumberOfResendsTCP*)
+        Description "Default number of resends for TCP slaves"
+        CompileType HWConfig
+        Datatype INT
+        Default 0
+        ParValIndex 1
+        ParamType Numbered 7
+     End ParamInfo
+     ParamInfo                    
+        Name DEFAULTDIAGPOLLFUNCTCP                                        (*DefaultDiagPollFuncTCP*)
+        Description "Default diagnostic poll function for TCP slaves"
+        CompileType HWConfig
+        Datatype ENUM
+        Default 0
+        ParValIndex 2
+        ParamType Numbered 8
+     End ParamInfo
+     ParamInfo                    
+        Name DEFAULTDIAGPOLLTIMETCP                                        (*DefaultDiagPollTimeTCP*)
+        Description "Default diagnostic poll time for TCP slaves"
+        CompileType HWConfig
+        Datatype INT
+        Default 0
+        ParValIndex 3
+        ParamType Numbered 9
+     End ParamInfo
+
+     ParamInfo 
+        Name SNTPSERVERADDR1                                               (*SNTPAddress1*)
+        Description "SNTP server address 1"
+        Hidden
+        CompileType HWConfig
+        Datatype STRING
+        Default ""
+        ParamType Numbered 10
+     End ParamInfo
+     ParamInfo 
+        Name SNTPSERVERADDR2                                               (*SNTPAddress2*)
+        Description "SNTP server address 2"
+        Hidden
+        CompileType HWConfig
+        Datatype STRING
+        Default ""
+        ParamType Numbered 11
+     End ParamInfo
+     ParamInfo
+        Name IEC61588                                                      (*IEC61588MasterEnabled*)
+        Description "IEC61588 master enabled"
+        Hidden
+        CompileType HWConfig
+        Datatype BOOL
+        Default FALSE
+        ParamType Numbered 12
+     End ParamInfo
+     ParamInfo                    
+        Name EXCEPTIONREGISTERADDRESS                                        (*Exception Register Address*)
+        Description "Exception Register Address"
+        CompileType HWConfig
+        Datatype INT
+        Default 1
+        ParValIndex 4
+        ParamType Numbered 13
+     End ParamInfo
+    ParamInfo                    
+        Name DIAGNOSTICREGISTERADDRESS                                        (*Diagnostic Register Address*)
+        Description "Diagnostic Register Address"
+        CompileType HWConfig
+        Datatype INT
+        Default 0
+        ParValIndex 4
+        ParamType Numbered 14
+     End ParamInfo
+   End Parameters
+   ParValList
+      ParVal
+         ParValIndex 0               (*Default TimeOut*)
+         UnitText    "msec"
+         INT 0 6000 0 6000
+      End ParVal
+      ParVal
+         ParValIndex 1               (*Number of Resends*)
+         INT 0 6 0 6
+      End ParVal
+      ParVal
+         ParValIndex 2               (*Default Diagnostic Poll Function*)
+         ENUM
+         "LoopBack" 0
+         "DiagnosticRegister" 1
+         "ExceptionBits" 2
+         "DiagnosticAndException" 3
+      End ParVal
+      ParVal
+         ParValIndex 3               (*Default Diagnostic Poll TimeOut*)
+         UnitText    "msec"
+         INT 0 60000 0 60000
+      End ParVal
+      ParVal
+         ParValIndex 4               (*Exception/Diagnostic Register Address*)
+         INT 0 65535 0 65535
+      End ParVal
+   End ParValList
+   Channels
+      ChannelInfo
+         Number 0
+         ChannelName "UnitStatus"
+         Datatype Status_In
+         Routine 900
+         CopyParameters 0 0 16#50000
+      End ChannelInfo
+   End Channels
+
+   UnitStatusText
+     ExtendedStatus1    "Internal task failure"
+     ExtendedStatus2    "Firmware not working properly due to e.g. failed initialization of objects, tasks etc."
+     ExtendedStatus3    "Out of memory"
+     ExtendedStatus4    "Failed to open or create transceiver channel(s)"
+     ExtendedStatus5    "Wrong module type"
+     ExtendedStatus6    "Incompatible driver"
+
+     ExtendedStatus9    "Internal Task failure in the backup" 
+     ExtendedStatus10   "Firmware not working properly in the backup due to e.g. failed initialization of objects, tasks etc." 
+     ExtendedStatus11   "Out of memory in the backup" 
+     ExtendedStatus12   "Failed to open or create transceiver channel(s) in the backup"
+     ExtendedStatus13   "Backup is of wrong module type"
+     ExtendedStatus14   "Incompatible backup driver"
+
+
+
+   End UnitStatusText
+
+   UnitStatusSeverity
+     ExtendedStatus1    GeneralError  TriggerAlarm  SeverityHigh    (*"Internal Task Failure"*)
+     ExtendedStatus2    GeneralError  TriggerAlarm  SeverityHigh    (*"Firmware not working properly"*)
+     ExtendedStatus3    GeneralError  TriggerAlarm  SeverityHigh    (*"Out of Memory"*)
+     ExtendedStatus4    GeneralError  TriggerAlarm  SeverityHigh    (*"Failed to Open or Create Transceiver Channels."*)
+     ExtendedStatus5    GeneralError  TriggerAlarm  SeverityHigh    (*"Wrong module type"*)
+     ExtendedStatus6    GeneralError  TriggerAlarm  SeverityHigh    (*"Incompatible driver"*)
+
+     ExtendedStatus9    GeneralError  TriggerAlarm  SeverityMedium    (*"Internal Task Failure in the Backup"*)
+     ExtendedStatus10   GeneralError  TriggerAlarm  SeverityMedium   (*"Firmware not working properly"*)
+     ExtendedStatus11   GeneralError  TriggerAlarm  SeverityMedium    (*"Out of Memory in the backup" *)
+     ExtendedStatus12   GeneralError  TriggerAlarm  SeverityMedium  (*"Failed to Open Or Create Transceiver Channels in the Backup" *)
+     ExtendedStatus13   GeneralError  TriggerAlarm  SeverityMedium   (*"Backup is of wrong module type"*)    
+     ExtendedStatus14   GeneralError  TriggerAlarm  SeverityMedium   (*"Incompatible backup driver"*)
+
+End UnitStatusSeverity
+
+  HWUnitInfoCRC 16#943A
+End HWUnitInfo (* MODBUSTCP *)

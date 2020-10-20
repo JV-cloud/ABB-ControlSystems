@@ -1,0 +1,117 @@
+(*=========================================*)
+(* Modified : 2011-11-11 08:52             *)
+(* Modified : 2011-11-11 10:53             *)
+(* Modified : 2012-01-10 12:54             *)
+(* Modified : 2013-01-31 12:51             *)
+(* Modified : 2014-05-13 14:48             *)
+(* -> Changed IO Channels from UInt to Int *)
+(*                                         *)
+(* Modified : 2015-07-08 14:23             *)
+(* -> New GSDML with new DAP-IDs           *)
+(*                                         *)
+(*=========================================*)
+FileHeader
+  Contents              "FENA-11"
+  Date                  "08.07.2015"
+  Version               "Version 1.4.9" (* Device Import Wizard *)
+  (* Parser             "Profinet 1.0.17.0" *)
+  RequiredSyntaxVersion "3.0"
+End FileHeader
+
+SessionID 09af5502-3c7a-4038-a7b6-9745a8d995c8
+
+(*========================================================*)
+(*                        FENA-11                         *)
+(*========================================================*)
+
+HWUnitInfo
+  HWUnitID         {7461fa59-0c8b-4e09-b47b-289b4c6fee2f}
+  Description      "FENA-21"
+  Information      "PROFINET IO module FENA"
+  Icons            MotorType
+  Attributes       AdapterUnit AutoAttach
+  DownloadInstanceNamesForSubUnits
+
+  InterfaceInfo
+    Interface  CIGInterface
+    CLSID_CB   {D9720536-1BB9-4f74-A5CD-DCDDED2398CA}
+    CLSID_CTRL {38CEFCC8-23D7-43f9-BE6D-4251F87BF421}
+    HWConfig   Fail
+  End InterfaceInfo
+
+  DiscreteNumbers
+    0..2
+  End DiscreteNumbers
+
+  SubUnitTypes
+    HWUnitID {6ff8ee75-f836-400a-bec1-0d04939adb5b} FixedPositions 0 Instances 1
+    HWUnitID {cac8bba2-a0ab-4896-b3f6-47b8789cb8fa} Positions 1
+    HWUnitID {c63147e7-599c-4dc2-a654-b78b3a88b093} Positions 1
+    HWUnitID {ff486f56-ace5-4c79-90f3-8a42c199f377} Positions 1
+    HWUnitID {860a8b48-ff70-465e-8cb2-57644ccdb124} Positions 1
+  End SubUnitTypes
+
+  Parameters
+    ParamInfo
+      Name            stationName
+      Description     "Station Name"
+      CompileType     HWConfig
+      Datatype        STRING
+      Default         "" 240
+      ParamType       Numbered 2
+    End ParamInfo
+    ParamInfo
+      Name            ipAddress
+      Description     "IP Address"
+      CompileType     HWConfig
+      Datatype        STRING
+      Default         "" 15
+      ParamType       Numbered 3
+    End ParamInfo
+    ParamInfo
+      Name            subnetMask
+      Description     "Subnet Mask"
+      CompileType     HWConfig
+      Datatype        STRING
+      Default         "" 15
+      ParamType       Numbered 4
+    End ParamInfo
+    ParamInfo
+      Name            defaultGateway
+      Description     "Default Gateway"
+      CompileType     HWConfig
+      Datatype        STRING
+      Default         "" 15
+      ParamType       Numbered 5
+    End ParamInfo
+  End Parameters
+
+  Channels
+    ChannelInfo
+      Number                0
+      ChannelName           "UnitStatus"
+      Datatype              Status_In
+      Routine               900
+      CopyParameters        16#0 16#0 16#50000
+    End ChannelInfo
+  End Channels
+
+  UnitStatusText
+    DeviceSpecific1  "Maintenance required"
+    DeviceSpecific2  "Maintenance demanded"
+    DeviceSpecific3  "Diagnosis active"
+    DeviceSpecific4  "Locked by other controller/supervisor"
+    DeviceSpecific6  "Parametrization fault"
+  End UnitStatusText
+
+  UnitStatusSeverity
+    DeviceSpecific1  GeneralWarning TriggerEvent SeverityMedium
+    DeviceSpecific2  GeneralWarning TriggerEvent SeverityMedium
+    DeviceSpecific3  GeneralWarning TriggerEvent SeverityMedium
+    DeviceSpecific4  GeneralWarning TriggerEvent SeverityMedium
+    DeviceSpecific6  GeneralError TriggerAlarm SeverityHigh
+  End UnitStatusSeverity
+  (* ===== No configuration information delivered from the parser ===== *)
+
+  HWUnitInfoCRC 16#64d5
+End HWUnitInfo

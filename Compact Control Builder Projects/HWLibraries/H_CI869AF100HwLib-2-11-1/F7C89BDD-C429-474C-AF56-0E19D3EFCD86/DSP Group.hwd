@@ -1,0 +1,62 @@
+(*--------------------------------------------------------------------------------------*)
+(* Revision History:                                                                    *)
+(* 2009-12-07 [XAAT/sebjjoh2]                                                           *)
+(* - #39384 Added file header, addded revision history and removed attributes obsolete  *)
+(*          in SV5.1*)                                                                  *)
+(*                                                                                      *)
+(*--------------------------------------------------------------------------------------*)
+
+FileHeader
+   Contents               "DSP Group"
+   Date                   "2009-12-07"
+   Version                "2.0-0"
+   RequiredSyntaxVersion  "3.8"
+End FileHeader
+
+HWUnitInfo  (* DSP Set *)
+   HWUnitID {C16FB525-0533-4342-95F5-4126DD8B6F59}
+   Description "DSP Group"
+   Information "DSP Group is a group of up to 50 DSP, generally coming from the same station."
+   Icons S800FciType
+
+   InterfaceInfo
+     Interface CIGInterface
+     CLSID_CB   {B74AAC83-4502-4a6b-BE9E-E403B0921092} (* CLSID_CB   = GUID for AF100 Protocol handler (PH) in Control builder CB *)
+     CLSID_CTRL {25799801-FB26-4b0a-8762-90F005C39CCF} (* CLSID_CTRL = GUID for AF100 Protocol handler (PH) in Controller *)
+     HWConfig Fail     (* Change of net parameters affect subunits *)
+   End InterfaceInfo
+
+   DiscreteNumbers
+      1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
+      19 20 21 22 23 24 25 26 27 28 29 30 31 32 33
+      34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 
+      49 50
+   End DiscreteNumbers
+
+   SubUnitTypes 
+      HWUnitID {5BAC673E-C4AD-4c0a-BB0B-A4B969F414C2} (* DSP Receive *)
+      HWUnitID {F5485FA3-1D88-45c5-9F80-7D1200D38A9A} (* DSP Send *)
+   End SubUnitTypes
+
+   Parameters
+      ParamInfo 
+         Name HWTYPE                  (* Let this parameter always be the 1st parameter i.e "ParamType Numbered 1" *)
+         Description "HW unit type"
+         Hidden
+         CompileType HWConfig
+         Datatype INT
+         Default 8              (* Bit 3 *)
+         ParValIndex 0
+         ParamType Numbered 1
+      End ParamInfo
+   End Parameters
+
+   ParValList
+     ParVal
+        ParValIndex 0
+        INT 0 2147483647 0 2147483647
+     End ParVal
+   End ParValList
+
+  HWUnitInfoCRC 16#0650
+End HWUnitInfo  (* DSP Group *)

@@ -1,0 +1,272 @@
+(****************************************************************************)
+(* FILE            LN0.hwd                                                  *)
+(*                                                                          *)
+(* DESCRIPTION     Hardware definition file for LN0                         *)
+(*                                                                          *)
+(* AUTHOR          Ramachandragowda G                                       *)
+(*                                                                          *)
+(* All rights reserved. Reproduction, modification, use or disclosure       *)
+(* to third parties without express authority, is forbidden.                *)
+(* Copyright ABB Inc. 2006.                                                 *)
+(*                                                                          *)
+(*                                                                          *)
+(* 27-04-2006 Ramachandragowda G            Initial version                 *)
+(*                                                                          *)
+(****************************************************************************)
+FileHeader
+   Contents               "LN0"
+   Date                   "2007-04-27"
+   Version                "1.0-0"
+  RequiredSyntaxVersion "3.0"
+End FileHeader
+
+HWUnitInfo  (* LN0 *)
+   HWUnitID {9240E379-9DCC-4809-BFB4-1CB480F787D2} (* GUID for LN0 *)
+   Description "LN0"
+   Information "LN0 for common behavior information"
+   Icons LNType
+   Attributes IoUnit AdapterUnit DigitalOut
+   InterfaceInfo
+     IoSysType    CIGIO
+     CLSID_CB    {53315084-E413-4c55-92E1-C2E1FAF19460} (*  CLSID_CB  = GUID for CI868 PH in Control builder CB *)
+     CLSID_CTRL  {4AB844AC-2BEE-4910-BA08-CA109A5D7E81}  (* CLSID_CTRL = GUID for CI868 PH in Controler *)
+   End InterfaceInfo
+
+   ConnectionInfo
+      ConnectType OwnUnit
+      IOConnect Fail
+      IoConfig  NoFail
+   End ConnectionInfo
+
+   ExternalConfigInfo
+      ShowExternalChannelDescriptionColumn
+   End ExternalConfigInfo
+   Parameters
+      ParamInfo
+         Name IALADDRMODIN
+         Description "IALaddr for ModIn"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 1
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEMODIN
+         Description "DMCD Type for ModIn"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype INT
+         Default 12
+         ParValIndex 2
+         ParamType Numbered 2
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOMODIN
+         Description "Protocol Info for ModIn"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 3
+      End ParamInfo
+      ParamInfo
+         Name IALADDRMODOUT
+         Description "IALaddr for ModOut"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 4
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEMODOUT
+         Description "DMCD Type for ModOut"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype INT
+         Default 12
+         ParValIndex 2
+         ParamType Numbered 5
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOMODOUT
+         Description "Protocol Info for ModOut"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 6
+      End ParamInfo
+      ParamInfo
+         Name IALADDRBEH
+         Description "IALaddr for Behaviour"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 7
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEBEH
+         Description "DMCD Type for Behaviour"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype INT
+         Default 12
+         ParValIndex 2
+         ParamType Numbered 8
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOBEH
+         Description "Protocol Info for Behaviour"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 9
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHEALTH
+         Description "IALaddr for Health"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 10
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHEALTH
+         Description "DMCD Type for Health"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype INT
+         Default 12
+         ParValIndex 2
+         ParamType Numbered 11
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHEALTH
+         Description "Protocol Info for Health"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 12
+      End ParamInfo
+     ParamInfo
+         Name NAMEPLATE
+         Description "Name Plate"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype STRING
+         Default ""25
+         ParamType Numbered 14
+      End ParamInfo
+      ParamInfo
+         Name HWDVERSION
+         Description "Version of HWD File"
+         ExternalVisible
+         Datatype STRING
+         Default " 1.0-0 "
+         ParamType Numbered 17
+      End ParamInfo
+      ParamInfo
+         Name LNNAME
+         Description "LN Name"
+         Datatype STRING
+         Default " "100
+         ParamType Numbered 20
+      End ParamInfo
+   End Parameters
+
+   ParValList
+     ParVal
+        ParValIndex 2
+        UnitText    "addr"
+        INT 0 255 0 255
+     End ParVal
+   End ParValList
+
+   Channels
+    ChannelInfo
+      Number         1
+      ChannelName   "Modin"
+      Datatype       Int_In
+      Routine        306
+      CopyParameters 16#30000 0 16#FFFF 0 16#30004 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         2
+      ChannelName   "Modout"
+      Datatype       Int_Out
+      Routine        408
+      CopyParameters 16#40008 0 16#4000C 16#0000
+    End ChannelInfo
+    ChannelInfo
+      Number         3
+      ChannelName   "Beh"
+      Datatype       Int_Out
+      Routine        408
+      CopyParameters 16#40010 0 16#40014 16#0000
+    End ChannelInfo
+    ChannelInfo
+      Number         4
+      ChannelName   "Health"
+      Datatype       Int_Out
+      Routine        408
+      CopyParameters 16#40018 0 16#4001C 16#0000
+    End ChannelInfo
+    ChannelInfo
+      Number         5
+      ChannelName   "Values Received"
+      Datatype       Int_In
+      Routine        308
+      CopyParameters 16#30020 0 16#30024 16#0000
+    End ChannelInfo
+    ChannelInfo
+      Number         6
+      ChannelName   "Values Sent"
+      Datatype       Int_In
+      Routine        308
+      CopyParameters 16#30028 0 16#3002C 16#0000
+    End ChannelInfo
+    ChannelInfo
+      Number         7
+      ChannelName   "Values Received Per Second"
+      Datatype       Int_In
+      Routine        308
+      CopyParameters 16#30030 0 16#30034 16#0000
+    End ChannelInfo
+    ChannelInfo
+      Number         8
+      ChannelName   "Values Sent Per Second"
+      Datatype       Int_In
+      Routine        308
+      CopyParameters 16#30038 0 16#3003C 16#0000
+    End ChannelInfo
+    ChannelInfo
+      Number         9
+      ChannelName   "CPU Load"
+      Datatype       Int_In
+      Routine        308
+      CopyParameters 16#30040 0 16#30044 16#0000
+    End ChannelInfo
+    ChannelInfo
+      Number         10
+      ChannelName   "Sender Cycles per Second"
+      Datatype       Int_In
+      Routine        308
+      CopyParameters 16#30048 0 16#3004C 16#0000
+    End ChannelInfo
+   End Channels
+
+Configuration
+    ConfigInfo
+      ModuleKey       16#01
+      InAreaSize      80 BYTE
+      OutAreaSize     80 BYTE
+    End ConfigInfo
+  End Configuration
+  HWUnitInfoCRC 16#25C4
+End HWUnitInfo

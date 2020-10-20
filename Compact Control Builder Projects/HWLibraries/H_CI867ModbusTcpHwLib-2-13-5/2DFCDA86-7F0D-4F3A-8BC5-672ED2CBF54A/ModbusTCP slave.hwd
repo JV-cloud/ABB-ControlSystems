@@ -1,0 +1,229 @@
+(****************************************************************************)
+(* FILE            CI867 Slave.hwd                                          *)
+(*                                                                          *)
+(* DESCRIPTION     Hardware definition file for Modbus TCP Slave            *)
+(*                                                                          *)
+(* AUTHOR          Premanand K                                              *)
+(*                                                                          *)
+(* All rights reserved. Reproduction, modification, use or disclosure       *)
+(* to third parties without express authority, is forbidden.                *)
+(* Copyright ABB Inc. 2006.                                                 *)
+(*                                                                          *)
+(*                                                                          *)
+(* 16-08-2006 Premanand K     Initial version                               *)
+(* 13-03-2007 Mathias Eng     Updated after DoF review                      *)
+(*                                                                          *)
+(****************************************************************************)
+FileHeader
+   Contents               "ModbusTCP slave" 
+   Date                   "2007-03-15"
+   Version                "1.0-0"
+  RequiredSyntaxVersion "3.0"
+End FileHeader
+
+HwUnitInfo  (* CI867Slave *)
+   HWUnitID {B52A1E20-9721-46c1-998C-F427A34E53EA}
+   Description "ModbusTCP slave"
+   Information "ModbusTCP slave"
+   Icons DefaultIOType
+   InterfaceInfo
+      Interface CIGInterface
+      CLSID_CB   {DD3B11AD-9263-4c69-A8AD-1D0D76BD6E6A}
+      CLSID_CTRL {AA890B2C-6A8D-47ec-8609-147271D1E66F}
+      HWConfig Fail
+   End InterfaceInfo
+   Parameters
+      ParamInfo 
+        Name IPADDRESS                                     (* IP address *)
+        Description "IP address"
+        CompileType HWConfig 
+        Datatype STRING        
+        Default ""
+        ParamType Numbered 0
+      End ParamInfo
+      ParamInfo
+        Name DIAGNOSTICPOLLFUNCTION                        (*DiagnosticPollFunction*)
+        Description "Diagnostic poll function"
+        CompileType HWConfig
+        Datatype ENUM
+        Default 4
+        ParValIndex 0
+        ParamType Numbered 1
+      End ParamInfo
+      ParamInfo                    
+        Name DIAGNOSTICPOLLTTIME                           (*DiagnosticPollTime*)
+        Description "Diagnostic poll time"
+        CompileType HWConfig
+        Datatype ENUM
+        Default 0
+        ParValIndex 1
+        ParamType Numbered 2
+      End ParamInfo
+      ParamInfo 
+        Name INVERTEXCEPTION                               (*InvertExceptionByte*)
+        Description "Invert exception byte"
+        Hidden  
+        CompileType HWConfig
+        Datatype BOOL
+        Default TRUE
+        ParamType Numbered 3
+      End ParamInfo
+      ParamInfo
+        Name INVERTDIAGREGISTER                            (*InvertDiagnosticRegister*)
+        Description "Invert diagnostic register"
+        Hidden
+        CompileType HWConfig
+        Datatype BOOL
+        Default TRUE
+        ParamType Numbered 4
+      End ParamInfo
+      ParamInfo                    
+         Name NOFRESENDS                                   (*NumberOfResends*)
+         Description "Number of resends"
+         CompileType HWConfig
+         Datatype ENUM
+         Default 0
+         ParValIndex 2
+         ParamType Numbered 5
+      End ParamInfo
+      ParamInfo                    
+         Name TIMEOUTTIME                                  (*TimeOutTime*)
+         Description "Timeout"
+         CompileType HWConfig
+         Datatype ENUM
+         Default 0
+         ParValIndex 3
+         ParamType Numbered 6
+      End ParamInfo
+    ParamInfo
+        Name AUTOCONNECT                                   (*AutoConnect*)
+        Description "Auto connect"
+        CompileType HWConfig
+        Datatype BOOL
+        Default TRUE
+        ParamType Numbered 7
+      End ParamInfo
+   End Parameters
+
+   ParValList
+      ParVal
+         ParValIndex 0                   (*Diagnostic Poll Function*)
+         ENUM
+         "LoopBack" 0
+         "DiagnosticRegister" 1
+         "ExceptionBits" 2
+         "DiagnosticAndException" 3
+         "Default"  10
+      End ParVal
+      ParVal
+         ParValIndex 1                   (*Diagnostic Poll Time*)
+         UnitText "msec"
+         ENUM
+         "Default" 10
+         "0" 0
+         "500" 500
+         "1000" 1000
+         "1500" 1500
+         "2000" 2000
+         "2500" 2500
+         "3000" 3000
+         "3500" 3500
+         "4000" 4000
+         "4500" 4500
+         "5000" 5000
+         "5500" 6000
+         "6000" 6000
+         "6500" 8000
+         "7000" 7000
+         "8000" 8000 
+         "9000" 9000
+         "10000" 10000
+         "11000" 11000
+         "12000" 12000
+         "13000" 13000
+         "14000" 14000
+         "15000" 15000
+         "16000" 16000
+         "17000" 17000
+         "18000" 18000
+         "19000" 19000
+         "20000" 20000
+         "22000" 22000
+         "24000" 24000
+         "26000" 26000
+         "28000" 28000
+         "30000" 30000
+         "32000" 32000
+         "34000" 34000
+         "36000" 36000
+         "38000" 38000
+         "40000" 40000
+         "42000" 42000
+         "44000" 44000
+         "46000" 46000
+         "48000" 48000
+         "50000" 50000
+         "52000" 52000
+         "54000" 54000
+         "56000" 56000
+         "58000" 58000
+         "60000" 60000
+      End ParVal
+      ParVal
+         ParValIndex 2                 (*NumberOfResends*)
+         ENUM
+         "Default" 10
+         "0" 0
+         "1" 1
+         "2" 2
+         "3" 3
+         "4" 4
+         "5" 5
+         "6" 6
+      End ParVal
+      ParVal
+         ParValIndex 3                 (*TimeOutTime*)
+         UnitText "msec"
+         ENUM
+         "Default" 10
+         "500" 500
+         "1000" 1000
+         "1500" 1500
+         "2000" 2000
+         "2500" 2500
+         "3000" 3000
+         "3500" 3500
+         "4000" 4000
+         "4500" 4500
+         "5000" 5000
+         "5500" 5500
+         "6000" 6000
+      End ParVal
+   End ParValList
+
+   Channels
+      ChannelInfo
+        Number 0
+        ChannelName "UnitStatus"
+        Datatype Status_In
+        Routine 900
+        CopyParameters 0 0 16#50000
+      End ChannelInfo
+   End Channels
+
+   UnitStatusText
+     ExtendedStatus17    "TCP connection down"
+     ExtendedStatus18    "Diagnostic retrieval error"
+     ExtendedStatus19    "Exception retrieval error"
+     ExtendedStatus20    "Polling retrieval error"
+   End UnitStatusText
+
+   UnitStatusSeverity
+     ExtendedStatus17    GeneralError    TriggerAlarm SeverityLow    (*"TCP connection down"*)
+     ExtendedStatus18    GeneralWarning  TriggerEvent SeverityMedium  (*"Diagnostic retrieval error"*)
+     ExtendedStatus19    GeneralWarning  TriggerEvent SeverityMedium  (*"Exception retrieval error"*)
+     ExtendedStatus20    GeneralWarning  TriggerEvent SeverityMedium  (*"Polling retrieval error"*)
+   End UnitStatusSeverity
+
+  HWUnitInfoCRC 16#8675
+End HWUnitInfo (* CI867Slave *)

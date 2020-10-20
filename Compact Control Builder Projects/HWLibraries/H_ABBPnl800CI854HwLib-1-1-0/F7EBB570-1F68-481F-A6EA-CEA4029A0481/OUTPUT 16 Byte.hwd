@@ -1,0 +1,161 @@
+
+
+
+
+(*========================================================*)
+(*                                                        *)
+(*            OUTPUT: 16 Byte DPV1                        *)
+(*                                                        *)
+(*========================================================*)
+
+HWUnitInfo
+  HWUnitID         16#05D509DA
+  Description      "OUTPUT 16 Byte"
+  Information      "Byte(8bit)"
+  Icons            ProtocolType
+  Attributes       IoUnit 
+
+  Channels
+    ChannelInfo
+      Number            0
+      ChannelName      "Output Byte 0"
+      Datatype          Dword_Out
+      Routine           601
+      CopyParameters    16#0 16#0 16#40000 16#0 16#FF 16#1
+    End ChannelInfo
+    ChannelInfo
+      Number            1
+      ChannelName      "Output Byte 1"
+      Datatype          Dword_Out
+      Routine           601
+      CopyParameters    16#0 16#0 16#40001 16#0 16#FF 16#1
+    End ChannelInfo
+    ChannelInfo
+      Number            2
+      ChannelName      "Output Byte 2"
+      Datatype          Dword_Out
+      Routine           601
+      CopyParameters    16#0 16#0 16#40002 16#0 16#FF 16#1
+    End ChannelInfo
+    ChannelInfo
+      Number            3
+      ChannelName      "Output Byte 3"
+      Datatype          Dword_Out
+      Routine           601
+      CopyParameters    16#0 16#0 16#40003 16#0 16#FF 16#1
+    End ChannelInfo
+    ChannelInfo
+      Number            4
+      ChannelName      "Output Byte 4"
+      Datatype          Dword_Out
+      Routine           601
+      CopyParameters    16#0 16#0 16#40004 16#0 16#FF 16#1
+    End ChannelInfo
+    ChannelInfo
+      Number            5
+      ChannelName      "Output Byte 5"
+      Datatype          Dword_Out
+      Routine           601
+      CopyParameters    16#0 16#0 16#40005 16#0 16#FF 16#1
+    End ChannelInfo
+    ChannelInfo
+      Number            6
+      ChannelName      "Output Byte 6"
+      Datatype          Dword_Out
+      Routine           601
+      CopyParameters    16#0 16#0 16#40006 16#0 16#FF 16#1
+    End ChannelInfo
+    ChannelInfo
+      Number            7
+      ChannelName      "Output Byte 7"
+      Datatype          Dword_Out
+      Routine           601
+      CopyParameters    16#0 16#0 16#40007 16#0 16#FF 16#1
+    End ChannelInfo
+    ChannelInfo
+      Number            8
+      ChannelName      "Output Byte 8"
+      Datatype          Dword_Out
+      Routine           601
+      CopyParameters    16#0 16#0 16#40008 16#0 16#FF 16#1
+    End ChannelInfo
+    ChannelInfo
+      Number            9
+      ChannelName      "Output Byte 9"
+      Datatype          Dword_Out
+      Routine           601
+      CopyParameters    16#0 16#0 16#40009 16#0 16#FF 16#1
+    End ChannelInfo
+    ChannelInfo
+      Number            10
+      ChannelName      "Output Byte 10"
+      Datatype          Dword_Out
+      Routine           601
+      CopyParameters    16#0 16#0 16#4000A 16#0 16#FF 16#1
+    End ChannelInfo
+    ChannelInfo
+      Number            11
+      ChannelName      "Output Byte 11"
+      Datatype          Dword_Out
+      Routine           601
+      CopyParameters    16#0 16#0 16#4000B 16#0 16#FF 16#1
+    End ChannelInfo
+    ChannelInfo
+      Number            12
+      ChannelName      "Output Byte 12"
+      Datatype          Dword_Out
+      Routine           601
+      CopyParameters    16#0 16#0 16#4000C 16#0 16#FF 16#1
+    End ChannelInfo
+    ChannelInfo
+      Number            13
+      ChannelName      "Output Byte 13"
+      Datatype          Dword_Out
+      Routine           601
+      CopyParameters    16#0 16#0 16#4000D 16#0 16#FF 16#1
+    End ChannelInfo
+    ChannelInfo
+      Number            14
+      ChannelName      "Output Byte 14"
+      Datatype          Dword_Out
+      Routine           601
+      CopyParameters    16#0 16#0 16#4000E 16#0 16#FF 16#1
+    End ChannelInfo
+    ChannelInfo
+      Number            15
+      ChannelName      "Output Byte 15"
+      Datatype          Dword_Out
+      Routine           601
+      CopyParameters    16#0 16#0 16#4000F 16#0 16#FF 16#1
+    End ChannelInfo
+  End Channels
+
+  Configuration
+    ConfigInfo
+      ModuleKey        16#5
+      InAreaSize       0 BYTE
+      OutAreaSize      16 BYTE
+      OutByte
+        BYTE  0    0
+        BYTE  0    1
+        BYTE  0    2
+        BYTE  0    3
+        BYTE  0    4
+        BYTE  0    5
+        BYTE  0    6
+        BYTE  0    7
+        BYTE  0    8
+        BYTE  0    9
+        BYTE  0    10
+        BYTE  0    11
+        BYTE  0    12
+        BYTE  0    13
+        BYTE  0    14
+        BYTE  0    15
+      CIGIOConnData
+        CIGIOData        16#01 16#67
+      End CIGIOConnData
+    End ConfigInfo
+  End Configuration
+  HWUnitInfoCRC 16#A8F2
+End HWUnitInfo (* OUTPUT: 16 Byte *)

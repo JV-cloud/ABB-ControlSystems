@@ -1,0 +1,152 @@
+HwUnitInfo  (* CI857 *)
+   HWUnitID {FDA25AA8-C9A5-453e-8656-23B72687CE36} (* GUID for CI857 *)
+   Description "CI857"
+   Information "Communication Interface for INSUM via TCP/IP"
+(* ###HelpProject INSUMHelp.xxx *)
+   Icons AC800ComType  
+   Attributes SystemUnit
+   ModuleType  16#5007
+
+   InterfaceInfo
+     Interface CIGInterface
+     CLSID_CB   {1896BB43-3C0D-11d6-891B-006097B83487} (* CLSID_CB = GUID for INSUM PH in Control Builder *)
+     CLSID_CTRL {1896BB44-3C0D-11d6-891B-006097B83487} (* CLSID_CTRL = GUID for INSUM PH in Controller *)
+     HWConfig Fail     (* Change of net parameters affect subunits *)
+   End InterfaceInfo
+
+   DiscreteNumbers
+      1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+   End DiscreteNumbers
+
+   SubUnitTypes
+      HWUnitID {2677B90E-70DE-4808-ADB6-98C31B25CBBB} (* GUID for INSUM Gateway *)
+      HWUnitID {1C186F7D-A457-410a-ADA8-814ABFAF746B} (* GUID for other gateway *)
+   End SubUnitTypes
+
+   Parameters
+      ParamInfo 
+         Name CIIPADDRESS
+         Description "CI857 IP Address"
+         CompileType HWConfig
+         Datatype STRING
+         Default "" 15 (* 15 is max length of string *)
+         ParamType Numbered 1
+      End ParamInfo
+      ParamInfo 
+         Name SUBNETMASK
+         Description "IP Subnet Mask"
+         CompileType HWConfig
+         Datatype STRING
+         Default "" 15 (* 15 is max length of string *)
+         ParamType Numbered 2
+      End ParamInfo
+      ParamInfo 
+         Name EVENTFILTERING
+         Description "Events from INSUM devices"
+         Hidden
+         CompileType HWConfig
+         Datatype ENUM
+         Default 0
+         ParValIndex 0
+         ParamType Numbered 3
+      End ParamInfo
+   End Parameters
+
+   ParValList
+      ParVal
+         ParValIndex 0
+         ENUM
+         "Enabled for All Devices" 0
+         "Configured per Device"   1
+      End ParVal
+   End ParValList
+
+   Channels
+      ChannelInfo
+         Number 0
+         ChannelName "UnitStatus"
+         Datatype Status_In
+         Routine 900
+         CopyParameters 0 0 16#50000
+      End ChannelInfo
+   End Channels
+
+   UnitStatusText
+     DeviceSpecific1    "Error!"
+     DeviceSpecific2    "Warning!"
+     DeviceSpecific3    "Device Failure"
+     DeviceSpecific4    "Ethernet Error"
+     DeviceSpecific5    "FW Watchdog Error"
+     DeviceSpecific6    "Device Not Found"
+     DeviceSpecific7    "Init Failed"
+     DeviceSpecific8    "Appl Task Failed"
+     DeviceSpecific9    "Internal Supv"
+     DeviceSpecific10   "FW downl mode"
+
+     ExtendedStatus1    "No MAC Addr"
+     ExtendedStatus2    "HW Fail"
+     ExtendedStatus3    "Error reading CI status reg."
+
+     ExtendedStatus4    "Suspend State"
+     ExtendedStatus5    "Shutdown State"
+     ExtendedStatus6    "Run State"
+     ExtendedStatus7    "Cfg State"
+     ExtendedStatus8    "Init State"
+
+     ExtendedStatus9    "Incompat driver version" 
+     ExtendedStatus10   "Incompat FW version" 
+     ExtendedStatus11   "PH task stalled" 
+
+     ExtendedStatus13   "Wrong dev type" 
+
+     ExtendedStatus14   "Data Trans Q Full"
+     ExtendedStatus15   "Status Trans Q Full"
+     ExtendedStatus16   "Misc Trans Q Full"
+     ExtendedStatus17   "Dev Trans Q Full"
+     ExtendedStatus18   "Trans Q Full"
+     ExtendedStatus19   "Net Q Full"
+     ExtendedStatus20   "Intern Q Full"
+     ExtendedStatus21   "FW corrupt"
+     ExtendedStatus22   "Network Storm Detected"
+  End UnitStatusText
+
+   UnitStatusSeverity
+     DeviceSpecific1    GeneralError    (*"Error!"*)
+     DeviceSpecific2    GeneralWarning  (*"Warning!"*)
+     DeviceSpecific3    GeneralError    TriggerAlarm SeverityHigh    (*"Device Failure"*)
+     DeviceSpecific4    GeneralError    TriggerAlarm SeverityHigh    (*"Ethernet Error"*)
+     DeviceSpecific5    GeneralError    TriggerAlarm SeverityHigh    (*"FW Watchdog Error"*)
+     DeviceSpecific6    GeneralError    TriggerAlarm SeverityHigh    (*"Device Not Found"*)
+     DeviceSpecific7    GeneralError    TriggerAlarm SeverityHigh    (*"Init Failed"*)
+     DeviceSpecific8    GeneralError    TriggerAlarm SeverityHigh    (*"Appl Task Failed"*)
+     DeviceSpecific9    GeneralError    TriggerAlarm SeverityHigh    (*"Internal Supv"*)
+     DeviceSpecific10   GeneralError    TriggerAlarm SeverityHigh    (*"FW downl mode"*)
+
+     ExtendedStatus1    GeneralError    TriggerAlarm SeverityHigh    (*"No MAC Addr"*)
+     ExtendedStatus2    GeneralError    TriggerAlarm SeverityHigh    (*"HW Fail"*)
+     ExtendedStatus3    GeneralError    TriggerEvent SeverityMedium  (*"Error reading CI status reg."*)
+
+     ExtendedStatus4    GeneralWarning  TriggerAlarm SeverityMedium  (*"Suspend State"*)
+     ExtendedStatus5    GeneralWarning  TriggerAlarm SeverityMedium  (*"Shutdown State"*)
+     ExtendedStatus7    GeneralWarning  TriggerEvent SeverityMedium  (*"Cfg State"*)
+     ExtendedStatus8    GeneralWarning  TriggerEvent SeverityMedium  (*"Init State"*)
+
+     ExtendedStatus9    GeneralError    TriggerAlarm SeverityHigh    (*"Incompat driver version" *)
+     ExtendedStatus10   GeneralError    TriggerAlarm SeverityHigh    (*"Incompat FW version" *)
+     ExtendedStatus11   GeneralError    TriggerEvent SeverityLow     (*"PH task stalled"*)
+
+     ExtendedStatus13   GeneralError    TriggerAlarm SeverityHigh    (*"Wrong dev type" *)
+
+     ExtendedStatus14   GeneralWarning  TriggerEvent SeverityLow     (*"Data Trans Q Full"*)
+     ExtendedStatus15   GeneralWarning  TriggerEvent SeverityLow     (*"Status Trans Q Full"*)
+     ExtendedStatus16   GeneralWarning  TriggerEvent SeverityLow     (*"Misc Trans Q Full"*)
+     ExtendedStatus17   GeneralWarning  TriggerEvent SeverityLow     (*"Dev Trans Q Full"*)
+     ExtendedStatus18   GeneralWarning  TriggerEvent SeverityLow     (*"Trans Q Full"*)
+     ExtendedStatus19   GeneralWarning  TriggerEvent SeverityLow     (*"Net Q Full"*)
+     ExtendedStatus20   GeneralWarning  TriggerEvent SeverityLow     (*"Intern Q Full"*)
+     ExtendedStatus21   GeneralError    TriggerAlarm SeverityHigh    (*"FW corrupt"*)
+     ExtendedStatus22   GeneralError    TriggerAlarm SeverityHigh    (*"Network Storm Detected"*)
+  End UnitStatusSeverity
+
+  HWUnitInfoCRC 16#D490
+End HWUnitInfo (* CI857 *)

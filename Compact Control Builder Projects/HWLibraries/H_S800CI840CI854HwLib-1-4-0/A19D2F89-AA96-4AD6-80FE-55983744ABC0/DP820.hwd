@@ -1,0 +1,1037 @@
+FileHeader
+    Contents               "DP820/CI840/CI854"
+    Date                   "2014-01-29"
+    Version                "1.0-4"
+    RequiredSyntaxVersion  "3.14"
+End FileHeader
+(* SIL class: SIL-0 *)
+
+(* -------------------------------------------------------------- *)
+(*    Module: DP820  FCI:CI840  CI:CI854                          *)
+(* -------------------------------------------------------------- *)
+
+(* Version 1.0/4                                                  *)
+(* 2014-01-29     N Ljungberg                                     *)
+(* AC800M #52908  Add reading of eA-bits in the device related    *)
+(*                diagnostics area and set bit22 in extended      *)
+(*                status.                                         *)
+(* -------------------------------------------------------------- *)
+(* Version 1.0/3                                                  *)
+(* 2010-02-05     N Ljungberg                                     *)
+(* AC800M #38723  The UnitStatusSeverity section was changed back *)
+(*                to the state it had before #36455 was           *)
+(*                implemented. This to achieve compatibility with *)
+(*                SV5.0                                           *)
+(* -------------------------------------------------------------- *)
+(* Version 1.0/2                                                  *)
+(* 2009-03-04     N Ljungberg                                     *)
+(* AC800M #35875  Diagnostics info "warning" added                *)
+(* AC800M #36455  Unit status texts and unit status severity      *)
+(*                which is not used has been removed.             *)
+(* -------------------------------------------------------------- *)
+(* Version 1.0/1                                                  *)
+(* 2006-01-31     K Gardin                                        *)
+(* AC800M #22647  Changed priorities on Alarms and Events         *)
+(* -------------------------------------------------------------- *)
+(* Version 1.0/0 based on io_dp820_p.hwd version 5.0/17           *)
+(* 2005-06-13    J Nordin                                         *)
+
+
+HWUnitInfo (* DP820 *)
+  HWUnitID {00AE3DE0-6C6D-4024-87E2-446F5E3C31A3} (* DP820 *) 
+  Description "DP820"
+  Information "Digital pulse counter module, 2 channels"
+  Icons       S800IoType
+  Attributes  IoUnit DigitalIn DigitalOut
+
+  Parameters
+
+   ParamInfo
+      Name        PM1
+      Description "Pulse mode channel 1"
+      CompileType IOConnect
+      DataType    ENUM
+      Default     0
+      ParValIndex 2
+      ParamType   CIGIOData 5 0 1 ByteParam ByteOffset
+   End ParamInfo
+
+   ParamInfo
+      Name        PM2
+      Description "Pulse mode channel 2"
+      CompileType IOConnect
+      DataType    ENUM
+      Default     0
+      ParValIndex 2
+      ParamType   CIGIOData 5 3 1 ByteParam ByteOffset
+   End ParamInfo
+
+   ParamInfo
+      Name        DOPW1
+      Description "Output pulse width ch 1"
+      CompileType IOConnect
+      DataType    Int
+      Default     10
+      ParValIndex 12
+      ParamType   CIGIOData 6 0 1 ByteParam ByteOffset
+   End ParamInfo
+
+   ParamInfo
+      Name        DOPW2
+      Description "Output pulse width ch 2"
+      CompileType IOConnect
+      DataType    Int
+      Default     10
+      ParValIndex 12
+      ParamType   CIGIOData 7 0 1 ByteParam ByteOffset
+   End ParamInfo
+
+   ParamInfo
+      Name        PRIT1
+      Description "Interval time channel 1"
+      CompileType IOConnect
+      DataType    Int
+      Default     10
+      ParValIndex 13
+      ParamType   CIGIOData 8 0 1 ByteParam ByteOffset
+   End ParamInfo
+
+   ParamInfo
+      Name        PRIT2
+      Description "Interval time channel 2"
+      CompileType IOConnect
+      DataType    Int
+      Default     10
+      ParValIndex 13
+      ParamType   CIGIOData 9 0 1 ByteParam ByteOffset
+   End ParamInfo
+
+   ParamInfo
+      Name        GC1
+      Description "Gated count mode ch 1"
+      CompileType IOConnect
+      DataType    Enum
+      Default     0
+      ParValIndex 3
+      ParamType   CIGIOData 10 0 1 ByteParam ByteOffset
+   End ParamInfo
+
+   ParamInfo
+   Name           GC2
+      Description "Gated count mode ch 2"
+      CompileType IOConnect
+      DataType    Enum
+      Default     0
+      ParValIndex 3
+      ParamType   CIGIOData 10 2 1 ByteParam ByteOffset
+   End ParamInfo
+
+   ParamInfo
+      Name        DOM1
+      Description "Digital output mode ch 1"
+      CompileType IOConnect
+      DataType    Enum
+      Default     0
+      ParValIndex 9
+      ParamType   CIGIOData 10 4 1 ByteParam ByteOffset
+   End ParamInfo
+
+   ParamInfo
+      Name        DOM2
+      Description "Digital output mode ch 2"
+      CompileType IOConnect
+      DataType    Enum
+      Default     0
+      ParValIndex 9
+      ParamType   CIGIOData 10 6 1 ByteParam ByteOffset
+   End ParamInfo
+
+   ParamInfo
+      Name        MIC1
+      Description "Measure interval control ch 1"
+      CompileType IOConnect
+      DataType    Enum
+      Default     0
+      ParValIndex 5
+      ParamType   CIGIOData 11 0 1 ByteParam ByteOffset
+   End ParamInfo
+
+   ParamInfo
+      Name        MIC2
+      Description "Measure interval control ch 2"
+      CompileType IOConnect
+      DataType    Enum
+      Default     0
+      ParValIndex 5
+      ParamType   CIGIOData 11 1 1 ByteParam ByteOffset
+   End ParamInfo
+
+   ParamInfo
+      Name        MIS1
+      Description "Measure interval source ch 1"
+      CompileType IOConnect
+      DataType    Enum
+      Default     0
+      ParValIndex 4
+      ParamType   CIGIOData 11 2 1 ByteParam ByteOffset
+   End ParamInfo
+
+   ParamInfo
+      Name        MIS2
+      Description "Measure interval source ch 2"
+      CompileType IOConnect
+      DataType    Enum
+      Default     0
+      ParValIndex 4
+      ParamType   CIGIOData 11 3 1 ByteParam ByteOffset
+   End ParamInfo
+
+   ParamInfo
+      Name        OSPC1
+      Description "OSP Control channel 1"
+      CompileType IOConnect
+      DataType    ENUMCONTROL
+      Default     1
+      ParValIndex 1
+      ParamType   CIGIOData 11 4 1 ByteParam ByteOffset
+      SafeStateInfo
+        SafeStateType SafeStateControl
+        SafeStateRef Channel 49
+      End SafeStateInfo
+   End ParamInfo
+
+   ParamInfo
+      Name        OSPC2
+      Description "OSP Control channel 2"
+      CompileType IOConnect
+      DataType    ENUMCONTROL
+      Default     1
+      ParValIndex 1
+      ParamType   CIGIOData 11 5 1 ByteParam ByteOffset
+      SafeStateInfo
+        SafeStateType SafeStateControl
+        SafeStateRef Channel 50
+      End SafeStateInfo
+   End ParamInfo
+
+   ParamInfo
+      Name        OSPV1
+      Description "OSP Value channel 1"
+      CompileType IOConnect
+      DataType    BOOL
+      Default     FALSE
+      ParamType   CIGIOData 11 6 1 ByteParam ByteOffset
+      SafeStateInfo
+        SafeStateType SafeStateValue
+        SafeStateRef Channel 49
+      End SafeStateInfo
+   End ParamInfo
+
+   ParamInfo
+      Name        OSPV2
+      Description "OSP Value channel 2"
+      CompileType IOConnect
+      DataType    BOOL
+      Default     FALSE
+      ParamType   CIGIOData 11 7 1 ByteParam ByteOffset
+      SafeStateInfo
+        SafeStateType SafeStateValue
+        SafeStateRef Channel 50
+      End SafeStateInfo
+   End ParamInfo
+
+   ParamInfo
+      Name        FAB1
+      Description "Filter time A,B inputs ch 1"
+      CompileType IOConnect
+      DataType    Enum
+      Default     0
+      ParValIndex 6
+      ParamType   CIGIOData 12 0 1 ByteParam ByteOffset
+   End ParamInfo
+
+   ParamInfo
+      Name        FAB2
+      Description "Filter time A,B inputs ch 2"
+      CompileType IOConnect
+      DataType    Enum
+      Default     0
+      ParValIndex 6
+      ParamType   CIGIOData 12 1 1 ByteParam ByteOffset
+   End ParamInfo
+
+   ParamInfo
+      Name        FST1
+      Description "Filter time strobe input ch 1"
+      CompileType IOConnect
+      DataType    Enum
+      Default     0
+      ParValIndex 7
+      ParamType   CIGIOData 12 2 1 ByteParam ByteOffset
+   End ParamInfo
+
+   ParamInfo
+      Name        FST2
+      Description "Filter time strobe input ch 2"
+      CompileType IOConnect
+      DataType    Enum
+      Default     0
+      ParValIndex 7
+      ParamType   CIGIOData 12 3 1 ByteParam ByteOffset
+   End ParamInfo
+
+   ParamInfo
+      Name        FDI1
+      Description "Filter time DI ch 1"
+      CompileType IOConnect
+      DataType    Enum
+      Default     0
+      ParValIndex 8
+      ParamType   CIGIOData 12 4 1 ByteParam ByteOffset
+   End ParamInfo
+
+   ParamInfo
+      Name        FDI2
+      Description "Filter time DI ch 2"
+      CompileType IOConnect
+      DataType    Enum
+      Default     0
+      ParValIndex 8
+      ParamType   CIGIOData 12 5 1 ByteParam ByteOffset
+   End ParamInfo
+
+   ParamInfo
+      Name        ISPControl1
+      Description "ISP Control DI ch 1"
+      CompileType IOConnect
+      Datatype    ENUMCONTROL  (* Description missing in DoF *)
+      Default     0
+      ParValIndex 14
+      ParamType   Numbered 10100  (* Value not used, only to fool hwd parser *)
+      SafeStateInfo
+           SafeStateType SafeStateControl
+           SafeStateRef  Channel 1
+      End SafeStateInfo          
+    End ParamInfo
+    ParamInfo
+      Name        ISPControl2
+      Description "ISP Control DI ch 2"
+      CompileType IOConnect
+      Datatype    ENUMCONTROL  (* Description missing in DoF *)
+      Default     0
+      ParValIndex 14
+      ParamType   Numbered 10100  (* Value not used, only to fool hwd parser *)
+      SafeStateInfo
+           SafeStateType SafeStateControl
+           SafeStateRef  Channel 2
+      End SafeStateInfo          
+    End ParamInfo
+    ParamInfo
+      Name        ISPControl3
+      Description "ISP Control Pulse Counter ch 1"
+      CompileType IOConnect
+      Datatype    ENUMCONTROL  (* Description missing in DoF *)
+      Default     0
+      ParValIndex 14
+      ParamType   Numbered 10100  (* Value not used, only to fool hwd parser *)
+      SafeStateInfo
+           SafeStateType SafeStateControl
+           SafeStateRef  Channel 5
+      End SafeStateInfo          
+    End ParamInfo
+    ParamInfo
+      Name        ISPControl4
+      Description "ISP Control Pulse Counter ch 2"
+      CompileType IOConnect
+      Datatype    ENUMCONTROL  (* Description missing in DoF *)
+      Default     0
+      ParValIndex 14
+      ParamType   Numbered 10100  (* Value not used, only to fool hwd parser *)
+      SafeStateInfo
+           SafeStateType SafeStateControl
+           SafeStateRef  Channel 6
+      End SafeStateInfo          
+    End ParamInfo
+    ParamInfo
+      Name        ISPControl5
+      Description "ISP Control Frequency ch 1"
+      CompileType IOConnect
+      Datatype    ENUMCONTROL  (* Description missing in DoF *)
+      Default     0
+      ParValIndex 14
+      ParamType   Numbered 10100  (* Value not used, only to fool hwd parser *)
+      SafeStateInfo
+           SafeStateType SafeStateControl
+           SafeStateRef  Channel 17
+      End SafeStateInfo          
+    End ParamInfo
+    ParamInfo
+      Name        ISPControl6
+      Description "ISP Control Frequency ch 2"
+      CompileType IOConnect
+      Datatype    ENUMCONTROL  (* Description missing in DoF *)
+      Default     0
+      ParValIndex 14
+      ParamType   Numbered 10100  (* Value not used, only to fool hwd parser *)
+      SafeStateInfo
+           SafeStateType SafeStateControl
+           SafeStateRef  Channel 18
+      End SafeStateInfo          
+    End ParamInfo
+    ParamInfo
+      Name        ISPValue1
+      Description "ISP Value DI ch 1"
+      CompileType IOConnect
+      Datatype    BOOL
+      Default     FALSE
+      ParamType   Numbered 10100  (* Value not used, only to fool hwd parser *)
+      SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef  Channel 1
+      End SafeStateInfo          
+    End ParamInfo
+    ParamInfo
+      Name        ISPValue2
+      Description "ISP Value DI ch 2"
+      CompileType IOConnect
+      Datatype    BOOL
+      Default     FALSE
+      ParamType   Numbered 10100  (* Value not used, only to fool hwd parser *)
+      SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef  Channel 2
+      End SafeStateInfo          
+    End ParamInfo
+    ParamInfo
+      Name        ISPValue3
+      Description "ISP Value Pulse Counter ch 1"
+      CompileType IOConnect
+      Datatype    INT
+      Default     0
+      ParValIndex 15
+      ParamType   Numbered 10100  (* Value not used, only to fool hwd parser *)
+      SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef  Channel 5
+      End SafeStateInfo          
+    End ParamInfo
+    ParamInfo
+      Name        ISPValue4
+      Description "ISP Value Pulse Counter ch 2"
+      CompileType IOConnect
+      Datatype    INT
+      Default     0
+      ParValIndex 15
+      ParamType Numbered 10100  (* Value not used, only to fool hwd parser *)
+      SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef  Channel 6
+      End SafeStateInfo          
+    End ParamInfo
+    ParamInfo
+      Name        ISPValue5
+      Description "ISP Value Frequency ch 1"
+      CompileType IOConnect
+      Datatype    REAL
+      Default     0.0
+      ParValIndex 16
+      ParamType Numbered 10100  (* Value not used, only to fool hwd parser *)
+      SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef  Channel 17
+      End SafeStateInfo          
+    End ParamInfo
+    ParamInfo
+      Name        ISPValue6
+      Description "ISP Value Frequency ch 2"
+      CompileType IOConnect
+      Datatype    REAL
+      Default     0.0
+      ParValIndex 16
+      ParamType Numbered 10100  (* Value not used, only to fool hwd parser *)
+      SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef  Channel 18
+      End SafeStateInfo          
+    End ParamInfo
+
+
+  End Parameters
+
+  ParValList
+  ParVal
+      ParValIndex     1
+      ENUMCONTROL
+      "Keep current value" 0  HoldLastValue
+      "Set OSP value"      1  UseSafeValue
+  End ParVal
+  ParVal
+      ParValIndex     2
+      ENUM
+      "A:Up/B:Down"   0   
+      "Quad mode*1"   1
+      "Quad mode*2"   2
+      "Quad mode*4"   3        
+      "A:Pulse/B:Dir" 4
+  End ParVal
+  ParVal
+      ParValIndex     3
+      ENUM
+      "Inactive"      0   
+      "DI Level"      1
+      "DI positive"   2  
+  End ParVal
+  ParVal
+      ParValIndex     4
+      ENUM
+      "Timer"         0   
+      "Coinc"         1
+  End ParVal
+  ParVal
+      ParValIndex     5
+      ENUM
+      "Own channel"   0   
+      "Other channel" 1
+  End ParVal
+  ParVal
+      ParValIndex     6
+      ENUM
+      "Unfiltered"    0   
+      "1 us"          1
+  End ParVal
+  ParVal
+      ParValIndex     7
+      ENUM
+      "1 us"          0   
+      "1 ms"          1
+  End Parval
+  ParVal
+      ParValIndex     8
+      ENUM
+      "1 ms"          0   
+      "5 ms"          1
+  End ParVal
+  ParVal
+      ParValIndex     9
+      ENUM
+      "Coinc/Timer"   0   
+      "PC/Timer"      1
+      "PC/PC"         2
+      "Coinc/PC"      3
+  End ParVal
+  ParVal
+      ParValIndex    12
+      UnitText       "ms"
+      INT 10 2550 1 255
+  End ParVal
+  ParVal
+      ParValIndex    13
+      UnitText       "ms"
+      INT 10 2000 1 200
+  End ParVal
+
+  ParVal
+      ParValIndex     14
+      ENUMCONTROL
+      "Keep current value" 0 HoldLastValue
+      "Use ISP Value"      1 UseSafeValue
+  End ParVal
+  ParVal
+      ParValIndex     15
+      UnitText ""
+      INT -268435456 268435455 -268435456 268435455
+  End ParVal
+  ParVal
+      ParValIndex     16
+      UnitText "%"
+      REAL 0.0 100.0 0.0 100.0
+  End ParVal
+
+
+  End ParValList
+
+  Channels
+    ChannelInfo
+      Number         1
+      ChannelName    "Digital input ch 1"
+      DataType       Bool_In
+      Routine        101
+      CopyParameters 0 0 16#30004 16#0100
+    End ChannelInfo
+    ChannelInfo
+      Number         2
+      ChannelName    "Digital input ch 2"
+      DataType       Bool_In
+      Routine        101
+      CopyParameters 0 0 16#3000D 16#0100
+    End ChannelInfo
+    ChannelInfo
+      Number         3
+      ChannelName    "Counting direction ch 1" (* up 1 *)
+      DataType       Bool_In
+      Routine        101
+      CopyParameters 0 0 16#30004 16#0200
+    End ChannelInfo
+    ChannelInfo
+      Number         4
+      ChannelName    "Counting direction ch 2" (* up 2 *)
+      DataType       Bool_In
+      Routine        101
+      CopyParameters 0 0 16#3000D 16#0200
+    End ChannelInfo
+    ChannelInfo
+      Number         5
+      ChannelName    "Counter value ch 1"
+      DataType       Int_In         
+      Routine        303
+      CopyParameters 0 0 16#30000 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number         6
+      ChannelName    "Counter value ch 2"
+      Datatype       Int_In
+      Routine 303
+      CopyParameters 0 0 16#30009 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number         7
+      ChannelName    "Counter overflow ch 1"
+      DataType       Bool_In
+      Routine        101
+      CopyParameters 0 0 16#30004 16#0400
+    End ChannelInfo
+    ChannelInfo
+      Number         8
+      ChannelName    "Counter overflow ch 2"
+      DataType       Bool_In
+      Routine 101
+      CopyParameters 0 0 16#3000D 16#0400
+    End ChannelInfo
+    ChannelInfo
+      Number         9
+      ChannelName    "Transducer power OK ch 1"
+      DataType       Bool_In
+      Routine        101
+      CopyParameters 0 0 16#30004 16#4000
+    End ChannelInfo
+    ChannelInfo
+      Number         10
+      ChannelName    "Transducer power OK ch 2"
+      DataType       Bool_In
+      Routine        101
+      CopyParameters 0 0 16#3000D 16#4000
+    End ChannelInfo 
+    ChannelInfo
+      Number         11
+      ChannelName    "Pulse counter frozen ch 1" (* lips 1 *)
+      DataType       Bool_In
+      Routine        101
+      CopyParameters 0 0 16#30004 16#0800
+    End ChannelInfo
+    ChannelInfo
+      Number         12
+      ChannelName    "Pulse counter frozen ch 2" (* lips 2 *)
+      DataType       Bool_In
+      Routine        101
+      CopyParameters 0 0 16#3000D 16#0800
+    End ChannelInfo
+    ChannelInfo
+      Number         13
+      ChannelName    "Pulse counter reseted ch 1" (* sync 1*)
+      DataType       Bool_In
+      Routine        101
+      CopyParameters 0 0 16#30004 16#1000
+    End ChannelInfo
+    ChannelInfo
+      Number         14
+      ChannelName    "Pulse counter reseted ch 2" (* sync 2*)
+      DataType       Bool_In
+      Routine        101
+      CopyParameters 0 0 16#3000D 16#1000
+    End ChannelInfo
+    ChannelInfo
+      Number         15
+      ChannelName    "Coincidence ch 1"
+      DataType       Bool_In
+      Routine        101
+      CopyParameters 0 0 16#30004 16#2000
+    End ChannelInfo
+    ChannelInfo
+      Number         16
+      ChannelName    "Coincidence ch 2"
+      DataType       Bool_In
+      Routine        101
+      CopyParameters 0 0 16#3000D 16#2000
+    End ChannelInfo
+    ChannelInfo
+      Number         17
+      ChannelName    "Frequency value ch 1"
+      Datatype       Real_In
+      Routine        790
+      CopyParameters 0 0 16#30005 16#0 
+    End ChannelInfo
+    ChannelInfo
+      Number         18
+      ChannelName    "Frequency value ch 2"
+      Datatype       Real_In
+      Routine        790
+      CopyParameters 0 0 16#3000E 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number         19
+      ChannelName    "Frequency value frozen ch 1" (* lisp 1 *)
+      DataType       Bool_In
+      Routine        101
+      CopyParameters 0 0 16#30004 16#8000 
+    End ChannelInfo
+    ChannelInfo
+      Number         20
+      ChannelName    "Frequency value frozen ch 2" (* lisp 2 *)
+      DataType       Bool_In
+      Routine        101
+      CopyParameters 0 0 16#3000D 16#8000
+    End ChannelInfo
+    ChannelInfo
+      Number         21
+      ChannelName    "Reset counter overflow ch 1"
+      DataType       Bool_Out
+      Routine        201
+      CopyParameters 0 0 16#40004 16#4000
+    End ChannelInfo
+    ChannelInfo
+      Number         22
+      ChannelName    "Reset counter overflow ch 2"
+      DataType       Bool_Out
+      Routine        201
+      CopyParameters 0 0 16#4000B 16#4000
+    End ChannelInfo
+    ChannelInfo
+      Number         23
+      ChannelName    "Freeze counter ch 1" (* fpc 1 *)
+      DataType       Bool_Out
+      Routine        201
+      CopyParameters 0 0 16#40006 16#0200
+    End ChannelInfo
+    ChannelInfo
+      Number         24
+      ChannelName    "Freeze counter ch 2" (* fpc 2 *)
+      DataType       Bool_Out
+      Routine        201
+      CopyParameters 0 0 16#40006 16#0800
+    End ChannelInfo
+    ChannelInfo
+      Number         25
+      ChannelName    "Counter freeze condition ch 1" (* pxlc 1 *)
+      DataType       Int_Out
+      Routine        401
+      CopyParameters 0 0 16#40004 16#00 16#0007 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number         26
+      ChannelName    "Counter freeze condition ch 2" (* pxlc 2 *)
+      DataType       Int_Out
+      Routine        401
+      CopyParameters 0 0 16#4000C 16#08 16#0700 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number         27
+      ChannelName    "Reset frozen pulse counter ch 1" (* r_lip 1 *)
+      DataType       Bool_Out
+      Routine        201
+      CopyParameters 0 0 16#40004 16#8000
+    End ChannelInfo
+    ChannelInfo
+      Number         28
+      ChannelName    "Reset frozen pulse counter ch 2" (* r_lip 2 *)
+      DataType       Bool_Out
+      Routine        201
+      CopyParameters 0 0 16#4000B 16#8000
+    End ChannelInfo
+    ChannelInfo
+      Number         29
+      ChannelName    "Reset pulse counter ch 1" (* pcsy 1 *)
+      DataType       Bool_Out
+      Routine        201
+      CopyParameters 0 0 16#40005 16#8000
+    End ChannelInfo
+    ChannelInfo
+      Number         30
+      ChannelName    "Reset pulse counter ch 2" (* pcsy 2 *)
+      DataType       Bool_Out
+      Routine        201
+      CopyParameters 0 0 16#4000C 16#8000
+    End ChannelInfo
+    ChannelInfo
+      Number         31
+      ChannelName    "Reset pulse counter condition ch 1"
+      DataType       Int_Out
+      Routine        401
+      CopyParameters 0 0 16#40004 16#03 16#0078 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number         32
+      ChannelName    "Reset pulse counter condition ch 2"
+      DataType       Int_Out
+      Routine        401
+      CopyParameters 0 0 16#4000C 16#0B 16#7800 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number         33
+      ChannelName    "Ack. pulse counter reseted ch 1" (* r_sy 1 *)
+      DataType       Bool_Out
+      Routine        201
+      CopyParameters 0 0 16#40004 16#2000
+    End ChannelInfo
+    ChannelInfo
+      Number         34
+      ChannelName    "Ack. pulse counter reseted ch 2" (* r_sy 2 *)
+      DataType       Bool_Out
+      Routine        201
+      CopyParameters 0 0 16#4000B 16#2000
+    End ChannelInfo
+    ChannelInfo
+      Number         35
+      ChannelName    "Enable coincidence ch 1" (* coen 1 *)
+      DataType       Bool_Out
+      Routine 201
+      CopyParameters 0 0 16#40004 16#0800
+    End ChannelInfo
+    ChannelInfo
+      Number         36
+      ChannelName    "Enable coincidence ch 2" (* coen 2 *)
+      DataType       Bool_Out
+      Routine        201
+      CopyParameters 0 0 16#4000B 16#0800
+    End ChannelInfo
+    ChannelInfo
+      Number         37
+      ChannelName    "Coincidence compare value ch 1" (* PSXCR 1 *)
+      Datatype       Int_out
+      Routine        403
+      CopyParameters 0 0 16#40000 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number         38
+      ChannelName    "Coincidence compare value ch 2" (* PSXCR 2 *)
+      Datatype       Int_out
+      Routine        403
+      CopyParameters 0 0 16#40007 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number         39
+      ChannelName    "Reset coincidence ch 1" (* r_co 1 *)
+      DataType       Bool_Out
+      Routine        201
+      CopyParameters 0 0 16#40004 16#1000
+    End ChannelInfo
+    ChannelInfo
+      Number         40
+      ChannelName    "Reset coincidence ch 2" (* r_co 2 *)
+      DataType       Bool_Out
+      Routine        201
+      CopyParameters 0 0 16#4000B 16#1000
+    End ChannelInfo
+    ChannelInfo
+      Number         41
+      ChannelName    "Freeze frequency value ch 1" (* ffm 1 *)
+      DataType       Bool_Out
+      Routine        201
+      CopyParameters 0 0 16#40006 16#0100
+    End ChannelInfo
+    ChannelInfo
+      Number         42
+      ChannelName    "Freeze frequency value ch 2" (* ffm 2 *)
+      DataType       Bool_Out
+      Routine        201
+      CopyParameters 0 0 16#40006 16#0400
+    End ChannelInfo
+    ChannelInfo
+      Number         43
+      ChannelName    "Frequency freeze condition ch 1" (* splc 1 *)
+      DataType       Int_Out
+      Routine        401
+      CopyParameters 0 0 16#40006 12 16#3000 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number         44
+      ChannelName    "Frequency freeze condition ch 2" (* splc 2 *)
+      DataType       Int_Out
+      Routine        401
+      CopyParameters 0 0 16#40006 14 16#C000 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number         45
+      ChannelName    "Reset frozen frequency value ch 1" (* r_lis 1 *)
+      DataType       Bool_Out
+      Routine        201
+      CopyParameters 0 0 16#40004 16#0200
+    End ChannelInfo
+    ChannelInfo
+      Number         46
+      ChannelName    "Reset frozen frequency value ch 2" (* r_lis 2 *)
+      DataType       Bool_Out
+      Routine        201
+      CopyParameters 0 0 16#4000B 16#0200
+    End ChannelInfo
+    ChannelInfo
+      Number         47
+      ChannelName    "LED output ch 1"
+      DataType       Bool_Out
+      Routine        201
+      CopyParameters 0 0 16#40004 16#0100
+    End ChannelInfo
+    ChannelInfo
+      Number         48
+      ChannelName    "LED output ch 2"
+      DataType       Bool_Out
+      Routine        201
+      CopyParameters 0 0 16#4000B 16#0100
+    End ChannelInfo
+    ChannelInfo
+      Number         49
+      ChannelName    "Digital output ch 1"
+      DataType       Bool_Out
+      Routine        201
+      CopyParameters 0 0 16#40004 16#0400
+    End ChannelInfo
+    ChannelInfo
+      Number         50
+      ChannelName    "Digital output ch 2"
+      DataType       Bool_Out
+      Routine        201
+      CopyParameters 0 0 16#4000B 16#0400
+    End ChannelInfo
+ ChannelInfo
+      Number         60
+      ChannelName   "UnitStatus"
+      Datatype       Status_In
+      Routine        900
+      CopyParameters 0 0 16#50000
+    End ChannelInfo
+  End Channels
+
+
+
+
+  Diagnostics
+     DiagInfo
+       Number          70
+       Description     "Primary module error"
+       Datatype        EnumDiag
+       DiagValueIndex  0  (* If channel No=0 *)
+       DiagAreaOffset  3  0000   0000   OrdinalOne  
+     End DiagInfo
+     DiagInfo
+       Number          71
+       Description     "eA-bit value"
+       UnitText        ""
+       Datatype        ENUMDIAG
+       DiagValueIndex  2  
+       DiagAreaOffset  1  4  16#00010001 OrdinalZero
+     End DiagInfo
+  End Diagnostics
+
+  DiagValueList
+    DiagValue
+      DiagValueIndex                   0  (* primary unit, channel=0 *)
+      DiagDataSize                     5  (* max 5 bits long *)   
+      ENUMDIAG
+      "Error"                          9  DeviceSpecific1  
+      "Warning"                       16  DeviceSpecific2  
+      "OSP"                           17  ExtendedStatus1  
+      "Not configured"                18  ExtendedStatus5  
+      "Module Missing"                19  ModuleMissing           
+      "Wrong module type"             21  WrongModuleType         
+    End DiagValue
+    DiagValue
+      DiagValueIndex                   2  (* eA-bit *)
+      DiagDataSize                     1  (* 1 bit long *)   
+      ENUMDIAG
+      "eA"                          1  eA
+    End DiagValue
+
+   End DiagValueList
+
+  UnitstatusText
+
+    DeviceSpecific1  "Error"                           
+    DeviceSpecific2  "Warning"                       
+
+    ExtendedStatus1  "OSP"                       
+    ExtendedStatus5  "Not configured" 
+    eA                 "eA"
+
+  End UnitstatusText
+
+  UnitStatusSeverity
+
+    DeviceSpecific1  GeneralError   TriggerAlarm SeverityHigh
+    DeviceSpecific2  GeneralWarning TriggerEvent SeverityLow
+    DeviceSpecific3  GeneralWarning TriggerAlarm SeverityMedium
+    DeviceSpecific4  GeneralWarning TriggerAlarm SeverityMedium
+    DeviceSpecific5  GeneralWarning TriggerAlarm SeverityMedium
+    DeviceSpecific6  GeneralWarning TriggerEvent SeverityLow
+
+    ExtendedStatus1  GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus2  GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus3  GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus4  GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus5  GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus6  GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus7  GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus8  GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus9  GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus10  GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus11  GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus12  GeneralWarning TriggerEvent SeverityLow
+
+  End UnitStatusSeverity
+
+  Configuration
+    ConfigInfo
+      ModuleKey   16#37
+      InAreaSize  18 BYTE 
+      OutAreaSize 13 BYTE
+      InBYTE
+        BYTE 0        0 (*Pulse counter value1 high part*)
+        BYTE 0        1 (*Pulse counter value1 low part*)
+        BYTE 0        2 (*Pulse counter value1 low part*)
+        BYTE 0        3 (*Pulse counter value1 low part*)
+        BYTE 0        4 (*li_sp 1, tp 1, coin 1, sync 1, li_ps 1, owf 1, up 1, DI 1*)
+        BYTE 0        5 (*Freq.value1 byte 1*)
+        BYTE 0        6 (*Freq.value1 byte 2*)
+        BYTE 0        7 (*Freq.value1 byte 3*)
+        BYTE 0        8 (*Freq.value1 byte 4*)
+        BYTE 0        9 (*Pulse counter value2 high part*)
+        BYTE 0       10 (*Pulse counter value2 low part*)
+        BYTE 0       11 (*Pulse counter value2 low part*)
+        BYTE 0       12 (*Pulse counter value2 low part*)
+        BYTE 0       13 (*li_sp 2, tp 2, coin 2, sync 2, li_ps 2, owf 2, up 2, DI 2*)
+        BYTE 0       14 (*Freq.value2 byte 1*)
+        BYTE 0       15 (*Freq.value2 byte 2*)
+        BYTE 0       16 (*Freq.value2 byte 3*)
+        BYTE 0       17 (*Freq.value2 byte 4*)
+      OutBYTE
+        BYTE 0        0 (*PSXCR 1, bit 31-24*)
+        BYTE 0        1 (*PSXCR 1, bit 23-16*)
+        BYTE 0        2 (*PSXCR 1, bit 15-8*)
+        BYTE 0        3 (*PSXCR 1, bit 7-0*)
+        BYTE 0        4 (*r_lip 1, r_of 1, r_sy 1, r_co 1, coen 1, DO 1, r_lis 1, LED 1*)
+        BYTE 0        5 (*pcsy 1, Sync condition 1, pxlc 1*)
+        BYTE 0        6 (*splc 2, splc 1, fpc 2, ffm 2, fpc 1, ffm 1*)
+        BYTE 0        7 (*PSXCR 2, bit 31-24*)
+        BYTE 0        8 (*PSXCR 2, bit 23-16*)
+        BYTE 0        9 (*PSXCR 2, bit 15-8*)
+        BYTE 0       10 (*PSXCR 2, bit 7-0*)
+        BYTE 0       11 (*r_lip 2, r_of 2, r_sy 2, r_co 2, coen 2, DO 2, r_lis 2, LED 2*)
+        BYTE 0       12 (*pcsy 2, Sync condition 2, pxlc 2*)
+
+      CIGIOConnData
+        CIGIOData     16#01 16#C0 16#8C 16#91  (*Config*)
+        CIGIOData     16#05 16#06 16#14 16#00 16#10 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00
+      End CIGIOConnData
+
+    End ConfigInfo
+  End Configuration
+  HWUnitInfoCRC 16#A547
+End HWUnitInfo (* DP820 / CI840 / CI854 *)

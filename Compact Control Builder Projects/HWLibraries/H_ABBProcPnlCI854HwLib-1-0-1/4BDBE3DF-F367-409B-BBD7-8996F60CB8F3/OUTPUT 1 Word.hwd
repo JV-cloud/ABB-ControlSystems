@@ -1,0 +1,40 @@
+
+
+
+(*========================================================*)
+(*                                                        *)
+(*            OUTPUT: 1 Word                              *)
+(*                                                        *)
+(*========================================================*)
+
+HWUnitInfo
+  HWUnitID         16#14D51002
+  Description      "OUTPUT 1 Word"
+  Information      "Word(16 bit) unsign"
+  Icons            ProtocolType
+  Attributes       IoUnit 
+
+  Channels
+    ChannelInfo
+      Number            0
+      ChannelName      "Output Word 0"
+      Datatype          Dword_Out
+      Routine           600
+      CopyParameters    16#0 16#0 16#40000 16#0
+    End ChannelInfo
+  End Channels
+
+  Configuration
+    ConfigInfo
+      ModuleKey        16#14
+      InAreaSize       0 WORD
+      OutAreaSize      1 WORD
+      OutWord
+        WORD  0    0
+      CIGIOConnData
+        CIGIOData        16#01 16#60
+      End CIGIOConnData
+    End ConfigInfo
+  End Configuration
+  HWUnitInfoCRC 16#4D7A
+End HWUnitInfo (* OUTPUT: 1 Word *)

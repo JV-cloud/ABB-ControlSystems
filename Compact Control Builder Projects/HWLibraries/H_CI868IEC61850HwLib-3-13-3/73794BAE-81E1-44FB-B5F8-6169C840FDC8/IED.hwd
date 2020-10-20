@@ -1,0 +1,134 @@
+(****************************************************************************)
+(* FILE            IED.hwd                                                  *)
+(*                                                                          *)
+(* DESCRIPTION     Hardware definition file for IED                         *)
+(*                                                                          *)
+(* AUTHOR          Ramachandragowda G                                       *)
+(*                                                                          *)
+(* All rights reserved. Reproduction, modification, use or disclosure       *)
+(* to third parties without express authority, is forbidden.                *)
+(* Copyright ABB Inc. 2006.                                                 *)
+(*                                                                          *)
+(*                                                                          *)
+(* 27-04-2006 Ramachandragowda G            Initial version        1.0      *)
+(* 17-Jan-2012 Karthick Raja P              Added ReadOnlysubunit #45975    *)
+(*                                                                          *)
+(****************************************************************************)
+FileHeader
+   Contents               "IED"
+   Date                   "2007-04-27"
+   Version                "1.0-1"
+  RequiredSyntaxVersion "3.0"
+End FileHeader
+
+HWUnitInfo  (* IED *)
+   HWUnitID {74B45D7B-2649-4557-89C3-3A45F56E76D6} (* GUID for IED *)
+   Description "IED"
+   Information "IED"
+   Icons DeviceType
+   InstanceNameDisable
+   InterfaceInfo
+     Interface    CIGInterface
+     IoSysType    CIGIO
+     CLSID_CB    {53315084-E413-4c55-92E1-C2E1FAF19460} (*  CLSID_CB  = GUID for CI868 PH in Control builder CB *)
+     CLSID_CTRL  {4AB844AC-2BEE-4910-BA08-CA109A5D7E81}  (* CLSID_CTRL = GUID for CI868 PH in Controler *)
+     HWConfig Fail     (* Change of any parameters affect subunits *)
+   End InterfaceInfo
+   ConnectionInfo
+      ConnectType OneUnit
+      IOConnect Fail
+      IOConfig  NoFail
+   End ConnectionInfo
+
+   ReadOnlyCreateSubUnits (*#45975*)
+
+   DiscreteNumbers
+      1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+      17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32
+      33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48
+      49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64
+      65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80
+      81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96
+      97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112
+      113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128
+      129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144
+      145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160
+      161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176
+      177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192
+      193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208
+      209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224
+      225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240
+      241 242 243 244 245 246 247 248 249 250 251 252 253 254
+   End DiscreteNumbers
+
+   SubUnitTypes
+      HWUnitID {805E717F-CEDD-455d-A799-C991E519080C} (* SPSGroup *)
+      HWUnitID {B744EF80-196A-4bc5-B414-11E11EAB5B54} (* DPSGroup *)
+      HWUnitID {B4A83C35-62C2-48b6-8C0F-4FEF1F02A5A1} (* MVGroup *)
+      HWUnitID {83D821B4-90CF-483d-A6DF-F7B05EDBAA15} (* INSGroup *)
+      HWUnitID {31BD4A61-9C71-4538-80CA-122BF247B539} (* ACDGroup *)
+      HWUnitID {DB13190C-BA0B-4ddb-82E6-945CDA53B5DE} (* ACTGroup *)
+      HWUnitID {7F72D32C-FBBC-4191-9DFE-E1A9C9AE45FB} (* LDevice *)
+      HWUnitID {D54BDA37-35C9-40fe-B71C-8E7725A5AC0F} (* Diag *)      
+   End SubUnitTypes
+
+   Parameters
+      ParamInfo
+         Name HWDVERSION
+         Description "Version of HWD File"
+         ExternalVisible
+         Datatype STRING
+         Default " 1.0-0 "
+         ParamType Numbered 1
+      End ParamInfo
+     ParamInfo 
+         Name IPAddress
+         Description "IP address"
+         ReadOnlyVisible
+         CompileType HWConfig
+         Datatype STRING
+         Default "192.168.0.0" 20
+         ParamType Numbered 2
+      End ParamInfo
+      ParamInfo 
+         Name GENERATEALARMS
+         Description "Generate Alarms"
+         CompileType HWConfig
+         Datatype ENUM
+         Default 1
+         ParValIndex 1
+         ParamType Numbered 3
+      End ParamInfo
+   End Parameters
+
+   ParValList
+      ParVal
+         ParValIndex 1
+         ENUM
+         "Disable" 0
+         "Enable"  1
+      End ParVal
+   End ParValList
+
+   Channels
+    ChannelInfo
+      Number         1
+      ChannelName   "UnitStatus"
+      Datatype       Status_In
+      Routine        900
+      CopyParameters 0 0 16#50000
+    End ChannelInfo     
+ End Channels
+
+   UnitStatusText
+     DeviceSpecific10 "No Data Received from this IED"
+     DeviceSpecific9 "Connection Failed with this IED"
+   End UnitStatusText
+
+   UnitStatusSeverity
+     DeviceSpecific10   GeneralError TriggerAlarm SeverityHigh
+     DeviceSpecific9   GeneralError TriggerAlarm SeverityHigh  
+   End UnitStatusSeverity
+
+  HWUnitInfoCRC 16#69E3
+End HWUnitInfo

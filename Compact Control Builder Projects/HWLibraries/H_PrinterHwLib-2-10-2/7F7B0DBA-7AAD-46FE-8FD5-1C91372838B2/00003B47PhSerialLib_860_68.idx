@@ -1,0 +1,696 @@
+<HEAD>
+Index of symbols created 2013-12-16 22:51:05.81 
+</HEAD>
+<SECTIONS=15>
+00010000 00019e40 .text
+00019e40 0001a00c .got2
+0001a00c 0001a7a8 .fixup
+0001a7a8 0001a7cc .bss
+0001a7cc 0001a7d8 .data
+0001a7d8 0001d123 .debug_abbrev
+0001d123 00039d69 .debug_info
+00039d69 0003da1c .debug_line
+0003da1c 00040174 .debug_frame
+00040174 00045c41 .debug_loc
+00045c41 00048d8d .debug_pubnames
+00048d8d 0004914d .debug_aranges
+0004914d 000495ad .debug_ranges
+000495ad 00051a69 .debug_str
+00051a69 00051a69 .comment
+</SECTIONS>
+<SYMBOLS=674>
+00000000 PhSerialLib_860_68.elf EXE_HEAD
+00000064 PhSerialLib_860_68.elf CommunicationDevice::operator new(unsigned int, IHeapCallback*)
+00000124 PhSerialLib_860_68.elf CommunicationDevice::DelStringDev(void*)
+00000154 PhSerialLib_860_68.elf CommunicationDevice::GetDeviceType()
+00000164 PhSerialLib_860_68.elf CommunicationDevice::DisConnect()
+00000174 PhSerialLib_860_68.elf CommunicationDevice::Update(DeviceConfiguration*)
+000001a8 PhSerialLib_860_68.elf CommunicationDevice::UnReserve(unsigned long)
+000001c8 PhSerialLib_860_68.elf CommunicationDevice::Reserve(unsigned long)
+000001e8 PhSerialLib_860_68.elf CommunicationDevice::GetMessage(tGCString*, DeviceConfiguration*)
+00000284 PhSerialLib_860_68.elf CommunicationDevice::Read(tGCString*, DeviceConfiguration*)
+00000550 PhSerialLib_860_68.elf CommunicationDevice::CommunicationDevice(IHeapCallback*)
+000005d0 PhSerialLib_860_68.elf CommunicationDevice::CommunicationDevice(IHeapCallback*)
+0000064c PhSerialLib_860_68.elf CommunicationDevice::Write(tGCString*, DeviceConfiguration*)
+000006d4 PhSerialLib_860_68.elf CommunicationDevice::Abort(DeviceConfiguration*)
+0000073c PhSerialLib_860_68.elf DeviceConfiguration::operator new(unsigned int, IHeapCallback*)
+000007fc PhSerialLib_860_68.elf DeviceConfiguration::DeviceConfiguration(IHeapCallback*)
+00000830 PhSerialLib_860_68.elf DeviceConfiguration::DeviceConfiguration(IHeapCallback*)
+00000864 PhSerialLib_860_68.elf DeviceConfiguration::UnPackDefaultSetupData(unsigned long, IGenClientCallback1*)
+00000bd8 PhSerialLib_860_68.elf DeviceConfiguration::UnPackSetupData(unsigned long, IGenClientCallback1*, int*)
+00001114 PhSerialLib_860_68.elf DeviceConfiguration::GetSetupData(bool*, bool*)
+00001130 PhSerialLib_860_68.elf DeviceConfiguration::GetUpdateData(int*, int*, int*)
+00001154 PhSerialLib_860_68.elf DeviceConfiguration::GetPrintReservationReq()
+00001164 PhSerialLib_860_68.elf DeviceConfiguration::GetConfDevice()
+000011ac PhSerialLib_860_68.elf Device::Device()
+00001208 PhSerialLib_860_68.elf Device::Device()
+00001260 PhSerialLib_860_68.elf Device::Init(IVOSCallback2*)
+000012a0 PhSerialLib_860_68.elf Device::Release()
+000012e8 PhSerialLib_860_68.elf Device::Connect(ISerialDrvCallback*)
+000012fc PhSerialLib_860_68.elf Device::DisConnect()
+00001314 PhSerialLib_860_68.elf Device::IsConnected()
+0000132c PhSerialLib_860_68.elf Device::ScanChannel()
+000014ac PhSerialLib_860_68.elf Device::readBuffer(tGCString*, unsigned int)
+000015f4 PhSerialLib_860_68.elf Device::clearRdBuffer()
+00001690 PhSerialLib_860_68.elf Device::Reserve(unsigned long)
+000016a0 PhSerialLib_860_68.elf Device::UnReserve(unsigned long)
+000016b4 PhSerialLib_860_68.elf DeviceManager::operator new(unsigned int, IHeapCallback*)
+00001774 PhSerialLib_860_68.elf DeviceManager::DelDeviceManager(void*)
+000017a8 PhSerialLib_860_68.elf DeviceManager::OpenChannel()
+00001924 PhSerialLib_860_68.elf DeviceManager::CloseChannel()
+00001974 PhSerialLib_860_68.elf DeviceManager::ReqOpenChannel(int, int)
+00001990 PhSerialLib_860_68.elf DeviceManager::IsReqOpenChannel()
+000019b4 PhSerialLib_860_68.elf DeviceManager::ReqConnectChannel(unsigned long)
+000019cc PhSerialLib_860_68.elf DeviceManager::IsReqConnectChannel()
+000019f0 PhSerialLib_860_68.elf DeviceManager::DisConnectChannel(unsigned long)
+00001a94 PhSerialLib_860_68.elf DeviceManager::DisConnectChannel()
+00001bac PhSerialLib_860_68.elf DeviceManager::GetConnection()
+00001bbc PhSerialLib_860_68.elf DeviceManager::IsConnected()
+00001c30 PhSerialLib_860_68.elf DeviceManager::ConnectChannel(unsigned long)
+00001d28 PhSerialLib_860_68.elf DeviceManager::WriteChannel(unsigned long)
+00001e10 PhSerialLib_860_68.elf DeviceManager::ReadChannel(unsigned long)
+00001f40 PhSerialLib_860_68.elf DeviceManager::ScanChannel()
+00001f78 PhSerialLib_860_68.elf DeviceManager::wd()
+00001fe8 PhSerialLib_860_68.elf DeviceManager::QueueWork(unsigned long, int)
+000020fc PhSerialLib_860_68.elf DeviceManager::DeQueueWork(unsigned long*, int)
+000021dc PhSerialLib_860_68.elf DeviceManager::EmptyWriteQueue() const
+0000222c PhSerialLib_860_68.elf DeviceManager::SetAbortStatus(unsigned long)
+00002338 PhSerialLib_860_68.elf DeviceManager::AbortChannel(unsigned long)
+00002420 PhSerialLib_860_68.elf DeviceManager::AbortChannel()
+00002498 PhSerialLib_860_68.elf DeviceManager::HotRemove()
+0000258c PhSerialLib_860_68.elf DeviceManager::PrepareSerialThreadStop()
+00002630 PhSerialLib_860_68.elf DeviceManager::StopSerialThread()
+00002740 PhSerialLib_860_68.elf DeviceManager::TraceState()
+00002cfc PhSerialLib_860_68.elf DeviceManager::SetDeviceInUse()
+00002d44 PhSerialLib_860_68.elf DeviceManager::UnPackSetupData(unsigned long, int*)
+00002d70 PhSerialLib_860_68.elf DeviceManager::GetMessage(unsigned long)
+00002eb4 PhSerialLib_860_68.elf DeviceManager::UnPackDefaultSetupData(unsigned long)
+00002ee0 PhSerialLib_860_68.elf DeviceManager::Connect(unsigned long)
+0000301c PhSerialLib_860_68.elf DeviceManager::CreateDevice(int)
+00003110 PhSerialLib_860_68.elf DeviceManager::DeviceManager(IHeapCallback*, IGenClientCallback1*, IDriverFactoryCallback*, IVOSCallback2*, ISystemUtilitiesCallback4*, ICriticalRegionCallback*)
+000032e8 PhSerialLib_860_68.elf DeviceManager::DeviceManager(IHeapCallback*, IGenClientCallback1*, IDriverFactoryCallback*, IVOSCallback2*, ISystemUtilitiesCallback4*, ICriticalRegionCallback*)
+000034bc PhSerialLib_860_68.elf ThreadStarter(int, int, int, int)
+000034e0 PhSerialLib_860_68.elf PrinterDevice::operator new(unsigned int, IHeapCallback*)
+000035a0 PhSerialLib_860_68.elf PrinterDevice::DelStringDev(void*)
+000035d0 PhSerialLib_860_68.elf PrinterDevice::GetDeviceType()
+000035e0 PhSerialLib_860_68.elf PrinterDevice::Write(tGCString*, DeviceConfiguration*)
+00003654 PhSerialLib_860_68.elf PrinterDevice::Read(tGCString*, DeviceConfiguration*)
+00003664 PhSerialLib_860_68.elf PrinterDevice::Abort(DeviceConfiguration*)
+00003674 PhSerialLib_860_68.elf PrinterDevice::GetMessage(tGCString*, DeviceConfiguration*)
+00003684 PhSerialLib_860_68.elf PrinterDevice::Reserve(unsigned long)
+000036b4 PhSerialLib_860_68.elf PrinterDevice::UnReserve(unsigned long)
+000036e4 PhSerialLib_860_68.elf PrinterDevice::DisConnect()
+00003718 PhSerialLib_860_68.elf PrinterDevice::PrinterDevice(IHeapCallback*)
+00003790 PhSerialLib_860_68.elf PrinterDevice::PrinterDevice(IHeapCallback*)
+00003804 PhSerialLib_860_68.elf DeviceManager::CheckWriteQueue()
+00003998 PhSerialLib_860_68.elf DeviceManager::SerialThread()
+00003c00 PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::ReadRawReq(unsigned long, int*)
+00003c08 PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::ReadRawReq(unsigned long, int*)
+00003c10 PhSerialLib_860_68.elf CPhSerialLib::ReadRawReq(unsigned long, int*)
+00003c28 PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::WriteRawReq(unsigned long, int*)
+00003c30 PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::WriteRawReq(unsigned long, int*)
+00003c38 PhSerialLib_860_68.elf CPhSerialLib::WriteRawReq(unsigned long, int*)
+00003c50 PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::AbortRawReq(unsigned long, int*)
+00003c58 PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::AbortRawReq(unsigned long, int*)
+00003c60 PhSerialLib_860_68.elf CPhSerialLib::AbortRawReq(unsigned long, int*)
+00003c78 PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::GetExtendedStatusSize(unsigned long, int*, int*)
+00003c80 PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::GetExtendedStatusSize(unsigned long, int*, int*)
+00003c88 PhSerialLib_860_68.elf CPhSerialLib::GetExtendedStatusSize(unsigned long, int*, int*)
+00003ca0 PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::GetExtendedStatus(unsigned long, int, teIEC1131Type*, tGCValue*, int*)
+00003ca8 PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::GetExtendedStatus(unsigned long, int, teIEC1131Type*, tGCValue*, int*)
+00003cb0 PhSerialLib_860_68.elf CPhSerialLib::GetExtendedStatus(unsigned long, int, teIEC1131Type*, tGCValue*, int*)
+00003cc8 PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::SetStatus(unsigned long, int, int*)
+00003cd0 PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::SetStatus(unsigned long, int, int*)
+00003cd8 PhSerialLib_860_68.elf CPhSerialLib::SetStatus(unsigned long, int, int*)
+00003cf0 PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::ReadRes(unsigned long, int, int*)
+00003cf8 PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::ReadRes(unsigned long, int, int*)
+00003d00 PhSerialLib_860_68.elf CPhSerialLib::ReadRes(unsigned long, int, int*)
+00003d18 PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::WriteRes(unsigned long, int, int*)
+00003d20 PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::WriteRes(unsigned long, int, int*)
+00003d28 PhSerialLib_860_68.elf CPhSerialLib::WriteRes(unsigned long, int, int*)
+00003d40 PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::PerformSwitchover(trHWFAddress, teHWFErrorCode*)
+00003d48 PhSerialLib_860_68.elf CPhSerialLib::PerformSwitchover(trHWFAddress, teHWFErrorCode*)
+00003d84 PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::PerformFailover(trHWFAddress, teHWFErrorCode*)
+00003d8c PhSerialLib_860_68.elf CPhSerialLib::PerformFailover(trHWFAddress, teHWFErrorCode*)
+00003dc8 PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::StartUsingDevice(trHWFAddress, teHWFErrorCode*)
+00003dd0 PhSerialLib_860_68.elf CPhSerialLib::StartUsingDevice(trHWFAddress, teHWFErrorCode*)
+00003e0c PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::RemoveHWConfiguration(trHWFAddress, teHWFErrorCode*)
+00003e14 PhSerialLib_860_68.elf CPhSerialLib::RemoveHWConfiguration(trHWFAddress, teHWFErrorCode*)
+00003eac PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::RemoveIoConnection(unsigned long, teHWFErrorCode*)
+00003eb4 PhSerialLib_860_68.elf CPhSerialLib::RemoveIoConnection(unsigned long, teHWFErrorCode*)
+00003ef4 PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::PhResponsibilityForRestart(trHWFAddress, teHWFErrorCode*)
+00003efc PhSerialLib_860_68.elf CPhSerialLib::PhResponsibilityForRestart(trHWFAddress, teHWFErrorCode*)
+00003f4c PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::PhResponsibilityForBackupDevice(trHWFAddress, teHWFErrorCode*)
+00003f54 PhSerialLib_860_68.elf CPhSerialLib::PhResponsibilityForBackupDevice(trHWFAddress, teHWFErrorCode*)
+00003f88 PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::StartUsingIoConnection(trHWFAddress, unsigned long, teHWFErrorCode*)
+00003f90 PhSerialLib_860_68.elf CPhSerialLib::StartUsingIoConnection(trHWFAddress, unsigned long, teHWFErrorCode*)
+00003fe0 PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::GetStatus(trHWFAddress, teHWFUnitKind, unsigned long*, unsigned long*, teHWFErrorCode*)
+00003fe8 PhSerialLib_860_68.elf CPhSerialLib::GetStatus(trHWFAddress, teHWFUnitKind, unsigned long*, unsigned long*, teHWFErrorCode*)
+00004048 PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::ResumeOperation(trHWFAddress const*, eOLUStatus*)
+00004054 PhSerialLib_860_68.elf CPhSerialLib::ResumeOperation(trHWFAddress const*, eOLUStatus*)
+000040b0 PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::PhResponsibilityForOLU(trHWFAddress const*, eOLUStatus*)
+000040bc PhSerialLib_860_68.elf CPhSerialLib::PhResponsibilityForOLU(trHWFAddress const*, eOLUStatus*)
+00004198 PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::PrepareForLeavingOLU(trHWFAddress const*, eOLUStatus*)
+000041a4 PhSerialLib_860_68.elf CPhSerialLib::PrepareForLeavingOLU(trHWFAddress const*, eOLUStatus*)
+00004200 PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::PrepareForFirmwareDownload(trHWFAddress const*, unsigned long, eOLUStatus*)
+0000420c PhSerialLib_860_68.elf CPhSerialLib::PrepareForFirmwareDownload(trHWFAddress const*, unsigned long, eOLUStatus*)
+00004268 PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::PrepareForApplicationStop(trHWFAddress const*, eOLUStatus*)
+00004274 PhSerialLib_860_68.elf CPhSerialLib::PrepareForApplicationStop(trHWFAddress const*, eOLUStatus*)
+000042d0 PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::PrepareForAppAndConfigDownload(trHWFAddress const*, eOLUStatus*)
+000042dc PhSerialLib_860_68.elf CPhSerialLib::PrepareForAppAndConfigDownload(trHWFAddress const*, eOLUStatus*)
+00004338 PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::KickWatchdog(unsigned short*, teHWFErrorCode*)
+00004340 PhSerialLib_860_68.elf CPhSerialLib::KickWatchdog(unsigned short*, teHWFErrorCode*)
+000043a8 PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::PhResponsibility(trHWFAddress, teHWFErrorCode*)
+000043b4 PhSerialLib_860_68.elf CPhSerialLib::PhResponsibility(trHWFAddress, teHWFErrorCode*)
+00004640 PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::PrepareForTermination(teHWFErrorCode*)
+00004648 PhSerialLib_860_68.elf CPhSerialLib::PrepareForTermination(teHWFErrorCode*)
+0000468c PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::AbortVarReq(unsigned long, int*)
+00004694 PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::AbortVarReq(unsigned long, int*)
+0000469c PhSerialLib_860_68.elf CPhSerialLib::AbortVarReq(unsigned long, int*)
+000046e0 PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::WriteVarReq(unsigned long, int*)
+000046e8 PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::WriteVarReq(unsigned long, int*)
+000046f0 PhSerialLib_860_68.elf CPhSerialLib::WriteVarReq(unsigned long, int*)
+00004734 PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::ReadVarReq(unsigned long, int*)
+0000473c PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::ReadVarReq(unsigned long, int*)
+00004744 PhSerialLib_860_68.elf CPhSerialLib::ReadVarReq(unsigned long, int*)
+000047f0 PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::DisconnectReq(unsigned long, unsigned long, int*)
+000047f8 PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::DisconnectReq(unsigned long, unsigned long, int*)
+00004800 PhSerialLib_860_68.elf CPhSerialLib::DisconnectReq(unsigned long, unsigned long, int*)
+0000484c PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::ConnectReq(unsigned long, unsigned long*, int*)
+00004854 PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::ConnectReq(unsigned long, unsigned long*, int*)
+0000485c PhSerialLib_860_68.elf CPhSerialLib::ConnectReq(unsigned long, unsigned long*, int*)
+000048fc PhSerialLib_860_68.elf CPhSerialLib::SetCommonCallbackInterface(ICommonCallback*)
+00004b40 PhSerialLib_860_68.elf CPhSerialLib::GetProductInfo(unsigned char*, unsigned char*, unsigned char*, unsigned long)
+00004bcc PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::PhResponsibilityForHotInsert(trHWFAddress, teHWFErrorCode*)
+00004bd4 PhSerialLib_860_68.elf CPhSerialLib::PhResponsibilityForHotInsert(trHWFAddress, teHWFErrorCode*)
+00004ccc PhSerialLib_860_68.elf CPhSerialLib::CPhSerialLib()
+00004d9c PhSerialLib_860_68.elf CPhSerialLib::CPhSerialLib()
+00004e68 PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::~CPhSerialLib()
+00004e70 PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::~CPhSerialLib()
+00004e78 PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::~CPhSerialLib()
+00004e80 PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::~CPhSerialLib()
+00004e88 PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::~CPhSerialLib()
+00004e94 PhSerialLib_860_68.elf CPhSerialLib::~CPhSerialLib()
+00004f38 PhSerialLib_860_68.elf CPhSerialLib::~CPhSerialLib()
+00004fd8 PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::~CPhSerialLib()
+00004fe0 PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::~CPhSerialLib()
+00004fe8 PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::~CPhSerialLib()
+00004ff0 PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::~CPhSerialLib()
+00004ff8 PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::~CPhSerialLib()
+00005004 PhSerialLib_860_68.elf CPhSerialLib::~CPhSerialLib()
+000050bc PhSerialLib_860_68.elf ObjectFactory
+000051e4 PhSerialLib_860_68.elf TerminalDevice::operator new(unsigned int, IHeapCallback*)
+000052a4 PhSerialLib_860_68.elf TerminalDevice::DelLineDev(void*)
+000052d4 PhSerialLib_860_68.elf TerminalDevice::GetDeviceType()
+000052e4 PhSerialLib_860_68.elf TerminalDevice::Write(tGCString*, DeviceConfiguration*)
+00005328 PhSerialLib_860_68.elf TerminalDevice::GetMessage(tGCString*, DeviceConfiguration*)
+00005338 PhSerialLib_860_68.elf TerminalDevice::KeyState()
+00005444 PhSerialLib_860_68.elf TerminalDevice::ebAddCharacter(char)
+00005464 PhSerialLib_860_68.elf TerminalDevice::EndOfLine()
+000054c8 PhSerialLib_860_68.elf TerminalDevice::ebDeleteCharacter()
+00005504 PhSerialLib_860_68.elf TerminalDevice::ebCursorBackward(int)
+00005560 PhSerialLib_860_68.elf TerminalDevice::AddCharacter()
+000056b4 PhSerialLib_860_68.elf TerminalDevice::BeginOfLine()
+00005700 PhSerialLib_860_68.elf TerminalDevice::LeftArrow()
+00005738 PhSerialLib_860_68.elf TerminalDevice::DeleteCharacter()
+000057e4 PhSerialLib_860_68.elf TerminalDevice::ebCursorForward(int)
+00005840 PhSerialLib_860_68.elf TerminalDevice::RightArrow()
+0000588c PhSerialLib_860_68.elf TerminalDevice::ebDeleteLine()
+000058c8 PhSerialLib_860_68.elf TerminalDevice::DeleteLine()
+00005920 PhSerialLib_860_68.elf TerminalDevice::EditLineBuffer()
+00005a54 PhSerialLib_860_68.elf TerminalDevice::ebEmptyBuffer()
+00005a90 PhSerialLib_860_68.elf TerminalDevice::UnReserve(unsigned long)
+00005ab0 PhSerialLib_860_68.elf TerminalDevice::Reserve(unsigned long)
+00005ad0 PhSerialLib_860_68.elf TerminalDevice::Abort(DeviceConfiguration*)
+00005b24 PhSerialLib_860_68.elf TerminalDevice::Read(tGCString*, DeviceConfiguration*)
+00005c58 PhSerialLib_860_68.elf TerminalDevice::DisConnect()
+00005c80 PhSerialLib_860_68.elf TerminalDevice::TerminalDevice(IHeapCallback*)
+00005d14 PhSerialLib_860_68.elf TerminalDevice::TerminalDevice(IHeapCallback*)
+00005da8 PhSerialLib_860_68.elf operator delete(void*)
+00005de4 PhSerialLib_860_68.elf __cxa_pure_virtual
+00005e1c PhSerialLib_860_68.elf CPhCommon_Base::CPhCommon_Base()
+00005e80 PhSerialLib_860_68.elf CPhCommon_Base::CPhCommon_Base()
+00005ee0 PhSerialLib_860_68.elf CPhCommon_Base::GetProductInfo(unsigned char*, unsigned char*, unsigned char*, unsigned long)
+00005f1c PhSerialLib_860_68.elf CPhCommon_Base::SetCommonCallbackInterface(ICommonCallback*)
+00005f4c PhSerialLib_860_68.elf CPhConfig_Base1::PrepareForTermination(teHWFErrorCode*)
+00005f7c PhSerialLib_860_68.elf CPhConfig_Base1::RemoveHWConfiguration(trHWFAddress, teHWFErrorCode*)
+00005fac PhSerialLib_860_68.elf CPhConfig_Base1::RemoveIoConnection(unsigned long, teHWFErrorCode*)
+00005fe0 PhSerialLib_860_68.elf CPhConfig_Base1::PhResponsibilityForRestart(trHWFAddress, teHWFErrorCode*)
+00006010 PhSerialLib_860_68.elf CPhConfig_Base1::PhResponsibility(trHWFAddress, teHWFErrorCode*)
+00006040 PhSerialLib_860_68.elf CPhConfig_Base1::StartUsingIoConnection(trHWFAddress, unsigned long, teHWFErrorCode*)
+00006074 PhSerialLib_860_68.elf CPhConfig_Base1::PhResponsibilityForBackupDevice(trHWFAddress, teHWFErrorCode*)
+000060a4 PhSerialLib_860_68.elf CPhConfig_Base1::PhResponsibilityForHotInsert(trHWFAddress, teHWFErrorCode*)
+000060d4 PhSerialLib_860_68.elf CPhConfig_Base1::PerformSwitchover(trHWFAddress, teHWFErrorCode*)
+00006104 PhSerialLib_860_68.elf CPhConfig_Base1::StartUsingDevice(trHWFAddress, teHWFErrorCode*)
+00006134 PhSerialLib_860_68.elf CPhConfig_Base1::PerformFailover(trHWFAddress, teHWFErrorCode*)
+00006164 PhSerialLib_860_68.elf CPhClient_Base::ConnectReq(unsigned long, unsigned long*, int*)
+0000619c PhSerialLib_860_68.elf CPhClient_Base::DisconnectReq(unsigned long, unsigned long, int*)
+000061d4 PhSerialLib_860_68.elf CPhClient_Base::ReadVarReq(unsigned long, int*)
+00006208 PhSerialLib_860_68.elf CPhClient_Base::WriteVarReq(unsigned long, int*)
+0000623c PhSerialLib_860_68.elf CPhClient_Base::ReadRawReq(unsigned long, int*)
+00006270 PhSerialLib_860_68.elf CPhClient_Base::WriteRawReq(unsigned long, int*)
+000062a4 PhSerialLib_860_68.elf CPhClient_Base::AbortRawReq(unsigned long, int*)
+000062d8 PhSerialLib_860_68.elf CPhClient_Base::AbortVarReq(unsigned long, int*)
+0000630c PhSerialLib_860_68.elf CPhClient_Base::GetExtendedStatusSize(unsigned long, int*, int*)
+00006344 PhSerialLib_860_68.elf CPhClient_Base::GetExtendedStatus(unsigned long, int, teIEC1131Type*, tGCValue*, int*)
+00006384 PhSerialLib_860_68.elf CPhClient_Base::SetStatus(unsigned long, int, int*)
+000063bc PhSerialLib_860_68.elf CPhClient_Base::ReadRes(unsigned long, int, int*)
+000063f4 PhSerialLib_860_68.elf CPhClient_Base::WriteRes(unsigned long, int, int*)
+0000642c PhSerialLib_860_68.elf CPhClient_Base1::ConnectReq(unsigned long, unsigned long*, int*)
+00006464 PhSerialLib_860_68.elf CPhClient_Base1::DisconnectReq(unsigned long, unsigned long, int*)
+0000649c PhSerialLib_860_68.elf CPhClient_Base1::ReadVarReq(unsigned long, int*)
+000064d0 PhSerialLib_860_68.elf CPhClient_Base1::WriteVarReq(unsigned long, int*)
+00006504 PhSerialLib_860_68.elf CPhClient_Base1::RegisterVarReq(unsigned long, int*)
+00006538 PhSerialLib_860_68.elf CPhClient_Base1::ReadRawReq(unsigned long, int*)
+0000656c PhSerialLib_860_68.elf CPhClient_Base1::WriteRawReq(unsigned long, int*)
+000065a0 PhSerialLib_860_68.elf CPhClient_Base1::AbortRawReq(unsigned long, int*)
+000065d4 PhSerialLib_860_68.elf CPhClient_Base1::AbortVarReq(unsigned long, int*)
+00006608 PhSerialLib_860_68.elf CPhClient_Base1::TimeoutAbortVarReq(unsigned long, int*)
+0000666c PhSerialLib_860_68.elf CPhClient_Base1::GetExtendedStatusSize(unsigned long, int*, int*)
+000066a4 PhSerialLib_860_68.elf CPhClient_Base1::GetExtendedStatus(unsigned long, int, teIEC1131Type*, tGCValue*, int*)
+000066e4 PhSerialLib_860_68.elf CPhClient_Base1::BufferTakeForReceive(unsigned long, int*)
+00006718 PhSerialLib_860_68.elf CPhClient_Base1::BufferGiveForReceive(unsigned long, int, int*)
+00006750 PhSerialLib_860_68.elf CPhClient_Base1::BufferTakeForSend(unsigned long, unsigned int, int*)
+00006788 PhSerialLib_860_68.elf CPhClient_Base1::BufferGiveForSend(unsigned long, unsigned int, int, int*)
+000067c4 PhSerialLib_860_68.elf CPhClient_Base1::SetStatus(unsigned long, int, int*)
+000067fc PhSerialLib_860_68.elf CPhClient_Base1::ReadRes(unsigned long, int, int*)
+00006834 PhSerialLib_860_68.elf CPhClient_Base1::WriteRes(unsigned long, int, int*)
+0000686c PhSerialLib_860_68.elf CPhStatus_Base1::KickWatchdog(unsigned short*, teHWFErrorCode*)
+000068a0 PhSerialLib_860_68.elf CPhStatus_Base1::GetStatus(trHWFAddress, teHWFUnitKind, unsigned long*, unsigned long*, teHWFErrorCode*)
+000068dc PhSerialLib_860_68.elf CPhIOAccess_Base::GetCopyRoutineReference(unsigned int, void (**)(short, void*, void*), IOAccessErrorCode*)
+00006914 PhSerialLib_860_68.elf CPhIOAccess_Base::ObtainDPM(eAreaType, trHWFAddress, IOAccessErrorCode*)
+00006948 PhSerialLib_860_68.elf CPhIOAccess_Base::ReleaseDPM(eAreaType, trHWFAddress, IOAccessErrorCode*)
+0000697c PhSerialLib_860_68.elf CPhDiagnostics_Base::PhDiagnosticsTableNew(teDiagErrorCode*)
+000069ac PhSerialLib_860_68.elf CPhDiagnostics_Base::PhDiagnosticsTableCleared(teDiagErrorCode*)
+000069dc PhSerialLib_860_68.elf CPhOLU_Base::PrepareForFirmwareDownload(trHWFAddress const*, unsigned long, eOLUStatus*)
+00006a14 PhSerialLib_860_68.elf CPhOLU_Base::PrepareForApplicationStop(trHWFAddress const*, eOLUStatus*)
+00006a48 PhSerialLib_860_68.elf CPhOLU_Base::ResumeOperation(trHWFAddress const*, eOLUStatus*)
+00006a7c PhSerialLib_860_68.elf CPhOLU_Base::PhResponsibilityForOLU(trHWFAddress const*, eOLUStatus*)
+00006ab0 PhSerialLib_860_68.elf CPhOLU_Base::PrepareForLeavingOLU(trHWFAddress const*, eOLUStatus*)
+00006ae4 PhSerialLib_860_68.elf CPhOLU_Base::PrepareForAppAndConfigDownload(trHWFAddress const*, eOLUStatus*)
+00006b18 PhSerialLib_860_68.elf CPhOLU_Base1::PrepareForFirmwareDownload(trHWFAddress const*, unsigned long, eOLUStatus*)
+00006b50 PhSerialLib_860_68.elf CPhOLU_Base1::PrepareForApplicationStop(trHWFAddress const*, eOLUStatus*)
+00006b84 PhSerialLib_860_68.elf CPhOLU_Base1::ResumeOperation(trHWFAddress const*, eOLUStatus*)
+00006bb8 PhSerialLib_860_68.elf CPhOLU_Base1::PhResponsibilityForOLU(trHWFAddress const*, eOLUStatus*)
+00006bec PhSerialLib_860_68.elf CPhOLU_Base1::PrepareForLeavingOLU(trHWFAddress const*, eOLUStatus*)
+00006c20 PhSerialLib_860_68.elf CPhOLU_Base1::PrepareForAppAndConfigDownload(trHWFAddress const*, eOLUStatus*)
+00006c54 PhSerialLib_860_68.elf CPhOLU_Base1::OLUEnablePhCom(trHWFAddress const*, eOLUStatus*)
+00006c88 PhSerialLib_860_68.elf CPhOLU_Base1::OLUDisablePhCom(trHWFAddress const*, eOLUStatus*)
+00006cbc PhSerialLib_860_68.elf CPhOLU_Base1::InformPhIsInSwitch(trHWFAddress const*, eOLUStatus*)
+00006cf4 PhSerialLib_860_68.elf CPhCommon_Base::~CPhCommon_Base()
+00006d70 PhSerialLib_860_68.elf CPhCommon_Base::~CPhCommon_Base()
+00006dec PhSerialLib_860_68.elf CPhCommon_Base::~CPhCommon_Base()
+00006e64 PhSerialLib_860_68.elf CommunicationDevice::IsConnected()
+00006e84 PhSerialLib_860_68.elf CommunicationDevice::Connect(ISerialDrvCallback*)
+00006ea8 PhSerialLib_860_68.elf CommunicationDevice::~CommunicationDevice()
+00006ef0 PhSerialLib_860_68.elf CommunicationDevice::~CommunicationDevice()
+00006f38 PhSerialLib_860_68.elf Device::Update(DeviceConfiguration*)
+00006f48 PhSerialLib_860_68.elf Device::~Device()
+00006f8c PhSerialLib_860_68.elf Device::~Device()
+00006fc8 PhSerialLib_860_68.elf PrinterDevice::IsConnected()
+00006fe8 PhSerialLib_860_68.elf PrinterDevice::Connect(ISerialDrvCallback*)
+0000700c PhSerialLib_860_68.elf PrinterDevice::~PrinterDevice()
+00007058 PhSerialLib_860_68.elf PrinterDevice::~PrinterDevice()
+0000709c PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::AddRef()
+000070a4 PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::AddRef()
+000070ac PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::AddRef()
+000070b4 PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::AddRef()
+000070bc PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::AddRef()
+000070c4 PhSerialLib_860_68.elf CPhSerialLib::AddRef()
+000070e4 PhSerialLib_860_68.elf IUnknown::~IUnknown()
+00007128 PhSerialLib_860_68.elf IUnknown::~IUnknown()
+00007168 PhSerialLib_860_68.elf IPhConfig1::~IPhConfig1()
+000071ac PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::QueryInterface(_GUID const&, void**)
+000071b4 PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::QueryInterface(_GUID const&, void**)
+000071bc PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::QueryInterface(_GUID const&, void**)
+000071c4 PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::QueryInterface(_GUID const&, void**)
+000071cc PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::QueryInterface(_GUID const&, void**)
+000071d8 PhSerialLib_860_68.elf CPhSerialLib::QueryInterface(_GUID const&, void**)
+0000732c PhSerialLib_860_68.elf IPhOLU::~IPhOLU()
+00007378 PhSerialLib_860_68.elf IPhStatus1::~IPhStatus1()
+000073c4 PhSerialLib_860_68.elf IPhStatus1::~IPhStatus1()
+0000740c PhSerialLib_860_68.elf IPhConfig1::~IPhConfig1()
+00007458 PhSerialLib_860_68.elf IPhOLU::~IPhOLU()
+000074a0 PhSerialLib_860_68.elf IPhClient1::~IPhClient1()
+000074ec PhSerialLib_860_68.elf IPhClient1::~IPhClient1()
+00007534 PhSerialLib_860_68.elf IPhClient::~IPhClient()
+00007580 PhSerialLib_860_68.elf IPhClient::~IPhClient()
+000075c4 PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::Release()
+000075cc PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::Release()
+000075d4 PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::Release()
+000075dc PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::Release()
+000075e4 PhSerialLib_860_68.elf non-virtual thunk to CPhSerialLib::Release()
+000075ec PhSerialLib_860_68.elf CPhSerialLib::Release()
+00007658 PhSerialLib_860_68.elf TerminalDevice::IsConnected()
+00007678 PhSerialLib_860_68.elf TerminalDevice::Connect(ISerialDrvCallback*)
+0000769c PhSerialLib_860_68.elf TerminalDevice::~TerminalDevice()
+000076e4 PhSerialLib_860_68.elf TerminalDevice::~TerminalDevice()
+00007730 PhSerialLib_860_68.elf IUnknown::IUnknown()
+00007788 PhSerialLib_860_68.elf IPhCommon::IPhCommon()
+000077ec PhSerialLib_860_68.elf IUnknown::~IUnknown()
+0000785c PhSerialLib_860_68.elf IPhConfig1::~IPhConfig1()
+000078d8 PhSerialLib_860_68.elf CPhConfig_Base1::~CPhConfig_Base1()
+00007954 PhSerialLib_860_68.elf CPhConfig_Base1::~CPhConfig_Base1()
+000079d0 PhSerialLib_860_68.elf IPhClient::~IPhClient()
+00007a4c PhSerialLib_860_68.elf CPhClient_Base::~CPhClient_Base()
+00007ac8 PhSerialLib_860_68.elf CPhClient_Base::~CPhClient_Base()
+00007b44 PhSerialLib_860_68.elf IPhClient1::~IPhClient1()
+00007bc0 PhSerialLib_860_68.elf CPhClient_Base1::~CPhClient_Base1()
+00007c3c PhSerialLib_860_68.elf CPhClient_Base1::~CPhClient_Base1()
+00007cb8 PhSerialLib_860_68.elf IPhStatus1::~IPhStatus1()
+00007d34 PhSerialLib_860_68.elf CPhStatus_Base1::~CPhStatus_Base1()
+00007db0 PhSerialLib_860_68.elf CPhStatus_Base1::~CPhStatus_Base1()
+00007e2c PhSerialLib_860_68.elf IPhIOAccess::~IPhIOAccess()
+00007ea8 PhSerialLib_860_68.elf CPhIOAccess_Base::~CPhIOAccess_Base()
+00007f24 PhSerialLib_860_68.elf IPhIOAccess::~IPhIOAccess()
+00007fa0 PhSerialLib_860_68.elf IPhIOAccess::~IPhIOAccess()
+0000801c PhSerialLib_860_68.elf CPhIOAccess_Base::~CPhIOAccess_Base()
+00008098 PhSerialLib_860_68.elf IPhDiagnostics::~IPhDiagnostics()
+00008114 PhSerialLib_860_68.elf CPhDiagnostics_Base::~CPhDiagnostics_Base()
+00008190 PhSerialLib_860_68.elf IPhDiagnostics::~IPhDiagnostics()
+0000820c PhSerialLib_860_68.elf IPhDiagnostics::~IPhDiagnostics()
+00008288 PhSerialLib_860_68.elf CPhDiagnostics_Base::~CPhDiagnostics_Base()
+00008304 PhSerialLib_860_68.elf IPhOLU::~IPhOLU()
+00008380 PhSerialLib_860_68.elf CPhOLU_Base::~CPhOLU_Base()
+000083fc PhSerialLib_860_68.elf CPhOLU_Base::~CPhOLU_Base()
+00008478 PhSerialLib_860_68.elf IPhOLU1::~IPhOLU1()
+000084f4 PhSerialLib_860_68.elf CPhOLU_Base1::~CPhOLU_Base1()
+00008570 PhSerialLib_860_68.elf IPhOLU1::~IPhOLU1()
+000085ec PhSerialLib_860_68.elf IPhOLU1::~IPhOLU1()
+00008668 PhSerialLib_860_68.elf CPhOLU_Base1::~CPhOLU_Base1()
+000086e4 PhSerialLib_860_68.elf IPhCommon::~IPhCommon()
+00008760 PhSerialLib_860_68.elf IPhCommon::~IPhCommon()
+000087dc PhSerialLib_860_68.elf IPhCommon::~IPhCommon()
+00008854 PhSerialLib_860_68.elf CompanyName
+00008858 PhSerialLib_860_68.elf ProductName
+00008878 PhSerialLib_860_68.elf ProductVersion
+00008890 PhSerialLib_860_68.elf CLSID_CPhSerialLib
+0000891c PhSerialLib_860_68.elf IID_IPhCommonCB
+0000892c PhSerialLib_860_68.elf IID_IPhConfigCB
+0000893c PhSerialLib_860_68.elf IID_IPhConfigCB1
+0000894c PhSerialLib_860_68.elf IID_IPhIOAccessCB
+0000895c PhSerialLib_860_68.elf IID_IPhExternalConfigCB1
+0000896c PhSerialLib_860_68.elf IID_IPhExternalConfigCB2
+0000897c PhSerialLib_860_68.elf IID_IPhExternalConfigCB3
+0000898c PhSerialLib_860_68.elf IID_IPhOLUCB
+0000899c PhSerialLib_860_68.elf IID_IPhCommon
+000089ac PhSerialLib_860_68.elf IID_IPhConfig1
+000089bc PhSerialLib_860_68.elf IID_IPhStatus1
+000089cc PhSerialLib_860_68.elf IID_IPhClient
+000089dc PhSerialLib_860_68.elf IID_IPhClient1
+000089ec PhSerialLib_860_68.elf IID_IPhDiagnostics
+000089fc PhSerialLib_860_68.elf IID_IPhIOAccess
+00008a0c PhSerialLib_860_68.elf IID_IPhSafeConfig
+00008a1c PhSerialLib_860_68.elf IID_IPhSafeConfig1
+00008a2c PhSerialLib_860_68.elf IID_IPhSafeConfig2
+00008a3c PhSerialLib_860_68.elf IID_IPhSimulation
+00008a4c PhSerialLib_860_68.elf IID_IPhOLU
+00008a5c PhSerialLib_860_68.elf IID_IPhOLU1
+00008a6c PhSerialLib_860_68.elf IID_IHeapCallback
+00008a7c PhSerialLib_860_68.elf IID_ISystemUtilitiesCallback
+00008a8c PhSerialLib_860_68.elf IID_ISystemUtilitiesCallback1
+00008a9c PhSerialLib_860_68.elf IID_ISystemUtilitiesCallback2
+00008aac PhSerialLib_860_68.elf IID_ISystemUtilitiesCallback3
+00008abc PhSerialLib_860_68.elf IID_ISystemUtilitiesCallback4
+00008acc PhSerialLib_860_68.elf IID_IEventMgrCallback
+00008adc PhSerialLib_860_68.elf IID_IEventMgrCallback1
+00008aec PhSerialLib_860_68.elf IID_ISysClockCallback
+00008afc PhSerialLib_860_68.elf IID_ISysClockCallback1
+00008b0c PhSerialLib_860_68.elf IID_ISysClockCallback2
+00008b1c PhSerialLib_860_68.elf IID_ISysClockCallback3
+00008b2c PhSerialLib_860_68.elf IID_INetwClockSynchCallback
+00008b3c PhSerialLib_860_68.elf IID_IConfigCBCallback1
+00008b4c PhSerialLib_860_68.elf IID_IConfigCBCallback2
+00008b5c PhSerialLib_860_68.elf IID_IConfigCBCallback3
+00008b6c PhSerialLib_860_68.elf IID_IExternalConfigCBCallback
+00008b7c PhSerialLib_860_68.elf IID_IExternalConfigCBCallback2
+00008b8c PhSerialLib_860_68.elf IID_IExternalConfigCBCallback3
+00008b9c PhSerialLib_860_68.elf IID_IExternalConfigCBCallback4
+00008bac PhSerialLib_860_68.elf IID_IMessagesCBCallback
+00008bbc PhSerialLib_860_68.elf IID_IAIPAccessCBCallback
+00008bcc PhSerialLib_860_68.elf IID_IOLUCBCallback
+00008bdc PhSerialLib_860_68.elf IID_ISystemUtilitiesCBCallback1
+00008bec PhSerialLib_860_68.elf IID_IConfigCallback1
+00008bfc PhSerialLib_860_68.elf IID_IConfigCallback2
+00008c0c PhSerialLib_860_68.elf IID_IStatusCallback1
+00008c1c PhSerialLib_860_68.elf IID_IGenClientCallback
+00008c2c PhSerialLib_860_68.elf IID_IGenClientCallback1
+00008c3c PhSerialLib_860_68.elf IID_IGenClientCallback2
+00008c4c PhSerialLib_860_68.elf IID_IIACClientCallback
+00008c5c PhSerialLib_860_68.elf IID_IDriverFactoryCallback
+00008c6c PhSerialLib_860_68.elf IID_IDiagnosticsCallback
+00008c7c PhSerialLib_860_68.elf IID_ISafeConfigCallback
+00008c8c PhSerialLib_860_68.elf IID_ISafeConfigCallback1
+00008c9c PhSerialLib_860_68.elf IID_ISafeConfigCallback2
+00008cac PhSerialLib_860_68.elf IID_ICRCCallback
+00008cbc PhSerialLib_860_68.elf IID_IIOAccessCallback
+00008ccc PhSerialLib_860_68.elf IID_CriticalRegionCallback
+00008cdc PhSerialLib_860_68.elf IID_VOSExceptionCallback
+00008cec PhSerialLib_860_68.elf IID_DrvCommonCallback
+00008cfc PhSerialLib_860_68.elf IID_ProtectedMirroredHeapCallback
+00008d0c PhSerialLib_860_68.elf IID_SharedMirroredHeapCallback
+00008d1c PhSerialLib_860_68.elf IID_TemporaryMirroredHeapCallback
+00008d2c PhSerialLib_860_68.elf IID_IRestrictedVOSCallback
+00008d3c PhSerialLib_860_68.elf IID_IVarServerCallback
+00008d4c PhSerialLib_860_68.elf IID_IVarServerCallback1
+00008d5c PhSerialLib_860_68.elf IID_IVarServerCallback2
+00008d6c PhSerialLib_860_68.elf IID_ISOCKETCallback
+00008d7c PhSerialLib_860_68.elf IID_ISOCKETCallback1
+00008d8c PhSerialLib_860_68.elf IID_IVOSCallback2
+000093e0 V vtable for CommunicationDevice PhSerialLib_860_68.elf 
+00009420 V vtable for Device PhSerialLib_860_68.elf 
+00009460 V vtable for PrinterDevice PhSerialLib_860_68.elf 
+000094a0 V vtable for CPhSerialLib PhSerialLib_860_68.elf 
+000096a0 V vtable for IPhOLU PhSerialLib_860_68.elf 
+000096d8 V vtable for IUnknown PhSerialLib_860_68.elf 
+000096f8 V vtable for IPhClient1 PhSerialLib_860_68.elf 
+00009760 V vtable for IPhClient PhSerialLib_860_68.elf 
+000097b0 V vtable for IPhStatus1 PhSerialLib_860_68.elf 
+000097d8 V vtable for IPhConfig1 PhSerialLib_860_68.elf 
+00009820 V vtable for TerminalDevice PhSerialLib_860_68.elf 
+00009860 V vtable for CPhOLU_Base1 PhSerialLib_860_68.elf 
+000098a0 V vtable for CPhOLU_Base PhSerialLib_860_68.elf 
+000098d8 V vtable for CPhDiagnostics_Base PhSerialLib_860_68.elf 
+00009900 V vtable for CPhIOAccess_Base PhSerialLib_860_68.elf 
+00009928 V vtable for CPhStatus_Base1 PhSerialLib_860_68.elf 
+00009950 V vtable for CPhClient_Base1 PhSerialLib_860_68.elf 
+000099b8 V vtable for CPhClient_Base PhSerialLib_860_68.elf 
+00009a08 V vtable for CPhConfig_Base1 PhSerialLib_860_68.elf 
+00009a50 V vtable for CPhCommon_Base PhSerialLib_860_68.elf 
+00009a78 V vtable for IPhIOAccess PhSerialLib_860_68.elf 
+00009aa0 V vtable for IPhDiagnostics PhSerialLib_860_68.elf 
+00009ac8 V vtable for IPhOLU1 PhSerialLib_860_68.elf 
+00009b08 V vtable for IPhCommon PhSerialLib_860_68.elf 
+00009b2c PhSerialLib_860_68.elf CRTFuncTabBegin
+00009b2c PhSerialLib_860_68.elf scprocs
+00009b38 PhSerialLib_860_68.elf printf
+00009b3c PhSerialLib_860_68.elf sprintf
+00009b40 PhSerialLib_860_68.elf sscanf
+00009b44 PhSerialLib_860_68.elf memcpy
+00009b48 PhSerialLib_860_68.elf memset
+00009b4c PhSerialLib_860_68.elf strcat
+00009b50 PhSerialLib_860_68.elf strcmp
+00009b54 PhSerialLib_860_68.elf strlen
+00009b58 PhSerialLib_860_68.elf strncmp
+00009b5c PhSerialLib_860_68.elf strncpy
+00009b60 PhSerialLib_860_68.elf memchr
+00009b64 PhSerialLib_860_68.elf memcmp
+00009b68 PhSerialLib_860_68.elf memmove
+00009b6c PhSerialLib_860_68.elf strchr
+00009b70 PhSerialLib_860_68.elf strcoll
+00009b74 PhSerialLib_860_68.elf strcpy
+00009b78 PhSerialLib_860_68.elf strcspn
+00009b7c PhSerialLib_860_68.elf strncat
+00009b80 PhSerialLib_860_68.elf strpbrk
+00009b84 PhSerialLib_860_68.elf strrchr
+00009b88 PhSerialLib_860_68.elf strspn
+00009b8c PhSerialLib_860_68.elf strstr
+00009b90 PhSerialLib_860_68.elf strtok
+00009b94 PhSerialLib_860_68.elf strxfrm
+00009b98 PhSerialLib_860_68.elf strerror
+00009b9c PhSerialLib_860_68.elf pow
+00009ba0 PhSerialLib_860_68.elf acos
+00009ba4 PhSerialLib_860_68.elf asin
+00009ba8 PhSerialLib_860_68.elf atan
+00009bac PhSerialLib_860_68.elf atan2
+00009bb0 PhSerialLib_860_68.elf ceil
+00009bb4 PhSerialLib_860_68.elf cos
+00009bb8 PhSerialLib_860_68.elf cosh
+00009bbc PhSerialLib_860_68.elf exp
+00009bc0 PhSerialLib_860_68.elf fabs
+00009bc4 PhSerialLib_860_68.elf floor
+00009bc8 PhSerialLib_860_68.elf fmod
+00009bcc PhSerialLib_860_68.elf frexp
+00009bd0 PhSerialLib_860_68.elf ldexp
+00009bd4 PhSerialLib_860_68.elf log
+00009bd8 PhSerialLib_860_68.elf log10
+00009bdc PhSerialLib_860_68.elf modf
+00009be0 PhSerialLib_860_68.elf sin
+00009be4 PhSerialLib_860_68.elf sinh
+00009be8 PhSerialLib_860_68.elf sqrt
+00009bec PhSerialLib_860_68.elf tan
+00009bf0 PhSerialLib_860_68.elf tanh
+00009bf4 PhSerialLib_860_68.elf acosf
+00009bf8 PhSerialLib_860_68.elf asinf
+00009bfc PhSerialLib_860_68.elf atanf
+00009c00 PhSerialLib_860_68.elf atan2f
+00009c04 PhSerialLib_860_68.elf ceilf
+00009c08 PhSerialLib_860_68.elf cosf
+00009c0c PhSerialLib_860_68.elf coshf
+00009c10 PhSerialLib_860_68.elf expf
+00009c14 PhSerialLib_860_68.elf fabsf
+00009c18 PhSerialLib_860_68.elf floorf
+00009c1c PhSerialLib_860_68.elf fmodf
+00009c20 PhSerialLib_860_68.elf logf
+00009c24 PhSerialLib_860_68.elf log10f
+00009c28 PhSerialLib_860_68.elf powf
+00009c2c PhSerialLib_860_68.elf sinf
+00009c30 PhSerialLib_860_68.elf sinhf
+00009c34 PhSerialLib_860_68.elf sqrtf
+00009c38 PhSerialLib_860_68.elf tanf
+00009c3c PhSerialLib_860_68.elf tanhf
+00009c40 PhSerialLib_860_68.elf div_r
+00009c44 PhSerialLib_860_68.elf labs
+00009c48 PhSerialLib_860_68.elf strtol
+00009c4c PhSerialLib_860_68.elf free
+00009c50 PhSerialLib_860_68.elf abort
+00009c54 PhSerialLib_860_68.elf abs
+00009c58 PhSerialLib_860_68.elf atof
+00009c5c PhSerialLib_860_68.elf atoi
+00009c60 PhSerialLib_860_68.elf atol
+00009c64 PhSerialLib_860_68.elf bsearch
+00009c68 PhSerialLib_860_68.elf ldiv_r
+00009c6c PhSerialLib_860_68.elf qsort
+00009c70 PhSerialLib_860_68.elf rand
+00009c74 PhSerialLib_860_68.elf srand
+00009c78 PhSerialLib_860_68.elf strtod
+00009c7c PhSerialLib_860_68.elf strtoul
+00009c80 PhSerialLib_860_68.elf malloc
+00009c84 PhSerialLib_860_68.elf __assert
+00009c88 PhSerialLib_860_68.elf time
+00009c8c PhSerialLib_860_68.elf asctime
+00009c90 PhSerialLib_860_68.elf gmtime
+00009c94 PhSerialLib_860_68.elf clock
+00009c98 PhSerialLib_860_68.elf ctime
+00009c9c PhSerialLib_860_68.elf difftime
+00009ca0 PhSerialLib_860_68.elf localtime
+00009ca4 PhSerialLib_860_68.elf mktime
+00009ca8 PhSerialLib_860_68.elf strftime
+00009cac PhSerialLib_860_68.elf eventcollSem
+00009cb0 PhSerialLib_860_68.elf intLock
+00009cb4 PhSerialLib_860_68.elf intUnlock
+00009cb8 PhSerialLib_860_68.elf _fabs
+00009cbc PhSerialLib_860_68.elf _ddec
+00009cc0 PhSerialLib_860_68.elf _d_mul
+00009cc4 PhSerialLib_860_68.elf __floatsidf
+00009cc8 PhSerialLib_860_68.elf _d_sub
+00009ccc PhSerialLib_860_68.elf _d_add
+00009cd0 PhSerialLib_860_68.elf __fixunsdfsi
+00009cd4 PhSerialLib_860_68.elf __extendsfdf2
+00009cd8 PhSerialLib_860_68.elf __adddf3
+00009cdc PhSerialLib_860_68.elf _dinc
+00009ce0 PhSerialLib_860_68.elf __fixdfsi
+00009ce4 PhSerialLib_860_68.elf _d_neg
+00009ce8 PhSerialLib_860_68.elf _d_dtof
+00009cec PhSerialLib_860_68.elf _f_qtof
+00009cf0 PhSerialLib_860_68.elf _dpfabs
+00009cf4 PhSerialLib_860_68.elf _d_dtoq
+00009cf8 PhSerialLib_860_68.elf _d_div
+00009cfc PhSerialLib_860_68.elf __negdf2
+00009d00 PhSerialLib_860_68.elf __divdf3
+00009d04 PhSerialLib_860_68.elf __muldf3
+00009d08 PhSerialLib_860_68.elf _d_dtoi
+00009d0c PhSerialLib_860_68.elf _f_ftoq
+00009d10 PhSerialLib_860_68.elf __truncdfsf2
+00009d14 PhSerialLib_860_68.elf _fp_round
+00009d18 PhSerialLib_860_68.elf _d_utod
+00009d1c PhSerialLib_860_68.elf _d_qtod
+00009d20 PhSerialLib_860_68.elf _d_dtou
+00009d24 PhSerialLib_860_68.elf _d_itod
+00009d28 PhSerialLib_860_68.elf __subdf3
+00009d2c PhSerialLib_860_68.elf _f_ftod
+00009d30 PhSerialLib_860_68.elf _d_feq
+00009d34 PhSerialLib_860_68.elf __gtdf2
+00009d38 PhSerialLib_860_68.elf _d_fne
+00009d3c PhSerialLib_860_68.elf _d_cmp
+00009d40 PhSerialLib_860_68.elf _d_flt
+00009d44 PhSerialLib_860_68.elf _d_cmpe
+00009d48 PhSerialLib_860_68.elf __nedf2
+00009d4c PhSerialLib_860_68.elf _d_fgt
+00009d50 PhSerialLib_860_68.elf _d_fle
+00009d54 PhSerialLib_860_68.elf _d_fge
+00009d58 PhSerialLib_860_68.elf _fdec
+00009d5c PhSerialLib_860_68.elf _f_add
+00009d60 PhSerialLib_860_68.elf __divsf3
+00009d64 PhSerialLib_860_68.elf __fixsfsi
+00009d68 PhSerialLib_860_68.elf __subsf3
+00009d6c PhSerialLib_860_68.elf _finc
+00009d70 PhSerialLib_860_68.elf _f_neg
+00009d74 PhSerialLib_860_68.elf _f_sub
+00009d78 PhSerialLib_860_68.elf _f_itof
+00009d7c PhSerialLib_860_68.elf _fabsf
+00009d80 PhSerialLib_860_68.elf _f_utof
+00009d84 PhSerialLib_860_68.elf _fpfabs
+00009d88 PhSerialLib_860_68.elf __floatsisf
+00009d8c PhSerialLib_860_68.elf _f_div
+00009d90 PhSerialLib_860_68.elf __negsf2
+00009d94 PhSerialLib_860_68.elf __mulsf3
+00009d98 PhSerialLib_860_68.elf _f_ftoi
+00009d9c PhSerialLib_860_68.elf _f_mul
+00009da0 PhSerialLib_860_68.elf __fixunssfsi
+00009da4 PhSerialLib_860_68.elf _f_ftou
+00009da8 PhSerialLib_860_68.elf __addsf3
+00009dac PhSerialLib_860_68.elf _f_feq
+00009db0 PhSerialLib_860_68.elf _f_flt
+00009db4 PhSerialLib_860_68.elf _f_fle
+00009db8 PhSerialLib_860_68.elf __nesf2
+00009dbc PhSerialLib_860_68.elf __gtsf2
+00009dc0 PhSerialLib_860_68.elf _f_fge
+00009dc4 PhSerialLib_860_68.elf _f_fgt
+00009dc8 PhSerialLib_860_68.elf _f_fne
+00009dcc PhSerialLib_860_68.elf _f_cmp
+00009dd0 PhSerialLib_860_68.elf _f_cmpe
+00009dd4 PhSerialLib_860_68.elf ldexpf
+00009dd8 PhSerialLib_860_68.elf modff
+00009ddc PhSerialLib_860_68.elf frexpf
+00009de0 PhSerialLib_860_68.elf exadd
+00009de4 PhSerialLib_860_68.elf exmul
+00009de8 PhSerialLib_860_68.elf sigmax
+00009dec PhSerialLib_860_68.elf exdiv
+00009df0 PhSerialLib_860_68.elf exsub
+00009df4 PhSerialLib_860_68.elf __eqdf2
+00009df8 PhSerialLib_860_68.elf __ltdf2
+00009dfc PhSerialLib_860_68.elf __lesf2
+00009e00 PhSerialLib_860_68.elf __ledf2
+00009e04 PhSerialLib_860_68.elf __eqsf2
+00009e08 PhSerialLib_860_68.elf __ltsf2
+00009e0c PhSerialLib_860_68.elf __gesf2
+00009e10 PhSerialLib_860_68.elf __gedf2
+00009e1c PhSerialLib_860_68.elf fprintf
+00009e20 PhSerialLib_860_68.elf __stdout
+00009e24 PhSerialLib_860_68.elf __stderr
+00009e28 PhSerialLib_860_68.elf setjmp
+00009e2c PhSerialLib_860_68.elf longjmp
+00009e30 PhSerialLib_860_68.elf operator new[](unsigned int)
+00009e34 PhSerialLib_860_68.elf operator delete[](void*)
+00009e38 PhSerialLib_860_68.elf __floatunsisf
+00009e3c PhSerialLib_860_68.elf __floatunsidf
+00009e40 PhSerialLib_860_68.elf CRTFuncTabEnd
+00009e40 PhSerialLib_860_68.elf ecprocs
+00009e40 PhSerialLib_860_68.elf etext
+00009e40 PhSerialLib_860_68.elf sgot2
+0000a00c PhSerialLib_860_68.elf egot2
+0000a00c PhSerialLib_860_68.elf sfixup
+0000a7a8 PhSerialLib_860_68.elf CommunicationDevice::m_TagStringDev
+0000a7a8 PhSerialLib_860_68.elf efixup
+0000a7ac PhSerialLib_860_68.elf DeviceConfiguration::m_DeviceConfig
+0000a7b0 PhSerialLib_860_68.elf DeviceManager::m_TagDevice
+0000a7b4 PhSerialLib_860_68.elf PrinterDevice::m_TagPrintDev
+0000a7b8 PhSerialLib_860_68.elf CMirroredObject::c_pMirroredObjectMgrImpl
+0000a7bc PhSerialLib_860_68.elf CMirroredObjectAgent::c_pHeapCallback
+0000a7c0 PhSerialLib_860_68.elf CMirroredObjectAgent::c_AgentTag
+0000a7c4 PhSerialLib_860_68.elf TerminalDevice::m_TagLineDev
+0000a7c8 V CComCoClass<CPhSerialLib, &(CLSID_CPhSerialLib)>::m_HeapTag PhSerialLib_860_68.elf 
+0000a7cc PhSerialLib_860_68.elf PHproperties
+0000a7d4 PhSerialLib_860_68.elf useEXEHEAD
+</SYMBOLS>

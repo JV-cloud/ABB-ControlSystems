@@ -1,0 +1,103 @@
+(****************************************************************************)
+(* FILE            LD800 DN Diagnostics.hwd                                 *)
+(*                                                                          *)
+(* DESCRIPTION     Hardware definition file for LD800 DN  Diagnostics       *)
+(*                                                                          *)
+(* AUTHOR          Ramachandragowda G                                       *)
+(*                                                                          *)
+(* All rights reserved. Reproduction, modification, use or disclosure       *)
+(* to third parties without express authority, is forbidden.                *)
+(* Copyright ABB Inc. 2008.                                                 *)
+(*                                                                          *)
+(*                                                                          *)
+(* 05-12-2008 Ramachandragowda G            Initial version                 *)
+(*                                                                          *)
+(****************************************************************************)
+FileHeader
+   Contents               "LD800 DN Diagnostics"
+   Date                   "2008-12-05"
+   Version                "1.0-0"
+  RequiredSyntaxVersion "3.0"
+End FileHeader
+
+HWUnitInfo  (* LD800 DN Diagnostics *)
+   HWUnitID {E9B3898E-6B27-4f5e-A457-3EC2BECCDC39}
+   Description "LD800 DN Diagnostics"
+   Information "LD800 DN Diagnostics"
+   Icons ETHERNETIP_DIAGNOSTICSType
+   Attributes IoUnit AdapterUnit DigitalIn
+   InterfaceInfo
+     IoSysType    CIGIO
+     CLSID_CB    {4CDF91C2-C5C4-4153-8502-15783AA2384B} (*  CLSID_CB  = GUID for CI873 PH in Control builder CB *)
+     CLSID_CTRL  {2DA9F31E-56AB-4ffa-A07B-CC488F4F88BC}  (* CLSID_CTRL = GUID for CI873 PH in Controler *)
+   End InterfaceInfo
+
+   ConnectionInfo
+      ConnectType OwnUnit
+      IOConnect Fail
+      IoConfig  NoFail
+   End ConnectionInfo
+   Parameters
+    ParamInfo 
+     Name NODE_TYPE
+     Description "Node Type"
+     Hidden
+     CompileType HWConfig
+     Datatype ENUM
+     Default 9
+     ParValIndex 1
+     ParamType Numbered 1
+   End ParamInfo
+   End Parameters
+
+   ParValList
+     ParVal
+        ParValIndex 1
+        ENUM
+          "Node_CI873"                      1
+          "Node_CI_Diagnostics"             2
+          "Node_EIPDevice"                  3
+          "Node_EIPMAdapter"                4
+          "Node_LD800DN"                    5
+          "Node_DNetDevice"                 6
+          "Node_DNetMAdapter"               7
+          "Node_EIPIOUnit"                  8
+          "Node_DNetIOUnit"                 9
+          "Node_LD_Diagnostics"             10
+     End ParVal
+   End ParValList
+
+   Channels
+    ChannelInfo
+      Number         0
+      ChannelName   "EthernetIP messages Received per sec"
+      Datatype       Int_In
+      Routine        303
+      CopyParameters 16#30000 0 
+    End ChannelInfo
+    ChannelInfo
+      Number         1
+      ChannelName   "Number of lost EthernetIP messages"
+      Datatype       Int_In
+      Routine        303
+      CopyParameters 16#30004 0 
+    End ChannelInfo
+    ChannelInfo
+      Number         2
+      ChannelName   "UnitStatus"
+      Datatype       Status_In
+      Routine        900
+      CopyParameters 16#50000
+    End ChannelInfo
+
+   End Channels
+
+Configuration
+    ConfigInfo
+      ModuleKey       16#01
+      InAreaSize      8 BYTE
+      OutAreaSize     0 BYTE
+    End ConfigInfo
+  End Configuration
+  HWUnitInfoCRC 16#BAE3
+End HWUnitInfo

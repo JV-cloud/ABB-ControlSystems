@@ -1,0 +1,63 @@
+(*---------------------------------------------------------------*)
+(* 2008-01-28  Alfred Theorin                                    *)
+(*             PRC #30786                                        *)
+(*             New UnitInfo supplied by Jan-Olof Nilsson       *)
+(*---------------------------------------------------------------*)
+
+FileHeader
+  Contents              "ABBPanel800 - Output 1 Real"
+  Date                  "2008-01-28"
+  Version               "Version 1.1-0"
+  RequiredSyntaxVersion "3.0"
+End FileHeader
+
+(*========================================================*)
+(*               OUTPUT 1 Real                           *)
+(*========================================================*)
+
+HWUnitInfo
+  HWUnitID         {ae43c87d-b775-44af-a932-dcc12863357d}
+  Description      "OUTPUT 1 Real"
+  Information      "Real(32 bits)Float with exponent"
+  Icons            ProtocolType
+  Attributes       IoUnit AnalogOut
+
+  (* ===== No parameter information delivered from the parser ===== *)
+
+  Channels
+    ChannelInfo
+      Number                0
+      ChannelName           "Output Real 0"
+      Datatype              Real_Out
+      Routine               820
+      CopyParameters        16#0 16#0 16#40000 16#00
+    End ChannelInfo
+    ChannelInfo
+      Number                1
+      ChannelName           "UnitStatus"
+      Datatype              Status_In
+      Routine               900
+      CopyParameters        16#0 16#0 16#50000
+    End ChannelInfo
+  End Channels
+
+  (* ===== No diagnostic information delivered from the parser ===== *)
+
+  Configuration
+    ConfigInfo
+      ModuleKey        16#13
+      InAreaSize       0 BYTE
+      OutAreaSize      4 BYTE
+      OutByte
+        BYTE 0 0
+        BYTE 0 1
+        BYTE 0 2
+        BYTE 0 3
+      CIGIOConnData
+        CIGIOData      16#01 16#61
+      End CIGIOConnData
+    End ConfigInfo
+  End Configuration
+
+  HWUnitInfoCRC 16#0064
+End HWUnitInfo

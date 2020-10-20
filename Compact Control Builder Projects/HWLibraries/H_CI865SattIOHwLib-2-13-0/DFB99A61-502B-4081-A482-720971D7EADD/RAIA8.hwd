@@ -1,0 +1,136 @@
+HWUnitInfo (* RAIA8 *)
+   HWUnitID {87633699-879C-47F9-8C3C-FA0099F4CAF0}
+   Description "RAIA8"
+   Information "Analog input module, 8 channels"
+   Icons RackIOType
+   Attributes IoUnit AnalogIn
+   Parameters
+      ParamInfo 
+         Name SCANPRIORITY
+         Description "Scan priority"
+         CompileType IOConnect
+         Datatype ENUM
+         Default 0
+         ParValIndex 0
+         ParamType Numbered 200
+      End ParamInfo 
+      ParamInfo 
+         Name RANGE (* dummy parameter for range setting purposes *)
+         Description "Range"
+         Hidden
+         Datatype ENUMRANGE
+         Default 0
+         ParValIndex 1
+         ParamType Numbered 0
+      End ParamInfo 
+   End Parameters
+   ParValList
+      ParVal
+         ParValIndex 0
+         ENUM
+         "Default"                    0
+         "Every rack I/O cycle"       1
+         "Every 2nd rack I/O cycle"   2
+         "Every 4th rack I/O cycle"   4
+         "Every 8th rack I/O cycle"   8
+         "Every 16th rack I/O cycle"  16
+      End ParVal
+      ParVal
+         ParValIndex 1
+         ENUMRANGE
+         "Fixed range"  16#0000 16#FFFF 16#0000 16#FFFF 16#0000
+      End ParVal
+   End ParValList
+   Channels
+      ChannelInfo
+         Number 0
+         ChannelName "Input 0"
+         Datatype Real_In
+         Routine 701
+         CopyParameters 0 0 16#30002 16#FFFF 0 16#0 16#50000 16#30001 16#0003
+      End ChannelInfo
+      ChannelInfo
+         Number 1
+         ChannelName "Input 1"
+         Datatype Real_In
+         Routine 701
+         CopyParameters 0 0 16#30003 16#FFFF 0 16#0 16#50000 16#30001 16#000C 
+      End ChannelInfo
+      ChannelInfo
+         Number 2
+         ChannelName "Input 2"
+         Datatype Real_In
+         Routine 701
+         CopyParameters 0 0 16#30004 16#FFFF 0 16#0 16#50000 16#30001 16#0030 
+      End ChannelInfo
+      ChannelInfo
+         Number 3
+         ChannelName "Input 3"
+         Datatype Real_In
+         Routine 701
+         CopyParameters 0 0 16#30005 16#FFFF 0 16#0 16#50000 16#30001 16#00C0 
+      End ChannelInfo
+      ChannelInfo
+         Number 4
+         ChannelName "Input 4"
+         Datatype Real_In
+         Routine 701
+         CopyParameters 0 0 16#30006 16#FFFF 0 16#0 16#50000 16#30001 16#0300 
+      End ChannelInfo
+      ChannelInfo
+         Number 5
+         ChannelName "Input 5"
+         Datatype Real_In
+         Routine 701
+         CopyParameters 0 0 16#30007 16#FFFF 0 16#0 16#50000 16#30001 16#0C00 
+      End ChannelInfo
+      ChannelInfo
+         Number 6
+         ChannelName "Input 6"
+         Datatype Real_In
+         Routine 701
+         CopyParameters 0 0 16#30008 16#FFFF 0 16#0 16#50000 16#30001 16#3000 
+      End ChannelInfo
+      ChannelInfo
+         Number 7
+         ChannelName "Input 7"
+         Datatype Real_In
+         Routine 701
+         CopyParameters 0 0 16#30009 16#FFFF 0 16#0 16#50000 16#30001 16#C000 
+      End ChannelInfo
+      ChannelInfo
+         Number 8
+         ChannelName "UnitStatus"
+         Datatype Status_In
+         Routine 900
+         CopyParameters 0 0 16#50000
+      End ChannelInfo
+   End Channels
+   IoUnitStatus
+      StatusType WrongModuleType 
+      StatusData 16#30000 16#1FFF 16#05 16#44
+      StatusType ModuleMissing
+      StatusData 16#30000 16#8000 16#00 16#0
+      StatusType IoError
+      StatusData 16#30000 16#2000 16#00 16#0
+   End IoUnitStatus
+   Configuration
+      ConfigInfo
+         ModuleKey   16#44
+         InAreaSize  10
+         OutAreaSize 0
+         InWord 
+            WORD 16#A044 0
+            WORD 0       1 
+            WORD 0       2
+            WORD 0       3 
+            WORD 0       4 
+            WORD 0       5 
+            WORD 0       6 
+            WORD 0       7 
+            WORD 0       8 
+            WORD 0       9 
+      End ConfigInfo
+   End Configuration
+  HWUnitInfoCRC 16#276F
+End HWUnitInfo (* RAIA8 *)

@@ -1,0 +1,1347 @@
+;======================================================
+;======================================================
+#Profibus_DP
+; HIGHEST Module_Index currently in use: 1
+;
+;
+; Version V1.13 for UMC100 with ePlug DPV1 (PDP22) created by GSD-Generator, Date 27.04.2010 11:24:29 
+; ** first version
+;
+;
+;
+;=============================================================
+; Text-definition for User Prm Data  UMC100_FBP (V1.13)
+;=============================================================
+;
+ExtUserPrmData =  1  "Setting Ie 1 [0.01A]"
+Unsigned32 50 24-320000
+EndExtUserPrmData
+
+ExtUserPrmData =  2  "Setting Ie 2 [0.01A]"
+Unsigned32 50 24-320000
+EndExtUserPrmData
+
+ExtUserPrmData =  3  "YD Starting Time [0.1s]"
+Unsigned16 600 10-36000
+EndExtUserPrmData
+
+ExtUserPrmData =  4  "Current Factor [%]"
+Unsigned16 100 2-64000
+EndExtUserPrmData
+
+ExtUserPrmData =  5  "Cooling Time [s]"
+Unsigned16 120 30-64000
+EndExtUserPrmData
+
+PrmText = 6 
+Text(0) = "English"
+Text(1) = "Deutsch"
+Text(2) = "Francais"
+Text(3) = "Espanol"
+Text(4) = "Italiano"
+Text(5) = "Portugues"
+EndPrmText
+ExtUserPrmData =  6  "Language"
+Unsigned8 0 0-5
+Prm_Text_Ref = 6 
+EndExtUserPrmData
+
+ExtUserPrmData =  7  "Rev Lock-Out Time [s]"
+Unsigned8 1 1-255
+EndExtUserPrmData
+
+PrmText = 8 
+Text(0) = "Off"
+Text(1) = "Flash DO2"
+Text(2) = "On DO2"
+Text(3) = "Invert DO2"
+Text(4) = "Flash DO3"
+Text(5) = "On DO3"
+Text(6) = "Invert DO3"
+EndPrmText
+ExtUserPrmData =  8  "Fault Output"
+Unsigned8 0 0-6
+Prm_Text_Ref = 8 
+EndExtUserPrmData
+
+PrmText = 9 
+Text(0) = "Class 5"
+Text(1) = "Class 10"
+Text(2) = "Class 20"
+Text(3) = "Class 30"
+Text(4) = "Class 40"
+EndPrmText
+ExtUserPrmData =  9  "Trip Class"
+Unsigned8 1 0-4
+Prm_Text_Ref = 9 
+EndExtUserPrmData
+
+ExtUserPrmData =  10  "Low Curr Warn Level [5%]"
+Unsigned8 10 0-20
+EndExtUserPrmData
+
+ExtUserPrmData =  11  "Low Curr Trip Level [5%]"
+Unsigned8 0 0-20
+EndExtUserPrmData
+
+ExtUserPrmData =  12  "High Curr Warn Level [5%]"
+Unsigned8 30 20-160
+EndExtUserPrmData
+
+ExtUserPrmData =  13  "High Curr Trip Level [5%]"
+Unsigned8 160 20-160
+EndExtUserPrmData
+
+ExtUserPrmData =  14  "Locked Rotor Level [5%]"
+Unsigned8 160 20-160
+EndExtUserPrmData
+
+ExtUserPrmData =  15  "Locked Rotor Delay [0.1s]"
+Unsigned8 5 0-255
+EndExtUserPrmData
+
+ExtUserPrmData =  16  "Custom App Parameter"
+Unsigned8 0 0-255
+EndExtUserPrmData
+
+PrmText = 17 
+Text(0) = "Off"
+Text(1) = "Stop (NC)"
+Text(2) = "Stop (NO)"
+Text(3) = "Ext. Flt (NC) always"
+Text(4) = "Ext. Flt (NO) always"
+Text(5) = "Ext. Flt (NC) Motor on"
+Text(6) = "Ext. Flt (NO) Motor on"
+Text(7) = "Prep. emerg. Start (NC)"
+Text(8) = "Prep. emerg. Start (NO)"
+Text(9) = "Testposition (NC)"
+Text(10) = "Testposition (NO)"
+Text(11) = "Force local (NC)"
+Text(12) = "Force local (NO)"
+Text(13) = "Fault reset (NC)"
+Text(14) = "Fault reset (NO)"
+Text(15) = "Voltage DIP (NC)"
+Text(16) = "Voltage DIP (NO)"
+Text(17) = "CEM11 always (Warning)"
+Text(18) = "CEM11 after startup (Warning)"
+Text(19) = "CEM11 always (Fault)"
+Text(20) = "CEM11 after startup time (Fault)"
+EndPrmText
+ExtUserPrmData =  17  "Multif In 0"
+Unsigned8 0 0-20
+Prm_Text_Ref = 17 
+EndExtUserPrmData
+
+PrmText = 18 
+Text(0) = "Off"
+Text(1) = "Stop (NC)"
+Text(2) = "Stop (NO)"
+Text(3) = "Ext. Flt (NC) always"
+Text(4) = "Ext. Flt (NO) always"
+Text(5) = "Ext. Flt (NC) Motor on"
+Text(6) = "Ext. Flt (NO) Motor on"
+Text(7) = "Prep. emerg. Start (NC)"
+Text(8) = "Prep. emerg. Start (NO)"
+Text(9) = "Testposition (NC)"
+Text(10) = "Testposition (NO)"
+Text(11) = "Force local (NC)"
+Text(12) = "Force local (NO)"
+Text(13) = "Fault reset (NC)"
+Text(14) = "Fault reset (NO)"
+Text(15) = "Voltage DIP (NC)"
+Text(16) = "Voltage DIP (NO)"
+Text(17) = "CEM11 always (Warning)"
+Text(18) = "CEM11 after startup (Warning)"
+Text(19) = "CEM11 always (Fault)"
+Text(20) = "CEM11 after startup time (Fault)"
+EndPrmText
+ExtUserPrmData =  18  "Multif In 1"
+Unsigned8 0 0-20
+Prm_Text_Ref = 18 
+EndExtUserPrmData
+
+PrmText = 19 
+Text(0) = "Off"
+Text(1) = "Stop (NC)"
+Text(2) = "Stop (NO)"
+Text(3) = "Ext. Flt (NC) always"
+Text(4) = "Ext. Flt (NO) always"
+Text(5) = "Ext. Flt (NC) Motor on"
+Text(6) = "Ext. Flt (NO) Motor on"
+Text(7) = "Prep. emerg. Start (NC)"
+Text(8) = "Prep. emerg. Start (NO)"
+Text(9) = "Testposition (NC)"
+Text(10) = "Testposition (NO)"
+Text(11) = "Force local (NC)"
+Text(12) = "Force local (NO)"
+Text(13) = "Fault reset (NC)"
+Text(14) = "Fault reset (NO)"
+Text(15) = "Voltage DIP (NC)"
+Text(16) = "Voltage DIP (NO)"
+Text(17) = "CEM11 always (Warning)"
+Text(18) = "CEM11 after startup (Warning)"
+Text(19) = "CEM11 always (Fault)"
+Text(20) = "CEM11 after startup time (Fault)"
+EndPrmText
+ExtUserPrmData =  19  "Multif In 2"
+Unsigned8 0 0-20
+Prm_Text_Ref = 19 
+EndExtUserPrmData
+
+ExtUserPrmData =  20  "Multif In 0 Delay [0.1s]"
+Unsigned8 0 0-255
+EndExtUserPrmData
+
+ExtUserPrmData =  21  "Multif In 1 Delay [0.1s]"
+Unsigned8 0 0-255
+EndExtUserPrmData
+
+ExtUserPrmData =  22  "Multif In 2 Delay [0.1s]"
+Unsigned8 0 0-255
+EndExtUserPrmData
+
+PrmText = 23 
+Text(1) = "Transparent"
+Text(2) = "Overload Relay"
+Text(3) = "Direct Starter"
+Text(4) = "Reverse Starter"
+Text(5) = "Star-delta Starter"
+Text(7) = "Pole-Changing Starter"
+Text(9) = "Actuator 1"
+Text(10) = "Actuator 2"
+Text(11) = "Actuator 3"
+Text(12) = "Actuator 4"
+EndPrmText
+ExtUserPrmData =  23  "Control Function"
+Unsigned8 3 1-12
+Prm_Text_Ref = 23 
+EndExtUserPrmData
+
+PrmText = 24 
+Text(0) = "Motor Off"
+Text(1) = "Retain"
+Text(2) = "Start Forward"
+Text(3) = "Start Reverse"
+EndPrmText
+ExtUserPrmData =  24  "Busfault Reaction"
+BitArea(0-3) 0 0-3
+Prm_Text_Ref = 24 
+EndExtUserPrmData
+
+PrmText = 25 
+Text(0) = "Disabled"
+Text(1) = "Fault (NC) Motor in On/Off"
+Text(2) = "Fault (NO) Motor in On/Off"
+Text(3) = "Fault (NC) Motor in On"
+Text(4) = "Fault (NO) Motor in On"
+Text(5) = "Warning (NC) Motor in On/Off"
+Text(6) = "Warning (NO) Motor in On/Off"
+Text(7) = "Warning (NC) Motor in On"
+Text(8) = "Warning (NO) Motor in On"
+EndPrmText
+ExtUserPrmData =  25  "Aux Inp 1 Reaction"
+BitArea(0-3) 0 0-8
+Prm_Text_Ref = 25 
+EndExtUserPrmData
+
+PrmText = 26 
+Text(0) = "Disabled"
+Text(1) = "Fault (NC) Motor in On/Off"
+Text(2) = "Fault (NO) Motor in On/Off"
+Text(3) = "Fault (NC) Motor in On"
+Text(4) = "Fault (NO) Motor in On"
+Text(5) = "Warning (NC) Motor in On/Off"
+Text(6) = "Warning (NO) Motor in On/Off"
+Text(7) = "Warning (NC) Motor in On"
+Text(8) = "Warning (NO) Motor in On"
+EndPrmText
+ExtUserPrmData =  26  "Aux Inp 2 Reaction"
+BitArea(4-7) 0 0-8
+Prm_Text_Ref = 26 
+EndExtUserPrmData
+
+PrmText = 27 
+Text(0) = "Disabled"
+Text(1) = "Fault (NC) Motor in On/Off"
+Text(2) = "Fault (NO) Motor in On/Off"
+Text(3) = "Fault (NC) Motor in On"
+Text(4) = "Fault (NO) Motor in On"
+Text(5) = "Warning (NC) Motor in On/Off"
+Text(6) = "Warning (NO) Motor in On/Off"
+Text(7) = "Warning (NC) Motor in On"
+Text(8) = "Warning (NO) Motor in On"
+EndPrmText
+ExtUserPrmData =  27  "Aux Inp 3 Reaction"
+BitArea(0-3) 0 0-8
+Prm_Text_Ref = 27 
+EndExtUserPrmData
+
+PrmText = 28 
+Text(0) = "Disabled"
+Text(1) = "Fault (NC) Motor in On/Off"
+Text(2) = "Fault (NO) Motor in On/Off"
+Text(3) = "Fault (NC) Motor in On"
+Text(4) = "Fault (NO) Motor in On"
+Text(5) = "Warning (NC) Motor in On/Off"
+Text(6) = "Warning (NO) Motor in On/Off"
+Text(7) = "Warning (NC) Motor in On"
+Text(8) = "Warning (NO) Motor in On"
+EndPrmText
+ExtUserPrmData =  28  "Aux Inp 4 Reaction"
+BitArea(4-7) 0 0-8
+Prm_Text_Ref = 28 
+EndExtUserPrmData
+
+PrmText = 29 
+Text(0) = "Disabled"
+Text(1) = "Fault (NC) Motor in On/Off"
+Text(2) = "Fault (NO) Motor in On/Off"
+Text(3) = "Fault (NC) Motor in On"
+Text(4) = "Fault (NO) Motor in On"
+Text(5) = "Warning (NC) Motor in On/Off"
+Text(6) = "Warning (NO) Motor in On/Off"
+Text(7) = "Warning (NC) Motor in On"
+Text(8) = "Warning (NO) Motor in On"
+EndPrmText
+ExtUserPrmData =  29  "Aux Inp 5 Reaction"
+BitArea(0-3) 0 0-8
+Prm_Text_Ref = 29 
+EndExtUserPrmData
+
+PrmText = 30 
+Text(0) = "Disabled"
+Text(1) = "Fault (NC) Motor in On/Off"
+Text(2) = "Fault (NO) Motor in On/Off"
+Text(3) = "Fault (NC) Motor in On"
+Text(4) = "Fault (NO) Motor in On"
+Text(5) = "Warning (NC) Motor in On/Off"
+Text(6) = "Warning (NO) Motor in On/Off"
+Text(7) = "Warning (NC) Motor in On"
+Text(8) = "Warning (NO) Motor in On"
+EndPrmText
+ExtUserPrmData =  30  "Aux Inp 6 Reaction"
+BitArea(4-7) 0 0-8
+Prm_Text_Ref = 30 
+EndExtUserPrmData
+
+PrmText = 31 
+Text(0) = "Disabled"
+Text(1) = "Trip"
+Text(2) = "Warning"
+EndPrmText
+ExtUserPrmData =  31  "PTC, Thermistor"
+BitArea(0-1) 0 0-2
+Prm_Text_Ref = 31 
+EndExtUserPrmData
+
+PrmText = 32 
+Text(1) = "Contact DI0"
+Text(2) = "Current"
+Text(3) = "Simulation"
+EndPrmText
+ExtUserPrmData =  32  "Check-Back"
+BitArea(2-3) 2 1-3
+Prm_Text_Ref = 32 
+EndExtUserPrmData
+
+PrmText = 33 
+Text(0) = "Disabled"
+Text(1) = "Trip"
+Text(2) = "Warning"
+EndPrmText
+ExtUserPrmData =  33  "Check Phase Sequence"
+BitArea(4-5) 0 0-2
+Prm_Text_Ref = 33 
+EndExtUserPrmData
+
+PrmText = 34 
+Text(0) = "Off"
+Text(1) = "On"
+EndPrmText
+ExtUserPrmData =  34  "Fault Auto Reset"
+Bit(0) 0 0-1
+Prm_Text_Ref = 34 
+EndExtUserPrmData
+
+PrmText = 35 
+Text(0) = "Off"
+Text(1) = "On"
+EndPrmText
+ExtUserPrmData =  35  "Emergency Start"
+Bit(1) 0 0-1
+Prm_Text_Ref = 35 
+EndExtUserPrmData
+
+PrmText = 36 
+Text(0) = "Off"
+Text(1) = "On"
+EndPrmText
+ExtUserPrmData =  36  "Address Check"
+Bit(3) 0 0-1
+Prm_Text_Ref = 36 
+EndExtUserPrmData
+
+PrmText = 37 
+Text(0) = "No"
+Text(1) = "Yes"
+EndPrmText
+ExtUserPrmData =  37  "Enable Custom Logic"
+Bit(4) 0 0-1
+Prm_Text_Ref = 37 
+EndExtUserPrmData
+
+PrmText = 38 
+Text(0) = "Time"
+Text(1) = "Current"
+EndPrmText
+ExtUserPrmData =  38  "YD Change-Over Mode"
+Bit(5) 1 0-1
+Prm_Text_Ref = 38 
+EndExtUserPrmData
+
+PrmText = 39 
+Text(0) = "Off"
+Text(1) = "On"
+EndPrmText
+ExtUserPrmData =  39  "Phase Loss Prot."
+Bit(6) 1 0-1
+Prm_Text_Ref = 39 
+EndExtUserPrmData
+
+PrmText = 40 
+Text(0) = "Off"
+Text(1) = "On"
+EndPrmText
+ExtUserPrmData =  40  "DX1xx Enabled"
+Bit(0) 0 0-1
+Prm_Text_Ref = 40 
+EndExtUserPrmData
+
+PrmText = 41 
+Text(0) = "Error"
+Text(1) = "Warning"
+EndPrmText
+ExtUserPrmData =  41  "Missing Module React."
+Bit(7) 0 0-1
+Prm_Text_Ref = 41 
+EndExtUserPrmData
+
+PrmText = 42 
+Text(0) = "Manual Reset"
+Text(1) = "Auto Reset"
+EndPrmText
+ExtUserPrmData =  42  "Aux Inp 1 Ack Mode"
+Bit(0) 0 0-1
+Prm_Text_Ref = 42 
+EndExtUserPrmData
+
+PrmText = 43 
+Text(0) = "Manual Reset"
+Text(1) = "Auto Reset"
+EndPrmText
+ExtUserPrmData =  43  "Aux Inp 2 Ack Mode"
+Bit(1) 0 0-1
+Prm_Text_Ref = 43 
+EndExtUserPrmData
+
+PrmText = 44 
+Text(0) = "Manual Reset"
+Text(1) = "Auto Reset"
+EndPrmText
+ExtUserPrmData =  44  "Aux Inp 3 Ack Mode"
+Bit(2) 0 0-1
+Prm_Text_Ref = 44 
+EndExtUserPrmData
+
+PrmText = 45 
+Text(0) = "Manual Reset"
+Text(1) = "Auto Reset"
+EndPrmText
+ExtUserPrmData =  45  "Aux Inp 4 Ack Mode"
+Bit(3) 0 0-1
+Prm_Text_Ref = 45 
+EndExtUserPrmData
+
+PrmText = 46 
+Text(0) = "Manual Reset"
+Text(1) = "Auto Reset"
+EndPrmText
+ExtUserPrmData =  46  "Aux Inp 5 Ack Mode"
+Bit(4) 0 0-1
+Prm_Text_Ref = 46 
+EndExtUserPrmData
+
+PrmText = 47 
+Text(0) = "Manual Reset"
+Text(1) = "Auto Reset"
+EndPrmText
+ExtUserPrmData =  47  "Aux Inp 6 Ack Mode"
+Bit(5) 0 0-1
+Prm_Text_Ref = 47 
+EndExtUserPrmData
+
+PrmText = 48 
+Text(0) = "Time"
+Text(1) = "x% Therm. Load"
+EndPrmText
+ExtUserPrmData =  48  "Cooling Mode"
+Bit(7) 0 0-1
+Prm_Text_Ref = 48 
+EndExtUserPrmData
+
+PrmText = 49 
+Text(0) = "No"
+Text(1) = "Yes"
+EndPrmText
+ExtUserPrmData =  49  "Invert DI Start Inp."
+Bit(0) 0 0-1
+Prm_Text_Ref = 49 
+EndExtUserPrmData
+
+PrmText = 50 
+Text(0) = "No"
+Text(1) = "Yes"
+EndPrmText
+ExtUserPrmData =  50  "Invert DI Stop Inp."
+Bit(1) 1 0-1
+Prm_Text_Ref = 50 
+EndExtUserPrmData
+
+PrmText = 51 
+Text(0) = "No"
+Text(1) = "Yes"
+EndPrmText
+ExtUserPrmData =  51  "Inching DI Start Inp"
+Bit(4) 0 0-1
+Prm_Text_Ref = 51 
+EndExtUserPrmData
+
+PrmText = 52 
+Text(0) = "No"
+Text(1) = "Yes"
+EndPrmText
+ExtUserPrmData =  52  "Loc 1 Start Bus Cyc"
+Bit(0) 0 0-1
+Prm_Text_Ref = 52 
+EndExtUserPrmData
+
+PrmText = 53 
+Text(0) = "No"
+Text(1) = "Yes"
+EndPrmText
+ExtUserPrmData =  53  "Loc 1 Stop Bus Cyc"
+Bit(1) 1 0-1
+Prm_Text_Ref = 53 
+EndExtUserPrmData
+
+PrmText = 54 
+Text(0) = "No"
+Text(1) = "Yes"
+EndPrmText
+ExtUserPrmData =  54  "Loc 1 Start DI"
+Bit(2) 1 0-1
+Prm_Text_Ref = 54 
+EndExtUserPrmData
+
+PrmText = 55 
+Text(0) = "No"
+Text(1) = "Yes"
+EndPrmText
+ExtUserPrmData =  55  "Loc 1 Stop DI"
+Bit(3) 1 0-1
+Prm_Text_Ref = 55 
+EndExtUserPrmData
+
+PrmText = 56 
+Text(0) = "No"
+Text(1) = "Yes"
+EndPrmText
+ExtUserPrmData =  56  "Loc 1 Start LCD"
+Bit(4) 1 0-1
+Prm_Text_Ref = 56 
+EndExtUserPrmData
+
+PrmText = 57 
+Text(0) = "No"
+Text(1) = "Yes"
+EndPrmText
+ExtUserPrmData =  57  "Loc 1 Stop LCD"
+Bit(5) 1 0-1
+Prm_Text_Ref = 57 
+EndExtUserPrmData
+
+PrmText = 58 
+Text(0) = "No"
+Text(1) = "Yes"
+EndPrmText
+ExtUserPrmData =  58  "Loc 1 Start Bus Acyc"
+Bit(6) 0 0-1
+Prm_Text_Ref = 58 
+EndExtUserPrmData
+
+PrmText = 59 
+Text(0) = "No"
+Text(1) = "Yes"
+EndPrmText
+ExtUserPrmData =  59  "Loc 1 Stop Bus Acyc"
+Bit(7) 1 0-1
+Prm_Text_Ref = 59 
+EndExtUserPrmData
+
+PrmText = 60 
+Text(0) = "No"
+Text(1) = "Yes"
+EndPrmText
+ExtUserPrmData =  60  "Auto Start Bus Cyc"
+Bit(0) 1 0-1
+Prm_Text_Ref = 60 
+EndExtUserPrmData
+
+PrmText = 61 
+Text(0) = "No"
+Text(1) = "Yes"
+EndPrmText
+ExtUserPrmData =  61  "Auto Stop Bus Cyc"
+Bit(1) 1 0-1
+Prm_Text_Ref = 61 
+EndExtUserPrmData
+
+PrmText = 62 
+Text(0) = "No"
+Text(1) = "Yes"
+EndPrmText
+ExtUserPrmData =  62  "Auto Start DI"
+Bit(2) 0 0-1
+Prm_Text_Ref = 62 
+EndExtUserPrmData
+
+PrmText = 63 
+Text(0) = "No"
+Text(1) = "Yes"
+EndPrmText
+ExtUserPrmData =  63  "Auto Stop DI"
+Bit(3) 1 0-1
+Prm_Text_Ref = 63 
+EndExtUserPrmData
+
+PrmText = 64 
+Text(0) = "No"
+Text(1) = "Yes"
+EndPrmText
+ExtUserPrmData =  64  "Auto Start LCD"
+Bit(4) 0 0-1
+Prm_Text_Ref = 64 
+EndExtUserPrmData
+
+PrmText = 65 
+Text(0) = "No"
+Text(1) = "Yes"
+EndPrmText
+ExtUserPrmData =  65  "Auto Stop LCD"
+Bit(5) 1 0-1
+Prm_Text_Ref = 65 
+EndExtUserPrmData
+
+PrmText = 66 
+Text(0) = "No"
+Text(1) = "Yes"
+EndPrmText
+ExtUserPrmData =  66  "Auto Start Bus Acyc"
+Bit(6) 1 0-1
+Prm_Text_Ref = 66 
+EndExtUserPrmData
+
+PrmText = 67 
+Text(0) = "No"
+Text(1) = "Yes"
+EndPrmText
+ExtUserPrmData =  67  "Auto Stop Bus Acyc"
+Bit(7) 1 0-1
+Prm_Text_Ref = 67 
+EndExtUserPrmData
+
+PrmText = 68 
+Text(0) = "No"
+Text(1) = "Yes"
+EndPrmText
+ExtUserPrmData =  68  "Loc 2 Start Bus Cyc"
+Bit(0) 0 0-1
+Prm_Text_Ref = 68 
+EndExtUserPrmData
+
+PrmText = 69 
+Text(0) = "No"
+Text(1) = "Yes"
+EndPrmText
+ExtUserPrmData =  69  "Loc 2 Stop Bus Cyc"
+Bit(1) 1 0-1
+Prm_Text_Ref = 69 
+EndExtUserPrmData
+
+PrmText = 70 
+Text(0) = "No"
+Text(1) = "Yes"
+EndPrmText
+ExtUserPrmData =  70  "Loc 2 Start DI"
+Bit(2) 1 0-1
+Prm_Text_Ref = 70 
+EndExtUserPrmData
+
+PrmText = 71 
+Text(0) = "No"
+Text(1) = "Yes"
+EndPrmText
+ExtUserPrmData =  71  "Loc 2 Stop DI"
+Bit(3) 1 0-1
+Prm_Text_Ref = 71 
+EndExtUserPrmData
+
+PrmText = 72 
+Text(0) = "No"
+Text(1) = "Yes"
+EndPrmText
+ExtUserPrmData =  72  "Loc 2 Start LCD"
+Bit(4) 1 0-1
+Prm_Text_Ref = 72 
+EndExtUserPrmData
+
+PrmText = 73 
+Text(0) = "No"
+Text(1) = "Yes"
+EndPrmText
+ExtUserPrmData =  73  "Loc 2 Stop LCD"
+Bit(5) 1 0-1
+Prm_Text_Ref = 73 
+EndExtUserPrmData
+
+PrmText = 74 
+Text(0) = "No"
+Text(1) = "Yes"
+EndPrmText
+ExtUserPrmData =  74  "Loc 2 Start Bus Acyc"
+Bit(6) 0 0-1
+Prm_Text_Ref = 74 
+EndExtUserPrmData
+
+PrmText = 75 
+Text(0) = "No"
+Text(1) = "Yes"
+EndPrmText
+ExtUserPrmData =  75  "Loc 2 Stop Bus Acyc"
+Bit(7) 1 0-1
+Prm_Text_Ref = 75 
+EndExtUserPrmData
+
+PrmText = 76 
+Text(0) = "No"
+Text(1) = "Yes"
+EndPrmText
+ExtUserPrmData =  76  "Multif In 0 Autoreset"
+Bit(4) 0 0-1
+Prm_Text_Ref = 76 
+EndExtUserPrmData
+
+PrmText = 77 
+Text(0) = "No"
+Text(1) = "Yes"
+EndPrmText
+ExtUserPrmData =  77  "Multif In 1 Autoreset"
+Bit(5) 0 0-1
+Prm_Text_Ref = 77 
+EndExtUserPrmData
+
+PrmText = 78 
+Text(0) = "No"
+Text(1) = "Yes"
+EndPrmText
+ExtUserPrmData =  78  "Multif In 2 Autoreset"
+Bit(6) 0 0-1
+Prm_Text_Ref = 78 
+EndExtUserPrmData
+
+ExtUserPrmData =  79  "Aux Inp 1 Delay [0.1s]"
+Unsigned8 0 0-255
+EndExtUserPrmData
+
+ExtUserPrmData =  80  "Aux Inp 2 Delay [0.1s]"
+Unsigned8 0 0-255
+EndExtUserPrmData
+
+ExtUserPrmData =  81  "Aux Inp 3 Delay [0.1s]"
+Unsigned8 0 0-255
+EndExtUserPrmData
+
+ExtUserPrmData =  82  "Aux Inp 4 Delay [0.1s]"
+Unsigned8 0 0-255
+EndExtUserPrmData
+
+ExtUserPrmData =  83  "Aux Inp 5 Delay [0.1s]"
+Unsigned8 0 0-255
+EndExtUserPrmData
+
+ExtUserPrmData =  84  "Aux Inp 6 Delay [0.1s]"
+Unsigned8 0 0-255
+EndExtUserPrmData
+
+ExtUserPrmData =  85  "Check-Back Time [0.1s]"
+Unsigned8 5 1-255
+EndExtUserPrmData
+
+ExtUserPrmData =  86  "Low Curr Warn Delay [0.1s]"
+Unsigned8 5 0-255
+EndExtUserPrmData
+
+ExtUserPrmData =  87  "Low Curr Trip Delay [0.1s]"
+Unsigned8 5 0-255
+EndExtUserPrmData
+
+ExtUserPrmData =  88  "High Curr Warn Delay [0.1s]"
+Unsigned8 5 0-255
+EndExtUserPrmData
+
+ExtUserPrmData =  89  "High Curr Trip Delay [0.1s]"
+Unsigned8 5 0-255
+EndExtUserPrmData
+
+ExtUserPrmData =  90  "Phase Imb Trip Level [%]"
+Unsigned8 50 0-100
+EndExtUserPrmData
+
+ExtUserPrmData =  91  "Phase Imb Warn Level [%]"
+Unsigned8 100 0-100
+EndExtUserPrmData
+
+PrmText = 92 
+Text(0) = "Phase Sequence L1 L2 L3"
+Text(1) = "Phase Sequence L3 L2 L1"
+EndPrmText
+ExtUserPrmData =  92  "Phase Reversal"
+Bit(0) 0 0-1
+Prm_Text_Ref = 92 
+EndExtUserPrmData
+
+ExtUserPrmData =  93  "Restart Level [%]"
+Unsigned8 30 10-100
+EndExtUserPrmData
+
+PrmText = 94 
+Text(0) = "Thermal Load"
+Text(1) = "DX1xx DI"
+Text(2) = "DX1xx DO"
+Text(3) = "Operating Hours"
+Text(4) = "Number of Trips"
+Text(5) = "Number of Starts"
+Text(6) = "max. Startup Current"
+Text(7) = "Real Startup Time"
+EndPrmText
+ExtUserPrmData =  94  "User Display 1"
+Unsigned8 0 0-7
+Prm_Text_Ref = 94 
+EndExtUserPrmData
+
+PrmText = 95 
+Text(0) = "Thermal Load"
+Text(1) = "DX1xx DI"
+Text(2) = "DX1xx DO"
+Text(3) = "Operating Hours"
+Text(4) = "Number of Trips"
+Text(5) = "Number of Starts"
+Text(6) = "max. Startup Current"
+Text(7) = "Real Startup Time"
+EndPrmText
+ExtUserPrmData =  95  "User Display 2"
+Unsigned8 6 0-7
+Prm_Text_Ref = 95 
+EndExtUserPrmData
+
+PrmText = 96 
+Text(0) = "Thermal Load"
+Text(1) = "DX1xx DI"
+Text(2) = "DX1xx DO"
+Text(3) = "Operating Hours"
+Text(4) = "Number of Trips"
+Text(5) = "Number of Starts"
+Text(6) = "max. Startup Current"
+Text(7) = "Real Startup Time"
+EndPrmText
+ExtUserPrmData =  96  "User Display 3"
+Unsigned8 7 0-7
+Prm_Text_Ref = 96 
+EndExtUserPrmData
+
+PrmText = 97 
+Text(0) = "Binary 0"
+Text(1) = "Binary 1"
+Text(2) = "Analog 0"
+Text(3) = "Analog 1"
+Text(4) = "Time to Trip"
+Text(5) = "Time to Cool"
+EndPrmText
+ExtUserPrmData =  97  "User Display 4"
+Unsigned8 4 0-5
+Prm_Text_Ref = 97 
+EndExtUserPrmData
+
+PrmText = 98 
+Text(0) = "Binary 0"
+Text(1) = "Binary 1"
+Text(2) = "Analog 0"
+Text(3) = "Analog 1"
+Text(4) = "Time to Trip"
+Text(5) = "Time to Cool"
+EndPrmText
+ExtUserPrmData =  98  "User Display 5"
+Unsigned8 5 0-5
+Prm_Text_Ref = 98 
+EndExtUserPrmData
+
+ExtUserPrmData =  99  "Dip Duration [0.1s]"
+Unsigned8 5 1-255
+EndExtUserPrmData
+
+ExtUserPrmData =  100  "Dip Autorestart Window [0.1s]"
+Unsigned8 1 1-10
+EndExtUserPrmData
+
+ExtUserPrmData =  101  "Dip Autorestart Delay [s]"
+Unsigned8 0 0-255
+EndExtUserPrmData
+
+ExtUserPrmData =  102  "Thermal Load Warnlev [%]"
+Unsigned8 100 20-100
+EndExtUserPrmData
+
+ExtUserPrmData =  103  "DX1xx DI Delay [ms]"
+Unsigned8 20 3-200
+EndExtUserPrmData
+
+PrmText = 104 
+Text(0) = "0-20mA"
+Text(1) = "4-20mA"
+Text(2) = "0-10mA"
+Text(3) = "0-10V"
+EndPrmText
+ExtUserPrmData =  104  "DX1xx AO Type"
+BitArea(0-1) 0 0-3
+Prm_Text_Ref = 104 
+EndExtUserPrmData
+
+PrmText = 105 
+Text(0) = "Disabled"
+Text(1) = "Trip"
+Text(2) = "Warning"
+EndPrmText
+ExtUserPrmData =  105  "DX1xx AO Err Reac"
+BitArea(2-3) 0 0-2
+Prm_Text_Ref = 105 
+EndExtUserPrmData
+
+PrmText = 106 
+Text(0) = "Off"
+Text(1) = "On"
+EndPrmText
+ExtUserPrmData =  106  "Backlight"
+Bit(0) 1 0-1
+Prm_Text_Ref = 106 
+EndExtUserPrmData
+
+PrmText = 107 
+Text(0) = "Off"
+Text(1) = "On for Parameters"
+Text(2) = "On for Param. + Motor Control"
+EndPrmText
+ExtUserPrmData =  107  "Password Protection"
+BitArea(1-2) 0 0-2
+Prm_Text_Ref = 107 
+EndExtUserPrmData
+
+PrmText = 108 
+Text(0) = "Off"
+Text(1) = "On"
+Text(2) = "On + Rapid Cycle Lockout"
+EndPrmText
+ExtUserPrmData =  108  "Dip Enable"
+BitArea(3-4) 0 0-2
+Prm_Text_Ref = 108 
+EndExtUserPrmData
+
+PrmText = 109 
+Text(0) = "Off"
+Text(1) = "On"
+EndPrmText
+ExtUserPrmData =  109  "Dip Autorestart Enable"
+Bit(5) 0 0-1
+Prm_Text_Ref = 109 
+EndExtUserPrmData
+
+;
+;=====================================================================
+; special Parameter-Definitions for DPV1-Plug PDP22
+;=====================================================================
+PrmText = 10000
+Text(0) ="Use Block-Parameters"
+Text(1) ="Ignore Block-Parameters"
+EndPrmText
+
+PrmText = 10001
+Text(0) ="DPV0 Diagnosis Format"
+Text(1) ="DPV1 Diagnosis Format"
+EndPrmText
+
+ExtUserPrmData = 10000 "Block - Parameter"
+Unsigned8 0 0-1
+Prm_Text_Ref = 10000
+EndExtUserPrmData
+
+ExtUserPrmData = 10001 "Diagnosis Format"
+Unsigned8 0 0-1
+Prm_Text_Ref = 10001
+EndExtUserPrmData
+
+;
+;===========================================================
+;General parameters
+;===========================================================
+;
+GSD_Revision = 3
+Vendor_Name ="ABB"
+Model_Name ="PDP22-FBP with UMC100"
+Revision ="V1.13"
+Ident_Number   =0x34E0
+Protocol_Ident = 0
+Station_Type = 0
+FMS_supp = 0
+Hardware_Release ="V 1.0"
+Software_Release ="V 1.0"
+9.6_supp       =1
+19.2_supp      =1
+31.25_supp     =0
+45.45_supp     =1
+93.75_supp     =1
+187.5_supp     =1
+500_supp       =1
+1.5M_supp      =1
+3M_supp = 1
+6M_supp = 1
+12M_supp = 1
+MaxTsdr_9.6 = 15
+MaxTsdr_19.2 = 15
+MaxTsdr_31.25 = 15
+MaxTsdr_45.45 = 15
+MaxTsdr_93.75 = 15
+MaxTsdr_187.5 = 15
+MaxTsdr_500 = 15
+MaxTsdr_1.5M   =20
+MaxTsdr_3M = 35
+MaxTsdr_6M = 50
+MaxTsdr_12M = 95
+Redundancy = 0
+Repeater_Ctrl_Sig = 0
+24V_Pins = 1
+Implementation_Type ="VPC3 solution"
+Bitmap_Device ="FBP_N"
+Bitmap_Diag ="FBP_DIAG"
+Bitmap_SF ="FBP_RUN"
+;
+;================================
+; Slave-Specification:
+;================================
+;
+Freeze_Mode_supp = 1
+Sync_Mode_supp = 1
+Set_Slave_Add_Supp = 0
+Auto_Baud_supp = 1
+Min_Slave_Intervall = 1
+Fail_Safe = 1
+Max_Diag_Data_Len = 19
+Modul_Offset = 0
+Slave_Family=9@FieldBusPlug@ProfibusDP
+Modular_Station = 1
+Max_Module = 1
+Max_Input_len = 48
+Max_Output_len = 48
+Max_Data_len = 96
+
+;=======================================
+; Device specific diagnostic data (DPV1)
+;=======================================
+;
+
+Unit_Diag_Area = 0 - 7
+; Diag Status available
+Value(129) ="UMC100 Diag status available"
+Unit_Diag_Area_End
+
+Unit_Diag_Area = 24 - 31
+; Comm-State-Info
+Value(0) ="Communication OK"
+Value(1) ="Lost Communication to UMC100"
+Unit_Diag_Area_End
+
+Unit_Diag_bit(32) = "Thermal Overload Trip"
+Unit_Diag_bit(33) = "Phase-Loss (Current)"
+Unit_Diag_bit(34) = "Phase Imbalance (I)"
+Unit_Diag_bit(35) = "Locked Rotor"
+Unit_Diag_bit(36) = "Thermal Load Prewarn."
+Unit_Diag_bit(37) = "PTC Temperature High"
+Unit_Diag_bit(38) = "PTC Wiring Problem"
+Unit_Diag_bit(39) = "Check-Back Error"
+
+Unit_Diag_bit(40) = "I below Trip Level"
+Unit_Diag_bit(41) = "I below Warn Level"
+Unit_Diag_bit(42) = "I above Trip Level"
+Unit_Diag_bit(43) = "I above Warn Level"
+Unit_Diag_bit(44) = "Earthfault Trip"
+Unit_Diag_bit(45) = "Earthfault Warning"
+Unit_Diag_bit(46) = "UMC Selftest Error"
+Unit_Diag_bit(47) = "Actuator"
+
+Unit_Diag_bit(48) = "IO-Module Missing"
+Unit_Diag_bit(49) = "Application Error"
+Unit_Diag_bit(50) = "IO-Module Warning/Error"
+Unit_Diag_bit(51) = "Auxiliary Input 1"
+Unit_Diag_bit(52) = "Auxiliary Input 2"
+Unit_Diag_bit(53) = "Auxiliary Input 3"
+Unit_Diag_bit(54) = "Auxiliary Input 4"
+Unit_Diag_bit(55) = "Auxiliary Input 5"
+
+Unit_Diag_bit(56) = "Auxiliary Input 6"
+Unit_Diag_bit(57) = "Ext. Fault Multif. DI0"
+Unit_Diag_bit(58) = "Ext. Fault Multif. DI1"
+Unit_Diag_bit(59) = "Ext. Fault Multif. DI2"
+Unit_Diag_bit(60) = "reserved"
+Unit_Diag_bit(61) = "reserved"
+Unit_Diag_bit(62) = "reserved"
+Unit_Diag_bit(63) = "reserved"
+
+Unit_Diag_bit(64) = "reserved"
+Unit_Diag_bit(65) = "reserved"
+Unit_Diag_bit(66) = "reserved"
+Unit_Diag_bit(67) = "reserved"
+Unit_Diag_bit(68) = "reserved"
+Unit_Diag_bit(69) = "reserved"
+Unit_Diag_bit(70) = "reserved"
+Unit_Diag_bit(71) = "reserved"
+
+Unit_Diag_bit(72) = "reserved"
+Unit_Diag_bit(73) = "reserved"
+Unit_Diag_bit(74) = "reserved"
+Unit_Diag_bit(75) = "reserved"
+Unit_Diag_bit(76) = "reserved"
+Unit_Diag_bit(77) = "Cooling Time Running"
+Unit_Diag_bit(78) = "reserved"
+Unit_Diag_bit(79) = "reserved"
+
+Unit_Diag_bit(80) = "reserved"
+Unit_Diag_bit(81) = "reserved"
+Unit_Diag_bit(82) = "reserved"
+Unit_Diag_bit(83) = "reserved"
+Unit_Diag_bit(84) = "reserved"
+Unit_Diag_bit(85) = "reserved"
+Unit_Diag_bit(86) = "Parameter out of range"
+Unit_Diag_bit(87) = "Ext. Diag. Available"
+
+Unit_Diag_bit(88) = "Bit0 ext. UMC-Diagnosis"
+Unit_Diag_bit(89) = "Bit1 ext. UMC-Diagnosis"
+Unit_Diag_bit(90) = "Bit2 ext. UMC-Diagnosis"
+Unit_Diag_bit(91) = "Bit3 ext. UMC-Diagnosis"
+Unit_Diag_bit(92) = "Bit4 ext. UMC-Diagnosis"
+Unit_Diag_bit(93) = "Bit5 ext. UMC-Diagnosis"
+Unit_Diag_bit(94) = "Bit6 ext. UMC-Diagnosis"
+Unit_Diag_bit(95) = "Bit7 ext. UMC-Diagnosis"
+
+;=============================================
+; User Prm Data: Length and Preset:
+;=============================================
+;
+Max_User_Prm_Data_Len   = 232             ;   number of parameter of UMC100 (max 224)
+;                                        + number of parameter for the FBP itself (8)
+Ext_User_Prm_Data_Const(0) = 0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00    ; constant values for ASIC
+;DPV1 status1 = 0x00 =>
+;       Bit2 = 0 WD_Base=10ms (1ms=1)
+;       Bit7 = 1 DPV1 Enable (Disable=0)
+;DPV1 status2 = 0x00 =>
+;       Bit0 = 0 ChkCfg nach EN50170(User specific=1)
+;DPV1 status3 = 0x00 =>
+;       alarm not implemented
+
+Ext_User_Prm_Data_Ref(3) = 10000        ; use/ignore Block-Parameters
+Ext_User_Prm_Data_Ref(4) = 10001        ; Diag-Format DPV0/V1
+;
+;=============================================
+; Module Definition List
+;=============================================
+;
+
+Module="UMC100-FBP (V1.13)"0x11, 0x23, 0x56, 0x63      ; 16DI, 32DO, 7AI, 4AO
+1
+Ext_Module_Prm_Data_Len= 224                        ; number of used data byte
+Ext_User_Prm_Data_Const(0) =    \                 ; initialising of param data
+    0x00, 0x00, 0x00, 0x32, 0x00, 0x00, 0x00, 0x32, 0x02, 0x58,  \
+    0x00, 0x64, 0x00, 0x78, 0x00, 0x05, 0x00, 0x01, 0x00, 0x01,  \
+    0x0A, 0x00, 0x1E, 0xA0, 0xA0, 0x05, 0x00, 0x00, 0x00, 0x00,  \
+    0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x00, 0x08, 0x60,  \
+    0x00, 0x00, 0x02, 0xBE, 0xEB, 0xBE, 0x00, 0x00, 0x00, 0x00,  \
+    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x05, 0x05, 0x05, 0x05,  \
+    0x05, 0x32, 0x64, 0x00, 0x1E, 0x00, 0x06, 0x07, 0x04, 0x05,  \
+    0x00, 0x05, 0x01, 0x00, 0x64, 0x00, 0x64, 0x0A, 0x00, 0x05,  \
+    0x64, 0x64, 0x00, 0x14, 0x14, 0x14, 0x14, 0x00, 0x00, 0x05,  \
+    0x0A, 0x05, 0x78, 0x05, 0x64, 0x05, 0xE0, 0x05, 0xE0, 0x05,  \
+    0xE0, 0x05, 0xE0, 0x05, 0xE0, 0x05, 0xE0, 0x05, 0x00, 0x14,  \
+    0x00, 0x14, 0x40, 0x44, 0x00, 0x00, 0x00, 0x01, 0x01, 0x7C,  \
+    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  \
+    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  \
+    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  \
+    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  \
+    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  \
+    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  \
+    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  \
+    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  \
+    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  \
+    0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  \
+    0x00, 0x00, 0x00, 0x00
+Ext_User_Prm_Data_Ref( 0 ) = 1 ;   Setting Ie 1
+Ext_User_Prm_Data_Ref( 4 ) = 2 ;   Setting Ie 2
+Ext_User_Prm_Data_Ref( 8 ) = 3 ;   YD Starting Time
+Ext_User_Prm_Data_Ref( 10 ) = 4 ;   Current Factor
+Ext_User_Prm_Data_Ref( 12 ) = 5 ;   Cooling Time
+Ext_User_Prm_Data_Ref( 16 ) = 6 ;   Language
+Ext_User_Prm_Data_Ref( 17 ) = 7 ;   Rev Lock-Out Time
+Ext_User_Prm_Data_Ref( 18 ) = 8 ;   Fault Output
+Ext_User_Prm_Data_Ref( 19 ) = 9 ;   Trip Class
+Ext_User_Prm_Data_Ref( 20 ) = 10 ;   Low Curr Warn Level
+Ext_User_Prm_Data_Ref( 21 ) = 11 ;   Low Curr Trip Level
+Ext_User_Prm_Data_Ref( 22 ) = 12 ;   High Curr Warn Level
+Ext_User_Prm_Data_Ref( 23 ) = 13 ;   High Curr Trip Level
+Ext_User_Prm_Data_Ref( 24 ) = 14 ;   Locked Rotor Level
+Ext_User_Prm_Data_Ref( 25 ) = 15 ;   Locked Rotor Delay
+Ext_User_Prm_Data_Ref( 26 ) = 16 ;   Custom App Parameter
+Ext_User_Prm_Data_Ref( 27 ) = 17 ;   Multif In 0
+Ext_User_Prm_Data_Ref( 28 ) = 18 ;   Multif In 1
+Ext_User_Prm_Data_Ref( 29 ) = 19 ;   Multif In 2
+Ext_User_Prm_Data_Ref( 30 ) = 20 ;   Multif In 0 Delay
+Ext_User_Prm_Data_Ref( 31 ) = 21 ;   Multif In 1 Delay
+Ext_User_Prm_Data_Ref( 32 ) = 22 ;   Multif In 2 Delay
+Ext_User_Prm_Data_Ref( 33 ) = 23 ;   Control Function
+Ext_User_Prm_Data_Ref( 34 ) = 24 ;   Busfault Reaction
+Ext_User_Prm_Data_Ref( 35 ) = 25 ;   Aux Inp 1 Reaction
+Ext_User_Prm_Data_Ref( 35 ) = 26 ;   Aux Inp 2 Reaction
+Ext_User_Prm_Data_Ref( 36 ) = 27 ;   Aux Inp 3 Reaction
+Ext_User_Prm_Data_Ref( 36 ) = 28 ;   Aux Inp 4 Reaction
+Ext_User_Prm_Data_Ref( 37 ) = 29 ;   Aux Inp 5 Reaction
+Ext_User_Prm_Data_Ref( 37 ) = 30 ;   Aux Inp 6 Reaction
+Ext_User_Prm_Data_Ref( 38 ) = 31 ;   PTC, Thermistor
+Ext_User_Prm_Data_Ref( 38 ) = 32 ;   Check-Back
+Ext_User_Prm_Data_Ref( 38 ) = 33 ;   Check Phase Sequence
+Ext_User_Prm_Data_Ref( 39 ) = 34 ;   Fault Auto Reset
+Ext_User_Prm_Data_Ref( 39 ) = 35 ;   Emergency Start
+Ext_User_Prm_Data_Ref( 39 ) = 36 ;   Address Check
+Ext_User_Prm_Data_Ref( 39 ) = 37 ;   Enable Custom Logic
+Ext_User_Prm_Data_Ref( 39 ) = 38 ;   YD Change-Over Mode
+Ext_User_Prm_Data_Ref( 39 ) = 39 ;   Phase Loss Prot.
+Ext_User_Prm_Data_Ref( 40 ) = 40 ;   DX1xx Enabled
+Ext_User_Prm_Data_Ref( 40 ) = 41 ;   Missing Module React.
+Ext_User_Prm_Data_Ref( 41 ) = 42 ;   Aux Inp 1 Ack Mode
+Ext_User_Prm_Data_Ref( 41 ) = 43 ;   Aux Inp 2 Ack Mode
+Ext_User_Prm_Data_Ref( 41 ) = 44 ;   Aux Inp 3 Ack Mode
+Ext_User_Prm_Data_Ref( 41 ) = 45 ;   Aux Inp 4 Ack Mode
+Ext_User_Prm_Data_Ref( 41 ) = 46 ;   Aux Inp 5 Ack Mode
+Ext_User_Prm_Data_Ref( 41 ) = 47 ;   Aux Inp 6 Ack Mode
+Ext_User_Prm_Data_Ref( 41 ) = 48 ;   Cooling Mode
+Ext_User_Prm_Data_Ref( 42 ) = 49 ;   Invert DI Start Inp.
+Ext_User_Prm_Data_Ref( 42 ) = 50 ;   Invert DI Stop Inp.
+Ext_User_Prm_Data_Ref( 42 ) = 51 ;   Inching DI Start Inp
+Ext_User_Prm_Data_Ref( 43 ) = 52 ;   Loc 1 Start Bus Cyc
+Ext_User_Prm_Data_Ref( 43 ) = 53 ;   Loc 1 Stop Bus Cyc
+Ext_User_Prm_Data_Ref( 43 ) = 54 ;   Loc 1 Start DI
+Ext_User_Prm_Data_Ref( 43 ) = 55 ;   Loc 1 Stop DI
+Ext_User_Prm_Data_Ref( 43 ) = 56 ;   Loc 1 Start LCD
+Ext_User_Prm_Data_Ref( 43 ) = 57 ;   Loc 1 Stop LCD
+Ext_User_Prm_Data_Ref( 43 ) = 58 ;   Loc 1 Start Bus Acyc
+Ext_User_Prm_Data_Ref( 43 ) = 59 ;   Loc 1 Stop Bus Acyc
+Ext_User_Prm_Data_Ref( 44 ) = 60 ;   Auto Start Bus Cyc
+Ext_User_Prm_Data_Ref( 44 ) = 61 ;   Auto Stop Bus Cyc
+Ext_User_Prm_Data_Ref( 44 ) = 62 ;   Auto Start DI
+Ext_User_Prm_Data_Ref( 44 ) = 63 ;   Auto Stop DI
+Ext_User_Prm_Data_Ref( 44 ) = 64 ;   Auto Start LCD
+Ext_User_Prm_Data_Ref( 44 ) = 65 ;   Auto Stop LCD
+Ext_User_Prm_Data_Ref( 44 ) = 66 ;   Auto Start Bus Acyc
+Ext_User_Prm_Data_Ref( 44 ) = 67 ;   Auto Stop Bus Acyc
+Ext_User_Prm_Data_Ref( 45 ) = 68 ;   Loc 2 Start Bus Cyc
+Ext_User_Prm_Data_Ref( 45 ) = 69 ;   Loc 2 Stop Bus Cyc
+Ext_User_Prm_Data_Ref( 45 ) = 70 ;   Loc 2 Start DI
+Ext_User_Prm_Data_Ref( 45 ) = 71 ;   Loc 2 Stop DI
+Ext_User_Prm_Data_Ref( 45 ) = 72 ;   Loc 2 Start LCD
+Ext_User_Prm_Data_Ref( 45 ) = 73 ;   Loc 2 Stop LCD
+Ext_User_Prm_Data_Ref( 45 ) = 74 ;   Loc 2 Start Bus Acyc
+Ext_User_Prm_Data_Ref( 45 ) = 75 ;   Loc 2 Stop Bus Acyc
+Ext_User_Prm_Data_Ref( 46 ) = 76 ;   Multif In 0 Autoreset
+Ext_User_Prm_Data_Ref( 46 ) = 77 ;   Multif In 1 Autoreset
+Ext_User_Prm_Data_Ref( 46 ) = 78 ;   Multif In 2 Autoreset
+Ext_User_Prm_Data_Ref( 50 ) = 79 ;   Aux Inp 1 Delay
+Ext_User_Prm_Data_Ref( 51 ) = 80 ;   Aux Inp 2 Delay
+Ext_User_Prm_Data_Ref( 52 ) = 81 ;   Aux Inp 3 Delay
+Ext_User_Prm_Data_Ref( 53 ) = 82 ;   Aux Inp 4 Delay
+Ext_User_Prm_Data_Ref( 54 ) = 83 ;   Aux Inp 5 Delay
+Ext_User_Prm_Data_Ref( 55 ) = 84 ;   Aux Inp 6 Delay
+Ext_User_Prm_Data_Ref( 56 ) = 85 ;   Check-Back Time
+Ext_User_Prm_Data_Ref( 57 ) = 86 ;   Low Curr Warn Delay
+Ext_User_Prm_Data_Ref( 58 ) = 87 ;   Low Curr Trip Delay
+Ext_User_Prm_Data_Ref( 59 ) = 88 ;   High Curr Warn Delay
+Ext_User_Prm_Data_Ref( 60 ) = 89 ;   High Curr Trip Delay
+Ext_User_Prm_Data_Ref( 61 ) = 90 ;   Phase Imb Trip Level
+Ext_User_Prm_Data_Ref( 62 ) = 91 ;   Phase Imb Warn Level
+Ext_User_Prm_Data_Ref( 63 ) = 92 ;   Phase Reversal
+Ext_User_Prm_Data_Ref( 64 ) = 93 ;   Restart Level
+Ext_User_Prm_Data_Ref( 65 ) = 94 ;   User Display 1
+Ext_User_Prm_Data_Ref( 66 ) = 95 ;   User Display 2
+Ext_User_Prm_Data_Ref( 67 ) = 96 ;   User Display 3
+Ext_User_Prm_Data_Ref( 68 ) = 97 ;   User Display 4
+Ext_User_Prm_Data_Ref( 69 ) = 98 ;   User Display 5
+Ext_User_Prm_Data_Ref( 71 ) = 99 ;   Dip Duration
+Ext_User_Prm_Data_Ref( 72 ) = 100 ;   Dip Autorestart Window
+Ext_User_Prm_Data_Ref( 73 ) = 101 ;   Dip Autorestart Delay
+Ext_User_Prm_Data_Ref( 74 ) = 102 ;   Thermal Load Warnlev
+Ext_User_Prm_Data_Ref( 83 ) = 103 ;   DX1xx DI Delay
+Ext_User_Prm_Data_Ref( 112 ) = 104 ;   DX1xx AO Type
+Ext_User_Prm_Data_Ref( 112 ) = 105 ;   DX1xx AO Err Reac
+Ext_User_Prm_Data_Ref( 117 ) = 106 ;   Backlight
+Ext_User_Prm_Data_Ref( 117 ) = 107 ;   Password Protection
+Ext_User_Prm_Data_Ref( 117 ) = 108 ;   Dip Enable
+Ext_User_Prm_Data_Ref( 117 ) = 109 ;   Dip Autorestart Enable
+EndModule
+
+
+
+
+; DPV1 Alarm
+DPV1_Slave = 1
+C1_Read_Write_supp = 1
+C1_Max_Data_Len                     = 8         ;The parameter specifies the maximum length of user data excluding
+                                                ;Function_Num, Slot_number, Index, Length, transferred on the
+                                                ;MSAC_1 communication channel.
+                                                ;Type: Unsigned8 (0 .. 240)
+C1_Response_Timeout = 300
+Diagnostic_Alarm_supp = 0
+Process_Alarm_supp = 0
+Pull_Plug_Alarm_supp = 0
+Status_Alarm_supp = 0
+Update_Alarm_supp = 0
+Manufacturer_Specific_Alarm_supp = 0
+Alarm_Sequence_Mode_Count = 0
+Alarm_Type_Mode_supp = 0
+Diagnostic_Alarm_required = 0
+
+C2_Read_Write_supp = 1
+C2_Max_Data_Len                     = 48        ;The parameter specifies the maximum length of user data excluding
+                                                ;Function_Num, Slot_number, Index, Length, transferred on the
+                                                ;MSAC_2 communication channel.
+                                                ;Type: Unsigned8 (0,48 .. 240)
+C2_Response_Timeout = 300
+C2_Read_Write_required = 1
+C2_Max_Count_Channels = 3
+Max_Initiate_PDU_Length             = 52        ;The parameter specifies the maximum length of an Initiate Request
+                                                ;PDU including the Function_Num to the Resource Manager.
+                                                ;Type: Unsigned8 (0,52.. 244)
+DPV1_Data_Types                     = 0             ;
+

@@ -1,0 +1,617 @@
+<HEAD>
+Index of symbols created 2019-02-13 20:33:43.41 
+</HEAD>
+<SECTIONS=15>
+00010000 0001a268 .text
+0001a268 0001a3b0 .got2
+0001a3b0 0001aa54 .fixup
+0001aa54 0001aa94 .bss
+0001aa94 0001aaac .data
+0001aaac 0001c774 .debug_abbrev
+0001c774 000301ce .debug_info
+000301ce 00033458 .debug_line
+00033458 000353b0 .debug_frame
+000353b0 0003b500 .debug_loc
+0003b500 0003ddb0 .debug_pubnames
+0003ddb0 0003e098 .debug_aranges
+0003e098 0003f1b0 .debug_ranges
+0003f1b0 0004442a .debug_str
+0004442a 0004442a .comment
+</SECTIONS>
+<SYMBOLS=595>
+00000000 PhTCPProtocol_860_68.elf EXE_HEAD
+00000064 PhTCPProtocol_860_68.elf PhTCPConnection::Send1131Data(unsigned int, tVarDataValue*, unsigned int)
+000001a0 PhTCPProtocol_860_68.elf PhTCPConnection::GetRemoteInfo(unsigned int&, unsigned short&)
+000001c0 PhTCPProtocol_860_68.elf PhTCPConnection::ConnectInternal()
+00000310 PhTCPProtocol_860_68.elf PhTCPConnection::SendThread()
+00000560 PhTCPProtocol_860_68.elf PhTCPConnection::SendThreadBody(PhTCPConnection*)
+00000570 PhTCPProtocol_860_68.elf PhTCPConnection::DeferredSend1131Data(unsigned long, unsigned int, tVarDataValue*, unsigned int)
+000006c0 PhTCPProtocol_860_68.elf PhTCPConnection::operator delete(void*)
+00000748 PhTCPProtocol_860_68.elf PhTCPConnection::operator new(unsigned int)
+00000870 PhTCPProtocol_860_68.elf PhTCPConnection::WriteVarReq(unsigned long)
+0000097c PhTCPProtocol_860_68.elf PhTCPConnection::PhTCPConnection(bool, unsigned long, unsigned int, unsigned short, bool, int, long)
+00000a78 PhTCPProtocol_860_68.elf PhTCPConnection::PhTCPConnection(bool, unsigned long, unsigned int, unsigned short, bool, int, long)
+00000b74 PhTCPProtocol_860_68.elf PhTCPConnection::~PhTCPConnection()
+0000112c PhTCPProtocol_860_68.elf PhTCPConnection::SetupConnection()
+0000173c PhTCPProtocol_860_68.elf PhTCPConnection::CopyBuffTo1131(TCPBuffer*, unsigned int, tVarDataValue*, int, int)
+00001e0c PhTCPProtocol_860_68.elf PhTCPConnection::Receive1131Data(unsigned long, unsigned int, tVarDataValue*, unsigned int)
+00002050 PhTCPProtocol_860_68.elf PhTCPConnection::ReadVarReq(unsigned long)
+00002164 PhTCPProtocol_860_68.elf PhTCPConnection::CheckAndAbortVarReq(unsigned long)
+000022c0 PhTCPProtocol_860_68.elf PhTCPConnection::ReceiveThread()
+00002c14 PhTCPProtocol_860_68.elf PhTCPConnection::ReceiveThreadBody(PhTCPConnection*)
+00002c24 PhTCPProtocol_860_68.elf PhTCPConnection::~PhTCPConnection()
+000031dc PhTCPProtocol_860_68.elf PhTCPConnection::~PhTCPConnection()
+000037a4 PhTCPProtocol_860_68.elf PhTCPConnInterface::InitCallbacks(ISocketCallback1*, IGenClientCallback1*, ISystemUtilitiesCallback4*, IHeapCallback*, IVOSCallback2*)
+00003804 PhTCPProtocol_860_68.elf PhTCPConnInterface::PhTCPConnInterface(unsigned long)
+00003848 PhTCPProtocol_860_68.elf PhTCPConnInterface::PhTCPConnInterface(unsigned long)
+0000388c PhTCPProtocol_860_68.elf PhTCPConnInterface::ParseRWVarReq(unsigned long, unsigned int&, unsigned int&, tVarDataValue*&, unsigned int&)
+00003a94 PhTCPProtocol_860_68.elf PhTCPConnInterface::~PhTCPConnInterface()
+00003ad8 PhTCPProtocol_860_68.elf PhTCPConnInterface::~PhTCPConnInterface()
+00003b18 PhTCPProtocol_860_68.elf PhTCPConnInterface::~PhTCPConnInterface()
+00003b58 PhTCPProtocol_860_68.elf PhTCPManager::operator new(unsigned int, IHeapCallback*)
+00003c18 PhTCPProtocol_860_68.elf PhTCPManager::~PhTCPManager()
+00003c30 PhTCPProtocol_860_68.elf PhTCPManager::~PhTCPManager()
+00003c48 PhTCPProtocol_860_68.elf PhTCPManager::DisconnectReq(unsigned long, unsigned long)
+00003c8c PhTCPProtocol_860_68.elf PhTCPManager::WriteVarReq(unsigned long)
+00003d24 PhTCPProtocol_860_68.elf PhTCPManager::ReadVarReq(unsigned long)
+00003dc0 PhTCPProtocol_860_68.elf tcpAssert(bool, char const*, unsigned int)
+00003e2c PhTCPProtocol_860_68.elf PhTCPManager::operator delete(void*)
+00003ecc PhTCPProtocol_860_68.elf PhTCPManager::operator delete(void*, IHeapCallback*)
+00003f58 PhTCPProtocol_860_68.elf PhTCPManager::AbortVarReq(unsigned long)
+00004134 PhTCPProtocol_860_68.elf PhTCPManager::ConnectReq(unsigned long, unsigned long*)
+00004580 PhTCPProtocol_860_68.elf PhTCPManager::PhTCPManager(IVOSCallback2*, ISocketCallback1*, IGenClientCallback1*, ISystemUtilitiesCallback4*)
+000045f8 PhTCPProtocol_860_68.elf PhTCPManager::PhTCPManager(IVOSCallback2*, ISocketCallback1*, IGenClientCallback1*, ISystemUtilitiesCallback4*)
+00004670 PhTCPProtocol_860_68.elf CPhTCPProtocol::SetCommonCallbackInterface(ICommonCallback*)
+000047b8 PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::ReadRawReq(unsigned long, int*)
+000047c0 PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::ReadRawReq(unsigned long, int*)
+000047c8 PhTCPProtocol_860_68.elf CPhTCPProtocol::ReadRawReq(unsigned long, int*)
+000047e8 PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::WriteRawReq(unsigned long, int*)
+000047f0 PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::WriteRawReq(unsigned long, int*)
+000047f8 PhTCPProtocol_860_68.elf CPhTCPProtocol::WriteRawReq(unsigned long, int*)
+00004818 PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::AbortRawReq(unsigned long, int*)
+00004820 PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::AbortRawReq(unsigned long, int*)
+00004828 PhTCPProtocol_860_68.elf CPhTCPProtocol::AbortRawReq(unsigned long, int*)
+00004848 PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::GetExtendedStatusSize(unsigned long, int*, int*)
+00004850 PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::GetExtendedStatusSize(unsigned long, int*, int*)
+00004858 PhTCPProtocol_860_68.elf CPhTCPProtocol::GetExtendedStatusSize(unsigned long, int*, int*)
+00004878 PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::GetExtendedStatus(unsigned long, int, teIEC1131Type*, tGCValue*, int*)
+00004880 PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::GetExtendedStatus(unsigned long, int, teIEC1131Type*, tGCValue*, int*)
+00004888 PhTCPProtocol_860_68.elf CPhTCPProtocol::GetExtendedStatus(unsigned long, int, teIEC1131Type*, tGCValue*, int*)
+000048a8 PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::SetStatus(unsigned long, int, int*)
+000048b0 PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::SetStatus(unsigned long, int, int*)
+000048b8 PhTCPProtocol_860_68.elf CPhTCPProtocol::SetStatus(unsigned long, int, int*)
+000048d8 PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::ReadRes(unsigned long, int, int*)
+000048e0 PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::ReadRes(unsigned long, int, int*)
+000048e8 PhTCPProtocol_860_68.elf CPhTCPProtocol::ReadRes(unsigned long, int, int*)
+00004908 PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::WriteRes(unsigned long, int, int*)
+00004910 PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::WriteRes(unsigned long, int, int*)
+00004918 PhTCPProtocol_860_68.elf CPhTCPProtocol::WriteRes(unsigned long, int, int*)
+00004938 PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::PrepareForTermination(teHWFErrorCode*)
+00004940 PhTCPProtocol_860_68.elf CPhTCPProtocol::PrepareForTermination(teHWFErrorCode*)
+00004968 PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::PerformSwitchover(trHWFAddress, teHWFErrorCode*)
+00004970 PhTCPProtocol_860_68.elf CPhTCPProtocol::PerformSwitchover(trHWFAddress, teHWFErrorCode*)
+000049ac PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::PerformFailover(trHWFAddress, teHWFErrorCode*)
+000049b4 PhTCPProtocol_860_68.elf CPhTCPProtocol::PerformFailover(trHWFAddress, teHWFErrorCode*)
+000049f0 PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::StartUsingDevice(trHWFAddress, teHWFErrorCode*)
+000049f8 PhTCPProtocol_860_68.elf CPhTCPProtocol::StartUsingDevice(trHWFAddress, teHWFErrorCode*)
+00004a34 PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::RemoveHWConfiguration(trHWFAddress, teHWFErrorCode*)
+00004a3c PhTCPProtocol_860_68.elf CPhTCPProtocol::RemoveHWConfiguration(trHWFAddress, teHWFErrorCode*)
+00004a78 PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::RemoveIoConnection(unsigned long, teHWFErrorCode*)
+00004a80 PhTCPProtocol_860_68.elf CPhTCPProtocol::RemoveIoConnection(unsigned long, teHWFErrorCode*)
+00004ac0 PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::PhResponsibilityForRestart(trHWFAddress, teHWFErrorCode*)
+00004ac8 PhTCPProtocol_860_68.elf CPhTCPProtocol::PhResponsibilityForRestart(trHWFAddress, teHWFErrorCode*)
+00004b5c PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::PhResponsibilityForBackupDevice(trHWFAddress, teHWFErrorCode*)
+00004b64 PhTCPProtocol_860_68.elf CPhTCPProtocol::PhResponsibilityForBackupDevice(trHWFAddress, teHWFErrorCode*)
+00004ba0 PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::PhResponsibilityForHotInsert(trHWFAddress, teHWFErrorCode*)
+00004ba8 PhTCPProtocol_860_68.elf CPhTCPProtocol::PhResponsibilityForHotInsert(trHWFAddress, teHWFErrorCode*)
+00004c3c PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::StartUsingIoConnection(trHWFAddress, unsigned long, teHWFErrorCode*)
+00004c44 PhTCPProtocol_860_68.elf CPhTCPProtocol::StartUsingIoConnection(trHWFAddress, unsigned long, teHWFErrorCode*)
+00004c94 PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::KickWatchdog(unsigned short*, teHWFErrorCode*)
+00004c9c PhTCPProtocol_860_68.elf CPhTCPProtocol::KickWatchdog(unsigned short*, teHWFErrorCode*)
+00004cdc PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::GetStatus(trHWFAddress, teHWFUnitKind, unsigned long*, unsigned long*, teHWFErrorCode*)
+00004ce4 PhTCPProtocol_860_68.elf CPhTCPProtocol::GetStatus(trHWFAddress, teHWFUnitKind, unsigned long*, unsigned long*, teHWFErrorCode*)
+00004d34 PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::PhResponsibility(trHWFAddress, teHWFErrorCode*)
+00004d40 PhTCPProtocol_860_68.elf CPhTCPProtocol::PhResponsibility(trHWFAddress, teHWFErrorCode*)
+00004f80 PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::AbortVarReq(unsigned long, int*)
+00004f88 PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::AbortVarReq(unsigned long, int*)
+00004f90 PhTCPProtocol_860_68.elf CPhTCPProtocol::AbortVarReq(unsigned long, int*)
+00004fd8 PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::WriteVarReq(unsigned long, int*)
+00004fe0 PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::WriteVarReq(unsigned long, int*)
+00004fe8 PhTCPProtocol_860_68.elf CPhTCPProtocol::WriteVarReq(unsigned long, int*)
+00005034 PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::ReadVarReq(unsigned long, int*)
+0000503c PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::ReadVarReq(unsigned long, int*)
+00005044 PhTCPProtocol_860_68.elf CPhTCPProtocol::ReadVarReq(unsigned long, int*)
+00005090 PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::DisconnectReq(unsigned long, unsigned long, int*)
+00005098 PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::DisconnectReq(unsigned long, unsigned long, int*)
+000050a0 PhTCPProtocol_860_68.elf CPhTCPProtocol::DisconnectReq(unsigned long, unsigned long, int*)
+000050e4 PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::ConnectReq(unsigned long, unsigned long*, int*)
+000050ec PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::ConnectReq(unsigned long, unsigned long*, int*)
+000050f4 PhTCPProtocol_860_68.elf CPhTCPProtocol::ConnectReq(unsigned long, unsigned long*, int*)
+0000513c PhTCPProtocol_860_68.elf CPhTCPProtocol::GetProductInfo(unsigned char*, unsigned char*, unsigned char*, unsigned long)
+000051cc PhTCPProtocol_860_68.elf CPhTCPProtocol::CPhTCPProtocol()
+0000526c PhTCPProtocol_860_68.elf CPhTCPProtocol::CPhTCPProtocol()
+00005308 PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::~CPhTCPProtocol()
+00005310 PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::~CPhTCPProtocol()
+00005318 PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::~CPhTCPProtocol()
+00005320 PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::~CPhTCPProtocol()
+0000532c PhTCPProtocol_860_68.elf CPhTCPProtocol::~CPhTCPProtocol()
+000053f4 PhTCPProtocol_860_68.elf CPhTCPProtocol::~CPhTCPProtocol()
+000054b8 PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::~CPhTCPProtocol()
+000054c0 PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::~CPhTCPProtocol()
+000054c8 PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::~CPhTCPProtocol()
+000054d0 PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::~CPhTCPProtocol()
+000054dc PhTCPProtocol_860_68.elf CPhTCPProtocol::~CPhTCPProtocol()
+000055ac PhTCPProtocol_860_68.elf ObjectFactory
+000056d0 PhTCPProtocol_860_68.elf PhTCPServer::CheckAndAbortVarReq(unsigned long)
+0000577c PhTCPProtocol_860_68.elf PhTCPServer::SetupServer()
+00005954 PhTCPProtocol_860_68.elf PhTCPServer::operator delete(void*)
+000059dc PhTCPProtocol_860_68.elf PhTCPServer::operator new(unsigned int)
+00005b04 PhTCPProtocol_860_68.elf PhTCPServer::GetClient(unsigned int*, unsigned int*, unsigned short*)
+00005d98 PhTCPProtocol_860_68.elf PhTCPServer::ServerReadReq(tVarDataValue*, unsigned int)
+00005fd4 PhTCPProtocol_860_68.elf PhTCPServer::ReadVarReq(unsigned long)
+00006134 PhTCPProtocol_860_68.elf PhTCPServer::WriteVarReq(unsigned long)
+0000626c PhTCPProtocol_860_68.elf PhTCPServer::~PhTCPServer()
+00006478 PhTCPProtocol_860_68.elf PhTCPServer::~PhTCPServer()
+00006674 PhTCPProtocol_860_68.elf PhTCPServer::~PhTCPServer()
+00006870 PhTCPProtocol_860_68.elf PhTCPServer::PhTCPServer(unsigned long, unsigned short, unsigned int, bool, int)
+000069ac PhTCPProtocol_860_68.elf PhTCPServer::PhTCPServer(unsigned long, unsigned short, unsigned int, bool, int)
+00006ae8 PhTCPProtocol_860_68.elf operator delete(void*)
+00006b24 PhTCPProtocol_860_68.elf __cxa_pure_virtual
+00006b5c PhTCPProtocol_860_68.elf CPhCommon_Base::CPhCommon_Base()
+00006bc0 PhTCPProtocol_860_68.elf CPhCommon_Base::CPhCommon_Base()
+00006c20 PhTCPProtocol_860_68.elf CPhCommon_Base::GetProductInfo(unsigned char*, unsigned char*, unsigned char*, unsigned long)
+00006c5c PhTCPProtocol_860_68.elf CPhCommon_Base::SetCommonCallbackInterface(ICommonCallback*)
+00006c8c PhTCPProtocol_860_68.elf CPhConfig_Base1::PrepareForTermination(teHWFErrorCode*)
+00006cbc PhTCPProtocol_860_68.elf CPhConfig_Base1::RemoveHWConfiguration(trHWFAddress, teHWFErrorCode*)
+00006cec PhTCPProtocol_860_68.elf CPhConfig_Base1::RemoveIoConnection(unsigned long, teHWFErrorCode*)
+00006d20 PhTCPProtocol_860_68.elf CPhConfig_Base1::PhResponsibilityForRestart(trHWFAddress, teHWFErrorCode*)
+00006d50 PhTCPProtocol_860_68.elf CPhConfig_Base1::PhResponsibility(trHWFAddress, teHWFErrorCode*)
+00006d80 PhTCPProtocol_860_68.elf CPhConfig_Base1::StartUsingIoConnection(trHWFAddress, unsigned long, teHWFErrorCode*)
+00006db4 PhTCPProtocol_860_68.elf CPhConfig_Base1::PhResponsibilityForBackupDevice(trHWFAddress, teHWFErrorCode*)
+00006de4 PhTCPProtocol_860_68.elf CPhConfig_Base1::PhResponsibilityForHotInsert(trHWFAddress, teHWFErrorCode*)
+00006e14 PhTCPProtocol_860_68.elf CPhConfig_Base1::PerformSwitchover(trHWFAddress, teHWFErrorCode*)
+00006e44 PhTCPProtocol_860_68.elf CPhConfig_Base1::StartUsingDevice(trHWFAddress, teHWFErrorCode*)
+00006e74 PhTCPProtocol_860_68.elf CPhConfig_Base1::PerformFailover(trHWFAddress, teHWFErrorCode*)
+00006ea4 PhTCPProtocol_860_68.elf CPhClient_Base::ConnectReq(unsigned long, unsigned long*, int*)
+00006edc PhTCPProtocol_860_68.elf CPhClient_Base::DisconnectReq(unsigned long, unsigned long, int*)
+00006f14 PhTCPProtocol_860_68.elf CPhClient_Base::ReadVarReq(unsigned long, int*)
+00006f48 PhTCPProtocol_860_68.elf CPhClient_Base::WriteVarReq(unsigned long, int*)
+00006f7c PhTCPProtocol_860_68.elf CPhClient_Base::ReadRawReq(unsigned long, int*)
+00006fb0 PhTCPProtocol_860_68.elf CPhClient_Base::WriteRawReq(unsigned long, int*)
+00006fe4 PhTCPProtocol_860_68.elf CPhClient_Base::AbortRawReq(unsigned long, int*)
+00007018 PhTCPProtocol_860_68.elf CPhClient_Base::AbortVarReq(unsigned long, int*)
+0000704c PhTCPProtocol_860_68.elf CPhClient_Base::GetExtendedStatusSize(unsigned long, int*, int*)
+00007084 PhTCPProtocol_860_68.elf CPhClient_Base::GetExtendedStatus(unsigned long, int, teIEC1131Type*, tGCValue*, int*)
+000070c4 PhTCPProtocol_860_68.elf CPhClient_Base::SetStatus(unsigned long, int, int*)
+000070fc PhTCPProtocol_860_68.elf CPhClient_Base::ReadRes(unsigned long, int, int*)
+00007134 PhTCPProtocol_860_68.elf CPhClient_Base::WriteRes(unsigned long, int, int*)
+0000716c PhTCPProtocol_860_68.elf CPhClient_Base1::ConnectReq(unsigned long, unsigned long*, int*)
+000071a4 PhTCPProtocol_860_68.elf CPhClient_Base1::DisconnectReq(unsigned long, unsigned long, int*)
+000071dc PhTCPProtocol_860_68.elf CPhClient_Base1::ReadVarReq(unsigned long, int*)
+00007210 PhTCPProtocol_860_68.elf CPhClient_Base1::WriteVarReq(unsigned long, int*)
+00007244 PhTCPProtocol_860_68.elf CPhClient_Base1::RegisterVarReq(unsigned long, int*)
+00007278 PhTCPProtocol_860_68.elf CPhClient_Base1::ReadRawReq(unsigned long, int*)
+000072ac PhTCPProtocol_860_68.elf CPhClient_Base1::WriteRawReq(unsigned long, int*)
+000072e0 PhTCPProtocol_860_68.elf CPhClient_Base1::AbortRawReq(unsigned long, int*)
+00007314 PhTCPProtocol_860_68.elf CPhClient_Base1::AbortVarReq(unsigned long, int*)
+00007348 PhTCPProtocol_860_68.elf CPhClient_Base1::TimeoutAbortVarReq(unsigned long, int*)
+000073ac PhTCPProtocol_860_68.elf CPhClient_Base1::GetExtendedStatusSize(unsigned long, int*, int*)
+000073e4 PhTCPProtocol_860_68.elf CPhClient_Base1::GetExtendedStatus(unsigned long, int, teIEC1131Type*, tGCValue*, int*)
+00007424 PhTCPProtocol_860_68.elf CPhClient_Base1::BufferTakeForReceive(unsigned long, int*)
+00007458 PhTCPProtocol_860_68.elf CPhClient_Base1::BufferGiveForReceive(unsigned long, int, int*)
+00007490 PhTCPProtocol_860_68.elf CPhClient_Base1::BufferTakeForSend(unsigned long, unsigned int, int*)
+000074c8 PhTCPProtocol_860_68.elf CPhClient_Base1::BufferGiveForSend(unsigned long, unsigned int, int, int*)
+00007504 PhTCPProtocol_860_68.elf CPhClient_Base1::SetStatus(unsigned long, int, int*)
+0000753c PhTCPProtocol_860_68.elf CPhClient_Base1::ReadRes(unsigned long, int, int*)
+00007574 PhTCPProtocol_860_68.elf CPhClient_Base1::WriteRes(unsigned long, int, int*)
+000075ac PhTCPProtocol_860_68.elf CPhStatus_Base1::KickWatchdog(unsigned short*, teHWFErrorCode*)
+000075e0 PhTCPProtocol_860_68.elf CPhStatus_Base1::GetStatus(trHWFAddress, teHWFUnitKind, unsigned long*, unsigned long*, teHWFErrorCode*)
+0000761c PhTCPProtocol_860_68.elf CPhIOAccess_Base::GetCopyRoutineReference(unsigned int, void (**)(short, void*, void*), IOAccessErrorCode*)
+00007654 PhTCPProtocol_860_68.elf CPhIOAccess_Base::ObtainDPM(eAreaType, trHWFAddress, IOAccessErrorCode*)
+00007688 PhTCPProtocol_860_68.elf CPhIOAccess_Base::ReleaseDPM(eAreaType, trHWFAddress, IOAccessErrorCode*)
+000076bc PhTCPProtocol_860_68.elf CPhDiagnostics_Base::PhDiagnosticsTableNew(teDiagErrorCode*)
+000076ec PhTCPProtocol_860_68.elf CPhDiagnostics_Base::PhDiagnosticsTableCleared(teDiagErrorCode*)
+0000771c PhTCPProtocol_860_68.elf CPhOLU_Base::PrepareForFirmwareDownload(trHWFAddress const*, unsigned long, eOLUStatus*)
+00007754 PhTCPProtocol_860_68.elf CPhOLU_Base::PrepareForApplicationStop(trHWFAddress const*, eOLUStatus*)
+00007788 PhTCPProtocol_860_68.elf CPhOLU_Base::ResumeOperation(trHWFAddress const*, eOLUStatus*)
+000077bc PhTCPProtocol_860_68.elf CPhOLU_Base::PhResponsibilityForOLU(trHWFAddress const*, eOLUStatus*)
+000077f0 PhTCPProtocol_860_68.elf CPhOLU_Base::PrepareForLeavingOLU(trHWFAddress const*, eOLUStatus*)
+00007824 PhTCPProtocol_860_68.elf CPhOLU_Base::PrepareForAppAndConfigDownload(trHWFAddress const*, eOLUStatus*)
+00007858 PhTCPProtocol_860_68.elf CPhOLU_Base1::PrepareForFirmwareDownload(trHWFAddress const*, unsigned long, eOLUStatus*)
+00007890 PhTCPProtocol_860_68.elf CPhOLU_Base1::PrepareForApplicationStop(trHWFAddress const*, eOLUStatus*)
+000078c4 PhTCPProtocol_860_68.elf CPhOLU_Base1::ResumeOperation(trHWFAddress const*, eOLUStatus*)
+000078f8 PhTCPProtocol_860_68.elf CPhOLU_Base1::PhResponsibilityForOLU(trHWFAddress const*, eOLUStatus*)
+0000792c PhTCPProtocol_860_68.elf CPhOLU_Base1::PrepareForLeavingOLU(trHWFAddress const*, eOLUStatus*)
+00007960 PhTCPProtocol_860_68.elf CPhOLU_Base1::PrepareForAppAndConfigDownload(trHWFAddress const*, eOLUStatus*)
+00007994 PhTCPProtocol_860_68.elf CPhOLU_Base1::OLUEnablePhCom(trHWFAddress const*, eOLUStatus*)
+000079c8 PhTCPProtocol_860_68.elf CPhOLU_Base1::OLUDisablePhCom(trHWFAddress const*, eOLUStatus*)
+000079fc PhTCPProtocol_860_68.elf CPhOLU_Base1::InformPhIsInSwitch(trHWFAddress const*, eOLUStatus*)
+00007a34 PhTCPProtocol_860_68.elf CPhCommon_Base::~CPhCommon_Base()
+00007ab0 PhTCPProtocol_860_68.elf CPhCommon_Base::~CPhCommon_Base()
+00007b2c PhTCPProtocol_860_68.elf CPhCommon_Base::~CPhCommon_Base()
+00007ba4 PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::AddRef()
+00007bac PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::AddRef()
+00007bb4 PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::AddRef()
+00007bbc PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::AddRef()
+00007bc4 PhTCPProtocol_860_68.elf CPhTCPProtocol::AddRef()
+00007be4 PhTCPProtocol_860_68.elf IUnknown::~IUnknown()
+00007c28 PhTCPProtocol_860_68.elf IUnknown::~IUnknown()
+00007c68 PhTCPProtocol_860_68.elf IPhConfig1::~IPhConfig1()
+00007cb0 PhTCPProtocol_860_68.elf IPhStatus1::~IPhStatus1()
+00007cfc PhTCPProtocol_860_68.elf IPhStatus1::~IPhStatus1()
+00007d44 PhTCPProtocol_860_68.elf IPhConfig1::~IPhConfig1()
+00007d8c PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::QueryInterface(_GUID const&, void**)
+00007d94 PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::QueryInterface(_GUID const&, void**)
+00007d9c PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::QueryInterface(_GUID const&, void**)
+00007da4 PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::QueryInterface(_GUID const&, void**)
+00007db0 PhTCPProtocol_860_68.elf CPhTCPProtocol::QueryInterface(_GUID const&, void**)
+00007ee0 PhTCPProtocol_860_68.elf IPhClient1::~IPhClient1()
+00007f2c PhTCPProtocol_860_68.elf IPhClient1::~IPhClient1()
+00007f70 PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::Release()
+00007f78 PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::Release()
+00007f80 PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::Release()
+00007f88 PhTCPProtocol_860_68.elf non-virtual thunk to CPhTCPProtocol::Release()
+00007f90 PhTCPProtocol_860_68.elf CPhTCPProtocol::Release()
+00008000 PhTCPProtocol_860_68.elf IPhClient::~IPhClient()
+0000804c PhTCPProtocol_860_68.elf IPhClient::~IPhClient()
+00008094 PhTCPProtocol_860_68.elf IUnknown::IUnknown()
+000080ec PhTCPProtocol_860_68.elf IPhCommon::IPhCommon()
+00008150 PhTCPProtocol_860_68.elf IUnknown::~IUnknown()
+000081c0 PhTCPProtocol_860_68.elf IPhConfig1::~IPhConfig1()
+0000823c PhTCPProtocol_860_68.elf CPhConfig_Base1::~CPhConfig_Base1()
+000082b8 PhTCPProtocol_860_68.elf CPhConfig_Base1::~CPhConfig_Base1()
+00008334 PhTCPProtocol_860_68.elf IPhClient::~IPhClient()
+000083b0 PhTCPProtocol_860_68.elf CPhClient_Base::~CPhClient_Base()
+0000842c PhTCPProtocol_860_68.elf CPhClient_Base::~CPhClient_Base()
+000084a8 PhTCPProtocol_860_68.elf IPhClient1::~IPhClient1()
+00008524 PhTCPProtocol_860_68.elf CPhClient_Base1::~CPhClient_Base1()
+000085a0 PhTCPProtocol_860_68.elf CPhClient_Base1::~CPhClient_Base1()
+0000861c PhTCPProtocol_860_68.elf IPhStatus1::~IPhStatus1()
+00008698 PhTCPProtocol_860_68.elf CPhStatus_Base1::~CPhStatus_Base1()
+00008714 PhTCPProtocol_860_68.elf CPhStatus_Base1::~CPhStatus_Base1()
+00008790 PhTCPProtocol_860_68.elf IPhIOAccess::~IPhIOAccess()
+0000880c PhTCPProtocol_860_68.elf CPhIOAccess_Base::~CPhIOAccess_Base()
+00008888 PhTCPProtocol_860_68.elf IPhIOAccess::~IPhIOAccess()
+00008904 PhTCPProtocol_860_68.elf IPhIOAccess::~IPhIOAccess()
+00008980 PhTCPProtocol_860_68.elf CPhIOAccess_Base::~CPhIOAccess_Base()
+000089fc PhTCPProtocol_860_68.elf IPhDiagnostics::~IPhDiagnostics()
+00008a78 PhTCPProtocol_860_68.elf CPhDiagnostics_Base::~CPhDiagnostics_Base()
+00008af4 PhTCPProtocol_860_68.elf IPhDiagnostics::~IPhDiagnostics()
+00008b70 PhTCPProtocol_860_68.elf IPhDiagnostics::~IPhDiagnostics()
+00008bec PhTCPProtocol_860_68.elf CPhDiagnostics_Base::~CPhDiagnostics_Base()
+00008c68 PhTCPProtocol_860_68.elf IPhOLU::~IPhOLU()
+00008ce4 PhTCPProtocol_860_68.elf CPhOLU_Base::~CPhOLU_Base()
+00008d60 PhTCPProtocol_860_68.elf IPhOLU::~IPhOLU()
+00008ddc PhTCPProtocol_860_68.elf IPhOLU::~IPhOLU()
+00008e58 PhTCPProtocol_860_68.elf CPhOLU_Base::~CPhOLU_Base()
+00008ed4 PhTCPProtocol_860_68.elf IPhOLU1::~IPhOLU1()
+00008f50 PhTCPProtocol_860_68.elf CPhOLU_Base1::~CPhOLU_Base1()
+00008fcc PhTCPProtocol_860_68.elf IPhOLU1::~IPhOLU1()
+00009048 PhTCPProtocol_860_68.elf IPhOLU1::~IPhOLU1()
+000090c4 PhTCPProtocol_860_68.elf CPhOLU_Base1::~CPhOLU_Base1()
+00009140 PhTCPProtocol_860_68.elf IPhCommon::~IPhCommon()
+000091bc PhTCPProtocol_860_68.elf IPhCommon::~IPhCommon()
+00009238 PhTCPProtocol_860_68.elf IPhCommon::~IPhCommon()
+000092b0 PhTCPProtocol_860_68.elf CompanyName
+000092b4 PhTCPProtocol_860_68.elf ProductName
+000092c4 PhTCPProtocol_860_68.elf ProductVersion
+000092dc PhTCPProtocol_860_68.elf CLSID_CPhTCPProtocol
+00009344 PhTCPProtocol_860_68.elf IID_IPhCommonCB
+00009354 PhTCPProtocol_860_68.elf IID_IPhConfigCB
+00009364 PhTCPProtocol_860_68.elf IID_IPhConfigCB1
+00009374 PhTCPProtocol_860_68.elf IID_IPhIOAccessCB
+00009384 PhTCPProtocol_860_68.elf IID_IPhExternalConfigCB1
+00009394 PhTCPProtocol_860_68.elf IID_IPhExternalConfigCB2
+000093a4 PhTCPProtocol_860_68.elf IID_IPhExternalConfigCB3
+000093b4 PhTCPProtocol_860_68.elf IID_IPhOLUCB
+000093c4 PhTCPProtocol_860_68.elf IID_IPhCommon
+000093d4 PhTCPProtocol_860_68.elf IID_IPhConfig1
+000093e4 PhTCPProtocol_860_68.elf IID_IPhStatus1
+000093f4 PhTCPProtocol_860_68.elf IID_IPhClient
+00009404 PhTCPProtocol_860_68.elf IID_IPhClient1
+00009414 PhTCPProtocol_860_68.elf IID_IPhDiagnostics
+00009424 PhTCPProtocol_860_68.elf IID_IPhIOAccess
+00009434 PhTCPProtocol_860_68.elf IID_IPhSafeConfig
+00009444 PhTCPProtocol_860_68.elf IID_IPhSafeConfig1
+00009454 PhTCPProtocol_860_68.elf IID_IPhSafeConfig2
+00009464 PhTCPProtocol_860_68.elf IID_IPhSimulation
+00009474 PhTCPProtocol_860_68.elf IID_IPhOLU
+00009484 PhTCPProtocol_860_68.elf IID_IPhOLU1
+00009494 PhTCPProtocol_860_68.elf IID_IHeapCallback
+000094a4 PhTCPProtocol_860_68.elf IID_ISystemUtilitiesCallback
+000094b4 PhTCPProtocol_860_68.elf IID_ISystemUtilitiesCallback1
+000094c4 PhTCPProtocol_860_68.elf IID_ISystemUtilitiesCallback2
+000094d4 PhTCPProtocol_860_68.elf IID_ISystemUtilitiesCallback3
+000094e4 PhTCPProtocol_860_68.elf IID_ISystemUtilitiesCallback4
+000094f4 PhTCPProtocol_860_68.elf IID_IEventMgrCallback
+00009504 PhTCPProtocol_860_68.elf IID_IEventMgrCallback1
+00009514 PhTCPProtocol_860_68.elf IID_ISysClockCallback
+00009524 PhTCPProtocol_860_68.elf IID_ISysClockCallback1
+00009534 PhTCPProtocol_860_68.elf IID_ISysClockCallback2
+00009544 PhTCPProtocol_860_68.elf IID_ISysClockCallback3
+00009554 PhTCPProtocol_860_68.elf IID_INetwClockSynchCallback
+00009564 PhTCPProtocol_860_68.elf IID_IConfigCBCallback1
+00009574 PhTCPProtocol_860_68.elf IID_IConfigCBCallback2
+00009584 PhTCPProtocol_860_68.elf IID_IConfigCBCallback3
+00009594 PhTCPProtocol_860_68.elf IID_IExternalConfigCBCallback
+000095a4 PhTCPProtocol_860_68.elf IID_IExternalConfigCBCallback2
+000095b4 PhTCPProtocol_860_68.elf IID_IExternalConfigCBCallback3
+000095c4 PhTCPProtocol_860_68.elf IID_IExternalConfigCBCallback4
+000095d4 PhTCPProtocol_860_68.elf IID_IMessagesCBCallback
+000095e4 PhTCPProtocol_860_68.elf IID_IAIPAccessCBCallback
+000095f4 PhTCPProtocol_860_68.elf IID_IOLUCBCallback
+00009604 PhTCPProtocol_860_68.elf IID_IOLUCBCallback1
+00009614 PhTCPProtocol_860_68.elf IID_ISystemUtilitiesCBCallback1
+00009624 PhTCPProtocol_860_68.elf IID_IConfigCallback1
+00009634 PhTCPProtocol_860_68.elf IID_IConfigCallback2
+00009644 PhTCPProtocol_860_68.elf IID_IStatusCallback1
+00009654 PhTCPProtocol_860_68.elf IID_IGenClientCallback
+00009664 PhTCPProtocol_860_68.elf IID_IGenClientCallback1
+00009674 PhTCPProtocol_860_68.elf IID_IGenClientCallback2
+00009684 PhTCPProtocol_860_68.elf IID_IIACClientCallback
+00009694 PhTCPProtocol_860_68.elf IID_IDriverFactoryCallback
+000096a4 PhTCPProtocol_860_68.elf IID_IDiagnosticsCallback
+000096b4 PhTCPProtocol_860_68.elf IID_ISafeConfigCallback
+000096c4 PhTCPProtocol_860_68.elf IID_ISafeConfigCallback1
+000096d4 PhTCPProtocol_860_68.elf IID_ISafeConfigCallback2
+000096e4 PhTCPProtocol_860_68.elf IID_ICRCCallback
+000096f4 PhTCPProtocol_860_68.elf IID_IIOAccessCallback
+00009704 PhTCPProtocol_860_68.elf IID_CriticalRegionCallback
+00009714 PhTCPProtocol_860_68.elf IID_VOSExceptionCallback
+00009724 PhTCPProtocol_860_68.elf IID_DrvCommonCallback
+00009734 PhTCPProtocol_860_68.elf IID_ProtectedMirroredHeapCallback
+00009744 PhTCPProtocol_860_68.elf IID_SharedMirroredHeapCallback
+00009754 PhTCPProtocol_860_68.elf IID_TemporaryMirroredHeapCallback
+00009764 PhTCPProtocol_860_68.elf IID_IVarServerCallback
+00009774 PhTCPProtocol_860_68.elf IID_IVarServerCallback1
+00009784 PhTCPProtocol_860_68.elf IID_IVarServerCallback2
+00009794 PhTCPProtocol_860_68.elf IID_ISOCKETCallback
+000097a4 PhTCPProtocol_860_68.elf IID_ISOCKETCallback1
+000097b4 PhTCPProtocol_860_68.elf IID_ISOCKETCallback2
+000097c4 PhTCPProtocol_860_68.elf IID_IVOSCallback2
+000098f8 V vtable for PhTCPConnection PhTCPProtocol_860_68.elf 
+00009918 V vtable for PhTCPConnInterface PhTCPProtocol_860_68.elf 
+00009938 V vtable for CPhTCPProtocol PhTCPProtocol_860_68.elf 
+00009ae8 V vtable for IPhClient1 PhTCPProtocol_860_68.elf 
+00009b50 V vtable for IUnknown PhTCPProtocol_860_68.elf 
+00009b70 V vtable for IPhClient PhTCPProtocol_860_68.elf 
+00009bc0 V vtable for IPhStatus1 PhTCPProtocol_860_68.elf 
+00009be8 V vtable for IPhConfig1 PhTCPProtocol_860_68.elf 
+00009c30 V vtable for PhTCPServer PhTCPProtocol_860_68.elf 
+00009c50 V vtable for CPhOLU_Base1 PhTCPProtocol_860_68.elf 
+00009c90 V vtable for CPhOLU_Base PhTCPProtocol_860_68.elf 
+00009cc8 V vtable for CPhDiagnostics_Base PhTCPProtocol_860_68.elf 
+00009cf0 V vtable for CPhIOAccess_Base PhTCPProtocol_860_68.elf 
+00009d18 V vtable for CPhStatus_Base1 PhTCPProtocol_860_68.elf 
+00009d40 V vtable for CPhClient_Base1 PhTCPProtocol_860_68.elf 
+00009da8 V vtable for CPhClient_Base PhTCPProtocol_860_68.elf 
+00009df8 V vtable for CPhConfig_Base1 PhTCPProtocol_860_68.elf 
+00009e40 V vtable for CPhCommon_Base PhTCPProtocol_860_68.elf 
+00009e68 V vtable for IPhIOAccess PhTCPProtocol_860_68.elf 
+00009e90 V vtable for IPhDiagnostics PhTCPProtocol_860_68.elf 
+00009eb8 V vtable for IPhOLU PhTCPProtocol_860_68.elf 
+00009ef0 V vtable for IPhOLU1 PhTCPProtocol_860_68.elf 
+00009f30 V vtable for IPhCommon PhTCPProtocol_860_68.elf 
+00009f54 PhTCPProtocol_860_68.elf CRTFuncTabBegin
+00009f54 PhTCPProtocol_860_68.elf scprocs
+00009f60 PhTCPProtocol_860_68.elf printf
+00009f64 PhTCPProtocol_860_68.elf sprintf
+00009f68 PhTCPProtocol_860_68.elf sscanf
+00009f6c PhTCPProtocol_860_68.elf memcpy
+00009f70 PhTCPProtocol_860_68.elf memset
+00009f74 PhTCPProtocol_860_68.elf strcat
+00009f78 PhTCPProtocol_860_68.elf strcmp
+00009f7c PhTCPProtocol_860_68.elf strlen
+00009f80 PhTCPProtocol_860_68.elf strncmp
+00009f84 PhTCPProtocol_860_68.elf strncpy
+00009f88 PhTCPProtocol_860_68.elf memchr
+00009f8c PhTCPProtocol_860_68.elf memcmp
+00009f90 PhTCPProtocol_860_68.elf memmove
+00009f94 PhTCPProtocol_860_68.elf strchr
+00009f98 PhTCPProtocol_860_68.elf strcoll
+00009f9c PhTCPProtocol_860_68.elf strcpy
+00009fa0 PhTCPProtocol_860_68.elf strcspn
+00009fa4 PhTCPProtocol_860_68.elf strncat
+00009fa8 PhTCPProtocol_860_68.elf strpbrk
+00009fac PhTCPProtocol_860_68.elf strrchr
+00009fb0 PhTCPProtocol_860_68.elf strspn
+00009fb4 PhTCPProtocol_860_68.elf strstr
+00009fb8 PhTCPProtocol_860_68.elf strtok
+00009fbc PhTCPProtocol_860_68.elf strxfrm
+00009fc0 PhTCPProtocol_860_68.elf strerror
+00009fc4 PhTCPProtocol_860_68.elf pow
+00009fc8 PhTCPProtocol_860_68.elf acos
+00009fcc PhTCPProtocol_860_68.elf asin
+00009fd0 PhTCPProtocol_860_68.elf atan
+00009fd4 PhTCPProtocol_860_68.elf atan2
+00009fd8 PhTCPProtocol_860_68.elf ceil
+00009fdc PhTCPProtocol_860_68.elf cos
+00009fe0 PhTCPProtocol_860_68.elf cosh
+00009fe4 PhTCPProtocol_860_68.elf exp
+00009fe8 PhTCPProtocol_860_68.elf fabs
+00009fec PhTCPProtocol_860_68.elf floor
+00009ff0 PhTCPProtocol_860_68.elf fmod
+00009ff4 PhTCPProtocol_860_68.elf frexp
+00009ff8 PhTCPProtocol_860_68.elf ldexp
+00009ffc PhTCPProtocol_860_68.elf log
+0000a000 PhTCPProtocol_860_68.elf log10
+0000a004 PhTCPProtocol_860_68.elf modf
+0000a008 PhTCPProtocol_860_68.elf sin
+0000a00c PhTCPProtocol_860_68.elf sinh
+0000a010 PhTCPProtocol_860_68.elf sqrt
+0000a014 PhTCPProtocol_860_68.elf tan
+0000a018 PhTCPProtocol_860_68.elf tanh
+0000a01c PhTCPProtocol_860_68.elf acosf
+0000a020 PhTCPProtocol_860_68.elf asinf
+0000a024 PhTCPProtocol_860_68.elf atanf
+0000a028 PhTCPProtocol_860_68.elf atan2f
+0000a02c PhTCPProtocol_860_68.elf ceilf
+0000a030 PhTCPProtocol_860_68.elf cosf
+0000a034 PhTCPProtocol_860_68.elf coshf
+0000a038 PhTCPProtocol_860_68.elf expf
+0000a03c PhTCPProtocol_860_68.elf fabsf
+0000a040 PhTCPProtocol_860_68.elf floorf
+0000a044 PhTCPProtocol_860_68.elf fmodf
+0000a048 PhTCPProtocol_860_68.elf logf
+0000a04c PhTCPProtocol_860_68.elf log10f
+0000a050 PhTCPProtocol_860_68.elf powf
+0000a054 PhTCPProtocol_860_68.elf sinf
+0000a058 PhTCPProtocol_860_68.elf sinhf
+0000a05c PhTCPProtocol_860_68.elf sqrtf
+0000a060 PhTCPProtocol_860_68.elf tanf
+0000a064 PhTCPProtocol_860_68.elf tanhf
+0000a068 PhTCPProtocol_860_68.elf div_r
+0000a06c PhTCPProtocol_860_68.elf labs
+0000a070 PhTCPProtocol_860_68.elf strtol
+0000a074 PhTCPProtocol_860_68.elf free
+0000a078 PhTCPProtocol_860_68.elf abort
+0000a07c PhTCPProtocol_860_68.elf abs
+0000a080 PhTCPProtocol_860_68.elf atof
+0000a084 PhTCPProtocol_860_68.elf atoi
+0000a088 PhTCPProtocol_860_68.elf atol
+0000a08c PhTCPProtocol_860_68.elf bsearch
+0000a090 PhTCPProtocol_860_68.elf ldiv_r
+0000a094 PhTCPProtocol_860_68.elf qsort
+0000a098 PhTCPProtocol_860_68.elf rand
+0000a09c PhTCPProtocol_860_68.elf srand
+0000a0a0 PhTCPProtocol_860_68.elf strtod
+0000a0a4 PhTCPProtocol_860_68.elf strtoul
+0000a0a8 PhTCPProtocol_860_68.elf malloc
+0000a0ac PhTCPProtocol_860_68.elf __assert
+0000a0b0 PhTCPProtocol_860_68.elf time
+0000a0b4 PhTCPProtocol_860_68.elf asctime
+0000a0b8 PhTCPProtocol_860_68.elf gmtime
+0000a0bc PhTCPProtocol_860_68.elf clock
+0000a0c0 PhTCPProtocol_860_68.elf ctime
+0000a0c4 PhTCPProtocol_860_68.elf difftime
+0000a0c8 PhTCPProtocol_860_68.elf localtime
+0000a0cc PhTCPProtocol_860_68.elf mktime
+0000a0d0 PhTCPProtocol_860_68.elf strftime
+0000a0d4 PhTCPProtocol_860_68.elf eventcollSem
+0000a0d8 PhTCPProtocol_860_68.elf intLock
+0000a0dc PhTCPProtocol_860_68.elf intUnlock
+0000a0e0 PhTCPProtocol_860_68.elf _fabs
+0000a0e4 PhTCPProtocol_860_68.elf _ddec
+0000a0e8 PhTCPProtocol_860_68.elf _d_mul
+0000a0ec PhTCPProtocol_860_68.elf __floatsidf
+0000a0f0 PhTCPProtocol_860_68.elf _d_sub
+0000a0f4 PhTCPProtocol_860_68.elf _d_add
+0000a0f8 PhTCPProtocol_860_68.elf __fixunsdfsi
+0000a0fc PhTCPProtocol_860_68.elf __extendsfdf2
+0000a100 PhTCPProtocol_860_68.elf __adddf3
+0000a104 PhTCPProtocol_860_68.elf _dinc
+0000a108 PhTCPProtocol_860_68.elf __fixdfsi
+0000a10c PhTCPProtocol_860_68.elf _d_neg
+0000a110 PhTCPProtocol_860_68.elf _d_dtof
+0000a114 PhTCPProtocol_860_68.elf _f_qtof
+0000a118 PhTCPProtocol_860_68.elf _dpfabs
+0000a11c PhTCPProtocol_860_68.elf _d_dtoq
+0000a120 PhTCPProtocol_860_68.elf _d_div
+0000a124 PhTCPProtocol_860_68.elf __negdf2
+0000a128 PhTCPProtocol_860_68.elf __divdf3
+0000a12c PhTCPProtocol_860_68.elf __muldf3
+0000a130 PhTCPProtocol_860_68.elf _d_dtoi
+0000a134 PhTCPProtocol_860_68.elf _f_ftoq
+0000a138 PhTCPProtocol_860_68.elf __truncdfsf2
+0000a13c PhTCPProtocol_860_68.elf _fp_round
+0000a140 PhTCPProtocol_860_68.elf _d_utod
+0000a144 PhTCPProtocol_860_68.elf _d_qtod
+0000a148 PhTCPProtocol_860_68.elf _d_dtou
+0000a14c PhTCPProtocol_860_68.elf _d_itod
+0000a150 PhTCPProtocol_860_68.elf __subdf3
+0000a154 PhTCPProtocol_860_68.elf _f_ftod
+0000a158 PhTCPProtocol_860_68.elf _d_feq
+0000a15c PhTCPProtocol_860_68.elf __gtdf2
+0000a160 PhTCPProtocol_860_68.elf _d_fne
+0000a164 PhTCPProtocol_860_68.elf _d_cmp
+0000a168 PhTCPProtocol_860_68.elf _d_flt
+0000a16c PhTCPProtocol_860_68.elf _d_cmpe
+0000a170 PhTCPProtocol_860_68.elf __nedf2
+0000a174 PhTCPProtocol_860_68.elf _d_fgt
+0000a178 PhTCPProtocol_860_68.elf _d_fle
+0000a17c PhTCPProtocol_860_68.elf _d_fge
+0000a180 PhTCPProtocol_860_68.elf _fdec
+0000a184 PhTCPProtocol_860_68.elf _f_add
+0000a188 PhTCPProtocol_860_68.elf __divsf3
+0000a18c PhTCPProtocol_860_68.elf __fixsfsi
+0000a190 PhTCPProtocol_860_68.elf __subsf3
+0000a194 PhTCPProtocol_860_68.elf _finc
+0000a198 PhTCPProtocol_860_68.elf _f_neg
+0000a19c PhTCPProtocol_860_68.elf _f_sub
+0000a1a0 PhTCPProtocol_860_68.elf _f_itof
+0000a1a4 PhTCPProtocol_860_68.elf _fabsf
+0000a1a8 PhTCPProtocol_860_68.elf _f_utof
+0000a1ac PhTCPProtocol_860_68.elf _fpfabs
+0000a1b0 PhTCPProtocol_860_68.elf __floatsisf
+0000a1b4 PhTCPProtocol_860_68.elf _f_div
+0000a1b8 PhTCPProtocol_860_68.elf __negsf2
+0000a1bc PhTCPProtocol_860_68.elf __mulsf3
+0000a1c0 PhTCPProtocol_860_68.elf _f_ftoi
+0000a1c4 PhTCPProtocol_860_68.elf _f_mul
+0000a1c8 PhTCPProtocol_860_68.elf __fixunssfsi
+0000a1cc PhTCPProtocol_860_68.elf _f_ftou
+0000a1d0 PhTCPProtocol_860_68.elf __addsf3
+0000a1d4 PhTCPProtocol_860_68.elf _f_feq
+0000a1d8 PhTCPProtocol_860_68.elf _f_flt
+0000a1dc PhTCPProtocol_860_68.elf _f_fle
+0000a1e0 PhTCPProtocol_860_68.elf __nesf2
+0000a1e4 PhTCPProtocol_860_68.elf __gtsf2
+0000a1e8 PhTCPProtocol_860_68.elf _f_fge
+0000a1ec PhTCPProtocol_860_68.elf _f_fgt
+0000a1f0 PhTCPProtocol_860_68.elf _f_fne
+0000a1f4 PhTCPProtocol_860_68.elf _f_cmp
+0000a1f8 PhTCPProtocol_860_68.elf _f_cmpe
+0000a1fc PhTCPProtocol_860_68.elf ldexpf
+0000a200 PhTCPProtocol_860_68.elf modff
+0000a204 PhTCPProtocol_860_68.elf frexpf
+0000a208 PhTCPProtocol_860_68.elf exadd
+0000a20c PhTCPProtocol_860_68.elf exmul
+0000a210 PhTCPProtocol_860_68.elf sigmax
+0000a214 PhTCPProtocol_860_68.elf exdiv
+0000a218 PhTCPProtocol_860_68.elf exsub
+0000a21c PhTCPProtocol_860_68.elf __eqdf2
+0000a220 PhTCPProtocol_860_68.elf __ltdf2
+0000a224 PhTCPProtocol_860_68.elf __lesf2
+0000a228 PhTCPProtocol_860_68.elf __ledf2
+0000a22c PhTCPProtocol_860_68.elf __eqsf2
+0000a230 PhTCPProtocol_860_68.elf __ltsf2
+0000a234 PhTCPProtocol_860_68.elf __gesf2
+0000a238 PhTCPProtocol_860_68.elf __gedf2
+0000a244 PhTCPProtocol_860_68.elf fprintf
+0000a248 PhTCPProtocol_860_68.elf __stdout
+0000a24c PhTCPProtocol_860_68.elf __stderr
+0000a250 PhTCPProtocol_860_68.elf setjmp
+0000a254 PhTCPProtocol_860_68.elf longjmp
+0000a258 PhTCPProtocol_860_68.elf operator new[](unsigned int)
+0000a25c PhTCPProtocol_860_68.elf operator delete[](void*)
+0000a260 PhTCPProtocol_860_68.elf __floatunsisf
+0000a264 PhTCPProtocol_860_68.elf __floatunsidf
+0000a268 PhTCPProtocol_860_68.elf CRTFuncTabEnd
+0000a268 PhTCPProtocol_860_68.elf ecprocs
+0000a268 PhTCPProtocol_860_68.elf etext
+0000a268 PhTCPProtocol_860_68.elf sgot2
+0000a3b0 PhTCPProtocol_860_68.elf egot2
+0000a3b0 PhTCPProtocol_860_68.elf sfixup
+0000aa54 PhTCPProtocol_860_68.elf PhTCPConnection::m_heapTag
+0000aa54 PhTCPProtocol_860_68.elf efixup
+0000aa58 PhTCPProtocol_860_68.elf TCPBufferQueue::m_heapTag
+0000aa5c PhTCPProtocol_860_68.elf PhTCPConnInterface::m_pSocketCallback
+0000aa60 PhTCPProtocol_860_68.elf PhTCPConnInterface::m_pGenClientCallback
+0000aa64 PhTCPProtocol_860_68.elf PhTCPConnInterface::m_pSystemUtilitiesCallback
+0000aa68 PhTCPProtocol_860_68.elf PhTCPConnInterface::m_pHeapCallback
+0000aa6c PhTCPProtocol_860_68.elf PhTCPConnInterface::m_pVOSCallback
+0000aa70 PhTCPProtocol_860_68.elf PhTCPManager::m_TagTCP
+0000aa74 PhTCPProtocol_860_68.elf PhTCPManager::m_pHeapCallback
+0000aa78 PhTCPProtocol_860_68.elf PhTCPManager::m_pSystemUtilitiesCallback
+0000aa7c PhTCPProtocol_860_68.elf PhTCPManager::m_pVOSCallback
+0000aa80 PhTCPProtocol_860_68.elf CMirroredObject::c_pMirroredObjectMgrImpl
+0000aa84 PhTCPProtocol_860_68.elf CMirroredObjectAgent::c_pHeapCallback
+0000aa88 PhTCPProtocol_860_68.elf CMirroredObjectAgent::c_AgentTag
+0000aa8c PhTCPProtocol_860_68.elf PhTCPServer::m_heapTag
+0000aa90 V CComCoClass<CPhTCPProtocol, &(CLSID_CPhTCPProtocol)>::m_HeapTag PhTCPProtocol_860_68.elf 
+0000aa94 PhTCPProtocol_860_68.elf PHproperties
+0000aa9c PhTCPProtocol_860_68.elf cThisFile
+0000aaa0 PhTCPProtocol_860_68.elf cThisFile
+0000aaa4 PhTCPProtocol_860_68.elf cThisFile
+0000aaa8 PhTCPProtocol_860_68.elf useEXEHEAD
+</SYMBOLS>

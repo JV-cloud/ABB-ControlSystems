@@ -1,0 +1,128 @@
+HwUnitInfo  (* MODBUS *)
+   HWUnitID  16#03000011
+   Description "MODBUS"
+   Information "MODBUS"
+   Icons ProtocolType
+   Attributes DontDisplayPos
+   InterfaceInfo
+      Interface CIGInterface
+      CLSID_CB {F352F034-3295-4e09-AA67-4B17601E02D8}
+      CLSID_CTRL {82A1E389-7884-4918-BAE6-322ADBD5BB41}
+      HWConfig Fail
+   End InterfaceInfo
+   Parameters
+      ParamInfo 
+         Name MODBUSTYPE
+         Description "MODBUS type"
+         CompileType HWConfig
+         Datatype ENUM
+         Default 0
+         ParValIndex 0
+         ParamType Numbered 0
+      End ParamInfo
+      ParamInfo 
+         Name ADDRESS
+         Description "MODBUS address"
+         CompileType HWConfig
+         Datatype INT
+         Default 1
+         ParValIndex 1
+         ParamType Numbered 1
+      End ParamInfo
+      ParamInfo 
+         Name COMMUNICATIONTYPE
+         Description "Poll time"
+         CompileType HWConfig
+         Datatype INT
+         Default 4000
+         ParValIndex 2
+         ParamType Numbered 2
+      End ParamInfo
+      ParamInfo                    
+         Name TIMEOUTTIME
+         Description "Timeout time "
+         CompileType HWConfig
+         Datatype INT
+         Default 2000
+         ParValIndex 3
+         ParamType Numbered 3
+      End ParamInfo
+      ParamInfo                    
+         Name NOFRESENDS
+         Description "Number of resends "
+         CompileType HWConfig
+         Datatype INT
+         Default 3
+         ParValIndex 4
+         ParamType Numbered 4
+      End ParamInfo
+      ParamInfo 
+         Name EXCEPTIONADDRESS
+         Description "Exception Register address"
+         CompileType HWConfig
+         Datatype INT
+         Default 100
+         ParValIndex 5
+         ParamType Numbered 5
+      End ParamInfo
+      ParamInfo 
+         Name DIAGNOSTICADDRESS
+         Description "Diagnostic Register address"
+         CompileType HWConfig
+         Datatype INT
+         Default 101
+         ParValIndex 6
+         ParamType Numbered 6
+      End ParamInfo
+   End Parameters
+   ParValList
+      ParVal
+         ParValIndex 0
+         ENUM
+         "Master" 0
+         "Slave" 1
+      End ParVal
+      ParVal
+         ParValIndex 1
+         INT 1 247 1 247
+      End ParVal
+      ParVal
+         ParValIndex 2
+         UnitText    "msec"
+         INT 0 8000 0 8000 
+      End ParVal
+      ParVal
+         ParValIndex 3
+         UnitText    "msec"
+         INT 500 6000 500 6000
+      End ParVal
+      ParVal
+         ParValIndex 4
+         INT 1 6 1 6
+      End ParVal
+      ParVal
+         ParValIndex 5
+         INT 0 65535 0 65535
+      End ParVal
+      ParVal
+         ParValIndex 6
+         INT 0 65535 0 65535
+      End ParVal
+   End ParValList
+ Channels
+   ChannelInfo
+      Number 0
+      ChannelName "UnitStatus"
+      Datatype Status_In
+      Routine 900
+      CopyParameters 0 0 16#50000
+   End ChannelInfo
+ End Channels
+   UnitStatusText
+      DeviceSpecific1 "Offline"
+   End UnitStatusText
+   UnitStatusSeverity
+      DeviceSpecific1 GeneralWarning TriggerEvent SeverityMedium
+   End UnitStatusSeverity 
+  HWUnitInfoCRC 16#6AC4
+End HWUnitInfo (* MODBUS*)

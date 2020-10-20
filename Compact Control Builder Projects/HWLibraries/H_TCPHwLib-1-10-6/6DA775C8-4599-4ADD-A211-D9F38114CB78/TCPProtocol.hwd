@@ -1,0 +1,44 @@
+(*-----------------------------------------------------------------*)
+(* 2011-02-10  Created                                             *)
+(*-----------------------------------------------------------------*)
+
+FileHeader
+  Contents              "Generic TCP communication"
+  Date                  "2011-02-10"
+  Version               "1.0-0"
+  RequiredSyntaxVersion "3.0"
+End FileHeader
+
+HWUnitInfo  (* TCPProtocol *)
+   HWUnitID {653D49EE-5FFC-424f-A0FB-6C462D1F714D}
+   Description "TCPProtocol"
+   Information "Generic TCP Protocol"
+   Icons ProtocolType
+   InterfaceInfo
+     Interface CIGInterface
+     CLSID_CB   {AE2E1B9C-18AE-41c5-8259-FB7B73FB8A6C}
+     CLSID_CTRL {8C26A73B-70E0-462b-B067-923D1AA9820C}
+     HWConfig Fail             
+   End InterfaceInfo
+   Parameters
+      ParamInfo 
+         Name LogicalName
+         Description "Logical name"
+         Hidden
+         CompileType HWConfig
+         Datatype STRING
+         Default "TCP_Name"
+         ParamType Numbered 0
+      End ParamInfo
+   End Parameters
+   Channels
+      ChannelInfo
+         Number 0
+         ChannelName "UnitStatus"
+         Datatype Status_In
+         Routine 900
+         CopyParameters 0 0 16#50000
+      End ChannelInfo
+   End Channels
+  HWUnitInfoCRC 16#7C11
+End HWUnitInfo (* TCPProtocol *)

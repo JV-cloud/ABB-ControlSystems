@@ -1,0 +1,154 @@
+HWUnitInfo (* 200-IP2 / PROFIBUS-DP Full Format *)
+   HWUnitID {B9154656-7F77-417f-81E4-68BF0F0A1BF5}
+   Description "200-IP2"
+   Information "Digital pulse counter module, 2 channels current sink"
+   Icons Ser200IOType
+   Attributes IoUnit
+   Parameters
+      ParamInfo 
+         Name FILTER_ENABLE_0
+         Description "Filter Enable Channel 0"
+         CompileType IOConnect
+         Datatype BOOL
+         Default  FALSE
+         ParamType CIGIOData  13  0 1  ByteParam ByteOffset
+      End ParamInfo
+      ParamInfo 
+         Name FILTER_ENABLE_1
+         Description "Filter Enable Channel 1"
+         CompileType IOConnect
+         Datatype BOOL
+         Default  FALSE
+         ParamType CIGIOData  13  1 1  ByteParam ByteOffset
+      End ParamInfo
+      ParamInfo 
+         Name FILTER
+         Description "Filter constant"
+         CompileType IOConnect
+         Datatype ENUM
+         Default 0
+         ParValIndex 0
+         ParamType CIGIOData  12  0 1  ByteParam ByteOffset
+      End ParamInfo
+   End Parameters
+   ParValList
+      ParVal
+         ParValIndex 0
+         UnitText    "kHz"
+         ENUM
+         "73.5"  0
+         "37.8"  1
+         "12.8"  2
+         "1.2"   3
+      End ParVal
+   End ParValList
+   Channels
+      ChannelInfo
+         Number 0
+         ChannelName "Value In 0"
+         Datatype Int_In
+         Routine 300
+         CopyParameters 0 0 16#30003 16#0
+      End ChannelInfo
+      ChannelInfo
+         Number 1
+         ChannelName "Latch In 0"
+         Datatype Int_In
+         Routine 300
+         CopyParameters 0 0 16#30001 16#0
+      End ChannelInfo
+      ChannelInfo
+         Number 2
+         ChannelName "CtrlSig In 0"
+         Datatype Dword_In
+         Routine 510
+         CopyParameters 0 0 16#30000 8 16#5500 16#30000 0 16#000F 16#30005 8 16#FF00 16#30005 0 16#00FF 16#0
+      End ChannelInfo
+      ChannelInfo
+         Number 3
+         ChannelName "Ctrl Out 0"
+         Datatype Dword_Out
+         Routine 600
+         CopyParameters 0 0 16#40000 16#0
+      End ChannelInfo
+      ChannelInfo
+         Number 4 
+         ChannelName "Preset Out 0"
+         Datatype Int_Out
+         Routine 400
+         CopyParameters 0 0 16#40002 16#0
+      End ChannelInfo
+      ChannelInfo
+         Number 5
+         ChannelName "Value In 1"
+         Datatype Int_In
+         Routine 300
+         CopyParameters 0 0 16#30004 16#0
+      End ChannelInfo
+      ChannelInfo
+         Number 6
+         ChannelName "Latch In 1"
+         Datatype Int_In
+         Routine 300
+         CopyParameters 0 0 16#30002 16#0
+      End ChannelInfo
+      ChannelInfo
+         Number 7
+         ChannelName "CtrlSig In 1"
+         Datatype Dword_In
+         Routine 510
+         CopyParameters 0 0 16#30000 9 16#AA00 16#30000 4 16#00F0 16#30006 8 16#FF00 16#30006 0 16#00FF 16#0
+      End ChannelInfo
+       ChannelInfo
+         Number 8
+         ChannelName "Ctrl Out 1"
+         Datatype Dword_Out
+         Routine 600
+         CopyParameters 0 0 16#40001 16#0
+      End ChannelInfo
+      ChannelInfo
+         Number 9 
+         ChannelName "Preset Out 1"
+         Datatype Int_Out
+         Routine 400
+         CopyParameters 0 0 16#40003 16#0
+      End ChannelInfo
+      ChannelInfo
+         Number 10
+         ChannelName "UnitStatus"
+         Datatype Status_In
+         Routine 900
+         CopyParameters 0 0 16#50000
+      End ChannelInfo
+   End Channels
+   IoUnitStatus
+      StatusType IoError
+      StatusData 16#10000 16#100100 16#0 16#0
+   End IoUnitStatus
+   Configuration
+      ConfigInfo
+         ModuleKey   16#1800
+         InAreaSize  8
+         OutAreaSize 4
+         InWord 
+            WORD 0       16#0 
+            WORD 0       16#1
+            WORD 0       16#2
+            WORD 0       16#3
+            WORD 0       16#4
+            WORD 0       16#5
+            WORD 0       16#6
+            WORD 0       16#7
+         OutWord
+            WORD 0       16#0 
+            WORD 0       16#1
+            WORD 0       16#2
+            WORD 0       16#3
+        CIGIOConnData
+            CIGIOData     16#01 16#57 16#63
+            CIGIOData     16#05  16#18 16#00 16#14 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00
+        End CIGIOConnData
+      End ConfigInfo
+   End Configuration
+  HWUnitInfoCRC 16#1FD8
+End HWUnitInfo (* 200-IP2 / PROFIBUS-DP Full Format*)

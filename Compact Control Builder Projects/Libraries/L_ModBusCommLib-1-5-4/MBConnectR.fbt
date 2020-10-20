@@ -1,0 +1,1082 @@
+<?xml version="1.0" encoding="UTF-16"?><FunctionBlockType xmlns="CBSourceCodeSchema3_0" Name="MBConnectR" Protected="1" Hidden="0" Scope="public" Guid="61302d5d-5b84-454f-bb6e-cf305e15121f" InternalChangeTime="2015-08-26-09:46:24.454" BuildVersion="6.0.300.21" SaveDate="2019-09-18-05:56:53.029" CodePage="1252" InteractionWindow="" AlarmOwner="1" InstantiateAsAspectObject="0" SILLevel="NonSIL" RestrictedSIL="0" SimulationMark="0" EmbeddedGraphicsVisible="0"><Parameters><Parameter Name="En_C" Type="bool" TypeGuid="fcc571cc-3a50-4ec6-9241-0726a148299b" AccessLevel="Read Only" SafetyType="None" Attribute="retain" InitialValue="" ReadPermission="" WritePermission="" AuthenticationLevel="None" Direction="in" FDPort="yes"><Description>Enables the execution while True</Description></Parameter><Parameter Name="En_RedSlaveMode" Type="bool" TypeGuid="fcc571cc-3a50-4ec6-9241-0726a148299b" AccessLevel="Read Only" SafetyType="None" Attribute="retain" InitialValue="" ReadPermission="" WritePermission="" AuthenticationLevel="None" Direction="in" FDPort="yes"><Description>Enables the execution in redundant slave mode while True</Description></Parameter><Parameter Name="PrimChannel" Type="string[40]" TypeGuid="49d3a1c9-a834-46c6-9f71-88a69e045a5d" AccessLevel="Read Only" SafetyType="None" Attribute="retain" InitialValue="" ReadPermission="" WritePermission="" AuthenticationLevel="None" Direction="in" FDPort="no"><Description>The local primary communication channel to be used for the connection</Description></Parameter><Parameter Name="SecChannel" Type="string[40]" TypeGuid="49d3a1c9-a834-46c6-9f71-88a69e045a5d" AccessLevel="Read Only" SafetyType="None" Attribute="retain" InitialValue="" ReadPermission="" WritePermission="" AuthenticationLevel="None" Direction="in" FDPort="no"><Description>The local secondary communication channel to be used for the connection</Description></Parameter><Parameter Name="Partner" Type="string[40]" TypeGuid="49d3a1c9-a834-46c6-9f71-88a69e045a5d" AccessLevel="Read Only" SafetyType="None" Attribute="retain" InitialValue="" ReadPermission="" WritePermission="" AuthenticationLevel="None" Direction="in" FDPort="no"><Description>The remote communication partner (Identity)</Description></Parameter><Parameter Name="Valid" Type="bool" TypeGuid="fcc571cc-3a50-4ec6-9241-0726a148299b" AccessLevel="Read Only" SafetyType="None" Attribute="" InitialValue="" ReadPermission="" WritePermission="" AuthenticationLevel="None" Direction="out" FDPort="no"><Description>True when the output values are valid</Description></Parameter><Parameter Name="Error" Type="bool" TypeGuid="fcc571cc-3a50-4ec6-9241-0726a148299b" AccessLevel="Read Only" SafetyType="None" Attribute="retain" InitialValue="" ReadPermission="" WritePermission="" AuthenticationLevel="None" Direction="out" FDPort="yes"><Description>Indicates an error with True. Status parameter &lt; 0</Description></Parameter><Parameter Name="Status" Type="dint" TypeGuid="d59be854-1395-4e4f-9cf6-6a4ba4ccdc98" AccessLevel="Read Only" SafetyType="None" Attribute="retain" InitialValue="1" ReadPermission="" WritePermission="" AuthenticationLevel="None" Direction="out" FDPort="no"><Description>Status code of last execution, operation successful 1, pending 0, errors &lt; 0, warnings &gt; 1</Description></Parameter><Parameter Name="RedStatus" Type="dint" TypeGuid="d59be854-1395-4e4f-9cf6-6a4ba4ccdc98" AccessLevel="Read Only" SafetyType="None" Attribute="retain" InitialValue="1" ReadPermission="" WritePermission="" AuthenticationLevel="None" Direction="out" FDPort="no"><Description>Status code for redundant channel of last execution, operation successful 1, pending 0, errors &lt; 0, warnings &gt; 1</Description></Parameter><Parameter Name="ActiveChannel" Type="string" TypeGuid="49d3a1c9-a834-46c6-9f71-88a69e045a5d" AccessLevel="Read Only" SafetyType="None" Attribute="retain" InitialValue="" ReadPermission="" WritePermission="" AuthenticationLevel="None" Direction="out" FDPort="no"><Description>The present active communication channel to be used for communication</Description></Parameter><Parameter Name="Id" Type="Comm_Channel_MB" TypeGuid="ac112221-566e-44c1-9932-83c4db33e0e1" AccessLevel="Read Only" SafetyType="None" Attribute="" InitialValue="" ReadPermission="" WritePermission="" AuthenticationLevel="None" Direction="in_out" FDPort="yes right"><Description>OUT (IN) Communication channel, has to be connected to a FB of the type Read/Write</Description></Parameter></Parameters><ExtensibleParameters/><Variables><Variable Name="ConnectData" Type="MBConnectData" TypeGuid="472a5590-f240-417f-9a2e-bd9b0e1c6acd" AccessLevel="Read Only" SafetyType="None" Attribute="retain" InitialValue="" ReadPermission="" WritePermission="" AuthenticationLevel="None"><Description>Variable of structured type, used to assign specific in data for actual protocol</Description></Variable><Variable Name="AsyncStatus" Type="dint" TypeGuid="d59be854-1395-4e4f-9cf6-6a4ba4ccdc98" AccessLevel="Read Only" SafetyType="None" Attribute="" InitialValue="1" ReadPermission="" WritePermission="" AuthenticationLevel="None"><Description>Used to derive the result of asynchronous function calls</Description></Variable><Variable Name="cProtocol" Type="string[38]" TypeGuid="49d3a1c9-a834-46c6-9f71-88a69e045a5d" AccessLevel="Read Only" SafetyType="None" Attribute="constant" InitialValue="&apos;{82A1E389-7884-4918-BAE6-322ADBD5BB41}&apos;" ReadPermission="" WritePermission="" AuthenticationLevel="None"><Description>Modify this! Assign the "Initial value" with  actual GUID for the protocol</Description></Variable><Variable Name="DebugStatus" Type="dint" TypeGuid="d59be854-1395-4e4f-9cf6-6a4ba4ccdc98" AccessLevel="Read Only" SafetyType="None" Attribute="" InitialValue="1" ReadPermission="" WritePermission="" AuthenticationLevel="None"><Description>Used to derive the result of synchronous function calls</Description></Variable><Variable Name="PrgStep" Type="dint" TypeGuid="d59be854-1395-4e4f-9cf6-6a4ba4ccdc98" AccessLevel="Read Only" SafetyType="None" Attribute="retain" InitialValue="10" ReadPermission="" WritePermission="" AuthenticationLevel="None"><Description>Current step of the state machine</Description></Variable><Variable Name="ConnectionError" Type="bool" TypeGuid="fcc571cc-3a50-4ec6-9241-0726a148299b" AccessLevel="Read Only" SafetyType="None" Attribute="retain" InitialValue="" ReadPermission="" WritePermission="" AuthenticationLevel="None"><Description>Flag used to create a pulse on the Error parameter when an error occurs</Description></Variable><Variable Name="ChannelData" Type="string[40]" TypeGuid="49d3a1c9-a834-46c6-9f71-88a69e045a5d" AccessLevel="Read Only" SafetyType="None" Attribute="retain" InitialValue="" ReadPermission="" WritePermission="" AuthenticationLevel="None"><Description>Used to assign the data for connection</Description></Variable><Variable Name="ConcatData" Type="string[40]" TypeGuid="49d3a1c9-a834-46c6-9f71-88a69e045a5d" AccessLevel="Read Only" SafetyType="None" Attribute="retain" InitialValue="&apos;.0&apos;" ReadPermission="" WritePermission="" AuthenticationLevel="None"><Description>Defined to append the "Channel" value</Description></Variable><Variable Name="BlankString" Type="string" TypeGuid="49d3a1c9-a834-46c6-9f71-88a69e045a5d" AccessLevel="Read Only" SafetyType="None" Attribute="retain" InitialValue="" ReadPermission="" WritePermission="" AuthenticationLevel="None"><Description>A null string</Description></Variable><Variable Name="Channel" Type="string[40]" TypeGuid="49d3a1c9-a834-46c6-9f71-88a69e045a5d" AccessLevel="Read Only" SafetyType="None" Attribute="retain" InitialValue="" ReadPermission="" WritePermission="" AuthenticationLevel="None"><Description>Present communication channel to be used for connection</Description></Variable><Variable Name="Channel_Sec" Type="string[40]" TypeGuid="49d3a1c9-a834-46c6-9f71-88a69e045a5d" AccessLevel="Read Only" SafetyType="None" Attribute="retain" InitialValue="" ReadPermission="" WritePermission="" AuthenticationLevel="None"><Description>Secondary communication channel to be used for connection</Description></Variable><Variable Name="ChannelData_sec" Type="string[40]" TypeGuid="49d3a1c9-a834-46c6-9f71-88a69e045a5d" AccessLevel="Read Only" SafetyType="None" Attribute="retain" InitialValue="" ReadPermission="" WritePermission="" AuthenticationLevel="None"><Description>Used to assign the data for connection for secondary</Description></Variable><Variable Name="Id_sec" Type="Comm_Channel_MB" TypeGuid="ac112221-566e-44c1-9932-83c4db33e0e1" AccessLevel="Read Only" SafetyType="None" Attribute="" InitialValue="" ReadPermission="" WritePermission="" AuthenticationLevel="None"><Description>OUT (IN) Communication channel for secondary</Description></Variable><Variable Name="DebugStatus_sec" Type="dint" TypeGuid="d59be854-1395-4e4f-9cf6-6a4ba4ccdc98" AccessLevel="Read Only" SafetyType="None" Attribute="" InitialValue="1" ReadPermission="" WritePermission="" AuthenticationLevel="None"><Description>Used to derive the result of synchronous function calls for secondary</Description></Variable><Variable Name="AsyncStatus_sec" Type="dint" TypeGuid="d59be854-1395-4e4f-9cf6-6a4ba4ccdc98" AccessLevel="Read Only" SafetyType="None" Attribute="" InitialValue="1" ReadPermission="" WritePermission="" AuthenticationLevel="None"><Description>Used to derive the result of asynchronous function calls for secondary</Description></Variable><Variable Name="T" Type="Timer" TypeGuid="4b7b1341-f184-4617-b9e9-f1b10b50f588" AccessLevel="Read Only" SafetyType="None" Attribute="retain" InitialValue="" ReadPermission="" WritePermission="" AuthenticationLevel="None"><Description>Timer used during switch over</Description></Variable><Variable Name="Switchovertime" Type="time" TypeGuid="20e24ed4-5954-4aa1-9a01-10874693f4a4" AccessLevel="Read Only" SafetyType="None" Attribute="retain" InitialValue="time#1s" ReadPermission="" WritePermission="" AuthenticationLevel="None"><Description>Time needed to swap channel during switch over</Description></Variable><Variable Name="Channel_temp" Type="string[40]" TypeGuid="49d3a1c9-a834-46c6-9f71-88a69e045a5d" AccessLevel="Read Only" SafetyType="None" Attribute="retain" InitialValue="" ReadPermission="" WritePermission="" AuthenticationLevel="None"><Description>Used while swaping channels as temporary channel</Description></Variable><Variable Name="Id_temp" Type="Comm_Channel_MB" TypeGuid="ac112221-566e-44c1-9932-83c4db33e0e1" AccessLevel="Read Only" SafetyType="None" Attribute="" InitialValue="" ReadPermission="" WritePermission="" AuthenticationLevel="None"><Description>Used while swaping channels as temporary Id</Description></Variable><Variable Name="AllSlave_Down" Type="bool" TypeGuid="fcc571cc-3a50-4ec6-9241-0726a148299b" AccessLevel="Read Only" SafetyType="None" Attribute="retain" InitialValue="FALSE" ReadPermission="" WritePermission="" AuthenticationLevel="None"><Description>Switch over will be initiated for all slaves while True</Description></Variable><Variable Name="SystemBoolSysVarId" Type="string" TypeGuid="49d3a1c9-a834-46c6-9f71-88a69e045a5d" AccessLevel="Read Only" SafetyType="None" Attribute="" InitialValue="&apos;AllSlaveDown&apos;" ReadPermission="" WritePermission="" AuthenticationLevel="None"><Description>System variable id used for sytembool()</Description></Variable><Variable Name="SystemBoolStatus" Type="dint" TypeGuid="d59be854-1395-4e4f-9cf6-6a4ba4ccdc98" AccessLevel="Read Only" SafetyType="None" Attribute="" InitialValue="" ReadPermission="" WritePermission="" AuthenticationLevel="None"><Description>Status of systembool() call</Description></Variable><Variable Name="IsSlave_Alive" Type="bool" TypeGuid="fcc571cc-3a50-4ec6-9241-0726a148299b" AccessLevel="Read Only" SafetyType="None" Attribute="retain" InitialValue="TRUE" ReadPermission="" WritePermission="" AuthenticationLevel="None"><Description>Switch over will initiate for the particular slave</Description></Variable><Variable Name="SystemRealsysVarID" Type="string" TypeGuid="49d3a1c9-a834-46c6-9f71-88a69e045a5d" AccessLevel="Read Only" SafetyType="None" Attribute="retain" InitialValue="&apos;IsSlaveAlive&apos;" ReadPermission="" WritePermission="" AuthenticationLevel="None"><Description>System variable id used for sytemreal()</Description></Variable><Variable Name="SystemRealStatus" Type="dint" TypeGuid="d59be854-1395-4e4f-9cf6-6a4ba4ccdc98" AccessLevel="Read Only" SafetyType="None" Attribute="retain" InitialValue="" ReadPermission="" WritePermission="" AuthenticationLevel="None"><Description>Status of systemreal() call</Description></Variable><Variable Name="SysPartner" Type="real" TypeGuid="d8f54d4b-661f-407a-ace8-721d1581061b" AccessLevel="Read Only" SafetyType="None" Attribute="retain" InitialValue="" ReadPermission="" WritePermission="" AuthenticationLevel="None"><Description>Partner Id which recieved from systemreal()</Description></Variable><Variable Name="AssignSysRealStatus" Type="dint" TypeGuid="d59be854-1395-4e4f-9cf6-6a4ba4ccdc98" AccessLevel="Read Only" SafetyType="None" Attribute="retain" InitialValue="" ReadPermission="" WritePermission="" AuthenticationLevel="None"><Description>Status of Assignsystemreal() call</Description></Variable><Variable Name="DefaultSysRealId" Type="real" TypeGuid="d8f54d4b-661f-407a-ace8-721d1581061b" AccessLevel="Read Only" SafetyType="None" Attribute="" InitialValue="0" ReadPermission="" WritePermission="" AuthenticationLevel="None"><Description>Default value to set for assignsystemreal()</Description></Variable><Variable Name="SwitchoverCounter" Type="dint" TypeGuid="d59be854-1395-4e4f-9cf6-6a4ba4ccdc98" AccessLevel="Read Only" SafetyType="None" Attribute="retain" InitialValue="0" ReadPermission="" WritePermission="" AuthenticationLevel="None"><Description>Counter for number of times switchover occured continuosly</Description></Variable><Variable Name="PollDisableSwitchCounter" Type="dint" TypeGuid="d59be854-1395-4e4f-9cf6-6a4ba4ccdc98" AccessLevel="Read Only" SafetyType="None" Attribute="retain" InitialValue="0" ReadPermission="" WritePermission="" AuthenticationLevel="None"><Description>Counter for number of times switchover occured in RedSlaveMode if polling disabled</Description></Variable><Variable Name="T1" Type="Timer" TypeGuid="4b7b1341-f184-4617-b9e9-f1b10b50f588" AccessLevel="Read Only" SafetyType="None" Attribute="retain" InitialValue="" ReadPermission="" WritePermission="" AuthenticationLevel="None"><Description>Timer used during switch over Counter for idle time RedSlaveMode if polling disabled</Description></Variable><Variable Name="Idletime" Type="time" TypeGuid="20e24ed4-5954-4aa1-9a01-10874693f4a4" AccessLevel="Read Only" SafetyType="None" Attribute="retain" InitialValue="time#40s" ReadPermission="" WritePermission="" AuthenticationLevel="None"><Description>Idle time to make switchover counter to 0 if polling is disabled( greater than no.of resend * Max Timeout  6*6000)</Description></Variable><Variable Name="CounterTimeFlag" Type="bool" TypeGuid="fcc571cc-3a50-4ec6-9241-0726a148299b" AccessLevel="Read Only" SafetyType="None" Attribute="retain" InitialValue="FALSE" ReadPermission="" WritePermission="" AuthenticationLevel="None"><Description>Flag used to reset the PollDisableSwitchCounter to 0 if connection is proper</Description></Variable></Variables><ExternalVariables/><FunctionBlocks/><ControlModules/><CodeBlocks><STCodeBlock Name="Code"><ST_Code>
+IF SecChannel=BlankString and PrgStep=10 AND En_C THEN 
+   PrgStep:=100; (*single channel mode *)
+   
+ELSIF SecChannel&lt;&gt;BlankString and PrgStep=10 AND En_C AND En_RedSlaveMode THEN
+   SwitchoverCounter := 0;
+   PollDisableSwitchCounter := 0;  
+
+   PrgStep:=1000;(*In this mode redundant slave is enabled*)
+
+ELSIF SecChannel&lt;&gt;BlankString and PrgStep=10 AND En_C AND Not En_RedSlaveMode THEN
+   SwitchoverCounter := 0;
+   PollDisableSwitchCounter :=0;
+
+   PrgStep:=1;(*In this mode redundant slave is not enabled, only one connection will be active at a time*)
+
+END_IF;
+
+
+(*Single Channel mode*)
+
+
+(# This function block is a template for construction of a connect
+   function block supporting both address and  named- orientated protocol.
+
+   All code with following appearance has to be considered/adapted:
+
+   (# 
+       Explanation . . . .    
+    #)   
+
+
+   The content is according to folowing:
+
+   Step 100 - Initial Step of the sequence
+
+   Step 200 - Call the "GCConnectionReq"- firmware function call
+
+   Step 300 - Call the GCConnectionStatus firmware function call cyclically
+              until the result is derived.
+
+              OR
+
+            - Disconnect when Enable- parameter is set to value False
+              by call the "GCDisconnect" firmware function call.
+
+   Step 400 - Wait for the result from the Asynchronous status is returned,
+              i.e. the disconnection is concluded.            
+
+   Step 500 - Same as 400 but don't show the result as valid or error.
+
+   Step 900 - The error step
+
+   Step 910 - Wait for the En_C set to value True before return to idle
+              step 100 after a debug status has occured
+
+  #)
+
+
+
+(* ============   The Connect Function Block =========== *)
+
+(* Reset the Out- parameters each scan to achieve a pulse *)
+(*  #48285 wrote the closing parenthesis in above line  *)
+Error := False;
+
+
+(* Step 100 - The initial Step of the sequence *)
+
+IF PrgStep = 100 AND En_C AND SecChannel=BlankString THEN
+
+   Status := 0;
+  
+   PrgStep := 200;
+   ConnectionError := False;
+  Channel:=PrimChannel;
+   (*ActiveChannel := BlankString;*)
+   		
+END_IF; 
+
+
+(* Step 200 - Call the "GCConnectionReq"- firmware function call *)
+
+IF PrgStep = 200 THEN   
+
+   (* Assignment of the ConnectData variable*)
+
+   (# 
+      The assignment of the ConnectData variable is implementer specified
+      and has to be adapted for the actual protocol
+    #)
+
+   ConnectData.Partner := Partner;
+   
+   ChannelData := concat(Channel,ConcatData);
+
+   GCConnectReq(ConnectRef := Id.Reference,
+                Channel := ChannelData,
+                Protocol := cProtocol,
+                ConnectData := ConnectData,
+                DebugStatus := DebugStatus);
+
+
+   IF DebugStatus = 1 THEN
+
+      (* Succeed *)
+      Valid := False;
+      PrgStep := 300;
+
+   ELSE
+
+      (* Permanent Error, the attempt to create a rederence failed *)
+      PrgStep := 900;
+
+   END_IF; 
+
+END_IF; (* End of PrgStep 200 *)  
+
+(* Step 300 - Call the GCConnectionStatus firmware function call cyclically
+              until the result is derived *)
+
+   IF PrgStep = 300 THEN
+
+   (* Disconnect when Enable- parameter is set to value False by call the 
+      "GCDisconnect" firmware function call *)
+
+   IF Not En_C OR SecChannel&lt;&gt;BlankString THEN
+
+      GCDisconnectReq( ConnectRef := Id.Reference);
+      Valid := False;
+      Error := False; (*  #48285  reset the Error flag to false when En_C is set to False *)
+      PrgStep := 400;
+
+   ELSE    
+
+      AsyncStatus := GCConnectionStatus(ConnectRef := Id.Reference );
+
+         (* The result of the Asynchronous  operation:
+
+            0 = Pending operation 
+            1 = Succeed
+           &lt;0 = Any error
+
+          *)
+
+      IF AsyncStatus = 1 THEN
+
+         (* Stay in step 300 and repeat the GCConnectionStatus firmware function call *)
+
+         Valid := True;
+         ConnectionError := False;
+         Error := False;
+         Status := 1;
+         PrgStep :=300;
+       Activechannel:=Channel;
+
+         (* The attempt to establish a connection failed or is interrupted
+            after an already established connection *)
+
+
+       (* The protocol handler has been removed in the HW- tree, go to
+          step 910 and wait for En_C set to value False *)         
+
+      ELSIF AsyncStatus = -6803 THEN
+
+         (* Go to step 900 and report error *)
+
+         Status := AsyncStatus;         
+         Error := NOT ConnectionError;
+         ConnectionError := True;
+         Valid := False;
+        Activechannel:=BlankString;
+         PrgStep := 910;
+                    
+
+      ELSIF AsyncStatus = -6812 THEN
+
+         (* Hide the error and retry *)
+
+         GCDisconnectReq( ConnectRef := Id.Reference);
+
+         Error := False;
+         ConnectionError := False;
+         Valid := False;
+         Activechannel:=BlankString;
+         PrgStep := 500;
+
+      ELSIF AsyncStatus &lt; 0 THEN
+
+         (* Stay in step 300 and repeat the GCConnectionStatus firmware function call *)  
+
+         Status := AsyncStatus;
+         Error := NOT ConnectionError;
+         ConnectionError := True;
+         Valid := False;
+        Activechannel:=BlankString;
+         PrgStep := 300;
+
+      END_IF;
+
+   END_IF;
+
+END_IF; (* End of PrgStep 300 *) 
+
+
+
+
+(* Step 400 - Wait for the result from the Asynchronous status is returned,
+              i.e. the disconnection is concluded. *)
+(* Step 500 - Same as 400 but don't show the result as valid or error. *)
+
+IF PrgStep = 400 OR PrgStep = 500 THEN
+
+   AsyncStatus := GCConnectionStatus(ConnectRef := Id.Reference );
+
+   IF AsyncStatus &lt;&gt; 0 THEN
+
+      IF PrgStep = 400 THEN
+         
+         Status := 1;
+         
+      END_IF;
+      
+      (* Return to idle step 100 in any case of result *)
+
+      PrgStep := 10;
+
+   END_IF; 
+
+END_IF; (* End of PrgStep 400 and 500 *)
+
+
+
+
+(* Step 900 - The error step *)
+
+IF PrgStep = 900 THEN
+
+   IF DebugStatus &lt; 0 then
+
+      Status := DebugStatus;
+      PrgStep := 910;
+
+   ELSE
+
+      Status := AsyncStatus;
+      PrgStep := 10;
+
+   END_IF;
+
+   Error := True;
+   Valid := False;
+
+END_IF;  (* End of PrgStep 900*)
+
+
+
+(* Step 910 - Wait for the En_C set to value True before return to idle
+              step 100 after a debug status has occured *)
+
+IF PrgStep = 910 AND not En_C THEN
+
+      PrgStep := 10;
+
+END_IF; (* End of PrgStep 910 *)
+
+ID.Valid := Valid;
+
+(*End of Single Channel mode*)
+
+
+(***  #57033 New Connect block MBConnectR to be added to support redundancy at 1131 *****)
+
+(* *********************Redundant channel mode********************** *)
+
+
+(# This function block is a template for construction of a connect
+   function block supporting both address and  named- orientated protocol.
+
+   All code with following appearance has to be considered/adapted:
+
+   (# 
+       Explanation . . . .    
+    #)   
+
+
+   The content is according to folowing:
+
+   Step 1000 - Initial Step of the sequence
+
+   Step 2000 - Call the "GCConnectionReq"- firmware function call
+
+   Step 3000 - Call the GCConnectionStatus firmware function call cyclically
+              until the result is derived.
+
+              OR
+
+            - Disconnect when Enable- parameter is set to value False
+              by call the "GCDisconnect" firmware function call.
+
+    Step 3500 - In case of error on one channel do a switchover to the other.
+
+
+   Step 4000 - Wait for the result from the Asynchronous status is returned,
+              i.e. the disconnection is concluded.            
+
+   Step 5000 - Same as 4000 but don't show the result as valid or error.
+   
+   Step 6000 - Restting the PollDisableSwitchCounter to 0 in case of error on channel
+               after normal communication started, then move step 3500.
+
+   
+   Step 8000 - If the SwitchoverCounter reaches 6 times then stop the 
+               switch over and wait for togling the En_C value from user.
+
+
+   Step 9000 - The error step
+
+   Step 9100 - Wait for the En_C set to value True before return to idle
+              step 1000 after a debug status has occured
+
+
+   #)
+
+
+
+
+(* ============   The Connect Function Block =========== *)
+
+
+
+(* Reset the Out- parameters each scan to achieve a pulse *)
+(*  #48285 wrote the closing parenthesis in above line  *)
+Error := False;
+
+  
+
+(* Step 1000 - The initial Step of the sequence *)
+
+
+IF PrgStep = 1000 AND En_C AND SecChannel&lt;&gt;BlankString AND En_RedSlaveMode THEN
+
+   Status := 0;
+   RedStatus := 0;
+   PrgStep := 2000;
+   ConnectionError := False;
+   ActiveChannel := BlankString;
+   Channel:=PrimChannel;
+   Channel_sec:=SecChannel;
+
+       		
+END_IF; 
+
+
+(* Step 2000 - Call the "GCConnectionReq"- firmware function call *)
+
+IF PrgStep = 2000 THEN   
+   (* Assignment of the ConnectData variable*)
+   (# 
+      The assignment of the ConnectData variable is implementer specified
+      and has to be adapted for the actual protocol
+    #)
+   
+  ConnectData.Partner := Partner;
+  ChannelData := concat(Channel,ConcatData);
+   
+   GCConnectReq(ConnectRef := Id.Reference,
+                Channel := ChannelData,
+                Protocol := cProtocol,
+                ConnectData := ConnectData,
+                DebugStatus := DebugStatus);
+   
+
+   ChannelData_sec := concat(Channel_sec,ConcatData);
+   
+   GCConnectReq(ConnectRef := Id_sec.Reference,
+                Channel := ChannelData_sec,
+                Protocol := cProtocol,
+                ConnectData := ConnectData,
+                DebugStatus := DebugStatus_sec);
+ 
+          
+   IF DebugStatus = 1 THEN
+
+      (* Succeed *)
+      Valid := False;
+      PrgStep := 3000;
+      
+   ELSIF DebugStatus&lt;&gt; 1 and DebugStatus_sec = 1 THEN
+      PrgStep:=3500;
+               
+   ELSIF DebugStatus&lt;&gt; 1 and DebugStatus_sec &lt;&gt; 1 THEN
+
+      (* Permanent Error, the attempt to create a rederence failed *)
+      PrgStep := 9000;
+   END_IF;(*End of check for debugstatus*)
+
+   
+ END_IF; (* End of PrgStep 2000 *)  
+
+
+
+(* Step 3000 - Call the GCConnectionStatus firmware function call cyclically
+              until the result is derived *)
+
+   IF PrgStep = 3000 THEN
+
+
+   (* Disconnect when Enable- parameter is set to value False by call the 
+      "GCDisconnect" firmware function call *)
+
+   IF Not En_C OR Not En_RedSlaveMode OR (SecChannel = BlankString) THEN
+           GCDisconnectReq( ConnectRef := Id.Reference);
+           GCDisconnectReq( ConnectRef := Id_sec.Reference);
+           Valid := False;
+           Error := False; (*  #48285  reset the Error flag to false when En_C is set to False *)
+           ActiveChannel := BlankString;
+           PrgStep := 4000;
+     ELSE    
+          AsyncStatus := GCConnectionStatus(ConnectRef := Id.Reference );
+          AsyncStatus_sec := GCConnectionStatus(ConnectRef := Id_sec.Reference);
+         (* The result of the Asynchronous  operation:
+            0 = Pending operation 
+            1 = Succeed
+           &lt;0 = Any error
+          *)
+          
+       
+                
+      Status:=AsyncStatus;
+         
+      RedStatus:=AsyncStatus_sec;
+             
+      IF (AsyncStatus =1 &amp; IsSlave_Alive)  THEN
+
+         (* Stay in step 3000 and repeat the GCConnectionStatus firmware function call *)
+
+         Valid := True;
+         ConnectionError := False;
+         Error := False;
+         ActiveChannel:= Channel;
+         
+          
+          SysPartner := systemreal( SystemVarId := SystemRealsysVarID, 
+             Status =&gt; SystemRealStatus );
+          
+          if(string_to_real(partner)=syspartner) then
+             IsSlave_Alive := false;
+             
+             
+
+             AssignSystemReal( SysVarId := SystemRealsysVarID, 
+                               SystemVarRealVal := DefaultSysRealId, 
+                               Status =&gt; AssignSysRealStatus );
+             
+          end_if;
+          
+          if timerelapsed(T1) &gt; Idletime then
+            CounterTimeFlag := True;
+            timerreset(T1);
+          end_if;
+          
+          SwitchoverCounter := 0;
+             
+          PrgStep :=3000;
+         
+
+      (* The attempt to establish a connection failed or is interrupted
+            after an already established connection *)
+
+
+       (* The protocol handler has been removed in the HW- tree, go to
+          step 9100 and wait for En_C set to value False *) 
+          
+      ELSIF AsyncStatus = -7000 THEN
+       
+         Status := AsyncStatus;
+         ActiveChannel:= BlankString; 
+         Error := NOT ConnectionError;
+         ConnectionError := True;
+         Valid := False;
+         PrgStep := 3500;    
+                  
+               
+      ELSIF AsyncStatus = -6803 and AsyncStatus_sec =-6803 THEN
+         (*Go to step 9000 and report error *)
+         
+          ActiveChannel:= BlankString;       
+          Error := NOT ConnectionError;
+          ConnectionError := True;
+          Valid := False;
+          PrgStep := 9100;    
+
+      ELSIF AsyncStatus = -6812 THEN
+         (* Hide the error and retry *)
+         ActiveChannel:= BlankString;
+         GCDisconnectReq( ConnectRef := Id.Reference);
+         Error := False;
+         ConnectionError := False;
+         Valid := False;
+         PrgStep := 5000;
+         
+      (*If poll time &gt; 0, and if both cables are removed  *)
+      ELSIF (AsyncStatus &lt; 0 and AsyncStatus_sec &lt; 0)  THEN
+         (* Stay in step 3000 and repeat the GCConnectionStatus firmware function call *) 
+	   ActiveChannel:= BlankString; 
+         Error := NOT ConnectionError;
+         ConnectionError := True;
+         Valid := False;
+         PrgStep := 3500;
+         
+       (*If poll time &gt; 0, and if any one cable is removed  *)
+      ELSIF (AsyncStatus &lt; 0 and AsyncStatus_sec =1 ) THEN
+         ActiveChannel:= BlankString; 
+         Error := NOT ConnectionError;
+         ConnectionError := True;
+         Valid := False;
+         PrgStep := 3500;
+         
+        (*If poll time = 0, and either both cables are removed or any one cable is removed  *)
+      ELSIF (AsyncStatus =1 and AsyncStatus_sec =1 and NOT IsSlave_Alive) THEN
+         ActiveChannel:= BlankString; 
+         Error := NOT ConnectionError;
+         ConnectionError := True;
+         Valid := False;
+         PollDisableSwitchCounter := PollDisableSwitchCounter +1; 
+         (*Timer to measure how long the communication not disturbed if it is not disturbed more than 40sec then we will resettimer and PollDisableSwitchCounter *)
+         timerreset(T1);
+         timerstart(T1); 
+                  
+         if CounterTimeFlag then
+             PrgStep:=6000;
+             CounterTimeFlag := False;
+         else
+             PrgStep:=3500;
+         end_if;
+   
+      END_IF; (*Check for AsyncStatus*)
+
+END_IF;(*Check for En_C*)
+   
+END_IF; (* End of PrgStep 3000 *) 
+
+(* Step 3500 - In case of error on one channel do a switchover to the other. *)
+
+
+  IF PrgStep =3500 THEN
+     
+           
+           GCDisconnectReq( ConnectRef := Id.Reference);
+           GCDisconnectReq( ConnectRef := Id_sec.Reference);
+          
+           Channel_temp:=Channel;
+           Channel:=Channel_sec;
+           Channel_sec:=Channel_temp;            
+	     id_temp.reference:= id.reference;
+           id.reference:=id_sec.reference;
+           id_sec.reference:=id_temp.reference;
+           timerstart(T);  
+           
+                    
+           PrgStep:=5000;
+            
+            
+           
+          
+        (*END_IF;*)
+        
+  END_IF; (* End of PrgStep 3500 *)
+  
+(* Step 4000 - Wait for the result from the Asynchronous status is returned,
+              i.e. the disconnection is concluded. *)
+(* Step 5000 - Same as 4000 but don't show the result as valid or error. *)
+
+IF PrgStep = 4000 OR  PrgStep = 5000 THEN
+
+   AsyncStatus := GCConnectionStatus(ConnectRef := Id.Reference );
+   AsyncStatus_sec := GCConnectionStatus(ConnectRef := Id_sec.Reference );
+       
+   IF AsyncStatus &lt;&gt; 0 and AsyncStatus_sec &lt;&gt; 0 THEN
+      IF PrgStep = 4000 THEN
+            
+         Status := 1;
+         RedStatus:=1;
+         PrgStep:=10;
+                  
+      END_IF;(*End of PrgStep 4000*) 
+       
+    
+       
+         IF PrgStep = 5000 and timerelapsed(T) &gt; Switchovertime THEN
+                 
+                 IsSlave_Alive := true;
+                 timerreset(T);
+                 SwitchoverCounter := SwitchoverCounter +1;
+                    
+                 PrgStep:=2000;
+                 IF SwitchoverCounter = 6 OR PollDisableSwitchCounter = 6 THEN
+                   PrgStep:=8000;
+                 END_IF;   
+
+                 
+                 
+        END_IF;(*End of PrgStep 5000*) 
+   
+   END_IF;(* End of AsyncCheck*) 
+   
+END_IF;(* End of PrgStep 4000 or PrgStep 5000*) 
+
+
+
+
+(*Step 6000 - Restting the PollDisableSwitchCounter to 0 in case of error on channel
+               after normal communication started, then move step 3500. Tracker #58349 *)
+
+
+IF PrgStep = 6000  THEN
+   
+  PollDisableSwitchCounter := 0;
+  PrgStep:=3500; 
+   
+END_IF;(*End of step 6000*)
+
+
+
+
+
+
+(*Step 8000 - If the SwitchoverCounter reaches 6 times then stop the 
+            switch over and wait for togling the En_C value from user.
+            
+            Tracker #58184  *)
+
+IF PrgStep = 8000  THEN
+   
+   IF En_C THEN
+      Status := -7014;
+      RedStatus := -7014;
+      PrgStep := 8000;
+   ELSE 
+   
+      PrgStep := 10;
+   END_IF;
+
+END_IF; (* End of PrgStep 8000 *)
+
+
+
+
+
+(* Step 9000 - The error step *)
+
+IF PrgStep = 9000 THEN
+
+   IF DebugStatus&lt; 0 THEN
+
+      Status := DebugStatus;
+      PrgStep := 9100;
+      
+   ELSE 
+   
+      Status := AsyncStatus;
+      RedStatus:=AsyncStatus_sec;
+      PrgStep := 10;
+
+   END_IF;
+
+   Error := True;
+   Valid := False;
+
+END_IF;  (* End of PrgStep 9000*)
+
+(* Step 9100 - Wait for the En_C set to value True before return to idle
+              step 1000 after a debug status has occured *)
+
+IF PrgStep = 9100 AND not En_C THEN
+
+      PrgStep := 10;
+
+END_IF; (* End of PrgStep 9100 *)
+
+
+
+
+(* ************  Redundant channel mode but Slave redundency not enabled case **************** *)
+  
+
+(# This function block is a template for construction of a connect
+   function block supporting both address and  named- orientated protocol.
+
+   All code with following appearance has to be considered/adapted:
+
+   (# 
+       Explanation . . . .    
+    #)   
+
+
+   The content is according to folowing:
+
+   Step 1 - Initial Step of the sequence
+
+   Step 2 - Call the "GCConnectionReq"- firmware function call
+
+   Step 3 - Call the GCConnectionStatus firmware function call cyclically
+              until the result is derived.
+
+              OR
+
+            - Disconnect when Enable- parameter is set to value False
+              by call the "GCDisconnect" firmware function call.
+              
+   Step 35 - In case of error on one slave do a switchover to the other           
+
+   Step 4 - Wait for the result from the Asynchronous status is returned,
+              i.e. the disconnection is concluded.            
+
+   Step 5 - Same as 40000 but don't show the result as valid or error.
+   
+   Step 6 - Restting the PollDisableSwitchCounter to 0 in case of error on channel
+               after normal communication started, then move step 3500. Tracker #58349
+   
+   Step 7 - If the SwitchoverCounter reaches 7 times then stop the 
+            switch over and wait for togling the En_C value from user.
+
+   Step 9 - The error step
+
+   Step 91 - Wait for the En_C set to value True before return to idle
+              step 100 after a debug status has occured
+
+  #)
+
+
+
+(* ============   The Connect Function Block =========== *)
+
+(* Reset the Out- parameters each scan to achieve a pulse *)
+(*  #48285 wrote the closing parenthesis in above line  *)
+Error := False;
+
+
+(* Step 1 - The initial Step of the sequence *)
+
+IF PrgStep = 1 AND En_C AND SecChannel &lt;&gt; BlankString AND Not En_RedSlaveMode THEN
+
+   Status := 0;
+   PrgStep := 2;
+   ConnectionError := False;
+   Channel:=PrimChannel;
+   ActiveChannel := BlankString;
+   Channel:=PrimChannel;
+   Channel_sec:=SecChannel;
+		
+END_IF; 
+
+
+(* Step 2- Call the "GCConnectionReq"- firmware function call *)
+
+IF PrgStep = 2 THEN   
+
+   (* Assignment of the ConnectData variable*)
+
+   (# 
+      The assignment of the ConnectData variable is implementer specified
+      and has to be adapted for the actual protocol
+    #)
+
+
+   ConnectData.Partner := Partner;
+   
+   ChannelData := concat(Channel,ConcatData);
+
+   GCConnectReq(ConnectRef := Id.Reference,
+                Channel := ChannelData,
+                Protocol := cProtocol,
+                ConnectData := ConnectData,
+                DebugStatus := DebugStatus);
+
+
+   IF DebugStatus = 1  THEN
+       
+      (* Succeed *)
+      Valid := False;
+      PrgStep := 3;
+      
+      
+   ELSIF DebugStatus &lt;&gt; 1 THEN
+      
+      (*Valid := False;*)
+      PrgStep := 35;
+      
+
+
+   END_IF; 
+
+END_IF; (* End of PrgStep 2 *)  
+
+(* Step 3 - Call the GCConnectionStatus firmware function call cyclically
+              until the result is derived *)
+
+   IF PrgStep = 3 THEN
+
+   (* Disconnect when Enable- parameter is set to value False by call the 
+      "GCDisconnect" firmware function call *)
+
+
+   IF Not En_C OR En_RedSlaveMode OR (SecChannel = BlankString) THEN
+
+      GCDisconnectReq( ConnectRef := Id.Reference);
+      Valid := False;
+      Error := False;
+      PrgStep := 4;
+
+   ELSE  
+      
+      AllSlave_Down := systembool( SystemVarId := SystemBoolSysVarId, 
+                  Status =&gt; SystemBoolStatus );
+        
+
+      AsyncStatus := GCConnectionStatus(ConnectRef := Id.Reference );
+
+         (* The result of the Asynchronous  operation:
+
+            0 = Pending operation 
+            1 = Succeed
+           &lt;0 = Any error
+
+          *)
+          
+       
+                
+       IF (AsyncStatus = 1 AND Not AllSlave_Down  ) THEN
+
+         (* Stay in step 3 and repeat the GCConnectionStatus firmware function call *)
+
+         Valid := True;
+         ConnectionError := False;
+         Error := False;
+         Status := AsyncStatus;
+         PrgStep :=3;
+         Activechannel:=Channel;
+         
+         if timerelapsed(T1) &gt; Idletime then
+            CounterTimeFlag := True;
+            timerreset(T1);
+         end_if;
+
+         
+         SwitchoverCounter := 0;
+
+         (* The attempt to establish a connection failed or is interrupted
+            after an already established connection *)
+
+
+         (* The protocol handler has been removed in the HW- tree, go to
+          step 91 and wait for En_C set to value False *)   
+          
+          
+          
+      ELSIF AsyncStatus = -7000 THEN
+       
+         Status := AsyncStatus;
+         ActiveChannel:= BlankString; 
+         Error := NOT ConnectionError;
+         ConnectionError := True;
+         Valid := False;
+         PrgStep := 35;
+        
+
+       ELSIF AsyncStatus = -6803 THEN
+
+         (* Go to step 9 and report error *)
+
+         Status := AsyncStatus;         
+         Error := NOT ConnectionError;
+         ConnectionError := True;
+         Valid := False;
+         Activechannel:=BlankString;
+         PrgStep := 91;
+                    
+
+       ELSIF AsyncStatus = -6812 THEN
+
+         (* Hide the error and retry *)
+
+         GCDisconnectReq( ConnectRef := Id.Reference);
+         Status := AsyncStatus;
+         Error := False;
+         ConnectionError := False;
+         Valid := False;
+         Activechannel:=BlankString;
+         PrgStep := 5;
+      
+      (* If poll time &gt; 0 and all slaves down *)
+       ELSIF AsyncStatus &lt; 0 AND AllSlave_Down THEN
+       
+         Status := AsyncStatus;
+         ActiveChannel:= BlankString; 
+         Error := NOT ConnectionError;
+         ConnectionError := True;
+         Valid := False;
+         PrgStep := 35;
+        
+        (* If poll time = 0 and all slaves down *)
+       ELSIF AsyncStatus = 1 AND AllSlave_Down THEN
+       
+         Status := AsyncStatus;
+         ActiveChannel:= BlankString; 
+         Error := NOT ConnectionError;
+         ConnectionError := True;
+         Valid := False;
+         PollDisableSwitchCounter := PollDisableSwitchCounter +1;
+         timerreset(T1);
+         timerstart(T1); 
+                  
+         if CounterTimeFlag then
+             PrgStep:=6;
+             CounterTimeFlag := False;
+         else
+             PrgStep:=35;
+         end_if;
+
+     
+        (* If poll time &gt; 0 and any one of slave alive *)
+       ELSIF AsyncStatus &lt; 0 AND Not AllSlave_Down THEN
+
+         (* Stay in step 3 and repeat the GCConnectionStatus firmware function call *)  
+
+         Status := AsyncStatus;
+         Error := NOT ConnectionError;
+         ConnectionError := True;
+         Valid := False;
+         Activechannel:=BlankString;
+         PrgStep := 3;
+
+      END_IF;
+
+   END_IF;
+
+END_IF; (* End of PrgStep 3 *) 
+
+(* Step 35 - In case of error on one channel do a switchover to the other. *)
+
+
+  IF PrgStep =35 THEN
+     
+           
+           
+           GCDisconnectReq( ConnectRef := Id.Reference);
+           
+           Channel_temp:=Channel;
+           Channel:=Channel_sec;
+           Channel_sec:=Channel_temp; 
+                      
+	     id_temp.reference:= id.reference;
+           id.reference:=id_sec.reference;
+           id_sec.reference:=id_temp.reference;
+           TimerStart(T);
+           PrgStep:=5;
+           
+            
+        
+  END_IF; (* End of PrgStep 35 *)
+
+
+
+(* Step 4 - Wait for the result from the Asynchronous status is returned,
+              i.e. the disconnection is concluded. *)
+(* Step 5 - Same as 4 but don't show the result as valid or error. *)
+
+IF PrgStep = 4 OR PrgStep = 5 THEN
+
+   AsyncStatus := GCConnectionStatus(ConnectRef := Id.Reference );
+      
+    IF AsyncStatus &lt;&gt; 0 THEN
+
+      IF PrgStep = 4 THEN
+         
+         Status := 1;
+         PrgStep := 10;
+         
+      END_IF;
+      
+      (* Return to idle step 1 in any case of result *)
+
+      
+      IF PrgStep = 5 and timerelapsed(T) &gt; Switchovertime THEN
+          TimerReset(T);
+          
+           SwitchoverCounter := SwitchoverCounter +1;
+                    
+           PrgStep:=2;
+           IF SwitchoverCounter = 6 OR PollDisableSwitchCounter = 6 THEN
+                PrgStep:=7;
+           END_IF;   
+
+
+      END_IF;
+
+
+   END_IF; 
+
+END_IF; (* End of PrgStep 4 and 5 *)
+
+
+
+(*Step 6 - Restting the PollDisableSwitchCounter to 0 in case of error on channel
+               after normal communication started, then move step 35. Tracker #58349 *)
+               
+IF PrgStep = 6  THEN
+   
+  PollDisableSwitchCounter := 0;
+  PrgStep:=35; 
+   
+END_IF;(*End of step 6*)
+
+
+
+
+(*Step 7 - If the SwitchoverCounter reaches 7 times then stop the 
+            switch over and wait for togling the En_C value from user.
+            
+            Tracker #58184  *)
+
+IF PrgStep = 7  THEN
+  
+   IF En_C THEN
+      Status := -7014;
+      
+      PrgStep := 7;
+   ELSE 
+   
+      PrgStep := 10;
+   END_IF;
+
+END_IF; (* End of PrgStep 7 *)
+
+
+
+(* Step 9 - The error step *)
+
+IF PrgStep = 9 THEN
+
+   IF DebugStatus &lt; 0 then
+
+      Status := DebugStatus;
+      PrgStep := 91;
+
+   ELSE
+
+      Status := AsyncStatus;
+      PrgStep := 10;
+
+   END_IF;
+
+   Error := True;
+   Valid := False;
+
+END_IF;  (* End of PrgStep 9*)
+
+
+
+(* Step 91 - Wait for the En_C set to value True before return to idle
+              step 1 after a debug status has occured *)
+
+IF PrgStep = 91 AND not En_C THEN
+
+      PrgStep := 10;
+
+END_IF; (* End of PrgStep 91 *)
+
+
+
+ID.Valid := Valid;
+
+(*End of Redundant channel mode but Slave redundency not enabled case *)
+
+
+
+
+
+</ST_Code></STCodeBlock></CodeBlocks><Description>The MBConnectR function block type works similarly as MBConnect block. 
+The difference is that it can be used where application based redundancy is required for Modbus RTU master.</Description><CheckSum Value="17668"/></FunctionBlockType>

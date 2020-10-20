@@ -1,0 +1,225 @@
+(* -------------------------------------------------------------- *)
+(*   FCI:CI830  CI:CI854                                          *)
+(* -------------------------------------------------------------- *)
+(* Version 1.0/0 based on io_CI830_p.hwd version 5.0/7            *)
+(* 2005-09-01    K Gardin                                         *)
+
+
+
+HWUnitInfo (* CI830_CI854 *)
+  HWUnitId      {D012492C-4784-48ad-BBC9-75FAC7FBB57B} 
+  Description   "CI830"
+  Information   "PROFIBUS-DP slave for S800 I/O and drives"
+  Icons         S800FciType
+  Attributes    AdapterUnit
+
+  InterfaceInfo
+    IoSysType   CIGIO
+    CLSID_CB    {70AC2B68-4487-48e3-9957-EA25FD20A55F}
+    CLSID_CTRL  {7a59948b-4432-4d69-9f66-2ca7ed7f9db5}
+    HWConfig    Fail
+  End InterfaceInfo
+
+  ConnectionInfo
+    ConnectType AllUnits
+    IOConnect   Fail
+    IOConfig    NoFail
+  End ConnectionInfo
+
+  LogicalNumbers
+     1 2 3 4 5 6 7 8 9 10 11 12 
+     101 102 103 104 105 106 107 108 109 110 111 112
+     201 202 203 204 205 206 207 208 209 210 211 212
+     301 302 303 304 305 306 307 308 309 310 311 312
+     401 402 403 404 405 406 407 408 409 410 411 412
+     501 502 503 504 505 506 507 508 509 510 511 512
+     601 602 603 604 605 606 607 608 609 610 611 612
+     701 702 703 704 705 706 707 708 709 710 711 712
+  End LogicalNumbers
+
+  SubUnitTypes
+    SubMenu "S800 I/O"
+      HWUnitID {E182D46E-3FFE-4873-8860-D9BBED4C6A96} (* AI810 *)
+      HWUnitID {F1A92080-4B13-4cc7-8E5E-F4CBED4BB1D7} (* AI820 *)
+      HWUnitID {21F40E3E-1756-4F8F-A644-7FE05DFD4908} (* Variant av AI820/Q4 2002 *) 
+      HWUnitID {DDF52433-24A9-47f7-932D-CE98C24C48E3} (* AI825 *)
+      HWUnitID {60EC16B0-0318-440e-A70D-380D9DF06C4E} (* AI830 RTD*)
+      HWUnitID {786CFAF6-5048-49fa-B574-D7E8EF5685D5} (* AI835 TC*)
+      HWUnitID {EB581D8F-A443-436A-9E48-2F24F19DC26A} (* AI840 *)
+      HWUnitID {5CD7B316-0095-4875-A97F-DA78DA879EF5} (* AI843 *)
+      HWUnitID {A238D641-69F0-4596-828F-F1DD2BE82F38} (* AI845 *)
+      Separator
+      HWUnitID {38806D93-7526-436d-8752-57300ACB6C8D} (* AO810 *)
+      HWUnitID {411ED08D-CA86-45a0-89B2-62308970D4BC} (* AO820 *)
+      HWUnitID {08333A7E-5EAA-4304-A074-9A1E0A4CAE84} (* AO840 *)
+      HWUnitID {A33CBFE8-82F4-4EDF-8946-35EF08A316D8} (* AO845 *)
+      Separator
+      HWUnitID {4CF1A56F-D355-4fc9-A099-CC3F9DAA8032} (* DI810 *)
+      HWUnitID {61CD9211-CD63-4d1f-A982-948BC499B740} (* DI811 *)
+      HWUnitID {E511882D-88E5-442c-9AD6-26668D84DD7E} (* DI814 *)
+      HWUnitID {F0DDE251-24C3-4c18-9DB7-B8EDD32199DF} (* DI820 *)
+      HWUnitID {24689F39-5444-4301-AC3E-2550E2218134} (* DI821 *)
+      (* HWUnitID   DI830 *)
+      HWUnitID {840C6DEA-5FFD-4FC8-94E6-33F67FD11A82} (* Variant av DI830 till OpCode/Q3 2002 *)
+      (* HWUnitID   DI831 *)
+      HWUnitID {408E9E3E-0856-4980-9BFF-CCA86CBB2E20} (* DI840 *)      
+      (* HWUnitID   DI885 *)
+      Separator
+      HWUnitID {A8E077ED-A7F9-4cb9-A2B5-6F6211592945} (* DO810 *)
+      HWUnitID {837EAECE-A328-4249-A27E-54C14C0999E6} (* DO814 *)
+      HWUnitID {48776AD5-0396-4e4f-88A1-2DF204F91CDD} (* DO815 *)
+      HWUnitID {000700CE-0A23-4ee5-855E-2B16F7C111C2} (* DO820 *)
+      HWUnitID {4C7D89A5-4E8E-4d9a-AEFC-B252507D09F5} (* DO821 *)
+      HWUnitID {A238D641-69F0-4596-828F-F1DD2BE82F38} (* DO840 *)
+      Separator
+      HWUnitID {248FECC5-7E9C-48ee-84EB-5B01B636E1FE} (* DP820 *)
+      HWUnitID {DF426A43-479A-4953-BE39-17F61A9ADBC9} (* DP840 *)
+      HWUnitID {E0305FB5-E894-4F18-94D6-5F3774975E29} (* Strommatkort NSB/Q3 2002 *) 
+      HWUnitID {90719AD0-9C28-4798-8D42-8607CA1A4A96} (* Relakort NSB/Q3 2002 *)
+      HWUnitID {4A1FD11E-FBB1-4ED7-9E03-EF17E4374F4A} (* 16 ch Triac output *)
+      HWUnitID {B73321BE-C653-480D-9A53-8F28DE492794} (* 16 ch 110 VAC input *)
+    SubMenuEnd
+    SubMenu "S800 I/O I.S. interface"
+      HWUnitID {2970EEA5-E36F-4cc1-B502-B6F706319654} (* AI890 *)
+      HWUnitID {060EED4E-6F8E-4D5A-91C3-D065E5465A6A} (* AI893 TC *)
+      HWUnitID {59D5D456-F80E-453f-89B5-4B2B58C62A9F} (* AI893 RTD *)
+      (* HWUnitID   AI895 *)
+      HWUnitID {32B9A757-A2AC-410e-AE6A-815C3AA40D8E} (* AO890 *)
+      (* HWUnitID  AO895 *)  
+      HWUnitID {96197E3F-5CA7-4aed-B755-C601B8545926} (* DI890 *)
+      HWUnitID {E10514B9-EAC2-4e6b-BE6A-F189D09B553B} (* DO890 *)
+    SubMenuEnd
+    SubMenu "S800L I/O"
+      HWUnitID {A71F7790-1C8D-4c48-A977-FF132780585C} (* AI801 *)
+      HWUnitID {083DF53B-A30A-44e7-B57E-27B316189ED2} (* AO801 *)
+      HWUnitID {7E340B0B-45F1-4c09-9D09-0EE6316ADD95} (* DI801 *)
+      HWUnitID {AA9CBDC1-33D2-49bf-B921-8F906F0CC7CE} (* DI802 *)
+      HWUnitID {9C9C2726-F897-48ec-B03B-7225A43618E7} (* DI803 *)
+      HWUnitID {BB25780A-A4DF-41c5-8AB1-A4176BCDAC2A} (* DO801 *)
+      HWUnitID {B015727B-5A1B-4d7a-A41B-3B308701C139} (* DO802 *)
+    SubMenuEnd
+    SubMenu "Drives"
+      HWUnitID {862C97F7-E05F-482e-B41A-76861A84A894} (* ACS600 *)
+                Positions 101 102 103 104 105 106 107 108 109 110 111 112
+                          201 202 203 204 205 206 207 208 209 210 211 212
+                          301 302 303 304 305 306 307 308 309 310 311 312
+                          401 402 403 404 405 406 407 408 409 410 411 412
+                          501 502 503 504 505 506 507 508 509 510 511 512
+                          601 602 603 604 605 606 607 608 609 610 611 612
+                          701 702 703 704 705 706 707 708 709 710 711 712
+    SubMenuEnd
+  End SubUnitTypes
+
+  Parameters
+    ParamInfo 
+      Name           SUP_PS
+      Description    "Supervision power supply"
+      CompileType    IOConnect
+      DataType       BOOL
+      Default        FALSE
+      ParamType      CIGIOData 1 1 1 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name           SUP_PSE
+      Description    "Supervision external power supply"
+      CompileType    IOConnect
+      DataType       BOOL
+      Default        FALSE
+      ParamType      CIGIOData 1 2 1 ByteParam ByteOffset
+    End ParamInfo
+  End Parameters
+
+  Channels
+    ChannelInfo
+      Number         1
+      ChannelName    "UnitStatus"
+      Datatype       Status_In
+      Routine        900
+      CopyParameters 0 0 16#50000
+    End ChannelInfo     
+  End Channels
+
+  IoUnitStatus
+    StatusType   IoWarning
+    StatusData   16#30001 16#0020 16#00 16#00
+(*    StatusType   IoError *)
+(*    StatusData   16#30001 16#1000 16#00 16#00 *)
+    StatusType   WrongModuleType 
+    StatusData   16#30001 16#000F 16#04 16#000A
+    StatusType   DeviceSpecific1
+    StatusData   16#30001 16#000F 16#04 16#0004
+    StatusType   DeviceSpecific2
+    StatusData   16#30000 16#0010 16#00 16#00
+    StatusType   DeviceSpecific3
+    StatusData   16#30000 16#0200 16#00 16#00
+    StatusType   DeviceSpecific4
+    StatusData   16#30000 16#0400 16#00 16#00
+  End IoUnitStatus
+
+  UnitstatusText
+    DeviceSpecific1 "Error"
+    DeviceSpecific2 "Peripheral HW error"
+    DeviceSpecific3 "Power A error"
+    DeviceSpecific4 "Power B error"
+    (* Reduncant cable 1 fail *)
+    (* Redundant cable 2 fail *)
+    ExtendedStatus1  "Slave does not exist" 
+    ExtendedStatus2  "Configuration data fault"
+    ExtendedStatus3  "Parameter data fault"
+    ExtendedStatus4  "Static diagnostic"
+(*   ExtendedStatus5  "Redundant slave does not exist" CI830 is single *)
+    ExtendedStatus6  "Diagnostic configuration data fault" 
+    ExtendedStatus7  "Report diagnostics fault" 
+
+(*    ExtendedStatus8  "ExtendedStatus8" Reserved for CI854 *)
+(*    ExtendedStatus9  "ExtendedStatus9" Reserved for CI854 *)
+(*    ExtendedStatus10 "ExtendedStatus10" Reserved for CI854 *)
+  End UnitStatusText
+
+  UnitStatusSeverity
+    DeviceSpecific1  GeneralError TriggerAlarm SeverityMedium
+    DeviceSpecific2  GeneralWarning TriggerEvent SeverityHigh
+    DeviceSpecific3  GeneralWarning TriggerAlarm SeverityLow
+    DeviceSpecific4  GeneralWarning TriggerAlarm SeverityLow
+
+    ExtendedStatus1  GeneralError TriggerAlarm SeverityMedium
+    ExtendedStatus2  GeneralError TriggerAlarm SeverityMedium
+    ExtendedStatus3  GeneralError TriggerAlarm SeverityMedium
+    ExtendedStatus4  GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus6  GeneralWarning TriggerEvent SeverityMedium 
+    ExtendedStatus7  GeneralWarning TriggerEvent SeverityMedium 
+
+   End UnitStatusSeverity
+
+
+   Configuration
+    ConfigInfo
+      ModuleKey       16#FE1E
+      InAreaSize      2
+      OutAreaSize     0
+      InWord
+        Word 0        0   (* FCI STATUS1 *)
+        Word 0        1   (* FCI STATUS2 *)
+      CIGIOConnData
+        CIGIOData     16#01 16#D1                                     (* CfgData          *)
+        CIGIOData     16#05 16#09 16#FE 16#1E                         (* UserPrmData      *)
+        CIGIOData     16#02 16#88 16#00 16#00 16#00 16#04 16#7C 16#01 (* PrmData          *)
+        CIGIOData     16#03 16#00 16#3C 16#00 16#3C 16#00 16#3C 16#00 16#3C 16#00 16#64 16#00 16#00 16#00 16#96 16#00 16#FA 16#01 16#C2 16#03 16#20   (* BaudrateMaxTSDR  *)
+        CIGIOData     16#04 16#06                                     (* MinSlaveInterval *)
+        CIGIOData     16#06 16#F4                                     (* MaxInputLen      *)
+        CIGIOData     16#07 16#F4                                     (* MaxOutputLen     *)
+        CIGIOData     16#08 16#01 16#E8                                    (* MaxDataLen       *)
+        SyncronizeDataExchange
+      End CIGIOConnData          
+    End ConfigInfo
+
+    ConfigInfo
+      EmptyConfig
+      ModuleKey       16#0000
+      InAreaSize      0
+      OutAreaSize     0
+    End ConfigInfo
+
+  End Configuration
+  HWUnitInfoCRC 16#3C16
+End HWUnitInfo (* CI830_CI854 *)

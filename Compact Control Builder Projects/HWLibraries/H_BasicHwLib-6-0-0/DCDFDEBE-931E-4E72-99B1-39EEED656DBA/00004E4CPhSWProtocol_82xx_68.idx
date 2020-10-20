@@ -1,0 +1,373 @@
+<HEAD>
+Index of symbols created 2019-09-17 20:56:39.07 
+</HEAD>
+<SECTIONS=15>
+00010000 00013db0 .text
+00013db0 00013e50 .got2
+00013e50 00014308 .fixup
+00014308 00014318 .bss
+00014318 00014324 .data
+00014324 00015016 .debug_abbrev
+00015016 0001fc5d .debug_info
+0001fc5d 00021138 .debug_line
+00021138 0002237c .debug_frame
+0002237c 000240a5 .debug_loc
+000240a5 00025cce .debug_pubnames
+00025cce 00025f16 .debug_aranges
+00025f16 000260ee .debug_ranges
+000260ee 0002860c .debug_str
+0002860c 0002860c .comment
+</SECTIONS>
+<SYMBOLS=351>
+00000000 PhSWProtocol_82xx_68.elf EXE_HEAD
+00000064 PhSWProtocol_82xx_68.elf CPhSWProtocol::SetCommonCallbackInterface(ICommonCallback*)
+000001a0 PhSWProtocol_82xx_68.elf non-virtual thunk to CPhSWProtocol::PrepareForTermination(teHWFErrorCode*)
+000001a8 PhSWProtocol_82xx_68.elf CPhSWProtocol::PrepareForTermination(teHWFErrorCode*)
+000001d0 PhSWProtocol_82xx_68.elf non-virtual thunk to CPhSWProtocol::RemoveHWConfiguration(trHWFAddress, teHWFErrorCode*)
+000001d8 PhSWProtocol_82xx_68.elf CPhSWProtocol::RemoveHWConfiguration(trHWFAddress, teHWFErrorCode*)
+00000224 PhSWProtocol_82xx_68.elf non-virtual thunk to CPhSWProtocol::GetStatus(trHWFAddress, teHWFUnitKind, unsigned long*, unsigned long*, teHWFErrorCode*)
+0000022c PhSWProtocol_82xx_68.elf CPhSWProtocol::GetStatus(trHWFAddress, teHWFUnitKind, unsigned long*, unsigned long*, teHWFErrorCode*)
+00000290 PhSWProtocol_82xx_68.elf CPhSWProtocol::Configure(trHWFAddress const&, teHWFErrorCode*)
+00000464 PhSWProtocol_82xx_68.elf non-virtual thunk to CPhSWProtocol::PhResponsibility(trHWFAddress, teHWFErrorCode*)
+0000046c PhSWProtocol_82xx_68.elf CPhSWProtocol::PhResponsibility(trHWFAddress, teHWFErrorCode*)
+000004d8 PhSWProtocol_82xx_68.elf non-virtual thunk to CPhSWProtocol::PhResponsibilityForRestart(trHWFAddress, teHWFErrorCode*)
+000004e0 PhSWProtocol_82xx_68.elf CPhSWProtocol::PhResponsibilityForRestart(trHWFAddress, teHWFErrorCode*)
+00000550 PhSWProtocol_82xx_68.elf CPhSWProtocol::GetProductInfo(unsigned char*, unsigned char*, unsigned char*, unsigned long)
+000005e0 PhSWProtocol_82xx_68.elf CPhSWProtocol::CPhSWProtocol()
+00000664 PhSWProtocol_82xx_68.elf CPhSWProtocol::CPhSWProtocol()
+000006e4 PhSWProtocol_82xx_68.elf non-virtual thunk to CPhSWProtocol::~CPhSWProtocol()
+000006ec PhSWProtocol_82xx_68.elf non-virtual thunk to CPhSWProtocol::~CPhSWProtocol()
+000006f8 PhSWProtocol_82xx_68.elf CPhSWProtocol::~CPhSWProtocol()
+00000758 PhSWProtocol_82xx_68.elf CPhSWProtocol::~CPhSWProtocol()
+000007b4 PhSWProtocol_82xx_68.elf non-virtual thunk to CPhSWProtocol::~CPhSWProtocol()
+000007bc PhSWProtocol_82xx_68.elf non-virtual thunk to CPhSWProtocol::~CPhSWProtocol()
+000007c8 PhSWProtocol_82xx_68.elf CPhSWProtocol::~CPhSWProtocol()
+0000083c PhSWProtocol_82xx_68.elf ObjectFactory
+00000964 PhSWProtocol_82xx_68.elf operator delete(void*)
+000009a4 PhSWProtocol_82xx_68.elf __cxa_pure_virtual
+000009e0 PhSWProtocol_82xx_68.elf CPhCommon_Base::CPhCommon_Base()
+00000a44 PhSWProtocol_82xx_68.elf CPhCommon_Base::CPhCommon_Base()
+00000aa4 PhSWProtocol_82xx_68.elf CPhCommon_Base::GetProductInfo(unsigned char*, unsigned char*, unsigned char*, unsigned long)
+00000ae0 PhSWProtocol_82xx_68.elf CPhCommon_Base::SetCommonCallbackInterface(ICommonCallback*)
+00000b10 PhSWProtocol_82xx_68.elf CPhConfig_Base1::PrepareForTermination(teHWFErrorCode*)
+00000b40 PhSWProtocol_82xx_68.elf CPhConfig_Base1::RemoveHWConfiguration(trHWFAddress, teHWFErrorCode*)
+00000b70 PhSWProtocol_82xx_68.elf CPhConfig_Base1::RemoveIoConnection(unsigned long, teHWFErrorCode*)
+00000ba4 PhSWProtocol_82xx_68.elf CPhConfig_Base1::PhResponsibilityForRestart(trHWFAddress, teHWFErrorCode*)
+00000bd4 PhSWProtocol_82xx_68.elf CPhConfig_Base1::PhResponsibility(trHWFAddress, teHWFErrorCode*)
+00000c04 PhSWProtocol_82xx_68.elf CPhConfig_Base1::StartUsingIoConnection(trHWFAddress, unsigned long, teHWFErrorCode*)
+00000c38 PhSWProtocol_82xx_68.elf CPhConfig_Base1::PhResponsibilityForBackupDevice(trHWFAddress, teHWFErrorCode*)
+00000c68 PhSWProtocol_82xx_68.elf CPhConfig_Base1::PhResponsibilityForHotInsert(trHWFAddress, teHWFErrorCode*)
+00000c98 PhSWProtocol_82xx_68.elf CPhConfig_Base1::PerformSwitchover(trHWFAddress, teHWFErrorCode*)
+00000cc8 PhSWProtocol_82xx_68.elf CPhConfig_Base1::StartUsingDevice(trHWFAddress, teHWFErrorCode*)
+00000cf8 PhSWProtocol_82xx_68.elf CPhConfig_Base1::PerformFailover(trHWFAddress, teHWFErrorCode*)
+00000d28 PhSWProtocol_82xx_68.elf CPhClient_Base::ConnectReq(unsigned long, unsigned long*, int*)
+00000d60 PhSWProtocol_82xx_68.elf CPhClient_Base::DisconnectReq(unsigned long, unsigned long, int*)
+00000d98 PhSWProtocol_82xx_68.elf CPhClient_Base::ReadVarReq(unsigned long, int*)
+00000dcc PhSWProtocol_82xx_68.elf CPhClient_Base::WriteVarReq(unsigned long, int*)
+00000e00 PhSWProtocol_82xx_68.elf CPhClient_Base::ReadRawReq(unsigned long, int*)
+00000e34 PhSWProtocol_82xx_68.elf CPhClient_Base::WriteRawReq(unsigned long, int*)
+00000e68 PhSWProtocol_82xx_68.elf CPhClient_Base::AbortRawReq(unsigned long, int*)
+00000e9c PhSWProtocol_82xx_68.elf CPhClient_Base::AbortVarReq(unsigned long, int*)
+00000ed0 PhSWProtocol_82xx_68.elf CPhClient_Base::GetExtendedStatusSize(unsigned long, int*, int*)
+00000f08 PhSWProtocol_82xx_68.elf CPhClient_Base::GetExtendedStatus(unsigned long, int, teIEC1131Type*, tGCValue*, int*)
+00000f48 PhSWProtocol_82xx_68.elf CPhClient_Base::SetStatus(unsigned long, int, int*)
+00000f80 PhSWProtocol_82xx_68.elf CPhClient_Base::ReadRes(unsigned long, int, int*)
+00000fb8 PhSWProtocol_82xx_68.elf CPhClient_Base::WriteRes(unsigned long, int, int*)
+00000ff0 PhSWProtocol_82xx_68.elf CPhClient_Base1::ConnectReq(unsigned long, unsigned long*, int*)
+00001028 PhSWProtocol_82xx_68.elf CPhClient_Base1::DisconnectReq(unsigned long, unsigned long, int*)
+00001060 PhSWProtocol_82xx_68.elf CPhClient_Base1::ReadVarReq(unsigned long, int*)
+00001094 PhSWProtocol_82xx_68.elf CPhClient_Base1::WriteVarReq(unsigned long, int*)
+000010c8 PhSWProtocol_82xx_68.elf CPhClient_Base1::RegisterVarReq(unsigned long, int*)
+000010fc PhSWProtocol_82xx_68.elf CPhClient_Base1::ReadRawReq(unsigned long, int*)
+00001130 PhSWProtocol_82xx_68.elf CPhClient_Base1::WriteRawReq(unsigned long, int*)
+00001164 PhSWProtocol_82xx_68.elf CPhClient_Base1::AbortRawReq(unsigned long, int*)
+00001198 PhSWProtocol_82xx_68.elf CPhClient_Base1::AbortVarReq(unsigned long, int*)
+000011cc PhSWProtocol_82xx_68.elf CPhClient_Base1::TimeoutAbortVarReq(unsigned long, int*)
+00001230 PhSWProtocol_82xx_68.elf CPhClient_Base1::GetExtendedStatusSize(unsigned long, int*, int*)
+00001268 PhSWProtocol_82xx_68.elf CPhClient_Base1::GetExtendedStatus(unsigned long, int, teIEC1131Type*, tGCValue*, int*)
+000012a8 PhSWProtocol_82xx_68.elf CPhClient_Base1::BufferTakeForReceive(unsigned long, int*)
+000012dc PhSWProtocol_82xx_68.elf CPhClient_Base1::BufferGiveForReceive(unsigned long, int, int*)
+00001314 PhSWProtocol_82xx_68.elf CPhClient_Base1::BufferTakeForSend(unsigned long, unsigned int, int*)
+0000134c PhSWProtocol_82xx_68.elf CPhClient_Base1::BufferGiveForSend(unsigned long, unsigned int, int, int*)
+00001388 PhSWProtocol_82xx_68.elf CPhClient_Base1::SetStatus(unsigned long, int, int*)
+000013c0 PhSWProtocol_82xx_68.elf CPhClient_Base1::ReadRes(unsigned long, int, int*)
+000013f8 PhSWProtocol_82xx_68.elf CPhClient_Base1::WriteRes(unsigned long, int, int*)
+00001430 PhSWProtocol_82xx_68.elf CPhStatus_Base1::KickWatchdog(unsigned short*, teHWFErrorCode*)
+00001464 PhSWProtocol_82xx_68.elf CPhStatus_Base1::GetStatus(trHWFAddress, teHWFUnitKind, unsigned long*, unsigned long*, teHWFErrorCode*)
+000014a0 PhSWProtocol_82xx_68.elf CPhIOAccess_Base::GetCopyRoutineReference(unsigned int, void (**)(short, void*, void*), IOAccessErrorCode*)
+000014d8 PhSWProtocol_82xx_68.elf CPhIOAccess_Base::ObtainDPM(eAreaType, trHWFAddress, IOAccessErrorCode*)
+0000150c PhSWProtocol_82xx_68.elf CPhIOAccess_Base::ReleaseDPM(eAreaType, trHWFAddress, IOAccessErrorCode*)
+00001540 PhSWProtocol_82xx_68.elf CPhDiagnostics_Base::PhDiagnosticsTableNew(teDiagErrorCode*)
+00001570 PhSWProtocol_82xx_68.elf CPhDiagnostics_Base::PhDiagnosticsTableCleared(teDiagErrorCode*)
+000015a0 PhSWProtocol_82xx_68.elf CPhOLU_Base::PrepareForFirmwareDownload(trHWFAddress const*, unsigned long, eOLUStatus*)
+000015d8 PhSWProtocol_82xx_68.elf CPhOLU_Base::PrepareForApplicationStop(trHWFAddress const*, eOLUStatus*)
+0000160c PhSWProtocol_82xx_68.elf CPhOLU_Base::ResumeOperation(trHWFAddress const*, eOLUStatus*)
+00001640 PhSWProtocol_82xx_68.elf CPhOLU_Base::PhResponsibilityForOLU(trHWFAddress const*, eOLUStatus*)
+00001674 PhSWProtocol_82xx_68.elf CPhOLU_Base::PrepareForLeavingOLU(trHWFAddress const*, eOLUStatus*)
+000016a8 PhSWProtocol_82xx_68.elf CPhOLU_Base::PrepareForAppAndConfigDownload(trHWFAddress const*, eOLUStatus*)
+000016dc PhSWProtocol_82xx_68.elf CPhOLU_Base1::PrepareForFirmwareDownload(trHWFAddress const*, unsigned long, eOLUStatus*)
+00001714 PhSWProtocol_82xx_68.elf CPhOLU_Base1::PrepareForApplicationStop(trHWFAddress const*, eOLUStatus*)
+00001748 PhSWProtocol_82xx_68.elf CPhOLU_Base1::ResumeOperation(trHWFAddress const*, eOLUStatus*)
+0000177c PhSWProtocol_82xx_68.elf CPhOLU_Base1::PhResponsibilityForOLU(trHWFAddress const*, eOLUStatus*)
+000017b0 PhSWProtocol_82xx_68.elf CPhOLU_Base1::PrepareForLeavingOLU(trHWFAddress const*, eOLUStatus*)
+000017e4 PhSWProtocol_82xx_68.elf CPhOLU_Base1::PrepareForAppAndConfigDownload(trHWFAddress const*, eOLUStatus*)
+00001818 PhSWProtocol_82xx_68.elf CPhOLU_Base1::OLUEnablePhCom(trHWFAddress const*, eOLUStatus*)
+0000184c PhSWProtocol_82xx_68.elf CPhOLU_Base1::OLUDisablePhCom(trHWFAddress const*, eOLUStatus*)
+00001880 PhSWProtocol_82xx_68.elf CPhOLU_Base1::InformPhIsInSwitch(trHWFAddress const*, eOLUStatus*)
+000018b8 PhSWProtocol_82xx_68.elf CPhCommon_Base::~CPhCommon_Base()
+00001934 PhSWProtocol_82xx_68.elf CPhCommon_Base::~CPhCommon_Base()
+000019b0 PhSWProtocol_82xx_68.elf CPhCommon_Base::~CPhCommon_Base()
+00001a28 PhSWProtocol_82xx_68.elf non-virtual thunk to CPhSWProtocol::AddRef()
+00001a30 PhSWProtocol_82xx_68.elf non-virtual thunk to CPhSWProtocol::AddRef()
+00001a38 PhSWProtocol_82xx_68.elf CPhSWProtocol::AddRef()
+00001a58 PhSWProtocol_82xx_68.elf IUnknown::~IUnknown()
+00001a9c PhSWProtocol_82xx_68.elf IUnknown::~IUnknown()
+00001adc PhSWProtocol_82xx_68.elf IPhConfig1::~IPhConfig1()
+00001b28 PhSWProtocol_82xx_68.elf IPhConfig1::~IPhConfig1()
+00001b70 PhSWProtocol_82xx_68.elf IPhStatus1::~IPhStatus1()
+00001bbc PhSWProtocol_82xx_68.elf IPhStatus1::~IPhStatus1()
+00001c00 PhSWProtocol_82xx_68.elf non-virtual thunk to CPhSWProtocol::Release()
+00001c08 PhSWProtocol_82xx_68.elf non-virtual thunk to CPhSWProtocol::Release()
+00001c10 PhSWProtocol_82xx_68.elf CPhSWProtocol::Release()
+00001c7c PhSWProtocol_82xx_68.elf non-virtual thunk to CPhSWProtocol::QueryInterface(_GUID const&, void**)
+00001c84 PhSWProtocol_82xx_68.elf non-virtual thunk to CPhSWProtocol::QueryInterface(_GUID const&, void**)
+00001c90 PhSWProtocol_82xx_68.elf CPhSWProtocol::QueryInterface(_GUID const&, void**)
+00001d7c PhSWProtocol_82xx_68.elf IUnknown::IUnknown()
+00001dd4 PhSWProtocol_82xx_68.elf IPhCommon::IPhCommon()
+00001e38 PhSWProtocol_82xx_68.elf IUnknown::~IUnknown()
+00001ea8 PhSWProtocol_82xx_68.elf IPhConfig1::~IPhConfig1()
+00001f24 PhSWProtocol_82xx_68.elf CPhConfig_Base1::~CPhConfig_Base1()
+00001fa0 PhSWProtocol_82xx_68.elf CPhConfig_Base1::~CPhConfig_Base1()
+0000201c PhSWProtocol_82xx_68.elf IPhClient::~IPhClient()
+00002098 PhSWProtocol_82xx_68.elf CPhClient_Base::~CPhClient_Base()
+00002114 PhSWProtocol_82xx_68.elf IPhClient::~IPhClient()
+00002190 PhSWProtocol_82xx_68.elf IPhClient::~IPhClient()
+0000220c PhSWProtocol_82xx_68.elf CPhClient_Base::~CPhClient_Base()
+00002288 PhSWProtocol_82xx_68.elf IPhClient1::~IPhClient1()
+00002304 PhSWProtocol_82xx_68.elf CPhClient_Base1::~CPhClient_Base1()
+00002380 PhSWProtocol_82xx_68.elf IPhClient1::~IPhClient1()
+000023fc PhSWProtocol_82xx_68.elf IPhClient1::~IPhClient1()
+00002478 PhSWProtocol_82xx_68.elf CPhClient_Base1::~CPhClient_Base1()
+000024f4 PhSWProtocol_82xx_68.elf IPhStatus1::~IPhStatus1()
+00002570 PhSWProtocol_82xx_68.elf CPhStatus_Base1::~CPhStatus_Base1()
+000025ec PhSWProtocol_82xx_68.elf CPhStatus_Base1::~CPhStatus_Base1()
+00002668 PhSWProtocol_82xx_68.elf IPhIOAccess::~IPhIOAccess()
+000026e4 PhSWProtocol_82xx_68.elf CPhIOAccess_Base::~CPhIOAccess_Base()
+00002760 PhSWProtocol_82xx_68.elf IPhIOAccess::~IPhIOAccess()
+000027dc PhSWProtocol_82xx_68.elf IPhIOAccess::~IPhIOAccess()
+00002858 PhSWProtocol_82xx_68.elf CPhIOAccess_Base::~CPhIOAccess_Base()
+000028d4 PhSWProtocol_82xx_68.elf IPhDiagnostics::~IPhDiagnostics()
+00002950 PhSWProtocol_82xx_68.elf CPhDiagnostics_Base::~CPhDiagnostics_Base()
+000029cc PhSWProtocol_82xx_68.elf IPhDiagnostics::~IPhDiagnostics()
+00002a48 PhSWProtocol_82xx_68.elf IPhDiagnostics::~IPhDiagnostics()
+00002ac4 PhSWProtocol_82xx_68.elf CPhDiagnostics_Base::~CPhDiagnostics_Base()
+00002b40 PhSWProtocol_82xx_68.elf IPhOLU::~IPhOLU()
+00002bbc PhSWProtocol_82xx_68.elf CPhOLU_Base::~CPhOLU_Base()
+00002c38 PhSWProtocol_82xx_68.elf IPhOLU::~IPhOLU()
+00002cb4 PhSWProtocol_82xx_68.elf IPhOLU::~IPhOLU()
+00002d30 PhSWProtocol_82xx_68.elf CPhOLU_Base::~CPhOLU_Base()
+00002dac PhSWProtocol_82xx_68.elf IPhOLU1::~IPhOLU1()
+00002e28 PhSWProtocol_82xx_68.elf CPhOLU_Base1::~CPhOLU_Base1()
+00002ea4 PhSWProtocol_82xx_68.elf IPhOLU1::~IPhOLU1()
+00002f20 PhSWProtocol_82xx_68.elf IPhOLU1::~IPhOLU1()
+00002f9c PhSWProtocol_82xx_68.elf CPhOLU_Base1::~CPhOLU_Base1()
+00003018 PhSWProtocol_82xx_68.elf IPhCommon::~IPhCommon()
+00003094 PhSWProtocol_82xx_68.elf IPhCommon::~IPhCommon()
+00003110 PhSWProtocol_82xx_68.elf IPhCommon::~IPhCommon()
+00003188 PhSWProtocol_82xx_68.elf CompanyName
+0000318c PhSWProtocol_82xx_68.elf ProductName
+0000319c PhSWProtocol_82xx_68.elf ProductVersion
+000031b4 PhSWProtocol_82xx_68.elf CLSID_CPhSWProtocol
+0000321c PhSWProtocol_82xx_68.elf IID_IPhCommonCB
+0000322c PhSWProtocol_82xx_68.elf IID_IPhConfigCB
+0000323c PhSWProtocol_82xx_68.elf IID_IPhConfigCB1
+0000324c PhSWProtocol_82xx_68.elf IID_IPhIOAccessCB
+0000325c PhSWProtocol_82xx_68.elf IID_IPhExternalConfigCB1
+0000326c PhSWProtocol_82xx_68.elf IID_IPhExternalConfigCB2
+0000327c PhSWProtocol_82xx_68.elf IID_IPhExternalConfigCB3
+0000328c PhSWProtocol_82xx_68.elf IID_IPhOLUCB
+0000329c PhSWProtocol_82xx_68.elf IID_IPhCommon
+000032ac PhSWProtocol_82xx_68.elf IID_IPhConfig1
+000032bc PhSWProtocol_82xx_68.elf IID_IPhStatus1
+000032cc PhSWProtocol_82xx_68.elf IID_IPhClient
+000032dc PhSWProtocol_82xx_68.elf IID_IPhClient1
+000032ec PhSWProtocol_82xx_68.elf IID_IPhDiagnostics
+000032fc PhSWProtocol_82xx_68.elf IID_IPhIOAccess
+0000330c PhSWProtocol_82xx_68.elf IID_IPhSafeConfig
+0000331c PhSWProtocol_82xx_68.elf IID_IPhSafeConfig1
+0000332c PhSWProtocol_82xx_68.elf IID_IPhSafeConfig2
+0000333c PhSWProtocol_82xx_68.elf IID_IPhSimulation
+0000334c PhSWProtocol_82xx_68.elf IID_IPhOLU
+0000335c PhSWProtocol_82xx_68.elf IID_IPhOLU1
+0000336c PhSWProtocol_82xx_68.elf IID_IHeapCallback
+0000337c PhSWProtocol_82xx_68.elf IID_ISystemUtilitiesCallback
+0000338c PhSWProtocol_82xx_68.elf IID_ISystemUtilitiesCallback1
+0000339c PhSWProtocol_82xx_68.elf IID_ISystemUtilitiesCallback2
+000033ac PhSWProtocol_82xx_68.elf IID_ISystemUtilitiesCallback3
+000033bc PhSWProtocol_82xx_68.elf IID_ISystemUtilitiesCallback4
+000033cc PhSWProtocol_82xx_68.elf IID_IEventMgrCallback
+000033dc PhSWProtocol_82xx_68.elf IID_IEventMgrCallback1
+000033ec PhSWProtocol_82xx_68.elf IID_ISysClockCallback
+000033fc PhSWProtocol_82xx_68.elf IID_ISysClockCallback1
+0000340c PhSWProtocol_82xx_68.elf IID_ISysClockCallback2
+0000341c PhSWProtocol_82xx_68.elf IID_ISysClockCallback3
+0000342c PhSWProtocol_82xx_68.elf IID_INetwClockSynchCallback
+0000343c PhSWProtocol_82xx_68.elf IID_IConfigCBCallback1
+0000344c PhSWProtocol_82xx_68.elf IID_IConfigCBCallback2
+0000345c PhSWProtocol_82xx_68.elf IID_IConfigCBCallback3
+0000346c PhSWProtocol_82xx_68.elf IID_IExternalConfigCBCallback
+0000347c PhSWProtocol_82xx_68.elf IID_IExternalConfigCBCallback2
+0000348c PhSWProtocol_82xx_68.elf IID_IExternalConfigCBCallback3
+0000349c PhSWProtocol_82xx_68.elf IID_IExternalConfigCBCallback4
+000034ac PhSWProtocol_82xx_68.elf IID_IMessagesCBCallback
+000034bc PhSWProtocol_82xx_68.elf IID_IAIPAccessCBCallback
+000034cc PhSWProtocol_82xx_68.elf IID_IOLUCBCallback
+000034dc PhSWProtocol_82xx_68.elf IID_IOLUCBCallback1
+000034ec PhSWProtocol_82xx_68.elf IID_ISystemUtilitiesCBCallback1
+000034fc PhSWProtocol_82xx_68.elf IID_IConfigCallback1
+0000350c PhSWProtocol_82xx_68.elf IID_IConfigCallback2
+0000351c PhSWProtocol_82xx_68.elf IID_IStatusCallback1
+0000352c PhSWProtocol_82xx_68.elf IID_IGenClientCallback
+0000353c PhSWProtocol_82xx_68.elf IID_IGenClientCallback1
+0000354c PhSWProtocol_82xx_68.elf IID_IGenClientCallback2
+0000355c PhSWProtocol_82xx_68.elf IID_IIACClientCallback
+0000356c PhSWProtocol_82xx_68.elf IID_IDriverFactoryCallback
+0000357c PhSWProtocol_82xx_68.elf IID_IDiagnosticsCallback
+0000358c PhSWProtocol_82xx_68.elf IID_ISafeConfigCallback
+0000359c PhSWProtocol_82xx_68.elf IID_ISafeConfigCallback1
+000035ac PhSWProtocol_82xx_68.elf IID_ISafeConfigCallback2
+000035bc PhSWProtocol_82xx_68.elf IID_ICRCCallback
+000035cc PhSWProtocol_82xx_68.elf IID_IIOAccessCallback
+000035dc PhSWProtocol_82xx_68.elf IID_CriticalRegionCallback
+000035ec PhSWProtocol_82xx_68.elf IID_VOSExceptionCallback
+000035fc PhSWProtocol_82xx_68.elf IID_DrvCommonCallback
+0000360c PhSWProtocol_82xx_68.elf IID_ProtectedMirroredHeapCallback
+0000361c PhSWProtocol_82xx_68.elf IID_SharedMirroredHeapCallback
+0000362c PhSWProtocol_82xx_68.elf IID_TemporaryMirroredHeapCallback
+0000363c PhSWProtocol_82xx_68.elf IID_IVarServerCallback
+0000364c PhSWProtocol_82xx_68.elf IID_IVarServerCallback1
+0000365c PhSWProtocol_82xx_68.elf IID_IVarServerCallback2
+0000366c PhSWProtocol_82xx_68.elf IID_ISOCKETCallback
+0000367c PhSWProtocol_82xx_68.elf IID_ISOCKETCallback1
+0000368c PhSWProtocol_82xx_68.elf IID_ISOCKETCallback2
+0000369c PhSWProtocol_82xx_68.elf IID_IVOSCallback2
+00003758 V vtable for CPhSWProtocol PhSWProtocol_82xx_68.elf 
+00003800 V vtable for IPhStatus1 PhSWProtocol_82xx_68.elf 
+00003828 V vtable for IUnknown PhSWProtocol_82xx_68.elf 
+00003848 V vtable for IPhConfig1 PhSWProtocol_82xx_68.elf 
+00003890 V vtable for CPhOLU_Base1 PhSWProtocol_82xx_68.elf 
+000038d0 V vtable for CPhOLU_Base PhSWProtocol_82xx_68.elf 
+00003908 V vtable for CPhDiagnostics_Base PhSWProtocol_82xx_68.elf 
+00003930 V vtable for CPhIOAccess_Base PhSWProtocol_82xx_68.elf 
+00003958 V vtable for CPhStatus_Base1 PhSWProtocol_82xx_68.elf 
+00003980 V vtable for CPhClient_Base1 PhSWProtocol_82xx_68.elf 
+000039e8 V vtable for CPhClient_Base PhSWProtocol_82xx_68.elf 
+00003a38 V vtable for CPhConfig_Base1 PhSWProtocol_82xx_68.elf 
+00003a80 V vtable for CPhCommon_Base PhSWProtocol_82xx_68.elf 
+00003aa8 V vtable for IPhClient PhSWProtocol_82xx_68.elf 
+00003af8 V vtable for IPhClient1 PhSWProtocol_82xx_68.elf 
+00003b60 V vtable for IPhIOAccess PhSWProtocol_82xx_68.elf 
+00003b88 V vtable for IPhDiagnostics PhSWProtocol_82xx_68.elf 
+00003bb0 V vtable for IPhOLU PhSWProtocol_82xx_68.elf 
+00003be8 V vtable for IPhOLU1 PhSWProtocol_82xx_68.elf 
+00003c28 V vtable for IPhCommon PhSWProtocol_82xx_68.elf 
+00003c4c PhSWProtocol_82xx_68.elf CRTFuncTabBegin
+00003c4c PhSWProtocol_82xx_68.elf scprocs
+00003c58 PhSWProtocol_82xx_68.elf printf
+00003c5c PhSWProtocol_82xx_68.elf sprintf
+00003c60 PhSWProtocol_82xx_68.elf sscanf
+00003c64 PhSWProtocol_82xx_68.elf memcpy
+00003c68 PhSWProtocol_82xx_68.elf memset
+00003c6c PhSWProtocol_82xx_68.elf strcat
+00003c70 PhSWProtocol_82xx_68.elf strcmp
+00003c74 PhSWProtocol_82xx_68.elf strlen
+00003c78 PhSWProtocol_82xx_68.elf strncmp
+00003c7c PhSWProtocol_82xx_68.elf strncpy
+00003c80 PhSWProtocol_82xx_68.elf memchr
+00003c84 PhSWProtocol_82xx_68.elf memcmp
+00003c88 PhSWProtocol_82xx_68.elf memmove
+00003c8c PhSWProtocol_82xx_68.elf strchr
+00003c90 PhSWProtocol_82xx_68.elf strcoll
+00003c94 PhSWProtocol_82xx_68.elf strcpy
+00003c98 PhSWProtocol_82xx_68.elf strcspn
+00003c9c PhSWProtocol_82xx_68.elf strncat
+00003ca0 PhSWProtocol_82xx_68.elf strpbrk
+00003ca4 PhSWProtocol_82xx_68.elf strrchr
+00003ca8 PhSWProtocol_82xx_68.elf strspn
+00003cac PhSWProtocol_82xx_68.elf strstr
+00003cb0 PhSWProtocol_82xx_68.elf strtok
+00003cb4 PhSWProtocol_82xx_68.elf strxfrm
+00003cb8 PhSWProtocol_82xx_68.elf strerror
+00003cbc PhSWProtocol_82xx_68.elf pow
+00003cc0 PhSWProtocol_82xx_68.elf acos
+00003cc4 PhSWProtocol_82xx_68.elf asin
+00003cc8 PhSWProtocol_82xx_68.elf atan
+00003ccc PhSWProtocol_82xx_68.elf atan2
+00003cd0 PhSWProtocol_82xx_68.elf ceil
+00003cd4 PhSWProtocol_82xx_68.elf cos
+00003cd8 PhSWProtocol_82xx_68.elf cosh
+00003cdc PhSWProtocol_82xx_68.elf exp
+00003ce0 PhSWProtocol_82xx_68.elf fabs
+00003ce4 PhSWProtocol_82xx_68.elf floor
+00003ce8 PhSWProtocol_82xx_68.elf fmod
+00003cec PhSWProtocol_82xx_68.elf frexp
+00003cf0 PhSWProtocol_82xx_68.elf ldexp
+00003cf4 PhSWProtocol_82xx_68.elf log
+00003cf8 PhSWProtocol_82xx_68.elf log10
+00003cfc PhSWProtocol_82xx_68.elf modf
+00003d00 PhSWProtocol_82xx_68.elf sin
+00003d04 PhSWProtocol_82xx_68.elf sinh
+00003d08 PhSWProtocol_82xx_68.elf sqrt
+00003d0c PhSWProtocol_82xx_68.elf tan
+00003d10 PhSWProtocol_82xx_68.elf tanh
+00003d14 PhSWProtocol_82xx_68.elf div_r
+00003d18 PhSWProtocol_82xx_68.elf labs
+00003d1c PhSWProtocol_82xx_68.elf strtol
+00003d20 PhSWProtocol_82xx_68.elf free
+00003d24 PhSWProtocol_82xx_68.elf abort
+00003d28 PhSWProtocol_82xx_68.elf abs
+00003d2c PhSWProtocol_82xx_68.elf atof
+00003d30 PhSWProtocol_82xx_68.elf atoi
+00003d34 PhSWProtocol_82xx_68.elf atol
+00003d38 PhSWProtocol_82xx_68.elf bsearch
+00003d3c PhSWProtocol_82xx_68.elf ldiv_r
+00003d40 PhSWProtocol_82xx_68.elf qsort
+00003d44 PhSWProtocol_82xx_68.elf rand
+00003d48 PhSWProtocol_82xx_68.elf srand
+00003d4c PhSWProtocol_82xx_68.elf strtod
+00003d50 PhSWProtocol_82xx_68.elf strtoul
+00003d54 PhSWProtocol_82xx_68.elf malloc
+00003d58 PhSWProtocol_82xx_68.elf __assert
+00003d5c PhSWProtocol_82xx_68.elf time
+00003d60 PhSWProtocol_82xx_68.elf asctime
+00003d64 PhSWProtocol_82xx_68.elf gmtime
+00003d68 PhSWProtocol_82xx_68.elf clock
+00003d6c PhSWProtocol_82xx_68.elf ctime
+00003d70 PhSWProtocol_82xx_68.elf difftime
+00003d74 PhSWProtocol_82xx_68.elf localtime
+00003d78 PhSWProtocol_82xx_68.elf mktime
+00003d7c PhSWProtocol_82xx_68.elf strftime
+00003d80 PhSWProtocol_82xx_68.elf eventcollSem
+00003d84 PhSWProtocol_82xx_68.elf intLock
+00003d88 PhSWProtocol_82xx_68.elf intUnlock
+00003d94 PhSWProtocol_82xx_68.elf fprintf
+00003d98 PhSWProtocol_82xx_68.elf __stdout
+00003d9c PhSWProtocol_82xx_68.elf __stderr
+00003da0 PhSWProtocol_82xx_68.elf setjmp
+00003da4 PhSWProtocol_82xx_68.elf longjmp
+00003da8 PhSWProtocol_82xx_68.elf operator new[](unsigned int)
+00003dac PhSWProtocol_82xx_68.elf operator delete[](void*)
+00003db0 PhSWProtocol_82xx_68.elf CRTFuncTabEnd
+00003db0 PhSWProtocol_82xx_68.elf ecprocs
+00003db0 PhSWProtocol_82xx_68.elf etext
+00003db0 PhSWProtocol_82xx_68.elf sgot2
+00003e50 PhSWProtocol_82xx_68.elf egot2
+00003e50 PhSWProtocol_82xx_68.elf sfixup
+00004308 PhSWProtocol_82xx_68.elf CMirroredObject::c_pMirroredObjectMgrImpl
+00004308 PhSWProtocol_82xx_68.elf efixup
+0000430c PhSWProtocol_82xx_68.elf CMirroredObjectAgent::c_pHeapCallback
+00004310 PhSWProtocol_82xx_68.elf CMirroredObjectAgent::c_AgentTag
+00004314 V CComCoClass<CPhSWProtocol, &(CLSID_CPhSWProtocol)>::m_HeapTag PhSWProtocol_82xx_68.elf 
+00004318 PhSWProtocol_82xx_68.elf PHproperties
+00004320 PhSWProtocol_82xx_68.elf useEXEHEAD
+</SYMBOLS>

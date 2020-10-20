@@ -1,0 +1,225 @@
+(*-----------------------------------------------------------------*)
+(* 2008-10-31  Version 5.1-1                                       *)
+(*             Kristina Rylander                                   *)
+(*             PRC #TBD                                            *)
+(*-----------------------------------------------------------------*)
+
+FileHeader
+  Contents              "IAC MMS PH"
+  Date                  "2008-10-31"
+  Version               "5.1-1"
+  RequiredSyntaxVersion "3.0"
+End FileHeader
+
+HwUnitInfo  (* IAC MMS PH *)
+   HWUnitID {DDE44EAC-9263-476a-8E2A-7403995C126C}
+   Description "IAC MMS"
+   Information "IAC MMS protocol handler"
+   Icons ProtocolType
+   InterfaceInfo   
+      Interface CIGInterface
+      CLSID_CB {14d648c0-bb0d-44ec-bcd4-e77900c4e542}
+      CLSID_CTRL {7a2d75f8-40ba-41c5-834f-e72bded8ed91}
+      HWConfig Fail
+   End InterfaceInfo
+   Parameters
+      ParamInfo 
+         Name COMM_RATE_VERY_SLOW
+         Description "Interval Time VerySlow"
+         CompileType HWConfig
+         Datatype INT
+         Default 8000
+         ParValIndex 0
+         ParamType Numbered 100
+      End ParamInfo
+      ParamInfo 
+         Name COMM_RATE_SLOW
+         Description "Interval Time Slow"
+         CompileType HWConfig
+         Datatype INT
+         Default 4000
+         ParValIndex 0
+         ParamType Numbered 110
+      End ParamInfo
+      ParamInfo 
+         Name COMM_RATE_NORMAL
+         Description "Interval Time Normal"
+         CompileType HWConfig
+         Datatype INT
+         Default 2000
+         ParValIndex 0
+         ParamType Numbered 120
+      End ParamInfo
+      ParamInfo 
+         Name COMM_RATE_FAST
+         Description "Interval Time Fast"
+         CompileType HWConfig
+         Datatype INT
+         Default 1000
+         ParValIndex 0
+         ParamType Numbered 130
+      End ParamInfo
+      ParamInfo 
+         Name COMM_RATE_VERY_FAST
+         Description "Interval Time VeryFast"
+         CompileType HWConfig
+         Datatype INT
+         Default 500
+         ParValIndex 0
+         ParamType Numbered 140
+      End ParamInfo
+      ParamInfo 
+         Name IAC_COMM_RATE_VERY_SLOW_TIMEOUT
+         Description "Timeout VerySlow"
+         CompileType HWConfig
+         Datatype INT
+         Default 24000
+         ParValIndex 0
+         ParamType Numbered 300
+      End ParamInfo
+      ParamInfo 
+         Name IAC_COMM_RATE_SLOW_TIMEOUT
+         Description "Timeout Slow"
+         CompileType HWConfig
+         Datatype INT
+         Default 12000
+         ParValIndex 0
+         ParamType Numbered 310
+      End ParamInfo
+      ParamInfo 
+         Name IAC_COMM_RATE_NORMAL_TIMEOUT
+         Description "Timeout Normal"
+         CompileType HWConfig
+         Datatype INT
+         Default 6000
+         ParValIndex 0
+         ParamType Numbered 320
+      End ParamInfo
+      ParamInfo 
+         Name IAC_COMM_RATE_FAST_TIMEOUT
+         Description "Timeout Fast"
+         CompileType HWConfig
+         Datatype INT
+         Default 3000
+         ParValIndex 0
+         ParamType Numbered 330
+      End ParamInfo
+      ParamInfo 
+         Name IAC_COMM_RATE_VERY_FAST_TIMEOUT
+         Description "Timeout VeryFast"
+         CompileType HWConfig
+         Datatype INT
+         Default 1500
+         ParValIndex 0
+         ParamType Numbered 340
+      End ParamInfo
+      ParamInfo 
+         Name IAC_PROTOCOL_NAME
+         Description "Protocol"
+         ReadOnlyVisible
+         CompileType HWConfig
+         Datatype STRING
+         Default "MMS"
+         ParamType Numbered 500
+      End ParamInfo
+      ParamInfo 
+         Name ENABLE_IAC_CLIENT
+         Description "Enable IAC Client"
+         (*Hidden         *)
+         CompileType HWConfig
+         DataType BOOL
+         Default TRUE
+         ParamType Numbered 200
+      End ParamInfo
+      ParamInfo 
+         Name ENABLE_IAC_SERVER
+         Description "Enable IAC Server"
+         CompileType HWConfig
+         Datatype BOOL
+         Default TRUE
+         ParamType Numbered 210
+      End ParamInfo
+   End Parameters
+   ParValList
+      ParVal
+         ParValIndex 0
+         UnitText    "ms"
+         INT 60 86400000 60 86400000
+      End ParVal
+      ParVal
+         ParValIndex 1
+         UnitText    ""
+         INT 25 10000 25 10000
+      End ParVal
+      ParVal
+         ParValIndex 2
+         UnitText    "cycles"
+         INT 1 100 1 100
+      End ParVal
+      ParVal
+         ParValIndex 3
+         UnitText    "ms"
+         INT 50 249 50 249
+      End ParVal
+      ParVal
+         ParValIndex 4
+         UnitText    "ms"
+         INT 250 999 250 999
+      End ParVal
+      ParVal
+         ParValIndex 5
+         UnitText    "ms"
+         INT 1000 3999 1000 3999
+      End ParVal
+      ParVal
+         ParValIndex 6
+         UnitText    "ms"
+         INT 4000 19999 4000 19999
+      End ParVal
+      ParVal
+         ParValIndex 7
+         UnitText    "ms"
+         INT 20000 86400000 20000 86400000
+      End ParVal
+   End ParValList
+Channels
+   ChannelInfo
+      Number 0
+      ChannelName "UnitStatus"
+      Datatype Status_In
+      Routine 900
+      CopyParameters 0 0 16#50000
+   End ChannelInfo
+End Channels
+UnitStatusText
+     DeviceSpecific1 "IAC variable timeout (VeryFast)"
+     DeviceSpecific2 "IAC variable timeout (Fast)"
+     DeviceSpecific3 "IAC variable timeout (Normal)"
+     DeviceSpecific4 "IAC variable timeout (Slow)"
+     DeviceSpecific5 "IAC variable timeout (VerySlow)"
+     ExtendedStatus1 "IAC interval time latency (VeryFast)"
+     ExtendedStatus2 "IAC interval time latency (Fast)"
+     ExtendedStatus3 "IAC interval time latency (Normal)"
+     ExtendedStatus4 "IAC interval time latency (Slow)"
+     ExtendedStatus5 "IAC interval time latency (VerySlow)"
+     ExtendedStatus6 "IAC Connection down"
+     ExtendedStatus7 "IAC Client Disabled"
+     ExtendedStatus8 "IAC Server Disabled"
+End UnitStatusText
+UnitStatusSeverity
+     DeviceSpecific1 GeneralWarning TriggerEvent SeverityMedium
+     DeviceSpecific2 GeneralWarning TriggerEvent SeverityMedium
+     DeviceSpecific3 GeneralWarning TriggerEvent SeverityMedium
+     DeviceSpecific4 GeneralWarning TriggerEvent SeverityMedium
+     DeviceSpecific5 GeneralWarning TriggerEvent SeverityMedium
+     ExtendedStatus1 GeneralWarning TriggerEvent SeverityMedium
+     ExtendedStatus2 GeneralWarning TriggerEvent SeverityMedium
+     ExtendedStatus3 GeneralWarning TriggerEvent SeverityMedium
+     ExtendedStatus4 GeneralWarning TriggerEvent SeverityMedium
+     ExtendedStatus5 GeneralWarning TriggerEvent SeverityMedium
+     ExtendedStatus6 GeneralWarning TriggerAlarm SeverityHigh
+     ExtendedStatus7 GeneralWarning TriggerAlarm SeverityHigh
+     ExtendedStatus8 GeneralWarning TriggerAlarm SeverityHigh
+End UnitStatusSeverity
+  HWUnitInfoCRC 16#B216
+End HWUnitInfo (* MMS PH *)

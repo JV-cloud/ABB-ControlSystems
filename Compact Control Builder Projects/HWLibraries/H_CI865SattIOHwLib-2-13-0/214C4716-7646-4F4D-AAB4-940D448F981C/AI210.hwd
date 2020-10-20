@@ -1,0 +1,191 @@
+HWUnitInfo (* AI210 / ControlNet *)
+   HWUnitID {0C032D0D-358A-4212-B142-52CC36683B02}
+   Description "AI210"
+   Information "Analog input module, 8 channels"
+   Icons Ser200CompactIoType
+   Attributes IoUnit AnalogIn
+   Parameters
+      ParamInfo 
+         Name RANGE_0
+         Description "Range Channel 0"
+         CompileType IOConfig
+         Datatype ENUMRANGE
+         default 1
+         ParValIndex 0
+         ParamType ConfArea 0 0
+      End ParamInfo 
+      ParamInfo 
+         Name RANGE_1
+         Description "Range Channel 1"
+         CompileType IOConfig
+         Datatype ENUMRANGE
+         default 1
+         ParValIndex 0
+         ParamType ConfArea 0 1
+      End ParamInfo 
+      ParamInfo 
+         Name RANGE_2
+         Description "Range Channel 2"
+         CompileType IOConfig
+         Datatype ENUMRANGE
+         default 1
+         ParValIndex 0
+         ParamType ConfArea 0 2
+      End ParamInfo 
+      ParamInfo 
+         Name RANGE_3
+         Description "Range Channel 3"
+         CompileType IOConfig
+         Datatype ENUMRANGE
+         default 1
+         ParValIndex 0
+         ParamType ConfArea 0 3
+      End ParamInfo 
+      ParamInfo 
+         Name RANGE_4
+         Description "Range Channel 4"
+         CompileType IOConfig
+         Datatype ENUMRANGE
+         default 1
+         ParValIndex 0
+         ParamType ConfArea 0 4
+      End ParamInfo 
+      ParamInfo 
+         Name RANGE_5
+         Description "Range Channel 5"
+         CompileType IOConfig
+         Datatype ENUMRANGE
+         default 1
+         ParValIndex 0
+         ParamType ConfArea 0 5
+      End ParamInfo 
+      ParamInfo 
+         Name RANGE_6
+         Description "Range Channel 6"
+         CompileType IOConfig
+         Datatype ENUMRANGE
+         default 1
+         ParValIndex 0
+         ParamType ConfArea 0 6
+      End ParamInfo 
+      ParamInfo 
+         Name RANGE_7
+         Description "Range Channel 7"
+         CompileType IOConfig
+         Datatype ENUMRANGE
+         default 1
+         ParValIndex 0
+         ParamType ConfArea 0 7
+      End ParamInfo 
+   End Parameters
+   ParValList
+      ParVal
+         ParValIndex 0
+         ENUMRANGE
+         "off"     0       0       0       0       0
+         "0-20mA"  16#0001 16#79E8 16#0000 16#7FE0 16#0000
+         "4-20mA"  16#0001 16#79E8 16#1860 16#7FE0 16#1248
+      End ParVal
+   End ParValList
+   Channels
+     ChannelInfo
+         Number 0 
+         ChannelName "Input 0"
+         Datatype Real_In
+         Routine 701
+         CopyParameters 0 0 16#30001 16#FFFF 0 16#0 16#50000 16#30009 16#8000 
+      End ChannelInfo
+     ChannelInfo
+         Number 1
+         ChannelName "Input 1"
+         Datatype Real_In
+         Routine 701
+         CopyParameters 0 0 16#30002 16#FFFF 1 16#0 16#50000 16#30009 16#8000
+      End ChannelInfo
+     ChannelInfo
+         Number 2
+         ChannelName "Input 2"
+         Datatype Real_In
+         Routine 701
+         CopyParameters 0 0 16#30003 16#FFFF 2 16#0 16#50000 16#30009 16#8000
+      End ChannelInfo
+     ChannelInfo
+         Number 3
+         ChannelName "Input 3"
+         Datatype Real_In
+         Routine 701
+         CopyParameters 0 0 16#30004 16#FFFF 3 16#0 16#50000 16#30009 16#8000
+      End ChannelInfo
+     ChannelInfo
+         Number 4
+         ChannelName "Input 4"
+         Datatype Real_In
+         Routine 701
+         CopyParameters 0 0 16#30005 16#FFFF 4 16#0 16#50000 16#30009 16#8000
+      End ChannelInfo
+     ChannelInfo
+         Number 5
+         ChannelName "Input 5"
+         Datatype Real_In
+         Routine 701
+         CopyParameters 0 0 16#30006 16#FFFF 5 16#0 16#50000 16#30009 16#8000
+      End ChannelInfo
+     ChannelInfo
+         Number 6
+         ChannelName "Input 6"
+         Datatype Real_In
+         Routine 701
+         CopyParameters 0 0 16#30007 16#FFFF 6 16#0 16#50000 16#30009 16#8000
+      End ChannelInfo
+     ChannelInfo
+         Number 7 
+         ChannelName "Input 7"
+         Datatype Real_In
+         Routine 701
+         CopyParameters 0 0 16#30008 16#FFFF 7 16#0 16#50000 16#30009 16#8000
+      End ChannelInfo
+     ChannelInfo
+         Number 8
+         ChannelName "UnitStatus"
+         Datatype Status_In
+         Routine 900
+         CopyParameters 0 0 16#50000
+      End ChannelInfo
+   End Channels
+   IoUnitStatus
+      StatusType WrongModuleType 
+      StatusData 16#30000 16#1FFF 16#5 16#1901
+      StatusType ModuleMissing
+      StatusData 16#30000 16#8000 16#0 16#0
+      StatusType IoError
+      StatusData 16#30000 16#2000 16#0 16#0
+   End IoUnitStatus
+   Configuration
+      ConfigInfo
+         ModuleKey   16#1901
+         InAreaSize  10
+         OutAreaSize 2
+         InWord
+            WORD 16#B901 0 
+            WORD 0       1
+            WORD 0       2 
+            WORD 0       3 
+            WORD 0       4 
+            WORD 0       5 
+            WORD 0       6 
+            WORD 0       7 
+            WORD 0       8
+            WORD 0       9
+         OutWord
+            WORD 0       0 
+         ConfWord
+            WORD 0       1 
+         CIGIOConnData
+            CIGIOData    16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 (* CNSafeData *)
+            CIGIOData    16#03 16#00 16#10 16#7D 16#00 16#00 16#0C 16#10 16#07 16#0B 16#00 16#05  (* Out data *)
+            CIGIOData    16#04 16#00 16#10 16#07 16#00 16#00 16#05 16#90 16#7D 16#00 16#00 16#0A  (* In data  *)
+         End CIGIOConnData
+      End ConfigInfo
+   End Configuration
+  HWUnitInfoCRC 16#BF8F
+End HWUnitInfo (* AI210 / ControlNet *)

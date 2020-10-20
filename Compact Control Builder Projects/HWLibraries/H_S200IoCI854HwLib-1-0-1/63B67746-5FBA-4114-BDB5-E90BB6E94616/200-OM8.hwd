@@ -1,0 +1,204 @@
+HWUnitInfo (* 200-OM8 /  Profibus DP Full - Format*)
+   HWUnitID {B591EEC5-5CBF-4d56-99BE-EEEBC5F59E77}
+   Description "200-OM8"
+   Information "Digital output module, 8 channels 220 VAC, 0,5A"
+   Icons Ser200IOType
+   Attributes IoUnit DigitalOut
+   Parameters
+   ParamInfo 
+         Name SAFEVALUE_0
+         Description "Safe value channel 0"
+         CompileType IOConnect
+         Datatype BOOL
+         Default false
+         ParamType CIGIOData  5  0 1  ByteParam ByteOffset
+         OSPInfo
+           OSPType OSPValue
+           OSPData  0 0 
+         End OSPInfo
+      End ParamInfo 
+      ParamInfo 
+         Name SAFEVALUE_1
+         Description "Safe value channel 1"
+         CompileType IOConnect
+         Datatype BOOL
+         Default false
+         ParamType CIGIOData  5  1 1  ByteParam ByteOffset
+         OSPInfo
+           OSPType OSPValue
+           OSPData  0 1  
+         End OSPInfo
+      End ParamInfo
+      ParamInfo 
+         Name SAFEVALUE_2
+         Description "Safe value channel 2"
+         CompileType IOConnect
+         Datatype BOOL
+         Default false
+         ParamType CIGIOData  5  2 1  ByteParam ByteOffset
+         OSPInfo
+           OSPType OSPValue
+           OSPData  0 2  
+         End OSPInfo
+      End ParamInfo
+      ParamInfo 
+         Name SAFEVALUE_3
+         Description "Safe value channel 3"
+         CompileType IOConnect
+         Datatype BOOL
+         Default false
+         ParamType CIGIOData  5  3 1  ByteParam ByteOffset
+         OSPInfo
+           OSPType OSPValue
+           OSPData  0 3  
+         End OSPInfo
+      End ParamInfo
+      ParamInfo 
+         Name SAFEVALUE_4
+         Description "Safe value channel 4"
+         CompileType IOConnect
+         Datatype BOOL
+         Default false
+         ParamType CIGIOData  5  4 1  ByteParam ByteOffset
+         OSPInfo
+           OSPType OSPValue
+           OSPData  0 4 
+         End OSPInfo
+      End ParamInfo
+      ParamInfo 
+         Name SAFEVALUE_5
+         Description "Safe value channel 5"
+         CompileType IOConnect
+         Datatype BOOL
+         Default false
+         ParamType CIGIOData  5  5 1  ByteParam ByteOffset
+         OSPInfo
+           OSPType OSPValue
+           OSPData  0 5 
+         End OSPInfo
+      End ParamInfo
+      ParamInfo 
+         Name SAFEVALUE_6
+         Description "Safe value channel 6"
+         CompileType IOConnect
+         Datatype BOOL
+         Default false
+         ParamType CIGIOData  5  6 1  ByteParam ByteOffset
+         OSPInfo
+           OSPType OSPValue
+           OSPData  0 6  
+         End OSPInfo
+      End ParamInfo
+      ParamInfo 
+         Name SAFEVALUE_7
+         Description "Safe value channel 7"
+         CompileType IOConnect
+         Datatype BOOL
+         Default false
+         ParamType CIGIOData  5  7 1  ByteParam ByteOffset
+         OSPInfo
+           OSPType OSPValue
+           OSPData  0 7  
+         End OSPInfo
+      End ParamInfo
+   End Parameters
+   Channels
+   ChannelInfo
+         Number 0 
+         ChannelName "Output 0"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40000 16#1
+         ConflictInfo 16#0201
+      End ChannelInfo
+      ChannelInfo
+         Number 1
+         ChannelName "Output 1"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40000 16#2
+         ConflictInfo 16#0201
+      End ChannelInfo
+      ChannelInfo
+         Number 2
+         ChannelName "Output 2"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40000 16#4
+         ConflictInfo 16#0201
+      End ChannelInfo
+      ChannelInfo
+         Number 3
+         ChannelName "Output 3"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40000 16#8
+         ConflictInfo 16#0201
+      End ChannelInfo
+      ChannelInfo
+         Number 4
+         ChannelName "Output 4"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40000 16#10
+         ConflictInfo 16#0201
+      End ChannelInfo
+      ChannelInfo
+         Number 5
+         ChannelName "Output 5"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40000 16#20
+         ConflictInfo 16#0201
+      End ChannelInfo
+      ChannelInfo
+         Number 6
+         ChannelName "Output 6"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40000 16#40
+         ConflictInfo 16#0201
+      End ChannelInfo
+      ChannelInfo
+         Number 7
+         ChannelName "Output 7"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40000 16#80
+         ConflictInfo 16#0201
+      End ChannelInfo
+      ChannelInfo
+         Number 8
+         ChannelName "All outputs"
+         Datatype Dword_Out
+         Routine 601
+         CopyParameters 0 0 16#40000 0 16#FF 16#0
+         ConflictInfo 16#0102
+      End ChannelInfo
+      ChannelInfo
+         Number 9
+         ChannelName "UnitStatus"
+         Datatype Status_In
+         Routine 900
+         CopyParameters 0 0 16#50000
+      End ChannelInfo
+   End Channels
+   IoUnitStatus
+      StatusType IoError
+      StatusData 16#10000 16#100100 16#0 16#0
+   End IoUnitStatus
+   Configuration
+      ConfigInfo
+         ModuleKey   16#0105
+         InAreaSize  0
+         OutAreaSize 1
+         OutWord
+            WORD 0       0
+         CIGIOConnData
+            CIGIOData     16#01 16#00 16#60
+            CIGIOData     16#05 16#01 16#05 16#01 16#00 16#00
+         End CIGIOConnData
+      End ConfigInfo
+   End Configuration
+  HWUnitInfoCRC 16#5C0B
+End HWUnitInfo (* 200-OM8 / Profibus DP - Full Format*)

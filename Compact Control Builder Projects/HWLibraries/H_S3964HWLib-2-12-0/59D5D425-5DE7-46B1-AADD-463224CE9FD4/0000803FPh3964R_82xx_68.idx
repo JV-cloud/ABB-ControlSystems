@@ -1,0 +1,461 @@
+<HEAD>
+Index of symbols created Tue 11/20/2018 12:17:34.14 
+</HEAD>
+<SECTIONS=15>
+00010000 0001b370 .text
+0001b370 0001b740 .got2
+0001b740 0001bd9c .fixup
+0001bd9c 0001bdac .bss
+0001bdac 0001bdb8 .data
+0001bdb8 0001d8cb .debug_abbrev
+0001d8cb 00032ff0 .debug_info
+00032ff0 0003606c .debug_line
+0003606c 00037d94 .debug_frame
+00037d94 0003c5bd .debug_loc
+0003c5bd 0003e754 .debug_pubnames
+0003e754 0003ea3c .debug_aranges
+0003ea3c 0003f0b4 .debug_ranges
+0003f0b4 000458ae .debug_str
+000458ae 000458ae .comment
+</SECTIONS>
+<SYMBOLS=439>
+00000000 Ph3964R_82xx_68.elf EXE_HEAD
+00000060 Ph3964R_82xx_68.elf CPh3964R::createSemaphore()
+000000bc Ph3964R_82xx_68.elf CPh3964R::GetSerialChannelNumber(trHWFAddress)
+000000cc Ph3964R_82xx_68.elf CPh3964R::Deletethread()
+00000134 Ph3964R_82xx_68.elf CPh3964R::EmptyingVarDataQueue(int)
+000002b8 Ph3964R_82xx_68.elf CPh3964R::PH3964R_Get_Trace_Level()
+000003ac Ph3964R_82xx_68.elf CPh3964R::PH3964R_Log_Method_Call(int, int, int, int, int, char const*)
+000004b8 Ph3964R_82xx_68.elf CPh3964R::PrepareMessage(char*, char const*, char const*, unsigned int)
+000006f4 Ph3964R_82xx_68.elf CPh3964R::WriteError(char const*, char const*, unsigned int)
+000007d0 Ph3964R_82xx_68.elf CPh3964R::deleteSemaphore()
+00000878 Ph3964R_82xx_68.elf CPh3964R::StartThread()
+00000960 Ph3964R_82xx_68.elf CPh3964R::SetCommonCallbackInterface(ICommonCallback*)
+00000f04 Ph3964R_82xx_68.elf vosThread(int, int, int, int)
+00000f28 Ph3964R_82xx_68.elf CPh3964R::GetProductInfo(unsigned char*, unsigned char*, unsigned char*, unsigned long)
+00000fb8 Ph3964R_82xx_68.elf CPh3964R::CPh3964R()
+000010b4 Ph3964R_82xx_68.elf CPh3964R::CPh3964R()
+000011ac Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::~CPh3964R()
+000011b4 Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::~CPh3964R()
+000011bc Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::~CPh3964R()
+000011c4 Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::~CPh3964R()
+000011d0 Ph3964R_82xx_68.elf CPh3964R::~CPh3964R()
+000012e4 Ph3964R_82xx_68.elf CPh3964R::~CPh3964R()
+000013f4 Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::~CPh3964R()
+000013fc Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::~CPh3964R()
+00001404 Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::~CPh3964R()
+0000140c Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::~CPh3964R()
+00001418 Ph3964R_82xx_68.elf CPh3964R::~CPh3964R()
+00001538 Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::TimeoutAbortVarReq(unsigned long, int*)
+00001544 Ph3964R_82xx_68.elf CPh3964R::TimeoutAbortVarReq(unsigned long, int*)
+000015d4 Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::WriteRes(unsigned long, int, int*)
+000015dc Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::WriteRes(unsigned long, int, int*)
+000015e8 Ph3964R_82xx_68.elf CPh3964R::WriteRes(unsigned long, int, int*)
+00001640 Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::ReadRes(unsigned long, int, int*)
+00001648 Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::ReadRes(unsigned long, int, int*)
+00001654 Ph3964R_82xx_68.elf CPh3964R::ReadRes(unsigned long, int, int*)
+000016ac Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::SetStatus(unsigned long, int, int*)
+000016b4 Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::SetStatus(unsigned long, int, int*)
+000016c0 Ph3964R_82xx_68.elf CPh3964R::SetStatus(unsigned long, int, int*)
+00001718 Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::GetExtendedStatus(unsigned long, int, teIEC1131Type*, tGCValue*, int*)
+00001720 Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::GetExtendedStatus(unsigned long, int, teIEC1131Type*, tGCValue*, int*)
+0000172c Ph3964R_82xx_68.elf CPh3964R::GetExtendedStatus(unsigned long, int, teIEC1131Type*, tGCValue*, int*)
+00001784 Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::GetExtendedStatusSize(unsigned long, int*, int*)
+0000178c Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::GetExtendedStatusSize(unsigned long, int*, int*)
+00001798 Ph3964R_82xx_68.elf CPh3964R::GetExtendedStatusSize(unsigned long, int*, int*)
+000017f0 Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::AbortVarReq(unsigned long, int*)
+000017f8 Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::AbortVarReq(unsigned long, int*)
+00001804 Ph3964R_82xx_68.elf CPh3964R::AbortVarReq(unsigned long, int*)
+000019dc Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::AbortRawReq(unsigned long, int*)
+000019e4 Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::AbortRawReq(unsigned long, int*)
+000019f0 Ph3964R_82xx_68.elf CPh3964R::AbortRawReq(unsigned long, int*)
+00001a48 Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::WriteRawReq(unsigned long, int*)
+00001a50 Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::WriteRawReq(unsigned long, int*)
+00001a5c Ph3964R_82xx_68.elf CPh3964R::WriteRawReq(unsigned long, int*)
+00001ab4 Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::ReadRawReq(unsigned long, int*)
+00001abc Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::ReadRawReq(unsigned long, int*)
+00001ac8 Ph3964R_82xx_68.elf CPh3964R::ReadRawReq(unsigned long, int*)
+00001b1c Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::ReadVarReq(unsigned long, int*)
+00001b24 Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::ReadVarReq(unsigned long, int*)
+00001b30 Ph3964R_82xx_68.elf CPh3964R::ReadVarReq(unsigned long, int*)
+00001db4 Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::WriteVarReq(unsigned long, int*)
+00001dbc Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::WriteVarReq(unsigned long, int*)
+00001dc8 Ph3964R_82xx_68.elf CPh3964R::WriteVarReq(unsigned long, int*)
+000020f4 Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::ConnectReq(unsigned long, unsigned long*, int*)
+000020fc Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::ConnectReq(unsigned long, unsigned long*, int*)
+00002108 Ph3964R_82xx_68.elf CPh3964R::ConnectReq(unsigned long, unsigned long*, int*)
+00002230 Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::DisconnectReq(unsigned long, unsigned long, int*)
+00002238 Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::DisconnectReq(unsigned long, unsigned long, int*)
+00002244 Ph3964R_82xx_68.elf CPh3964R::DisconnectReq(unsigned long, unsigned long, int*)
+00002340 Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::StartUsingIoConnection(trHWFAddress, unsigned long, teHWFErrorCode*)
+0000234c Ph3964R_82xx_68.elf CPh3964R::StartUsingIoConnection(trHWFAddress, unsigned long, teHWFErrorCode*)
+000023a4 Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::PhResponsibilityForHotInsert(trHWFAddress, teHWFErrorCode*)
+000023b0 Ph3964R_82xx_68.elf CPh3964R::PhResponsibilityForHotInsert(trHWFAddress, teHWFErrorCode*)
+00002704 Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::PhResponsibilityForBackupDevice(trHWFAddress, teHWFErrorCode*)
+00002710 Ph3964R_82xx_68.elf CPh3964R::PhResponsibilityForBackupDevice(trHWFAddress, teHWFErrorCode*)
+00002768 Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::PhResponsibilityForRestart(trHWFAddress, teHWFErrorCode*)
+00002774 Ph3964R_82xx_68.elf CPh3964R::PhResponsibilityForRestart(trHWFAddress, teHWFErrorCode*)
+0000282c Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::RemoveIoConnection(unsigned long, teHWFErrorCode*)
+00002838 Ph3964R_82xx_68.elf CPh3964R::RemoveIoConnection(unsigned long, teHWFErrorCode*)
+0000288c Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::StartUsingDevice(trHWFAddress, teHWFErrorCode*)
+00002898 Ph3964R_82xx_68.elf CPh3964R::StartUsingDevice(trHWFAddress, teHWFErrorCode*)
+000028ec Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::PerformFailover(trHWFAddress, teHWFErrorCode*)
+000028f8 Ph3964R_82xx_68.elf CPh3964R::PerformFailover(trHWFAddress, teHWFErrorCode*)
+0000294c Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::PerformSwitchover(trHWFAddress, teHWFErrorCode*)
+00002958 Ph3964R_82xx_68.elf CPh3964R::PerformSwitchover(trHWFAddress, teHWFErrorCode*)
+000029ac Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::PrepareForTermination(teHWFErrorCode*)
+000029b8 Ph3964R_82xx_68.elf CPh3964R::PrepareForTermination(teHWFErrorCode*)
+00002a94 Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::PhResponsibility(trHWFAddress, teHWFErrorCode*)
+00002aa0 Ph3964R_82xx_68.elf CPh3964R::PhResponsibility(trHWFAddress, teHWFErrorCode*)
+00002ef0 Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::RemoveHWConfiguration(trHWFAddress, teHWFErrorCode*)
+00002efc Ph3964R_82xx_68.elf CPh3964R::RemoveHWConfiguration(trHWFAddress, teHWFErrorCode*)
+00003008 Ph3964R_82xx_68.elf CPh3964R::GetStatus(trHWFAddress, teHWFUnitKind, teHWFStatusType*, teHWFExtStatusType*, teHWFErrorCode*)
+00003060 Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::KickWatchdog(unsigned short*, teHWFErrorCode*)
+0000306c Ph3964R_82xx_68.elf CPh3964R::KickWatchdog(unsigned short*, teHWFErrorCode*)
+0000318c Ph3964R_82xx_68.elf CPh3964R::InitiateConn()
+0000321c Ph3964R_82xx_68.elf CPh3964R::Send3964RSignal(unsigned char)
+000032bc Ph3964R_82xx_68.elf CPh3964R::SendDataTo1131(unsigned long, int*)
+00003704 Ph3964R_82xx_68.elf CPh3964R::Clear3964RReceive()
+00003778 Ph3964R_82xx_68.elf CPh3964R::SiemSendRetry()
+000038c8 Ph3964R_82xx_68.elf CPh3964R::XORoctets(unsigned char*, int, int)
+000039ac Ph3964R_82xx_68.elf CPh3964R::Receive3964RResponse(bool*)
+0000410c Ph3964R_82xx_68.elf CPh3964R::SiemRecRetry()
+00004284 Ph3964R_82xx_68.elf CPh3964R::Received3964RSignal(unsigned char*, int&, unsigned long)
+00004494 Ph3964R_82xx_68.elf CPh3964R::DoWaitToSendState()
+0000464c Ph3964R_82xx_68.elf CPh3964R::Poll3964RMasterReceive(unsigned long, int*)
+00004af0 Ph3964R_82xx_68.elf CPh3964R::Send3964RSetUpSignal(unsigned long, unsigned long, int*)
+00004c98 Ph3964R_82xx_68.elf CPh3964R::Build3964RTelegram(unsigned long, unsigned long, int*)
+000056c4 Ph3964R_82xx_68.elf CPh3964R::ProcessVarData(unsigned long, unsigned long, int*)
+00005a14 Ph3964R_82xx_68.elf CPh3964R::ThreadWork()
+00005c9c Ph3964R_82xx_68.elf ObjectFactory
+00005dc4 Ph3964R_82xx_68.elf operator delete(void*)
+00005e04 Ph3964R_82xx_68.elf __cxa_pure_virtual
+00005e40 Ph3964R_82xx_68.elf CPhCommon_Base::CPhCommon_Base()
+00005ea4 Ph3964R_82xx_68.elf CPhCommon_Base::CPhCommon_Base()
+00005f04 Ph3964R_82xx_68.elf CPhCommon_Base::GetProductInfo(unsigned char*, unsigned char*, unsigned char*, unsigned long)
+00005f40 Ph3964R_82xx_68.elf CPhCommon_Base::SetCommonCallbackInterface(ICommonCallback*)
+00005f70 Ph3964R_82xx_68.elf CPhConfig_Base1::PrepareForTermination(teHWFErrorCode*)
+00005fa0 Ph3964R_82xx_68.elf CPhConfig_Base1::RemoveHWConfiguration(trHWFAddress, teHWFErrorCode*)
+00005fd0 Ph3964R_82xx_68.elf CPhConfig_Base1::RemoveIoConnection(unsigned long, teHWFErrorCode*)
+00006004 Ph3964R_82xx_68.elf CPhConfig_Base1::PhResponsibilityForRestart(trHWFAddress, teHWFErrorCode*)
+00006034 Ph3964R_82xx_68.elf CPhConfig_Base1::PhResponsibility(trHWFAddress, teHWFErrorCode*)
+00006064 Ph3964R_82xx_68.elf CPhConfig_Base1::StartUsingIoConnection(trHWFAddress, unsigned long, teHWFErrorCode*)
+00006098 Ph3964R_82xx_68.elf CPhConfig_Base1::PhResponsibilityForBackupDevice(trHWFAddress, teHWFErrorCode*)
+000060c8 Ph3964R_82xx_68.elf CPhConfig_Base1::PhResponsibilityForHotInsert(trHWFAddress, teHWFErrorCode*)
+000060f8 Ph3964R_82xx_68.elf CPhConfig_Base1::PerformSwitchover(trHWFAddress, teHWFErrorCode*)
+00006128 Ph3964R_82xx_68.elf CPhConfig_Base1::StartUsingDevice(trHWFAddress, teHWFErrorCode*)
+00006158 Ph3964R_82xx_68.elf CPhConfig_Base1::PerformFailover(trHWFAddress, teHWFErrorCode*)
+00006188 Ph3964R_82xx_68.elf CPhClient_Base::ConnectReq(unsigned long, unsigned long*, int*)
+000061c0 Ph3964R_82xx_68.elf CPhClient_Base::DisconnectReq(unsigned long, unsigned long, int*)
+000061f8 Ph3964R_82xx_68.elf CPhClient_Base::ReadVarReq(unsigned long, int*)
+0000622c Ph3964R_82xx_68.elf CPhClient_Base::WriteVarReq(unsigned long, int*)
+00006260 Ph3964R_82xx_68.elf CPhClient_Base::ReadRawReq(unsigned long, int*)
+00006294 Ph3964R_82xx_68.elf CPhClient_Base::WriteRawReq(unsigned long, int*)
+000062c8 Ph3964R_82xx_68.elf CPhClient_Base::AbortRawReq(unsigned long, int*)
+000062fc Ph3964R_82xx_68.elf CPhClient_Base::AbortVarReq(unsigned long, int*)
+00006330 Ph3964R_82xx_68.elf CPhClient_Base::GetExtendedStatusSize(unsigned long, int*, int*)
+00006368 Ph3964R_82xx_68.elf CPhClient_Base::GetExtendedStatus(unsigned long, int, teIEC1131Type*, tGCValue*, int*)
+000063a8 Ph3964R_82xx_68.elf CPhClient_Base::SetStatus(unsigned long, int, int*)
+000063e0 Ph3964R_82xx_68.elf CPhClient_Base::ReadRes(unsigned long, int, int*)
+00006418 Ph3964R_82xx_68.elf CPhClient_Base::WriteRes(unsigned long, int, int*)
+00006450 Ph3964R_82xx_68.elf CPhClient_Base1::ConnectReq(unsigned long, unsigned long*, int*)
+00006488 Ph3964R_82xx_68.elf CPhClient_Base1::DisconnectReq(unsigned long, unsigned long, int*)
+000064c0 Ph3964R_82xx_68.elf CPhClient_Base1::ReadVarReq(unsigned long, int*)
+000064f4 Ph3964R_82xx_68.elf CPhClient_Base1::WriteVarReq(unsigned long, int*)
+00006528 Ph3964R_82xx_68.elf CPhClient_Base1::RegisterVarReq(unsigned long, int*)
+0000655c Ph3964R_82xx_68.elf CPhClient_Base1::ReadRawReq(unsigned long, int*)
+00006590 Ph3964R_82xx_68.elf CPhClient_Base1::WriteRawReq(unsigned long, int*)
+000065c4 Ph3964R_82xx_68.elf CPhClient_Base1::AbortRawReq(unsigned long, int*)
+000065f8 Ph3964R_82xx_68.elf CPhClient_Base1::AbortVarReq(unsigned long, int*)
+0000662c Ph3964R_82xx_68.elf CPhClient_Base1::TimeoutAbortVarReq(unsigned long, int*)
+00006690 Ph3964R_82xx_68.elf CPhClient_Base1::GetExtendedStatusSize(unsigned long, int*, int*)
+000066c8 Ph3964R_82xx_68.elf CPhClient_Base1::GetExtendedStatus(unsigned long, int, teIEC1131Type*, tGCValue*, int*)
+00006708 Ph3964R_82xx_68.elf CPhClient_Base1::BufferTakeForReceive(unsigned long, int*)
+0000673c Ph3964R_82xx_68.elf CPhClient_Base1::BufferGiveForReceive(unsigned long, int, int*)
+00006774 Ph3964R_82xx_68.elf CPhClient_Base1::BufferTakeForSend(unsigned long, unsigned int, int*)
+000067ac Ph3964R_82xx_68.elf CPhClient_Base1::BufferGiveForSend(unsigned long, unsigned int, int, int*)
+000067e8 Ph3964R_82xx_68.elf CPhClient_Base1::SetStatus(unsigned long, int, int*)
+00006820 Ph3964R_82xx_68.elf CPhClient_Base1::ReadRes(unsigned long, int, int*)
+00006858 Ph3964R_82xx_68.elf CPhClient_Base1::WriteRes(unsigned long, int, int*)
+00006890 Ph3964R_82xx_68.elf CPhStatus_Base1::KickWatchdog(unsigned short*, teHWFErrorCode*)
+000068c4 Ph3964R_82xx_68.elf CPhStatus_Base1::GetStatus(trHWFAddress, teHWFUnitKind, unsigned long*, unsigned long*, teHWFErrorCode*)
+00006900 Ph3964R_82xx_68.elf CPhIOAccess_Base::GetCopyRoutineReference(unsigned int, void (**)(short, void*, void*), IOAccessErrorCode*)
+00006938 Ph3964R_82xx_68.elf CPhIOAccess_Base::ObtainDPM(eAreaType, trHWFAddress, IOAccessErrorCode*)
+0000696c Ph3964R_82xx_68.elf CPhIOAccess_Base::ReleaseDPM(eAreaType, trHWFAddress, IOAccessErrorCode*)
+000069a0 Ph3964R_82xx_68.elf CPhDiagnostics_Base::PhDiagnosticsTableNew(teDiagErrorCode*)
+000069d0 Ph3964R_82xx_68.elf CPhDiagnostics_Base::PhDiagnosticsTableCleared(teDiagErrorCode*)
+00006a00 Ph3964R_82xx_68.elf CPhOLU_Base::PrepareForFirmwareDownload(trHWFAddress const*, unsigned long, eOLUStatus*)
+00006a38 Ph3964R_82xx_68.elf CPhOLU_Base::PrepareForApplicationStop(trHWFAddress const*, eOLUStatus*)
+00006a6c Ph3964R_82xx_68.elf CPhOLU_Base::ResumeOperation(trHWFAddress const*, eOLUStatus*)
+00006aa0 Ph3964R_82xx_68.elf CPhOLU_Base::PhResponsibilityForOLU(trHWFAddress const*, eOLUStatus*)
+00006ad4 Ph3964R_82xx_68.elf CPhOLU_Base::PrepareForLeavingOLU(trHWFAddress const*, eOLUStatus*)
+00006b08 Ph3964R_82xx_68.elf CPhOLU_Base::PrepareForAppAndConfigDownload(trHWFAddress const*, eOLUStatus*)
+00006b3c Ph3964R_82xx_68.elf CPhOLU_Base1::PrepareForFirmwareDownload(trHWFAddress const*, unsigned long, eOLUStatus*)
+00006b74 Ph3964R_82xx_68.elf CPhOLU_Base1::PrepareForApplicationStop(trHWFAddress const*, eOLUStatus*)
+00006ba8 Ph3964R_82xx_68.elf CPhOLU_Base1::ResumeOperation(trHWFAddress const*, eOLUStatus*)
+00006bdc Ph3964R_82xx_68.elf CPhOLU_Base1::PhResponsibilityForOLU(trHWFAddress const*, eOLUStatus*)
+00006c10 Ph3964R_82xx_68.elf CPhOLU_Base1::PrepareForLeavingOLU(trHWFAddress const*, eOLUStatus*)
+00006c44 Ph3964R_82xx_68.elf CPhOLU_Base1::PrepareForAppAndConfigDownload(trHWFAddress const*, eOLUStatus*)
+00006c78 Ph3964R_82xx_68.elf CPhOLU_Base1::OLUEnablePhCom(trHWFAddress const*, eOLUStatus*)
+00006cac Ph3964R_82xx_68.elf CPhOLU_Base1::OLUDisablePhCom(trHWFAddress const*, eOLUStatus*)
+00006ce0 Ph3964R_82xx_68.elf CPhOLU_Base1::InformPhIsInSwitch(trHWFAddress const*, eOLUStatus*)
+00006d18 Ph3964R_82xx_68.elf CPhCommon_Base::~CPhCommon_Base()
+00006d94 Ph3964R_82xx_68.elf CPhCommon_Base::~CPhCommon_Base()
+00006e10 Ph3964R_82xx_68.elf CPhCommon_Base::~CPhCommon_Base()
+00006e88 Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::AddRef()
+00006e90 Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::AddRef()
+00006e98 Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::AddRef()
+00006ea0 Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::AddRef()
+00006ea8 Ph3964R_82xx_68.elf CPh3964R::AddRef()
+00006ec8 Ph3964R_82xx_68.elf IUnknown::~IUnknown()
+00006f0c Ph3964R_82xx_68.elf IUnknown::~IUnknown()
+00006f4c Ph3964R_82xx_68.elf IPhConfig1::~IPhConfig1()
+00006f94 Ph3964R_82xx_68.elf IPhStatus1::~IPhStatus1()
+00006fe0 Ph3964R_82xx_68.elf IPhStatus1::~IPhStatus1()
+00007028 Ph3964R_82xx_68.elf IPhConfig1::~IPhConfig1()
+00007070 Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::QueryInterface(_GUID const&, void**)
+00007078 Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::QueryInterface(_GUID const&, void**)
+00007080 Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::QueryInterface(_GUID const&, void**)
+00007088 Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::QueryInterface(_GUID const&, void**)
+00007094 Ph3964R_82xx_68.elf CPh3964R::QueryInterface(_GUID const&, void**)
+000071c4 Ph3964R_82xx_68.elf IPhClient1::~IPhClient1()
+00007210 Ph3964R_82xx_68.elf IPhClient1::~IPhClient1()
+00007254 Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::Release()
+0000725c Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::Release()
+00007264 Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::Release()
+0000726c Ph3964R_82xx_68.elf non-virtual thunk to CPh3964R::Release()
+00007274 Ph3964R_82xx_68.elf CPh3964R::Release()
+000072e4 Ph3964R_82xx_68.elf IPhClient::~IPhClient()
+00007330 Ph3964R_82xx_68.elf IPhClient::~IPhClient()
+00007378 Ph3964R_82xx_68.elf IUnknown::IUnknown()
+000073d0 Ph3964R_82xx_68.elf IPhCommon::IPhCommon()
+00007434 Ph3964R_82xx_68.elf IUnknown::~IUnknown()
+000074a4 Ph3964R_82xx_68.elf IPhConfig1::~IPhConfig1()
+00007520 Ph3964R_82xx_68.elf CPhConfig_Base1::~CPhConfig_Base1()
+0000759c Ph3964R_82xx_68.elf CPhConfig_Base1::~CPhConfig_Base1()
+00007618 Ph3964R_82xx_68.elf IPhClient::~IPhClient()
+00007694 Ph3964R_82xx_68.elf CPhClient_Base::~CPhClient_Base()
+00007710 Ph3964R_82xx_68.elf CPhClient_Base::~CPhClient_Base()
+0000778c Ph3964R_82xx_68.elf IPhClient1::~IPhClient1()
+00007808 Ph3964R_82xx_68.elf CPhClient_Base1::~CPhClient_Base1()
+00007884 Ph3964R_82xx_68.elf CPhClient_Base1::~CPhClient_Base1()
+00007900 Ph3964R_82xx_68.elf IPhStatus1::~IPhStatus1()
+0000797c Ph3964R_82xx_68.elf CPhStatus_Base1::~CPhStatus_Base1()
+000079f8 Ph3964R_82xx_68.elf CPhStatus_Base1::~CPhStatus_Base1()
+00007a74 Ph3964R_82xx_68.elf IPhIOAccess::~IPhIOAccess()
+00007af0 Ph3964R_82xx_68.elf CPhIOAccess_Base::~CPhIOAccess_Base()
+00007b6c Ph3964R_82xx_68.elf IPhIOAccess::~IPhIOAccess()
+00007be8 Ph3964R_82xx_68.elf IPhIOAccess::~IPhIOAccess()
+00007c64 Ph3964R_82xx_68.elf CPhIOAccess_Base::~CPhIOAccess_Base()
+00007ce0 Ph3964R_82xx_68.elf IPhDiagnostics::~IPhDiagnostics()
+00007d5c Ph3964R_82xx_68.elf CPhDiagnostics_Base::~CPhDiagnostics_Base()
+00007dd8 Ph3964R_82xx_68.elf IPhDiagnostics::~IPhDiagnostics()
+00007e54 Ph3964R_82xx_68.elf IPhDiagnostics::~IPhDiagnostics()
+00007ed0 Ph3964R_82xx_68.elf CPhDiagnostics_Base::~CPhDiagnostics_Base()
+00007f4c Ph3964R_82xx_68.elf IPhOLU::~IPhOLU()
+00007fc8 Ph3964R_82xx_68.elf CPhOLU_Base::~CPhOLU_Base()
+00008044 Ph3964R_82xx_68.elf IPhOLU::~IPhOLU()
+000080c0 Ph3964R_82xx_68.elf IPhOLU::~IPhOLU()
+0000813c Ph3964R_82xx_68.elf CPhOLU_Base::~CPhOLU_Base()
+000081b8 Ph3964R_82xx_68.elf IPhOLU1::~IPhOLU1()
+00008234 Ph3964R_82xx_68.elf CPhOLU_Base1::~CPhOLU_Base1()
+000082b0 Ph3964R_82xx_68.elf IPhOLU1::~IPhOLU1()
+0000832c Ph3964R_82xx_68.elf IPhOLU1::~IPhOLU1()
+000083a8 Ph3964R_82xx_68.elf CPhOLU_Base1::~CPhOLU_Base1()
+00008424 Ph3964R_82xx_68.elf IPhCommon::~IPhCommon()
+000084a0 Ph3964R_82xx_68.elf IPhCommon::~IPhCommon()
+0000851c Ph3964R_82xx_68.elf IPhCommon::~IPhCommon()
+00008594 Ph3964R_82xx_68.elf CompanyName
+00008598 Ph3964R_82xx_68.elf ProductName
+000085a0 Ph3964R_82xx_68.elf ProductVersion
+000085fc Ph3964R_82xx_68.elf CLSID_CPh3964R
+00008664 Ph3964R_82xx_68.elf IID_IPhCommonCB
+00008674 Ph3964R_82xx_68.elf IID_IPhConfigCB
+00008684 Ph3964R_82xx_68.elf IID_IPhConfigCB1
+00008694 Ph3964R_82xx_68.elf IID_IPhIOAccessCB
+000086a4 Ph3964R_82xx_68.elf IID_IPhExternalConfigCB1
+000086b4 Ph3964R_82xx_68.elf IID_IPhExternalConfigCB2
+000086c4 Ph3964R_82xx_68.elf IID_IPhExternalConfigCB3
+000086d4 Ph3964R_82xx_68.elf IID_IPhOLUCB
+000086e4 Ph3964R_82xx_68.elf IID_IPhCommon
+000086f4 Ph3964R_82xx_68.elf IID_IPhConfig1
+00008704 Ph3964R_82xx_68.elf IID_IPhStatus1
+00008714 Ph3964R_82xx_68.elf IID_IPhClient
+00008724 Ph3964R_82xx_68.elf IID_IPhClient1
+00008734 Ph3964R_82xx_68.elf IID_IPhDiagnostics
+00008744 Ph3964R_82xx_68.elf IID_IPhIOAccess
+00008754 Ph3964R_82xx_68.elf IID_IPhSafeConfig
+00008764 Ph3964R_82xx_68.elf IID_IPhSafeConfig1
+00008774 Ph3964R_82xx_68.elf IID_IPhSafeConfig2
+00008784 Ph3964R_82xx_68.elf IID_IPhSimulation
+00008794 Ph3964R_82xx_68.elf IID_IPhOLU
+000087a4 Ph3964R_82xx_68.elf IID_IPhOLU1
+000087b4 Ph3964R_82xx_68.elf IID_IHeapCallback
+000087c4 Ph3964R_82xx_68.elf IID_ISystemUtilitiesCallback
+000087d4 Ph3964R_82xx_68.elf IID_ISystemUtilitiesCallback1
+000087e4 Ph3964R_82xx_68.elf IID_ISystemUtilitiesCallback2
+000087f4 Ph3964R_82xx_68.elf IID_ISystemUtilitiesCallback3
+00008804 Ph3964R_82xx_68.elf IID_ISystemUtilitiesCallback4
+00008814 Ph3964R_82xx_68.elf IID_IEventMgrCallback
+00008824 Ph3964R_82xx_68.elf IID_IEventMgrCallback1
+00008834 Ph3964R_82xx_68.elf IID_ISysClockCallback
+00008844 Ph3964R_82xx_68.elf IID_ISysClockCallback1
+00008854 Ph3964R_82xx_68.elf IID_ISysClockCallback2
+00008864 Ph3964R_82xx_68.elf IID_ISysClockCallback3
+00008874 Ph3964R_82xx_68.elf IID_INetwClockSynchCallback
+00008884 Ph3964R_82xx_68.elf IID_IConfigCBCallback1
+00008894 Ph3964R_82xx_68.elf IID_IConfigCBCallback2
+000088a4 Ph3964R_82xx_68.elf IID_IConfigCBCallback3
+000088b4 Ph3964R_82xx_68.elf IID_IExternalConfigCBCallback
+000088c4 Ph3964R_82xx_68.elf IID_IExternalConfigCBCallback2
+000088d4 Ph3964R_82xx_68.elf IID_IExternalConfigCBCallback3
+000088e4 Ph3964R_82xx_68.elf IID_IExternalConfigCBCallback4
+000088f4 Ph3964R_82xx_68.elf IID_IMessagesCBCallback
+00008904 Ph3964R_82xx_68.elf IID_IAIPAccessCBCallback
+00008914 Ph3964R_82xx_68.elf IID_IOLUCBCallback
+00008924 Ph3964R_82xx_68.elf IID_ISystemUtilitiesCBCallback1
+00008934 Ph3964R_82xx_68.elf IID_IConfigCallback1
+00008944 Ph3964R_82xx_68.elf IID_IConfigCallback2
+00008954 Ph3964R_82xx_68.elf IID_IStatusCallback1
+00008964 Ph3964R_82xx_68.elf IID_IGenClientCallback
+00008974 Ph3964R_82xx_68.elf IID_IGenClientCallback1
+00008984 Ph3964R_82xx_68.elf IID_IIACClientCallback
+00008994 Ph3964R_82xx_68.elf IID_IDriverFactoryCallback
+000089a4 Ph3964R_82xx_68.elf IID_IDiagnosticsCallback
+000089b4 Ph3964R_82xx_68.elf IID_ISafeConfigCallback
+000089c4 Ph3964R_82xx_68.elf IID_ISafeConfigCallback1
+000089d4 Ph3964R_82xx_68.elf IID_ISafeConfigCallback2
+000089e4 Ph3964R_82xx_68.elf IID_ICRCCallback
+000089f4 Ph3964R_82xx_68.elf IID_IIOAccessCallback
+00008a04 Ph3964R_82xx_68.elf IID_CriticalRegionCallback
+00008a14 Ph3964R_82xx_68.elf IID_VOSExceptionCallback
+00008a24 Ph3964R_82xx_68.elf IID_DrvCommonCallback
+00008a34 Ph3964R_82xx_68.elf IID_ProtectedMirroredHeapCallback
+00008a44 Ph3964R_82xx_68.elf IID_SharedMirroredHeapCallback
+00008a54 Ph3964R_82xx_68.elf IID_TemporaryMirroredHeapCallback
+00008a64 Ph3964R_82xx_68.elf IID_IRestrictedVOSCallback
+00008a74 Ph3964R_82xx_68.elf IID_IVarServerCallback
+00008a84 Ph3964R_82xx_68.elf IID_IVarServerCallback1
+00008a94 Ph3964R_82xx_68.elf IID_ISOCKETCallback
+00008aa4 Ph3964R_82xx_68.elf IID_ISOCKETCallback1
+00008ab4 Ph3964R_82xx_68.elf IID_IVOSCallback2
+0000ac10 V vtable for CPh3964R Ph3964R_82xx_68.elf 
+0000adc0 V vtable for IPhClient1 Ph3964R_82xx_68.elf 
+0000ae28 V vtable for IUnknown Ph3964R_82xx_68.elf 
+0000ae48 V vtable for IPhClient Ph3964R_82xx_68.elf 
+0000ae98 V vtable for IPhStatus1 Ph3964R_82xx_68.elf 
+0000aec0 V vtable for IPhConfig1 Ph3964R_82xx_68.elf 
+0000af08 V vtable for CPhOLU_Base1 Ph3964R_82xx_68.elf 
+0000af48 V vtable for CPhOLU_Base Ph3964R_82xx_68.elf 
+0000af80 V vtable for CPhDiagnostics_Base Ph3964R_82xx_68.elf 
+0000afa8 V vtable for CPhIOAccess_Base Ph3964R_82xx_68.elf 
+0000afd0 V vtable for CPhStatus_Base1 Ph3964R_82xx_68.elf 
+0000aff8 V vtable for CPhClient_Base1 Ph3964R_82xx_68.elf 
+0000b060 V vtable for CPhClient_Base Ph3964R_82xx_68.elf 
+0000b0b0 V vtable for CPhConfig_Base1 Ph3964R_82xx_68.elf 
+0000b0f8 V vtable for CPhCommon_Base Ph3964R_82xx_68.elf 
+0000b120 V vtable for IPhIOAccess Ph3964R_82xx_68.elf 
+0000b148 V vtable for IPhDiagnostics Ph3964R_82xx_68.elf 
+0000b170 V vtable for IPhOLU Ph3964R_82xx_68.elf 
+0000b1a8 V vtable for IPhOLU1 Ph3964R_82xx_68.elf 
+0000b1e8 V vtable for IPhCommon Ph3964R_82xx_68.elf 
+0000b20c Ph3964R_82xx_68.elf CRTFuncTabBegin
+0000b20c Ph3964R_82xx_68.elf scprocs
+0000b218 Ph3964R_82xx_68.elf printf
+0000b21c Ph3964R_82xx_68.elf sprintf
+0000b220 Ph3964R_82xx_68.elf sscanf
+0000b224 Ph3964R_82xx_68.elf memcpy
+0000b228 Ph3964R_82xx_68.elf memset
+0000b22c Ph3964R_82xx_68.elf strcat
+0000b230 Ph3964R_82xx_68.elf strcmp
+0000b234 Ph3964R_82xx_68.elf strlen
+0000b238 Ph3964R_82xx_68.elf strncmp
+0000b23c Ph3964R_82xx_68.elf strncpy
+0000b240 Ph3964R_82xx_68.elf memchr
+0000b244 Ph3964R_82xx_68.elf memcmp
+0000b248 Ph3964R_82xx_68.elf memmove
+0000b24c Ph3964R_82xx_68.elf strchr
+0000b250 Ph3964R_82xx_68.elf strcoll
+0000b254 Ph3964R_82xx_68.elf strcpy
+0000b258 Ph3964R_82xx_68.elf strcspn
+0000b25c Ph3964R_82xx_68.elf strncat
+0000b260 Ph3964R_82xx_68.elf strpbrk
+0000b264 Ph3964R_82xx_68.elf strrchr
+0000b268 Ph3964R_82xx_68.elf strspn
+0000b26c Ph3964R_82xx_68.elf strstr
+0000b270 Ph3964R_82xx_68.elf strtok
+0000b274 Ph3964R_82xx_68.elf strxfrm
+0000b278 Ph3964R_82xx_68.elf strerror
+0000b27c Ph3964R_82xx_68.elf pow
+0000b280 Ph3964R_82xx_68.elf acos
+0000b284 Ph3964R_82xx_68.elf asin
+0000b288 Ph3964R_82xx_68.elf atan
+0000b28c Ph3964R_82xx_68.elf atan2
+0000b290 Ph3964R_82xx_68.elf ceil
+0000b294 Ph3964R_82xx_68.elf cos
+0000b298 Ph3964R_82xx_68.elf cosh
+0000b29c Ph3964R_82xx_68.elf exp
+0000b2a0 Ph3964R_82xx_68.elf fabs
+0000b2a4 Ph3964R_82xx_68.elf floor
+0000b2a8 Ph3964R_82xx_68.elf fmod
+0000b2ac Ph3964R_82xx_68.elf frexp
+0000b2b0 Ph3964R_82xx_68.elf ldexp
+0000b2b4 Ph3964R_82xx_68.elf log
+0000b2b8 Ph3964R_82xx_68.elf log10
+0000b2bc Ph3964R_82xx_68.elf modf
+0000b2c0 Ph3964R_82xx_68.elf sin
+0000b2c4 Ph3964R_82xx_68.elf sinh
+0000b2c8 Ph3964R_82xx_68.elf sqrt
+0000b2cc Ph3964R_82xx_68.elf tan
+0000b2d0 Ph3964R_82xx_68.elf tanh
+0000b2d4 Ph3964R_82xx_68.elf div_r
+0000b2d8 Ph3964R_82xx_68.elf labs
+0000b2dc Ph3964R_82xx_68.elf strtol
+0000b2e0 Ph3964R_82xx_68.elf free
+0000b2e4 Ph3964R_82xx_68.elf abort
+0000b2e8 Ph3964R_82xx_68.elf abs
+0000b2ec Ph3964R_82xx_68.elf atof
+0000b2f0 Ph3964R_82xx_68.elf atoi
+0000b2f4 Ph3964R_82xx_68.elf atol
+0000b2f8 Ph3964R_82xx_68.elf bsearch
+0000b2fc Ph3964R_82xx_68.elf ldiv_r
+0000b300 Ph3964R_82xx_68.elf qsort
+0000b304 Ph3964R_82xx_68.elf rand
+0000b308 Ph3964R_82xx_68.elf srand
+0000b30c Ph3964R_82xx_68.elf strtod
+0000b310 Ph3964R_82xx_68.elf strtoul
+0000b314 Ph3964R_82xx_68.elf malloc
+0000b318 Ph3964R_82xx_68.elf __assert
+0000b31c Ph3964R_82xx_68.elf time
+0000b320 Ph3964R_82xx_68.elf asctime
+0000b324 Ph3964R_82xx_68.elf gmtime
+0000b328 Ph3964R_82xx_68.elf clock
+0000b32c Ph3964R_82xx_68.elf ctime
+0000b330 Ph3964R_82xx_68.elf difftime
+0000b334 Ph3964R_82xx_68.elf localtime
+0000b338 Ph3964R_82xx_68.elf mktime
+0000b33c Ph3964R_82xx_68.elf strftime
+0000b340 Ph3964R_82xx_68.elf eventcollSem
+0000b344 Ph3964R_82xx_68.elf intLock
+0000b348 Ph3964R_82xx_68.elf intUnlock
+0000b354 Ph3964R_82xx_68.elf fprintf
+0000b358 Ph3964R_82xx_68.elf __stdout
+0000b35c Ph3964R_82xx_68.elf __stderr
+0000b360 Ph3964R_82xx_68.elf setjmp
+0000b364 Ph3964R_82xx_68.elf longjmp
+0000b368 Ph3964R_82xx_68.elf operator new[](unsigned int)
+0000b36c Ph3964R_82xx_68.elf operator delete[](void*)
+0000b370 Ph3964R_82xx_68.elf CRTFuncTabEnd
+0000b370 Ph3964R_82xx_68.elf ecprocs
+0000b370 Ph3964R_82xx_68.elf etext
+0000b370 Ph3964R_82xx_68.elf sgot2
+0000b740 Ph3964R_82xx_68.elf egot2
+0000b740 Ph3964R_82xx_68.elf sfixup
+0000bd9c Ph3964R_82xx_68.elf CMirroredObject::c_pMirroredObjectMgrImpl
+0000bd9c Ph3964R_82xx_68.elf efixup
+0000bda0 Ph3964R_82xx_68.elf CMirroredObjectAgent::c_pHeapCallback
+0000bda4 Ph3964R_82xx_68.elf CMirroredObjectAgent::c_AgentTag
+0000bda8 V CComCoClass<CPh3964R, &(CLSID_CPh3964R)>::m_HeapTag Ph3964R_82xx_68.elf 
+0000bdac Ph3964R_82xx_68.elf PHproperties
+0000bdb4 Ph3964R_82xx_68.elf useEXEHEAD
+</SYMBOLS>

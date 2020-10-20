@@ -1,0 +1,466 @@
+<HEAD>
+Index of symbols created Fri 09/20/2013 14:18:17.88 
+</HEAD>
+<SECTIONS=10>
+00010000 00019358 .text
+00019358 00019870 .got2
+00019870 00019bf0 .fixup
+00019bf0 00019c18 .bss
+00019c18 0001dce8 .data
+0001dce8 0001dce8 .sdata
+0001dce8 0003024c .stab
+0003024c 00019358 .comment
+00019358 0003058c .sdata2
+0003058c 0003058c .stabstr
+</SECTIONS>
+<SYMBOLS=449>
+00000000 PhMODBUS.elf EXE_HEAD
+00000064 PhMODBUS.elf CPhMODBUS::CPhMODBUS(void)
+000001b0 PhMODBUS.elf CPhMODBUS::~CPhMODBUS(void)
+000002a0 PhMODBUS.elf vosThread(int, int, int, int)
+000002fc PhMODBUS.elf CPhMODBUS::GetProductInfo(unsigned char *, unsigned char *, unsigned char *, unsigned long)
+00000394 PhMODBUS.elf CPhMODBUS::SetCommonCallbackInterface(ICommonCallback *)
+000006ec PhMODBUS.elf CPhMODBUS::StartThread(void)
+000007a4 PhMODBUS.elf CPhMODBUS::Deletethread(void)
+000008d0 PhMODBUS.elf CPhMODBUS::createSemaphore(void)
+00000a18 PhMODBUS.elf CPhMODBUS::deleteSemaphore(void)
+00000b44 PhMODBUS.elf CModbusMessage::CModbusMessage(void)
+00000be0 PhMODBUS.elf CModbusMessage::~CModbusMessage(void)
+00000c34 PhMODBUS.elf CModbusMessage::operator new(unsigned int, IHeapCallback *)
+00000d10 PhMODBUS.elf CPhMODBUS::DelModbusMessage(void *, IHeapCallback *)
+00000d98 PhMODBUS.elf CPhMODBUS::operator new(unsigned int, IHeapCallback *)
+00000e4c PhMODBUS.elf CPhMODBUS::heap_delete(void)
+00000eb8 PhMODBUS.elf CPhMODBUS::QueryInterface(_GUID const &, void **)
+00001000 PhMODBUS.elf CPhMODBUS::AddRef(void)
+00001018 PhMODBUS.elf CPhMODBUS::Release(void)
+00001094 PhMODBUS.elf Letext
+00001098 PhMODBUS.elf CPhMODBUS::ConnectReq(unsigned long, unsigned long *, int *)
+00001490 PhMODBUS.elf CPhMODBUS::DisconnectReq(unsigned long, unsigned long, int *)
+000019b4 PhMODBUS.elf CPhMODBUS::ReadVarReq(unsigned long, int *)
+00001eb8 PhMODBUS.elf CPhMODBUS::WriteVarReq(unsigned long, int *)
+00002448 PhMODBUS.elf CPhMODBUS::ReadRawReq(unsigned long, int *)
+0000249c PhMODBUS.elf CPhMODBUS::WriteRawReq(unsigned long, int *)
+000024f0 PhMODBUS.elf CPhMODBUS::AbortRawReq(unsigned long, int *)
+00002544 PhMODBUS.elf CPhMODBUS::TimeoutAbortVarReq(unsigned long, int *)
+000025e0 PhMODBUS.elf CPhMODBUS::AbortVarReq(unsigned long, int *)
+000028a8 PhMODBUS.elf CPhMODBUS::GetExtendedStatusSize(unsigned long, int *, int *)
+000028fc PhMODBUS.elf CPhMODBUS::GetExtendedStatus(unsigned long, int, teIEC1131Type *, tGCValue *, int *)
+00002950 PhMODBUS.elf CPhMODBUS::SetStatus(unsigned long, int, int *)
+000029a4 PhMODBUS.elf CPhMODBUS::ReadRes(unsigned long, int, int *)
+00002a0c PhMODBUS.elf CPhMODBUS::WriteRes(unsigned long, int, int *)
+00002a5c PhMODBUS.elf Letext
+00002a60 PhMODBUS.elf CPhMODBUS::PrepareForTermination(teHWFErrorCode *)
+00002c70 PhMODBUS.elf CPhMODBUS::PerformSwitchover(trHWFAddress, teHWFErrorCode *)
+00002cc4 PhMODBUS.elf CPhMODBUS::PerformFailover(trHWFAddress, teHWFErrorCode *)
+00002d18 PhMODBUS.elf CPhMODBUS::StartUsingDevice(trHWFAddress, teHWFErrorCode *)
+00002d6c PhMODBUS.elf CPhMODBUS::RemoveHWConfiguration(trHWFAddress, teHWFErrorCode *)
+00002e80 PhMODBUS.elf CPhMODBUS::RemoveIoConnection(unsigned long, teHWFErrorCode *)
+00002ed4 PhMODBUS.elf CPhMODBUS::PhResponsibilityForRestart(trHWFAddress, teHWFErrorCode *)
+00002f94 PhMODBUS.elf CPhMODBUS::PhResponsibility(trHWFAddress, teHWFErrorCode *)
+0000349c PhMODBUS.elf CPhMODBUS::PhResponsibilityForBackupDevice(trHWFAddress, teHWFErrorCode *)
+000034f0 PhMODBUS.elf CPhMODBUS::PhResponsibilityForHotInsert(trHWFAddress, teHWFErrorCode *)
+00003980 PhMODBUS.elf CPhMODBUS::StartUsingIoConnection(trHWFAddress, unsigned long, teHWFErrorCode *)
+000039d0 PhMODBUS.elf Letext
+000039d0 PhMODBUS.elf cConnList::cConnList(void)
+00003a38 PhMODBUS.elf cConnList::~cConnList(void)
+00003b0c PhMODBUS.elf cConnList::ConnListInitialize(unsigned long, IVOSCallback *, IGenClientCallback *, IHeapCallback *)
+00003c38 PhMODBUS.elf cConnList::Free_Node(unsigned long, IHeapCallback *)
+00003eb8 PhMODBUS.elf cConnList::Insert_Node(unsigned long, IHeapCallback *, int *)
+000041a0 PhMODBUS.elf cConnList::ResetTime_Node(unsigned long)
+00004384 PhMODBUS.elf cConnList::SetConnectionStatusForAll(int)
+00004540 PhMODBUS.elf cConnList::DeleteAllConnections(IHeapCallback *)
+00004700 PhMODBUS.elf Letext
+00004704 PhMODBUS.elf CPhMODBUS::WriteFITCRC(CModbusMessage *)
+000047b0 PhMODBUS.elf CPhMODBUS::ModifyTxBuffer(int, CModbusMessage *)
+000047d8 PhMODBUS.elf CPhMODBUS::ModifyRxBuffer(int, CModbusMessage *)
+00004a34 PhMODBUS.elf Letext
+00004a38 PhMODBUS.elf CPhMODBUS::KickWatchdog(unsigned short *, teHWFErrorCode *)
+00004b6c PhMODBUS.elf CPhMODBUS::GetStatus(trHWFAddress, teHWFUnitKind, teHWFStatusType *, teHWFExtStatusType *, teHWFErrorCode *)
+00004bbc PhMODBUS.elf Letext
+00004bc0 PhMODBUS.elf CModbusMessage::WriteCRC16(void)
+00004c70 PhMODBUS.elf CModbusMessage::CheckCRC16(void)
+00004d40 PhMODBUS.elf CModbusMessage::IsValid(void)
+00004d64 PhMODBUS.elf CPhMODBUS::ThreadWork(void)
+00005198 PhMODBUS.elf CPhMODBUS::PollAllConnections(CModbusMessage *)
+00005598 PhMODBUS.elf CPhMODBUS::ProcessVarData(unsigned long, unsigned long, bool, int *, CModbusMessage *)
+00005a04 PhMODBUS.elf CPhMODBUS::ModbusReceiveTelegram(int *, CModbusMessage *)
+00005cf0 PhMODBUS.elf CPhMODBUS::ModbusBuildTelegram(unsigned long, unsigned long, int *, CModbusMessage *)
+00006718 PhMODBUS.elf CPhMODBUS::ModbusBuildPollTelegram(unsigned long, int *, CModbusMessage *)
+0000690c PhMODBUS.elf CPhMODBUS::ModbusSendTelegram(int *, CModbusMessage *)
+00006a74 PhMODBUS.elf CPhMODBUS::UnpackTelegram(unsigned long, unsigned long, bool, int *, CModbusMessage *)
+00007260 PhMODBUS.elf CPhMODBUS::GetMemoryType(unsigned long, int *)
+00007500 PhMODBUS.elf CPhMODBUS::GetStartAddress(unsigned long, int *)
+000076e0 PhMODBUS.elf CModbusMessage::ResetModbusMessage(void)
+00007758 PhMODBUS.elf CModbusMessage::IsResponseAddressValid(void)
+00007774 PhMODBUS.elf CPhMODBUS::EmptyVardataQueue(void)
+0000797c PhMODBUS.elf CPhMODBUS::EmptyVarDataForConnection(unsigned long)
+00007c08 PhMODBUS.elf cTracelog::Init(ISystemUtilitiesCallback *)
+00007c08 PhMODBUS.elf Letext
+00007c10 PhMODBUS.elf cTracelog::cTracelog(void)
+00007c2c PhMODBUS.elf cTracelog::~cTracelog(void)
+00007c58 PhMODBUS.elf cTracelog::Error(char *, char *, unsigned int)
+00007d40 PhMODBUS.elf cTracelog::PrepareMessage(char *, char *, char *, unsigned int)
+00007e94 PhMODBUS.elf cTracelog::Info(char *, char *, unsigned int)
+00007f7c PhMODBUS.elf cTracelog::Trace(int, char *)
+00008064 PhMODBUS.elf cTracelog::Get_Trace_Level(void)
+00008120 PhMODBUS.elf cTracelog::ENABLE_MODBUSDEBUG_BOOL(void)
+000081a0 PhMODBUS.elf Letext
+000081a4 PhMODBUS.elf ObjectFactory
+000082e8 PhMODBUS.elf Letext
+000082ec PhMODBUS.elf __pure_virtual
+00008340 G _SDA2_BASE_ PhMODBUS.elf 
+00008354 PhMODBUS.elf __builtin_delete
+000083b8 PhMODBUS.elf Letext
+000083b8 PhMODBUS.elf Letext
+000083b8 PhMODBUS.elf Letext
+000083bc PhMODBUS.elf CPhCommon_Base::CPhCommon_Base(void)
+00008428 PhMODBUS.elf CPhCommon_Base::~CPhCommon_Base(void)
+000084a0 PhMODBUS.elf CPhCommon_Base::GetProductInfo(unsigned char *, unsigned char *, unsigned char *, unsigned long)
+000084dc PhMODBUS.elf CPhCommon_Base::SetCommonCallbackInterface(ICommonCallback *)
+0000850c PhMODBUS.elf CPhConfig_Base1::PrepareForTermination(teHWFErrorCode *)
+0000853c PhMODBUS.elf CPhConfig_Base1::RemoveHWConfiguration(trHWFAddress, teHWFErrorCode *)
+00008570 PhMODBUS.elf CPhConfig_Base1::RemoveIoConnection(unsigned long, teHWFErrorCode *)
+000085a4 PhMODBUS.elf CPhConfig_Base1::PhResponsibilityForRestart(trHWFAddress, teHWFErrorCode *)
+000085d8 PhMODBUS.elf CPhConfig_Base1::PhResponsibility(trHWFAddress, teHWFErrorCode *)
+0000860c PhMODBUS.elf CPhConfig_Base1::StartUsingIoConnection(trHWFAddress, unsigned long, teHWFErrorCode *)
+00008644 PhMODBUS.elf CPhConfig_Base1::PhResponsibilityForBackupDevice(trHWFAddress, teHWFErrorCode *)
+00008678 PhMODBUS.elf CPhConfig_Base1::PhResponsibilityForHotInsert(trHWFAddress, teHWFErrorCode *)
+000086ac PhMODBUS.elf CPhConfig_Base1::PerformSwitchover(trHWFAddress, teHWFErrorCode *)
+000086e0 PhMODBUS.elf CPhConfig_Base1::StartUsingDevice(trHWFAddress, teHWFErrorCode *)
+00008714 PhMODBUS.elf CPhConfig_Base1::PerformFailover(trHWFAddress, teHWFErrorCode *)
+00008748 PhMODBUS.elf CPhClient_Base::ConnectReq(unsigned long, unsigned long *, int *)
+00008780 PhMODBUS.elf CPhClient_Base::DisconnectReq(unsigned long, unsigned long, int *)
+000087b8 PhMODBUS.elf CPhClient_Base::ReadVarReq(unsigned long, int *)
+000087ec PhMODBUS.elf CPhClient_Base::WriteVarReq(unsigned long, int *)
+00008820 PhMODBUS.elf CPhClient_Base::ReadRawReq(unsigned long, int *)
+00008854 PhMODBUS.elf CPhClient_Base::WriteRawReq(unsigned long, int *)
+00008888 PhMODBUS.elf CPhClient_Base::AbortRawReq(unsigned long, int *)
+000088bc PhMODBUS.elf CPhClient_Base::AbortVarReq(unsigned long, int *)
+000088f0 PhMODBUS.elf CPhClient_Base::GetExtendedStatusSize(unsigned long, int *, int *)
+00008928 PhMODBUS.elf CPhClient_Base::GetExtendedStatus(unsigned long, int, teIEC1131Type *, tGCValue *, int *)
+00008968 PhMODBUS.elf CPhClient_Base::SetStatus(unsigned long, int, int *)
+000089a0 PhMODBUS.elf CPhClient_Base::ReadRes(unsigned long, int, int *)
+000089d8 PhMODBUS.elf CPhClient_Base::WriteRes(unsigned long, int, int *)
+00008a10 PhMODBUS.elf CPhClient_Base1::ConnectReq(unsigned long, unsigned long *, int *)
+00008a48 PhMODBUS.elf CPhClient_Base1::DisconnectReq(unsigned long, unsigned long, int *)
+00008a80 PhMODBUS.elf CPhClient_Base1::ReadVarReq(unsigned long, int *)
+00008ab4 PhMODBUS.elf CPhClient_Base1::WriteVarReq(unsigned long, int *)
+00008ae8 PhMODBUS.elf CPhClient_Base1::RegisterVarReq(unsigned long, int *)
+00008b1c PhMODBUS.elf CPhClient_Base1::ReadRawReq(unsigned long, int *)
+00008b50 PhMODBUS.elf CPhClient_Base1::WriteRawReq(unsigned long, int *)
+00008b84 PhMODBUS.elf CPhClient_Base1::AbortRawReq(unsigned long, int *)
+00008bb8 PhMODBUS.elf CPhClient_Base1::AbortVarReq(unsigned long, int *)
+00008bec PhMODBUS.elf CPhClient_Base1::TimeoutAbortVarReq(unsigned long, int *)
+00008c7c PhMODBUS.elf CPhClient_Base1::GetExtendedStatusSize(unsigned long, int *, int *)
+00008cb4 PhMODBUS.elf CPhClient_Base1::GetExtendedStatus(unsigned long, int, teIEC1131Type *, tGCValue *, int *)
+00008cf4 PhMODBUS.elf CPhClient_Base1::BufferTakeForReceive(unsigned long, int *)
+00008d28 PhMODBUS.elf CPhClient_Base1::BufferGiveForReceive(unsigned long, int, int *)
+00008d60 PhMODBUS.elf CPhClient_Base1::BufferTakeForSend(unsigned long, unsigned int, int *)
+00008d98 PhMODBUS.elf CPhClient_Base1::BufferGiveForSend(unsigned long, unsigned int, int, int *)
+00008dd4 PhMODBUS.elf CPhClient_Base1::SetStatus(unsigned long, int, int *)
+00008e0c PhMODBUS.elf CPhClient_Base1::ReadRes(unsigned long, int, int *)
+00008e44 PhMODBUS.elf CPhClient_Base1::WriteRes(unsigned long, int, int *)
+00008e7c PhMODBUS.elf CPhStatus_Base1::KickWatchdog(unsigned short *, teHWFErrorCode *)
+00008eb0 PhMODBUS.elf CPhStatus_Base1::GetStatus(trHWFAddress, teHWFUnitKind, unsigned long *, unsigned long *, teHWFErrorCode *)
+00008ef0 PhMODBUS.elf CPhIOAccess_Base::GetCopyRoutineReference(unsigned int, void (**)(short, void *, void *), IOAccessErrorCode *)
+00008f28 PhMODBUS.elf CPhIOAccess_Base::ObtainDPM(eAreaType, trHWFAddress, IOAccessErrorCode *)
+00008f60 PhMODBUS.elf CPhIOAccess_Base::ReleaseDPM(eAreaType, trHWFAddress, IOAccessErrorCode *)
+00008f98 PhMODBUS.elf CPhDiagnostics_Base::PhDiagnosticsTableNew(teDiagErrorCode *)
+00008fc8 PhMODBUS.elf CPhDiagnostics_Base::PhDiagnosticsTableCleared(teDiagErrorCode *)
+00008ff8 PhMODBUS.elf CPhOLU_Base::PrepareForFirmwareDownload(trHWFAddress const *, unsigned long, eOLUStatus *)
+00009030 PhMODBUS.elf CPhOLU_Base::PrepareForApplicationStop(trHWFAddress const *, eOLUStatus *)
+00009064 PhMODBUS.elf CPhOLU_Base::ResumeOperation(trHWFAddress const *, eOLUStatus *)
+00009098 PhMODBUS.elf CPhOLU_Base::PhResponsibilityForOLU(trHWFAddress const *, eOLUStatus *)
+000090cc PhMODBUS.elf CPhOLU_Base::PrepareForLeavingOLU(trHWFAddress const *, eOLUStatus *)
+00009100 PhMODBUS.elf CPhOLU_Base::PrepareForAppAndConfigDownload(trHWFAddress const *, eOLUStatus *)
+00009138 PhMODBUS.elf IPhCommon::IPhCommon(void)
+000091a4 PhMODBUS.elf IUnknown::IUnknown(void)
+000091fc PhMODBUS.elf CRTFuncTabBegin
+000091fc PhMODBUS.elf Letext
+000091fc PhMODBUS.elf scprocs
+00009208 PhMODBUS.elf printf
+0000920c PhMODBUS.elf sprintf
+00009210 PhMODBUS.elf sscanf
+00009214 PhMODBUS.elf memcpy
+00009218 PhMODBUS.elf memset
+0000921c PhMODBUS.elf strcat
+00009220 PhMODBUS.elf strcmp
+00009224 PhMODBUS.elf strlen
+00009228 PhMODBUS.elf strncmp
+0000922c PhMODBUS.elf strncpy
+00009230 PhMODBUS.elf memchr
+00009234 PhMODBUS.elf memcmp
+00009238 PhMODBUS.elf memmove
+0000923c PhMODBUS.elf strchr
+00009240 PhMODBUS.elf strcoll
+00009244 PhMODBUS.elf strcpy
+00009248 PhMODBUS.elf strcspn
+0000924c PhMODBUS.elf strncat
+00009250 PhMODBUS.elf strpbrk
+00009254 PhMODBUS.elf strrchr
+00009258 PhMODBUS.elf strspn
+0000925c PhMODBUS.elf strstr
+00009260 PhMODBUS.elf strtok
+00009264 PhMODBUS.elf strxfrm
+00009268 PhMODBUS.elf strerror
+0000926c PhMODBUS.elf pow
+00009270 PhMODBUS.elf acos
+00009274 PhMODBUS.elf asin
+00009278 PhMODBUS.elf atan
+0000927c PhMODBUS.elf atan2
+00009280 PhMODBUS.elf ceil
+00009284 PhMODBUS.elf cos
+00009288 PhMODBUS.elf cosh
+0000928c PhMODBUS.elf exp
+00009290 PhMODBUS.elf fabs
+00009294 PhMODBUS.elf floor
+00009298 PhMODBUS.elf fmod
+0000929c PhMODBUS.elf frexp
+000092a0 PhMODBUS.elf ldexp
+000092a4 PhMODBUS.elf log
+000092a8 PhMODBUS.elf log10
+000092ac PhMODBUS.elf modf
+000092b0 PhMODBUS.elf sin
+000092b4 PhMODBUS.elf sinh
+000092b8 PhMODBUS.elf sqrt
+000092bc PhMODBUS.elf tan
+000092c0 PhMODBUS.elf tanh
+000092c4 PhMODBUS.elf div_r
+000092c8 PhMODBUS.elf labs
+000092cc PhMODBUS.elf strtol
+000092d0 PhMODBUS.elf free
+000092d4 PhMODBUS.elf abort
+000092d8 PhMODBUS.elf abs
+000092dc PhMODBUS.elf atof
+000092e0 PhMODBUS.elf atoi
+000092e4 PhMODBUS.elf atol
+000092e8 PhMODBUS.elf bsearch
+000092ec PhMODBUS.elf ldiv_r
+000092f0 PhMODBUS.elf qsort
+000092f4 PhMODBUS.elf rand
+000092f8 PhMODBUS.elf srand
+000092fc PhMODBUS.elf strtod
+00009300 PhMODBUS.elf strtoul
+00009304 PhMODBUS.elf malloc
+00009308 PhMODBUS.elf __assert
+0000930c PhMODBUS.elf time
+00009310 PhMODBUS.elf asctime
+00009314 PhMODBUS.elf gmtime
+00009318 PhMODBUS.elf clock
+0000931c PhMODBUS.elf ctime
+00009320 PhMODBUS.elf difftime
+00009324 PhMODBUS.elf localtime
+00009328 PhMODBUS.elf mktime
+0000932c PhMODBUS.elf strftime
+00009330 PhMODBUS.elf eventcollSem
+00009334 PhMODBUS.elf intLock
+00009338 PhMODBUS.elf intUnlock
+0000933c PhMODBUS.elf __builtin_vec_new
+00009340 PhMODBUS.elf __builtin_vec_delete
+00009344 PhMODBUS.elf fprintf
+00009348 PhMODBUS.elf __stdout
+0000934c PhMODBUS.elf __stderr
+00009350 PhMODBUS.elf setjmp
+00009354 PhMODBUS.elf longjmp
+00009358 PhMODBUS.elf CRTFuncTabEnd
+00009358 PhMODBUS.elf ecprocs
+00009358 PhMODBUS.elf etext
+00009358 PhMODBUS.elf sgot2
+00009870 PhMODBUS.elf egot2
+00009870 PhMODBUS.elf sfixup
+00009bf0 PhMODBUS.elf efixup
+00009bf0 PhMODBUS.elf m_ModbusLLTag
+00009bf4 PhMODBUS.elf m_ModbusLLTag
+00009bf8 PhMODBUS.elf m_ModbusLLTag
+00009bfc PhMODBUS.elf m_ModbusLLTag
+00009c00 PhMODBUS.elf m_ModbusLLTag
+00009c04 PhMODBUS.elf m_ModbusLLTag
+00009c08 PhMODBUS.elf m_ModbusLLTag
+00009c0c PhMODBUS.elf m_ModbusLLTag
+00009c10 PhMODBUS.elf m_ModbusLLTag
+00009c14 PhMODBUS.elf useEXEHEAD
+00009c30 PhMODBUS.elf CComCoClass<CPhMODBUS, &CLSID_CPhMODBUS>::m_HeapTag
+00009c34 PhMODBUS.elf CPhMODBUS::m_ModbusLLTag
+00009e30 PhMODBUS.elf CModbusMessage::m_TagModbus
+00009e80 PhMODBUS.elf CModbusMessage virtual table
+00009e98 PhMODBUS.elf CPhMODBUS::CPhClient_Base1 virtual table
+00009f58 PhMODBUS.elf CPhMODBUS::CPhClient_Base virtual table
+00009fe8 PhMODBUS.elf CPhMODBUS::CPhStatus_Base1 virtual table
+0000a020 PhMODBUS.elf CPhMODBUS::CPhConfig_Base1 virtual table
+0000a0a0 PhMODBUS.elf CPhMODBUS virtual table
+0000a0e0 PhMODBUS.elf IPhClient1 virtual table
+0000a1a0 PhMODBUS.elf IPhClient virtual table
+0000a230 PhMODBUS.elf IPhStatus1 virtual table
+0000a268 PhMODBUS.elf IPhConfig1 virtual table
+0000a2e8 PhMODBUS.elf IUnknown virtual table
+0000a310 PhMODBUS.elf CompanyName
+0000a314 PhMODBUS.elf ProductName
+0000a320 PhMODBUS.elf ProductVersion
+0000bba4 PhMODBUS.elf CRCHiTable
+0000bca4 PhMODBUS.elf CRCLoTable
+0000bf30 PhMODBUS.elf CRCHiTable
+0000c030 PhMODBUS.elf CRCLoTable
+0000d3b4 PhMODBUS.elf CLSID_CPhMODBUS
+0000d3d0 PhMODBUS.elf PHproperties
+0000d3d8 PhMODBUS.elf CMirroredObject::c_pMirroredObjectMgrImpl
+0000d3dc PhMODBUS.elf CMirroredObjectAgent::c_pHeapCallback
+0000d3e0 PhMODBUS.elf CMirroredObjectAgent::c_AgentTag
+0000d434 PhMODBUS.elf GUID_NULL
+0000d448 PhMODBUS.elf IID_IPhCommonCB
+0000d458 PhMODBUS.elf IID_IPhConfigCB
+0000d468 PhMODBUS.elf IID_IPhConfigCB1
+0000d478 PhMODBUS.elf IID_IPhIOAccessCB
+0000d488 PhMODBUS.elf IID_IPhExternalConfigCB1
+0000d498 PhMODBUS.elf IID_IPhExternalConfigCB2
+0000d4a8 PhMODBUS.elf IID_IPhExternalConfigCB3
+0000d4b8 PhMODBUS.elf IID_IPhOLUCB
+0000d4c8 PhMODBUS.elf IID_IPhCommon
+0000d4d8 PhMODBUS.elf IID_IPhConfig1
+0000d4e8 PhMODBUS.elf IID_IPhStatus1
+0000d4f8 PhMODBUS.elf IID_IPhClient
+0000d508 PhMODBUS.elf IID_IPhClient1
+0000d518 PhMODBUS.elf IID_IPhDiagnostics
+0000d528 PhMODBUS.elf IID_IPhIOAccess
+0000d538 PhMODBUS.elf IID_IPhSafeConfig
+0000d548 PhMODBUS.elf IID_IPhSafeConfig1
+0000d558 PhMODBUS.elf IID_IPhSimulation
+0000d568 PhMODBUS.elf IID_IPhOLU
+0000d578 PhMODBUS.elf IID_IHeapCallback
+0000d588 PhMODBUS.elf IID_ISystemUtilitiesCallback
+0000d598 PhMODBUS.elf IID_ISystemUtilitiesCallback1
+0000d5a8 PhMODBUS.elf IID_ISystemUtilitiesCallback2
+0000d5b8 PhMODBUS.elf IID_IEventMgrCallback
+0000d5c8 PhMODBUS.elf IID_IEventMgrCallback1
+0000d5d8 PhMODBUS.elf IID_ISysClockCallback
+0000d5e8 PhMODBUS.elf IID_ISysClockCallback1
+0000d5f8 PhMODBUS.elf IID_ISysClockCallback2
+0000d608 PhMODBUS.elf IID_ISysClockCallback3
+0000d618 PhMODBUS.elf IID_IVarServerCallback
+0000d628 PhMODBUS.elf IID_IVOSCallback
+0000d638 PhMODBUS.elf IID_INetwClockSynchCallback
+0000d648 PhMODBUS.elf IID_IConfigCBCallback1
+0000d658 PhMODBUS.elf IID_IConfigCBCallback2
+0000d668 PhMODBUS.elf IID_IConfigCBCallback3
+0000d678 PhMODBUS.elf IID_IExternalConfigCBCallback
+0000d688 PhMODBUS.elf IID_IExternalConfigCBCallback2
+0000d698 PhMODBUS.elf IID_IExternalConfigCBCallback3
+0000d6a8 PhMODBUS.elf IID_IExternalConfigCBCallback4
+0000d6b8 PhMODBUS.elf IID_IMessagesCBCallback
+0000d6c8 PhMODBUS.elf IID_IAIPAccessCBCallback
+0000d6d8 PhMODBUS.elf IID_IOLUCBCallback
+0000d6e8 PhMODBUS.elf IID_ISystemUtilitiesCBCallback1
+0000d6f8 PhMODBUS.elf IID_IConfigCallback1
+0000d708 PhMODBUS.elf IID_IConfigCallback2
+0000d718 PhMODBUS.elf IID_IStatusCallback1
+0000d728 PhMODBUS.elf IID_IGenClientCallback
+0000d738 PhMODBUS.elf IID_IGenClientCallback1
+0000d748 PhMODBUS.elf IID_IDriverFactoryCallback
+0000d758 PhMODBUS.elf IID_IDiagnosticsCallback
+0000d768 PhMODBUS.elf IID_ISafeConfigCallback
+0000d778 PhMODBUS.elf IID_ISafeConfigCallback1
+0000d788 PhMODBUS.elf IID_ICRCCallback
+0000d798 PhMODBUS.elf IID_IIOAccessCallback
+0000d7a8 PhMODBUS.elf IID_CriticalRegionCallback
+0000d7b8 PhMODBUS.elf IID_VOSExceptionCallback
+0000d7c8 PhMODBUS.elf IID_DrvCommonCallback
+0000d7d8 PhMODBUS.elf IID_ProtectedMirroredHeapCallback
+0000d7e8 PhMODBUS.elf IID_SharedMirroredHeapCallback
+0000d7f8 PhMODBUS.elf IID_TemporaryMirroredHeapCallback
+0000d808 PhMODBUS.elf IID_IRestrictedVOSCallback
+0000d818 PhMODBUS.elf CPhOLU_Base virtual table
+0000d870 PhMODBUS.elf CPhDiagnostics_Base virtual table
+0000d8a8 PhMODBUS.elf CPhIOAccess_Base virtual table
+0000d8e8 PhMODBUS.elf CPhStatus_Base1 virtual table
+0000d920 PhMODBUS.elf CPhClient_Base1 virtual table
+0000d9e0 PhMODBUS.elf CPhClient_Base virtual table
+0000da70 PhMODBUS.elf CPhConfig_Base1 virtual table
+0000daf0 PhMODBUS.elf CPhCommon_Base virtual table
+0000db30 PhMODBUS.elf GUID_NULL
+0000db40 PhMODBUS.elf MaxCompanyNameLen
+0000db44 PhMODBUS.elf MaxProductNameLen
+0000db48 PhMODBUS.elf MaxProductVersionLen
+0000db4c PhMODBUS.elf cMaxNrOfHWFAdrLevels
+0000db50 PhMODBUS.elf cGCWrite
+0000db54 PhMODBUS.elf cGCRead
+0000db58 PhMODBUS.elf cGCSubscription
+0000db5c PhMODBUS.elf cGCRegistration
+0000db60 PhMODBUS.elf cGCAddMemoryAreaArrayNumberPlaces
+0000db64 PhMODBUS.elf cPONotFound
+0000db68 PhMODBUS.elf cGCBusyDisconnecting
+0000db6c PhMODBUS.elf cGCRemovingPO
+0000db70 PhMODBUS.elf cGCParametersMissing
+0000db74 PhMODBUS.elf cGCAlreadyDefined
+0000db78 PhMODBUS.elf cGCTypeNotSupported
+0000db7c PhMODBUS.elf cGCIndexOutOfRange
+0000db80 PhMODBUS.elf cGCTypeNotDefined
+0000db84 PhMODBUS.elf cGCStringMismatch
+0000db88 PhMODBUS.elf cGCFacadeError
+0000db8c PhMODBUS.elf cGCInvalidHandle
+0000db90 PhMODBUS.elf cGCAddedMemoryAreaError
+0000db94 PhMODBUS.elf cGCBSErrorDetected
+0000db98 PhMODBUS.elf cAborted
+0000db9c PhMODBUS.elf cSuccess
+0000dba0 PhMODBUS.elf cPending
+0000dba4 PhMODBUS.elf cGCDisconnected
+0000dba8 PhMODBUS.elf cGCExtendedStatus
+0000dbac PhMODBUS.elf cPHHeapFull
+0000dbb0 PhMODBUS.elf cPHTypeMismatch
+0000dbb4 PhMODBUS.elf cPHSizeMismatch
+0000dbb8 PhMODBUS.elf cPHErrAccessData
+0000dbbc PhMODBUS.elf cPHErrProtocolData
+0000dbc0 PhMODBUS.elf cPHAccessVarNotFound
+0000dbc4 PhMODBUS.elf cPHErrInvalidPar
+0000dbc8 PhMODBUS.elf cPHDirAddrFormatNotSupported
+0000dbcc PhMODBUS.elf cPHGenericFormatNotSupported
+0000dbd0 PhMODBUS.elf cPHNotImplemented
+0000dbd4 PhMODBUS.elf cPHVarDataUnsupportedDirection
+0000dbd8 PhMODBUS.elf cPHVarDataNotSupported
+0000dbdc PhMODBUS.elf cPHRawDataNotSupported
+0000dbe0 PhMODBUS.elf cPHDriverError
+0000dbe4 PhMODBUS.elf cPHHardwareError
+0000dbe8 PhMODBUS.elf cPHTRAdisconnect
+0000dbec PhMODBUS.elf cLegacyFormat
+0000dbf0 PhMODBUS.elf cDirAddrFormat
+0000dbf4 PhMODBUS.elf cGenericFormat
+0000dbf8 PhMODBUS.elf eHWFDeviceSpecific1
+0000dbfc PhMODBUS.elf eHWFUnitBPrimary
+0000dc00 PhMODBUS.elf cHWFOPCMask
+0000dc04 PhMODBUS.elf cHWFOPCChannelOk
+0000dc08 PhMODBUS.elf cHWFOPCChannelError
+0000dc0c PhMODBUS.elf cHWFOPCChannelForced
+0000dc10 PhMODBUS.elf cHWFOPCDeviceError
+0000dc14 PhMODBUS.elf cHWFOPCChannelErrorLow
+0000dc18 PhMODBUS.elf cHWFOPCChannelErrorHigh
+0000dc1c PhMODBUS.elf cHWFOPCChannelHigh
+0000dc20 PhMODBUS.elf cHWFOPCChannelLow
+0000dc24 PhMODBUS.elf cHWFChannelRedundant
+0000dc28 PhMODBUS.elf cHWFUnitBPrimary
+0000dc2c PhMODBUS.elf cHWFBackupUnitError
+0000dc30 PhMODBUS.elf cHWFXSPValueUsed
+0000dc34 PhMODBUS.elf cHWFChannelSimulated
+0000dc38 PhMODBUS.elf cHWFChannelForced
+0000dc3c PhMODBUS.elf cHWFChannelInverted
+0000dc40 PhMODBUS.elf cHWFXSPMask
+0000dc44 PhMODBUS.elf cHWFXSPNoSetting
+0000dc48 PhMODBUS.elf cHWFXSPValue
+0000dc4c PhMODBUS.elf cHWFXSPClear
+0000dc50 PhMODBUS.elf cHWFXSPFreeze
+0000dc54 PhMODBUS.elf cHWFXSPInvert
+0000dc58 PhMODBUS.elf cHWFXSPInitDPM
+0000dc5c PhMODBUS.elf HWFNO_XSP_FORCE
+0000dc5d PhMODBUS.elf HWFFORCE_OSP
+0000dc5e PhMODBUS.elf HWFFORCE_CLEAR
+0000dc5f PhMODBUS.elf HWFFORCE_BLOCK_IO_DPM_OUT_WRITE
+0000dc60 PhMODBUS.elf HWFFORCE_BLOCK_SM_DPM_OUT_WRITE
+0000dc64 PhMODBUS.elf cHWFMaxNrOfChannels
+0000dc68 PhMODBUS.elf cHWFStatusErrorsMask
+0000dc6c PhMODBUS.elf cHWFRootStatusErrorMask
+0000dc70 PhMODBUS.elf cHWFDoNotCopyUnitErrorMask
+0000dc74 PhMODBUS.elf cFWUpgradePrimary
+0000dc78 PhMODBUS.elf cFWUpgradeBackup
+0000dc7c PhMODBUS.elf cNewPhVersion
+0000dc80 PhMODBUS.elf cNewPMFirmware
+0000dc88 PhMODBUS.elf IPhCommon virtual table
+0000dcc0 PhMODBUS.elf IUnknown virtual table
+00015ce8 G _SDA_BASE_ PhMODBUS.elf 
+</SYMBOLS>

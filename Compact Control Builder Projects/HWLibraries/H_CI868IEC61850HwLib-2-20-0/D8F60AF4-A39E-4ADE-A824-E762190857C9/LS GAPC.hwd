@@ -1,0 +1,152 @@
+(****************************************************************************)
+(* FILE            LS GAPC.hwd                                              *)
+(*                                                                          *)
+(* DESCRIPTION     Hardware definition file for LS GAPC                     *)
+(*                                                                          *)
+(* AUTHOR          Ramachandragowda G                                       *)
+(*                                                                          *)
+(* All rights reserved. Reproduction, modification, use or disclosure       *)
+(* to third parties without express authority, is forbidden.                *)
+(* Copyright ABB Inc. 2006.                                                 *)
+(*                                                                          *)
+(*                                                                          *)
+(* 27-04-2006 Ramachandragowda G            Initial version                 *)
+(*                                                                          *)
+(****************************************************************************)
+FileHeader
+   Contents               "LS GAPC"
+   Date                   "2007-04-27"
+   Version                "1.0-0"
+  RequiredSyntaxVersion "3.0"
+End FileHeader
+
+HWUnitInfo  (* LS GAPC *)
+   HWUnitID {60CD188F-83F4-4d2c-BDFE-7AC0DE29AE42} (* GUID for LS GAPC, GAPC for Load Shedding *)
+   Description "LS GAPC"
+   Information "GAPC for Load Shedding"
+   Icons LNType
+   Attributes AdapterUnit DigitalOut IoUnit
+   InterfaceInfo
+     IoSysType    CIGIO
+     CLSID_CB    {53315084-E413-4c55-92E1-C2E1FAF19460} (*  CLSID_CB  = GUID for CI868 PH in Control builder CB *)
+     CLSID_CTRL  {4AB844AC-2BEE-4910-BA08-CA109A5D7E81}  (* CLSID_CTRL = GUID for CI868 PH in Controler *)
+   End InterfaceInfo
+
+   ConnectionInfo
+      ConnectType OwnUnit
+      IOConnect Fail
+      IoConfig  Fail
+   End ConnectionInfo
+
+   ExternalConfigInfo
+      ShowExternalChannelDescriptionColumn
+   End ExternalConfigInfo
+
+   Parameters
+      ParamInfo
+         Name IALADDRSTR
+         Description "IALaddr for Str"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 1
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPESTR
+         Description "DMCD Type for Str"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype INT
+         Default 1
+         ParValIndex 2
+         ParamType Numbered 2
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOSTR
+         Description "Protocol Info for Str"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 3
+      End ParamInfo
+      ParamInfo
+         Name IALADDROP
+         Description "IALaddr for Op"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 4
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEOP
+         Description "DMCD Type for Op"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype INT
+         Default 1
+         ParValIndex 2
+         ParamType Numbered 5
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOOP
+         Description "Protocol Info for Op"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 6
+      End ParamInfo
+      ParamInfo
+         Name HWDVERSION
+         Description "Version of HWD File"
+         ExternalVisible
+         Datatype STRING
+         Default " 1.0-0 "
+         ParamType Numbered 8
+      End ParamInfo
+      ParamInfo
+         Name LNNAME
+         Description "LN Name"
+         Datatype STRING
+         Default " "100
+         ParamType Numbered 10
+      End ParamInfo
+   End Parameters
+
+   ParValList
+     ParVal
+        ParValIndex 2
+        UnitText    " "
+        INT 0 255 0 255
+     End ParVal
+   End ParValList
+
+   Channels
+    ChannelInfo
+      Number         1
+      ChannelName   "Str"
+      Datatype       Bool_Out
+      Routine        201
+      CopyParameters 16#40000 16#0003
+    End ChannelInfo
+    ChannelInfo
+      Number         2
+      ChannelName   "Op"
+      Datatype       Bool_Out
+      Routine        201
+      CopyParameters 16#40008 16#0003
+    End ChannelInfo
+ End Channels
+
+Configuration
+    ConfigInfo
+      ModuleKey       16#03
+      OutAreaSize     16 BYTE
+    End ConfigInfo
+  End Configuration
+
+  HWUnitInfoCRC 16#D3C2
+End HWUnitInfo

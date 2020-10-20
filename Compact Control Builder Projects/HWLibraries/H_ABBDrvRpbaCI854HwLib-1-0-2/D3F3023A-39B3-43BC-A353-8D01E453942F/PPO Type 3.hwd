@@ -1,0 +1,72 @@
+
+
+
+(*========================================================*)
+(*                                                        *)
+(*            PPO Type 3 DPV1                             *)
+(*                                                        *)
+(*========================================================*)
+
+HWUnitInfo
+  HWUnitID         16#03850812
+  Description      "PPO Type 3"
+  Information      "PPO Type 3"
+  Icons            ProtocolType
+  Attributes       IoUnit 
+
+  Channels
+    ChannelInfo
+      Number            0
+      ChannelName      "Status"
+      Datatype          Int_In
+      Routine           310
+      CopyParameters    16#0 16#0 16#30000 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number            1
+      ChannelName      "Speed Actual"
+      Datatype          Int_In
+      Routine           310
+      CopyParameters    16#0 16#0 16#30001 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number            2
+      ChannelName      "Command"
+      Datatype          Int_Out
+      Routine           410
+      CopyParameters    16#0 16#0 16#40000 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number            3
+      ChannelName      "Speed Ref"
+      Datatype          Int_Out
+      Routine           410
+      CopyParameters    16#0 16#0 16#40001 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number            4
+      ChannelName      "UnitStatus"
+      Datatype          Status_In
+      Routine           900
+      CopyParameters    16#0 16#0 16#50000
+    End ChannelInfo
+  End Channels
+
+  Configuration
+    ConfigInfo
+      ModuleKey        16#3
+      InAreaSize       2 WORD
+      OutAreaSize      2 WORD
+      InWord
+        WORD  0    0
+        WORD  0    1
+      OutWord
+        WORD  0    0
+        WORD  0    1
+      CIGIOConnData
+        CIGIOData        16#01 16#F1
+      End CIGIOConnData
+    End ConfigInfo
+  End Configuration
+  HWUnitInfoCRC 16#A15D
+End HWUnitInfo (* PPO Type 3 *)

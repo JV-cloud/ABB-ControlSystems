@@ -1,0 +1,138 @@
+(*=============================*)
+(* Modified : 2020-10-20 00:37 *)
+(* Modified : 2020-10-20 00:39 *)
+(*=============================*)
+FileHeader
+  Contents              "PDP22-FBP with UMC100"
+  Date                  "20.10.2020"
+  Version               "Version 1.5.2" (* Device Import Wizard *)
+  (* Parser             "Profibus 1.6.2" *)
+  RequiredSyntaxVersion "3.0"
+End FileHeader
+
+(*========================================================*)
+(*                 PDP22-FBP with UMC100                  *)
+(*========================================================*)
+
+HWUnitInfo
+  HWUnitID         {fe73f3c2-5052-4cde-b7d1-ee3d2fd03494}
+  Description      "PDP22-FBP with UMC100"
+  Information      "none"
+  Icons            DefaultAdapterType
+  Attributes       AdapterUnit AutoAttach
+
+  InterfaceInfo
+    IoSysType  CIGIO
+    CLSID_CB   {70AC2B68-4487-48e3-9957-EA25FD20A55F}
+    CLSID_CTRL {7a59948b-4432-4d69-9f66-2ca7ed7f9db5}
+    HWConfig   Fail
+  End InterfaceInfo
+
+  ConnectionInfo
+    ConnectType  AllUnits
+    IOConnect    Fail
+    IOConfig     NoFail
+  End ConnectionInfo
+
+  SubUnits  1
+
+  SubUnitTypes
+    HWUnitID {fe9ba976-cd94-48e1-a2a0-4b70d14ec3a2}
+  End SubUnitTypes
+
+  Parameters
+    ParamInfo
+      Name            BLOCK___PARAMETER_PARAM000
+      Description     "Block - Parameter"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         0
+      ParValIndex     0
+      ParamType       CIGIOData 4 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            DIAGNOSIS_FORMAT_PARAM001
+      Description     "Diagnosis Format"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         0
+      ParValIndex     1
+      ParamType       CIGIOData 5 0 0 ByteParam ByteOffset
+    End ParamInfo
+  End Parameters
+
+  ParValList
+    ParVal
+      ParValIndex     0
+      UnitText        ""
+      enum
+      "Use Block-Parameters" 0
+      "Ignore Block-Parameters" 1
+    End ParVal
+    ParVal
+      ParValIndex     1
+      UnitText        ""
+      enum
+      "DPV0 Diagnosis Format" 0
+      "DPV1 Diagnosis Format" 1
+    End ParVal
+  End ParValList
+
+  Channels
+    ChannelInfo
+      Number                0
+      ChannelName           "UnitStatus"
+      Datatype              Status_In
+      Routine               900
+      CopyParameters        16#0 16#0 16#50000
+    End ChannelInfo
+  End Channels
+
+  UnitStatusText
+    ExtendedStatus1   "Slave does not exist"
+    ExtendedStatus2   "Configuration data fault"
+    ExtendedStatus3   "Parameter data fault"
+    ExtendedStatus4   "Static diagnostic"
+    ExtendedStatus5   "Backup unit missing"
+    ExtendedStatus6   "Diagnostic configuration data fault"
+    ExtendedStatus7   "Report diagnostics fault"
+  End UnitStatusText
+
+  UnitStatusSeverity
+    ExtendedStatus1   GeneralError   TriggerAlarm SeverityMedium
+    ExtendedStatus2   GeneralError   TriggerAlarm SeverityMedium
+    ExtendedStatus3   GeneralError   TriggerAlarm SeverityMedium
+    ExtendedStatus4   GeneralWarning TriggerEvent SeverityLow   
+    ExtendedStatus5   GeneralWarning TriggerAlarm SeverityLow   
+    ExtendedStatus6   GeneralWarning TriggerEvent SeverityMedium
+    ExtendedStatus7   GeneralWarning TriggerEvent SeverityMedium
+  End UnitStatusSeverity
+
+  Configuration
+    ConfigInfo
+      ModuleKey        16#34e0
+      InAreaSize       0 BYTE
+      OutAreaSize      0 BYTE
+      CIGIOConnData
+        CIGIOData      16#05 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00
+        CIGIOData      16#02 16#88 16#00 16#00 16#00 16#34 16#e0 16#01
+        CIGIOData      16#03 16#00 16#0f 16#00 16#0f 16#00 16#0f 16#00 16#0f 16#00 16#0f 16#00 16#00 16#00 16#14 16#00 16#23 16#00 16#32 16#00 16#5f
+        CIGIOData      16#04 16#00 16#01
+        CIGIOData      16#06 16#30
+        CIGIOData      16#07 16#30
+        CIGIOData      16#08 16#60
+        CIGIOData      16#09 16#e8
+        CIGIOData      16#0A 16#00 16#00 16#00 (* no HCIR support*)
+        SyncronizeDataExchange
+      End CIGIOConnData
+    End ConfigInfo
+    ConfigInfo
+      EmptyConfig
+      ModuleKey        16#FFFF
+      InAreaSize       0 BYTE
+      OutAreaSize      0 BYTE
+    End ConfigInfo
+  End Configuration
+
+  HWUnitInfoCRC 16#84be
+End HWUnitInfo

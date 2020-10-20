@@ -1,0 +1,108 @@
+(*============================*)
+(* Created : 2019-05-23 10:25 *)
+(*============================*)
+FileHeader
+  Contents              "FPNO-21"
+  Date                  "23.05.2019"
+  Version               "Version 1.4.9" (* Device Import Wizard *)
+  (* Parser             "Profinet 1.0.17.0" *)
+  RequiredSyntaxVersion "3.0"
+End FileHeader
+
+SessionID d83db8e3-1aff-4b36-973c-5686cf5439c9
+
+(*========================================================*)
+(*                        FPNO-21                         *)
+(*========================================================*)
+
+HWUnitInfo
+  HWUnitID         {1a4a23be-462a-4f8e-ae8c-09f4a1d67cfd}
+  Description      "FPNO-21"
+  Information      "PROFINET IO module FPNO"
+  Icons            MotorType
+  Attributes       AdapterUnit AutoAttach
+  DownloadInstanceNamesForSubUnits
+
+  InterfaceInfo
+    Interface  CIGInterface
+    CLSID_CB   {D9720536-1BB9-4f74-A5CD-DCDDED2398CA}
+    CLSID_CTRL {38CEFCC8-23D7-43f9-BE6D-4251F87BF421}
+    HWConfig   Fail
+  End InterfaceInfo
+
+  DiscreteNumbers
+    0..2
+  End DiscreteNumbers
+
+  SubUnitTypes
+    HWUnitID {110772c2-893f-41d6-a301-b20c97eaf807} FixedPositions 0 Instances 1
+    HWUnitID {92a67e3a-8b34-40e6-a4c0-e15f9f8557cd} Positions 1
+    HWUnitID {1976e0ec-fa5f-429f-b1ce-3cd22f653eb4} Positions 1
+    HWUnitID {1dbad18d-5845-4b65-8634-a28f9fca5a8f} Positions 1
+    HWUnitID {bace5b54-05f7-47a8-b972-5ada6eccec8e} Positions 1
+  End SubUnitTypes
+
+  Parameters
+    ParamInfo
+      Name            stationName
+      Description     "Station Name"
+      CompileType     HWConfig
+      Datatype        STRING
+      Default         "" 240
+      ParamType       Numbered 2
+    End ParamInfo
+    ParamInfo
+      Name            ipAddress
+      Description     "IP Address"
+      CompileType     HWConfig
+      Datatype        STRING
+      Default         "" 15
+      ParamType       Numbered 3
+    End ParamInfo
+    ParamInfo
+      Name            subnetMask
+      Description     "Subnet Mask"
+      CompileType     HWConfig
+      Datatype        STRING
+      Default         "" 15
+      ParamType       Numbered 4
+    End ParamInfo
+    ParamInfo
+      Name            defaultGateway
+      Description     "Default Gateway"
+      CompileType     HWConfig
+      Datatype        STRING
+      Default         "" 15
+      ParamType       Numbered 5
+    End ParamInfo
+  End Parameters
+
+  Channels
+    ChannelInfo
+      Number                0
+      ChannelName           "UnitStatus"
+      Datatype              Status_In
+      Routine               900
+      CopyParameters        16#0 16#0 16#50000
+    End ChannelInfo
+  End Channels
+
+  UnitStatusText
+    DeviceSpecific1  "Maintenance required"
+    DeviceSpecific2  "Maintenance demanded"
+    DeviceSpecific3  "Diagnosis active"
+    DeviceSpecific4  "Locked by other controller/supervisor"
+    DeviceSpecific6  "Parametrization fault"
+  End UnitStatusText
+
+  UnitStatusSeverity
+    DeviceSpecific1  GeneralWarning TriggerEvent SeverityMedium
+    DeviceSpecific2  GeneralWarning TriggerEvent SeverityMedium
+    DeviceSpecific3  GeneralWarning TriggerEvent SeverityMedium
+    DeviceSpecific4  GeneralWarning TriggerEvent SeverityMedium
+    DeviceSpecific6  GeneralError TriggerAlarm SeverityHigh
+  End UnitStatusSeverity
+  (* ===== No configuration information delivered from the parser ===== *)
+
+  HWUnitInfoCRC 16#e0a3
+End HWUnitInfo

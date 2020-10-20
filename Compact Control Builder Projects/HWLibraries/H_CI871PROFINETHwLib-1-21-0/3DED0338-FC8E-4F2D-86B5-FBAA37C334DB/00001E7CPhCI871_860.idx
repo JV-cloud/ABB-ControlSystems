@@ -1,0 +1,626 @@
+<HEAD>
+Index of symbols created Tue 10/22/2013 10:19:06.07 
+</HEAD>
+<SECTIONS=10>
+00010000 0001f190 .text
+0001f190 0001fa78 .got2
+0001fa78 0001fd64 .fixup
+0001fd64 0001fd70 .bss
+0001fd70 00025648 .data
+00025648 00025648 .sdata
+00025648 0003bb54 .stab
+0003bb54 0001f190 .comment
+0001f190 0003bd94 .sdata2
+0003bd94 0003bd94 .stabstr
+</SECTIONS>
+<SYMBOLS=609>
+00000000 PhCI871_860.elf EXE_HEAD
+00000064 PhCI871_860.elf CPhCI871::CPhCI871(void)
+00000200 PhCI871_860.elf CPhCI871::~CPhCI871(void)
+00000384 PhCI871_860.elf CPhCI871::GetProductInfo(unsigned char *, unsigned char *, unsigned char *, unsigned long)
+000004cc PhCI871_860.elf CPhCI871::SetCommonCallbackInterface(ICommonCallback *)
+00000a8c PhCI871_860.elf CPhCI871::PrepareForTermination(teHWFErrorCode *)
+00000c18 PhCI871_860.elf CPhCI871::PerformSwitchover(trHWFAddress, teHWFErrorCode *)
+00000c98 PhCI871_860.elf CPhCI871::PerformFailover(trHWFAddress, teHWFErrorCode *)
+00000d18 PhCI871_860.elf CPhCI871::StartUsingDevice(trHWFAddress, teHWFErrorCode *)
+00000e44 PhCI871_860.elf CPhCI871::RemoveHWConfiguration(trHWFAddress, teHWFErrorCode *)
+00000f70 PhCI871_860.elf CPhCI871::RemoveIoConnection(unsigned long, teHWFErrorCode *)
+00001088 PhCI871_860.elf CPhCI871::PhResponsibilityForRestart(trHWFAddress, teHWFErrorCode *)
+00001148 PhCI871_860.elf CPhCI871::PhResponsibility(trHWFAddress, teHWFErrorCode *)
+00001208 PhCI871_860.elf CPhCI871::PhResponsibilityForBackupDevice(trHWFAddress, teHWFErrorCode *)
+000012bc PhCI871_860.elf CPhCI871::PhResponsibilityForHotInsert(trHWFAddress, teHWFErrorCode *)
+000013ac PhCI871_860.elf CPhCI871::PhCommonResponsibility(trHWFAddress, teHWFErrorCode *, teResponsibilityType)
+00001548 PhCI871_860.elf CPhCI871::StartUsingIoConnection(trHWFAddress, unsigned long, teHWFErrorCode *)
+00001684 PhCI871_860.elf CPhCI871::KickWatchdog(unsigned short *, teHWFErrorCode *)
+00001934 PhCI871_860.elf CPhCI871::GetStatus(trHWFAddress, teHWFUnitKind, unsigned long *, unsigned long *, teHWFErrorCode *)
+00001a1c PhCI871_860.elf CPhCI871::PhDiagnosticsTableNew(teDiagErrorCode *)
+00001afc PhCI871_860.elf CPhCI871::PhDiagnosticsTableCleared(teDiagErrorCode *)
+00001bdc PhCI871_860.elf CPhCI871::GetCopyRoutineReference(unsigned int, void (**)(short, void *, void *), IOAccessErrorCode *)
+00001ca8 PhCI871_860.elf CPhCI871::ObtainDPM(eAreaType, trHWFAddress, IOAccessErrorCode *)
+00001fec PhCI871_860.elf CPhCI871::ReleaseDPM(eAreaType, trHWFAddress, IOAccessErrorCode *)
+00002330 PhCI871_860.elf CPhCI871::CreateAndOpenCI871Driver(void const *, int, char const *, trHWFAddress const &, unsigned long &)
+0000291c PhCI871_860.elf CPhCI871::HeapCallbackGetMemory(void const *, int, char const *, trHWFAddress const &, int, char *&)
+00002a84 PhCI871_860.elf CPhCI871::HeapCallbackReturnMemory(void const *, int, char const *, trHWFAddress const &, char *)
+00002bb4 PhCI871_860.elf CPhCI871::StatusCallbackRegisterWatchdog(void const *, int, char const *, trHWFAddress const &)
+00002dac PhCI871_860.elf CPhCI871::StatusCallbackDeleteWatchdog(void const *, int, char const *, trHWFAddress const &)
+00002f18 PhCI871_860.elf CPhCI871::StatusCallbackResetStatus(void const *, int, char const *, trHWFAddress const &, teHWFStatusType, teHWFExtStatusType)
+000031ec PhCI871_860.elf CPhCI871::StatusCallbackSetStatus(void const *, int, char const *, trHWFAddress const &, teHWFStatusType, teHWFExtStatusType)
+000034e8 PhCI871_860.elf CPhCI871::EventMgrCallbackGGenerateSystemEvent(void const *, int, char const *, trHWFAddress const &, trHWFAddress, char const *, unsigned long, unsigned long, int, int, eTimeQualityClass, teGSeverityLevels)
+00003678 PhCI871_860.elf CPhCI871::EventMgrCallbackGGenerateExtEvent(void const *, int, char const *, trHWFAddress const &, char const *, trHWFAddress, char const *, unsigned long, unsigned long, int, int, eTimeQualityClass, bool, bool, int, int, bool)
+0000384c PhCI871_860.elf CPhCI871::ConfigCallbackRegisterIoConfiguration(void const *, int, char const *, trHWFAddress const &, unsigned long)
+000039bc PhCI871_860.elf CPhCI871::ConfigCallbackRegisterIoConnection(void const *, int, char const *, trHWFAddress const &, unsigned long, unsigned short *, unsigned short *, bool)
+00003b9c PhCI871_860.elf CPhCI871::ConfigCallbackGetIoConnectionData(void const *, int, char const *, trHWFAddress const &, unsigned short &, unsigned char *&)
+00003d6c PhCI871_860.elf CPhCI871::ConfigCallbackGetHWState(void const *, int, char const *, trHWFAddress const &, trHWFAddress, teHWFHWState *)
+00003f28 PhCI871_860.elf CPhCI871::ConfigCallbackGetIoConnectionState(void const *, int, char const *, trHWFAddress const &, trHWFAddress, teHWFHWState *)
+000040e4 PhCI871_860.elf CPhCI871::ConfigCallbackGetIoConfigurationData(void const *, int, char const *, trHWFAddress const &, unsigned short &, unsigned char *&)
+00004278 PhCI871_860.elf CPhCI871::ConfigCallbackRegisterDevice(void const *, int, char const *, trHWFAddress const &)
+0000440c PhCI871_860.elf CPhCI871::ConfigCallbackGetHWConfigurationData(void const *, int, char const *, trHWFAddress const &, unsigned long &, unsigned long *&)
+0000458c PhCI871_860.elf CPhCI871::ConfigCallbackGetNrOfSubUnits(void const *, int, char const *, trHWFAddress const &, unsigned long &)
+000046e8 PhCI871_860.elf CPhCI871::ConfigCallbackGetFirstSubUnit(void const *, int, char const *, trHWFAddress const &, trHWFAddress &)
+0000485c PhCI871_860.elf CPhCI871::ConfigCallbackGetNextUnit(void const *, int, char const *, trHWFAddress const &, trHWFAddress &)
+000049d0 PhCI871_860.elf CPhCI871::VOSCallbackThreadDelete(void const *, int, char const *, trHWFAddress const &, unsigned long &)
+00004b3c PhCI871_860.elf CPhCI871::VOSCallbackSleepMs(void const *, int, char const *, trHWFAddress const &, unsigned long)
+00004c34 PhCI871_860.elf CPhCI871::VOSCallbackThreadSpawn(void const *, int, char const *, trHWFAddress const &, unsigned long &, char const *, CVosPriorityLevelEnum, unsigned long, unsigned long, int, int, int, int)
+00004d9c PhCI871_860.elf CPhCI871::CIGDriverCallbackSetLed(void const *, int, char const *, trHWFAddress const &, long, bool)
+00004f28 PhCI871_860.elf CPhCI871::CIGDriverCallbackDeviceIoControl(void const *, int, char const *, trHWFAddress const &, unsigned short, rDeviceIoControlHeader *, unsigned long)
+0000521c PhCI871_860.elf CPhCI871::CIGDriverCallbackDeleteTransactionId(void const *, int, char const *, trHWFAddress const &, unsigned long &)
+00005368 PhCI871_860.elf CPhCI871::CIGDriverCallbackDeleteDrvEvent(void const *, int, char const *, trHWFAddress const &, unsigned long &)
+000054b4 PhCI871_860.elf CPhCI871::CIGDriverCallbackWaitForDrvEvent(void const *, int, char const *, trHWFAddress const &, unsigned long, unsigned long, bool)
+000056dc PhCI871_860.elf CPhCI871::CIGDriverCallbackAttachDrvEvent(void const *, int, char const *, trHWFAddress const &, unsigned long, unsigned long)
+000057f8 PhCI871_860.elf CPhCI871::CIGDriverCallbackCreateTransactionId(void const *, int, char const *, trHWFAddress const &, unsigned long &)
+00005924 PhCI871_860.elf CPhCI871::CIGDriverCallbackCreateDrvEvent(void const *, int, char const *, trHWFAddress const &, unsigned long &)
+00005a68 PhCI871_860.elf CPhCI871::CIGDriverCallbackReopen(void const *, int, char const *, trHWFAddress const &)
+00005bb4 PhCI871_860.elf CPhCI871::CIGDriverCallbackClose(void const *, int, char const *, trHWFAddress const &)
+00005d44 PhCI871_860.elf CPhCI871::CIGDriverCallbackRead(void const *, int, char const *, trHWFAddress const &, unsigned long, unsigned short, unsigned char *, unsigned long, unsigned long &)
+000060ac PhCI871_860.elf CPhCI871::CIGDriverCallbackWrite(void const *, int, char const *, trHWFAddress const &, unsigned long, unsigned short, unsigned char *, unsigned long, unsigned long &)
+0000638c PhCI871_860.elf CPhCI871::CIGDriverCallbackGetAsyncResult(void const *, int, char const *, trHWFAddress const &, unsigned long, unsigned long &)
+00006504 PhCI871_860.elf CPhCI871::CIGDriverDelete(void const *, int, char const *, trHWFAddress const &)
+00006680 PhCI871_860.elf CPhCI871::checkCiFirmwareCompatibility(void const *, int, char const *, trHWFAddress const &, ICIGDriverCallback_v1 *)
+00006998 PhCI871_860.elf CPhCI871::StoreMsg(eMsgType, int, char const *, trHWFAddress const &, char const *, unsigned long, unsigned long, unsigned long) const
+00006c7c PhCI871_860.elf CPhCI871::setObtainPointers(void const *, int, char const *, trHWFAddress const &, unsigned short *, unsigned short *)
+00006cec PhCI871_860.elf CPhCI871::startBatchThread(trHWFAddress const &)
+00006ea4 PhCI871_860.elf CPhCI871::stopBatchThread(trHWFAddress const &)
+00007070 PhCI871_860.elf CPhCI871::batchThread(trHWFAddress *)
+00007260 PhCI871_860.elf CPhCI871::deleteDriver(void const *, int, char const *, trHWFAddress const &, bool)
+000073e4 PhCI871_860.elf CPhCI871::attendStatus(int, char const *, trHWFAddress const &, bool const &, unsigned long const &, unsigned long const &)
+000075d4 PhCI871_860.elf CPhCI871::SetSubStates(trHWFAddress const &, bool, unsigned long, unsigned long)
+000077a8 PhCI871_860.elf CPhCI871::distributeAppReadyStatus(void const *, int, char const *, trHWFAddress const &)
+00007860 PhCI871_860.elf CPhCI871::distributeWaitingToInitStatus(void const *, int, char const *, trHWFAddress const &, bool)
+000078fc PhCI871_860.elf CPhCI871::distributeStatus(trHWFAddress const &, bool, unsigned long, unsigned long, teDistributeType)
+00007b88 PhCI871_860.elf CPhCI871::filterDistributeHWStatus(trHWFAddress const &, unsigned long &, unsigned long &)
+00007c28 PhCI871_860.elf CPhCI871::filterStatelessHWStatus(trHWFAddress const &, unsigned long &, unsigned long &)
+00007cc0 PhCI871_860.elf CPhCI871::AddNodeEventList(trHWFAddress, unsigned long, unsigned long)
+00007e58 PhCI871_860.elf CPhCI871::CheckEventList(void)
+00008090 PhCI871_860.elf CPhCI871::PrintObtainReleaseTimes(void)
+000081c4 PhCI871_860.elf CPhCI871::isDriverRunning(void)
+000081f0 PhCI871_860.elf CPhCI871::defineSystemVariables(int, char const *, trHWFAddress const &)
+00008240 G _SDA2_BASE_ PhCI871_860.elf 
+0000837c PhCI871_860.elf CPhCI871::GetSysVarStoreInfo(void) const
+00008414 PhCI871_860.elf CPhCI871::StoreError(int, char const *, trHWFAddress const &, char const *, unsigned long, unsigned long, unsigned long) const
+00008490 PhCI871_860.elf CPhCI871::StoreInfo(CPhCI871::eInfoLevel, int, char const *, trHWFAddress const &, char const *, unsigned long, unsigned long, unsigned long) const
+00008554 PhCI871_860.elf CPhCI871::StoreWarning(int, char const *, trHWFAddress const &, char const *, unsigned long, unsigned long, unsigned long) const
+000085d4 PhCI871_860.elf CPhCI871::operator new(unsigned int, IHeapCallback *)
+00008688 PhCI871_860.elf CPhCI871::heap_delete(void)
+000086f4 PhCI871_860.elf CPhCI871::QueryInterface(_GUID const &, void **)
+00008814 PhCI871_860.elf CPhCI871::AddRef(void)
+0000882c PhCI871_860.elf CPhCI871::Release(void)
+000088ac PhCI871_860.elf CPhCI871::batchThreadStub(void *, void *)
+0000891c PhCI871_860.elf Letext
+00008920 PhCI871_860.elf CPhCI871SubLayer::CPhCI871SubLayer(void)
+000089d8 PhCI871_860.elf CPhCI871SubLayer::~CPhCI871SubLayer(void)
+00008a7c PhCI871_860.elf CPhCI871SubLayer::PutUpperLayerPointer(CPhCI871 *)
+00008a88 PhCI871_860.elf CPhCI871SubLayer::PrepareForTermination(teHWFErrorCode *)
+00008bec PhCI871_860.elf CPhCI871SubLayer::StartUsingDevice(trHWFAddress, teHWFErrorCode *)
+00008cb8 PhCI871_860.elf CPhCI871SubLayer::RemoveHWConfiguration(trHWFAddress, teHWFErrorCode *)
+00008e20 PhCI871_860.elf CPhCI871SubLayer::RemoveIoConnection(unsigned long, teHWFErrorCode *)
+00008f6c PhCI871_860.elf CPhCI871SubLayer::PhResponsibility(trHWFAddress, teHWFErrorCode *, teResponsibilityType)
+0000912c PhCI871_860.elf CPhCI871SubLayer::StartUsingIoConnection(trHWFAddress, unsigned long, teHWFErrorCode *)
+000091f8 PhCI871_860.elf CPhCI871SubLayer::PhDiagnosticsTableNew(teDiagErrorCode *)
+000092d8 PhCI871_860.elf CPhCI871SubLayer::PhDiagnosticsTableCleared(teDiagErrorCode *)
+000093b8 PhCI871_860.elf CPhCI871SubLayer::GeoResetCEM(trHWFAddress const &, bool)
+000094a8 PhCI871_860.elf CPhCI871SubLayer::ConfigureAll(trHWFAddress const &, bool &, teResponsibilityType)
+000099ec PhCI871_860.elf CPhCI871SubLayer::ConfigureDevices(trHWFAddress const &, bool)
+00009f08 PhCI871_860.elf CPhCI871SubLayer::ConfigureModules(trHWFAddress const &, bool, unsigned long &)
+0000a2a0 PhCI871_860.elf CPhCI871SubLayer::RegisterConfiguration(trHWFAddress const &, unsigned long, bool, bool)
+0000a628 PhCI871_860.elf CPhCI871SubLayer::CheckResponse(trHWFAddress const &, CPhCI871SubLayer::trCommand *)
+0000a6b4 PhCI871_860.elf CPhCI871SubLayer::SendCommand(trHWFAddress const &, teControlType)
+0000a82c PhCI871_860.elf CPhCI871SubLayer::SendConfig(trHWFAddress const &, unsigned char *)
+0000aa5c PhCI871_860.elf CPhCI871SubLayer::SendModuleRequest(trHWFAddress const &, trModuleMessage *)
+0000ab50 PhCI871_860.elf CPhCI871SubLayer::SendMsg(trHWFAddress const &, unsigned char const *, unsigned int, unsigned char *, unsigned int)
+0000af28 PhCI871_860.elf CPhCI871SubLayer::SendAck(trHWFAddress const &, unsigned char const *, unsigned int)
+0000b0f0 PhCI871_860.elf CPhCI871SubLayer::PerformDeleteDriver(void)
+0000b328 PhCI871_860.elf CPhCI871SubLayer::StartStatusThread(trHWFAddress const &)
+0000b49c PhCI871_860.elf CPhCI871SubLayer::StopStatusThread(trHWFAddress const &)
+0000b68c PhCI871_860.elf CPhCI871SubLayer::StatusThread(trHWFAddress *)
+0000bc44 PhCI871_860.elf CPhCI871SubLayer::performHWStatusSysAlarm(trHWFAddress const &)
+0000c084 PhCI871_860.elf CPhCI871SubLayer::CreateSystemEventForHwStatus(trHWFAddress const &, teInternalStatusBits, bool)
+0000c328 PhCI871_860.elf CPhCI871SubLayer::performDiagnosisAlarm(trHWFAddress const &)
+0000c714 PhCI871_860.elf CPhCI871SubLayer::formatMessageString(trHWFAddress const &, char *, trDiagBody *, unsigned short, unsigned short)
+0000ccc4 PhCI871_860.elf CPhCI871SubLayer::GetDiagnosisStringForErrorType(trHWFAddress const &, char *, unsigned short, unsigned short)
+0000ce2c PhCI871_860.elf CPhCI871SubLayer::ChannelPropertiesTreatment(trHWFAddress const &, unsigned short, unsigned short)
+0000d000 PhCI871_860.elf CPhCI871SubLayer::performProcessAlarm(trHWFAddress const &)
+0000d59c PhCI871_860.elf CPhCI871SubLayer::CreateSystemEventForProcessAlarm(trHWFAddress const &, unsigned long, unsigned short, unsigned short, unsigned short)
+0000d7f4 PhCI871_860.elf CPhCI871SubLayer::collectDiagProcAlarmMessage(trHWFAddress const &, teMessageType)
+0000daa0 PhCI871_860.elf CPhCI871SubLayer::SendDiagProcAck(trHWFAddress const &, teMessageType, short)
+0000dc54 PhCI871_860.elf CPhCI871SubLayer::StatusThreadStub(void *, void *)
+0000dc7c PhCI871_860.elf Letext
+0000dc80 PhCI871_860.elf ObjectFactory
+0000ddc4 PhCI871_860.elf Letext
+0000ddc8 PhCI871_860.elf StubEventMgrCallback::StubEventMgrCallback(void)
+0000de2c PhCI871_860.elf StubEventMgrCallback::~StubEventMgrCallback(void)
+0000de84 PhCI871_860.elf StubEventMgrCallback::stubSetErrorCode(int *)
+0000de90 PhCI871_860.elf StubEventMgrCallback::stubSetHESULT(long)
+0000de98 PhCI871_860.elf StubEventMgrCallback::GGenerateSystemEvent(char const *, char const *, unsigned long, unsigned long, int, int, eTimeQualityClass, int *, teGSeverityLevels) const
+0000dea0 PhCI871_860.elf StubEventMgrCallback::GGenerateExtEvent(char const *, unsigned long, unsigned long, int, int, eTimeQualityClass, bool, bool, int, int, bool, int *) const
+0000dea8 PhCI871_860.elf StubEventMgrCallback::GApplicSetVersionRequest(unsigned int *) const
+0000deb0 PhCI871_860.elf StubEventMgrCallback::GDefineSystemAlarm(char const *, char const *, _GUID, char const *, char *, int *, teGSeverityLevels) const
+0000deb8 PhCI871_860.elf StubEventMgrCallback::GDeleteSystemAlarm(char const *, char const *, int *) const
+0000dec0 PhCI871_860.elf StubEventMgrCallback::GChangeSystemAlarm(bool, char const *, unsigned long, unsigned long, int, int, eTimeQualityClass, char const *, int *) const
+0000decc PhCI871_860.elf ICallback::~ICallback(void)
+0000df20 PhCI871_860.elf IEventMgrCallback::~IEventMgrCallback(void)
+0000df70 PhCI871_860.elf StubEventMgrCallback1::GGenerateSystemEventUnitAsSource(trHWFAddress, char const *, unsigned long, unsigned long, int, int, eTimeQualityClass, int *, teGSeverityLevels) const
+0000df70 PhCI871_860.elf Letext
+0000df78 PhCI871_860.elf StubEventMgrCallback1::GGenerateExtEventUnitAsAltSource(char const *, trHWFAddress, char const *, unsigned long, unsigned long, int, int, eTimeQualityClass, bool, bool, int, int, bool, int *) const
+0000df80 PhCI871_860.elf Letext
+0000df84 PhCI871_860.elf __pure_virtual
+0000dfe8 PhCI871_860.elf __builtin_delete
+0000e048 PhCI871_860.elf Letext
+0000e048 PhCI871_860.elf Letext
+0000e048 PhCI871_860.elf Letext
+0000e04c PhCI871_860.elf CPhCommon_Base::CPhCommon_Base(void)
+0000e0b8 PhCI871_860.elf CPhCommon_Base::~CPhCommon_Base(void)
+0000e130 PhCI871_860.elf CPhCommon_Base::GetProductInfo(unsigned char *, unsigned char *, unsigned char *, unsigned long)
+0000e16c PhCI871_860.elf CPhCommon_Base::SetCommonCallbackInterface(ICommonCallback *)
+0000e19c PhCI871_860.elf CPhConfig_Base1::PrepareForTermination(teHWFErrorCode *)
+0000e1cc PhCI871_860.elf CPhConfig_Base1::RemoveHWConfiguration(trHWFAddress, teHWFErrorCode *)
+0000e200 PhCI871_860.elf CPhConfig_Base1::RemoveIoConnection(unsigned long, teHWFErrorCode *)
+0000e234 PhCI871_860.elf CPhConfig_Base1::PhResponsibilityForRestart(trHWFAddress, teHWFErrorCode *)
+0000e268 PhCI871_860.elf CPhConfig_Base1::PhResponsibility(trHWFAddress, teHWFErrorCode *)
+0000e29c PhCI871_860.elf CPhConfig_Base1::StartUsingIoConnection(trHWFAddress, unsigned long, teHWFErrorCode *)
+0000e2d4 PhCI871_860.elf CPhConfig_Base1::PhResponsibilityForBackupDevice(trHWFAddress, teHWFErrorCode *)
+0000e308 PhCI871_860.elf CPhConfig_Base1::PhResponsibilityForHotInsert(trHWFAddress, teHWFErrorCode *)
+0000e33c PhCI871_860.elf CPhConfig_Base1::PerformSwitchover(trHWFAddress, teHWFErrorCode *)
+0000e370 PhCI871_860.elf CPhConfig_Base1::StartUsingDevice(trHWFAddress, teHWFErrorCode *)
+0000e3a4 PhCI871_860.elf CPhConfig_Base1::PerformFailover(trHWFAddress, teHWFErrorCode *)
+0000e3d8 PhCI871_860.elf CPhClient_Base::ConnectReq(unsigned long, unsigned long *, int *)
+0000e410 PhCI871_860.elf CPhClient_Base::DisconnectReq(unsigned long, unsigned long, int *)
+0000e448 PhCI871_860.elf CPhClient_Base::ReadVarReq(unsigned long, int *)
+0000e47c PhCI871_860.elf CPhClient_Base::WriteVarReq(unsigned long, int *)
+0000e4b0 PhCI871_860.elf CPhClient_Base::ReadRawReq(unsigned long, int *)
+0000e4e4 PhCI871_860.elf CPhClient_Base::WriteRawReq(unsigned long, int *)
+0000e518 PhCI871_860.elf CPhClient_Base::AbortRawReq(unsigned long, int *)
+0000e54c PhCI871_860.elf CPhClient_Base::AbortVarReq(unsigned long, int *)
+0000e580 PhCI871_860.elf CPhClient_Base::GetExtendedStatusSize(unsigned long, int *, int *)
+0000e5b8 PhCI871_860.elf CPhClient_Base::GetExtendedStatus(unsigned long, int, teIEC1131Type *, tGCValue *, int *)
+0000e5f8 PhCI871_860.elf CPhClient_Base::SetStatus(unsigned long, int, int *)
+0000e630 PhCI871_860.elf CPhClient_Base::ReadRes(unsigned long, int, int *)
+0000e668 PhCI871_860.elf CPhClient_Base::WriteRes(unsigned long, int, int *)
+0000e6a0 PhCI871_860.elf CPhClient_Base1::ConnectReq(unsigned long, unsigned long *, int *)
+0000e6d8 PhCI871_860.elf CPhClient_Base1::DisconnectReq(unsigned long, unsigned long, int *)
+0000e710 PhCI871_860.elf CPhClient_Base1::ReadVarReq(unsigned long, int *)
+0000e744 PhCI871_860.elf CPhClient_Base1::WriteVarReq(unsigned long, int *)
+0000e778 PhCI871_860.elf CPhClient_Base1::RegisterVarReq(unsigned long, int *)
+0000e7ac PhCI871_860.elf CPhClient_Base1::ReadRawReq(unsigned long, int *)
+0000e7e0 PhCI871_860.elf CPhClient_Base1::WriteRawReq(unsigned long, int *)
+0000e814 PhCI871_860.elf CPhClient_Base1::AbortRawReq(unsigned long, int *)
+0000e848 PhCI871_860.elf CPhClient_Base1::AbortVarReq(unsigned long, int *)
+0000e87c PhCI871_860.elf CPhClient_Base1::TimeoutAbortVarReq(unsigned long, int *)
+0000e90c PhCI871_860.elf CPhClient_Base1::GetExtendedStatusSize(unsigned long, int *, int *)
+0000e944 PhCI871_860.elf CPhClient_Base1::GetExtendedStatus(unsigned long, int, teIEC1131Type *, tGCValue *, int *)
+0000e984 PhCI871_860.elf CPhClient_Base1::BufferTakeForReceive(unsigned long, int *)
+0000e9b8 PhCI871_860.elf CPhClient_Base1::BufferGiveForReceive(unsigned long, int, int *)
+0000e9f0 PhCI871_860.elf CPhClient_Base1::BufferTakeForSend(unsigned long, unsigned int, int *)
+0000ea28 PhCI871_860.elf CPhClient_Base1::BufferGiveForSend(unsigned long, unsigned int, int, int *)
+0000ea64 PhCI871_860.elf CPhClient_Base1::SetStatus(unsigned long, int, int *)
+0000ea9c PhCI871_860.elf CPhClient_Base1::ReadRes(unsigned long, int, int *)
+0000ead4 PhCI871_860.elf CPhClient_Base1::WriteRes(unsigned long, int, int *)
+0000eb0c PhCI871_860.elf CPhStatus_Base1::KickWatchdog(unsigned short *, teHWFErrorCode *)
+0000eb40 PhCI871_860.elf CPhStatus_Base1::GetStatus(trHWFAddress, teHWFUnitKind, unsigned long *, unsigned long *, teHWFErrorCode *)
+0000eb80 PhCI871_860.elf CPhIOAccess_Base::GetCopyRoutineReference(unsigned int, void (**)(short, void *, void *), IOAccessErrorCode *)
+0000ebb8 PhCI871_860.elf CPhIOAccess_Base::ObtainDPM(eAreaType, trHWFAddress, IOAccessErrorCode *)
+0000ebf0 PhCI871_860.elf CPhIOAccess_Base::ReleaseDPM(eAreaType, trHWFAddress, IOAccessErrorCode *)
+0000ec28 PhCI871_860.elf CPhDiagnostics_Base::PhDiagnosticsTableNew(teDiagErrorCode *)
+0000ec58 PhCI871_860.elf CPhDiagnostics_Base::PhDiagnosticsTableCleared(teDiagErrorCode *)
+0000ec88 PhCI871_860.elf CPhOLU_Base::PrepareForFirmwareDownload(trHWFAddress const *, unsigned long, eOLUStatus *)
+0000ecc0 PhCI871_860.elf CPhOLU_Base::PrepareForApplicationStop(trHWFAddress const *, eOLUStatus *)
+0000ecf4 PhCI871_860.elf CPhOLU_Base::ResumeOperation(trHWFAddress const *, eOLUStatus *)
+0000ed28 PhCI871_860.elf CPhOLU_Base::PhResponsibilityForOLU(trHWFAddress const *, eOLUStatus *)
+0000ed5c PhCI871_860.elf CPhOLU_Base::PrepareForLeavingOLU(trHWFAddress const *, eOLUStatus *)
+0000ed90 PhCI871_860.elf CPhOLU_Base::PrepareForAppAndConfigDownload(trHWFAddress const *, eOLUStatus *)
+0000edc8 PhCI871_860.elf IPhCommon::IPhCommon(void)
+0000ee34 PhCI871_860.elf IUnknown::IUnknown(void)
+0000ee8c PhCI871_860.elf CRTFuncTabBegin
+0000ee8c PhCI871_860.elf Letext
+0000ee8c PhCI871_860.elf scprocs
+0000ee98 PhCI871_860.elf printf
+0000ee9c PhCI871_860.elf sprintf
+0000eea0 PhCI871_860.elf sscanf
+0000eea4 PhCI871_860.elf memcpy
+0000eea8 PhCI871_860.elf memset
+0000eeac PhCI871_860.elf strcat
+0000eeb0 PhCI871_860.elf strcmp
+0000eeb4 PhCI871_860.elf strlen
+0000eeb8 PhCI871_860.elf strncmp
+0000eebc PhCI871_860.elf strncpy
+0000eec0 PhCI871_860.elf memchr
+0000eec4 PhCI871_860.elf memcmp
+0000eec8 PhCI871_860.elf memmove
+0000eecc PhCI871_860.elf strchr
+0000eed0 PhCI871_860.elf strcoll
+0000eed4 PhCI871_860.elf strcpy
+0000eed8 PhCI871_860.elf strcspn
+0000eedc PhCI871_860.elf strncat
+0000eee0 PhCI871_860.elf strpbrk
+0000eee4 PhCI871_860.elf strrchr
+0000eee8 PhCI871_860.elf strspn
+0000eeec PhCI871_860.elf strstr
+0000eef0 PhCI871_860.elf strtok
+0000eef4 PhCI871_860.elf strxfrm
+0000eef8 PhCI871_860.elf strerror
+0000eefc PhCI871_860.elf pow
+0000ef00 PhCI871_860.elf acos
+0000ef04 PhCI871_860.elf asin
+0000ef08 PhCI871_860.elf atan
+0000ef0c PhCI871_860.elf atan2
+0000ef10 PhCI871_860.elf ceil
+0000ef14 PhCI871_860.elf cos
+0000ef18 PhCI871_860.elf cosh
+0000ef1c PhCI871_860.elf exp
+0000ef20 PhCI871_860.elf fabs
+0000ef24 PhCI871_860.elf floor
+0000ef28 PhCI871_860.elf fmod
+0000ef2c PhCI871_860.elf frexp
+0000ef30 PhCI871_860.elf ldexp
+0000ef34 PhCI871_860.elf log
+0000ef38 PhCI871_860.elf log10
+0000ef3c PhCI871_860.elf modf
+0000ef40 PhCI871_860.elf sin
+0000ef44 PhCI871_860.elf sinh
+0000ef48 PhCI871_860.elf sqrt
+0000ef4c PhCI871_860.elf tan
+0000ef50 PhCI871_860.elf tanh
+0000ef54 PhCI871_860.elf acosf
+0000ef58 PhCI871_860.elf asinf
+0000ef5c PhCI871_860.elf atanf
+0000ef60 PhCI871_860.elf atan2f
+0000ef64 PhCI871_860.elf ceilf
+0000ef68 PhCI871_860.elf cosf
+0000ef6c PhCI871_860.elf coshf
+0000ef70 PhCI871_860.elf expf
+0000ef74 PhCI871_860.elf fabsf
+0000ef78 PhCI871_860.elf floorf
+0000ef7c PhCI871_860.elf fmodf
+0000ef80 PhCI871_860.elf logf
+0000ef84 PhCI871_860.elf log10f
+0000ef88 PhCI871_860.elf powf
+0000ef8c PhCI871_860.elf sinf
+0000ef90 PhCI871_860.elf sinhf
+0000ef94 PhCI871_860.elf sqrtf
+0000ef98 PhCI871_860.elf tanf
+0000ef9c PhCI871_860.elf tanhf
+0000efa0 PhCI871_860.elf div_r
+0000efa4 PhCI871_860.elf labs
+0000efa8 PhCI871_860.elf strtol
+0000efac PhCI871_860.elf free
+0000efb0 PhCI871_860.elf abort
+0000efb4 PhCI871_860.elf abs
+0000efb8 PhCI871_860.elf atof
+0000efbc PhCI871_860.elf atoi
+0000efc0 PhCI871_860.elf atol
+0000efc4 PhCI871_860.elf bsearch
+0000efc8 PhCI871_860.elf ldiv_r
+0000efcc PhCI871_860.elf qsort
+0000efd0 PhCI871_860.elf rand
+0000efd4 PhCI871_860.elf srand
+0000efd8 PhCI871_860.elf strtod
+0000efdc PhCI871_860.elf strtoul
+0000efe0 PhCI871_860.elf malloc
+0000efe4 PhCI871_860.elf __assert
+0000efe8 PhCI871_860.elf time
+0000efec PhCI871_860.elf asctime
+0000eff0 PhCI871_860.elf gmtime
+0000eff4 PhCI871_860.elf clock
+0000eff8 PhCI871_860.elf ctime
+0000effc PhCI871_860.elf difftime
+0000f000 PhCI871_860.elf localtime
+0000f004 PhCI871_860.elf mktime
+0000f008 PhCI871_860.elf strftime
+0000f00c PhCI871_860.elf eventcollSem
+0000f010 PhCI871_860.elf intLock
+0000f014 PhCI871_860.elf intUnlock
+0000f018 PhCI871_860.elf _fabs
+0000f01c PhCI871_860.elf _ddec
+0000f020 PhCI871_860.elf _d_mul
+0000f024 PhCI871_860.elf __floatsidf
+0000f028 PhCI871_860.elf _d_sub
+0000f02c PhCI871_860.elf _d_add
+0000f030 PhCI871_860.elf __fixunsdfsi
+0000f034 PhCI871_860.elf __extendsfdf2
+0000f038 PhCI871_860.elf __adddf3
+0000f03c PhCI871_860.elf _dinc
+0000f040 PhCI871_860.elf __fixdfsi
+0000f044 PhCI871_860.elf _d_neg
+0000f048 PhCI871_860.elf _d_dtof
+0000f04c PhCI871_860.elf _f_qtof
+0000f050 PhCI871_860.elf _dpfabs
+0000f054 PhCI871_860.elf _d_dtoq
+0000f058 PhCI871_860.elf _d_div
+0000f05c PhCI871_860.elf __negdf2
+0000f060 PhCI871_860.elf __divdf3
+0000f064 PhCI871_860.elf __muldf3
+0000f068 PhCI871_860.elf _d_dtoi
+0000f06c PhCI871_860.elf _f_ftoq
+0000f070 PhCI871_860.elf __truncdfsf2
+0000f074 PhCI871_860.elf _fp_round
+0000f078 PhCI871_860.elf _d_utod
+0000f07c PhCI871_860.elf _d_qtod
+0000f080 PhCI871_860.elf _d_dtou
+0000f084 PhCI871_860.elf _d_itod
+0000f088 PhCI871_860.elf __subdf3
+0000f08c PhCI871_860.elf _f_ftod
+0000f090 PhCI871_860.elf _d_feq
+0000f094 PhCI871_860.elf __gtdf2
+0000f098 PhCI871_860.elf _d_fne
+0000f09c PhCI871_860.elf _d_cmp
+0000f0a0 PhCI871_860.elf _d_flt
+0000f0a4 PhCI871_860.elf _d_cmpe
+0000f0a8 PhCI871_860.elf __nedf2
+0000f0ac PhCI871_860.elf _d_fgt
+0000f0b0 PhCI871_860.elf _d_fle
+0000f0b4 PhCI871_860.elf _d_fge
+0000f0b8 PhCI871_860.elf _fdec
+0000f0bc PhCI871_860.elf _f_add
+0000f0c0 PhCI871_860.elf __divsf3
+0000f0c4 PhCI871_860.elf __fixsfsi
+0000f0c8 PhCI871_860.elf __subsf3
+0000f0cc PhCI871_860.elf _finc
+0000f0d0 PhCI871_860.elf _f_neg
+0000f0d4 PhCI871_860.elf _f_sub
+0000f0d8 PhCI871_860.elf _f_itof
+0000f0dc PhCI871_860.elf _fabsf
+0000f0e0 PhCI871_860.elf _f_utof
+0000f0e4 PhCI871_860.elf _fpfabs
+0000f0e8 PhCI871_860.elf __floatsisf
+0000f0ec PhCI871_860.elf _f_div
+0000f0f0 PhCI871_860.elf __negsf2
+0000f0f4 PhCI871_860.elf __mulsf3
+0000f0f8 PhCI871_860.elf _f_ftoi
+0000f0fc PhCI871_860.elf _f_mul
+0000f100 PhCI871_860.elf __fixunssfsi
+0000f104 PhCI871_860.elf _f_ftou
+0000f108 PhCI871_860.elf __addsf3
+0000f10c PhCI871_860.elf _f_feq
+0000f110 PhCI871_860.elf _f_flt
+0000f114 PhCI871_860.elf _f_fle
+0000f118 PhCI871_860.elf __nesf2
+0000f11c PhCI871_860.elf __gtsf2
+0000f120 PhCI871_860.elf _f_fge
+0000f124 PhCI871_860.elf _f_fgt
+0000f128 PhCI871_860.elf _f_fne
+0000f12c PhCI871_860.elf _f_cmp
+0000f130 PhCI871_860.elf _f_cmpe
+0000f134 PhCI871_860.elf ldexpf
+0000f138 PhCI871_860.elf modff
+0000f13c PhCI871_860.elf frexpf
+0000f140 PhCI871_860.elf exadd
+0000f144 PhCI871_860.elf exmul
+0000f148 PhCI871_860.elf sigmax
+0000f14c PhCI871_860.elf exdiv
+0000f150 PhCI871_860.elf exsub
+0000f154 PhCI871_860.elf __eqdf2
+0000f158 PhCI871_860.elf __ltdf2
+0000f15c PhCI871_860.elf __lesf2
+0000f160 PhCI871_860.elf __ledf2
+0000f164 PhCI871_860.elf __eqsf2
+0000f168 PhCI871_860.elf __ltsf2
+0000f16c PhCI871_860.elf __gesf2
+0000f170 PhCI871_860.elf __gedf2
+0000f174 PhCI871_860.elf __builtin_vec_new
+0000f178 PhCI871_860.elf __builtin_vec_delete
+0000f17c PhCI871_860.elf fprintf
+0000f180 PhCI871_860.elf __stdout
+0000f184 PhCI871_860.elf __stderr
+0000f188 PhCI871_860.elf setjmp
+0000f18c PhCI871_860.elf longjmp
+0000f190 PhCI871_860.elf CRTFuncTabEnd
+0000f190 PhCI871_860.elf ecprocs
+0000f190 PhCI871_860.elf etext
+0000f190 PhCI871_860.elf sgot2
+0000fa78 PhCI871_860.elf egot2
+0000fa78 PhCI871_860.elf sfixup
+0000fd64 PhCI871_860.elf efixup
+0000fd64 PhCI871_860.elf useEXEHEAD
+0000fddc PhCI871_860.elf CComCoClass<CPhCI871, &CLSID_CPhCI871>::m_HeapTag
+00011248 PhCI871_860.elf CPhCI871::CPhIOAccess_Base virtual table
+00011288 PhCI871_860.elf CPhCI871::CPhStatus_Base1 virtual table
+000112c0 PhCI871_860.elf CPhCI871::CPhConfig_Base1 virtual table
+00011340 PhCI871_860.elf CPhCI871 virtual table
+00011380 PhCI871_860.elf IPhIOAccess virtual table
+000113c0 PhCI871_860.elf IPhStatus1 virtual table
+000113f8 PhCI871_860.elf IPhConfig1 virtual table
+00011478 PhCI871_860.elf IUnknown virtual table
+000114a0 PhCI871_860.elf CompanyName
+000114a4 PhCI871_860.elf ProductName
+000114ac PhCI871_860.elf ProductVersion
+000114c4 PhCI871_860.elf ExpectedCiFirmwareName
+00012538 PhCI871_860.elf CPhCI871SubLayer virtual table
+00012550 PhCI871_860.elf CiToHwStatusCI871Coming
+000127d0 PhCI871_860.elf CiToHwStatusCI871Going
+00012a50 PhCI871_860.elf CiToHwStatusDeviceComing
+00012cd0 PhCI871_860.elf CiToHwStatusDeviceGoing
+00012f50 PhCI871_860.elf CiToHwStatusModuleComing
+000131d0 PhCI871_860.elf CiToHwStatusModuleGoing
+00013450 PhCI871_860.elf CiToHwStatusSubmoduleComing
+000136d0 PhCI871_860.elf CiToHwStatusSubmoduleGoing
+00013950 PhCI871_860.elf EventMessages
+00014150 PhCI871_860.elf CompleteChanErrMap
+00014c3c PhCI871_860.elf CLSID_CPhCI871
+00014c58 PhCI871_860.elf PHproperties
+00014c60 PhCI871_860.elf CMirroredObject::c_pMirroredObjectMgrImpl
+00014c64 PhCI871_860.elf CMirroredObjectAgent::c_pHeapCallback
+00014c68 PhCI871_860.elf CMirroredObjectAgent::c_AgentTag
+00014c70 PhCI871_860.elf StubEventMgrCallback virtual table
+00014cb8 PhCI871_860.elf IEventMgrCallback virtual table
+00014d00 PhCI871_860.elf ICallback virtual table
+00014d68 PhCI871_860.elf GUID_NULL
+00014d78 PhCI871_860.elf IID_IPhCommonCB
+00014d88 PhCI871_860.elf IID_IPhConfigCB
+00014d98 PhCI871_860.elf IID_IPhConfigCB1
+00014da8 PhCI871_860.elf IID_IPhIOAccessCB
+00014db8 PhCI871_860.elf IID_IPhExternalConfigCB1
+00014dc8 PhCI871_860.elf IID_IPhExternalConfigCB2
+00014dd8 PhCI871_860.elf IID_IPhExternalConfigCB3
+00014de8 PhCI871_860.elf IID_IPhOLUCB
+00014df8 PhCI871_860.elf IID_IPhCommon
+00014e08 PhCI871_860.elf IID_IPhConfig1
+00014e18 PhCI871_860.elf IID_IPhStatus1
+00014e28 PhCI871_860.elf IID_IPhClient
+00014e38 PhCI871_860.elf IID_IPhClient1
+00014e48 PhCI871_860.elf IID_IPhDiagnostics
+00014e58 PhCI871_860.elf IID_IPhIOAccess
+00014e68 PhCI871_860.elf IID_IPhSafeConfig
+00014e78 PhCI871_860.elf IID_IPhSafeConfig1
+00014e88 PhCI871_860.elf IID_IPhSimulation
+00014e98 PhCI871_860.elf IID_IPhOLU
+00014ea8 PhCI871_860.elf IID_IHeapCallback
+00014eb8 PhCI871_860.elf IID_ISystemUtilitiesCallback
+00014ec8 PhCI871_860.elf IID_ISystemUtilitiesCallback1
+00014ed8 PhCI871_860.elf IID_ISystemUtilitiesCallback2
+00014ee8 PhCI871_860.elf IID_ISystemUtilitiesCallback3
+00014ef8 PhCI871_860.elf IID_IEventMgrCallback
+00014f08 PhCI871_860.elf IID_IEventMgrCallback1
+00014f18 PhCI871_860.elf IID_ISysClockCallback
+00014f28 PhCI871_860.elf IID_ISysClockCallback1
+00014f38 PhCI871_860.elf IID_ISysClockCallback2
+00014f48 PhCI871_860.elf IID_ISysClockCallback3
+00014f58 PhCI871_860.elf IID_IVOSCallback
+00014f68 PhCI871_860.elf IID_INetwClockSynchCallback
+00014f78 PhCI871_860.elf IID_IConfigCBCallback1
+00014f88 PhCI871_860.elf IID_IConfigCBCallback2
+00014f98 PhCI871_860.elf IID_IConfigCBCallback3
+00014fa8 PhCI871_860.elf IID_IExternalConfigCBCallback
+00014fb8 PhCI871_860.elf IID_IExternalConfigCBCallback2
+00014fc8 PhCI871_860.elf IID_IExternalConfigCBCallback3
+00014fd8 PhCI871_860.elf IID_IExternalConfigCBCallback4
+00014fe8 PhCI871_860.elf IID_IMessagesCBCallback
+00014ff8 PhCI871_860.elf IID_IAIPAccessCBCallback
+00015008 PhCI871_860.elf IID_IOLUCBCallback
+00015018 PhCI871_860.elf IID_ISystemUtilitiesCBCallback1
+00015028 PhCI871_860.elf IID_IConfigCallback1
+00015038 PhCI871_860.elf IID_IConfigCallback2
+00015048 PhCI871_860.elf IID_IStatusCallback1
+00015058 PhCI871_860.elf IID_IGenClientCallback
+00015068 PhCI871_860.elf IID_IGenClientCallback1
+00015078 PhCI871_860.elf IID_IDriverFactoryCallback
+00015088 PhCI871_860.elf IID_IDiagnosticsCallback
+00015098 PhCI871_860.elf IID_ISafeConfigCallback
+000150a8 PhCI871_860.elf IID_ISafeConfigCallback1
+000150b8 PhCI871_860.elf IID_ICRCCallback
+000150c8 PhCI871_860.elf IID_IIOAccessCallback
+000150d8 PhCI871_860.elf IID_CriticalRegionCallback
+000150e8 PhCI871_860.elf IID_VOSExceptionCallback
+000150f8 PhCI871_860.elf IID_DrvCommonCallback
+00015108 PhCI871_860.elf IID_ProtectedMirroredHeapCallback
+00015118 PhCI871_860.elf IID_SharedMirroredHeapCallback
+00015128 PhCI871_860.elf IID_TemporaryMirroredHeapCallback
+00015138 PhCI871_860.elf IID_IRestrictedVOSCallback
+00015148 PhCI871_860.elf IID_IVarServerCallback
+00015158 PhCI871_860.elf IID_IVarServerCallback1
+00015168 PhCI871_860.elf IID_ISOCKETCallback
+00015178 PhCI871_860.elf CPhOLU_Base virtual table
+000151d0 PhCI871_860.elf CPhDiagnostics_Base virtual table
+00015208 PhCI871_860.elf CPhIOAccess_Base virtual table
+00015248 PhCI871_860.elf CPhStatus_Base1 virtual table
+00015280 PhCI871_860.elf CPhClient_Base1 virtual table
+00015340 PhCI871_860.elf CPhClient_Base virtual table
+000153d0 PhCI871_860.elf CPhConfig_Base1 virtual table
+00015450 PhCI871_860.elf CPhCommon_Base virtual table
+00015490 PhCI871_860.elf GUID_NULL
+000154a0 PhCI871_860.elf MaxCompanyNameLen
+000154a4 PhCI871_860.elf MaxProductNameLen
+000154a8 PhCI871_860.elf MaxProductVersionLen
+000154ac PhCI871_860.elf cMaxNrOfHWFAdrLevels
+000154b0 PhCI871_860.elf cGCWrite
+000154b4 PhCI871_860.elf cGCRead
+000154b8 PhCI871_860.elf cGCSubscription
+000154bc PhCI871_860.elf cGCRegistration
+000154c0 PhCI871_860.elf cGCAddMemoryAreaArrayNumberPlaces
+000154c4 PhCI871_860.elf cPONotFound
+000154c8 PhCI871_860.elf cGCBusyDisconnecting
+000154cc PhCI871_860.elf cGCRemovingPO
+000154d0 PhCI871_860.elf cGCParametersMissing
+000154d4 PhCI871_860.elf cGCAlreadyDefined
+000154d8 PhCI871_860.elf cGCTypeNotSupported
+000154dc PhCI871_860.elf cGCIndexOutOfRange
+000154e0 PhCI871_860.elf cGCTypeNotDefined
+000154e4 PhCI871_860.elf cGCStringMismatch
+000154e8 PhCI871_860.elf cGCFacadeError
+000154ec PhCI871_860.elf cGCInvalidHandle
+000154f0 PhCI871_860.elf cGCAddedMemoryAreaError
+000154f4 PhCI871_860.elf cGCBSErrorDetected
+000154f8 PhCI871_860.elf cAborted
+000154fc PhCI871_860.elf cSuccess
+00015500 PhCI871_860.elf cPending
+00015504 PhCI871_860.elf cGCDisconnected
+00015508 PhCI871_860.elf cGCExtendedStatus
+0001550c PhCI871_860.elf cPHHeapFull
+00015510 PhCI871_860.elf cPHTypeMismatch
+00015514 PhCI871_860.elf cPHSizeMismatch
+00015518 PhCI871_860.elf cPHErrAccessData
+0001551c PhCI871_860.elf cPHErrProtocolData
+00015520 PhCI871_860.elf cPHAccessVarNotFound
+00015524 PhCI871_860.elf cPHErrInvalidPar
+00015528 PhCI871_860.elf cPHDirAddrFormatNotSupported
+0001552c PhCI871_860.elf cPHGenericFormatNotSupported
+00015530 PhCI871_860.elf cPHNotImplemented
+00015534 PhCI871_860.elf cPHVarDataUnsupportedDirection
+00015538 PhCI871_860.elf cPHVarDataNotSupported
+0001553c PhCI871_860.elf cPHRawDataNotSupported
+00015540 PhCI871_860.elf cPHDriverError
+00015544 PhCI871_860.elf cPHHardwareError
+00015548 PhCI871_860.elf cPHTRAdisconnect
+0001554c PhCI871_860.elf cLegacyFormat
+00015550 PhCI871_860.elf cDirAddrFormat
+00015554 PhCI871_860.elf cGenericFormat
+00015558 PhCI871_860.elf eHWFDeviceSpecific1
+0001555c PhCI871_860.elf eHWFUnitBPrimary
+00015560 PhCI871_860.elf cHWFOPCMask
+00015564 PhCI871_860.elf cHWFOPCChannelOk
+00015568 PhCI871_860.elf cHWFOPCChannelError
+0001556c PhCI871_860.elf cHWFOPCChannelForced
+00015570 PhCI871_860.elf cHWFOPCDeviceError
+00015574 PhCI871_860.elf cHWFOPCChannelErrorLow
+00015578 PhCI871_860.elf cHWFOPCChannelErrorHigh
+0001557c PhCI871_860.elf cHWFOPCChannelHigh
+00015580 PhCI871_860.elf cHWFOPCChannelLow
+00015584 PhCI871_860.elf cHWFChannelRedundant
+00015588 PhCI871_860.elf cHWFUnitBPrimary
+0001558c PhCI871_860.elf cHWFBackupUnitError
+00015590 PhCI871_860.elf cHWFXSPValueUsed
+00015594 PhCI871_860.elf cHWFChannelSimulated
+00015598 PhCI871_860.elf cHWFChannelForced
+0001559c PhCI871_860.elf cHWFChannelInverted
+000155a0 PhCI871_860.elf cHWFXSPMask
+000155a4 PhCI871_860.elf cHWFXSPNoSetting
+000155a8 PhCI871_860.elf cHWFXSPValue
+000155ac PhCI871_860.elf cHWFXSPClear
+000155b0 PhCI871_860.elf cHWFXSPFreeze
+000155b4 PhCI871_860.elf cHWFXSPInvert
+000155b8 PhCI871_860.elf cHWFXSPInitDPM
+000155bc PhCI871_860.elf HWFNO_XSP_FORCE
+000155bd PhCI871_860.elf HWFFORCE_OSP
+000155be PhCI871_860.elf HWFFORCE_CLEAR
+000155bf PhCI871_860.elf HWFFORCE_BLOCK_IO_DPM_OUT_WRITE
+000155c0 PhCI871_860.elf HWFFORCE_BLOCK_SM_DPM_OUT_WRITE
+000155c4 PhCI871_860.elf cHWFMaxNrOfChannels
+000155c8 PhCI871_860.elf cHWFStatusErrorsMask
+000155cc PhCI871_860.elf cHWFRootStatusErrorMask
+000155d0 PhCI871_860.elf cHWFDoNotCopyUnitErrorMask
+000155d4 PhCI871_860.elf cFWUpgradePrimary
+000155d8 PhCI871_860.elf cFWUpgradeBackup
+000155dc PhCI871_860.elf cNewPhVersion
+000155e0 PhCI871_860.elf cNewPMFirmware
+000155e8 PhCI871_860.elf IPhCommon virtual table
+00015620 PhCI871_860.elf IUnknown virtual table
+0001d648 G _SDA_BASE_ PhCI871_860.elf 
+</SYMBOLS>

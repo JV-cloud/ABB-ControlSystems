@@ -1,0 +1,264 @@
+(*=========================================*)
+(* Modified : 2011-11-11 08:52             *)
+(* Modified : 2011-11-11 10:53             *)
+(* Modified : 2012-01-10 12:54             *)
+(* Modified : 2013-01-31 12:51             *)
+(* Modified : 2014-05-13 14:48             *)
+(* -> Changed IO Channels from UInt to Int *)
+(*                                         *)
+(*=========================================*)
+FileHeader
+  Contents              "FENA-11"
+  Date                  "13.05.2014"
+  Version               "Version 1.4.9" (* Device Import Wizard *)
+  (* Parser             "Profinet 1.0.17.0" *)
+  RequiredSyntaxVersion "3.0"
+End FileHeader
+
+SessionID 09af5502-3c7a-4038-a7b6-9745a8d995c8
+
+(*========================================================*)
+(*                        FENA-11                         *)
+(*========================================================*)
+
+HWUnitInfo
+  HWUnitID         {0a73efd7-fff7-4037-ac4a-9951ce08e8d6}
+  Description      "PPO4 Data Object"
+  Information      "Control/Reference, Status/Actual values + 4 IN/OUT words"
+  Icons            ProtocolType
+  Attributes       IOUnit DigitalIn DigitalOut
+  DownloadInstanceNamesForSubUnits
+
+  Parameters
+    ParamInfo
+      Name            Stop_Mode_Action_selection
+      Description     "Stop Mode Action selection"
+      CompileType     IOConfig
+      Datatype        ENUM
+      Default         1
+      ParValIndex     0
+      ParamType       CIGIOData 7 0 2 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            Control_zero_mode_selection
+      Description     "Control-zero mode selection"
+      CompileType     IOConfig
+      Datatype        ENUM
+      Default         0
+      ParValIndex     1
+      ParamType       CIGIOData 8 0 2 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            Fail_safe_Control_Word
+      Description     "Fail safe Control Word"
+      CompileType     IOConfig
+      Datatype        INT
+      Default         0
+      ParValIndex     2
+      ParamType       CIGIOData 9 0 2 WordParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            Fail_safe_Reference
+      Description     "Fail safe Reference"
+      CompileType     IOConfig
+      Datatype        INT
+      Default         0
+      ParValIndex     2
+      ParamType       CIGIOData 11 0 2 WordParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            Fail_safe_value_of_Ref_PZD3
+      Description     "Fail safe value of Ref PZD3"
+      CompileType     IOConfig
+      Datatype        INT
+      Default         0
+      ParValIndex     2
+      ParamType       CIGIOData 13 0 2 WordParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            Fail_safe_value_of_Ref_PZD4
+      Description     "Fail safe value of Ref PZD4"
+      CompileType     IOConfig
+      Datatype        INT
+      Default         0
+      ParValIndex     2
+      ParamType       CIGIOData 15 0 2 WordParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            Fail_safe_value_of_Ref_PZD5
+      Description     "Fail safe value of Ref PZD5"
+      CompileType     IOConfig
+      Datatype        INT
+      Default         0
+      ParValIndex     2
+      ParamType       CIGIOData 17 0 2 WordParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            Fail_safe_value_of_Ref_PZD6
+      Description     "Fail safe value of Ref PZD6"
+      CompileType     IOConfig
+      Datatype        INT
+      Default         0
+      ParValIndex     2
+      ParamType       CIGIOData 19 0 2 WordParam ByteOffset
+    End ParamInfo
+  End Parameters
+
+  ParValList
+    ParVal
+      ParValIndex     0
+      UnitText        ""
+      ENUM
+      "Stop" 0
+      "Freeze data" 1
+      "Use Fail-safe values" 2
+    End ParVal
+    ParVal
+      ParValIndex     1
+      UnitText        ""
+      ENUM
+      "Use data" 0
+      "Ignore data" 1
+    End ParVal
+    ParVal
+      ParValIndex     2
+      UnitText        ""
+      INT
+      0 65535 0 65535 
+    End ParVal
+  End ParValList
+
+  Channels
+    ChannelInfo
+      Number                0
+      ChannelName           "Status"
+      Datatype              DInt_In
+      Routine               323
+      CopyParameters        16#30000 16#10 16#10 16#00 16#00 16#00 16#3000C
+    End ChannelInfo
+    ChannelInfo
+      Number                1
+      ChannelName           "Speed Actual"
+      Datatype              DInt_In
+      Routine               323
+      CopyParameters        16#30002 16#10 16#10 16#01 16#00 16#00 16#3000C
+    End ChannelInfo
+    ChannelInfo
+      Number                2
+      ChannelName           "Actual PZD3"
+      Datatype              DInt_In
+      Routine               323
+      CopyParameters        16#30004 16#10 16#10 16#01 16#00 16#00 16#3000C
+    End ChannelInfo
+    ChannelInfo
+      Number                3
+      ChannelName           "Actual PZD4"
+      Datatype              DInt_In
+      Routine               323
+      CopyParameters        16#30006 16#10 16#10 16#01 16#00 16#00 16#3000C
+    End ChannelInfo
+    ChannelInfo
+      Number                4
+      ChannelName           "Actual PZD5"
+      Datatype              DInt_In
+      Routine               323
+      CopyParameters        16#30008 16#10 16#10 16#01 16#00 16#00 16#3000C
+    End ChannelInfo
+    ChannelInfo
+      Number                5
+      ChannelName           "Actual PZD6"
+      Datatype              DInt_In
+      Routine               323
+      CopyParameters        16#3000A 16#10 16#10 16#01 16#00 16#00 16#3000C
+    End ChannelInfo
+    ChannelInfo
+      Number                6
+      ChannelName           "Command"
+      Datatype              Int_Out
+      Routine               400
+      CopyParameters        16#0 16#0 16#40000 16#00
+    End ChannelInfo
+    ChannelInfo
+      Number                7
+      ChannelName           "Speed Reference"
+      Datatype              Int_Out
+      Routine               410
+      CopyParameters        16#0 16#0 16#40002 16#00
+    End ChannelInfo
+    ChannelInfo
+      Number                8
+      ChannelName           "Reference PZD3"
+      Datatype              Int_Out
+      Routine               410
+      CopyParameters        16#0 16#0 16#40004 16#00
+    End ChannelInfo
+    ChannelInfo
+      Number                9
+      ChannelName           "Reference PZD4"
+      Datatype              Int_Out
+      Routine               410
+      CopyParameters        16#0 16#0 16#40006 16#00
+    End ChannelInfo
+    ChannelInfo
+      Number                10
+      ChannelName           "Reference PZD5"
+      Datatype              Int_Out
+      Routine               410
+      CopyParameters        16#0 16#0 16#40008 16#00
+    End ChannelInfo
+    ChannelInfo
+      Number                11
+      ChannelName           "Reference PZD6"
+      Datatype              Int_Out
+      Routine               410
+      CopyParameters        16#0 16#0 16#4000A 16#00
+    End ChannelInfo
+    ChannelInfo
+      Number                12
+      ChannelName           "UnitStatus"
+      Datatype              Status_In
+      Routine               900
+      CopyParameters        16#0 16#0 16#50000
+    End ChannelInfo
+  End Channels
+
+  UnitStatusText
+    DeviceSpecific1  "Maintenance required"
+    DeviceSpecific2  "Maintenance demanded"
+    DeviceSpecific3  "Diagnosis data available"
+    DeviceSpecific4  "Locked by other controller/supervisor"
+    DeviceSpecific6  "Parametrization fault"
+  End UnitStatusText
+
+  UnitStatusSeverity
+    DeviceSpecific1  GeneralWarning TriggerEvent SeverityMedium
+    DeviceSpecific2  GeneralWarning TriggerEvent SeverityMedium
+    DeviceSpecific3  GeneralWarning TriggerEvent SeverityMedium
+    DeviceSpecific4  GeneralWarning TriggerEvent SeverityMedium
+    DeviceSpecific6  GeneralError TriggerAlarm SeverityHigh
+  End UnitStatusSeverity
+
+  Configuration
+    ConfigInfo
+      ModuleKey        2
+      InAreaSize       14 BYTE
+      OutAreaSize      14 BYTE
+      OutByte
+        BYTE  16#80    12  (* IOPS_Out *)
+        BYTE  16#80    13  (* IOCS_Out *)
+      CIGIOConnData
+        CIGIOData      16#10 16#a5 16#5a 16#0 16#1 16#2 16#2 16#2 16#2 
+        CIGIOData      16#6 16#0 16#0 16#1 16#4 16#0 16#0 16#0 16#0 16#1 16#1 16#0 16#c 16#0 16#c 
+        CIGIOData      16#7 16#0 16#1 16#0 16#e 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#0
+      End CIGIOConnData
+    End ConfigInfo
+    ConfigInfo
+      EmptyConfig
+      ModuleKey        16#FFFF
+      InAreaSize       0 BYTE
+      OutAreaSize      0 BYTE
+    End ConfigInfo
+  End Configuration
+
+  HWUnitInfoCRC 16#d537
+End HWUnitInfo

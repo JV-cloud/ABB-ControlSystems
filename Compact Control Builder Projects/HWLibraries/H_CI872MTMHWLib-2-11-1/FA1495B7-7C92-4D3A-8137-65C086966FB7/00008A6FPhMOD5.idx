@@ -1,0 +1,663 @@
+<HEAD>
+Index of symbols created Thu 09/16/2010 10:52:07.12 
+</HEAD>
+<SECTIONS=10>
+00010000 00028378 .text
+00028378 00028c48 .got2
+00028c48 00029118 .fixup
+00029118 00029120 .bss
+00029120 0002fbf8 .data
+0002fbf8 0002fbf8 .sdata
+0002fbf8 00059088 .stab
+00059088 00028378 .comment
+00028378 000593c8 .sdata2
+000593c8 000593c8 .stabstr
+</SECTIONS>
+<SYMBOLS=646>
+00000000 PhMOD5.elf EXE_HEAD
+00000064 PhMOD5.elf CPhMOD5::CPhMOD5(void)
+00000248 PhMOD5.elf CPhMOD5::~CPhMOD5(void)
+000004a0 PhMOD5.elf CPhMOD5::GetProductInfo(unsigned char *, unsigned char *, unsigned char *, unsigned long)
+00000534 PhMOD5.elf CPhMOD5::SetCommonCallbackInterface(ICommonCallback *)
+0000058c PhMOD5.elf CPhMOD5::ProtocolSpecificConfigurationValues(trHWFAddress, bool &, unsigned long &, unsigned short &, unsigned long &)
+000005ac PhMOD5.elf CPhMOD5::FetchRequiredFirmwareInfo(tFirmwareInfo &)
+00000610 PhMOD5.elf CPhMOD5::CreateSempahores(void)
+00000770 PhMOD5.elf CPhMOD5::DeleteSemaphores(void)
+000008d4 PhMOD5.elf CPhMOD5::RemoveHWConfiguration(trHWFAddress, teHWFErrorCode *)
+00000d84 PhMOD5.elf CPhMOD5::TakeListSemaphores(void)
+00000eb4 PhMOD5.elf CPhMOD5::ReleaseListSemaphores(void)
+00000fbc PhMOD5.elf CPhMOD5::IsAddressMatching(trHWFAddress, trHWFAddress)
+0000101c PhMOD5.elf CPhMOD5::PhResponsibility(trHWFAddress, teHWFErrorCode *)
+00001320 PhMOD5.elf CPhMOD5::PhResponsibilityForBackupDevice(trHWFAddress, teHWFErrorCode *)
+00001798 PhMOD5.elf CPhMOD5::PhResponsibilityForHotInsert(trHWFAddress, teHWFErrorCode *)
+00001af4 PhMOD5.elf CPhMOD5::PhResponsibilityForRestart(trHWFAddress, teHWFErrorCode *)
+00001e4c PhMOD5.elf CPhMOD5::KickWatchdog(unsigned short *, teHWFErrorCode *)
+00001f54 PhMOD5.elf CPhMOD5::PerformFailover(trHWFAddress, teHWFErrorCode *)
+0000202c PhMOD5.elf CPhMOD5::FailOver(void)
+000023b8 PhMOD5.elf CPhMOD5::ResendingRequests(unsigned long, unsigned char, unsigned long, unsigned int)
+000025e4 PhMOD5.elf CPhMOD5::ReBuildReadMessage(unsigned long, unsigned char, int, unsigned int &, unsigned int, trMOD5CommInfo *, unsigned long, unsigned char *, int *)
+00002870 PhMOD5.elf CPhMOD5::ReBuildWriteMessage(unsigned long, unsigned char, int, unsigned int &, unsigned int, tVarDataValue *, trMOD5CommInfo *, unsigned char *, unsigned long, int *)
+00002c84 PhMOD5.elf CPhMOD5::ProcessSubHwUnitStatus(trHWFAddress, unsigned long *, unsigned long *, bool)
+00002ea8 PhMOD5.elf CPhMOD5::GetStatus(trHWFAddress, teHWFUnitKind, unsigned long *, unsigned long *, teHWFErrorCode *)
+0000310c PhMOD5.elf CPhMOD5::operator new(unsigned int, IHeapCallback *)
+000031c0 PhMOD5.elf CPhMOD5::heap_delete(void)
+0000322c PhMOD5.elf CPhMOD5::QueryInterface(_GUID const &, void **)
+00003374 PhMOD5.elf CPhMOD5::AddRef(void)
+0000338c PhMOD5.elf CPhMOD5::Release(void)
+00003408 PhMOD5.elf CPhMOD5::MaxAdrLength(char *)
+00003448 PhMOD5.elf Letext
+0000344c PhMOD5.elf CPhMOD5::ConnectReq(unsigned long, unsigned long *, int *)
+00003870 PhMOD5.elf CPhMOD5::InsertConnNode(unsigned long, trMOD5HWAddr, int *)
+000038dc PhMOD5.elf CPhMOD5::ConvertStringToMOD5Addr(tGCValue *, trMOD5HWAddr *)
+00003a38 PhMOD5.elf CPhMOD5::ConvertMOD5AddrToHWFAddr(trHWFAddress *, trMOD5HWAddr)
+00003a7c PhMOD5.elf CPhMOD5::CheckStatus(trMOD5HWAddr, unsigned long *, unsigned long *)
+00003b5c PhMOD5.elf CPhMOD5::DisconnectReq(unsigned long, unsigned long, int *)
+00003ee8 PhMOD5.elf CPhMOD5::ReadVarReq(unsigned long, int *)
+0000441c PhMOD5.elf CPhMOD5::BuildReadMessage(unsigned long, unsigned char, int, unsigned int &, unsigned int &, trMOD5CommInfo *, unsigned long &, unsigned char *, int *)
+000047e8 PhMOD5.elf CPhMOD5::WriteVarReq(unsigned long, int *)
+00004d10 PhMOD5.elf CPhMOD5::BuildWriteMessage(unsigned long, unsigned char, int, unsigned int &, unsigned int &, tVarDataValue *, trMOD5CommInfo *, unsigned char *, unsigned long &, int *)
+0000516c PhMOD5.elf CPhMOD5::AbortVarReq(unsigned long, int *)
+00005500 PhMOD5.elf CPhMOD5::TimeoutAbortVarReq(unsigned long, int *)
+0000553c PhMOD5.elf CPhMOD5::ReadRawReq(unsigned long, int *)
+00005548 PhMOD5.elf CPhMOD5::WriteRawReq(unsigned long, int *)
+00005554 PhMOD5.elf CPhMOD5::AbortRawReq(unsigned long, int *)
+00005560 PhMOD5.elf CPhMOD5::GetExtendedStatusSize(unsigned long, int *, int *)
+0000556c PhMOD5.elf CPhMOD5::GetExtendedStatus(unsigned long, int, teIEC1131Type *, tGCValue *, int *)
+00005578 PhMOD5.elf CPhMOD5::SetStatus(unsigned long, int, int *)
+00005584 PhMOD5.elf CPhMOD5::ReadRes(unsigned long, int, int *)
+00005590 PhMOD5.elf CPhMOD5::WriteRes(unsigned long, int, int *)
+000055a0 PhMOD5.elf CPhMOD5::SendClientMessage(unsigned char *, int, eErrorCodes *)
+00005720 PhMOD5.elf CPhMOD5::IsSameDataTypes(unsigned char *, int)
+00005778 PhMOD5.elf CPhMOD5::PrintAccessInfo(unsigned long, unsigned long, int, int)
+000058b8 PhMOD5.elf CPhMOD5::GetWriteData(unsigned char, int, tVarDataValue *, unsigned char *, int *)
+00005a64 PhMOD5.elf CPhMOD5::UpdateReadWriteFB(unsigned long, int, int *)
+00005c74 PhMOD5.elf CPhMOD5::InsertNodeInVarConnList(unsigned long, unsigned long, unsigned int, unsigned char, int *)
+00005cec PhMOD5.elf CPhMOD5::DeleteNodeFromVarConnList(teConnORVarHandle, unsigned long)
+00005dc8 PhMOD5.elf CPhMOD5::IsVarHandleInVarConnList(unsigned long, unsigned int &, bool)
+00005e78 PhMOD5.elf CPhMOD5::PrintVarConnList(void)
+00005e7c PhMOD5.elf CPhMOD5::DeleteNodeFromConnList(unsigned long)
+00005ec0 PhMOD5.elf CPhMOD5::FindConnHandleForThisVarHandle(unsigned long, unsigned long &)
+00005f00 PhMOD5.elf CPhMOD5::DeleteConnList(void)
+00005f2c PhMOD5.elf CPhMOD5::NumberOfVarhandleForThisConnHandle(unsigned long)
+00005f80 PhMOD5.elf CPhMOD5::DeleteVarConnList(void)
+00005fac PhMOD5.elf MemChkThread(int, int, int, int)
+00005fd0 PhMOD5.elf CPhMOD5::StartMemChkThread(unsigned short)
+00006144 PhMOD5.elf CPhMOD5::MemChkThreadWork(void)
+0000645c PhMOD5.elf FailOverThread(int, int, int, int)
+00006480 PhMOD5.elf CPhMOD5::StartFailOverThread(unsigned short)
+000065e8 PhMOD5.elf CPhMOD5::DeleteVarHandleFromTable(unsigned long)
+000066ec PhMOD5.elf CPhMOD5::SendClientMessageForWrite(unsigned char *, int, eErrorCodes *)
+00006908 PhMOD5.elf ClientThread(int, int, int, int)
+00006908 PhMOD5.elf Letext
+00006908 PhMOD5.elf Letext
+0000692c PhMOD5.elf CPhMOD5::ClientThreadWork(void)
+00006af8 PhMOD5.elf CPhMOD5::ProcessResponseMsg(unsigned long *, int *)
+0000738c PhMOD5.elf CPhMOD5::StartClientThread(unsigned short)
+00007504 PhMOD5.elf CPhMOD5::ProcessBoolData(unsigned long)
+00007548 PhMOD5.elf CPhMOD5::ProcessIntData(unsigned long)
+00007628 PhMOD5.elf CPhMOD5::PrintReceivedInfo(void)
+00007720 PhMOD5.elf CPhMOD5::UpdateFB(unsigned long)
+00007954 PhMOD5.elf CPhMOD5::CheckValidityOfMOD5Address(tGCValue)
+00008340 G _SDA2_BASE_ PhMOD5.elf 
+00008a14 PhMOD5.elf CPhMOD5::HandleHotRemove(void)
+00008bc8 PhMOD5.elf CPhMOD5::UpdateVarTableForResp(unsigned long)
+00008cf4 PhMOD5.elf CPhMOD5::IsNumber(char const *)
+00008d60 PhMOD5.elf CPhMOD5::CheckPortStatus(void)
+00008f94 PhMOD5.elf Letext
+00008f98 PhMOD5.elf CPhMOD5::PhMOD5GetTraceLevel(void)
+00009054 PhMOD5.elf CPhMOD5::UpdateConnectBlocks(int)
+00009164 PhMOD5.elf CPhMOD5::UpdateConnectBlocks(int, unsigned char)
+00009338 PhMOD5.elf CPhMOD5::PrintVarDataTable(void)
+000093bc PhMOD5.elf Letext
+000093c0 PhMOD5.elf ObjectFactory
+00009504 PhMOD5.elf Letext
+00009508 PhMOD5.elf __pure_virtual
+00009570 PhMOD5.elf __builtin_delete
+000095d4 PhMOD5.elf Letext
+000095d4 PhMOD5.elf Letext
+000095d4 PhMOD5.elf Letext
+000095d8 PhMOD5.elf CPhCommon_Base::CPhCommon_Base(void)
+00009644 PhMOD5.elf CPhCommon_Base::~CPhCommon_Base(void)
+000096bc PhMOD5.elf CPhCommon_Base::GetProductInfo(unsigned char *, unsigned char *, unsigned char *, unsigned long)
+000096f8 PhMOD5.elf CPhCommon_Base::SetCommonCallbackInterface(ICommonCallback *)
+00009728 PhMOD5.elf CPhConfig_Base1::PrepareForTermination(teHWFErrorCode *)
+00009758 PhMOD5.elf CPhConfig_Base1::RemoveHWConfiguration(trHWFAddress, teHWFErrorCode *)
+0000978c PhMOD5.elf CPhConfig_Base1::RemoveIoConnection(unsigned long, teHWFErrorCode *)
+000097c0 PhMOD5.elf CPhConfig_Base1::PhResponsibilityForRestart(trHWFAddress, teHWFErrorCode *)
+000097f4 PhMOD5.elf CPhConfig_Base1::PhResponsibility(trHWFAddress, teHWFErrorCode *)
+00009828 PhMOD5.elf CPhConfig_Base1::StartUsingIoConnection(trHWFAddress, unsigned long, teHWFErrorCode *)
+00009860 PhMOD5.elf CPhConfig_Base1::PhResponsibilityForBackupDevice(trHWFAddress, teHWFErrorCode *)
+00009894 PhMOD5.elf CPhConfig_Base1::PhResponsibilityForHotInsert(trHWFAddress, teHWFErrorCode *)
+000098c8 PhMOD5.elf CPhConfig_Base1::PerformSwitchover(trHWFAddress, teHWFErrorCode *)
+000098fc PhMOD5.elf CPhConfig_Base1::StartUsingDevice(trHWFAddress, teHWFErrorCode *)
+00009930 PhMOD5.elf CPhConfig_Base1::PerformFailover(trHWFAddress, teHWFErrorCode *)
+00009964 PhMOD5.elf CPhClient_Base::ConnectReq(unsigned long, unsigned long *, int *)
+0000999c PhMOD5.elf CPhClient_Base::DisconnectReq(unsigned long, unsigned long, int *)
+000099d4 PhMOD5.elf CPhClient_Base::ReadVarReq(unsigned long, int *)
+00009a08 PhMOD5.elf CPhClient_Base::WriteVarReq(unsigned long, int *)
+00009a3c PhMOD5.elf CPhClient_Base::ReadRawReq(unsigned long, int *)
+00009a70 PhMOD5.elf CPhClient_Base::WriteRawReq(unsigned long, int *)
+00009aa4 PhMOD5.elf CPhClient_Base::AbortRawReq(unsigned long, int *)
+00009ad8 PhMOD5.elf CPhClient_Base::AbortVarReq(unsigned long, int *)
+00009b0c PhMOD5.elf CPhClient_Base::GetExtendedStatusSize(unsigned long, int *, int *)
+00009b44 PhMOD5.elf CPhClient_Base::GetExtendedStatus(unsigned long, int, teIEC1131Type *, tGCValue *, int *)
+00009b84 PhMOD5.elf CPhClient_Base::SetStatus(unsigned long, int, int *)
+00009bbc PhMOD5.elf CPhClient_Base::ReadRes(unsigned long, int, int *)
+00009bf4 PhMOD5.elf CPhClient_Base::WriteRes(unsigned long, int, int *)
+00009c2c PhMOD5.elf CPhClient_Base1::ConnectReq(unsigned long, unsigned long *, int *)
+00009c64 PhMOD5.elf CPhClient_Base1::DisconnectReq(unsigned long, unsigned long, int *)
+00009c9c PhMOD5.elf CPhClient_Base1::ReadVarReq(unsigned long, int *)
+00009cd0 PhMOD5.elf CPhClient_Base1::WriteVarReq(unsigned long, int *)
+00009d04 PhMOD5.elf CPhClient_Base1::RegisterVarReq(unsigned long, int *)
+00009d38 PhMOD5.elf CPhClient_Base1::ReadRawReq(unsigned long, int *)
+00009d6c PhMOD5.elf CPhClient_Base1::WriteRawReq(unsigned long, int *)
+00009da0 PhMOD5.elf CPhClient_Base1::AbortRawReq(unsigned long, int *)
+00009dd4 PhMOD5.elf CPhClient_Base1::AbortVarReq(unsigned long, int *)
+00009e08 PhMOD5.elf CPhClient_Base1::TimeoutAbortVarReq(unsigned long, int *)
+00009e98 PhMOD5.elf CPhClient_Base1::GetExtendedStatusSize(unsigned long, int *, int *)
+00009ed0 PhMOD5.elf CPhClient_Base1::GetExtendedStatus(unsigned long, int, teIEC1131Type *, tGCValue *, int *)
+00009f10 PhMOD5.elf CPhClient_Base1::BufferTakeForReceive(unsigned long, int *)
+00009f44 PhMOD5.elf CPhClient_Base1::BufferGiveForReceive(unsigned long, int, int *)
+00009f7c PhMOD5.elf CPhClient_Base1::BufferTakeForSend(unsigned long, unsigned int, int *)
+00009fb4 PhMOD5.elf CPhClient_Base1::BufferGiveForSend(unsigned long, unsigned int, int, int *)
+00009ff0 PhMOD5.elf CPhClient_Base1::SetStatus(unsigned long, int, int *)
+0000a028 PhMOD5.elf CPhClient_Base1::ReadRes(unsigned long, int, int *)
+0000a060 PhMOD5.elf CPhClient_Base1::WriteRes(unsigned long, int, int *)
+0000a098 PhMOD5.elf CPhStatus_Base1::KickWatchdog(unsigned short *, teHWFErrorCode *)
+0000a0cc PhMOD5.elf CPhStatus_Base1::GetStatus(trHWFAddress, teHWFUnitKind, unsigned long *, unsigned long *, teHWFErrorCode *)
+0000a10c PhMOD5.elf CPhIOAccess_Base::GetCopyRoutineReference(unsigned int, void (**)(short, void *, void *), IOAccessErrorCode *)
+0000a144 PhMOD5.elf CPhIOAccess_Base::ObtainDPM(eAreaType, trHWFAddress, IOAccessErrorCode *)
+0000a17c PhMOD5.elf CPhIOAccess_Base::ReleaseDPM(eAreaType, trHWFAddress, IOAccessErrorCode *)
+0000a1b4 PhMOD5.elf CPhDiagnostics_Base::PhDiagnosticsTableNew(teDiagErrorCode *)
+0000a1e4 PhMOD5.elf CPhDiagnostics_Base::PhDiagnosticsTableCleared(teDiagErrorCode *)
+0000a214 PhMOD5.elf CPhOLU_Base::PrepareForFirmwareDownload(trHWFAddress const *, unsigned long, eOLUStatus *)
+0000a24c PhMOD5.elf CPhOLU_Base::PrepareForApplicationStop(trHWFAddress const *, eOLUStatus *)
+0000a280 PhMOD5.elf CPhOLU_Base::ResumeOperation(trHWFAddress const *, eOLUStatus *)
+0000a2b4 PhMOD5.elf CPhOLU_Base::PhResponsibilityForOLU(trHWFAddress const *, eOLUStatus *)
+0000a2e8 PhMOD5.elf CPhOLU_Base::PrepareForLeavingOLU(trHWFAddress const *, eOLUStatus *)
+0000a31c PhMOD5.elf CPhOLU_Base::PrepareForAppAndConfigDownload(trHWFAddress const *, eOLUStatus *)
+0000a354 PhMOD5.elf IPhCommon::IPhCommon(void)
+0000a3c0 PhMOD5.elf IUnknown::IUnknown(void)
+0000a418 PhMOD5.elf Letext
+0000a41c PhMOD5.elf CPMLogger::CPMLogger(void)
+0000a478 PhMOD5.elf CPMLogger::~CPMLogger(void)
+0000a4c8 PhMOD5.elf CPMLogger::SetInterfacePointers(ISystemUtilitiesCallback *)
+0000a4d4 PhMOD5.elf CPMLogger::Error(char *)
+0000a5bc PhMOD5.elf CPMLogger::Error(char *, int)
+0000a6a8 PhMOD5.elf CPMLogger::Info(char *)
+0000a790 PhMOD5.elf CPMLogger::Info(char *, int)
+0000a87c PhMOD5.elf CPMLogger::Warning(char *)
+0000a964 PhMOD5.elf CPMLogger::Warning(char *, int)
+0000aa4c PhMOD5.elf CPMLogger::UpdateTraceSettings(unsigned long)
+0000aa58 PhMOD5.elf CPMLogger::Trace(char *, tePMMsgClassMask)
+0000ab58 PhMOD5.elf CPMLogger::Trace(char *, trHWFAddress, tePMMsgClassMask)
+0000aca4 PhMOD5.elf CPMLogger::GetTraceSettings(void)
+0000acb0 PhMOD5.elf CPMLogger::PrintConfBuffer(char *, char *, int, tePMMsgClassMask)
+0000ada8 PhMOD5.elf CPMLogger::NotifyUser(unsigned long, unsigned long)
+0000ae6c PhMOD5.elf CPMLogger::HwAddrToString(char *, char *, trHWFAddress)
+0000af10 PhMOD5.elf CPMLogger::SetCIModulePos(int)
+0000af50 PhMOD5.elf CPMLogger::UpdateStrHeader(void)
+0000afc8 PhMOD5.elf Letext
+0000afc8 PhMOD5.elf CListOfRegistrationInfo::CListOfRegistrationInfo(CPMLogger *)
+0000aff0 PhMOD5.elf CListOfRegistrationInfo::~CListOfRegistrationInfo(void)
+0000b06c PhMOD5.elf CListOfRegistrationInfo::Init(IHeapCallback *, int)
+0000b08c PhMOD5.elf CListOfRegistrationInfo::CompareRegistrationInfo(void const *, void const *)
+0000b124 PhMOD5.elf CListOfRegistrationInfo::Add(trHWFAddress, unsigned long)
+0000b1b0 PhMOD5.elf CListOfRegistrationInfo::Add(PH_HWFAddress, unsigned long)
+0000b374 PhMOD5.elf CListOfRegistrationInfo::Remove(PH_HWFAddress)
+0000b474 PhMOD5.elf CListOfRegistrationInfo::Find(PH_HWFAddress)
+0000b51c PhMOD5.elf CListOfRegistrationInfo::Find(trHWFAddress)
+0000b5ac PhMOD5.elf CListOfRegistrationInfo::Find(unsigned long)
+0000b61c PhMOD5.elf CListOfRegistrationInfo::Item(unsigned long)
+0000b668 PhMOD5.elf CListOfRegistrationInfo::PutArray(unsigned char *, unsigned long)
+0000b798 PhMOD5.elf CListOfRegistrationInfo::Clear(void)
+0000b7a8 PhMOD5.elf CListOfRegistrationInfo::AllIOConnectionStarted(void)
+0000b824 PhMOD5.elf CListOfRegistrationInfo::ClearSentFlag(void)
+0000b898 PhMOD5.elf CListOfAllocatedItems::CListOfAllocatedItems(unsigned long, void *, int)
+0000b908 PhMOD5.elf CListOfAllocatedItems::~CListOfAllocatedItems(void)
+0000b960 PhMOD5.elf CListOfAllocatedItems::Add(PH_HWFAddress *, unsigned long, unsigned long, AI_STATUS, ENUM_ELEMENT_TYPE)
+0000ba74 PhMOD5.elf CListOfAllocatedItems::Item(unsigned long)
+0000baac PhMOD5.elf CListOfAllocatedItems::GetArray(unsigned long *)
+0000babc PhMOD5.elf CListOfAllocatedItems::PutArray(unsigned char *, unsigned long)
+0000bb84 PhMOD5.elf CListOfAllocatedItems::AllocateMemory(unsigned long)
+0000bbe4 PhMOD5.elf CListOfAllocatedItems::FreeMemory(unsigned char *)
+0000bc38 PhMOD5.elf CPhPMBase::CPhPMBase(void)
+0000be00 PhMOD5.elf CPhPMBase::~CPhPMBase(void)
+0000bfa4 PhMOD5.elf CPhPMBase::SetCommonCallbackInterface(ICommonCallback *)
+0000c204 PhMOD5.elf CPhPMBase::ObtainDPM(eAreaType, trHWFAddress, IOAccessErrorCode *)
+0000c268 PhMOD5.elf CPhPMBase::ReleaseDPM(eAreaType, trHWFAddress, IOAccessErrorCode *)
+0000c2d0 PhMOD5.elf CPhPMBase::PrepareForTermination(teHWFErrorCode *)
+0000c4e0 PhMOD5.elf CPhPMBase::RemoveHWConfiguration(trHWFAddress, teHWFErrorCode *)
+0000c6a4 PhMOD5.elf CPhPMBase::RemoveIoConnection(unsigned long, teHWFErrorCode *)
+0000c838 PhMOD5.elf CPhPMBase::SendLastNodeConfigured(int)
+0000c8e0 PhMOD5.elf CPhPMBase::SendStartUsingIOConnection(PH_HWFAddress *, int, teHWFErrorCode *)
+0000ca00 PhMOD5.elf CPhPMBase::SendAllIOConnectionStarted(int, teHWFErrorCode *)
+0000cae8 PhMOD5.elf CPhPMBase::SendStartIOConnectionForAllIOConnections(int)
+0000cbc8 PhMOD5.elf CPhPMBase::SendStartUsingForAllUnsentIOConnections(int)
+0000cd10 PhMOD5.elf CPhPMBase::SendLogSettings(int, teHWFErrorCode *)
+0000ce20 PhMOD5.elf CPhPMBase::SendCommand(int, int, teHWFErrorCode *)
+0000cf14 PhMOD5.elf CPhPMBase::HandlePMCommand(int, teHWFErrorCode *)
+0000d040 PhMOD5.elf CPhPMBase::PhResponsibilityForRestart(trHWFAddress, teHWFErrorCode *)
+0000d224 PhMOD5.elf CPhPMBase::TraverseHWTree(trHWFAddress, int, CPhPMBase::tePhPMTraverseTreeMode, unsigned long, unsigned long, bool)
+0000d680 PhMOD5.elf CPhPMBase::CheckRedundancyState(trHWFAddress, teHWFErrorCode *)
+0000d8ac PhMOD5.elf CPhPMBase::CommonPhResponsibility(trHWFAddress, teHWFErrorCode *)
+0000de30 PhMOD5.elf CPhPMBase::PhResponsibility(trHWFAddress, teHWFErrorCode *)
+0000e320 PhMOD5.elf CPhPMBase::PhResponsibilityForBackupDevice(trHWFAddress, teHWFErrorCode *)
+0000e830 PhMOD5.elf CPhPMBase::PhResponsibilityForHotInsert(trHWFAddress, teHWFErrorCode *)
+0000eb88 PhMOD5.elf CPhPMBase::StartUsingIoConnection(trHWFAddress, unsigned long, teHWFErrorCode *)
+0000edac PhMOD5.elf CPhPMBase::StartUsingDevice(trHWFAddress, teHWFErrorCode *)
+0000ee7c PhMOD5.elf CPhPMBase::ConfigureWatchdog(trHWFAddress, int)
+0000f03c PhMOD5.elf CPhPMBase::KickWatchdog(unsigned short *, teHWFErrorCode *)
+0000f0b0 PhMOD5.elf CPhPMBase::GetStatus(trHWFAddress, teHWFUnitKind, unsigned long *, unsigned long *, teHWFErrorCode *)
+0000f198 PhMOD5.elf CPhPMBase::PerformSwitchover(trHWFAddress, teHWFErrorCode *)
+0000f204 PhMOD5.elf CPhPMBase::PerformFailover(trHWFAddress, teHWFErrorCode *)
+0000f298 PhMOD5.elf CPhPMBase::WaitOnIOConAddrFromCI(int, unsigned long)
+0000f3d8 PhMOD5.elf CPhPMBase::WaitForConfigReply(int, unsigned long)
+0000f518 PhMOD5.elf CPhPMBase::WaitForAllIOConnectionsToStart(teHWFErrorCode *)
+0000f5cc PhMOD5.elf CPhPMBase::RestartCIModule(void)
+0000f83c PhMOD5.elf CPhPMBase::ProcessHWunit(unsigned char **, unsigned long *)
+0000f840 PhMOD5.elf CPhPMBase::WriteToDriver(int, ENUM_TRANSCEIVER_MSG_TYPE, unsigned char *, unsigned long)
+0000f918 PhMOD5.elf CPhPMBase::SendIoConnectionAddressList(int)
+0000fbac PhMOD5.elf CPhPMBase::SendConfigDataToCIModule(trHWFAddress, ENUM_ELEMENT_TYPE, int)
+00010108 PhMOD5.elf CPhPMBase::GetHWUnitType(trHWFAddress)
+0001033c PhMOD5.elf CPhPMBase::RegisterHWUnitWithIOC(trHWFAddress, unsigned int)
+00010798 PhMOD5.elf CPhPMBase::HandleNodeConfigCompleted(CListOfAllocatedItems *)
+00010980 PhMOD5.elf CPhPMBase::ProcessSubHwUnitStatus(trHWFAddress, unsigned long *, unsigned long *, bool)
+00010988 PhMOD5.elf CPhPMBase::HandleStatusMsg(TRANSCEIVER_STATUSDATA *, unsigned long, bool)
+00010d2c PhMOD5.elf CPhPMBase::CheckSystemVariables(void)
+00010fa8 PhMOD5.elf CPhPMBase::DriverForCIModuleClosed(int)
+00010ff8 PhMOD5.elf CPhPMBase::HandleHighPrioCIMessagesThread(void)
+000111c4 PhMOD5.elf CPhPMBase::SupervisionThread(void)
+0001179c PhMOD5.elf CPhPMBase::Init(trHWFAddress, teHWFErrorCode *)
+00011cd0 PhMOD5.elf CPhPMBase::HandleThreadSupervision(void)
+00011e44 PhMOD5.elf CPhPMBase::TimeSynch(TRANSCEIVER_TIMESYNCHDATA *)
+00012064 PhMOD5.elf CPhPMBase::HandleSwitchoverRequest(int)
+000122e8 PhMOD5.elf CPhPMBase::HandleCItoCIMessages(int, unsigned long, ENUM_TRANSCEIVER_MSG_TYPE, unsigned char *, unsigned long)
+0001240c PhMOD5.elf CPhPMBase::SetAllIoConnectionStarted(void)
+00012480 PhMOD5.elf CPhPMBase::PrepareForFirmwareDownload(trHWFAddress const *, unsigned long, eOLUStatus *)
+000124b8 PhMOD5.elf CPhPMBase::PrepareForApplicationStop(trHWFAddress const *, eOLUStatus *)
+0001255c PhMOD5.elf CPhPMBase::ResumeOperation(trHWFAddress const *, eOLUStatus *)
+00012610 PhMOD5.elf CPhPMBase::PhResponsibilityForOLU(trHWFAddress const *, eOLUStatus *)
+000126f4 PhMOD5.elf CPhPMBase::PrepareForLeavingOLU(trHWFAddress const *, eOLUStatus *)
+000127ac PhMOD5.elf CPhPMBase::PrepareForAppAndConfigDownload(trHWFAddress const *, eOLUStatus *)
+000127e0 PhMOD5.elf CPhPMBase::SwitchoverThread(void)
+000129a0 PhMOD5.elf CPhPMBase::ProtocolSpecificConfigurationValues(trHWFAddress, bool &, unsigned long &, unsigned short &, unsigned long &)
+000129a4 PhMOD5.elf spawnSupervisionThread(int, int, int, int)
+000129c4 PhMOD5.elf spawnHighPriorityMessgeHandleThread(int, int, int, int)
+000129e4 PhMOD5.elf spawnSwitchoverThread(int, int, int, int)
+00012a04 PhMOD5.elf Letext
+00012a04 PhMOD5.elf CDriverHandler::CDriverHandler(CPMLogger *)
+00012cf0 PhMOD5.elf CDriverHandler::~CDriverHandler(void)
+00012d40 PhMOD5.elf CDriverHandler::Init(trHWFAddress const *, IDriverFactoryCallback *, IVOSCallback *, IStatusCallback1 *, IHeapCallback *, int, int, int, int, unsigned long, teHWFErrorCode *)
+0001316c PhMOD5.elf CDriverHandler::ReadyForUse(void)
+00013174 PhMOD5.elf CDriverHandler::Exit(void)
+000133cc PhMOD5.elf CDriverHandler::UpdateRedundancyInfo(int, int, int, teHWFErrorCode *)
+00013658 PhMOD5.elf CDriverHandler::CreateTransactionIdAndEvent(ICIGDriverCallback *, unsigned long *, unsigned long *)
+00013788 PhMOD5.elf CDriverHandler::OpenCIGDriver(dhdriverinfo *, bool, bool *, eErrorCodes *)
+00013e40 PhMOD5.elf CDriverHandler::CloseCIGDriver(dhdriverinfo *, bool, eErrorCodes *)
+0001470c PhMOD5.elf CDriverHandler::Open(int, bool, int *)
+00014910 PhMOD5.elf CDriverHandler::OpenForHotInsert(int *, bool *, bool *)
+00014b40 PhMOD5.elf CDriverHandler::Close(int, bool)
+00014cec PhMOD5.elf CDriverHandler::GetDriverInfoPtr(dhdriverinfo **, dhdriverinfo **)
+00014d3c PhMOD5.elf CDriverHandler::SendWatchdogStateToCI(int, WD_STATE, teHWFErrorCode *)
+00014e70 PhMOD5.elf CDriverHandler::Read(int, unsigned long, ENUM_TRANSCEIVER_MSG_TYPE *, unsigned char **, unsigned long *, unsigned long, eErrorCodes *)
+00015628 PhMOD5.elf CDriverHandler::Write(int, unsigned long, ENUM_TRANSCEIVER_MSG_TYPE, unsigned char *, unsigned long, eErrorCodes *)
+00015b24 PhMOD5.elf CDriverHandler::EnableTimeSync(int, eErrorCodes *)
+00015cc4 PhMOD5.elf CDriverHandler::SetPrimary(int)
+00015d18 PhMOD5.elf CDriverHandler::ResetCIModule(int, eErrorCodes *)
+00015ed0 PhMOD5.elf CDriverHandler::SendOLUStateToCI(int, ENUM_OLU_STATE)
+0001601c PhMOD5.elf CDriverHandler::SendPrimaryToCI(int, int)
+000160f4 PhMOD5.elf CDriverHandler::SendBackupToCI(int, int)
+000161cc PhMOD5.elf CDriverHandler::SwitchOver(int *)
+000162b0 PhMOD5.elf CDriverHandler::IsRedundant(void)
+000162c8 PhMOD5.elf CDriverHandler::KickWatchDog(unsigned short *, teHWFErrorCode *)
+000168c8 PhMOD5.elf CDriverHandler::GetStatusRegisters(dhdriverinfo *, unsigned long *)
+00016af4 PhMOD5.elf CDriverHandler::GetStatus(bool, trHWFAddress, teHWFUnitKind, unsigned long *, unsigned long *, teHWFErrorCode *)
+00016d98 PhMOD5.elf CDriverHandler::HasGotBusError(int)
+00016df8 PhMOD5.elf CDriverHandler::ModuleAvailable(int)
+00016ee8 PhMOD5.elf CDriverHandler::HasGotConfigReply(int)
+00016f18 PhMOD5.elf CDriverHandler::SetConfigReply(int, bool)
+00016f44 PhMOD5.elf CDriverHandler::CheckCompatibility(trHWFAddress const *, tFirmwareInfo, unsigned long *, unsigned long *)
+00017390 PhMOD5.elf CDriverHandler::WaitForStatusInt(int, bool, unsigned long, eErrorCodes *)
+0001755c PhMOD5.elf CDriverHandler::GetSwitchoverInfo(int, eErrorCodes *, unsigned long *, eErrorCodes *, unsigned long *)
+00017820 PhMOD5.elf CDriverHandler::GetStatusIntSempahore(int)
+00017898 PhMOD5.elf CDriverHandler::PutStatusIntSempahore(int)
+000178e8 PhMOD5.elf CDriverHandler::GetPrimaryCIPos(void)
+000178fc PhMOD5.elf CDriverHandler::GetBackupCIPos(void)
+00017910 PhMOD5.elf CDriverHandler::GetRWMStartAddress(int)
+0001794c PhMOD5.elf CDriverHandler::AtLeastOneDriverIsOpen(void)
+000179a8 PhMOD5.elf CDriverHandler::ObtainDPM(unsigned long)
+00017b08 PhMOD5.elf CDriverHandler::ReleaseDPM(unsigned long)
+00017c74 PhMOD5.elf CDriverHandler::DriverIsOpen(int)
+00017c88 PhMOD5.elf CDriverHandler::EnableFFH(dhdriverinfo *)
+00017d58 PhMOD5.elf CDriverHandler::RaiseBecomePrimaryInterrupt(int)
+00017ee4 PhMOD5.elf CDriverHandler::GetBackupAck(void)
+00017eec PhMOD5.elf CDriverHandler::GetPrimaryAck(void)
+00017ef4 PhMOD5.elf CDriverHandler::SetBackupAck(void)
+00017f00 PhMOD5.elf CDriverHandler::SetPrimaryAck(void)
+00017f0c PhMOD5.elf CDriverHandler::SetRWError(int)
+00017f48 PhMOD5.elf CDriverHandler::PrintStatusRegisters(dhdriverinfo *, int)
+00018080 PhMOD5.elf CDriverHandler::TakeAllChannelSem(dhdriverinfo *)
+00018158 PhMOD5.elf CDriverHandler::GiveAllChannelSem(dhdriverinfo *)
+0001821c PhMOD5.elf CRTFuncTabBegin
+0001821c PhMOD5.elf Letext
+0001821c PhMOD5.elf scprocs
+00018228 PhMOD5.elf printf
+0001822c PhMOD5.elf sprintf
+00018230 PhMOD5.elf sscanf
+00018234 PhMOD5.elf memcpy
+00018238 PhMOD5.elf memset
+0001823c PhMOD5.elf strcat
+00018240 PhMOD5.elf strcmp
+00018244 PhMOD5.elf strlen
+00018248 PhMOD5.elf strncmp
+0001824c PhMOD5.elf strncpy
+00018250 PhMOD5.elf memchr
+00018254 PhMOD5.elf memcmp
+00018258 PhMOD5.elf memmove
+0001825c PhMOD5.elf strchr
+00018260 PhMOD5.elf strcoll
+00018264 PhMOD5.elf strcpy
+00018268 PhMOD5.elf strcspn
+0001826c PhMOD5.elf strncat
+00018270 PhMOD5.elf strpbrk
+00018274 PhMOD5.elf strrchr
+00018278 PhMOD5.elf strspn
+0001827c PhMOD5.elf strstr
+00018280 PhMOD5.elf strtok
+00018284 PhMOD5.elf strxfrm
+00018288 PhMOD5.elf strerror
+0001828c PhMOD5.elf pow
+00018290 PhMOD5.elf acos
+00018294 PhMOD5.elf asin
+00018298 PhMOD5.elf atan
+0001829c PhMOD5.elf atan2
+000182a0 PhMOD5.elf ceil
+000182a4 PhMOD5.elf cos
+000182a8 PhMOD5.elf cosh
+000182ac PhMOD5.elf exp
+000182b0 PhMOD5.elf fabs
+000182b4 PhMOD5.elf floor
+000182b8 PhMOD5.elf fmod
+000182bc PhMOD5.elf frexp
+000182c0 PhMOD5.elf ldexp
+000182c4 PhMOD5.elf log
+000182c8 PhMOD5.elf log10
+000182cc PhMOD5.elf modf
+000182d0 PhMOD5.elf sin
+000182d4 PhMOD5.elf sinh
+000182d8 PhMOD5.elf sqrt
+000182dc PhMOD5.elf tan
+000182e0 PhMOD5.elf tanh
+000182e4 PhMOD5.elf div_r
+000182e8 PhMOD5.elf labs
+000182ec PhMOD5.elf strtol
+000182f0 PhMOD5.elf free
+000182f4 PhMOD5.elf abort
+000182f8 PhMOD5.elf abs
+000182fc PhMOD5.elf atof
+00018300 PhMOD5.elf atoi
+00018304 PhMOD5.elf atol
+00018308 PhMOD5.elf bsearch
+0001830c PhMOD5.elf ldiv_r
+00018310 PhMOD5.elf qsort
+00018314 PhMOD5.elf rand
+00018318 PhMOD5.elf srand
+0001831c PhMOD5.elf strtod
+00018320 PhMOD5.elf strtoul
+00018324 PhMOD5.elf malloc
+00018328 PhMOD5.elf __assert
+0001832c PhMOD5.elf time
+00018330 PhMOD5.elf asctime
+00018334 PhMOD5.elf gmtime
+00018338 PhMOD5.elf clock
+0001833c PhMOD5.elf ctime
+00018340 PhMOD5.elf difftime
+00018344 PhMOD5.elf localtime
+00018348 PhMOD5.elf mktime
+0001834c PhMOD5.elf strftime
+00018350 PhMOD5.elf eventcollSem
+00018354 PhMOD5.elf intLock
+00018358 PhMOD5.elf intUnlock
+0001835c PhMOD5.elf __builtin_vec_new
+00018360 PhMOD5.elf __builtin_vec_delete
+00018364 PhMOD5.elf fprintf
+00018368 PhMOD5.elf __stdout
+0001836c PhMOD5.elf __stderr
+00018370 PhMOD5.elf setjmp
+00018374 PhMOD5.elf longjmp
+00018378 PhMOD5.elf CRTFuncTabEnd
+00018378 PhMOD5.elf ecprocs
+00018378 PhMOD5.elf etext
+00018378 PhMOD5.elf sgot2
+00018c48 PhMOD5.elf egot2
+00018c48 PhMOD5.elf sfixup
+00019118 PhMOD5.elf efixup
+00019118 PhMOD5.elf useEXEHEAD
+0001912c PhMOD5.elf cSWModbusSrcNameSuff
+0001913c PhMOD5.elf cSWInsumSrcNameSuff
+0001914c PhMOD5.elf cSWProfibusSrcNameSuff
+0001915c PhMOD5.elf cSWMB300SrcNameSuff
+00019168 PhMOD5.elf cSWS100SrcNameSuff
+00019174 PhMOD5.elf CComCoClass<CPhMOD5, &CLSID_CPhMOD5>::m_HeapTag
+0001a3a0 PhMOD5.elf CPhMOD5::CPhClient_Base virtual table
+0001a430 PhMOD5.elf CPhMOD5::CPhOLU_Base virtual table
+0001a488 PhMOD5.elf CPhMOD5::CPhIOAccess_Base virtual table
+0001a4c8 PhMOD5.elf CPhMOD5::CPhStatus_Base1 virtual table
+0001a500 PhMOD5.elf CPhMOD5::CPhConfig_Base1 virtual table
+0001a580 PhMOD5.elf CPhMOD5 virtual table
+0001a5e8 PhMOD5.elf IPhClient virtual table
+0001a678 PhMOD5.elf IUnknown virtual table
+0001a6a0 PhMOD5.elf CompanyName
+0001a6a4 PhMOD5.elf ProductName
+0001a6ac PhMOD5.elf ProductVersion
+0001a6d4 PhMOD5.elf cSWModbusSrcNameSuff
+0001a6e4 PhMOD5.elf cSWInsumSrcNameSuff
+0001a6f4 PhMOD5.elf cSWProfibusSrcNameSuff
+0001a704 PhMOD5.elf cSWMB300SrcNameSuff
+0001a710 PhMOD5.elf cSWS100SrcNameSuff
+0001b3dc PhMOD5.elf cSWModbusSrcNameSuff
+0001b3ec PhMOD5.elf cSWInsumSrcNameSuff
+0001b3fc PhMOD5.elf cSWProfibusSrcNameSuff
+0001b40c PhMOD5.elf cSWMB300SrcNameSuff
+0001b418 PhMOD5.elf cSWS100SrcNameSuff
+0001bcac PhMOD5.elf cSWModbusSrcNameSuff
+0001bcbc PhMOD5.elf cSWInsumSrcNameSuff
+0001bccc PhMOD5.elf cSWProfibusSrcNameSuff
+0001bcdc PhMOD5.elf cSWMB300SrcNameSuff
+0001bce8 PhMOD5.elf cSWS100SrcNameSuff
+0001be28 PhMOD5.elf cSWModbusSrcNameSuff
+0001be38 PhMOD5.elf cSWInsumSrcNameSuff
+0001be48 PhMOD5.elf cSWProfibusSrcNameSuff
+0001be58 PhMOD5.elf cSWMB300SrcNameSuff
+0001be64 PhMOD5.elf cSWS100SrcNameSuff
+0001be70 PhMOD5.elf CLSID_CPhMOD5
+0001be8c PhMOD5.elf PHproperties
+0001be94 PhMOD5.elf CMirroredObject::c_pMirroredObjectMgrImpl
+0001be98 PhMOD5.elf CMirroredObjectAgent::c_pHeapCallback
+0001be9c PhMOD5.elf CMirroredObjectAgent::c_AgentTag
+0001bef0 PhMOD5.elf GUID_NULL
+0001bf00 PhMOD5.elf IID_IPhCommonCB
+0001bf10 PhMOD5.elf IID_IPhConfigCB
+0001bf20 PhMOD5.elf IID_IPhConfigCB1
+0001bf30 PhMOD5.elf IID_IPhIOAccessCB
+0001bf40 PhMOD5.elf IID_IPhExternalConfigCB1
+0001bf50 PhMOD5.elf IID_IPhExternalConfigCB2
+0001bf60 PhMOD5.elf IID_IPhExternalConfigCB3
+0001bf70 PhMOD5.elf IID_IPhOLUCB
+0001bf80 PhMOD5.elf IID_IPhCommon
+0001bf90 PhMOD5.elf IID_IPhConfig1
+0001bfa0 PhMOD5.elf IID_IPhStatus1
+0001bfb0 PhMOD5.elf IID_IPhClient
+0001bfc0 PhMOD5.elf IID_IPhClient1
+0001bfd0 PhMOD5.elf IID_IPhDiagnostics
+0001bfe0 PhMOD5.elf IID_IPhIOAccess
+0001bff0 PhMOD5.elf IID_IPhSafeConfig
+0001c000 PhMOD5.elf IID_IPhSafeConfig1
+0001c010 PhMOD5.elf IID_IPhSimulation
+0001c020 PhMOD5.elf IID_IPhOLU
+0001c030 PhMOD5.elf IID_IHeapCallback
+0001c040 PhMOD5.elf IID_ISystemUtilitiesCallback
+0001c050 PhMOD5.elf IID_ISystemUtilitiesCallback1
+0001c060 PhMOD5.elf IID_ISystemUtilitiesCallback2
+0001c070 PhMOD5.elf IID_ISystemUtilitiesCallback3
+0001c080 PhMOD5.elf IID_IEventMgrCallback
+0001c090 PhMOD5.elf IID_IEventMgrCallback1
+0001c0a0 PhMOD5.elf IID_ISysClockCallback
+0001c0b0 PhMOD5.elf IID_ISysClockCallback1
+0001c0c0 PhMOD5.elf IID_ISysClockCallback2
+0001c0d0 PhMOD5.elf IID_ISysClockCallback3
+0001c0e0 PhMOD5.elf IID_INetwClockSynchCallback
+0001c0f0 PhMOD5.elf IID_IConfigCBCallback1
+0001c100 PhMOD5.elf IID_IConfigCBCallback2
+0001c110 PhMOD5.elf IID_IConfigCBCallback3
+0001c120 PhMOD5.elf IID_IExternalConfigCBCallback
+0001c130 PhMOD5.elf IID_IExternalConfigCBCallback2
+0001c140 PhMOD5.elf IID_IExternalConfigCBCallback3
+0001c150 PhMOD5.elf IID_IExternalConfigCBCallback4
+0001c160 PhMOD5.elf IID_IMessagesCBCallback
+0001c170 PhMOD5.elf IID_IAIPAccessCBCallback
+0001c180 PhMOD5.elf IID_IOLUCBCallback
+0001c190 PhMOD5.elf IID_ISystemUtilitiesCBCallback1
+0001c1a0 PhMOD5.elf IID_IConfigCallback1
+0001c1b0 PhMOD5.elf IID_IConfigCallback2
+0001c1c0 PhMOD5.elf IID_IStatusCallback1
+0001c1d0 PhMOD5.elf IID_IGenClientCallback
+0001c1e0 PhMOD5.elf IID_IGenClientCallback1
+0001c1f0 PhMOD5.elf IID_IDriverFactoryCallback
+0001c200 PhMOD5.elf IID_IDiagnosticsCallback
+0001c210 PhMOD5.elf IID_ISafeConfigCallback
+0001c220 PhMOD5.elf IID_ISafeConfigCallback1
+0001c230 PhMOD5.elf IID_ICRCCallback
+0001c240 PhMOD5.elf IID_IIOAccessCallback
+0001c250 PhMOD5.elf IID_CriticalRegionCallback
+0001c260 PhMOD5.elf IID_VOSExceptionCallback
+0001c270 PhMOD5.elf IID_DrvCommonCallback
+0001c280 PhMOD5.elf IID_ProtectedMirroredHeapCallback
+0001c290 PhMOD5.elf IID_SharedMirroredHeapCallback
+0001c2a0 PhMOD5.elf IID_TemporaryMirroredHeapCallback
+0001c2b0 PhMOD5.elf IID_IRestrictedVOSCallback
+0001c2c0 PhMOD5.elf IID_IVarServerCallback
+0001c2d0 PhMOD5.elf IID_IVarServerCallback1
+0001c2e0 PhMOD5.elf IID_ISOCKETCallback
+0001c2f0 PhMOD5.elf IID_IVOSCallback
+0001c300 PhMOD5.elf IID_IVOSCallback1
+0001c310 PhMOD5.elf CPhOLU_Base virtual table
+0001c368 PhMOD5.elf CPhDiagnostics_Base virtual table
+0001c3a0 PhMOD5.elf CPhIOAccess_Base virtual table
+0001c3e0 PhMOD5.elf CPhStatus_Base1 virtual table
+0001c418 PhMOD5.elf CPhClient_Base1 virtual table
+0001c4d8 PhMOD5.elf CPhClient_Base virtual table
+0001c568 PhMOD5.elf CPhConfig_Base1 virtual table
+0001c5e8 PhMOD5.elf CPhCommon_Base virtual table
+0001c628 PhMOD5.elf GUID_NULL
+0001c638 PhMOD5.elf MaxCompanyNameLen
+0001c63c PhMOD5.elf MaxProductNameLen
+0001c640 PhMOD5.elf MaxProductVersionLen
+0001c644 PhMOD5.elf cMaxNrOfHWFAdrLevels
+0001c648 PhMOD5.elf cGCWrite
+0001c64c PhMOD5.elf cGCRead
+0001c650 PhMOD5.elf cGCSubscription
+0001c654 PhMOD5.elf cGCRegistration
+0001c658 PhMOD5.elf cGCAddMemoryAreaArrayNumberPlaces
+0001c65c PhMOD5.elf cPONotFound
+0001c660 PhMOD5.elf cGCBusyDisconnecting
+0001c664 PhMOD5.elf cGCRemovingPO
+0001c668 PhMOD5.elf cGCParametersMissing
+0001c66c PhMOD5.elf cGCAlreadyDefined
+0001c670 PhMOD5.elf cGCTypeNotSupported
+0001c674 PhMOD5.elf cGCIndexOutOfRange
+0001c678 PhMOD5.elf cGCTypeNotDefined
+0001c67c PhMOD5.elf cGCStringMismatch
+0001c680 PhMOD5.elf cGCFacadeError
+0001c684 PhMOD5.elf cGCInvalidHandle
+0001c688 PhMOD5.elf cGCAddedMemoryAreaError
+0001c68c PhMOD5.elf cGCBSErrorDetected
+0001c690 PhMOD5.elf cAborted
+0001c694 PhMOD5.elf cSuccess
+0001c698 PhMOD5.elf cPending
+0001c69c PhMOD5.elf cGCDisconnected
+0001c6a0 PhMOD5.elf cGCExtendedStatus
+0001c6a4 PhMOD5.elf cPHHeapFull
+0001c6a8 PhMOD5.elf cPHTypeMismatch
+0001c6ac PhMOD5.elf cPHSizeMismatch
+0001c6b0 PhMOD5.elf cPHErrAccessData
+0001c6b4 PhMOD5.elf cPHErrProtocolData
+0001c6b8 PhMOD5.elf cPHAccessVarNotFound
+0001c6bc PhMOD5.elf cPHErrInvalidPar
+0001c6c0 PhMOD5.elf cPHDirAddrFormatNotSupported
+0001c6c4 PhMOD5.elf cPHGenericFormatNotSupported
+0001c6c8 PhMOD5.elf cPHNotImplemented
+0001c6cc PhMOD5.elf cPHVarDataUnsupportedDirection
+0001c6d0 PhMOD5.elf cPHVarDataNotSupported
+0001c6d4 PhMOD5.elf cPHRawDataNotSupported
+0001c6d8 PhMOD5.elf cPHDriverError
+0001c6dc PhMOD5.elf cPHHardwareError
+0001c6e0 PhMOD5.elf cPHTRAdisconnect
+0001c6e4 PhMOD5.elf cLegacyFormat
+0001c6e8 PhMOD5.elf cDirAddrFormat
+0001c6ec PhMOD5.elf cGenericFormat
+0001c6f0 PhMOD5.elf eHWFDeviceSpecific1
+0001c6f4 PhMOD5.elf eHWFUnitBPrimary
+0001c6f8 PhMOD5.elf cHWFOPCMask
+0001c6fc PhMOD5.elf cHWFOPCChannelOk
+0001c700 PhMOD5.elf cHWFOPCChannelError
+0001c704 PhMOD5.elf cHWFOPCChannelForced
+0001c708 PhMOD5.elf cHWFOPCDeviceError
+0001c70c PhMOD5.elf cHWFOPCChannelErrorLow
+0001c710 PhMOD5.elf cHWFOPCChannelErrorHigh
+0001c714 PhMOD5.elf cHWFOPCChannelHigh
+0001c718 PhMOD5.elf cHWFOPCChannelLow
+0001c71c PhMOD5.elf cHWFChannelRedundant
+0001c720 PhMOD5.elf cHWFUnitBPrimary
+0001c724 PhMOD5.elf cHWFBackupUnitError
+0001c728 PhMOD5.elf cHWFXSPValueUsed
+0001c72c PhMOD5.elf cHWFChannelSimulated
+0001c730 PhMOD5.elf cHWFChannelForced
+0001c734 PhMOD5.elf cHWFChannelInverted
+0001c738 PhMOD5.elf cHWFXSPMask
+0001c73c PhMOD5.elf cHWFXSPNoSetting
+0001c740 PhMOD5.elf cHWFXSPValue
+0001c744 PhMOD5.elf cHWFXSPClear
+0001c748 PhMOD5.elf cHWFXSPFreeze
+0001c74c PhMOD5.elf cHWFXSPInvert
+0001c750 PhMOD5.elf cHWFXSPInitDPM
+0001c754 PhMOD5.elf HWFNO_XSP_FORCE
+0001c755 PhMOD5.elf HWFFORCE_OSP
+0001c756 PhMOD5.elf HWFFORCE_CLEAR
+0001c757 PhMOD5.elf HWFFORCE_BLOCK_IO_DPM_OUT_WRITE
+0001c758 PhMOD5.elf HWFFORCE_BLOCK_SM_DPM_OUT_WRITE
+0001c75c PhMOD5.elf cHWFMaxNrOfChannels
+0001c760 PhMOD5.elf cHWFStatusErrorsMask
+0001c764 PhMOD5.elf cHWFRootStatusErrorMask
+0001c768 PhMOD5.elf cHWFDoNotCopyUnitErrorMask
+0001c76c PhMOD5.elf cFWUpgradePrimary
+0001c770 PhMOD5.elf cFWUpgradeBackup
+0001c774 PhMOD5.elf cNewPhVersion
+0001c778 PhMOD5.elf cNewPMFirmware
+0001c780 PhMOD5.elf IPhCommon virtual table
+0001c7b8 PhMOD5.elf IUnknown virtual table
+0001c7e0 PhMOD5.elf CPMLogger::m_PhClassLibIdStr
+0001c970 PhMOD5.elf CPMLogger virtual table
+0001c994 PhMOD5.elf cSWModbusSrcNameSuff
+0001c9a4 PhMOD5.elf cSWInsumSrcNameSuff
+0001c9b4 PhMOD5.elf cSWProfibusSrcNameSuff
+0001c9c4 PhMOD5.elf cSWMB300SrcNameSuff
+0001c9d0 PhMOD5.elf cSWS100SrcNameSuff
+0001e720 PhMOD5.elf CPhPMBase::CPhOLU_Base virtual table
+0001e778 PhMOD5.elf CPhPMBase::CPhIOAccess_Base virtual table
+0001e7b8 PhMOD5.elf CPhPMBase::CPhStatus_Base1 virtual table
+0001e7f0 PhMOD5.elf CPhPMBase::CPhConfig_Base1 virtual table
+0001e870 PhMOD5.elf CPhPMBase virtual table
+0001e8d8 PhMOD5.elf IPhOLU virtual table
+0001e930 PhMOD5.elf IPhIOAccess virtual table
+0001e970 PhMOD5.elf IPhStatus1 virtual table
+0001e9a8 PhMOD5.elf IPhConfig1 virtual table
+0001ea28 PhMOD5.elf IUnknown virtual table
+0001ea5c PhMOD5.elf cSWModbusSrcNameSuff
+0001ea6c PhMOD5.elf cSWInsumSrcNameSuff
+0001ea7c PhMOD5.elf cSWProfibusSrcNameSuff
+0001ea8c PhMOD5.elf cSWMB300SrcNameSuff
+0001ea98 PhMOD5.elf cSWS100SrcNameSuff
+00027bf8 G _SDA_BASE_ PhMOD5.elf 
+</SYMBOLS>

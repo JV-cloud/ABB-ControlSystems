@@ -1,0 +1,216 @@
+(* -------------------------------------------------------------- *)
+(*    Module: ACS600  Modulebus                                   *)
+(* -------------------------------------------------------------- *)
+
+(* Version 1.0/2                                                  *)
+(* 2006-08-28     K Gardin                                        *)
+(* AC800M #26023  Changed copy routine for Ref2                   *) 
+(* -------------------------------------------------------------- *)
+(* Version 1.0/1                                                  *)
+(* 2006-08-10     K Gardin                                        *)
+(* AC800M #24287  Changed copy routine for Ref1                   *) 
+(* -------------------------------------------------------------- *)
+(* Version 1.0/0 based on io_acs600m.hwd version 5.0/3            *)
+(* 2005-08-31    N Ljungberg                                      *)
+
+HWUnitInfo  (* ACS600 Std *)
+   HWUnitID 16#00888900
+   Description "ABB Standard Drive"
+   Information "ABB Standard drive"
+   Icons MotorType
+   Attributes AdapterUnit IoUnit DigitalIn DigitalOut AnalogIn AnalogOut
+   InterfaceInfo
+    IoSysType CIGIO
+    CLSID_CB     {02A678FA-CA7D-4e4b-ABEA-888CF8CCE2F8}
+    CLSID_CTRL   {90F15C58-7EFA-4565-B572-246C19BBBB85}
+  End InterfaceInfo
+   ConnectionInfo
+     ConnectType OwnUnit
+     IOConnect   NoFail
+     IOConfig    NoFail
+   End ConnectionInfo
+   Parameters
+     ParamInfo 
+       Name Channel_1
+       Description "Channel 1 (DDS 1/2)"
+       CompileType IOConfig
+       Datatype ENUM
+       Default  2
+       ParValIndex 0
+       ParamType CIGIOData 1 6 6 ByteParam ByteOffset
+     End ParamInfo
+     ParamInfo 
+       Name Channel_2
+       Description "Channel 2 (DDS 3/4)"
+       CompileType IOConfig
+       Datatype ENUM
+       Default  2
+       ParValIndex 0
+       ParamType CIGIOData 1 6 7 ByteParam ByteOffset
+     End ParamInfo
+   End Parameters
+   ParValList
+     ParVal
+     ParValIndex 0
+       ENUM
+       "Off"            0
+       "Read"           2
+       "Read and Write" 3
+     End ParVal
+   End ParValList
+   Channels
+     ChannelInfo
+         Number 1 
+         ChannelName "Status"
+         Datatype Int_In
+         Routine 310
+         CopyParameters 0 0 16#30008 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 2 
+         ChannelName "Actual 1"
+         Datatype Int_In
+         Routine 310
+         CopyParameters 0 0 16#30009 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 3 
+         ChannelName "Actual 2"
+         Datatype Int_In
+         Routine 310
+         CopyParameters 0 0 16#3000A 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 4 
+         ChannelName "Actual 3"
+         Datatype Int_In
+         Routine 310
+         CopyParameters 0 0 16#3000B 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 5 
+         ChannelName "Actual 4"
+         Datatype Int_In
+         Routine 310
+         CopyParameters 0 0 16#3000C 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 6 
+         ChannelName "Actual 5"
+         Datatype Int_In
+         Routine 310
+         CopyParameters 0 0 16#3000D 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 7
+         ChannelName "Command"
+         Datatype Int_Out
+         Routine 400
+         CopyParameters 0 0 16#40000 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 8
+         ChannelName "Ref 1"
+         Datatype Int_Out
+         Routine 410
+         CopyParameters 0 0 16#40001 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 9
+         ChannelName "Ref 2"
+         Datatype Int_Out
+         Routine 410
+         CopyParameters 0 0 16#40002 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 10
+         ChannelName "Ref 3"
+         Datatype Int_Out
+         Routine 400
+         CopyParameters 0 0 16#40003 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 11
+         ChannelName "Ref 4"
+         Datatype Int_Out
+         Routine 400
+         CopyParameters 0 0 16#40004 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 12
+         ChannelName "Ref 5"
+         Datatype Int_Out
+         Routine 400
+         CopyParameters 0 0 16#40005 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 13
+         ChannelName "UnitStatus"
+         Datatype Status_In
+         Routine 900
+         CopyParameters 0 0 16#50000
+     End ChannelInfo
+   End Channels
+   IoUnitStatus
+     StatusType WrongModuleType 
+     StatusData 16#30000 16#0F00 16#4 16#0A00
+     StatusType ModuleMissing
+     StatusData 16#30000 16#0F00 16#4 16#0D00
+     StatusType IoError
+     StatusData 16#30000 16#1000 16#0 16#0
+     StatusType IoWarning
+     StatusData 16#30000 16#2000 16#0 16#0
+   End IoUnitStatus
+ UnitstatusText
+    ExtendedStatus1 "Communication broken"
+    ExtendedStatus2 "Wrong drive type"
+    ExtendedStatus3 "Wrong application ID"
+    ExtendedStatus4 "Undefined error"
+  End UnitStatusText
+
+
+ UnitStatusSeverity
+  End UnitStatusSeverity
+
+   Configuration
+     ConfigInfo
+         ModuleKey    16#0000
+         InAreaSize   16
+         OutAreaSize  6
+         InWord
+           (* WORD 0       0*) 
+           (* WORD 0       1*) 
+           (* WORD 0       2*) 
+            WORD 0       3 
+            WORD 0       4 
+            WORD 0       5 
+            WORD 0       6 
+            WORD 0       8
+            WORD 0       9
+            WORD 0       10
+            WORD 0       11
+            WORD 0       12
+            WORD 0       13
+            WORD 0       14
+            WORD 0       15
+         OutWord
+            WORD 0       0 
+            WORD 0       1 
+            WORD 0       2 
+            WORD 0       3 
+            WORD 0       4 
+            WORD 0       5 
+       CIGIOConnData
+         CIGIOData   16#89 (* FamilyType *)
+         CIGIOData   16#00 (* ModuleNumber *)
+         CIGIOData   16#00 (* ModuleRevision *)
+         CIGIOData   16#00 (* TreatmentType *)
+         CIGIOData   16#00 (* Length of module parameter *)
+         CIGIOData   16#02 (* Number of channels *)
+         CIGIOData   16#01 16#00 (* ChannelParam *)
+         CIGIOData   16#03 16#00 (* ChannelParam *)
+       End CIGIOConnData
+     End ConfigInfo
+   End Configuration
+  HWUnitInfoCRC 16#86A0
+End HWUnitInfo (* ACS600 Std *)

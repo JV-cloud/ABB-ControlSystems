@@ -1,0 +1,192 @@
+(****************************************************************************)
+(* FILE            CI873.hwd                                                *)
+(*                                                                          *)
+(* DESCRIPTION     Hardware definition file for CI873                       *)
+(*                                                                          *)
+(* AUTHOR          Ramachandragowda G                                       *)
+(*                                                                          *)
+(* All rights reserved. Reproduction, modification, use or disclosure       *)
+(* to third parties without express authority, is forbidden.                *)
+(* Copyright ABB Inc. 2008.                                                 *)
+(*                                                                          *)
+(*                                                                          *)
+(* 09-12-2008 Ramachandragowda G            Initial version                 *)
+(*                                                                          *)
+(****************************************************************************)
+FileHeader
+   Contents               "CI873"
+   Date                   "2008-12-09"
+   Version                "1.0-0"
+  RequiredSyntaxVersion "3.0"
+End FileHeader
+
+HwUnitInfo  (* CI873 *) 
+   HWUnitID {BED04F9F-B76C-49fb-8D66-FDB417B73D7D}
+   Description "CI873"
+   Information "Communication Interface For EthernetIP and DeviceNet"
+   Icons AC800ComType  
+   Attributes SystemUnit
+   ModuleType  16#501A   (*Module ID for CI873, Must match CI-CSR RealModuleType and conf.cpp with VICI in Omega *)
+
+
+   InterfaceInfo
+     Interface   CIGInterface
+     CLSID_CB    {4CDF91C2-C5C4-4153-8502-15783AA2384B} (*  CLSID_CB  = GUID for CI873 PH in Control builder CB *)
+     CLSID_CTRL  {2DA9F31E-56AB-4ffa-A07B-CC488F4F88BC}  (* CLSID_CTRL = GUID for CI873 PH in Controler *)
+     HWConfig Fail     (* Change of any parameters affect subunits *)
+   End InterfaceInfo
+
+  RedundancyInfo 
+    RedundancyIcon  RedundantCI
+    Consequence     IOConfig (* HWConfig *)
+  End RedundancyInfo
+
+   AutoAttachInfo
+   AutoAttach {2EAB862D-192C-427d-90F9-AB8643D2543E} Positions 1..253
+  End AutoAttachInfo 
+
+   DiscreteNumbers  
+    1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+    16 17 18 19 20 21 22 23 24 25 26 27 28 29 30
+    31 32 33 34 35 36 37 38 39 40 41 42 43 44 45
+    46 47 48 49 50 51 52 53 54 55 56 57 58 59 60
+    61 62 63 64 65 66 67 68 69 70 71 72 73 74 75
+    76 77 78 79 80 81 82 83 84 85 86 87 88 89 90
+    91 92 93 94 95 96 97 98 99 100 101 102 103 104 105
+    106 107 108 109 110 111 112 113 114 115 116 117 118 119 120
+    121 122 123 124 125 126 127 128 129 130 131 132 133 134 135
+    136 137 138 139 140 141 142 143 144 145 146 147 148 149 150
+    151 152 153 154 155 156 157 158 159 160 161 162 163 164 165
+    166 167 168 169 170 171 172 173 174 175 176 177 178 179 180
+    181 182 183 184 185 186 187 188 189 190 191 192 193 194 195
+    196 197 198 199 200 201 202 203 204 205 206 207 208 209 210
+    211 212 213 214 215 216 217 218 219 220 221 222 223 224 225
+    226 227 228 229 230 231 232 233 234 235 236 237 238 239 240
+    241 242 243 244 245 246 247 248 249 250 251 252 253 254 
+  End DiscreteNumbers
+   SubUnitTypes 
+      HWUnitID {5D308043-4CCA-4d70-8D05-5A026D3B3661} Positions  254 Instances 1  (*CI Diagnostics*)
+      HWUnitID {62f75134-f156-4d8b-b0d8-6c1df8c6cd69} Instances 4 (*LD800DN*)
+      HWUnitID {7e938f95-1917-4d58-a605-bdae3951378b} Instances 30 (*200-AENTR*)     
+   End SubUnitTypes
+
+
+   Parameters
+      ParamInfo 
+         Name NODE_TYPE
+         Description "Node Type"
+         Hidden
+         CompileType HWConfig
+         Datatype ENUM
+         Default 0
+         ParValIndex 1
+         ParamType Numbered 1
+      End ParamInfo  
+      ParamInfo 
+         Name PORT1IPADDR
+         Description "Configured Primary IP address"
+         CompileType HWConfig
+         Datatype STRING
+         Default "192.168.0.3" 20
+         ParamType Numbered 100
+      End ParamInfo
+      ParamInfo 
+        Name PORT1BACKUPIPADDR
+        Description "Configured Backup IP address"
+        CompileType HWConfig 
+        Datatype STRING
+        Default "192.168.0.30" 20
+        ParamType Numbered 101
+      End ParamInfo
+      ParamInfo 
+         Name PORT1MASK
+         Description "Subnet Mask"
+         CompileType HWConfig
+         Datatype STRING
+         Default "255.255.255.0" 20
+         ParamType Numbered 102
+      End ParamInfo
+      ParamInfo 
+        Name DEFAULTGATEWAY
+        Description "Default Gateway"
+        ExternalVisible
+        CompileType HWConfig
+        Datatype STRING
+        Default ""20
+        ParamType Numbered 103
+     End ParamInfo
+      ParamInfo 
+        Name SPEED_DUPLEX
+        Description "EtherNet Speed and Duplex"
+        Hidden
+        CompileType HWConfig
+        Datatype ENUM
+        Default 4
+        ParValIndex 2
+        ParamType Numbered 104
+      End ParamInfo      
+   End Parameters
+
+   ParValList
+
+     ParVal
+        ParValIndex 1
+          ENUM
+           "Node_CI873"                      1
+           "Node_CI_Diagnostics"             2
+           "Node_EIPDevice"                  3
+           "Node_EIPMAdapter"                4
+           "Node_LD800DN"                    5
+           "Node_DNetDevice"                 6
+           "Node_DNetMAdapter"               7
+           "Node_IOUnit"                     8
+      End ParVal
+
+      ParVal
+        ParValIndex 2
+           UnitText    ""
+           ENUM
+             "100 Mbps, Full Duplex"             0
+             "100 Mbps, Half Duplex"             1
+             "10  Mbps, Full Duplex"             2
+             "10  Mbps, Half Duplex"             3
+             "AutoNegotiation"                   4
+      End ParVal
+
+   End ParValList
+
+   Channels
+      ChannelInfo
+         Number 0
+         ChannelName "UnitStatus"
+         Datatype Status_In
+         Routine 900
+         CopyParameters 0 0 16#50000
+      End ChannelInfo
+   End Channels
+
+ UnitStatusText
+    DeviceSpecific1  "Internal HW Error"
+    DeviceSpecific2  "Internal FW Error"
+    DeviceSpecific3  "Error Generated by Task Supervisor"
+
+    ExtendedStatus2  "E-net Link Down"
+    ExtendedStatus3  "Backup E-net Link Down"
+    ExtendedStatus4  "Network Storm Detected"
+    ExtendedStatus5  "Backup Device is being configured"
+    ExtendedStatus6  "Backup Device is not synchronised"
+  End UnitStatusText
+
+  UnitStatusSeverity
+    DeviceSpecific1   GeneralError      TriggerAlarm   SeverityHigh
+    DeviceSpecific2   GeneralError      TriggerAlarm   SeverityHigh
+    DeviceSpecific3   GeneralWarning    TriggerAlarm   SeverityMedium
+
+    ExtendedStatus2   GeneralError      TriggerAlarm   SeverityHigh
+    ExtendedStatus3   GeneralWarning    TriggerAlarm   SeverityMedium
+    ExtendedStatus4   GeneralError      TriggerAlarm   SeverityHigh
+    ExtendedStatus5   GeneralWarning    TriggerAlarm   SeverityMedium
+    ExtendedStatus6   GeneralWarning    TriggerAlarm   SeverityMedium
+  End UnitStatusSeverity
+  HWUnitInfoCRC 16#3CF4
+End HWUnitInfo

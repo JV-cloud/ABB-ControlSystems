@@ -1,0 +1,105 @@
+(*========================================================*)
+(*                                                        *)
+(*            ProfiBus - DPV1                             *)
+(*                                                        *)
+(*            ABB Drives NPBA-12                          *)
+(*                                                        *)
+(*========================================================*)
+
+HWUnitInfo
+  HWUnitID         16#00856012
+  Description      "NPBA-12"
+  Information      "ABB Drives PROFIBUS Adapter"
+  Icons            MotorType
+  Attributes       AdapterUnit  AutoAttach 
+
+  InterfaceInfo
+    IoSysType  CIGIO
+    CLSID_CB   {70AC2B68-4487-48e3-9957-EA25FD20A55F}
+    CLSID_CTRL {7a59948b-4432-4d69-9f66-2ca7ed7f9db5}
+    HWConfig   Fail
+  End InterfaceInfo
+
+  ConnectionInfo
+    ConnectType AllUnits
+    IOConnect   Fail
+    IOConfig    NoFail
+  End ConnectionInfo
+
+  SubUnits  1
+
+  SubUnitTypes
+    HWUnitID 16#01856012
+    HWUnitID 16#02856012
+    HWUnitID 16#03856012
+    HWUnitID 16#04856012
+    HWUnitID 16#05856012
+    HWUnitID 16#06856012
+    HWUnitID 16#07856012
+    HWUnitID 16#08856012
+    HWUnitID 16#09856012
+  End SubUnitTypes
+
+  Channels
+    ChannelInfo
+      Number            0
+      ChannelName      "UnitStatus"
+      Datatype          Status_In
+      Routine           900
+      CopyParameters    16#0 16#0 16#50000
+    End ChannelInfo
+  End Channels
+
+  UnitStatusText
+  (* start of reserved texts used by CI854 ??*)
+    ExtendedStatus1  "Slave does not exist"
+    ExtendedStatus2  "Configuration data fault"
+    ExtendedStatus3  "Parameter data fault"
+    ExtendedStatus4  "Static diagnostic"
+    ExtendedStatus5  "Redundant slave does not exist"
+    ExtendedStatus6  "Diagnostic configuration data fault" 
+    ExtendedStatus7  "Report diagnostics fault" 
+ (*   ExtendedStatus8  "ExtendedStatus8" *) 
+ (*   ExtendedStatus9  "ExtendedStatus9" *)
+ (*   ExtendedStatus10 "ExtendedStatus10" *) 
+ (* end of reserved texts used by CI854 *)
+  End UnitStatusText
+
+  UnitStatusSeverity
+    ExtendedStatus1      GeneralError TriggerAlarm SeverityMedium
+    ExtendedStatus2      GeneralError TriggerAlarm SeverityHigh
+    ExtendedStatus3      GeneralError TriggerAlarm SeverityHigh
+    ExtendedStatus4      GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus5      GeneralWarning TriggerEvent SeverityMedium
+    ExtendedStatus6      GeneralWarning TriggerEvent SeverityMedium
+    ExtendedStatus7      GeneralWarning TriggerEvent SeverityMedium
+  (*   ExtendedStatus8  GeneralWarning TriggerEvent SeverityLow *) 
+  (*   ExtendedStatus9  GeneralWarning TriggerEvent SeverityLow *)
+  (*   ExtendedStatus10  GeneralWarning TriggerEvent SeverityLow *)
+  End UnitStatusSeverity
+
+  Configuration
+    ConfigInfo
+      ModuleKey        16#6012
+      InAreaSize       0 BYTE
+      OutAreaSize      0 BYTE
+      CIGIOConnData
+        CIGIOData        16#02 16#88 16#00 16#00 16#00 16#60 16#12 16#01
+        CIGIOData        16#03 0 60 0 60 0 60 0 60 0 100 0 0 0 150 0 250 1 194 3 32
+        CIGIOData        16#04 40
+        CIGIOData        16#06 28
+        CIGIOData        16#07 28
+        CIGIOData        16#08 56
+        CIGIOData        16#09 0
+        SyncronizeDataExchange
+      End CIGIOConnData
+    End ConfigInfo
+    ConfigInfo
+      EmptyConfig
+      ModuleKey        16#FFFF
+      InAreaSize       0
+      OutAreaSize      0
+    End ConfigInfo
+  End Configuration
+  HWUnitInfoCRC 16#4638
+End HWUnitInfo (* ABB Drives NPBA-12 *)

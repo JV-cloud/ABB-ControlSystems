@@ -1,0 +1,868 @@
+(****************************************************************************)
+(* FILE            CSWI.hwd                                                 *)
+(*                                                                          *)
+(* DESCRIPTION     Hardware definition file for CSWI                        *)
+(*                                                                          *)
+(* AUTHOR          Karthick Raja P                                           *)
+(*                                                                          *)
+(* All rights reserved. Reproduction, modification, use or disclosure       *)
+(* to third parties without express authority, is forbidden.                *)
+(* Copyright ABB Inc. 2011.                                                 *)
+(*                                                                          *)
+(*                                                                          *)
+(* 23-1-2012 Karthick Raja P                 Initial version                *)
+(*                                                                          *)
+(****************************************************************************)
+FileHeader
+   Contents               "CSWI"
+   Date                   "2012-1-23"
+   Version                "1.0-0"
+  RequiredSyntaxVersion "3.0"
+End FileHeader
+
+HWUnitInfo  (* CSWI *)
+   HWUnitID {CB7FF0C3-4516-458f-BF94-CF51B3066FED} (* GUID for CSWI *)
+   Description "CSWI"
+   Information "CSWI for Switch controller"
+   Icons LNType
+   InterfaceInfo
+     IoSysType    CIGIO
+     CLSID_CB    {53315084-E413-4c55-92E1-C2E1FAF19460} (*  CLSID_CB  = GUID for CI868 PH in Control builder CB *)
+     CLSID_CTRL  {4AB844AC-2BEE-4910-BA08-CA109A5D7E81}  (* CLSID_CTRL = GUID for CI868 PH in Controler *)
+   End InterfaceInfo
+
+   ConnectionInfo
+      ConnectType OwnUnit
+      IOConnect Fail
+      IoConfig  NoFail
+   End ConnectionInfo
+
+   ExternalConfigInfo
+      ShowExternalChannelDescriptionColumn
+   End ExternalConfigInfo
+
+   Parameters
+      ParamInfo
+         Name IALADDRLOC_STVAL
+         Description "IALaddr for Loc_stVal"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 1
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPELOC_STVAL
+         Description "DMCD Type for Loc_stVal"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 1
+         ParValIndex 2
+         ParamType Numbered 2
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOLOC_STVAL
+         Description "Protocol Info for Loc_stVal"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 3
+      End ParamInfo
+      ParamInfo
+         Name IALADDROPCNTRS_STVAL
+         Description "IALaddr for OpCntRs_stVal"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 4
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEOPCNTRS_STVAL
+         Description "DMCD Type for OpCntRs_stVal"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 12
+         ParValIndex 2
+         ParamType Numbered 5
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOOPCNTRS_STVAL
+         Description "Protocol Info for OpCntRs_stVal"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 6
+      End ParamInfo
+      ParamInfo
+         Name IALADDRPOS_STVAL
+         Description "IALaddr for Pos_stVal"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 7
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEPOS_STVAL
+         Description "DMCD Type for Pos_stVal"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 3
+         ParValIndex 2
+         ParamType Numbered 8
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOPOS_STVAL
+         Description "Protocol Info for Pos_stVal"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 9
+      End ParamInfo
+      ParamInfo
+         Name IALADDRPOS_STSELD
+         Description "IALaddr for Pos_stSeld"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 10
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEPOS_STSELD
+         Description "DMCD Type for Pos_stSeld"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 1
+         ParValIndex 2
+         ParamType Numbered 11
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOPOS_STSELD
+         Description "Protocol Info for Pos_stSeld"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 12
+      End ParamInfo
+      ParamInfo
+         Name IALADDRPOSA_STVAL
+         Description "IALaddr for PosA_stVal"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 13
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEPOSA_STVAL
+         Description "DMCD Type for PosA_stVal"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 3
+         ParValIndex 2
+         ParamType Numbered 14
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOPOSA_STVAL
+         Description "Protocol Info for PosA_stVal"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 15
+      End ParamInfo
+      ParamInfo
+         Name IALADDRPOSA_STSELD
+         Description "IALaddr for PosA_stSeld"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 16
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEPOSA_STSELD
+         Description "DMCD Type for PosA_stSeld"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 1
+         ParValIndex 2
+         ParamType Numbered 17
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOPOSA_STSELD
+         Description "Protocol Info for PosA_stSeld"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 18
+      End ParamInfo
+      ParamInfo
+         Name IALADDRPOSB_STVAL
+         Description "IALaddr for PosB_stVal"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 19
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEPOSB_STVAL
+         Description "DMCD Type for PosB_stVal"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 3
+         ParValIndex 2
+         ParamType Numbered 20
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOPOSB_STVAL
+         Description "Protocol Info for PosB_stVal"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 21
+      End ParamInfo
+      ParamInfo
+         Name IALADDRPOSB_STSELD
+         Description "IALaddr for PosB_stSeld"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 22
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEPOSB_STSELD
+         Description "DMCD Type for PosB_stSeld"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 1
+         ParValIndex 2
+         ParamType Numbered 23
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOPOSB_STSELD
+         Description "Protocol Info for PosB_stSeld"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 24
+      End ParamInfo
+      ParamInfo
+         Name IALADDRPOSC_STVAL
+         Description "IALaddr for PosC_stVal"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 25
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEPOSC_STVAL
+         Description "DMCD Type for PosC_stVal"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 3
+         ParValIndex 2
+         ParamType Numbered 26
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOPOSC_STVAL
+         Description "Protocol Info for PosC_stVal"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 27
+      End ParamInfo
+      ParamInfo
+         Name IALADDRPOSC_STSELD
+         Description "IALaddr for PosC_stSeld"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 28
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEPOSC_STSELD
+         Description "DMCD Type for PosC_stSeld"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 1
+         ParValIndex 2
+         ParamType Numbered 29
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOPOSC_STSELD
+         Description "Protocol Info for PosC_stSeld"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 30
+      End ParamInfo
+      ParamInfo
+         Name IALADDROPOPN_GENERAL
+         Description "IALaddr for OpOpn_general"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 31
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEOPOPN_GENERAL
+         Description "DMCD Type for OpOpn_general"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 1
+         ParValIndex 2
+         ParamType Numbered 32
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOOPOPN_GENERAL
+         Description "Protocol Info for OpOpn_general"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 33
+      End ParamInfo
+      ParamInfo
+         Name IALADDROPCLS_GENERAL
+         Description "IALaddr for OpCls_general"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 34
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEOPCLS_GENERAL
+         Description "DMCD Type for OpCls_general"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 1
+         ParValIndex 2
+         ParamType Numbered 35
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOOPCLS_GENERAL
+         Description "Protocol Info for OpCls_general"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 36
+      End ParamInfo
+      ParamInfo
+         Name IALADDRPOS_CTLCMD
+         Description "IALaddr for Pos_CTLCMD"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 37
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEPOS_CTLCMD
+         Description "DMCD Type for Pos_CTLCMD"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 46
+         ParValIndex 2
+         ParamType Numbered 38
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOPOS_CTLCMD
+         Description "Protocol Info for Pos_CTLCMD"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 39
+      End ParamInfo
+      ParamInfo
+         Name IALADDRPOSA_CTLCMD
+         Description "IALaddr for PosA_CTLCMD"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 40
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEPOSA_CTLCMD
+         Description "DMCD Type for PosA_CTLCMD"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 46
+         ParValIndex 2
+         ParamType Numbered 41
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOPOSA_CTLCMD
+         Description "Protocol Info for PosA_CTLCMD"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 42
+      End ParamInfo
+      ParamInfo
+         Name IALADDRPOSB_CTLCMD
+         Description "IALaddr for PosB_CTLCMD"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 43
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEPOSB_CTLCMD
+         Description "DMCD Type for PosB_CTLCMD"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 46
+         ParValIndex 2
+         ParamType Numbered 44
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOPOSB_CTLCMD
+         Description "Protocol Info for PosB_CTLCMD"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 45
+      End ParamInfo
+      ParamInfo
+         Name IALADDRPOSC_CTLCMD
+         Description "IALaddr for PosC_CTLCMD"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 46
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEPOSC_CTLCMD
+         Description "DMCD Type for PosC_CTLCMD"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype INT
+         Default 46
+         ParValIndex 2
+         ParamType Numbered 47
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOPOSC_CTLCMD
+         Description "Protocol Info for PosC_CTLCMD"
+         ExternalVisible
+         CompileType IOConnect
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 48
+      End ParamInfo
+      ParamInfo
+         Name HWDVERSION
+         Description "Version of HWD File"
+         ExternalVisible
+         Datatype STRING
+         Default " 1.0-0 "
+         ParamType Numbered 50
+      End ParamInfo
+      ParamInfo
+         Name LNNAME
+         Description "LN Name"
+         Datatype STRING
+         Default ""100
+         ParamType Numbered 52
+      End ParamInfo
+
+(***************************************************)
+
+      ParamInfo
+      Name SAFECONTROL
+      Description "Safe State Control"
+      Hidden
+      CompileType IOConnect
+      Datatype ENUMCONTROL
+      Default 1
+      ParValIndex 3
+      ParamType Numbered 54
+      SafeStateInfo
+         SafeStateType   SafeStateControl
+         SafeStateRef    Unit
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE1
+      Description "Safe State Value1"
+      Hidden
+      CompileType IOConnect
+      Datatype BOOL
+      Default FALSE
+      ParamType Numbered 56
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 1
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE2
+      Description "Safe State Value2"
+      Hidden
+      CompileType IOConnect
+      Datatype INT
+      Default 0
+      ParValIndex 4
+      ParamType Numbered 58
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 2
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE3
+      Description "Safe State Value3"
+      Hidden
+      CompileType IOConnect
+      Datatype INT
+      Default 0
+      ParValIndex 6
+      ParamType Numbered 60
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 3
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE4
+      Description "Safe State Value4"
+      Hidden
+      CompileType IOConnect
+      Datatype BOOL
+      Default FALSE
+      ParamType Numbered 62
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 4
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE5
+      Description "Safe State Value5"
+      Hidden
+      CompileType IOConnect
+      Datatype INT
+      Default 0
+      ParValIndex 6
+      ParamType Numbered 64
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 5
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE6
+      Description "Safe State Value6"
+      Hidden
+      CompileType IOConnect
+      Datatype BOOL
+      Default FALSE
+      ParamType Numbered 66
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 6
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE7
+      Description "Safe State Value7"
+      Hidden
+      CompileType IOConnect
+      Datatype INT
+      Default 0
+      ParValIndex 6
+      ParamType Numbered 68
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 7
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE8
+      Description "Safe State Value8"
+      Hidden
+      CompileType IOConnect
+      Datatype BOOL
+      Default FALSE
+      ParamType Numbered 70
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 8
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE9
+      Description "Safe State Value9"
+      Hidden
+      CompileType IOConnect
+      Datatype INT
+      Default 0
+      ParValIndex 6
+      ParamType Numbered 72
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 9
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE10
+      Description "Safe State Value10"
+      Hidden
+      CompileType IOConnect
+      Datatype BOOL
+      Default FALSE
+      ParamType Numbered 74
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 10
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE11
+      Description "Safe State Value11"
+      Hidden
+      CompileType IOConnect
+      Datatype BOOL
+      Default FALSE
+      ParamType Numbered 76
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 11
+      End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+      Name SAFEVALUE12
+      Description "Safe State Value12"
+      Hidden
+      CompileType IOConnect
+      Datatype BOOL
+      Default FALSE
+      ParamType Numbered 78
+      SafeStateInfo
+         SafeStateType   SafeStateValue
+         SafeStateRef    Channel 12
+      End SafeStateInfo
+      End ParamInfo
+   End Parameters
+
+   ParValList
+   ParVal
+        ParValIndex 2
+        UnitText    ""
+        INT 0 255 0 255
+     End ParVal
+     ParVal
+      ParValIndex 3      (* Output Hold State  *)
+      UnitText   " "
+      ENUMCONTROL
+      "UseSafeValue"  0 ResetValue
+      "HoldLastValue" 1 HoldLastValue
+      "UseSafeValue"  2 UseSafeValue
+    End ParVal
+    ParVal
+       ParValIndex 4
+       UnitText    ""
+       INT 0 2147483647 0 2147483647
+    End ParVal
+    ParVal
+       ParValIndex 6
+       UnitText    ""
+       INT 0 65535 0 65535
+    End ParVal
+    ParVal
+       ParValIndex 7
+       UnitText    ""
+       INT 0 65535 0 65535
+    End ParVal
+   End ParValList
+
+   Channels
+    ChannelInfo
+      Number         1
+      ChannelName   "Loc_stVal"
+      Datatype       Bool_In
+      Routine        151
+      CopyParameters 16#30000 16#0001 16#30004 16#0080
+    End ChannelInfo
+    ChannelInfo
+      Number         2
+      ChannelName   "OpCntRs_stVal"
+      Datatype       Int_In
+      Routine        308
+      CopyParameters 16#30008 0 16#3000C 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         3
+      ChannelName   "Pos_stVal"
+      Datatype       Int_In
+      Routine        306
+      CopyParameters 16#30010 0 16#0003 0 16#30014 16#0080
+    End ChannelInfo
+    ChannelInfo
+      Number         4
+      ChannelName   "Pos_stSeld"
+      Datatype       Bool_In
+      Routine        151
+      CopyParameters 16#30018 16#0001 16#3001C 16#0080
+    End ChannelInfo
+    ChannelInfo
+      Number         5
+      ChannelName   "PosA_stVal"
+      Datatype       Int_In
+      Routine        306
+      CopyParameters 16#30020 0 16#0003 0 16#30024 16#0080
+    End ChannelInfo
+    ChannelInfo
+      Number         6
+      ChannelName   "PosA_stSeld"
+      Datatype       Bool_In
+      Routine        151
+      CopyParameters 16#30028 16#0001 16#3002C 16#0080
+    End ChannelInfo
+    ChannelInfo
+      Number         7
+      ChannelName   "PosB_stVal"
+      Datatype       Int_In
+      Routine        306
+      CopyParameters 16#30030 0 16#0003 0 16#30034 16#0080
+    End ChannelInfo
+    ChannelInfo
+      Number         8
+      ChannelName   "PosB_stSeld"
+      Datatype       Bool_In
+      Routine        151
+      CopyParameters 16#30038 16#0001 16#3003C 16#0080
+    End ChannelInfo
+    ChannelInfo
+      Number         9
+      ChannelName   "PosC_stVal"
+      Datatype       Int_In
+      Routine        306
+      CopyParameters 16#30040 0 16#0003 0 16#30044 16#0080
+    End ChannelInfo
+    ChannelInfo
+      Number         10
+      ChannelName   "PosC_stSeld"
+      Datatype       Bool_In
+      Routine        151
+      CopyParameters 16#30048 16#0001 16#3004C 16#0080
+    End ChannelInfo
+    ChannelInfo
+      Number         11
+      ChannelName   "OpOpn_general"
+      Datatype       Bool_In
+      Routine        151
+      CopyParameters 16#30050 16#0001 16#30054 16#0080
+    End ChannelInfo
+    ChannelInfo
+      Number         12
+      ChannelName   "OpCls_general"
+      Datatype       Bool_In
+      Routine        151
+      CopyParameters 16#30058 16#0001 16#3005C 16#0080
+    End ChannelInfo
+    ChannelInfo
+      Number         13
+      ChannelName   "Pos_CTLCMD"
+      Datatype       Dword_Out
+      Routine        600
+      CopyParameters 16#40060 0
+    End ChannelInfo
+    ChannelInfo
+      Number         14
+      ChannelName   "PosA_CTLCMD"
+      Datatype       Dword_Out
+      Routine        600
+      CopyParameters 16#40068 0
+    End ChannelInfo
+    ChannelInfo
+      Number         15
+      ChannelName   "PosB_CTLCMD"
+      Datatype       Dword_Out
+      Routine        600
+      CopyParameters 16#40070 0
+    End ChannelInfo
+    ChannelInfo
+      Number         16
+      ChannelName   "PosC_CTLCMD"
+      Datatype       Dword_Out
+      Routine        600
+      CopyParameters 16#40078 0
+    End ChannelInfo
+    ChannelInfo
+      Number         17
+      ChannelName   "UnitStatus"
+      Datatype       Status_In
+      Routine        900
+      CopyParameters 16#50000
+    End ChannelInfo
+ End Channels
+
+    UnitStatusText
+     DeviceSpecific6 "Negative Response for the Command to POSC, refer the CI log for details"
+     DeviceSpecific7 "Negative Response for the Command to POSB, refer the CI log for details"
+     DeviceSpecific8 "Negative Response for the Command to POSA, refer the CI log for details"
+     DeviceSpecific9 "Negative Response for the Command to POS, refer the CI log for details"
+     DeviceSpecific10 "Connection Failed with this LN Representation"
+   End UnitStatusText
+
+   UnitStatusSeverity
+     DeviceSpecific6    GeneralWarning
+     DeviceSpecific7    GeneralWarning
+     DeviceSpecific8    GeneralWarning
+     DeviceSpecific9    GeneralWarning
+     DeviceSpecific10   GeneralError TriggerAlarm SeverityHigh
+   End UnitStatusSeverity
+
+ Configuration
+    ConfigInfo
+      ModuleKey       16#4A
+      InAreaSize      128 BYTE
+      OutAreaSize      128 BYTE
+    CIGIOConnData
+      SyncronizeDataExchange
+    End CIGIOConnData
+    End ConfigInfo
+ End Configuration
+  HWUnitInfoCRC 16#D78A
+End HWUnitInfo 

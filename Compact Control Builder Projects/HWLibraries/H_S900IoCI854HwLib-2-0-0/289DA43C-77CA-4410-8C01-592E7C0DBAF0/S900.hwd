@@ -1,0 +1,212 @@
+(*-------------------------------------------------------------------*)
+(* $Workfile: a_S900_p.hwd $ *)
+(* Created:       06.03.2001 (DD.MM.YY) *)
+(* by:            T.Merlin, ABB Automation *)
+(* $Revision: 24 $ *)
+(* Last modified: $Date: 25.10.04 15:16 $ *)
+(* by:            $Author: Merlin $ *)
+(* $Revision: 25 $ *)
+(* Last modified: $Date: 12.02.08 15:06 $ *)
+(* by:            $Author: Bosch $ *)
+(* Removing CI851 for Lib 1.1-0 *)
+(* $Revision: 26 $ *)
+(* Last modified: $Date: 28.05.08 9:00 $ *)
+(* by:            $Author: Bosch $ *)
+(* No Changes for Version 1.1.1 *)
+(* New Version Number due to Tracker 33892*)
+(*----------------------------------------------------------------------------*)
+(*----------------------------------------------------------------------------*)
+(* Coding for CI854 *)
+(*----------------------------------------------------------------------------*)
+(*----------------------------------------------------------------------------*)
+
+HWUnitInfo
+  HWUnitID         {900A39C0-CC72-11d5-B504-00C04F11556C}
+  Description      "S900"
+  Information      "Process I/O System"
+  Icons            S900Type
+  Attributes       AdapterUnit AutoAttach 
+
+
+  InterfaceInfo
+    IoSysType  CIGIO
+    CLSID_CB   {70AC2B68-4487-48e3-9957-EA25FD20A55F}
+    CLSID_CTRL {7a59948b-4432-4d69-9f66-2ca7ed7f9db5}
+    HWConfig   NoFail
+  End InterfaceInfo
+
+
+  ConnectionInfo
+    ConnectType AllUnits
+    IOConnect   NoFail
+    IOConfig    NoFail
+  End ConnectionInfo
+
+
+  RedundancyInfo
+    RedundancyIcon      RedundantS900CI
+    Consequence         IOConnect
+    (* SupportSwitchover *)
+    BackupPositionOffset 16#40
+  End RedundancyInfo
+
+
+  SubUnits  17
+
+  SubUnitTypes
+
+    SubMenu "CIPB"
+      HWUnitID {900A39C1-CC72-11d5-B504-00C04F11556C} Positions 0
+      HWUnitID {900A39C2-CC72-11d5-B504-00C04F11556C} Positions 0
+      HWUnitID {B1BAA7B0-10CA-11d6-B536-00C04F11556C} Positions 0
+      HWUnitID {B1BAA7B1-10CA-11d6-B536-00C04F11556C} Positions 0
+      HWUnitID {B1BAA7B2-10CA-11d6-B536-00C04F11556C} Positions 0
+      HWUnitID {B1BAA7B3-10CA-11d6-B536-00C04F11556C} Positions 0
+    SubMenuEnd
+
+    SubMenu "Binary"
+      HWUnitID {900A39D9-CC72-11d5-B504-00C04F11556C} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+      HWUnitID {900A39DA-CC72-11d5-B504-00C04F11556C} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+      HWUnitID {900A39DB-CC72-11d5-B504-00C04F11556C} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+      HWUnitID {900A39DC-CC72-11d5-B504-00C04F11556C} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+      HWUnitID {900A39D6-CC72-11d5-B504-00C04F11556C} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+      HWUnitID {B1BAA7B4-10CA-11d6-B536-00C04F11556C} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+      HWUnitID {B1BAA7B5-10CA-11d6-B536-00C04F11556C} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+      HWUnitID {B1BAA7B6-10CA-11d6-B536-00C04F11556C} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+      HWUnitID {B1BAA7B7-10CA-11d6-B536-00C04F11556C} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+      HWUnitID {2A3B2F71-9C0D-476f-8EF6-42D5F4A219FF} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+      HWUnitID {F4AEEA3E-586F-4858-BC61-4F3D46EC3A30} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+      HWUnitID {A2315237-4CCA-486b-BB6E-D7511CCA8E48} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+      HWUnitID {E97C1FE5-B785-4c51-B0D1-27E75CC3B24F} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+      HWUnitID {29E09275-8E3D-4418-9212-B7E496EB02E4} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+      HWUnitID {016AD579-3CB7-46d5-8DD6-B69B827EAE45} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+    SubMenuEnd
+
+    SubMenu "Analog Input"
+      HWUnitID {900A39C3-CC72-11d5-B504-00C04F11556C} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+      HWUnitID {900A39C4-CC72-11d5-B504-00C04F11556C} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+      HWUnitID {900A39C5-CC72-11d5-B504-00C04F11556C} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+      HWUnitID {B1BAA7B8-10CA-11d6-B536-00C04F11556C} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+      HWUnitID {B1BAA7B9-10CA-11d6-B536-00C04F11556C} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+      HWUnitID {B1BAA7BA-10CA-11d6-B536-00C04F11556C} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+      HWUnitID {B1BAA7BB-10CA-11d6-B536-00C04F11556C} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+      Separator
+      HWUnitID {900A39C6-CC72-11d5-B504-00C04F11556C} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+      HWUnitID {900A39C7-CC72-11d5-B504-00C04F11556C} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+      HWUnitID {900A39C8-CC72-11d5-B504-00C04F11556C} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+      HWUnitID {900A39C9-CC72-11d5-B504-00C04F11556C} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+      HWUnitID {900A39CA-CC72-11d5-B504-00C04F11556C} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+      HWUnitID {900A39CB-CC72-11d5-B504-00C04F11556C} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+      HWUnitID {900A39CC-CC72-11d5-B504-00C04F11556C} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+      HWUnitID {900A39CD-CC72-11d5-B504-00C04F11556C} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+      HWUnitID {B1BAA7BC-10CA-11d6-B536-00C04F11556C} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+      HWUnitID {B1BAA7BD-10CA-11d6-B536-00C04F11556C} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+      HWUnitID {B1BAA7BE-10CA-11d6-B536-00C04F11556C} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+      HWUnitID {B1BAA7BF-10CA-11d6-B536-00C04F11556C} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+    SubMenuEnd
+
+    SubMenu "Analog Output"
+      HWUnitID {900A39CE-CC72-11d5-B504-00C04F11556C} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+      HWUnitID {900A39CF-CC72-11d5-B504-00C04F11556C} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+      HWUnitID {B1BAA7C0-10CA-11d6-B536-00C04F11556C} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+      HWUnitID {B1BAA7C1-10CA-11d6-B536-00C04F11556C} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+      HWUnitID {B1BAA7C2-10CA-11d6-B536-00C04F11556C} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+      HWUnitID {B1BAA7C3-10CA-11d6-B536-00C04F11556C} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+      Separator
+      HWUnitID {900A39D0-CC72-11d5-B504-00C04F11556C} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+      HWUnitID {900A39D1-CC72-11d5-B504-00C04F11556C} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+      HWUnitID {900A39D2-CC72-11d5-B504-00C04F11556C} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+      HWUnitID {900A39D3-CC72-11d5-B504-00C04F11556C} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+      HWUnitID {B1BAA7C4-10CA-11d6-B536-00C04F11556C} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+      HWUnitID {B1BAA7C5-10CA-11d6-B536-00C04F11556C} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+      HWUnitID {B1BAA7C6-10CA-11d6-B536-00C04F11556C} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+      HWUnitID {B1BAA7C7-10CA-11d6-B536-00C04F11556C} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+    SubMenuEnd
+
+    SubMenu "Temperature"
+      HWUnitID {900A39D4-CC72-11d5-B504-00C04F11556C} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+      HWUnitID {900A39D5-CC72-11d5-B504-00C04F11556C} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+      HWUnitID {B1BAA7C8-10CA-11d6-B536-00C04F11556C} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+      HWUnitID {B1BAA7C9-10CA-11d6-B536-00C04F11556C} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+    SubMenuEnd
+
+    SubMenu "Frequency"
+      HWUnitID {900A39D7-CC72-11d5-B504-00C04F11556C} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+      HWUnitID {900A39D8-CC72-11d5-B504-00C04F11556C} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+      HWUnitID {B1BAA7CC-10CA-11d6-B536-00C04F11556C} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+      HWUnitID {B1BAA7CD-10CA-11d6-B536-00C04F11556C} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+      HWUnitID {B1BAA7CE-10CA-11d6-B536-00C04F11556C} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+      HWUnitID {B1BAA7CF-10CA-11d6-B536-00C04F11556C} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+    SubMenuEnd    
+
+  End SubUnitTypes
+
+
+  Channels
+    ChannelInfo
+      Number            0
+      ChannelName      "UnitStatus"
+      Datatype          Status_In
+      Routine           900
+      CopyParameters    16#0 16#0 16#50000
+    End ChannelInfo
+  End Channels
+
+  Diagnostics
+    CompileRule Position
+  End Diagnostics
+
+  UnitStatusText
+    ExtendedStatus1 "Slave does not exist"
+    ExtendedStatus2 "Configuration data fault"
+    ExtendedStatus3 "Parameter data fault"
+    ExtendedStatus4 "Static diagnostic"
+    ExtendedStatus5   "Backup unit missing"
+    ExtendedStatus6   "Diagnostic configuration data fault"
+    ExtendedStatus7   "Report diagnostics fault"
+  End UnitStatusText
+
+
+  UnitStatusSeverity
+    ExtendedStatus1   GeneralError   TriggerAlarm SeverityMedium
+    ExtendedStatus2   GeneralError   TriggerAlarm SeverityMedium
+    ExtendedStatus3   GeneralError   TriggerAlarm SeverityMedium
+    ExtendedStatus4   GeneralWarning TriggerEvent SeverityLow   
+    ExtendedStatus5   GeneralWarning TriggerAlarm SeverityLow   
+    ExtendedStatus6   GeneralWarning TriggerEvent SeverityMedium
+    ExtendedStatus7   GeneralWarning TriggerEvent SeverityMedium
+  End UnitStatusSeverity
+
+
+  Configuration
+
+    ConfigInfo
+      ModuleKey           16#04D2
+      InAreaSize          0 BYTE
+      OutAreaSize         0 BYTE
+        CIGIOConnData
+        CIGIOData         16#02 16#88 16#00 16#00 16#00 16#04 16#D2 16#01 (* PrmData *)
+        CIGIOData         16#03 60 60 60 60 100 0 150 0 0 0               (* Baudrate MaxTSDR *)
+        CIGIOData         16#04 1                                         (* MinSlaveInterval *)
+        CIGIOData         16#06 216                                       (* MaxInputLen *)
+        CIGIOData         16#07 216                                       (* MaxOutputLen *)
+        CIGIOData         16#08 216                                       (* MaxDataLen *)
+        SyncronizeDataExchange
+      End CIGIOConnData
+    End ConfigInfo
+
+    ConfigInfo
+      EmptyConfig
+      ModuleKey           16#0001
+      InAreaSize          0 BYTE
+      OutAreaSize         0 BYTE
+      CIGIOConnData
+        CIGIOData         16#01 16#00                                     (* CfgData *)
+        CIGIOData         16#05 16#00 16#00 16#00 16#00 16#00             (* UserPrmData *)
+      End CIGIOConnData
+    End ConfigInfo
+
+  End Configuration
+
+  HWUnitInfoCRC 16#C04D
+End HWUnitInfo

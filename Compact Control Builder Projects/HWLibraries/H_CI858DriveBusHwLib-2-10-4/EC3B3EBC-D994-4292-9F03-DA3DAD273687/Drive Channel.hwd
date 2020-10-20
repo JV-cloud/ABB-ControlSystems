@@ -1,0 +1,52 @@
+HwUnitInfo  (* Drives Channel*)
+   HWUnitID {ABD24E11-B0D3-4427-9745-A30F2FD0AE8A}
+   Description "Drive Channel"
+   Information "Drives connected to CI858"
+(* ###HelpProject CI858Help.xxx *)
+   Icons ChannelType
+   ModuleType  16#500C
+   InterfaceInfo
+     Interface CIGInterface
+     CLSID_CB   {6FBF3F0D-6D1B-4C2D-A55D-8EB36EB2A274}  (*  CLSID_CB = GUID for CI858 Protocol handler (PH) in Control builder CB *)
+     CLSID_CTRL {8D9E7478-89A5-4ADA-B10A-4D3A82652E9C} (* CLSID_CTRL  = GUID for CI858 Protocol handler (PH) in Controler *)
+     HWConfig Fail     (* Change of net parameters affect subunits *)
+   End InterfaceInfo
+   DiscreteNumbers  (*DriveBus slave addresses*)
+     1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 
+     16 17 18 19 20 21 22 23 24 25 26 27 28 29 30
+     31 32 33 34 35 36 37 38 39 40 41 42 43 44 45
+     46 47 48 49 50 51 52 53 54 55 56 57 58 59 60
+     61 62 63 64 65 66 67 68 69 70 71 72 73 74 75
+     76 77 78 79 80 81 82 83 84 85 86 87 88 89 90
+     91 92 93 94 95 96 97 98 99
+     100 101 102 103 104 105 106 107 108 109 110 
+     111 112 113 114 115 116 117 118 119 120 121 
+     122 123 124 125
+   End DiscreteNumbers
+   SubUnitTypes
+      HWUnitID {4F5F1490-1BBA-4273-B3DA-833FA163A267} Instances 24 (* ABB Standard Drive *)
+      HWUnitID {B2A76D01-05BD-4825-9E2A-2659FB38D6CE} Instances 24 (* ABB Engineered Drive   *)
+      HWUnitID {EB0B08ED-C372-45C1-81EF-5AD67E2258BC} Instances 24 (* ABB Base logic Drive      *)
+      HWUnitID {CAB91157-772E-4805-B73C-B3CB6D658EE4} Instances 24 (* ABB Extension logic Drive *)
+      (* HWUnitID {C12DE6AE-D1D1-4dd9-BAB6-E75FDC38B61F} Instances 24  Template Drive *)
+   End SubUnitTypes
+   Parameters    
+      ParamInfo 
+         Name SubUnitType
+         Description "Type of connected subunit is 0=DriveCHannel"
+         Hidden
+         CompileType HWConfig
+         Datatype INT
+         Default 0
+         ParValIndex 0
+         ParamType Numbered 0
+      End ParamInfo
+   End Parameters   
+   ParValList
+      ParVal
+         ParValIndex 0
+         INT 0 0 0 0
+      End ParVal
+   End ParValList
+  HWUnitInfoCRC 16#1B77
+End HWUnitInfo (* Drives *)

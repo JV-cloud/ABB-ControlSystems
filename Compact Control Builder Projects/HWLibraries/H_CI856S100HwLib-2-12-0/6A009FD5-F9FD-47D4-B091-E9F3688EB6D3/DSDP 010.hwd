@@ -1,0 +1,284 @@
+(****************************************************************************)
+(* FILE            dsdp010.hwd                                              *)
+(*                                                                          *)
+(* DESCRIPTION     Hardware definition file for S100 I/O module DSDP 010    *)
+(*                                                                          *)
+(* AUTHOR          SEPID/FVT J Ruth                                         *)
+(*                                                                          *)
+(* All rights reserved. Reproduction, modification, use or disclosure       *)
+(* to third parties without express authority, is forbidden.                *)
+(* Copyright ABB Process Industries AB, Sweden, 2002.                       *)
+(*                                                                          *)
+(*                                                                          *)
+(* HISTORY $Log: /S100/workplace/current/source/hwdefinitions/definitionfiles/s100/dsdp010.hwd $ *)
+(*  *)
+(* 5    07-12-17 10:20 sepewah *)
+(* #30692 Tighter HWD parsing due to SIL-3*)
+(* ParValIndex 5 added and a reference to this from "Version", *)
+(* "Access Mode" and "Module Type".*)
+(*  *)
+(* 4     02-12-03 20:58 Jruth *)
+(* PRC #7139 *)
+(* CompileType for "Watchdog" parameter changed to IOConnect. *)
+(*  *)
+(* 3     02-09-16 21:06 Jruth *)
+(* PRC #6428 *)
+(* Spaces removed to get F1 button to work for online help *)
+(*  *)
+(* 2     02-08-13 22:21 Jruth *)
+(* Byte size parameters changed to word size. *)
+(* Channels rearranged. *)
+(*  *)
+(* 1     02-05-05 1:28 Jruth *)
+(* First version *)
+(*                                                                          *)
+(* ABSTRACT                                                                 *)
+(*                                                                          *)
+(****************************************************************************)
+
+HWUnitInfo (* DSDP 010 *)
+  HWUnitID {2D7674CA-0898-4762-A5AF-3B5F5AEE7AE1}
+  Description "DSDP 010"
+  Information "Absolute binary decoder board" 
+  Icons RackIOType
+  Attributes AdapterUnit IoUnit 
+  InterfaceInfo
+    (*Interface CIGInterface*) (* If GetDeviceStatus is wanted or Numbered parameters specified *)
+    IoSysType CIGIO        (* GetConnStatus will be called from framework *)
+    CLSID_CB {E15630B2-7F2A-4fab-ACDC-9A46839D335B} (* CLSID_CB = GUID for S100 Protocol handler (PH) in Control builder CB *)
+    CLSID_CTRL   {41ACBED2-973D-48d1-B5B5-51836FEF4B26} (* CLSID_CTRL   = GUID for S100 Protocol handler (PH) in Controller *)
+    HWConfig Fail
+  End InterfaceInfo 
+  ConnectionInfo
+    ConnectType OwnUnit
+    IOConnect   Fail
+    IOConfig    NoFail
+  End ConnectionInfo
+
+  Parameters
+    ParamInfo 
+      Name Ver
+      Description "Version"
+      Hidden
+      CompileType IOConnect
+      Datatype INT
+      Default 1 
+      ParValIndex 5
+      ParamType CIGIOData 0 0 0 ByteParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name AccessMode
+      Description "Access Mode"
+      Hidden
+      CompileType IOConnect
+      Datatype INT
+      Default 0 
+      ParValIndex 5
+      ParamType CIGIOData 1 0 0 ByteParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name NoOfAddresses
+      Description "No of Address"
+      Hidden
+      CompileType IOConnect
+      Datatype INT
+      Default 1 
+      ParValIndex 0
+      ParamType CIGIOData 2 0 0 ByteParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name Address
+      Description "Address"
+      CompileType IOConnect
+      Datatype INT
+      Default 192
+      ParValIndex 1
+      ParamType CIGIOData 3 0 0 ByteParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ModType
+      Description "Module type"
+      Hidden
+      CompileType IOConnect
+      Datatype INT
+      Default 61 
+      ParValIndex 5
+      ParamType CIGIOData 4 0 0 ByteParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name NoOfsensors
+      Description "No of sensors"
+      CompileType IOConnect
+      Datatype INT
+      Default 2
+      ParValIndex 2
+      ParamType CIGIOData 4 0 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ScanInterval
+      Description "Scan interval"
+      CompileType IOConfig
+      Datatype INT
+      Default 1000
+      ParValIndex 3
+      ParamType CIGIOData 2 0 1 WordParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel1
+      Description "Active channel 1"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 10 0 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel2
+      Description "Active channel 2"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 12 0 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name WatchdogChannel1
+      Description "Watchdog channel 1"
+      CompileType IOConnect
+      Datatype INT
+      Default 10
+      ParValIndex 4
+      ParamType CIGIOData 6 0 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name WatchdogChannel2
+      Description "Watchdog channel 2"
+      CompileType IOConnect
+      Datatype INT
+      Default 10
+      ParValIndex 4
+      ParamType CIGIOData 8 0 1 WordParam ByteOffset
+    End ParamInfo
+  End Parameters
+
+  ParValList
+    ParVal
+      ParValIndex 0      (* No of addresses which this unit uses *)
+      UnitText    " "
+      INT 1 4 1 4
+    End ParVal
+
+    ParVal
+      ParValIndex 1      (* Strapped adress interval *)
+      UnitText    " "
+      INT 192 239 192 239
+    End ParVal
+
+    ParVal
+      ParValIndex 2      (* No of used sensors *)
+      UnitText    " "
+      INT 1 2 1 2
+    End ParVal
+
+    ParVal
+      ParValIndex 3      (* Scan interval *)
+      UnitText    "0.1 ms"
+      INT 2 50000 2 50000
+    End ParVal
+
+    ParVal
+      ParValIndex 4      (* Watchdog, timeout supervision *)
+      UnitText    "ms"
+      INT 1 60 1 60
+    End ParVal
+
+    ParVal
+      ParValIndex 5      (* General INT type *)
+      UnitText    " "
+      INT 0 65535 0 65535
+    End ParVal
+  End ParValList
+
+  Channels
+    ChannelInfo
+      Number 1 
+      ChannelName "Value channel 1"
+      Datatype Int_In
+      Routine 303
+      CopyParameters 0 0 16#30004 16#1 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 2
+      ChannelName "Value channel 2"
+      Datatype Int_In
+      Routine 303
+      CopyParameters 0 0 16#30008 16#1 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 3 
+      ChannelName "Status channel 1"
+      Datatype Int_In
+      Routine 303
+      CopyParameters 0 0 16#30002 16#0000 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 4 
+      ChannelName "Status channel 2"
+      Datatype Int_In
+      Routine 303
+      CopyParameters 0 0 16#30006 16#0000 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 5
+      ChannelName "UnitStatus"
+      Datatype Status_In
+      Routine 900
+      CopyParameters 0 0 16#50000
+    End ChannelInfo      
+  End Channels
+
+  IoUnitStatus
+    StatusType ModuleMissing
+    StatusData 16#30001 16#0001 16#0 16#0
+    StatusType WrongModuleType 
+    StatusData 16#30001 16#0002 16#0 16#0
+    StatusType IoError
+    StatusData 16#30001 16#0004 16#0 16#0
+  End IoUnitStatus
+
+  Configuration
+    ConfigInfo
+      ModuleKey   16#0000
+      InAreaSize  10
+      OutAreaSize 0
+      InWord 
+        WORD 0        0  (* State                   *)
+        WORD 0        1  (* Module status           *)
+        WORD 0        2  (* Channel 1 status        *)
+        WORD 0        3  (* Channel 1 status        *)
+        WORD 0        4  (* Channel 1 value (msw)   *)
+        WORD 0        5  (* Channel 1 value         *)
+        WORD 0        6  (* Channel 2 status        *)
+        WORD 0        7  (* Channel 2 status        *)
+        WORD 0        8  (* Channel 2 value (msw)   *)
+        WORD 0        9  (* Channel 2 value         *)
+      CIGIOConnData
+        CIGIOData 0 0 0 0 0
+        CIGIOData 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+      End CIGIOConnData
+    End ConfigInfo
+  End Configuration
+  HWUnitInfoCRC 16#2D96
+End HWUnitInfo (* DSDP 010 *)

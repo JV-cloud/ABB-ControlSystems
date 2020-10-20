@@ -1,0 +1,458 @@
+<HEAD>
+Index of symbols created Thu 03/21/2013 11:49:52.45 
+</HEAD>
+<SECTIONS=10>
+00010000 00016fa0 .text
+00016fa0 000173bc .got2
+000173bc 000177b0 .fixup
+000177b0 000177c0 .bss
+000177c0 0001a9f8 .data
+0001a9f8 0001a9f8 .sdata
+0001a9f8 00029b3c .stab
+00029b3c 00016fa0 .comment
+00016fa0 00029dbc .sdata2
+00029dbc 00029dbc .stabstr
+</SECTIONS>
+<SYMBOLS=441>
+00000000 Ph3964R.elf EXE_HEAD
+00000064 Ph3964R.elf CPh3964R::CPh3964R(void)
+000001b0 Ph3964R.elf CPh3964R::~CPh3964R(void)
+00000294 Ph3964R.elf vosThread(int, int, int, int)
+000002b8 Ph3964R.elf CPh3964R::GetProductInfo(unsigned char *, unsigned char *, unsigned char *, unsigned long)
+00000350 Ph3964R.elf CPh3964R::SetCommonCallbackInterface(ICommonCallback *)
+00000904 Ph3964R.elf CPh3964R::StartThread(void)
+000009d4 Ph3964R.elf CPh3964R::createSemaphore(void)
+00000a44 Ph3964R.elf CPh3964R::deleteSemaphore(void)
+00000ad8 Ph3964R.elf CPh3964R::GetSerialChannelNumber(trHWFAddress)
+00000ae4 Ph3964R.elf CPh3964R::Deletethread(void)
+00000b7c Ph3964R.elf CPh3964R::EmptyingVarDataQueue(int)
+00000cf4 Ph3964R.elf CPh3964R::Error(char *, char *, unsigned int)
+00000ddc Ph3964R.elf CPh3964R::PrepareMessage(char *, char *, char *, unsigned int)
+00001034 Ph3964R.elf CPh3964R::PH3964R_Log_Method_Call(int, int, int, int, int, char *)
+00001144 Ph3964R.elf CPh3964R::PH3964R_Get_Trace_Level(void)
+00001284 Ph3964R.elf CPh3964R::operator new(unsigned int, IHeapCallback *)
+00001338 Ph3964R.elf CPh3964R::heap_delete(void)
+000013a4 Ph3964R.elf CPh3964R::QueryInterface(_GUID const &, void **)
+000014ec Ph3964R.elf CPh3964R::AddRef(void)
+00001504 Ph3964R.elf CPh3964R::Release(void)
+00001580 Ph3964R.elf Letext
+00001584 Ph3964R.elf CPh3964R::ConnectReq(unsigned long, unsigned long *, int *)
+000016ac Ph3964R.elf CPh3964R::DisconnectReq(unsigned long, unsigned long, int *)
+000017c4 Ph3964R.elf CPh3964R::ReadVarReq(unsigned long, int *)
+00001a70 Ph3964R.elf CPh3964R::WriteVarReq(unsigned long, int *)
+00001de0 Ph3964R.elf CPh3964R::ReadRawReq(unsigned long, int *)
+00001e40 Ph3964R.elf CPh3964R::WriteRawReq(unsigned long, int *)
+00001ea4 Ph3964R.elf CPh3964R::AbortRawReq(unsigned long, int *)
+00001f08 Ph3964R.elf CPh3964R::AbortVarReq(unsigned long, int *)
+000020d8 Ph3964R.elf CPh3964R::GetExtendedStatusSize(unsigned long, int *, int *)
+0000213c Ph3964R.elf CPh3964R::GetExtendedStatus(unsigned long, int, teIEC1131Type *, tGCValue *, int *)
+000021a0 Ph3964R.elf CPh3964R::SetStatus(unsigned long, int, int *)
+00002204 Ph3964R.elf CPh3964R::ReadRes(unsigned long, int, int *)
+00002268 Ph3964R.elf CPh3964R::WriteRes(unsigned long, int, int *)
+000022cc Ph3964R.elf CPh3964R::TimeoutAbortVarReq(unsigned long, int *)
+00002370 Ph3964R.elf Letext
+00002374 Ph3964R.elf CPh3964R::PrepareForTermination(teHWFErrorCode *)
+00002480 Ph3964R.elf CPh3964R::PerformSwitchover(trHWFAddress, teHWFErrorCode *)
+000024e0 Ph3964R.elf CPh3964R::PerformFailover(trHWFAddress, teHWFErrorCode *)
+00002540 Ph3964R.elf CPh3964R::StartUsingDevice(trHWFAddress, teHWFErrorCode *)
+000025a0 Ph3964R.elf CPh3964R::RemoveHWConfiguration(trHWFAddress, teHWFErrorCode *)
+00002694 Ph3964R.elf CPh3964R::RemoveIoConnection(unsigned long, teHWFErrorCode *)
+000026f4 Ph3964R.elf CPh3964R::PhResponsibilityForRestart(trHWFAddress, teHWFErrorCode *)
+000027c0 Ph3964R.elf CPh3964R::PhResponsibility(trHWFAddress, teHWFErrorCode *)
+00002c74 Ph3964R.elf CPh3964R::PhResponsibilityForBackupDevice(trHWFAddress, teHWFErrorCode *)
+00002cd8 Ph3964R.elf CPh3964R::PhResponsibilityForHotInsert(trHWFAddress, teHWFErrorCode *)
+00003090 Ph3964R.elf CPh3964R::StartUsingIoConnection(trHWFAddress, unsigned long, teHWFErrorCode *)
+000030f0 Ph3964R.elf Letext
+000030f4 Ph3964R.elf CPh3964R::KickWatchdog(unsigned short *, teHWFErrorCode *)
+000031e0 Ph3964R.elf CPh3964R::GetStatus(trHWFAddress, teHWFUnitKind, teHWFStatusType *, teHWFExtStatusType *, teHWFErrorCode *)
+00003240 Ph3964R.elf Letext
+00003244 Ph3964R.elf CPh3964R::ThreadWork(void)
+00003508 Ph3964R.elf CPh3964R::ProcessVarData(unsigned long, unsigned long, int *)
+000037a8 Ph3964R.elf CPh3964R::Send3964RSetUpSignal(unsigned long, unsigned long, int *)
+000038f4 Ph3964R.elf CPh3964R::Poll3964RMasterReceive(unsigned long, int *)
+00003db0 Ph3964R.elf CPh3964R::SiemSendRetry(void)
+00003f00 Ph3964R.elf CPh3964R::DoWaitToSendState(void)
+00004158 Ph3964R.elf CPh3964R::Received3964RSignal(unsigned char *, int, unsigned long)
+00004300 Ph3964R.elf CPh3964R::SiemRecRetry(void)
+00004474 Ph3964R.elf CPh3964R::Clear3964RReceive(void)
+000044f0 Ph3964R.elf CPh3964R::Receive3964RResponse(bool *)
+00004b94 Ph3964R.elf CPh3964R::Build3964RTelegram(unsigned long, unsigned long, int *)
+000056e8 Ph3964R.elf CPh3964R::SendDataTo1131(unsigned long, int *)
+00005b70 Ph3964R.elf CPh3964R::Send3964RSignal(unsigned char)
+00005c1c Ph3964R.elf CPh3964R::XORoctets(unsigned char *, int, int)
+00005cec Ph3964R.elf CPh3964R::InitiateConn(void)
+00005d80 Ph3964R.elf Letext
+00005d84 Ph3964R.elf foo(void)
+00005dec Ph3964R.elf ObjectFactory
+00005f30 Ph3964R.elf Letext
+00005f34 Ph3964R.elf __pure_virtual
+00005f9c Ph3964R.elf __builtin_delete
+00006000 Ph3964R.elf Letext
+00006000 Ph3964R.elf Letext
+00006000 Ph3964R.elf Letext
+00006004 Ph3964R.elf CPhCommon_Base::CPhCommon_Base(void)
+00006070 Ph3964R.elf CPhCommon_Base::~CPhCommon_Base(void)
+000060e8 Ph3964R.elf CPhCommon_Base::GetProductInfo(unsigned char *, unsigned char *, unsigned char *, unsigned long)
+00006124 Ph3964R.elf CPhCommon_Base::SetCommonCallbackInterface(ICommonCallback *)
+00006154 Ph3964R.elf CPhConfig_Base1::PrepareForTermination(teHWFErrorCode *)
+00006184 Ph3964R.elf CPhConfig_Base1::RemoveHWConfiguration(trHWFAddress, teHWFErrorCode *)
+000061b8 Ph3964R.elf CPhConfig_Base1::RemoveIoConnection(unsigned long, teHWFErrorCode *)
+000061ec Ph3964R.elf CPhConfig_Base1::PhResponsibilityForRestart(trHWFAddress, teHWFErrorCode *)
+00006220 Ph3964R.elf CPhConfig_Base1::PhResponsibility(trHWFAddress, teHWFErrorCode *)
+00006254 Ph3964R.elf CPhConfig_Base1::StartUsingIoConnection(trHWFAddress, unsigned long, teHWFErrorCode *)
+0000628c Ph3964R.elf CPhConfig_Base1::PhResponsibilityForBackupDevice(trHWFAddress, teHWFErrorCode *)
+000062c0 Ph3964R.elf CPhConfig_Base1::PhResponsibilityForHotInsert(trHWFAddress, teHWFErrorCode *)
+000062f4 Ph3964R.elf CPhConfig_Base1::PerformSwitchover(trHWFAddress, teHWFErrorCode *)
+00006328 Ph3964R.elf CPhConfig_Base1::StartUsingDevice(trHWFAddress, teHWFErrorCode *)
+0000635c Ph3964R.elf CPhConfig_Base1::PerformFailover(trHWFAddress, teHWFErrorCode *)
+00006390 Ph3964R.elf CPhClient_Base::ConnectReq(unsigned long, unsigned long *, int *)
+000063c8 Ph3964R.elf CPhClient_Base::DisconnectReq(unsigned long, unsigned long, int *)
+00006400 Ph3964R.elf CPhClient_Base::ReadVarReq(unsigned long, int *)
+00006434 Ph3964R.elf CPhClient_Base::WriteVarReq(unsigned long, int *)
+00006468 Ph3964R.elf CPhClient_Base::ReadRawReq(unsigned long, int *)
+0000649c Ph3964R.elf CPhClient_Base::WriteRawReq(unsigned long, int *)
+000064d0 Ph3964R.elf CPhClient_Base::AbortRawReq(unsigned long, int *)
+00006504 Ph3964R.elf CPhClient_Base::AbortVarReq(unsigned long, int *)
+00006538 Ph3964R.elf CPhClient_Base::GetExtendedStatusSize(unsigned long, int *, int *)
+00006570 Ph3964R.elf CPhClient_Base::GetExtendedStatus(unsigned long, int, teIEC1131Type *, tGCValue *, int *)
+000065b0 Ph3964R.elf CPhClient_Base::SetStatus(unsigned long, int, int *)
+000065e8 Ph3964R.elf CPhClient_Base::ReadRes(unsigned long, int, int *)
+00006620 Ph3964R.elf CPhClient_Base::WriteRes(unsigned long, int, int *)
+00006658 Ph3964R.elf CPhClient_Base1::ConnectReq(unsigned long, unsigned long *, int *)
+00006690 Ph3964R.elf CPhClient_Base1::DisconnectReq(unsigned long, unsigned long, int *)
+000066c8 Ph3964R.elf CPhClient_Base1::ReadVarReq(unsigned long, int *)
+000066fc Ph3964R.elf CPhClient_Base1::WriteVarReq(unsigned long, int *)
+00006730 Ph3964R.elf CPhClient_Base1::RegisterVarReq(unsigned long, int *)
+00006764 Ph3964R.elf CPhClient_Base1::ReadRawReq(unsigned long, int *)
+00006798 Ph3964R.elf CPhClient_Base1::WriteRawReq(unsigned long, int *)
+000067cc Ph3964R.elf CPhClient_Base1::AbortRawReq(unsigned long, int *)
+00006800 Ph3964R.elf CPhClient_Base1::AbortVarReq(unsigned long, int *)
+00006834 Ph3964R.elf CPhClient_Base1::TimeoutAbortVarReq(unsigned long, int *)
+000068c4 Ph3964R.elf CPhClient_Base1::GetExtendedStatusSize(unsigned long, int *, int *)
+000068fc Ph3964R.elf CPhClient_Base1::GetExtendedStatus(unsigned long, int, teIEC1131Type *, tGCValue *, int *)
+0000693c Ph3964R.elf CPhClient_Base1::BufferTakeForReceive(unsigned long, int *)
+00006970 Ph3964R.elf CPhClient_Base1::BufferGiveForReceive(unsigned long, int, int *)
+000069a8 Ph3964R.elf CPhClient_Base1::BufferTakeForSend(unsigned long, unsigned int, int *)
+000069e0 Ph3964R.elf CPhClient_Base1::BufferGiveForSend(unsigned long, unsigned int, int, int *)
+00006a1c Ph3964R.elf CPhClient_Base1::SetStatus(unsigned long, int, int *)
+00006a54 Ph3964R.elf CPhClient_Base1::ReadRes(unsigned long, int, int *)
+00006a8c Ph3964R.elf CPhClient_Base1::WriteRes(unsigned long, int, int *)
+00006ac4 Ph3964R.elf CPhStatus_Base1::KickWatchdog(unsigned short *, teHWFErrorCode *)
+00006af8 Ph3964R.elf CPhStatus_Base1::GetStatus(trHWFAddress, teHWFUnitKind, unsigned long *, unsigned long *, teHWFErrorCode *)
+00006b38 Ph3964R.elf CPhIOAccess_Base::GetCopyRoutineReference(unsigned int, void (**)(short, void *, void *), IOAccessErrorCode *)
+00006b70 Ph3964R.elf CPhIOAccess_Base::ObtainDPM(eAreaType, trHWFAddress, IOAccessErrorCode *)
+00006ba8 Ph3964R.elf CPhIOAccess_Base::ReleaseDPM(eAreaType, trHWFAddress, IOAccessErrorCode *)
+00006be0 Ph3964R.elf CPhDiagnostics_Base::PhDiagnosticsTableNew(teDiagErrorCode *)
+00006c10 Ph3964R.elf CPhDiagnostics_Base::PhDiagnosticsTableCleared(teDiagErrorCode *)
+00006c40 Ph3964R.elf CPhOLU_Base::PrepareForFirmwareDownload(trHWFAddress const *, unsigned long, eOLUStatus *)
+00006c78 Ph3964R.elf CPhOLU_Base::PrepareForApplicationStop(trHWFAddress const *, eOLUStatus *)
+00006cac Ph3964R.elf CPhOLU_Base::ResumeOperation(trHWFAddress const *, eOLUStatus *)
+00006ce0 Ph3964R.elf CPhOLU_Base::PhResponsibilityForOLU(trHWFAddress const *, eOLUStatus *)
+00006d14 Ph3964R.elf CPhOLU_Base::PrepareForLeavingOLU(trHWFAddress const *, eOLUStatus *)
+00006d48 Ph3964R.elf CPhOLU_Base::PrepareForAppAndConfigDownload(trHWFAddress const *, eOLUStatus *)
+00006d80 Ph3964R.elf IPhCommon::IPhCommon(void)
+00006dec Ph3964R.elf IUnknown::IUnknown(void)
+00006e44 Ph3964R.elf CRTFuncTabBegin
+00006e44 Ph3964R.elf Letext
+00006e44 Ph3964R.elf scprocs
+00006e50 Ph3964R.elf printf
+00006e54 Ph3964R.elf sprintf
+00006e58 Ph3964R.elf sscanf
+00006e5c Ph3964R.elf memcpy
+00006e60 Ph3964R.elf memset
+00006e64 Ph3964R.elf strcat
+00006e68 Ph3964R.elf strcmp
+00006e6c Ph3964R.elf strlen
+00006e70 Ph3964R.elf strncmp
+00006e74 Ph3964R.elf strncpy
+00006e78 Ph3964R.elf memchr
+00006e7c Ph3964R.elf memcmp
+00006e80 Ph3964R.elf memmove
+00006e84 Ph3964R.elf strchr
+00006e88 Ph3964R.elf strcoll
+00006e8c Ph3964R.elf strcpy
+00006e90 Ph3964R.elf strcspn
+00006e94 Ph3964R.elf strncat
+00006e98 Ph3964R.elf strpbrk
+00006e9c Ph3964R.elf strrchr
+00006ea0 Ph3964R.elf strspn
+00006ea4 Ph3964R.elf strstr
+00006ea8 Ph3964R.elf strtok
+00006eac Ph3964R.elf strxfrm
+00006eb0 Ph3964R.elf strerror
+00006eb4 Ph3964R.elf pow
+00006eb8 Ph3964R.elf acos
+00006ebc Ph3964R.elf asin
+00006ec0 Ph3964R.elf atan
+00006ec4 Ph3964R.elf atan2
+00006ec8 Ph3964R.elf ceil
+00006ecc Ph3964R.elf cos
+00006ed0 Ph3964R.elf cosh
+00006ed4 Ph3964R.elf exp
+00006ed8 Ph3964R.elf fabs
+00006edc Ph3964R.elf floor
+00006ee0 Ph3964R.elf fmod
+00006ee4 Ph3964R.elf frexp
+00006ee8 Ph3964R.elf ldexp
+00006eec Ph3964R.elf log
+00006ef0 Ph3964R.elf log10
+00006ef4 Ph3964R.elf modf
+00006ef8 Ph3964R.elf sin
+00006efc Ph3964R.elf sinh
+00006f00 Ph3964R.elf sqrt
+00006f04 Ph3964R.elf tan
+00006f08 Ph3964R.elf tanh
+00006f0c Ph3964R.elf div_r
+00006f10 Ph3964R.elf labs
+00006f14 Ph3964R.elf strtol
+00006f18 Ph3964R.elf free
+00006f1c Ph3964R.elf abort
+00006f20 Ph3964R.elf abs
+00006f24 Ph3964R.elf atof
+00006f28 Ph3964R.elf atoi
+00006f2c Ph3964R.elf atol
+00006f30 Ph3964R.elf bsearch
+00006f34 Ph3964R.elf ldiv_r
+00006f38 Ph3964R.elf qsort
+00006f3c Ph3964R.elf rand
+00006f40 Ph3964R.elf srand
+00006f44 Ph3964R.elf strtod
+00006f48 Ph3964R.elf strtoul
+00006f4c Ph3964R.elf malloc
+00006f50 Ph3964R.elf __assert
+00006f54 Ph3964R.elf time
+00006f58 Ph3964R.elf asctime
+00006f5c Ph3964R.elf gmtime
+00006f60 Ph3964R.elf clock
+00006f64 Ph3964R.elf ctime
+00006f68 Ph3964R.elf difftime
+00006f6c Ph3964R.elf localtime
+00006f70 Ph3964R.elf mktime
+00006f74 Ph3964R.elf strftime
+00006f78 Ph3964R.elf eventcollSem
+00006f7c Ph3964R.elf intLock
+00006f80 Ph3964R.elf intUnlock
+00006f84 Ph3964R.elf __builtin_vec_new
+00006f88 Ph3964R.elf __builtin_vec_delete
+00006f8c Ph3964R.elf fprintf
+00006f90 Ph3964R.elf __stdout
+00006f94 Ph3964R.elf __stderr
+00006f98 Ph3964R.elf setjmp
+00006f9c Ph3964R.elf longjmp
+00006fa0 Ph3964R.elf CRTFuncTabEnd
+00006fa0 Ph3964R.elf ecprocs
+00006fa0 Ph3964R.elf etext
+00006fa0 Ph3964R.elf sgot2
+000073bc Ph3964R.elf egot2
+000073bc Ph3964R.elf sfixup
+000077b0 Ph3964R.elf efixup
+000077b0 Ph3964R.elf useEXEHEAD
+000077cc Ph3964R.elf cSWModbusSrcNameSuff
+000077dc Ph3964R.elf cSWInsumSrcNameSuff
+000077ec Ph3964R.elf cSWProfibusSrcNameSuff
+000077fc Ph3964R.elf cSWMB300SrcNameSuff
+00007808 Ph3964R.elf cSWS100SrcNameSuff
+00007818 Ph3964R.elf CComCoClass<CPh3964R, &CLSID_CPh3964R>::m_HeapTag
+00007ed0 Ph3964R.elf CPh3964R::CPhClient_Base1 virtual table
+00007f90 Ph3964R.elf CPh3964R::CPhClient_Base virtual table
+00008020 Ph3964R.elf CPh3964R::CPhStatus_Base1 virtual table
+00008058 Ph3964R.elf CPh3964R::CPhConfig_Base1 virtual table
+000080d8 Ph3964R.elf CPh3964R virtual table
+00008118 Ph3964R.elf IPhClient1 virtual table
+000081d8 Ph3964R.elf IPhClient virtual table
+00008268 Ph3964R.elf IPhStatus1 virtual table
+00008280 G _SDA2_BASE_ Ph3964R.elf 
+000082a0 Ph3964R.elf IPhConfig1 virtual table
+00008320 Ph3964R.elf IUnknown virtual table
+00008348 Ph3964R.elf CompanyName
+0000834c Ph3964R.elf ProductName
+00008354 Ph3964R.elf ProductVersion
+0000837c Ph3964R.elf cSWModbusSrcNameSuff
+0000838c Ph3964R.elf cSWInsumSrcNameSuff
+0000839c Ph3964R.elf cSWProfibusSrcNameSuff
+000083ac Ph3964R.elf cSWMB300SrcNameSuff
+000083b8 Ph3964R.elf cSWS100SrcNameSuff
+00008790 Ph3964R.elf cSWModbusSrcNameSuff
+000087a0 Ph3964R.elf cSWInsumSrcNameSuff
+000087b0 Ph3964R.elf cSWProfibusSrcNameSuff
+000087c0 Ph3964R.elf cSWMB300SrcNameSuff
+000087cc Ph3964R.elf cSWS100SrcNameSuff
+00008da0 Ph3964R.elf cSWModbusSrcNameSuff
+00008db0 Ph3964R.elf cSWInsumSrcNameSuff
+00008dc0 Ph3964R.elf cSWProfibusSrcNameSuff
+00008dd0 Ph3964R.elf cSWMB300SrcNameSuff
+00008ddc Ph3964R.elf cSWS100SrcNameSuff
+00008e5c Ph3964R.elf cSWModbusSrcNameSuff
+00008e6c Ph3964R.elf cSWInsumSrcNameSuff
+00008e7c Ph3964R.elf cSWProfibusSrcNameSuff
+00008e8c Ph3964R.elf cSWMB300SrcNameSuff
+00008e98 Ph3964R.elf cSWS100SrcNameSuff
+00009f5c Ph3964R.elf cSWModbusSrcNameSuff
+00009f6c Ph3964R.elf cSWInsumSrcNameSuff
+00009f7c Ph3964R.elf cSWProfibusSrcNameSuff
+00009f8c Ph3964R.elf cSWMB300SrcNameSuff
+00009f98 Ph3964R.elf cSWS100SrcNameSuff
+00009fa8 Ph3964R.elf CLSID_CPh3964R
+0000a0e0 Ph3964R.elf PHproperties
+0000a0e8 Ph3964R.elf CMirroredObject::c_pMirroredObjectMgrImpl
+0000a0ec Ph3964R.elf CMirroredObjectAgent::c_pHeapCallback
+0000a0f0 Ph3964R.elf CMirroredObjectAgent::c_AgentTag
+0000a144 Ph3964R.elf GUID_NULL
+0000a158 Ph3964R.elf IID_IPhCommonCB
+0000a168 Ph3964R.elf IID_IPhConfigCB
+0000a178 Ph3964R.elf IID_IPhConfigCB1
+0000a188 Ph3964R.elf IID_IPhIOAccessCB
+0000a198 Ph3964R.elf IID_IPhExternalConfigCB1
+0000a1a8 Ph3964R.elf IID_IPhExternalConfigCB2
+0000a1b8 Ph3964R.elf IID_IPhExternalConfigCB3
+0000a1c8 Ph3964R.elf IID_IPhOLUCB
+0000a1d8 Ph3964R.elf IID_IPhCommon
+0000a1e8 Ph3964R.elf IID_IPhConfig1
+0000a1f8 Ph3964R.elf IID_IPhStatus1
+0000a208 Ph3964R.elf IID_IPhClient
+0000a218 Ph3964R.elf IID_IPhClient1
+0000a228 Ph3964R.elf IID_IPhDiagnostics
+0000a238 Ph3964R.elf IID_IPhIOAccess
+0000a248 Ph3964R.elf IID_IPhSafeConfig
+0000a258 Ph3964R.elf IID_IPhSafeConfig1
+0000a268 Ph3964R.elf IID_IPhSimulation
+0000a278 Ph3964R.elf IID_IPhOLU
+0000a288 Ph3964R.elf IID_IHeapCallback
+0000a298 Ph3964R.elf IID_ISystemUtilitiesCallback
+0000a2a8 Ph3964R.elf IID_ISystemUtilitiesCallback1
+0000a2b8 Ph3964R.elf IID_ISystemUtilitiesCallback2
+0000a2c8 Ph3964R.elf IID_IEventMgrCallback
+0000a2d8 Ph3964R.elf IID_IEventMgrCallback1
+0000a2e8 Ph3964R.elf IID_ISysClockCallback
+0000a2f8 Ph3964R.elf IID_ISysClockCallback1
+0000a308 Ph3964R.elf IID_ISysClockCallback2
+0000a318 Ph3964R.elf IID_ISysClockCallback3
+0000a328 Ph3964R.elf IID_IVarServerCallback
+0000a338 Ph3964R.elf IID_IVOSCallback
+0000a348 Ph3964R.elf IID_INetwClockSynchCallback
+0000a358 Ph3964R.elf IID_IConfigCBCallback1
+0000a368 Ph3964R.elf IID_IConfigCBCallback2
+0000a378 Ph3964R.elf IID_IConfigCBCallback3
+0000a388 Ph3964R.elf IID_IExternalConfigCBCallback
+0000a398 Ph3964R.elf IID_IExternalConfigCBCallback2
+0000a3a8 Ph3964R.elf IID_IExternalConfigCBCallback3
+0000a3b8 Ph3964R.elf IID_IExternalConfigCBCallback4
+0000a3c8 Ph3964R.elf IID_IMessagesCBCallback
+0000a3d8 Ph3964R.elf IID_IAIPAccessCBCallback
+0000a3e8 Ph3964R.elf IID_IOLUCBCallback
+0000a3f8 Ph3964R.elf IID_ISystemUtilitiesCBCallback1
+0000a408 Ph3964R.elf IID_IConfigCallback1
+0000a418 Ph3964R.elf IID_IConfigCallback2
+0000a428 Ph3964R.elf IID_IStatusCallback1
+0000a438 Ph3964R.elf IID_IGenClientCallback
+0000a448 Ph3964R.elf IID_IGenClientCallback1
+0000a458 Ph3964R.elf IID_IDriverFactoryCallback
+0000a468 Ph3964R.elf IID_IDiagnosticsCallback
+0000a478 Ph3964R.elf IID_ISafeConfigCallback
+0000a488 Ph3964R.elf IID_ISafeConfigCallback1
+0000a498 Ph3964R.elf IID_ICRCCallback
+0000a4a8 Ph3964R.elf IID_IIOAccessCallback
+0000a4b8 Ph3964R.elf IID_CriticalRegionCallback
+0000a4c8 Ph3964R.elf IID_VOSExceptionCallback
+0000a4d8 Ph3964R.elf IID_DrvCommonCallback
+0000a4e8 Ph3964R.elf IID_ProtectedMirroredHeapCallback
+0000a4f8 Ph3964R.elf IID_SharedMirroredHeapCallback
+0000a508 Ph3964R.elf IID_TemporaryMirroredHeapCallback
+0000a518 Ph3964R.elf IID_IRestrictedVOSCallback
+0000a528 Ph3964R.elf CPhOLU_Base virtual table
+0000a580 Ph3964R.elf CPhDiagnostics_Base virtual table
+0000a5b8 Ph3964R.elf CPhIOAccess_Base virtual table
+0000a5f8 Ph3964R.elf CPhStatus_Base1 virtual table
+0000a630 Ph3964R.elf CPhClient_Base1 virtual table
+0000a6f0 Ph3964R.elf CPhClient_Base virtual table
+0000a780 Ph3964R.elf CPhConfig_Base1 virtual table
+0000a800 Ph3964R.elf CPhCommon_Base virtual table
+0000a840 Ph3964R.elf GUID_NULL
+0000a850 Ph3964R.elf MaxCompanyNameLen
+0000a854 Ph3964R.elf MaxProductNameLen
+0000a858 Ph3964R.elf MaxProductVersionLen
+0000a85c Ph3964R.elf cMaxNrOfHWFAdrLevels
+0000a860 Ph3964R.elf cGCWrite
+0000a864 Ph3964R.elf cGCRead
+0000a868 Ph3964R.elf cGCSubscription
+0000a86c Ph3964R.elf cGCRegistration
+0000a870 Ph3964R.elf cGCAddMemoryAreaArrayNumberPlaces
+0000a874 Ph3964R.elf cPONotFound
+0000a878 Ph3964R.elf cGCBusyDisconnecting
+0000a87c Ph3964R.elf cGCRemovingPO
+0000a880 Ph3964R.elf cGCParametersMissing
+0000a884 Ph3964R.elf cGCAlreadyDefined
+0000a888 Ph3964R.elf cGCTypeNotSupported
+0000a88c Ph3964R.elf cGCIndexOutOfRange
+0000a890 Ph3964R.elf cGCTypeNotDefined
+0000a894 Ph3964R.elf cGCStringMismatch
+0000a898 Ph3964R.elf cGCFacadeError
+0000a89c Ph3964R.elf cGCInvalidHandle
+0000a8a0 Ph3964R.elf cGCAddedMemoryAreaError
+0000a8a4 Ph3964R.elf cGCBSErrorDetected
+0000a8a8 Ph3964R.elf cAborted
+0000a8ac Ph3964R.elf cSuccess
+0000a8b0 Ph3964R.elf cPending
+0000a8b4 Ph3964R.elf cGCDisconnected
+0000a8b8 Ph3964R.elf cGCExtendedStatus
+0000a8bc Ph3964R.elf cPHHeapFull
+0000a8c0 Ph3964R.elf cPHTypeMismatch
+0000a8c4 Ph3964R.elf cPHSizeMismatch
+0000a8c8 Ph3964R.elf cPHErrAccessData
+0000a8cc Ph3964R.elf cPHErrProtocolData
+0000a8d0 Ph3964R.elf cPHAccessVarNotFound
+0000a8d4 Ph3964R.elf cPHErrInvalidPar
+0000a8d8 Ph3964R.elf cPHDirAddrFormatNotSupported
+0000a8dc Ph3964R.elf cPHGenericFormatNotSupported
+0000a8e0 Ph3964R.elf cPHNotImplemented
+0000a8e4 Ph3964R.elf cPHVarDataUnsupportedDirection
+0000a8e8 Ph3964R.elf cPHVarDataNotSupported
+0000a8ec Ph3964R.elf cPHRawDataNotSupported
+0000a8f0 Ph3964R.elf cPHDriverError
+0000a8f4 Ph3964R.elf cPHHardwareError
+0000a8f8 Ph3964R.elf cPHTRAdisconnect
+0000a8fc Ph3964R.elf cLegacyFormat
+0000a900 Ph3964R.elf cDirAddrFormat
+0000a904 Ph3964R.elf cGenericFormat
+0000a908 Ph3964R.elf eHWFDeviceSpecific1
+0000a90c Ph3964R.elf eHWFUnitBPrimary
+0000a910 Ph3964R.elf cHWFOPCMask
+0000a914 Ph3964R.elf cHWFOPCChannelOk
+0000a918 Ph3964R.elf cHWFOPCChannelError
+0000a91c Ph3964R.elf cHWFOPCChannelForced
+0000a920 Ph3964R.elf cHWFOPCDeviceError
+0000a924 Ph3964R.elf cHWFOPCChannelErrorLow
+0000a928 Ph3964R.elf cHWFOPCChannelErrorHigh
+0000a92c Ph3964R.elf cHWFOPCChannelHigh
+0000a930 Ph3964R.elf cHWFOPCChannelLow
+0000a934 Ph3964R.elf cHWFChannelRedundant
+0000a938 Ph3964R.elf cHWFUnitBPrimary
+0000a93c Ph3964R.elf cHWFBackupUnitError
+0000a940 Ph3964R.elf cHWFXSPValueUsed
+0000a944 Ph3964R.elf cHWFChannelSimulated
+0000a948 Ph3964R.elf cHWFChannelForced
+0000a94c Ph3964R.elf cHWFChannelInverted
+0000a950 Ph3964R.elf cHWFXSPMask
+0000a954 Ph3964R.elf cHWFXSPNoSetting
+0000a958 Ph3964R.elf cHWFXSPValue
+0000a95c Ph3964R.elf cHWFXSPClear
+0000a960 Ph3964R.elf cHWFXSPFreeze
+0000a964 Ph3964R.elf cHWFXSPInvert
+0000a968 Ph3964R.elf cHWFXSPInitDPM
+0000a96c Ph3964R.elf HWFNO_XSP_FORCE
+0000a96d Ph3964R.elf HWFFORCE_OSP
+0000a96e Ph3964R.elf HWFFORCE_CLEAR
+0000a96f Ph3964R.elf HWFFORCE_BLOCK_IO_DPM_OUT_WRITE
+0000a970 Ph3964R.elf HWFFORCE_BLOCK_SM_DPM_OUT_WRITE
+0000a974 Ph3964R.elf cHWFMaxNrOfChannels
+0000a978 Ph3964R.elf cHWFStatusErrorsMask
+0000a97c Ph3964R.elf cHWFRootStatusErrorMask
+0000a980 Ph3964R.elf cHWFDoNotCopyUnitErrorMask
+0000a984 Ph3964R.elf cFWUpgradePrimary
+0000a988 Ph3964R.elf cFWUpgradeBackup
+0000a98c Ph3964R.elf cNewPhVersion
+0000a990 Ph3964R.elf cNewPMFirmware
+0000a998 Ph3964R.elf IPhCommon virtual table
+0000a9d0 Ph3964R.elf IUnknown virtual table
+000129f8 G _SDA_BASE_ Ph3964R.elf 
+</SYMBOLS>

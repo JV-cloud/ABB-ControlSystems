@@ -1,0 +1,137 @@
+(* Implementation comment:     *)
+HwUnitInfo  (* Modem *)
+   HWUnitID 16#03000008
+   Description "Modem"
+   Information "Modem"
+   Icons ModemType
+   Attributes DontDisplayPos
+   InterfaceInfo
+      Interface ModemDriver
+      HWConfig Fail
+   End InterfaceInfo
+   SubUnits 1
+   SubUnitTypes
+      HWUnitID 16#03000009 (* COMLI *)
+    (*HWUnitID 16#03000011  Modbus *)
+   End SubUnitTypes
+   Parameters
+      ParamInfo 
+         Name AUTOMATICCONNECT
+         Description "Automatic Connect"
+         CompileType HWConfig
+         Datatype ENUM
+         Default 0
+         ParValIndex 0
+         ParamType Numbered 0
+      End ParamInfo
+      ParamInfo 
+         Name CONNECTRETRIES
+         Description "Connect Retries"
+         CompileType HWConfig
+         Datatype INT
+         Default 0
+         ParValIndex 1
+         ParamType Numbered 1
+      End ParamInfo
+      ParamInfo 
+         Name CONNECTRETRYDELAY
+         Description "Connect Retry Delay"
+         CompileType HWConfig
+         Datatype INT
+         Default 15
+         ParValIndex 2
+         ParamType Numbered 2
+      End ParamInfo
+      ParamInfo 
+         Name CONNECTTIMEOUT
+         Description "Connect Timeout"
+         CompileType HWConfig
+         Datatype INT
+         Default 30
+         ParValIndex 3
+         ParamType Numbered 3
+      End ParamInfo
+      ParamInfo 
+         Name DISCONNECTIDLETIMEOUT
+         Description "Disconnect idle timeout"
+         CompileType HWConfig
+         Datatype INT
+         Default 60
+         ParValIndex 4
+         ParamType Numbered 4
+      End ParamInfo
+      ParamInfo 
+         Name AUTOMATICRECONNECT
+         Description "Automatic Reconnect"
+         CompileType HWConfig
+         Datatype ENUM
+         Default 1
+         ParValIndex 5
+         ParamType Numbered 5
+      End ParamInfo
+      ParamInfo 
+         Name CARRIERDETECTIONTIMEOUT
+         Description "Carrier detection timeout"
+         CompileType HWConfig
+         Datatype INT
+         Default 4
+         ParValIndex 6
+         ParamType Numbered 6
+      End ParamInfo
+      ParamInfo 
+         Name HAYESINITCOMMAND
+         Description "Hayes init command"
+         CompileType HWConfig
+         Datatype STRING          
+         Default "ATE0V1S0=1"
+         ParamType Numbered 7
+      End ParamInfo
+      ParamInfo 
+         Name PHONENUMBER
+         Description "Default Phone number"
+         CompileType HWConfig
+         Datatype STRING       
+         Default ""
+         ParamType Numbered 8
+      End ParamInfo
+   End Parameters
+   ParValList
+      ParVal
+         ParValIndex 0
+         ENUM
+         "off" 0
+         "on" 1
+      End ParVal
+      ParVal
+         ParValIndex 1
+         INT 0 32 0 32
+      End ParVal
+      ParVal
+         ParValIndex 2
+         UnitText    "sec"
+         INT 1 120 1 120
+      End ParVal
+      ParVal
+         ParValIndex 3
+         UnitText    "sec"
+         INT 15 120 15 120
+      End ParVal
+      ParVal
+         ParValIndex 4
+         UnitText    "sec"
+         INT 0 900 0 900
+      End ParVal
+      ParVal
+         ParValIndex 5
+         ENUM
+         "off" 0
+         "on" 1
+      End ParVal
+      ParVal
+         ParValIndex 6
+         UnitText    "sec"
+         INT 2 12 2 12
+      End ParVal
+   End ParValList
+  HWUnitInfoCRC 16#9B15
+End HWUnitInfo (* Modem*)

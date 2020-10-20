@@ -1,0 +1,350 @@
+(* --------------------------------------------------------------*)
+(* Version 5.0-13 2012-04-17 L Serafin                           *)
+(* Added HWUnitID for DI828 and DO828                            *)
+(* --------------------------------------------------------------*)
+(* Version 5.0-12 2011-12-13 L Serafin                           *)
+(* Added HWUnitID for DI818 and DO818                            *)
+(* --------------------------------------------------------------*)
+(* Version 5.0-11 2009-11-16 A Theorin                           *)
+(* PRC #39456                                                    *)
+(* Use .. operator for improved maintainability and reduced      *)
+(* read time                                                     *)
+(* --------------------------------------------------------------*)
+(* Version 5.0-10 2008-02-13 A Theorin                           *)
+(* PRC #31931                                                    *)
+(* Added DCS600 SubUnit                                          *)
+(* Added Fileheader                                              *)
+(*---------------------------------------------------------------*)
+
+FileHeader
+  Contents              "ModuleBus with S800 High Integrity I/O"
+  Date                  "2012-04-17"
+  Version               "5.0-13"
+  RequiredSyntaxVersion "3.7"
+End FileHeader
+
+HWUnitInfo (* ModuleBus with S800 High Integrity I/O *)
+  HWUnitId 16#01480002 
+  Description "ModuleBus"
+  Information "Central S800 I/O and drives connector"
+  Icons ChannelType
+
+  InterfaceInfo
+    Interface CIGInterface
+    CLSID_CB     {02A678FA-CA7D-4e4b-ABEA-888CF8CCE2F8}
+    CLSID_CTRL   {90F15C58-7EFA-4565-B572-246C19BBBB85}
+    HWConfig  NoFail   
+  End InterfaceInfo
+
+  LogicalNumbers
+     1..12
+     101..112
+     201..212
+     301..312
+     401..412
+     501..512
+     601..612
+     701..712
+     901..912
+     1001..1012
+     1101..1112
+     1201..1212
+     1301..1312
+     1401..1412
+     1501..1512
+  End LogicalNumbers
+
+  SubUnitTypes
+    SubMenu "S800 I/O"
+      HWUnitID 16#0088040A (* AI810 *)
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID {F335FFDA-77ED-46AC-A0F3-3FB05E221BF6} (* AI810NO - special ej officiellt utgiven*)
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID {8967AB06-F321-4803-B60B-3FC612CC7081} (* AI815 *)
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID 16#00880414 (* AI820 *)
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID {CB685C24-6EC3-4d22-A6C5-2D987F53D753} (* Variant av AI820/Q4 2002 *)
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID 16#00880419 (* AI825 *)
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID 16#0088871E (* AI830 RTD*)
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID 16#00888823 (* AI835 TC*)
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID {2B87C0F1-57F9-4546-8ED9-AE89BC375FBD} (* AI835A TC*)
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID {BCFA990A-86A8-4f23-B23F-EA5EED4225C3} (* AI843 *)
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712 
+
+      HWUnitID {3B23FFC4-BD6E-41f6-9476-A4A1EF4310D8} (* AI845 *) 
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712 
+
+      HWUnitID {C999BD8C-DC26-48c9-ACB6-AD4BB33270BC} (* AIXXX *)
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712 
+
+      HWUnitID {70101A9D-DF6D-41ec-93BA-A5454F0A7F91} (* AIYYY *)
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712 
+
+    Separator
+
+      HWUnitID 16#0088050A (* AO810 *)
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID {7B57B585-EF1D-4278-9FA7-9DB18E908562} (* AO815 *)
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID 16#00880514 (* AO820 *)
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID {9338FD9A-190D-498D-9FAF-3DC1C5272624} (* AO840 *)
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID {7E975C15-77B9-4984-BABC-E81076AA810B} (* AO845 *) 
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID {1FA07ED0-6B5A-4e9f-9D40-7AAED129766B} (* AOXXX *) 
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID {5FFA7698-6009-43f7-9120-6C7813E1A6D7} (* AOYYY *)
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+    Separator
+
+      HWUnitID 16#0088010A (* DI810 *)
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID 16#0088010B (* DI811 *)
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID 16#0088010E (* DI814 *)
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID {0CEABA7A-C07D-4fe0-B463-FBE0BCEA49DC} (* DI818 *)
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID 16#00880114 (* DI820 *)
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID 16#00880115 (* DI821 *)
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID 16#00880119 (* DI825 *)
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID {764EFDBC-E116-44bc-934F-302770F89AAD} (* DI828 *)
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID 16#0088811E (* DI830 *)
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID {4B9CDF5C-0A51-445a-930B-0CCEDE21663B} (* Variant av DI830 till OpCode/Q3 2002 *)
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID 16#0088811F (* DI831 *)
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID {75C9CEBE-E31F-4c74-AA2F-4840E470402B} (* DI840 *) 
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID 16#00888155 (* DI885 *)         
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID {6B735035-E47F-4857-96E7-0CBA897E1776} (* DIXXX *)         
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID {31EE7A33-CDE4-4034-930D-B81232FA6F0A} (* DIYYY *)         
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+    Separator
+
+      HWUnitID 16#0088020A (* DO810 *)
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID {09643E6C-E1DB-40fa-ACC0-D5319D318D82} (* DO818 *)
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID 16#0088020E (* DO814 *)
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID 16#0088020F (* DO815 *)
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID 16#00880214 (* DO820 *)
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID 16#00880215 (* DO821 *) 
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID {FEAFBFEA-D2FA-4d58-AF02-EE4C98BE01BE} (* DO828 *)
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID {F9FD8DE1-8E6F-4e77-9EA3-175552E377F3} (* DO840 *) 
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID {C1A26F25-30FA-4be1-9736-BB0583531666} (* DOXXX *) 
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID {F7F71F64-87D3-47f7-B34C-BD41394339F8} (* DOYYY *) 
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+    Separator
+
+      HWUnitID 16#00880614 (* DP820 *)
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID {8847DC48-666D-4fe9-932B-320B577474FE} (* DP840 *) 
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID {CCED860D-4DF9-4b0f-9578-7E503C784223} (* Strommatkort NSB/Q3 2002 *)
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID {80D381F5-083C-4ba8-9244-133977A85A4D} (* Relakort NSB/Q3 2002 *)  
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID {6090EDC0-CA20-42DE-8103-F872EC76FB98} (* 16 ch Triac output *) 
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID {2A3D5AD6-5F38-4A09-9E41-0E2B875FB717} (* 16 ch 110 VAC input *)   
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+    SubMenuEnd
+
+    SubMenu "S800 High Integrity I/O"
+      HWUnitID {C5DB5CD4-313E-439c-A86D-FBDE43317D0C} (* AI880 *) 
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID {9E23248C-8291-4e0b-B4EF-E5A512030483} (* AI880 as DI *) 
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID {B1439993-AACD-4756-AB75-0BC72BB17705} (* DI880 *)
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID {54DE288A-FC7E-4a3c-83CB-3AC4924CF960} (* DO880 *) 
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+    SubMenuEnd
+
+    SubMenu "S800 I/O I.S. interface"
+      HWUnitID 16#0088045A (* AI890 *)
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID {6E53835C-92AC-4f9c-A6DA-2810E7DDD1D6} (* AI893 TC *)
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID {4AD3AC4A-2F17-4f28-B524-5CF4CACEE36F} (* AI893 RTD *)
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID 16#0088045F (* AI895 *)
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID 16#0088055A (* AO890 *)
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID 16#0088055F (* AO895 *)
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID 16#0088015A (* DI890 *)
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID 16#0088025A (* DO890 *)
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+    SubMenuEnd
+
+    SubMenu "S800L I/O"
+      HWUnitID 16#00880401 (* AI801 *)
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID 16#00880501 (* AO801 *)
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID 16#00880101 (* DI801 *)
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID 16#00880102 (* DI802 *)
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID 16#00880103 (* DI803 *)
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID 16#00880201 (* DO801 *)
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID 16#00880202 (* DO802 *)
+      Positions 1..12 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+    SubMenuEnd
+
+    SubMenu "Drives"
+      HWUnitID 16#00888900 (* ACS600 Std *)
+      Positions 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID 16#00888A00 (* ACS600 Eng *)
+      Positions 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+
+      HWUnitID {717294FF-4A6A-4aa2-BB6E-C37BCC50F360} (* DCS600 *)
+      Positions 101..112 201..212 301..312 401..412 501..512 601..612 701..712
+    SubMenuEnd
+  End SubUnitTypes
+
+  Parameters
+    ParamInfo
+      Name POWER_SUP
+      Description "External power supervision"
+      CompileType HWConfig
+      DataType BOOL
+      Default TRUE
+      ParamType Numbered 0
+    End ParamInfo
+
+    ParamInfo
+      Name SCAN_CYCLE_TIME
+      Description "Scan Cycle Time"
+      CompileType HWConfig
+      DataType INT
+      Default 100
+      ParValIndex 0
+      ParamType Numbered 1
+    End ParamInfo  
+  End Parameters
+
+  ParValList
+    ParVal
+      ParValIndex 0
+      UnitText    "ms"
+      INT 0 300 0 300
+    End ParVal
+  End ParValList
+
+  UnitstatusText
+    DeviceSpecific2 "RPB" (* Redundant cable 2 fail *)
+    DeviceSpecific3 "RPA" (* Redundant cable 1 fail *)
+    ExtendedStatus1 "Backup CPU, Modulebus Clustermodem 1 error" (* Error on a clustermodem connected to backup CPU *)
+    ExtendedStatus2 "Backup CPU, Modulebus Clustermodem 2 error" (* Error on a clustermodem connected to backup CPU *)
+    ExtendedStatus3 "Backup CPU, Modulebus Clustermodem 3 error" (* Error on a clustermodem connected to backup CPU *)
+    ExtendedStatus4 "Backup CPU, Modulebus Clustermodem 4 error" (* Error on a clustermodem connected to backup CPU *)
+    ExtendedStatus5 "Backup CPU, Modulebus Clustermodem 5 error" (* Error on a clustermodem connected to backup CPU *)
+    ExtendedStatus6 "Backup CPU, Modulebus Clustermodem 6 error" (* Error on a clustermodem connected to backup CPU *)
+    ExtendedStatus7 "Backup CPU, Modulebus Clustermodem 7 error" (* Error on a clustermodem connected to backup CPU *)
+  End UnitStatusText
+
+  UnitStatusSeverity
+    DeviceSpecific2  GeneralWarning TriggerAlarm SeverityMedium
+    DeviceSpecific3  GeneralWarning TriggerAlarm SeverityMedium
+    ExtendedStatus1  GeneralWarning TriggerAlarm SeverityHigh
+    ExtendedStatus2  GeneralWarning TriggerAlarm SeverityHigh
+    ExtendedStatus3  GeneralWarning TriggerAlarm SeverityHigh
+    ExtendedStatus4  GeneralWarning TriggerAlarm SeverityHigh
+    ExtendedStatus5  GeneralWarning TriggerAlarm SeverityHigh
+    ExtendedStatus6  GeneralWarning TriggerAlarm SeverityHigh
+    ExtendedStatus7  GeneralWarning TriggerAlarm SeverityHigh
+  End UnitStatusSeverity
+
+  HWUnitInfoCRC 16#21DB
+End HWUnitInfo (* ModuleBus *)

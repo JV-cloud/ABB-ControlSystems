@@ -1,0 +1,172 @@
+(****************************************************************************)
+(* FILE            s100rack.hwd                                             *)
+(*                                                                          *)
+(* DESCRIPTION     Hardware definition file for S100 I/O rack               *)
+(*                                                                          *)
+(* AUTHOR          SEPID/FVT G Ronnback                                     *)
+(*                                                                          *)
+(* All rights reserved. Reproduction, modification, use or disclosure       *)
+(* to third parties without express authority, is forbidden.                *)
+(* Copyright ABB Process Industries AB, Sweden, 2002.                       *)
+(*                                                                          *)
+(*                                                                          *)
+(* HISTORY $Log: /S100/workplace/current/source/hwdefinitions/definitionfiles/s100/s100rack.hwd $  *)
+(*  *)
+(* 14    13-09-11 11:20 inakpat1 *)
+(* #51845 - Added GUIDs for new HWD files*)
+(*  *)
+(* 14    07-12-17 11:20 sepewah *)
+(* #30692 Tighter HWD parsing due to SIL-3*)
+(* "Separator" directive  in SubUnitTypes section has been commented because it's obsolete. *)
+(*  *)
+(* 13    03-02-04 16:44 Jruth *)
+(* PRC #7487 *)
+(* Added UnitStatus channel. *)
+(*  *)
+(* 12    02-09-05 14:31 Jruth *)
+(* PRC #6443 *)
+(* Added GUID for DSDP 140B *)
+(*  *)
+(* PRC #6412 *)
+(* Changed GUID for DSBC 173A *)
+(*  *)
+(* PRC #6392 *)
+(* Added GUID for diagnostic module *)
+(*  *)
+(* 11    02-08-13 22:13 Jruth *)
+(* DSDO 130 and DSDO 131 added *)
+(*  *)
+(* 10    02-06-24 22:57 Jruth *)
+(* Added reference to DSBC 173A *)
+(*  *)
+(* 9     02-06-22 16:45 Jruth *)
+(* Separators added *)
+(*  *)
+(* 8     02-06-22 14:31 Jruth *)
+(* DSAI 130D,  DSAO 130A and DSDO 115A added *)
+(*  *)
+(* 7     02-06-20 15:19 Z1bande2 *)
+(* Attribute removed. Interface IoSysType removed *)
+(*  *)
+(* 6     02-05-17 16:33 Jruth *)
+(* Tab removed for DSDO 110 *)
+(*  *)
+(* 5     02-05-05 1:27 Jruth *)
+(* DSDO 110 and DSDP 010 added *)
+(*  *)
+(* 4     02-04-02 11:37 Z1hjaco1 *)
+(* Added new GUID definitions *)
+(*  *)
+(* 3     02-03-22 21:08 Jruth *)
+(* Support for DSAO 110 added. *)
+(*  *)
+(* 2     02-03-15 9:53 Gronnbac *)
+(* DSAO 120A added *)
+(*  *)
+(* 1     02-03-06 16:32 Gronnbac *)
+(* Initial version *)
+(*                                                                          *)
+(*                                                                          *)
+(* ABSTRACT                                                                 *)
+(*                                                                          *)
+(****************************************************************************)
+
+HWUnitInfo  (* S100 Rack *)
+   HWUnitID {5B367CEF-DA81-42c8-BFCC-B5134820CA83}
+   Description "S100 Rack"
+   Information "S100 I/O Rack, 21 slots"
+   Icons RackAdapterType
+
+   InterfaceInfo
+     Interface CIGInterface (* If GetDeviceStatus is wanted or Numbered parameters specified *)
+     CLSID_CB {E15630B2-7F2A-4fab-ACDC-9A46839D335B} (* CLSID_CB = GUID for S100 Protocol handler (PH) in Control builder CB *)
+     CLSID_CTRL   {41ACBED2-973D-48d1-B5B5-51836FEF4B26} (* CLSID_CTRL   = GUID for S100 Protocol handler (PH) in Controller *)
+     HWConfig NoFail     (* Change of net parameters affect subunits *)
+   End InterfaceInfo 
+
+   DiscreteNumbers
+      0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21
+   End DiscreteNumbers
+
+   SubUnitTypes
+      HWUnitID {3946F5D9-972F-43dc-A3EC-A3005EAF6A1F} Positions 21 Instances 1 (* GUID for DSBC 173A *)
+      HWUnitID {47A9CE96-B09C-4b0f-ACFE-01517FBE5E8C} Positions 21 Instances 1 (* GUID for DSBC 174 *)
+      HWUnitID {6C830929-A5DD-412b-8E01-BECC03CF7359} Positions 21 Instances 1 (* GUID for DSBC 176 *)
+      (* Separator *)
+      HWUnitID {879EAC28-1AD8-4D56-821E-44861BCCBFEC} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 Instances 20 (* GUID for DSAI 110 *)
+      HWUnitID {4EDBB6E1-173F-440e-B1D7-45BEB8996A2B} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 Instances 20 (* GUID for DSAI 130 *)
+      HWUnitID {EB751E0E-2765-4b84-B24F-0B60E6059A21} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 Instances 20 (* GUID for DSAI 130D *)
+      HWUnitID {E151B803-C79A-40c1-8729-B98843F11A14} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 Instances 20 (* GUID for DSAI 133 *)
+      HWUnitID {C844ABE2-974C-49D6-827A-3E973EF7E5C1} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 Instances 20 (* GUID for DSAI 135 *)
+      HWUnitID {BF95005A-911A-441F-9A48-B8D15352EE3D} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 Instances 20 (* GUID for DSAI 145 *)
+      HWUnitID {6BCCBD49-B144-48D5-B3E4-5B1A306C3847} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 Instances 20 (* GUID for DSAI 146 *)
+      HWUnitID {645E1734-FC0A-48EE-85E7-8A011A2565CC} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 Instances 20 (* GUID for DSAI 151 *)
+      HWUnitID {047C7293-3B72-42B8-90BC-ADA85F1C9FA2} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 Instances 20 (* GUID for DSAI 155 *)
+      (* Separator *)
+      HWUnitID {236abbbd-80bf-4786-94a3-5b614864ad01} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 Instances 20 (* GUID for DSAO 110 *)
+      HWUnitID {8C77A165-5474-44de-A724-5839FB065C3E} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 Instances 20 (* GUID for DSAO 120 *)
+      HWUnitID {5B2FB297-12D2-4ae5-9F9A-E83B288236EF} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 Instances 20 (* GUID for DSAO 120A *)
+      HWUnitID {19B19A22-79D3-47a7-B827-03530BAC3F59} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 Instances 20 (* GUID for DSAO 130 *)
+      HWUnitID {D356665A-B36B-4c21-A2FE-77846CFC3063} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 Instances 20 (* GUID for DSAO 130A *)
+      (* Separator *)
+      HWUnitID {4B82FA6E-B276-465b-B18C-B15778D2D3D5} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 Instances 20 (* GUID for DSAX 110 *)
+      HWUnitID {ACF5C6F0-711A-47d7-9758-9F46489BC92D} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 Instances 20 (* GUID for DSAX 110A *)
+      (* Separator *)
+      HWUnitID {E2F42F38-25E8-4e61-A096-F1395E76A349} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 Instances 20 (* GUID for DSDI 110 *)
+      HWUnitID {660F648E-0B87-4107-99F2-8DFC9B0CF189} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 Instances 20 (* GUID for DSDI 115 *)
+      HWUnitID {7862E5C0-43D0-4f17-94FA-542C2875DF04} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 Instances 20 (* GUID for DSDI 116 *)
+      HWUnitID {338DBD9A-53CD-49f8-A43D-6895E74B0591} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 Instances 20 (* GUID for DSDI 120 *)
+      HWUnitID {8C343DA4-282B-4d6e-8863-BFD00D2106D8} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 Instances 20 (* GUID for DSDI 125 *)
+      HWUnitID {341378CD-A799-4f68-932F-48E0F70F9563} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 Instances 20 (* GUID for DSDI 126 *)
+      HWUnitID {1DDA0024-A739-4135-B5FE-615B8D671158} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 Instances 20 (* GUID for DSDI 131 *)
+      HWUnitID {E5866339-A380-4f85-AA15-E9E67C005899} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 Instances 20 (* GUID for DSDI 141 *)
+      (* Separator *)
+      HWUnitID {68A8E2F8-1CF6-46b0-812F-B0C200DEE8C5} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 Instances 20 (* GUID for DSDO 110 *)
+      HWUnitID {C40C2203-ACA2-4d48-8212-5696736A5A2F} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 Instances 20 (* GUID for DSDO 115 *)
+      HWUnitID {3E792272-3477-4f9a-ABFB-8EF8951FD8E6} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 Instances 20 (* GUID for DSDO 115A*)
+      HWUnitID {0D1A0C35-E450-4274-9DEA-62986758A878} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 Instances 20 (* GUID for DSDO 120 *)
+      HWUnitID {0A93D211-4FB7-4a2b-9B14-3EBC07DFB624} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 Instances 20 (* GUID for DSDO 130 *)
+      HWUnitID {B97EB184-0BD9-4434-8864-8BA1D53C4D81} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 Instances 20 (* GUID for DSDO 131 *)
+      HWUnitID {A08F95AF-F428-4E23-9A9D-65FED977E2D8} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 Instances 20 (* GUID for DSDO 140 *)
+      (* Separator *)
+      HWUnitID {2D7674CA-0898-4762-A5AF-3B5F5AEE7AE1} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 Instances 20 (* GUID for DSDP 010 *)
+      HWUnitID {BD6DDEB6-250F-49dc-A4F5-5DF6F0BBF5E3} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 Instances 20 (* GUID for DSDP 140B *)
+      HWUnitID {665105C6-8410-4f26-8DE7-252BD866D2C7} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 Instances 20 (* GUID for DSDP 160 *)
+      HWUnitID {71846467-54D6-4649-B707-72C929472E6A} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 Instances 20 (* GUID for DSDP 161 *)
+      HWUnitID {51743C75-4144-4801-841A-A4E5ED60F824} Positions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 Instances 20 (* GUID for DSDP 170 *)
+      (* Separator *)
+      HWUnitID {709A4ECE-17FD-49aa-8D07-23D5903DD93A} Positions 0 Instances 1 (* GUID for S100 Diagnostics *)
+   End SubUnitTypes
+
+   (* At least one parameter has to be defined for CIGInterface *)
+   Parameters
+      ParamInfo 
+         Name DummyParameter
+         Description "Dummy parameter"
+         Hidden
+         CompileType HWConfig
+         Datatype INT
+         Default 0
+         ParValIndex 0
+         ParamType Numbered 1
+      End ParamInfo
+   End Parameters
+
+   ParValList
+      ParVal
+         ParValIndex 0
+         INT 0 125 0 125
+      End ParVal
+   End ParValList
+
+   Channels
+      ChannelInfo
+         Number 0
+         ChannelName "UnitStatus"
+         Datatype Status_In
+         Routine 900
+         CopyParameters 0 0 16#50000
+      End ChannelInfo
+   End Channels
+  HWUnitInfoCRC 16#BB9A
+End HWUnitInfo (* S100 Rack *)

@@ -1,0 +1,370 @@
+(****************************************************************************)
+(* FILE            LN0.hwd                                                  *)
+(*                                                                          *)
+(* DESCRIPTION     Hardware definition file for LN0                         *)
+(*                                                                          *)
+(* AUTHOR          Ramachandragowda G                                       *)
+(*                                                                          *)
+(* All rights reserved. Reproduction, modification, use or disclosure       *)
+(* to third parties without express authority, is forbidden.                *)
+(* Copyright ABB Inc. 2006.                                                 *)
+(*                                                                          *)
+(*                                                                          *)
+(* 27-04-2006 Ramachandragowda G            Initial version                 *)
+(* 22-Jun-12 Karthick Raja P                #47800. added 2 channels        *)
+(* 07-Nov-12 Karthick Raja P                #48460                          *)
+(****************************************************************************)
+FileHeader
+   Contents               "LN0"
+   Date                   "2007-04-27"
+   Version                "1.0-0"
+  RequiredSyntaxVersion "3.0"
+End FileHeader
+
+HWUnitInfo  (* LN0 *)
+   HWUnitID {9240E379-9DCC-4809-BFB4-1CB480F787D2} (* GUID for LN0 *)
+   Description "LN0"
+   Information "LN0 for common behavior information"
+   Icons LNType
+   Attributes IoUnit AdapterUnit DigitalOut
+   InstanceNameDisable
+   InterfaceInfo
+     IoSysType    CIGIO
+     CLSID_CB    {53315084-E413-4c55-92E1-C2E1FAF19460} (*  CLSID_CB  = GUID for CI868 PH in Control builder CB *)
+     CLSID_CTRL  {4AB844AC-2BEE-4910-BA08-CA109A5D7E81}  (* CLSID_CTRL = GUID for CI868 PH in Controler *)
+   End InterfaceInfo
+
+   ConnectionInfo
+      ConnectType OwnUnit
+      IOConnect Fail
+      IoConfig  NoFail
+   End ConnectionInfo
+
+   ExternalConfigInfo
+      ShowExternalChannelDescriptionColumn
+   End ExternalConfigInfo
+   Parameters
+      ParamInfo
+         Name IALADDRMODIN
+         Description "IALaddr for ModIn"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype STRING
+         Default "0"15
+         ParamType Numbered 1
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEMODIN
+         Description "DMCD Type for ModIn"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype INT
+         Default 12
+         ParValIndex 2
+         ParamType Numbered 2
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOMODIN
+         Description "Protocol Info for ModIn"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 3
+      End ParamInfo
+      ParamInfo
+         Name IALADDRMOD   (* #47544 - Renamed*)
+         CompatibleStrings "IALADDRMODOUT" End CompatibleStrings (* #53183 - Compatibility change*)
+         Description "IALaddr for Mod"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 4
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEMOD   (* #47544 - Renamed*)
+         CompatibleStrings "DMCDTYPEMODOUT" End CompatibleStrings (* #53183 - Compatibility change*)
+         Description "DMCD Type for Mod"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype INT
+         Default 12
+         ParValIndex 2
+         ParamType Numbered 5
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOMOD   (* #47544 - Renamed*)
+         CompatibleStrings "PROTOCOLINFOMODOUT" End CompatibleStrings (* #53183 - Compatibility change*)
+         Description "Protocol Info for Mod"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 6
+      End ParamInfo
+      ParamInfo
+         Name IALADDRBEH
+         Description "IALaddr for Behaviour"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 7
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEBEH
+         Description "DMCD Type for Behaviour"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype INT
+         Default 12
+         ParValIndex 2
+         ParamType Numbered 8
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOBEH
+         Description "Protocol Info for Behaviour"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 9
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHEALTH
+         Description "IALaddr for Health"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 10
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHEALTH
+         Description "DMCD Type for Health"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype INT
+         Default 12
+         ParValIndex 2
+         ParamType Numbered 11
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHEALTH
+         Description "Protocol Info for Health"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 12
+      End ParamInfo
+     ParamInfo
+         Name NAMEPLATE
+         Description "Name Plate"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype STRING
+         Default ""25
+         ParamType Numbered 14
+      End ParamInfo
+      ParamInfo
+         Name HWDVERSION
+         Description "Version of HWD File"
+         ExternalVisible
+         Datatype STRING
+         Default " 1.0-0 "
+         ParamType Numbered 17
+      End ParamInfo
+      ParamInfo
+         Name LNNAME
+         Description "LN Name"
+         Datatype STRING
+         Default ""100
+         ParamType Numbered 20
+      End ParamInfo
+      ParamInfo
+         Name H_LNNAME
+         Description "Hidden LN Name"
+         ExternalVisible
+         Datatype STRING
+         Default "HIDDENLNNAME"100
+         ParamType Numbered 23
+      End ParamInfo
+      ParamInfo
+         Name H_LNPOSITION
+         Description "Hidden LN Position"
+         ExternalVisible
+         Datatype INT
+         Default 255
+         ParValIndex 2
+         ParamType Numbered 26
+      End ParamInfo         
+   End Parameters
+
+   ParValList
+     ParVal
+        ParValIndex 2
+        UnitText    "addr"
+        INT 0 255 0 255
+     End ParVal
+   End ParValList
+
+   Channels
+    ChannelInfo
+      Number         1
+      ChannelName   "Modin"
+      Hidden  (* #47544 - Modin is unused *)
+      Datatype       Int_In
+      Routine        306
+      CopyParameters 16#30000 0 16#FFFF 0 16#30004 16#0081
+    End ChannelInfo
+    ChannelInfo
+      Number         2
+      ChannelName   "Mod"  (* #47544 - Renamed*)
+      CompatibleStrings "Modout" End CompatibleStrings (* #53183 - Compatibility change*)
+      Datatype       Int_Out
+      Routine        408
+      CopyParameters 16#40008 0 16#4000C 16#0000
+    End ChannelInfo
+    ChannelInfo
+      Number         3
+      ChannelName   "Beh"
+      Datatype       Int_Out
+      Routine        408
+      CopyParameters 16#40010 0 16#40014 16#0000
+    End ChannelInfo
+    ChannelInfo
+      Number         4
+      ChannelName   "Health"
+      Datatype       Int_Out
+      Routine        408
+      CopyParameters 16#40018 0 16#4001C 16#0000
+    End ChannelInfo
+    ChannelInfo
+      Number         5
+      ChannelName   "GOOSE Values Received"
+      CompatibleStrings "Values Received" End CompatibleStrings
+      Datatype       Int_In
+      Routine        308
+      CopyParameters 16#30020 0 16#30024 16#0000
+    End ChannelInfo
+    ChannelInfo
+      Number         6
+      ChannelName   "GOOSE Values Sent"
+      CompatibleStrings "Values Sent" End CompatibleStrings
+      Datatype       Int_In
+      Routine        308
+      CopyParameters 16#30028 0 16#3002C 16#0000
+    End ChannelInfo
+    ChannelInfo
+      Number         7
+      ChannelName   "GOOSE Values Received Per Second"
+      CompatibleStrings "Values Received Per Second" End CompatibleStrings
+      Datatype       Int_In
+      Routine        308
+      CopyParameters 16#30030 0 16#30034 16#0000
+    End ChannelInfo
+    ChannelInfo
+      Number         8
+      ChannelName   "GOOSE Values Sent Per Second"
+      CompatibleStrings "Values Sent Per Second" End CompatibleStrings
+      Datatype       Int_In
+      Routine        308
+      CopyParameters 16#30038 0 16#3003C 16#0000
+    End ChannelInfo
+    ChannelInfo
+      Number         9
+      ChannelName   "CPU Load"
+      Datatype       Int_In
+      Routine        308
+      CopyParameters 16#30040 0 16#30044 16#0000
+    End ChannelInfo
+    ChannelInfo
+      Number         10
+      ChannelName   "Sender Cycles per Second"
+      Datatype       Int_In
+      Routine        308
+      CopyParameters 16#30048 0 16#3004C 16#0000
+    End ChannelInfo
+    ChannelInfo
+      Number         11
+      ChannelName   "MMS Values Received"   (*#48460*)
+      Datatype       Int_In
+      Routine        308
+      CopyParameters 16#30050 0 16#30054 16#0000
+    End ChannelInfo
+    ChannelInfo
+      Number         12
+      ChannelName   "MMS Commands Sent"    (*#47800, #48460*)
+      Datatype       Int_In
+      Routine        308
+      CopyParameters 16#30058 0 16#3005C 16#0000
+    End ChannelInfo
+    ChannelInfo
+      Number         13
+      ChannelName   "MMS Values Received Per Second"   (*#47800*)
+      Datatype       Int_In
+      Routine        308
+      CopyParameters 16#30060 0 16#30064 16#0000
+    End ChannelInfo
+    ChannelInfo
+      Number         14
+      ChannelName   "Report Control Blocks Received Per Second"
+      Datatype       Int_In
+      Routine        308
+      CopyParameters 16#30068 0 16#3006C 16#0000
+    End ChannelInfo
+    ChannelInfo
+      Number         15
+      ChannelName   "Number of IEDs Configured for Reporting"
+      Datatype       Int_In
+      Routine        308
+      CopyParameters 16#30070 0 16#30074 16#0000
+    End ChannelInfo
+    ChannelInfo
+      Number         16
+      ChannelName   "Number of IEDs Connected for Reporting"
+      Datatype       Int_In
+      Routine        308
+      CopyParameters 16#30078 0 16#3007C 16#0000
+    End ChannelInfo
+    ChannelInfo
+      Number         17
+      ChannelName   "Number of Buffered Report Control Blocks Configured"
+      Datatype       Int_In
+      Routine        308
+      CopyParameters 16#30080 0 16#30084 16#0000
+    End ChannelInfo
+    ChannelInfo
+      Number         18
+      ChannelName   "Number of Buffered Report Control Blocks Enabled"
+      Datatype       Int_In
+      Routine        308
+      CopyParameters 16#30088 0 16#3008C 16#0000
+    End ChannelInfo
+    ChannelInfo
+      Number         19
+      ChannelName   "Number of Unbuffered Report Control Blocks Configured"
+      Datatype       Int_In
+      Routine        308
+      CopyParameters 16#30090 0 16#30094 16#0000
+    End ChannelInfo
+    ChannelInfo
+      Number         20
+      ChannelName   "Number of Unbuffered Report Control Blocks Enabled"
+      Datatype       Int_In
+      Routine        308
+      CopyParameters 16#30098 0 16#3009C 16#0000
+    End ChannelInfo
+   End Channels
+
+Configuration
+    ConfigInfo
+      ModuleKey       16#01
+      InAreaSize      160 BYTE
+      OutAreaSize     160 BYTE
+    End ConfigInfo
+  End Configuration
+  HWUnitInfoCRC 16#2BBB
+End HWUnitInfo

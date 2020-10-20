@@ -1,0 +1,628 @@
+<HEAD>
+Index of symbols created Tue 02/14/2012 23:27:13.66 
+</HEAD>
+<SECTIONS=10>
+00010000 0001f3c8 .text
+0001f3c8 0001fa7c .got2
+0001fa7c 0001fe80 .fixup
+0001fe80 0001fe90 .bss
+0001fe90 000241e8 .data
+000241e8 000241e8 .sdata
+000241e8 00044d5c .stab
+00044d5c 0001f3c8 .comment
+0001f3c8 0004515c .sdata2
+0004515c 0004515c .stabstr
+</SECTIONS>
+<SYMBOLS=611>
+00000000 CI856_82xx.elf EXE_HEAD
+00000064 CI856_82xx.elf CCmPtcDevice::CCmPtcDevice(CPhS100PtcMgr *)
+00000134 CI856_82xx.elf CCmPtcDevice::~CCmPtcDevice(void)
+000001c8 CI856_82xx.elf CCmPtcDevice::Init(int, CCmPtcDeviceMgr *, unsigned char, bool)
+00000438 CI856_82xx.elf CCmPtcDevice::ObtainForRead(void)
+00000678 CI856_82xx.elf CCmPtcDevice::ReleaseForRead(void)
+000006a0 CI856_82xx.elf CCmPtcDevice::ObtainForWrite(void)
+000008d4 CI856_82xx.elf CCmPtcDevice::ReleaseForWrite(void)
+00000914 CI856_82xx.elf CCmPtcDevice::Read(unsigned char *, unsigned char *)
+000009bc CI856_82xx.elf CCmPtcDevice::Write(unsigned char *, unsigned char)
+00000a68 CI856_82xx.elf CCmPtcDevice::BsRecover(void)
+00000b38 CI856_82xx.elf CCmPtcDevice::NewDataAvailable(void)
+00000b40 CI856_82xx.elf CCmPtcDevice::AreaSize(void)
+00000b48 CI856_82xx.elf CCmPtcDevice::Status(void)
+00000b50 CI856_82xx.elf CCmPtcDevice::DeviceDescriptor(void)
+00000b5c CI856_82xx.elf CCmPtcDevice::GetTimeStamp(void)
+00000bc8 CI856_82xx.elf Letext
+00000bcc CI856_82xx.elf CCmPtcDeviceMgr::CCmPtcDeviceMgr(CPhS100PtcMgr *)
+00000c40 CI856_82xx.elf CCmPtcDeviceMgr::~CCmPtcDeviceMgr(void)
+00000cec CI856_82xx.elf CCmPtcDeviceMgr::InitAsUser(rCmPtcDeviceArea *, unsigned int *)
+00000e88 CI856_82xx.elf CCmPtcDeviceMgr::CreateAsUser(int, unsigned char, CCmPtcDevice **)
+00000eb4 CI856_82xx.elf CCmPtcDeviceMgr::Create(int, unsigned char, bool, CCmPtcDevice **)
+00001108 CI856_82xx.elf CCmPtcDeviceMgr::Read(CCmPtcDevice *, unsigned char *, unsigned int *)
+000012b4 CI856_82xx.elf CCmPtcDeviceMgr::Write(CCmPtcDevice *, unsigned char *, unsigned char)
+00001440 CI856_82xx.elf CCmPtcDeviceMgr::PrintObtainDiag(void)
+000014d4 CI856_82xx.elf CCollection<CCmPtcDevice>::Key(int, int *)
+00001508 CI856_82xx.elf CCollection<CCmPtcDevice>::Remove(int)
+00001698 CI856_82xx.elf CCollection<CCmPtcDevice>::Delete(int)
+000016ec CI856_82xx.elf CCollection<CCmPtcDevice>::DeleteAll(void)
+00001744 CI856_82xx.elf CCollection<CCmPtcDevice>::~CCollection(void)
+00001818 CI856_82xx.elf CCollection<CCmPtcDevice>::CCollection(CPhS100PtcMgr *, int)
+00001900 CI856_82xx.elf CCollection<CCmPtcDevice>::Get(int)
+00001970 CI856_82xx.elf CCollection<CCmPtcDevice>::Insert(int, CCmPtcDevice *)
+00001b38 CI856_82xx.elf CCollection<CCmPtcDevice>::Create(int, CCmPtcDevice **)
+00001bec CI856_82xx.elf CCollection<CCmPtcDevice>::GetByIndex(int)
+00001c14 CI856_82xx.elf CCmPtcDeviceMgr::Devices(void)
+00001c1c CI856_82xx.elf CCmPtcDeviceMgr::CmBaseAddr(void)
+00001c24 CI856_82xx.elf Letext
+00001c28 CI856_82xx.elf CPhS100::CPhS100(void)
+00001d18 CI856_82xx.elf CPhS100::~CPhS100(void)
+00001dd0 CI856_82xx.elf CPhS100::releaseResources(void)
+00001f08 CI856_82xx.elf CPhS100::allocateResources(void)
+00001fe4 CI856_82xx.elf CPhS100::GetProductInfo(unsigned char *, unsigned char *, unsigned char *, unsigned long)
+0000207c CI856_82xx.elf CPhS100::SetCommonCallbackInterface(ICommonCallback *)
+000022e8 CI856_82xx.elf CPhS100::SendCI856Msg(unsigned long, unsigned long, unsigned long, CCIMsg *, eErrorCodes *)
+000024ac CI856_82xx.elf CPhS100::ReceiveCI856Msg(unsigned long, unsigned long, unsigned long, unsigned long, CCIMsg *, bool *, eErrorCodes *)
+00002710 CI856_82xx.elf CPhS100::operator new(unsigned int, IHeapCallback *)
+000027c4 CI856_82xx.elf CPhS100::heap_delete(void)
+00002830 CI856_82xx.elf CPhS100::QueryInterface(_GUID const &, void **)
+0000297c CI856_82xx.elf CPhS100::AddRef(void)
+00002994 CI856_82xx.elf CPhS100::Release(void)
+00002a10 CI856_82xx.elf CPhS100::ConnectReq(unsigned long, unsigned long *, int *)
+00002a10 CI856_82xx.elf Letext
+00002a34 CI856_82xx.elf CPhS100::DisconnectReq(unsigned long, unsigned long, int *)
+00002a58 CI856_82xx.elf CPhS100::ReadVarReq(unsigned long, int *)
+00002a68 CI856_82xx.elf CPhS100::WriteVarReq(unsigned long, int *)
+00002a78 CI856_82xx.elf CPhS100::RegisterVarReq(unsigned long, int *)
+00002aa0 CI856_82xx.elf CPhS100::ReadRawReq(unsigned long, int *)
+00002b14 CI856_82xx.elf CPhS100::WriteRawReq(unsigned long, int *)
+00002b88 CI856_82xx.elf CPhS100::AbortRawReq(unsigned long, int *)
+00002bf8 CI856_82xx.elf CPhS100::AbortVarReq(unsigned long, int *)
+00002c20 CI856_82xx.elf CPhS100::GetExtendedStatusSize(unsigned long, int *, int *)
+00002c94 CI856_82xx.elf CPhS100::GetExtendedStatus(unsigned long, int, teIEC1131Type *, tGCValue *, int *)
+00002d08 CI856_82xx.elf CPhS100::SetStatus(unsigned long, int, int *)
+00002d78 CI856_82xx.elf CPhS100::BufferTakeForReceive(unsigned long, int *)
+00002d9c CI856_82xx.elf CPhS100::BufferGiveForReceive(unsigned long, int, int *)
+00002dc0 CI856_82xx.elf CPhS100::BufferTakeForSend(unsigned long, unsigned int, int *)
+00002de4 CI856_82xx.elf CPhS100::BufferGiveForSend(unsigned long, unsigned int, int, int *)
+00002e0c CI856_82xx.elf CPhS100::ReadRes(unsigned long, int, int *)
+00002e80 CI856_82xx.elf CPhS100::WriteRes(unsigned long, int, int *)
+00002ef0 CI856_82xx.elf Letext
+00002ef4 CI856_82xx.elf CPhS100::PerformFailover(trHWFAddress, teHWFErrorCode *)
+00002f44 CI856_82xx.elf CPhS100::PerformSwitchover(trHWFAddress, teHWFErrorCode *)
+00002f94 CI856_82xx.elf CPhS100::StartUsingDevice(trHWFAddress, teHWFErrorCode *)
+00002fe4 CI856_82xx.elf CPhS100::PrepareForTermination(teHWFErrorCode *)
+000031c0 CI856_82xx.elf CPhS100::RemoveHWConfiguration(trHWFAddress, teHWFErrorCode *)
+00003368 CI856_82xx.elf CPhS100::RemoveIoConnection(unsigned long, teHWFErrorCode *)
+0000342c CI856_82xx.elf CPhS100::PhResponsibilityForBackupDevice(trHWFAddress, teHWFErrorCode *)
+0000347c CI856_82xx.elf CPhS100::PhResponsibilityForHotInsert(trHWFAddress, teHWFErrorCode *)
+0000355c CI856_82xx.elf CPhS100::PhResponsibilityForRestart(trHWFAddress, teHWFErrorCode *)
+0000363c CI856_82xx.elf CPhS100::PhResponsibility(trHWFAddress, teHWFErrorCode *)
+00004160 CI856_82xx.elf CPhS100::StartUsingIoConnection(trHWFAddress, unsigned long, teHWFErrorCode *)
+00004224 CI856_82xx.elf CPhS100::ConfigureCI856(trHWFAddress const *, teHWFErrorCode *)
+00004f6c CI856_82xx.elf CPhS100::CheckFWVersion(bool *, bool *)
+00005420 CI856_82xx.elf CPhS100::ConfigureIoRack(trHWFAddress const *, teHWFErrorCode *)
+00005814 CI856_82xx.elf CPhS100::ConfigureIoUnit(trHWFAddress const *, unsigned int *, teHWFErrorCode *)
+000060b8 CI856_82xx.elf CPhS100::WaitForConfigCompletion(trHWFAddress *, bool *, unsigned long, teHWFErrorCode *)
+00006e14 CI856_82xx.elf Letext
+00006e14 CI856_82xx.elf spawnSOEThread(int, int, int, int)
+00006e38 CI856_82xx.elf CPhS100::SOEThread(void)
+000075c0 CI856_82xx.elf CPhS100::GenerateExternalEvent(CCIMsg *, eErrorCodes *)
+00007908 CI856_82xx.elf Letext
+0000790c CI856_82xx.elf CPhS100PtcBase::CPhS100PtcBase(CPhS100PtcMgr *)
+00007970 CI856_82xx.elf CPhS100PtcBase::~CPhS100PtcBase(void)
+000079c4 CI856_82xx.elf CPhS100PtcBase::operator delete(void *)
+00007a2c CI856_82xx.elf CPhS100PtcBase::operator new(unsigned int)
+00007b10 CI856_82xx.elf CPhS100PtcBase::GetMemory(unsigned int)
+00007bbc CI856_82xx.elf CPhS100PtcBase::ReturnMemory(void *, unsigned int)
+00007c40 CI856_82xx.elf CPhS100PtcBase::Init(CPhS100PtcMgr *, unsigned int, ICIGDriverCallback *)
+00007c98 CI856_82xx.elf CPhS100PtcBase::SetCallbackPointers(ICommonCallback *)
+00007e0c CI856_82xx.elf CPhS100PtcBase::Instance(int)
+00007e6c CI856_82xx.elf CPhS100PtcBase::PrintMemDiagnostics(void)
+00007f2c CI856_82xx.elf Letext
+00007f30 CI856_82xx.elf CPhS100PtcDiDevice::CPhS100PtcDiDevice(CPhS100PtcMgr *)
+00007fec CI856_82xx.elf CPhS100PtcDiDevice::Init(CPhS100PtcMgr *, unsigned long)
+00008108 CI856_82xx.elf CPhS100PtcDiDevice::GetData(void)
+00008400 G _SDA2_BASE_ CI856_82xx.elf 
+00008574 CI856_82xx.elf CPhS100PtcDiDevice::Connect(void)
+000086b8 CI856_82xx.elf CPhS100PtcDiDevice::Disconnect(void)
+00008800 CI856_82xx.elf CPhS100PtcDiDevice::PrintStatus(int)
+000089d4 CI856_82xx.elf CPhS100PtcDiDevice::SendData(unsigned long)
+00008bc4 CI856_82xx.elf CPhS100PtcDiDevice::IsConnectDataCompatible(unsigned long)
+00008c48 CI856_82xx.elf CPhS100PtcDiDevice::IsAccessDataCompatible(unsigned long)
+00008d78 CI856_82xx.elf CPhS100PtcDiDevice::GetCoincMode(unsigned long, int *)
+00008e48 CI856_82xx.elf CPhS100PtcDiDevice::GetCoincValue(unsigned long, int *)
+00008ef0 CI856_82xx.elf CPhS100PtcDiDevice::IsValidSignalId(char *, unsigned int *, unsigned int *, unsigned int *, unsigned int *)
+00009024 CI856_82xx.elf CCollection<CCmPtcDevice>::Get(int)
+00009094 CI856_82xx.elf CCollection<CCmPtcDevice>::Remove(int)
+00009224 CI856_82xx.elf CCollection<CCmPtcDevice>::Delete(int)
+0000927c CI856_82xx.elf CPhS100PtcDiDevice::~CPhS100PtcDiDevice(void)
+000092e8 CI856_82xx.elf Letext
+000092ec CI856_82xx.elf CPhS100PtcDoDevice::CPhS100PtcDoDevice(CPhS100PtcMgr *)
+000093a8 CI856_82xx.elf CPhS100PtcDoDevice::Init(CPhS100PtcMgr *, unsigned long)
+00009480 CI856_82xx.elf CPhS100PtcDoDevice::GetData(void)
+000096fc CI856_82xx.elf CPhS100PtcDoDevice::Connect(void)
+0000982c CI856_82xx.elf CPhS100PtcDoDevice::Disconnect(void)
+00009938 CI856_82xx.elf CPhS100PtcDoDevice::PrintStatus(ptcOutDevStatus *)
+00009b64 CI856_82xx.elf CPhS100PtcDoDevice::SendData(unsigned long)
+0000a2fc CI856_82xx.elf CPhS100PtcDoDevice::IsConnectDataCompatible(unsigned long)
+0000a380 CI856_82xx.elf CPhS100PtcDoDevice::IsAccessDataCompatible(unsigned long)
+0000a4b0 CI856_82xx.elf CPhS100PtcDoDevice::IsValidSignalId(char *, unsigned int *, unsigned int *, unsigned int *, unsigned int *)
+0000a5e4 CI856_82xx.elf CCollection<CCmPtcDevice>::Get(int)
+0000a654 CI856_82xx.elf CCollection<CCmPtcDevice>::Remove(int)
+0000a7e4 CI856_82xx.elf CCollection<CCmPtcDevice>::Delete(int)
+0000a83c CI856_82xx.elf CPhS100PtcDoDevice::~CPhS100PtcDoDevice(void)
+0000a8a8 CI856_82xx.elf Letext
+0000a8ac CI856_82xx.elf CPhS100PtcMgr::CPhS100PtcMgr(CPhS100 *)
+0000a940 CI856_82xx.elf CPhS100PtcMgr::~CPhS100PtcMgr(void)
+0000aa5c CI856_82xx.elf CPhS100PtcMgr::Init(void)
+0000abd8 CI856_82xx.elf CPhS100PtcMgr::Open(void)
+0000aca0 CI856_82xx.elf CPhS100PtcMgr::Close(void)
+0000adb0 CI856_82xx.elf CPhS100PtcMgr::PrepareForTermination(void)
+0000adc0 CI856_82xx.elf CPhS100PtcMgr::ConnectReq(unsigned long, unsigned long *, int *)
+0000b3c8 CI856_82xx.elf CPhS100PtcMgr::DisconnectReq(unsigned long, unsigned long, int *)
+0000b68c CI856_82xx.elf CPhS100PtcMgr::RegisterVarReq(unsigned long, int *)
+0000b704 CI856_82xx.elf CPhS100PtcMgr::AbortVarReq(unsigned long, int *)
+0000b77c CI856_82xx.elf CPhS100PtcMgr::BufferTakeForReceive(unsigned long, int *)
+0000ba88 CI856_82xx.elf CPhS100PtcMgr::BufferGiveForReceive(unsigned long, int, int *)
+0000ba9c CI856_82xx.elf CPhS100PtcMgr::BufferTakeForSend(unsigned long, unsigned int, int *)
+0000bd6c CI856_82xx.elf CPhS100PtcMgr::BufferGiveForSend(unsigned long, unsigned int, int, int *)
+0000bff4 CI856_82xx.elf CPhS100PtcMgr::GetHwTimer(unsigned long *, int *)
+0000c200 CI856_82xx.elf CPhS100PtcMgr::GetCmPtcDeviceArea(rCmPtcDeviceArea **, int *)
+0000c3d4 CI856_82xx.elf CPhS100PtcMgr::SendCI856Msg(unsigned long, unsigned long, unsigned long, CCIMsg *, eErrorCodes *)
+0000c3fc CI856_82xx.elf CPhS100PtcMgr::ThreadWork(void)
+0000c574 CI856_82xx.elf CPhS100PtcMgr::PrintDiagnostic(void)
+0000c920 CI856_82xx.elf CPhS100PtcMgr::ClearDiagnostic(void)
+0000ca3c CI856_82xx.elf CPhS100PtcMgr::Reconnect(void)
+0000cb64 CI856_82xx.elf CCollection<CPhS100PtcDiDevice>::Key(int, int *)
+0000cb98 CI856_82xx.elf CCollection<CPhS100PtcDiDevice>::Remove(int)
+0000cd28 CI856_82xx.elf CCollection<CPhS100PtcDiDevice>::Delete(int)
+0000cd7c CI856_82xx.elf CCollection<CPhS100PtcDiDevice>::DeleteAll(void)
+0000cdd4 CI856_82xx.elf CCollection<CPhS100PtcDiDevice>::~CCollection(void)
+0000cea4 CI856_82xx.elf CCollection<CPhS100PtcDoDevice>::Key(int, int *)
+0000ced8 CI856_82xx.elf CCollection<CPhS100PtcDoDevice>::Remove(int)
+0000d068 CI856_82xx.elf CCollection<CPhS100PtcDoDevice>::Delete(int)
+0000d0bc CI856_82xx.elf CCollection<CPhS100PtcDoDevice>::DeleteAll(void)
+0000d114 CI856_82xx.elf CCollection<CPhS100PtcDoDevice>::~CCollection(void)
+0000d1e8 CI856_82xx.elf CCollection<CPhS100PtcDiDevice>::CCollection(CPhS100PtcMgr *, int)
+0000d2d4 CI856_82xx.elf CCollection<CPhS100PtcDoDevice>::CCollection(CPhS100PtcMgr *, int)
+0000d3bc CI856_82xx.elf CCollection<CPhS100PtcDiDevice>::GetByIndex(int)
+0000d3e4 CI856_82xx.elf CCollection<CPhS100PtcDoDevice>::GetByIndex(int)
+0000d410 CI856_82xx.elf CCollection<CPhS100PtcDoDevice>::Insert(int, CPhS100PtcDoDevice *)
+0000d5d8 CI856_82xx.elf CCollection<CPhS100PtcDoDevice>::Create(int, CPhS100PtcDoDevice **)
+0000d690 CI856_82xx.elf CCollection<CPhS100PtcDiDevice>::Insert(int, CPhS100PtcDiDevice *)
+0000d858 CI856_82xx.elf CCollection<CPhS100PtcDiDevice>::Create(int, CPhS100PtcDiDevice **)
+0000d90c CI856_82xx.elf CCollection<CPhS100PtcDoDevice>::Get(int)
+0000d978 CI856_82xx.elf CCollection<CPhS100PtcDiDevice>::Get(int)
+0000d9e8 CI856_82xx.elf CPhS100PtcDiDevice::~CPhS100PtcDiDevice(void)
+0000da58 CI856_82xx.elf CPhS100PtcDoDevice::~CPhS100PtcDoDevice(void)
+0000dac4 CI856_82xx.elf CPhS100PtcMgr::PrepareForClosing(void)
+0000dad0 CI856_82xx.elf CPhS100PtcMgr::ReadyForDeletion(void)
+0000dae0 CI856_82xx.elf CPhS100PtcMgr::GetPtcDebug(void)
+0000dae8 CI856_82xx.elf CPhS100PtcMgr::GetDiagStartTime(void)
+0000daf0 CI856_82xx.elf CPhS100PtcMgr::GetCmPtcDeviceMgr(void)
+0000daf8 CI856_82xx.elf CPhS100PtcMgr::ThreadStub(void *)
+0000db18 CI856_82xx.elf Letext
+0000db1c CI856_82xx.elf CPhS100::KickWatchdog(unsigned short *, teHWFErrorCode *)
+0000df08 CI856_82xx.elf CPhS100::GetStatus(trHWFAddress, teHWFUnitKind, unsigned long *, unsigned long *, teHWFErrorCode *)
+0000e1a0 CI856_82xx.elf CPhS100::DoRedundancySwitchOver(trHWFAddress, teHWFErrorCode *)
+0000e210 CI856_82xx.elf Letext
+0000e214 CI856_82xx.elf ObjectFactory
+0000e358 CI856_82xx.elf Letext
+0000e35c CI856_82xx.elf __pure_virtual
+0000e3c4 CI856_82xx.elf __builtin_delete
+0000e428 CI856_82xx.elf Letext
+0000e428 CI856_82xx.elf Letext
+0000e428 CI856_82xx.elf Letext
+0000e42c CI856_82xx.elf CPhCommon_Base::CPhCommon_Base(void)
+0000e498 CI856_82xx.elf CPhCommon_Base::~CPhCommon_Base(void)
+0000e510 CI856_82xx.elf CPhCommon_Base::GetProductInfo(unsigned char *, unsigned char *, unsigned char *, unsigned long)
+0000e54c CI856_82xx.elf CPhCommon_Base::SetCommonCallbackInterface(ICommonCallback *)
+0000e57c CI856_82xx.elf CPhConfig_Base1::PrepareForTermination(teHWFErrorCode *)
+0000e5ac CI856_82xx.elf CPhConfig_Base1::RemoveHWConfiguration(trHWFAddress, teHWFErrorCode *)
+0000e5e0 CI856_82xx.elf CPhConfig_Base1::RemoveIoConnection(unsigned long, teHWFErrorCode *)
+0000e614 CI856_82xx.elf CPhConfig_Base1::PhResponsibilityForRestart(trHWFAddress, teHWFErrorCode *)
+0000e648 CI856_82xx.elf CPhConfig_Base1::PhResponsibility(trHWFAddress, teHWFErrorCode *)
+0000e67c CI856_82xx.elf CPhConfig_Base1::StartUsingIoConnection(trHWFAddress, unsigned long, teHWFErrorCode *)
+0000e6b4 CI856_82xx.elf CPhConfig_Base1::PhResponsibilityForBackupDevice(trHWFAddress, teHWFErrorCode *)
+0000e6e8 CI856_82xx.elf CPhConfig_Base1::PhResponsibilityForHotInsert(trHWFAddress, teHWFErrorCode *)
+0000e71c CI856_82xx.elf CPhConfig_Base1::PerformSwitchover(trHWFAddress, teHWFErrorCode *)
+0000e750 CI856_82xx.elf CPhConfig_Base1::StartUsingDevice(trHWFAddress, teHWFErrorCode *)
+0000e784 CI856_82xx.elf CPhConfig_Base1::PerformFailover(trHWFAddress, teHWFErrorCode *)
+0000e7b8 CI856_82xx.elf CPhClient_Base::ConnectReq(unsigned long, unsigned long *, int *)
+0000e7f0 CI856_82xx.elf CPhClient_Base::DisconnectReq(unsigned long, unsigned long, int *)
+0000e828 CI856_82xx.elf CPhClient_Base::ReadVarReq(unsigned long, int *)
+0000e85c CI856_82xx.elf CPhClient_Base::WriteVarReq(unsigned long, int *)
+0000e890 CI856_82xx.elf CPhClient_Base::ReadRawReq(unsigned long, int *)
+0000e8c4 CI856_82xx.elf CPhClient_Base::WriteRawReq(unsigned long, int *)
+0000e8f8 CI856_82xx.elf CPhClient_Base::AbortRawReq(unsigned long, int *)
+0000e92c CI856_82xx.elf CPhClient_Base::AbortVarReq(unsigned long, int *)
+0000e960 CI856_82xx.elf CPhClient_Base::GetExtendedStatusSize(unsigned long, int *, int *)
+0000e998 CI856_82xx.elf CPhClient_Base::GetExtendedStatus(unsigned long, int, teIEC1131Type *, tGCValue *, int *)
+0000e9d8 CI856_82xx.elf CPhClient_Base::SetStatus(unsigned long, int, int *)
+0000ea10 CI856_82xx.elf CPhClient_Base::ReadRes(unsigned long, int, int *)
+0000ea48 CI856_82xx.elf CPhClient_Base::WriteRes(unsigned long, int, int *)
+0000ea80 CI856_82xx.elf CPhClient_Base1::ConnectReq(unsigned long, unsigned long *, int *)
+0000eab8 CI856_82xx.elf CPhClient_Base1::DisconnectReq(unsigned long, unsigned long, int *)
+0000eaf0 CI856_82xx.elf CPhClient_Base1::ReadVarReq(unsigned long, int *)
+0000eb24 CI856_82xx.elf CPhClient_Base1::WriteVarReq(unsigned long, int *)
+0000eb58 CI856_82xx.elf CPhClient_Base1::RegisterVarReq(unsigned long, int *)
+0000eb8c CI856_82xx.elf CPhClient_Base1::ReadRawReq(unsigned long, int *)
+0000ebc0 CI856_82xx.elf CPhClient_Base1::WriteRawReq(unsigned long, int *)
+0000ebf4 CI856_82xx.elf CPhClient_Base1::AbortRawReq(unsigned long, int *)
+0000ec28 CI856_82xx.elf CPhClient_Base1::AbortVarReq(unsigned long, int *)
+0000ec5c CI856_82xx.elf CPhClient_Base1::TimeoutAbortVarReq(unsigned long, int *)
+0000ecec CI856_82xx.elf CPhClient_Base1::GetExtendedStatusSize(unsigned long, int *, int *)
+0000ed24 CI856_82xx.elf CPhClient_Base1::GetExtendedStatus(unsigned long, int, teIEC1131Type *, tGCValue *, int *)
+0000ed64 CI856_82xx.elf CPhClient_Base1::BufferTakeForReceive(unsigned long, int *)
+0000ed98 CI856_82xx.elf CPhClient_Base1::BufferGiveForReceive(unsigned long, int, int *)
+0000edd0 CI856_82xx.elf CPhClient_Base1::BufferTakeForSend(unsigned long, unsigned int, int *)
+0000ee08 CI856_82xx.elf CPhClient_Base1::BufferGiveForSend(unsigned long, unsigned int, int, int *)
+0000ee44 CI856_82xx.elf CPhClient_Base1::SetStatus(unsigned long, int, int *)
+0000ee7c CI856_82xx.elf CPhClient_Base1::ReadRes(unsigned long, int, int *)
+0000eeb4 CI856_82xx.elf CPhClient_Base1::WriteRes(unsigned long, int, int *)
+0000eeec CI856_82xx.elf CPhStatus_Base1::KickWatchdog(unsigned short *, teHWFErrorCode *)
+0000ef20 CI856_82xx.elf CPhStatus_Base1::GetStatus(trHWFAddress, teHWFUnitKind, unsigned long *, unsigned long *, teHWFErrorCode *)
+0000ef60 CI856_82xx.elf CPhIOAccess_Base::GetCopyRoutineReference(unsigned int, void (**)(short, void *, void *), IOAccessErrorCode *)
+0000ef98 CI856_82xx.elf CPhIOAccess_Base::ObtainDPM(eAreaType, trHWFAddress, IOAccessErrorCode *)
+0000efd0 CI856_82xx.elf CPhIOAccess_Base::ReleaseDPM(eAreaType, trHWFAddress, IOAccessErrorCode *)
+0000f008 CI856_82xx.elf CPhDiagnostics_Base::PhDiagnosticsTableNew(teDiagErrorCode *)
+0000f038 CI856_82xx.elf CPhDiagnostics_Base::PhDiagnosticsTableCleared(teDiagErrorCode *)
+0000f068 CI856_82xx.elf CPhOLU_Base::PrepareForFirmwareDownload(trHWFAddress const *, unsigned long, eOLUStatus *)
+0000f0a0 CI856_82xx.elf CPhOLU_Base::PrepareForApplicationStop(trHWFAddress const *, eOLUStatus *)
+0000f0d4 CI856_82xx.elf CPhOLU_Base::ResumeOperation(trHWFAddress const *, eOLUStatus *)
+0000f108 CI856_82xx.elf CPhOLU_Base::PhResponsibilityForOLU(trHWFAddress const *, eOLUStatus *)
+0000f13c CI856_82xx.elf CPhOLU_Base::PrepareForLeavingOLU(trHWFAddress const *, eOLUStatus *)
+0000f170 CI856_82xx.elf CPhOLU_Base::PrepareForAppAndConfigDownload(trHWFAddress const *, eOLUStatus *)
+0000f1a8 CI856_82xx.elf IPhCommon::IPhCommon(void)
+0000f214 CI856_82xx.elf IUnknown::IUnknown(void)
+0000f26c CI856_82xx.elf CRTFuncTabBegin
+0000f26c CI856_82xx.elf Letext
+0000f26c CI856_82xx.elf scprocs
+0000f278 CI856_82xx.elf printf
+0000f27c CI856_82xx.elf sprintf
+0000f280 CI856_82xx.elf sscanf
+0000f284 CI856_82xx.elf memcpy
+0000f288 CI856_82xx.elf memset
+0000f28c CI856_82xx.elf strcat
+0000f290 CI856_82xx.elf strcmp
+0000f294 CI856_82xx.elf strlen
+0000f298 CI856_82xx.elf strncmp
+0000f29c CI856_82xx.elf strncpy
+0000f2a0 CI856_82xx.elf memchr
+0000f2a4 CI856_82xx.elf memcmp
+0000f2a8 CI856_82xx.elf memmove
+0000f2ac CI856_82xx.elf strchr
+0000f2b0 CI856_82xx.elf strcoll
+0000f2b4 CI856_82xx.elf strcpy
+0000f2b8 CI856_82xx.elf strcspn
+0000f2bc CI856_82xx.elf strncat
+0000f2c0 CI856_82xx.elf strpbrk
+0000f2c4 CI856_82xx.elf strrchr
+0000f2c8 CI856_82xx.elf strspn
+0000f2cc CI856_82xx.elf strstr
+0000f2d0 CI856_82xx.elf strtok
+0000f2d4 CI856_82xx.elf strxfrm
+0000f2d8 CI856_82xx.elf strerror
+0000f2dc CI856_82xx.elf pow
+0000f2e0 CI856_82xx.elf acos
+0000f2e4 CI856_82xx.elf asin
+0000f2e8 CI856_82xx.elf atan
+0000f2ec CI856_82xx.elf atan2
+0000f2f0 CI856_82xx.elf ceil
+0000f2f4 CI856_82xx.elf cos
+0000f2f8 CI856_82xx.elf cosh
+0000f2fc CI856_82xx.elf exp
+0000f300 CI856_82xx.elf fabs
+0000f304 CI856_82xx.elf floor
+0000f308 CI856_82xx.elf fmod
+0000f30c CI856_82xx.elf frexp
+0000f310 CI856_82xx.elf ldexp
+0000f314 CI856_82xx.elf log
+0000f318 CI856_82xx.elf log10
+0000f31c CI856_82xx.elf modf
+0000f320 CI856_82xx.elf sin
+0000f324 CI856_82xx.elf sinh
+0000f328 CI856_82xx.elf sqrt
+0000f32c CI856_82xx.elf tan
+0000f330 CI856_82xx.elf tanh
+0000f334 CI856_82xx.elf div_r
+0000f338 CI856_82xx.elf labs
+0000f33c CI856_82xx.elf strtol
+0000f340 CI856_82xx.elf free
+0000f344 CI856_82xx.elf abort
+0000f348 CI856_82xx.elf abs
+0000f34c CI856_82xx.elf atof
+0000f350 CI856_82xx.elf atoi
+0000f354 CI856_82xx.elf atol
+0000f358 CI856_82xx.elf bsearch
+0000f35c CI856_82xx.elf ldiv_r
+0000f360 CI856_82xx.elf qsort
+0000f364 CI856_82xx.elf rand
+0000f368 CI856_82xx.elf srand
+0000f36c CI856_82xx.elf strtod
+0000f370 CI856_82xx.elf strtoul
+0000f374 CI856_82xx.elf malloc
+0000f378 CI856_82xx.elf __assert
+0000f37c CI856_82xx.elf time
+0000f380 CI856_82xx.elf asctime
+0000f384 CI856_82xx.elf gmtime
+0000f388 CI856_82xx.elf clock
+0000f38c CI856_82xx.elf ctime
+0000f390 CI856_82xx.elf difftime
+0000f394 CI856_82xx.elf localtime
+0000f398 CI856_82xx.elf mktime
+0000f39c CI856_82xx.elf strftime
+0000f3a0 CI856_82xx.elf eventcollSem
+0000f3a4 CI856_82xx.elf intLock
+0000f3a8 CI856_82xx.elf intUnlock
+0000f3ac CI856_82xx.elf __builtin_vec_new
+0000f3b0 CI856_82xx.elf __builtin_vec_delete
+0000f3b4 CI856_82xx.elf fprintf
+0000f3b8 CI856_82xx.elf __stdout
+0000f3bc CI856_82xx.elf __stderr
+0000f3c0 CI856_82xx.elf setjmp
+0000f3c4 CI856_82xx.elf longjmp
+0000f3c8 CI856_82xx.elf CRTFuncTabEnd
+0000f3c8 CI856_82xx.elf ecprocs
+0000f3c8 CI856_82xx.elf etext
+0000f3c8 CI856_82xx.elf sgot2
+0000fa7c CI856_82xx.elf egot2
+0000fa7c CI856_82xx.elf sfixup
+0000fe80 CI856_82xx.elf efixup
+0000fe80 CI856_82xx.elf useEXEHEAD
+0000fe90 CI856_82xx.elf CCmPtcDevice virtual table
+0000ff00 CI856_82xx.elf CCollection<CCmPtcDevice> virtual table
+0000ff18 CI856_82xx.elf CCmPtcDeviceMgr virtual table
+0000ff3c CI856_82xx.elf cSWModbusSrcNameSuff
+0000ff4c CI856_82xx.elf cSWInsumSrcNameSuff
+0000ff5c CI856_82xx.elf cSWProfibusSrcNameSuff
+0000ff6c CI856_82xx.elf cSWMB300SrcNameSuff
+0000ff78 CI856_82xx.elf cSWS100SrcNameSuff
+0000ff84 CI856_82xx.elf CComCoClass<CPhS100, &CLSID_CPhS100>::m_HeapTag
+000100c8 CI856_82xx.elf CPhS100::CPhClient_Base1 virtual table
+00010188 CI856_82xx.elf CPhS100::CPhStatus_Base1 virtual table
+000101c0 CI856_82xx.elf CPhS100::CPhConfig_Base1 virtual table
+00010240 CI856_82xx.elf CPhS100 virtual table
+00010280 CI856_82xx.elf IPhClient1 virtual table
+00010340 CI856_82xx.elf IPhStatus1 virtual table
+00010378 CI856_82xx.elf IPhConfig1 virtual table
+000103f8 CI856_82xx.elf IUnknown virtual table
+00010420 CI856_82xx.elf CompanyName
+00010424 CI856_82xx.elf ProductName
+00010440 CI856_82xx.elf ProductVersion
+00010464 CI856_82xx.elf cSWModbusSrcNameSuff
+00010474 CI856_82xx.elf cSWInsumSrcNameSuff
+00010484 CI856_82xx.elf cSWProfibusSrcNameSuff
+00010494 CI856_82xx.elf cSWMB300SrcNameSuff
+000104a0 CI856_82xx.elf cSWS100SrcNameSuff
+00010578 CI856_82xx.elf cSWModbusSrcNameSuff
+00010588 CI856_82xx.elf cSWInsumSrcNameSuff
+00010598 CI856_82xx.elf cSWProfibusSrcNameSuff
+000105a8 CI856_82xx.elf cSWMB300SrcNameSuff
+000105b4 CI856_82xx.elf cSWS100SrcNameSuff
+000105c0 CI856_82xx.elf restart
+00012164 CI856_82xx.elf S100FWCompatibleVersion
+0001216c CI856_82xx.elf S100FWName
+00012174 CI856_82xx.elf S100DriverCompatibleVersion
+00012178 CI856_82xx.elf S100DriverName
+00012190 CI856_82xx.elf cSWModbusSrcNameSuff
+000121a0 CI856_82xx.elf cSWInsumSrcNameSuff
+000121b0 CI856_82xx.elf cSWProfibusSrcNameSuff
+000121c0 CI856_82xx.elf cSWMB300SrcNameSuff
+000121cc CI856_82xx.elf cSWS100SrcNameSuff
+000124b8 CI856_82xx.elf g_TotalObjectMemSize
+000124bc CI856_82xx.elf g_TotalMemSize
+000124c0 CI856_82xx.elf g_NrOfObjects
+000124c4 CI856_82xx.elf g_NrOfMemAreas
+000124c8 CI856_82xx.elf g_pRootObject
+000124cc CI856_82xx.elf g_ObjectMemSize
+000124d0 CI856_82xx.elf CPhS100PtcBase::g_pHeapCallback
+000124d4 CI856_82xx.elf CPhS100PtcBase::g_pVOSCallback
+000124d8 CI856_82xx.elf CPhS100PtcBase::g_pSysUtilCallback
+000124dc CI856_82xx.elf CPhS100PtcBase::g_pSysClockCallback
+000124e0 CI856_82xx.elf CPhS100PtcBase::g_pGenClientCallback
+000124e4 CI856_82xx.elf CPhS100PtcBase::g_pIVOSExceptionCallback
+000124e8 CI856_82xx.elf CPhS100PtcBase::g_pICriticalRegionCallback
+000124ec CI856_82xx.elf CPhS100PtcBase::g_pInstance
+0001251c CI856_82xx.elf CPhS100PtcBase::m_TagCPhS100Ptc
+000125d0 CI856_82xx.elf CPhS100PtcBase virtual table
+000125fc CI856_82xx.elf cSWModbusSrcNameSuff
+0001260c CI856_82xx.elf cSWInsumSrcNameSuff
+0001261c CI856_82xx.elf cSWProfibusSrcNameSuff
+0001262c CI856_82xx.elf cSWMB300SrcNameSuff
+00012638 CI856_82xx.elf cSWS100SrcNameSuff
+00012b30 CI856_82xx.elf CPhS100PtcDiDevice virtual table
+00012b5c CI856_82xx.elf cSWModbusSrcNameSuff
+00012b6c CI856_82xx.elf cSWInsumSrcNameSuff
+00012b7c CI856_82xx.elf cSWProfibusSrcNameSuff
+00012b8c CI856_82xx.elf cSWMB300SrcNameSuff
+00012b98 CI856_82xx.elf cSWS100SrcNameSuff
+000130d8 CI856_82xx.elf CPhS100PtcDoDevice virtual table
+000130fc CI856_82xx.elf cSWModbusSrcNameSuff
+0001310c CI856_82xx.elf cSWInsumSrcNameSuff
+0001311c CI856_82xx.elf cSWProfibusSrcNameSuff
+0001312c CI856_82xx.elf cSWMB300SrcNameSuff
+00013138 CI856_82xx.elf cSWS100SrcNameSuff
+00013374 CI856_82xx.elf LastDebugCmd$153
+000134f0 CI856_82xx.elf CCollection<CPhS100PtcDoDevice> virtual table
+00013508 CI856_82xx.elf CCollection<CPhS100PtcDiDevice> virtual table
+00013520 CI856_82xx.elf CPhS100PtcMgr virtual table
+00013538 CI856_82xx.elf CPhS100PtcDoDevice virtual table
+00013550 CI856_82xx.elf CPhS100PtcDiDevice virtual table
+00013574 CI856_82xx.elf cSWModbusSrcNameSuff
+00013584 CI856_82xx.elf cSWInsumSrcNameSuff
+00013594 CI856_82xx.elf cSWProfibusSrcNameSuff
+000135a4 CI856_82xx.elf cSWMB300SrcNameSuff
+000135b0 CI856_82xx.elf cSWS100SrcNameSuff
+00013770 CI856_82xx.elf prevErrCode$105
+00013830 CI856_82xx.elf cSWModbusSrcNameSuff
+00013840 CI856_82xx.elf cSWInsumSrcNameSuff
+00013850 CI856_82xx.elf cSWProfibusSrcNameSuff
+00013860 CI856_82xx.elf cSWMB300SrcNameSuff
+0001386c CI856_82xx.elf cSWS100SrcNameSuff
+00013878 CI856_82xx.elf CLSID_CPhS100
+00013894 CI856_82xx.elf PHproperties
+0001389c CI856_82xx.elf CMirroredObject::c_pMirroredObjectMgrImpl
+000138a0 CI856_82xx.elf CMirroredObjectAgent::c_pHeapCallback
+000138a4 CI856_82xx.elf CMirroredObjectAgent::c_AgentTag
+000138f8 CI856_82xx.elf GUID_NULL
+00013908 CI856_82xx.elf IID_IPhCommonCB
+00013918 CI856_82xx.elf IID_IPhConfigCB
+00013928 CI856_82xx.elf IID_IPhConfigCB1
+00013938 CI856_82xx.elf IID_IPhIOAccessCB
+00013948 CI856_82xx.elf IID_IPhExternalConfigCB1
+00013958 CI856_82xx.elf IID_IPhExternalConfigCB2
+00013968 CI856_82xx.elf IID_IPhExternalConfigCB3
+00013978 CI856_82xx.elf IID_IPhOLUCB
+00013988 CI856_82xx.elf IID_IPhCommon
+00013998 CI856_82xx.elf IID_IPhConfig1
+000139a8 CI856_82xx.elf IID_IPhStatus1
+000139b8 CI856_82xx.elf IID_IPhClient
+000139c8 CI856_82xx.elf IID_IPhClient1
+000139d8 CI856_82xx.elf IID_IPhDiagnostics
+000139e8 CI856_82xx.elf IID_IPhIOAccess
+000139f8 CI856_82xx.elf IID_IPhSafeConfig
+00013a08 CI856_82xx.elf IID_IPhSafeConfig1
+00013a18 CI856_82xx.elf IID_IPhSimulation
+00013a28 CI856_82xx.elf IID_IPhOLU
+00013a38 CI856_82xx.elf IID_IHeapCallback
+00013a48 CI856_82xx.elf IID_ISystemUtilitiesCallback
+00013a58 CI856_82xx.elf IID_ISystemUtilitiesCallback1
+00013a68 CI856_82xx.elf IID_ISystemUtilitiesCallback2
+00013a78 CI856_82xx.elf IID_ISystemUtilitiesCallback3
+00013a88 CI856_82xx.elf IID_IEventMgrCallback
+00013a98 CI856_82xx.elf IID_IEventMgrCallback1
+00013aa8 CI856_82xx.elf IID_ISysClockCallback
+00013ab8 CI856_82xx.elf IID_ISysClockCallback1
+00013ac8 CI856_82xx.elf IID_ISysClockCallback2
+00013ad8 CI856_82xx.elf IID_ISysClockCallback3
+00013ae8 CI856_82xx.elf IID_INetwClockSynchCallback
+00013af8 CI856_82xx.elf IID_IConfigCBCallback1
+00013b08 CI856_82xx.elf IID_IConfigCBCallback2
+00013b18 CI856_82xx.elf IID_IConfigCBCallback3
+00013b28 CI856_82xx.elf IID_IExternalConfigCBCallback
+00013b38 CI856_82xx.elf IID_IExternalConfigCBCallback2
+00013b48 CI856_82xx.elf IID_IExternalConfigCBCallback3
+00013b58 CI856_82xx.elf IID_IExternalConfigCBCallback4
+00013b68 CI856_82xx.elf IID_IMessagesCBCallback
+00013b78 CI856_82xx.elf IID_IAIPAccessCBCallback
+00013b88 CI856_82xx.elf IID_IOLUCBCallback
+00013b98 CI856_82xx.elf IID_ISystemUtilitiesCBCallback1
+00013ba8 CI856_82xx.elf IID_IConfigCallback1
+00013bb8 CI856_82xx.elf IID_IConfigCallback2
+00013bc8 CI856_82xx.elf IID_IStatusCallback1
+00013bd8 CI856_82xx.elf IID_IGenClientCallback
+00013be8 CI856_82xx.elf IID_IGenClientCallback1
+00013bf8 CI856_82xx.elf IID_IDriverFactoryCallback
+00013c08 CI856_82xx.elf IID_IDiagnosticsCallback
+00013c18 CI856_82xx.elf IID_ISafeConfigCallback
+00013c28 CI856_82xx.elf IID_ISafeConfigCallback1
+00013c38 CI856_82xx.elf IID_ICRCCallback
+00013c48 CI856_82xx.elf IID_IIOAccessCallback
+00013c58 CI856_82xx.elf IID_CriticalRegionCallback
+00013c68 CI856_82xx.elf IID_VOSExceptionCallback
+00013c78 CI856_82xx.elf IID_DrvCommonCallback
+00013c88 CI856_82xx.elf IID_ProtectedMirroredHeapCallback
+00013c98 CI856_82xx.elf IID_SharedMirroredHeapCallback
+00013ca8 CI856_82xx.elf IID_TemporaryMirroredHeapCallback
+00013cb8 CI856_82xx.elf IID_IRestrictedVOSCallback
+00013cc8 CI856_82xx.elf IID_IVarServerCallback
+00013cd8 CI856_82xx.elf IID_IVarServerCallback1
+00013ce8 CI856_82xx.elf IID_ISOCKETCallback
+00013cf8 CI856_82xx.elf IID_IVOSCallback
+00013d08 CI856_82xx.elf IID_IVOSCallback1
+00013d18 CI856_82xx.elf CPhOLU_Base virtual table
+00013d70 CI856_82xx.elf CPhDiagnostics_Base virtual table
+00013da8 CI856_82xx.elf CPhIOAccess_Base virtual table
+00013de8 CI856_82xx.elf CPhStatus_Base1 virtual table
+00013e20 CI856_82xx.elf CPhClient_Base1 virtual table
+00013ee0 CI856_82xx.elf CPhClient_Base virtual table
+00013f70 CI856_82xx.elf CPhConfig_Base1 virtual table
+00013ff0 CI856_82xx.elf CPhCommon_Base virtual table
+00014030 CI856_82xx.elf GUID_NULL
+00014040 CI856_82xx.elf MaxCompanyNameLen
+00014044 CI856_82xx.elf MaxProductNameLen
+00014048 CI856_82xx.elf MaxProductVersionLen
+0001404c CI856_82xx.elf cMaxNrOfHWFAdrLevels
+00014050 CI856_82xx.elf cGCWrite
+00014054 CI856_82xx.elf cGCRead
+00014058 CI856_82xx.elf cGCSubscription
+0001405c CI856_82xx.elf cGCRegistration
+00014060 CI856_82xx.elf cGCAddMemoryAreaArrayNumberPlaces
+00014064 CI856_82xx.elf cPONotFound
+00014068 CI856_82xx.elf cGCBusyDisconnecting
+0001406c CI856_82xx.elf cGCRemovingPO
+00014070 CI856_82xx.elf cGCParametersMissing
+00014074 CI856_82xx.elf cGCAlreadyDefined
+00014078 CI856_82xx.elf cGCTypeNotSupported
+0001407c CI856_82xx.elf cGCIndexOutOfRange
+00014080 CI856_82xx.elf cGCTypeNotDefined
+00014084 CI856_82xx.elf cGCStringMismatch
+00014088 CI856_82xx.elf cGCFacadeError
+0001408c CI856_82xx.elf cGCInvalidHandle
+00014090 CI856_82xx.elf cGCAddedMemoryAreaError
+00014094 CI856_82xx.elf cGCBSErrorDetected
+00014098 CI856_82xx.elf cAborted
+0001409c CI856_82xx.elf cSuccess
+000140a0 CI856_82xx.elf cPending
+000140a4 CI856_82xx.elf cGCDisconnected
+000140a8 CI856_82xx.elf cGCExtendedStatus
+000140ac CI856_82xx.elf cPHHeapFull
+000140b0 CI856_82xx.elf cPHTypeMismatch
+000140b4 CI856_82xx.elf cPHSizeMismatch
+000140b8 CI856_82xx.elf cPHErrAccessData
+000140bc CI856_82xx.elf cPHErrProtocolData
+000140c0 CI856_82xx.elf cPHAccessVarNotFound
+000140c4 CI856_82xx.elf cPHErrInvalidPar
+000140c8 CI856_82xx.elf cPHDirAddrFormatNotSupported
+000140cc CI856_82xx.elf cPHGenericFormatNotSupported
+000140d0 CI856_82xx.elf cPHNotImplemented
+000140d4 CI856_82xx.elf cPHVarDataUnsupportedDirection
+000140d8 CI856_82xx.elf cPHVarDataNotSupported
+000140dc CI856_82xx.elf cPHRawDataNotSupported
+000140e0 CI856_82xx.elf cPHDriverError
+000140e4 CI856_82xx.elf cPHHardwareError
+000140e8 CI856_82xx.elf cPHTRAdisconnect
+000140ec CI856_82xx.elf cLegacyFormat
+000140f0 CI856_82xx.elf cDirAddrFormat
+000140f4 CI856_82xx.elf cGenericFormat
+000140f8 CI856_82xx.elf eHWFDeviceSpecific1
+000140fc CI856_82xx.elf eHWFUnitBPrimary
+00014100 CI856_82xx.elf cHWFOPCMask
+00014104 CI856_82xx.elf cHWFOPCChannelOk
+00014108 CI856_82xx.elf cHWFOPCChannelError
+0001410c CI856_82xx.elf cHWFOPCChannelForced
+00014110 CI856_82xx.elf cHWFOPCDeviceError
+00014114 CI856_82xx.elf cHWFOPCChannelErrorLow
+00014118 CI856_82xx.elf cHWFOPCChannelErrorHigh
+0001411c CI856_82xx.elf cHWFOPCChannelHigh
+00014120 CI856_82xx.elf cHWFOPCChannelLow
+00014124 CI856_82xx.elf cHWFChannelRedundant
+00014128 CI856_82xx.elf cHWFUnitBPrimary
+0001412c CI856_82xx.elf cHWFBackupUnitError
+00014130 CI856_82xx.elf cHWFXSPValueUsed
+00014134 CI856_82xx.elf cHWFChannelSimulated
+00014138 CI856_82xx.elf cHWFChannelForced
+0001413c CI856_82xx.elf cHWFChannelInverted
+00014140 CI856_82xx.elf cHWFXSPMask
+00014144 CI856_82xx.elf cHWFXSPNoSetting
+00014148 CI856_82xx.elf cHWFXSPValue
+0001414c CI856_82xx.elf cHWFXSPClear
+00014150 CI856_82xx.elf cHWFXSPFreeze
+00014154 CI856_82xx.elf cHWFXSPInvert
+00014158 CI856_82xx.elf cHWFXSPInitDPM
+0001415c CI856_82xx.elf HWFNO_XSP_FORCE
+0001415d CI856_82xx.elf HWFFORCE_OSP
+0001415e CI856_82xx.elf HWFFORCE_CLEAR
+0001415f CI856_82xx.elf HWFFORCE_BLOCK_IO_DPM_OUT_WRITE
+00014160 CI856_82xx.elf HWFFORCE_BLOCK_SM_DPM_OUT_WRITE
+00014164 CI856_82xx.elf cHWFMaxNrOfChannels
+00014168 CI856_82xx.elf cHWFStatusErrorsMask
+0001416c CI856_82xx.elf cHWFRootStatusErrorMask
+00014170 CI856_82xx.elf cHWFDoNotCopyUnitErrorMask
+00014174 CI856_82xx.elf cFWUpgradePrimary
+00014178 CI856_82xx.elf cFWUpgradeBackup
+0001417c CI856_82xx.elf cNewPhVersion
+00014180 CI856_82xx.elf cNewPMFirmware
+00014188 CI856_82xx.elf IPhCommon virtual table
+000141c0 CI856_82xx.elf IUnknown virtual table
+0001c1e8 G _SDA_BASE_ CI856_82xx.elf 
+</SYMBOLS>

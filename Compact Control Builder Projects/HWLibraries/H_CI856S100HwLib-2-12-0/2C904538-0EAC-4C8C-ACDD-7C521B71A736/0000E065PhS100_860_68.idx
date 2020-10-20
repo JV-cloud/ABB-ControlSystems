@@ -1,0 +1,702 @@
+<HEAD>
+Index of symbols created Wed 09/19/2018 16:50:34.04 
+</HEAD>
+<SECTIONS=15>
+00010000 00025680 .text
+00025680 00025bc4 .got2
+00025bc4 0002623c .fixup
+0002623c 000262b4 .bss
+000262b4 00026304 .data
+00026304 00029dcc .debug_abbrev
+00029dcc 0005604c .debug_info
+0005604c 0005bd2c .debug_line
+0005bd2c 0005e9e4 .debug_frame
+0005e9e4 00069510 .debug_loc
+00069510 0006cac2 .debug_pubnames
+0006cac2 0006cfda .debug_aranges
+0006cfda 0006d922 .debug_ranges
+0006d922 00076f04 .debug_str
+00076f04 00076f04 .comment
+</SECTIONS>
+<SYMBOLS=680>
+00000000 PhS100_860_68.elf EXE_HEAD
+00000060 PhS100_860_68.elf CCmPtcDevice::ReleaseForRead()
+00000088 PhS100_860_68.elf CCmPtcDevice::ReleaseForWrite()
+000000c8 PhS100_860_68.elf CCmPtcDevice::BsRecover()
+00000178 PhS100_860_68.elf CCmPtcDevice::Write(unsigned char*, unsigned char)
+0000021c PhS100_860_68.elf CCmPtcDevice::Read(unsigned char*, unsigned char*)
+000002d4 PhS100_860_68.elf CCmPtcDevice::~CCmPtcDevice()
+0000034c PhS100_860_68.elf CCmPtcDevice::~CCmPtcDevice()
+000003b4 PhS100_860_68.elf CCmPtcDevice::~CCmPtcDevice()
+0000041c PhS100_860_68.elf CCmPtcDevice::CCmPtcDevice(CPhS100PtcMgr*)
+000004e0 PhS100_860_68.elf CCmPtcDevice::CCmPtcDevice(CPhS100PtcMgr*)
+000005a4 PhS100_860_68.elf CCmPtcDevice::Init(int, CCmPtcDeviceMgr*, unsigned char, bool)
+000007f0 PhS100_860_68.elf CCmPtcDevice::ObtainForRead()
+00000a34 PhS100_860_68.elf CCmPtcDevice::ObtainForWrite()
+00000c68 PhS100_860_68.elf CCmPtcDeviceMgr::PrintObtainDiag()
+00000cf8 PhS100_860_68.elf CCmPtcDeviceMgr::Write(CCmPtcDevice*, unsigned char*, unsigned char)
+00000e4c PhS100_860_68.elf CCmPtcDeviceMgr::Create(int, unsigned char, bool, CCmPtcDevice**)
+00001044 PhS100_860_68.elf CCmPtcDeviceMgr::CreateAsUser(int, unsigned char, CCmPtcDevice**)
+0000105c PhS100_860_68.elf CCmPtcDeviceMgr::CCmPtcDeviceMgr(CPhS100PtcMgr*)
+000010c4 PhS100_860_68.elf CCmPtcDeviceMgr::CCmPtcDeviceMgr(CPhS100PtcMgr*)
+0000112c PhS100_860_68.elf CCmPtcDeviceMgr::InitAsUser(rCmPtcDeviceArea*, unsigned int*)
+000012ac PhS100_860_68.elf CCmPtcDeviceMgr::~CCmPtcDeviceMgr()
+00001334 PhS100_860_68.elf CCmPtcDeviceMgr::~CCmPtcDeviceMgr()
+000013b4 PhS100_860_68.elf CCmPtcDeviceMgr::~CCmPtcDeviceMgr()
+00001434 PhS100_860_68.elf CCmPtcDeviceMgr::Read(CCmPtcDevice*, unsigned char*, unsigned int*)
+000015bc PhS100_860_68.elf CPhS100::releaseResources()
+000016d4 PhS100_860_68.elf CPhS100::SetCommonCallbackInterface(ICommonCallback*)
+00001920 PhS100_860_68.elf CPhS100::SendCI856Msg(unsigned long, unsigned long, unsigned long, CCIMsg*, eErrorCodes*)
+00001b14 PhS100_860_68.elf CPhS100::ReceiveCI856Msg(unsigned long, unsigned long, unsigned long, unsigned long, CCIMsg*, bool*, eErrorCodes*)
+00001d4c PhS100_860_68.elf CPhS100::GetProductInfo(unsigned char*, unsigned char*, unsigned char*, unsigned long)
+00001ddc PhS100_860_68.elf CPhS100::allocateResources()
+00001ef4 PhS100_860_68.elf CPhS100::CPhS100()
+00001fc8 PhS100_860_68.elf CPhS100::CPhS100()
+0000209c PhS100_860_68.elf CPhS100::~CPhS100()
+0000217c PhS100_860_68.elf non-virtual thunk to CPhS100::~CPhS100()
+00002184 PhS100_860_68.elf non-virtual thunk to CPhS100::~CPhS100()
+0000218c PhS100_860_68.elf non-virtual thunk to CPhS100::~CPhS100()
+00002198 PhS100_860_68.elf CPhS100::~CPhS100()
+00002288 PhS100_860_68.elf non-virtual thunk to CPhS100::~CPhS100()
+00002290 PhS100_860_68.elf non-virtual thunk to CPhS100::~CPhS100()
+00002298 PhS100_860_68.elf non-virtual thunk to CPhS100::~CPhS100()
+000022a4 PhS100_860_68.elf CPhS100::~CPhS100()
+00002384 PhS100_860_68.elf non-virtual thunk to CPhS100::ReadVarReq(unsigned long, int*)
+0000238c PhS100_860_68.elf CPhS100::ReadVarReq(unsigned long, int*)
+000023a4 PhS100_860_68.elf non-virtual thunk to CPhS100::WriteVarReq(unsigned long, int*)
+000023ac PhS100_860_68.elf CPhS100::WriteVarReq(unsigned long, int*)
+000023c4 PhS100_860_68.elf non-virtual thunk to CPhS100::ReadRawReq(unsigned long, int*)
+000023d0 PhS100_860_68.elf CPhS100::ReadRawReq(unsigned long, int*)
+00002448 PhS100_860_68.elf non-virtual thunk to CPhS100::WriteRawReq(unsigned long, int*)
+00002454 PhS100_860_68.elf CPhS100::WriteRawReq(unsigned long, int*)
+000024cc PhS100_860_68.elf non-virtual thunk to CPhS100::AbortRawReq(unsigned long, int*)
+000024d8 PhS100_860_68.elf CPhS100::AbortRawReq(unsigned long, int*)
+00002550 PhS100_860_68.elf non-virtual thunk to CPhS100::GetExtendedStatusSize(unsigned long, int*, int*)
+0000255c PhS100_860_68.elf CPhS100::GetExtendedStatusSize(unsigned long, int*, int*)
+000025d4 PhS100_860_68.elf non-virtual thunk to CPhS100::GetExtendedStatus(unsigned long, int, teIEC1131Type*, tGCValue*, int*)
+000025e0 PhS100_860_68.elf CPhS100::GetExtendedStatus(unsigned long, int, teIEC1131Type*, tGCValue*, int*)
+00002658 PhS100_860_68.elf non-virtual thunk to CPhS100::SetStatus(unsigned long, int, int*)
+00002664 PhS100_860_68.elf CPhS100::SetStatus(unsigned long, int, int*)
+000026dc PhS100_860_68.elf non-virtual thunk to CPhS100::ReadRes(unsigned long, int, int*)
+000026e8 PhS100_860_68.elf CPhS100::ReadRes(unsigned long, int, int*)
+00002760 PhS100_860_68.elf non-virtual thunk to CPhS100::WriteRes(unsigned long, int, int*)
+0000276c PhS100_860_68.elf CPhS100::WriteRes(unsigned long, int, int*)
+000027e4 PhS100_860_68.elf non-virtual thunk to CPhS100::BufferGiveForSend(unsigned long, unsigned int, int, int*)
+000027ec PhS100_860_68.elf CPhS100::BufferGiveForSend(unsigned long, unsigned int, int, int*)
+00002810 PhS100_860_68.elf non-virtual thunk to CPhS100::BufferTakeForSend(unsigned long, unsigned int, int*)
+00002818 PhS100_860_68.elf CPhS100::BufferTakeForSend(unsigned long, unsigned int, int*)
+0000283c PhS100_860_68.elf non-virtual thunk to CPhS100::BufferGiveForReceive(unsigned long, int, int*)
+00002844 PhS100_860_68.elf CPhS100::BufferGiveForReceive(unsigned long, int, int*)
+00002868 PhS100_860_68.elf non-virtual thunk to CPhS100::BufferTakeForReceive(unsigned long, int*)
+00002870 PhS100_860_68.elf CPhS100::BufferTakeForReceive(unsigned long, int*)
+00002894 PhS100_860_68.elf non-virtual thunk to CPhS100::AbortVarReq(unsigned long, int*)
+0000289c PhS100_860_68.elf CPhS100::AbortVarReq(unsigned long, int*)
+000028c0 PhS100_860_68.elf non-virtual thunk to CPhS100::RegisterVarReq(unsigned long, int*)
+000028c8 PhS100_860_68.elf CPhS100::RegisterVarReq(unsigned long, int*)
+000028ec PhS100_860_68.elf non-virtual thunk to CPhS100::DisconnectReq(unsigned long, unsigned long, int*)
+000028f4 PhS100_860_68.elf CPhS100::DisconnectReq(unsigned long, unsigned long, int*)
+00002918 PhS100_860_68.elf non-virtual thunk to CPhS100::ConnectReq(unsigned long, unsigned long*, int*)
+00002920 PhS100_860_68.elf CPhS100::ConnectReq(unsigned long, unsigned long*, int*)
+00002944 PhS100_860_68.elf non-virtual thunk to CPhS100::PhResponsibilityForHotInsert(trHWFAddress, teHWFErrorCode*)
+00002950 PhS100_860_68.elf CPhS100::PhResponsibilityForHotInsert(trHWFAddress, teHWFErrorCode*)
+00002a1c PhS100_860_68.elf non-virtual thunk to CPhS100::PhResponsibilityForRestart(trHWFAddress, teHWFErrorCode*)
+00002a28 PhS100_860_68.elf CPhS100::PhResponsibilityForRestart(trHWFAddress, teHWFErrorCode*)
+00002af8 PhS100_860_68.elf CPhS100::ConfigureIoRack(trHWFAddress const*, teHWFErrorCode*)
+00002e2c PhS100_860_68.elf non-virtual thunk to CPhS100::RemoveHWConfiguration(trHWFAddress, teHWFErrorCode*)
+00002e38 PhS100_860_68.elf CPhS100::RemoveHWConfiguration(trHWFAddress, teHWFErrorCode*)
+00002fa4 PhS100_860_68.elf CPhS100::WaitForConfigCompletion(unsigned int, unsigned int, trHWFAddress*, bool*, unsigned long, teHWFErrorCode*)
+00003b58 PhS100_860_68.elf CPhS100::SendConfigCompleteMessage()
+00003c1c PhS100_860_68.elf CPhS100::ConfigureIoUnit(trHWFAddress const*, unsigned int*, teHWFErrorCode*)
+000044b4 PhS100_860_68.elf CPhS100::ConfigureIoRackAndSubUnits(trHWFAddress*, unsigned int&, unsigned int&, bool*, bool&, bool&, teHWFErrorCode*)
+0000481c PhS100_860_68.elf CPhS100::CheckFWVersion(bool*, bool*)
+00004c0c PhS100_860_68.elf CPhS100::ConfigureCI856(trHWFAddress const*, teHWFErrorCode*)
+0000563c PhS100_860_68.elf non-virtual thunk to CPhS100::PhResponsibilityForBackupDevice(trHWFAddress, teHWFErrorCode*)
+00005648 PhS100_860_68.elf CPhS100::PhResponsibilityForBackupDevice(trHWFAddress, teHWFErrorCode*)
+00005688 PhS100_860_68.elf non-virtual thunk to CPhS100::StartUsingDevice(trHWFAddress, teHWFErrorCode*)
+00005694 PhS100_860_68.elf CPhS100::StartUsingDevice(trHWFAddress, teHWFErrorCode*)
+000056d4 PhS100_860_68.elf non-virtual thunk to CPhS100::PerformSwitchover(trHWFAddress, teHWFErrorCode*)
+000056e0 PhS100_860_68.elf CPhS100::PerformSwitchover(trHWFAddress, teHWFErrorCode*)
+00005720 PhS100_860_68.elf non-virtual thunk to CPhS100::PerformFailover(trHWFAddress, teHWFErrorCode*)
+0000572c PhS100_860_68.elf CPhS100::PerformFailover(trHWFAddress, teHWFErrorCode*)
+0000576c PhS100_860_68.elf non-virtual thunk to CPhS100::PrepareForTermination(teHWFErrorCode*)
+00005778 PhS100_860_68.elf CPhS100::PrepareForTermination(teHWFErrorCode*)
+000058f0 PhS100_860_68.elf non-virtual thunk to CPhS100::RemoveIoConnection(unsigned long, teHWFErrorCode*)
+000058fc PhS100_860_68.elf CPhS100::RemoveIoConnection(unsigned long, teHWFErrorCode*)
+00005a08 PhS100_860_68.elf non-virtual thunk to CPhS100::PhResponsibility(trHWFAddress, teHWFErrorCode*)
+00005a14 PhS100_860_68.elf CPhS100::PhResponsibility(trHWFAddress, teHWFErrorCode*)
+00006164 PhS100_860_68.elf non-virtual thunk to CPhS100::StartUsingIoConnection(trHWFAddress, unsigned long, teHWFErrorCode*)
+00006170 PhS100_860_68.elf CPhS100::StartUsingIoConnection(trHWFAddress, unsigned long, teHWFErrorCode*)
+0000623c PhS100_860_68.elf CPhS100::GenerateExternalEvent(CCIMsg*, eErrorCodes*)
+00006530 PhS100_860_68.elf CPhS100::SOEThread()
+00006de0 PhS100_860_68.elf spawnSOEThread(int, int, int, int)
+00006df0 PhS100_860_68.elf CPhS100PtcBase::CPhS100PtcBase(CPhS100PtcMgr*)
+00006e4c PhS100_860_68.elf CPhS100PtcBase::CPhS100PtcBase(CPhS100PtcMgr*)
+00006ea8 PhS100_860_68.elf CPhS100PtcBase::operator delete(void*)
+00006efc PhS100_860_68.elf CPhS100PtcBase::~CPhS100PtcBase()
+00006f3c PhS100_860_68.elf CPhS100PtcBase::~CPhS100PtcBase()
+00006f7c PhS100_860_68.elf CPhS100PtcBase::~CPhS100PtcBase()
+00006fbc PhS100_860_68.elf CPhS100PtcBase::operator new(unsigned int)
+000070b8 PhS100_860_68.elf CPhS100PtcBase::GetMemory(unsigned int)
+00007170 PhS100_860_68.elf CPhS100PtcBase::ReturnMemory(void*, unsigned int)
+000071e0 PhS100_860_68.elf CPhS100PtcBase::Init(CPhS100PtcMgr*, unsigned int, ICIGDriverCallback*)
+00007230 PhS100_860_68.elf CPhS100PtcBase::SetCallbackPointers(ICommonCallback*)
+00007350 PhS100_860_68.elf CPhS100PtcBase::Instance(unsigned int)
+000073a4 PhS100_860_68.elf CPhS100PtcBase::PrintMemDiagnostics()
+00007494 PhS100_860_68.elf CPhS100PtcDiDevice::IsConnectDataCompatible(unsigned long)
+00007504 PhS100_860_68.elf CPhS100PtcDiDevice::IsAccessDataCompatible(unsigned long)
+00007604 PhS100_860_68.elf CPhS100PtcDiDevice::GetCoincMode(unsigned long, int*)
+00007718 PhS100_860_68.elf CPhS100PtcDiDevice::GetCoincValue(unsigned long, int*)
+000077c8 PhS100_860_68.elf CPhS100PtcDiDevice::IsValidSignalId(char*, unsigned int*, unsigned int*, unsigned int*, unsigned int*)
+000078ec PhS100_860_68.elf CPhS100PtcDiDevice::PrintStatus(int)
+00008060 PhS100_860_68.elf CPhS100PtcDiDevice::Init(CPhS100PtcMgr*, unsigned long)
+00008170 PhS100_860_68.elf CPhS100PtcDiDevice::CPhS100PtcDiDevice(CPhS100PtcMgr*)
+00008220 PhS100_860_68.elf CPhS100PtcDiDevice::CPhS100PtcDiDevice(CPhS100PtcMgr*)
+000082d0 PhS100_860_68.elf CPhS100PtcDiDevice::Connect()
+00008434 PhS100_860_68.elf CPhS100PtcDiDevice::Disconnect()
+0000856c PhS100_860_68.elf CPhS100PtcDiDevice::SendData(unsigned long)
+000087bc PhS100_860_68.elf CPhS100PtcDiDevice::GetData()
+00008ca8 PhS100_860_68.elf CPhS100PtcDoDevice::IsConnectDataCompatible(unsigned long)
+00008d18 PhS100_860_68.elf CPhS100PtcDoDevice::IsAccessDataCompatible(unsigned long)
+00008e18 PhS100_860_68.elf CPhS100PtcDoDevice::IsValidSignalId(char*, unsigned int*, unsigned int*, unsigned int*, unsigned int*)
+00008f3c PhS100_860_68.elf CPhS100PtcDoDevice::PrintStatus(ptcOutDevStatus*)
+00009704 PhS100_860_68.elf CPhS100PtcDoDevice::Init(CPhS100PtcMgr*, unsigned long)
+000097d4 PhS100_860_68.elf CPhS100PtcDoDevice::CPhS100PtcDoDevice(CPhS100PtcMgr*)
+00009884 PhS100_860_68.elf CPhS100PtcDoDevice::CPhS100PtcDoDevice(CPhS100PtcMgr*)
+00009934 PhS100_860_68.elf CPhS100PtcDoDevice::Connect()
+00009a84 PhS100_860_68.elf CPhS100PtcDoDevice::Disconnect()
+00009b88 PhS100_860_68.elf CPhS100PtcDoDevice::SendData(unsigned long)
+0000a3a8 PhS100_860_68.elf CPhS100PtcDoDevice::GetData()
+0000a66c PhS100_860_68.elf CPhS100PtcMgr::PrepareForTermination()
+0000a684 PhS100_860_68.elf CPhS100PtcMgr::RegisterVarReq(unsigned long, int*)
+0000a6e8 PhS100_860_68.elf CPhS100PtcMgr::AbortVarReq(unsigned long, int*)
+0000a748 PhS100_860_68.elf CPhS100PtcMgr::BufferGiveForReceive(unsigned long, int, int*)
+0000a764 PhS100_860_68.elf CPhS100PtcMgr::ClearDiagnostic()
+0000a874 PhS100_860_68.elf CPhS100PtcMgr::Close()
+0000a990 PhS100_860_68.elf CPhS100PtcMgr::Reconnect()
+0000aac4 PhS100_860_68.elf CPhS100PtcMgr::PrintDiagnostic()
+0000ae30 PhS100_860_68.elf CPhS100PtcMgr::GetCmPtcDeviceArea(rCmPtcDeviceArea**, int*)
+0000b01c PhS100_860_68.elf CPhS100PtcMgr::GetHwTimer(unsigned long*, int*)
+0000b1c0 PhS100_860_68.elf CPhS100PtcMgr::ThreadWork()
+0000b328 PhS100_860_68.elf CPhS100PtcMgr::SendCI856Msg(unsigned long, unsigned long, unsigned long, CCIMsg*, eErrorCodes*)
+0000b350 PhS100_860_68.elf CPhS100PtcMgr::~CPhS100PtcMgr()
+0000b40c PhS100_860_68.elf CPhS100PtcMgr::~CPhS100PtcMgr()
+0000b4c0 PhS100_860_68.elf CPhS100PtcMgr::~CPhS100PtcMgr()
+0000b574 PhS100_860_68.elf CPhS100PtcMgr::Open()
+0000b680 PhS100_860_68.elf CPhS100PtcMgr::CPhS100PtcMgr(CPhS100*)
+0000b714 PhS100_860_68.elf CPhS100PtcMgr::CPhS100PtcMgr(CPhS100*)
+0000b7a8 PhS100_860_68.elf CPhS100PtcMgr::Init()
+0000b950 PhS100_860_68.elf CPhS100PtcMgr::BufferTakeForReceive(unsigned long, int*)
+0000bc0c PhS100_860_68.elf CPhS100PtcMgr::BufferGiveForSend(unsigned long, unsigned int, int, int*)
+0000be84 PhS100_860_68.elf CPhS100PtcMgr::BufferTakeForSend(unsigned long, unsigned int, int*)
+0000c0f0 PhS100_860_68.elf CPhS100PtcMgr::DisconnectReq(unsigned long, unsigned long, int*)
+0000c400 PhS100_860_68.elf CPhS100PtcMgr::ConnectReq(unsigned long, unsigned long*, int*)
+0000c898 PhS100_860_68.elf CPhS100::DoRedundancySwitchOver(trHWFAddress, teHWFErrorCode*)
+0000c910 PhS100_860_68.elf non-virtual thunk to CPhS100::GetStatus(trHWFAddress, teHWFUnitKind, unsigned long*, unsigned long*, teHWFErrorCode*)
+0000c91c PhS100_860_68.elf CPhS100::GetStatus(trHWFAddress, teHWFUnitKind, unsigned long*, unsigned long*, teHWFErrorCode*)
+0000cce8 PhS100_860_68.elf non-virtual thunk to CPhS100::KickWatchdog(unsigned short*, teHWFErrorCode*)
+0000ccf4 PhS100_860_68.elf CPhS100::KickWatchdog(unsigned short*, teHWFErrorCode*)
+0000d00c PhS100_860_68.elf ObjectFactory
+0000d134 PhS100_860_68.elf operator delete(void*)
+0000d170 PhS100_860_68.elf __cxa_pure_virtual
+0000d1a8 PhS100_860_68.elf CPhCommon_Base::CPhCommon_Base()
+0000d20c PhS100_860_68.elf CPhCommon_Base::CPhCommon_Base()
+0000d26c PhS100_860_68.elf CPhCommon_Base::GetProductInfo(unsigned char*, unsigned char*, unsigned char*, unsigned long)
+0000d2a8 PhS100_860_68.elf CPhCommon_Base::SetCommonCallbackInterface(ICommonCallback*)
+0000d2d8 PhS100_860_68.elf CPhConfig_Base1::PrepareForTermination(teHWFErrorCode*)
+0000d308 PhS100_860_68.elf CPhConfig_Base1::RemoveHWConfiguration(trHWFAddress, teHWFErrorCode*)
+0000d338 PhS100_860_68.elf CPhConfig_Base1::RemoveIoConnection(unsigned long, teHWFErrorCode*)
+0000d36c PhS100_860_68.elf CPhConfig_Base1::PhResponsibilityForRestart(trHWFAddress, teHWFErrorCode*)
+0000d39c PhS100_860_68.elf CPhConfig_Base1::PhResponsibility(trHWFAddress, teHWFErrorCode*)
+0000d3cc PhS100_860_68.elf CPhConfig_Base1::StartUsingIoConnection(trHWFAddress, unsigned long, teHWFErrorCode*)
+0000d400 PhS100_860_68.elf CPhConfig_Base1::PhResponsibilityForBackupDevice(trHWFAddress, teHWFErrorCode*)
+0000d430 PhS100_860_68.elf CPhConfig_Base1::PhResponsibilityForHotInsert(trHWFAddress, teHWFErrorCode*)
+0000d460 PhS100_860_68.elf CPhConfig_Base1::PerformSwitchover(trHWFAddress, teHWFErrorCode*)
+0000d490 PhS100_860_68.elf CPhConfig_Base1::StartUsingDevice(trHWFAddress, teHWFErrorCode*)
+0000d4c0 PhS100_860_68.elf CPhConfig_Base1::PerformFailover(trHWFAddress, teHWFErrorCode*)
+0000d4f0 PhS100_860_68.elf CPhClient_Base::ConnectReq(unsigned long, unsigned long*, int*)
+0000d528 PhS100_860_68.elf CPhClient_Base::DisconnectReq(unsigned long, unsigned long, int*)
+0000d560 PhS100_860_68.elf CPhClient_Base::ReadVarReq(unsigned long, int*)
+0000d594 PhS100_860_68.elf CPhClient_Base::WriteVarReq(unsigned long, int*)
+0000d5c8 PhS100_860_68.elf CPhClient_Base::ReadRawReq(unsigned long, int*)
+0000d5fc PhS100_860_68.elf CPhClient_Base::WriteRawReq(unsigned long, int*)
+0000d630 PhS100_860_68.elf CPhClient_Base::AbortRawReq(unsigned long, int*)
+0000d664 PhS100_860_68.elf CPhClient_Base::AbortVarReq(unsigned long, int*)
+0000d698 PhS100_860_68.elf CPhClient_Base::GetExtendedStatusSize(unsigned long, int*, int*)
+0000d6d0 PhS100_860_68.elf CPhClient_Base::GetExtendedStatus(unsigned long, int, teIEC1131Type*, tGCValue*, int*)
+0000d710 PhS100_860_68.elf CPhClient_Base::SetStatus(unsigned long, int, int*)
+0000d748 PhS100_860_68.elf CPhClient_Base::ReadRes(unsigned long, int, int*)
+0000d780 PhS100_860_68.elf CPhClient_Base::WriteRes(unsigned long, int, int*)
+0000d7b8 PhS100_860_68.elf CPhClient_Base1::ConnectReq(unsigned long, unsigned long*, int*)
+0000d7f0 PhS100_860_68.elf CPhClient_Base1::DisconnectReq(unsigned long, unsigned long, int*)
+0000d828 PhS100_860_68.elf CPhClient_Base1::ReadVarReq(unsigned long, int*)
+0000d85c PhS100_860_68.elf CPhClient_Base1::WriteVarReq(unsigned long, int*)
+0000d890 PhS100_860_68.elf CPhClient_Base1::RegisterVarReq(unsigned long, int*)
+0000d8c4 PhS100_860_68.elf CPhClient_Base1::ReadRawReq(unsigned long, int*)
+0000d8f8 PhS100_860_68.elf CPhClient_Base1::WriteRawReq(unsigned long, int*)
+0000d92c PhS100_860_68.elf CPhClient_Base1::AbortRawReq(unsigned long, int*)
+0000d960 PhS100_860_68.elf CPhClient_Base1::AbortVarReq(unsigned long, int*)
+0000d994 PhS100_860_68.elf CPhClient_Base1::TimeoutAbortVarReq(unsigned long, int*)
+0000d9f8 PhS100_860_68.elf CPhClient_Base1::GetExtendedStatusSize(unsigned long, int*, int*)
+0000da30 PhS100_860_68.elf CPhClient_Base1::GetExtendedStatus(unsigned long, int, teIEC1131Type*, tGCValue*, int*)
+0000da70 PhS100_860_68.elf CPhClient_Base1::BufferTakeForReceive(unsigned long, int*)
+0000daa4 PhS100_860_68.elf CPhClient_Base1::BufferGiveForReceive(unsigned long, int, int*)
+0000dadc PhS100_860_68.elf CPhClient_Base1::BufferTakeForSend(unsigned long, unsigned int, int*)
+0000db14 PhS100_860_68.elf CPhClient_Base1::BufferGiveForSend(unsigned long, unsigned int, int, int*)
+0000db50 PhS100_860_68.elf CPhClient_Base1::SetStatus(unsigned long, int, int*)
+0000db88 PhS100_860_68.elf CPhClient_Base1::ReadRes(unsigned long, int, int*)
+0000dbc0 PhS100_860_68.elf CPhClient_Base1::WriteRes(unsigned long, int, int*)
+0000dbf8 PhS100_860_68.elf CPhStatus_Base1::KickWatchdog(unsigned short*, teHWFErrorCode*)
+0000dc2c PhS100_860_68.elf CPhStatus_Base1::GetStatus(trHWFAddress, teHWFUnitKind, unsigned long*, unsigned long*, teHWFErrorCode*)
+0000dc68 PhS100_860_68.elf CPhIOAccess_Base::GetCopyRoutineReference(unsigned int, void (**)(short, void*, void*), IOAccessErrorCode*)
+0000dca0 PhS100_860_68.elf CPhIOAccess_Base::ObtainDPM(eAreaType, trHWFAddress, IOAccessErrorCode*)
+0000dcd4 PhS100_860_68.elf CPhIOAccess_Base::ReleaseDPM(eAreaType, trHWFAddress, IOAccessErrorCode*)
+0000dd08 PhS100_860_68.elf CPhDiagnostics_Base::PhDiagnosticsTableNew(teDiagErrorCode*)
+0000dd38 PhS100_860_68.elf CPhDiagnostics_Base::PhDiagnosticsTableCleared(teDiagErrorCode*)
+0000dd68 PhS100_860_68.elf CPhOLU_Base::PrepareForFirmwareDownload(trHWFAddress const*, unsigned long, eOLUStatus*)
+0000dda0 PhS100_860_68.elf CPhOLU_Base::PrepareForApplicationStop(trHWFAddress const*, eOLUStatus*)
+0000ddd4 PhS100_860_68.elf CPhOLU_Base::ResumeOperation(trHWFAddress const*, eOLUStatus*)
+0000de08 PhS100_860_68.elf CPhOLU_Base::PhResponsibilityForOLU(trHWFAddress const*, eOLUStatus*)
+0000de3c PhS100_860_68.elf CPhOLU_Base::PrepareForLeavingOLU(trHWFAddress const*, eOLUStatus*)
+0000de70 PhS100_860_68.elf CPhOLU_Base::PrepareForAppAndConfigDownload(trHWFAddress const*, eOLUStatus*)
+0000dea4 PhS100_860_68.elf CPhOLU_Base1::PrepareForFirmwareDownload(trHWFAddress const*, unsigned long, eOLUStatus*)
+0000dedc PhS100_860_68.elf CPhOLU_Base1::PrepareForApplicationStop(trHWFAddress const*, eOLUStatus*)
+0000df10 PhS100_860_68.elf CPhOLU_Base1::ResumeOperation(trHWFAddress const*, eOLUStatus*)
+0000df44 PhS100_860_68.elf CPhOLU_Base1::PhResponsibilityForOLU(trHWFAddress const*, eOLUStatus*)
+0000df78 PhS100_860_68.elf CPhOLU_Base1::PrepareForLeavingOLU(trHWFAddress const*, eOLUStatus*)
+0000dfac PhS100_860_68.elf CPhOLU_Base1::PrepareForAppAndConfigDownload(trHWFAddress const*, eOLUStatus*)
+0000dfe0 PhS100_860_68.elf CPhOLU_Base1::OLUEnablePhCom(trHWFAddress const*, eOLUStatus*)
+0000e014 PhS100_860_68.elf CPhOLU_Base1::OLUDisablePhCom(trHWFAddress const*, eOLUStatus*)
+0000e048 PhS100_860_68.elf CPhOLU_Base1::InformPhIsInSwitch(trHWFAddress const*, eOLUStatus*)
+0000e080 PhS100_860_68.elf CPhCommon_Base::~CPhCommon_Base()
+0000e0fc PhS100_860_68.elf CPhCommon_Base::~CPhCommon_Base()
+0000e178 PhS100_860_68.elf CPhCommon_Base::~CPhCommon_Base()
+0000e1f0 PhS100_860_68.elf CCollection<CCmPtcDevice>::Get(int)
+0000e28c PhS100_860_68.elf CCollection<CCmPtcDevice>::GetByIndex(int)
+0000e2c0 PhS100_860_68.elf CCollection<CCmPtcDevice>::Insert(int, CCmPtcDevice*)
+0000e4b4 PhS100_860_68.elf CCollection<CCmPtcDevice>::Remove(int)
+0000e634 PhS100_860_68.elf CCollection<CCmPtcDevice>::Delete(int)
+0000e678 PhS100_860_68.elf CCollection<CCmPtcDevice>::Key(int, int*)
+0000e6b0 PhS100_860_68.elf CCollection<CCmPtcDevice>::DeleteAll()
+0000e728 PhS100_860_68.elf CCollection<CCmPtcDevice>::Create(int, CCmPtcDevice**)
+0000e7e0 PhS100_860_68.elf CCollection<CCmPtcDevice>::CCollection(CPhS100PtcMgr*, int)
+0000e8bc PhS100_860_68.elf CCollection<CCmPtcDevice>::~CCollection()
+0000e968 PhS100_860_68.elf CCollection<CCmPtcDevice>::~CCollection()
+0000ea08 PhS100_860_68.elf non-virtual thunk to CPhS100::AddRef()
+0000ea10 PhS100_860_68.elf non-virtual thunk to CPhS100::AddRef()
+0000ea18 PhS100_860_68.elf non-virtual thunk to CPhS100::AddRef()
+0000ea20 PhS100_860_68.elf CPhS100::AddRef()
+0000ea40 PhS100_860_68.elf IUnknown::~IUnknown()
+0000ea84 PhS100_860_68.elf IUnknown::~IUnknown()
+0000eac4 PhS100_860_68.elf IPhConfig1::~IPhConfig1()
+0000eb0c PhS100_860_68.elf IPhStatus1::~IPhStatus1()
+0000eb58 PhS100_860_68.elf IPhStatus1::~IPhStatus1()
+0000eba0 PhS100_860_68.elf IPhConfig1::~IPhConfig1()
+0000ebec PhS100_860_68.elf IPhClient1::~IPhClient1()
+0000ec38 PhS100_860_68.elf IPhClient1::~IPhClient1()
+0000ec7c PhS100_860_68.elf non-virtual thunk to CPhS100::QueryInterface(_GUID const&, void**)
+0000ec84 PhS100_860_68.elf non-virtual thunk to CPhS100::QueryInterface(_GUID const&, void**)
+0000ec8c PhS100_860_68.elf non-virtual thunk to CPhS100::QueryInterface(_GUID const&, void**)
+0000ec98 PhS100_860_68.elf CPhS100::QueryInterface(_GUID const&, void**)
+0000edc4 PhS100_860_68.elf non-virtual thunk to CPhS100::Release()
+0000edcc PhS100_860_68.elf non-virtual thunk to CPhS100::Release()
+0000edd4 PhS100_860_68.elf non-virtual thunk to CPhS100::Release()
+0000eddc PhS100_860_68.elf CPhS100::Release()
+0000ee4c PhS100_860_68.elf CPhS100PtcDiDevice::~CPhS100PtcDiDevice()
+0000eea4 PhS100_860_68.elf CPhS100PtcDiDevice::~CPhS100PtcDiDevice()
+0000eee8 PhS100_860_68.elf CPhS100PtcDoDevice::~CPhS100PtcDoDevice()
+0000ef40 PhS100_860_68.elf CPhS100PtcDoDevice::~CPhS100PtcDoDevice()
+0000ef80 PhS100_860_68.elf CCollection<CPhS100PtcDiDevice>::GetByIndex(int)
+0000efb0 PhS100_860_68.elf CCollection<CPhS100PtcDoDevice>::GetByIndex(int)
+0000efe4 PhS100_860_68.elf CCollection<CPhS100PtcDoDevice>::Remove(int)
+0000f168 PhS100_860_68.elf CCollection<CPhS100PtcDiDevice>::Remove(int)
+0000f2e8 PhS100_860_68.elf CCollection<CPhS100PtcDoDevice>::Get(int)
+0000f384 PhS100_860_68.elf CCollection<CPhS100PtcDiDevice>::Get(int)
+0000f424 PhS100_860_68.elf CCollection<CPhS100PtcDoDevice>::Insert(int, CPhS100PtcDoDevice*)
+0000f618 PhS100_860_68.elf CCollection<CPhS100PtcDiDevice>::Insert(int, CPhS100PtcDiDevice*)
+0000f808 PhS100_860_68.elf CCollection<CPhS100PtcDiDevice>::Key(int, int*)
+0000f840 PhS100_860_68.elf CCollection<CPhS100PtcDiDevice>::Delete(int)
+0000f884 PhS100_860_68.elf CCollection<CPhS100PtcDiDevice>::DeleteAll()
+0000f8fc PhS100_860_68.elf CCollection<CPhS100PtcDoDevice>::Key(int, int*)
+0000f934 PhS100_860_68.elf CCollection<CPhS100PtcDoDevice>::Delete(int)
+0000f978 PhS100_860_68.elf CCollection<CPhS100PtcDoDevice>::DeleteAll()
+0000f9f0 PhS100_860_68.elf CPhS100PtcMgr::ThreadStub(void*)
+0000f9fc PhS100_860_68.elf CCollection<CPhS100PtcDiDevice>::Create(int, CPhS100PtcDiDevice**)
+0000fab0 PhS100_860_68.elf CCollection<CPhS100PtcDoDevice>::Create(int, CPhS100PtcDoDevice**)
+0000fb68 PhS100_860_68.elf CCollection<CPhS100PtcDoDevice>::CCollection(CPhS100PtcMgr*, int)
+0000fc44 PhS100_860_68.elf CCollection<CPhS100PtcDiDevice>::CCollection(CPhS100PtcMgr*, int)
+0000fd20 PhS100_860_68.elf CCollection<CPhS100PtcDoDevice>::~CCollection()
+0000fdcc PhS100_860_68.elf CCollection<CPhS100PtcDoDevice>::~CCollection()
+0000fe70 PhS100_860_68.elf CCollection<CPhS100PtcDiDevice>::~CCollection()
+0000ff1c PhS100_860_68.elf CCollection<CPhS100PtcDiDevice>::~CCollection()
+0000ffc0 PhS100_860_68.elf IUnknown::IUnknown()
+00010018 PhS100_860_68.elf IPhCommon::IPhCommon()
+0001007c PhS100_860_68.elf IUnknown::~IUnknown()
+000100ec PhS100_860_68.elf IPhConfig1::~IPhConfig1()
+00010168 PhS100_860_68.elf CPhConfig_Base1::~CPhConfig_Base1()
+000101e4 PhS100_860_68.elf CPhConfig_Base1::~CPhConfig_Base1()
+00010260 PhS100_860_68.elf IPhClient::~IPhClient()
+000102dc PhS100_860_68.elf CPhClient_Base::~CPhClient_Base()
+00010358 PhS100_860_68.elf IPhClient::~IPhClient()
+000103d4 PhS100_860_68.elf IPhClient::~IPhClient()
+00010450 PhS100_860_68.elf CPhClient_Base::~CPhClient_Base()
+000104cc PhS100_860_68.elf IPhClient1::~IPhClient1()
+00010548 PhS100_860_68.elf CPhClient_Base1::~CPhClient_Base1()
+000105c4 PhS100_860_68.elf CPhClient_Base1::~CPhClient_Base1()
+00010640 PhS100_860_68.elf IPhStatus1::~IPhStatus1()
+000106bc PhS100_860_68.elf CPhStatus_Base1::~CPhStatus_Base1()
+00010738 PhS100_860_68.elf CPhStatus_Base1::~CPhStatus_Base1()
+000107b4 PhS100_860_68.elf IPhIOAccess::~IPhIOAccess()
+00010830 PhS100_860_68.elf CPhIOAccess_Base::~CPhIOAccess_Base()
+000108ac PhS100_860_68.elf IPhIOAccess::~IPhIOAccess()
+00010928 PhS100_860_68.elf IPhIOAccess::~IPhIOAccess()
+000109a4 PhS100_860_68.elf CPhIOAccess_Base::~CPhIOAccess_Base()
+00010a20 PhS100_860_68.elf IPhDiagnostics::~IPhDiagnostics()
+00010a9c PhS100_860_68.elf CPhDiagnostics_Base::~CPhDiagnostics_Base()
+00010b18 PhS100_860_68.elf IPhDiagnostics::~IPhDiagnostics()
+00010b94 PhS100_860_68.elf IPhDiagnostics::~IPhDiagnostics()
+00010c10 PhS100_860_68.elf CPhDiagnostics_Base::~CPhDiagnostics_Base()
+00010c8c PhS100_860_68.elf IPhOLU::~IPhOLU()
+00010d08 PhS100_860_68.elf CPhOLU_Base::~CPhOLU_Base()
+00010d84 PhS100_860_68.elf IPhOLU::~IPhOLU()
+00010e00 PhS100_860_68.elf IPhOLU::~IPhOLU()
+00010e7c PhS100_860_68.elf CPhOLU_Base::~CPhOLU_Base()
+00010ef8 PhS100_860_68.elf IPhOLU1::~IPhOLU1()
+00010f74 PhS100_860_68.elf CPhOLU_Base1::~CPhOLU_Base1()
+00010ff0 PhS100_860_68.elf IPhOLU1::~IPhOLU1()
+0001106c PhS100_860_68.elf IPhOLU1::~IPhOLU1()
+000110e8 PhS100_860_68.elf CPhOLU_Base1::~CPhOLU_Base1()
+00011164 PhS100_860_68.elf IPhCommon::~IPhCommon()
+000111e0 PhS100_860_68.elf IPhCommon::~IPhCommon()
+0001125c PhS100_860_68.elf IPhCommon::~IPhCommon()
+000112d4 PhS100_860_68.elf CompanyName
+000112d8 PhS100_860_68.elf ProductName
+000112e0 PhS100_860_68.elf ProductVersion
+00011360 PhS100_860_68.elf S100FWName
+00011368 PhS100_860_68.elf S100FWCompatibleVersion
+00011370 PhS100_860_68.elf S100DriverName
+0001137c PhS100_860_68.elf S100DriverCompatibleVersion
+00011504 PhS100_860_68.elf CLSID_CPhS100
+0001156c PhS100_860_68.elf IID_IPhCommonCB
+0001157c PhS100_860_68.elf IID_IPhConfigCB
+0001158c PhS100_860_68.elf IID_IPhConfigCB1
+0001159c PhS100_860_68.elf IID_IPhIOAccessCB
+000115ac PhS100_860_68.elf IID_IPhExternalConfigCB1
+000115bc PhS100_860_68.elf IID_IPhExternalConfigCB2
+000115cc PhS100_860_68.elf IID_IPhExternalConfigCB3
+000115dc PhS100_860_68.elf IID_IPhOLUCB
+000115ec PhS100_860_68.elf IID_IPhCommon
+000115fc PhS100_860_68.elf IID_IPhConfig1
+0001160c PhS100_860_68.elf IID_IPhStatus1
+0001161c PhS100_860_68.elf IID_IPhClient
+0001162c PhS100_860_68.elf IID_IPhClient1
+0001163c PhS100_860_68.elf IID_IPhDiagnostics
+0001164c PhS100_860_68.elf IID_IPhIOAccess
+0001165c PhS100_860_68.elf IID_IPhSafeConfig
+0001166c PhS100_860_68.elf IID_IPhSafeConfig1
+0001167c PhS100_860_68.elf IID_IPhSafeConfig2
+0001168c PhS100_860_68.elf IID_IPhSimulation
+0001169c PhS100_860_68.elf IID_IPhOLU
+000116ac PhS100_860_68.elf IID_IPhOLU1
+000116bc PhS100_860_68.elf IID_IHeapCallback
+000116cc PhS100_860_68.elf IID_ISystemUtilitiesCallback
+000116dc PhS100_860_68.elf IID_ISystemUtilitiesCallback1
+000116ec PhS100_860_68.elf IID_ISystemUtilitiesCallback2
+000116fc PhS100_860_68.elf IID_ISystemUtilitiesCallback3
+0001170c PhS100_860_68.elf IID_ISystemUtilitiesCallback4
+0001171c PhS100_860_68.elf IID_IEventMgrCallback
+0001172c PhS100_860_68.elf IID_IEventMgrCallback1
+0001173c PhS100_860_68.elf IID_ISysClockCallback
+0001174c PhS100_860_68.elf IID_ISysClockCallback1
+0001175c PhS100_860_68.elf IID_ISysClockCallback2
+0001176c PhS100_860_68.elf IID_ISysClockCallback3
+0001177c PhS100_860_68.elf IID_INetwClockSynchCallback
+0001178c PhS100_860_68.elf IID_IConfigCBCallback1
+0001179c PhS100_860_68.elf IID_IConfigCBCallback2
+000117ac PhS100_860_68.elf IID_IConfigCBCallback3
+000117bc PhS100_860_68.elf IID_IExternalConfigCBCallback
+000117cc PhS100_860_68.elf IID_IExternalConfigCBCallback2
+000117dc PhS100_860_68.elf IID_IExternalConfigCBCallback3
+000117ec PhS100_860_68.elf IID_IExternalConfigCBCallback4
+000117fc PhS100_860_68.elf IID_IMessagesCBCallback
+0001180c PhS100_860_68.elf IID_IAIPAccessCBCallback
+0001181c PhS100_860_68.elf IID_IOLUCBCallback
+0001182c PhS100_860_68.elf IID_ISystemUtilitiesCBCallback1
+0001183c PhS100_860_68.elf IID_IConfigCallback1
+0001184c PhS100_860_68.elf IID_IConfigCallback2
+0001185c PhS100_860_68.elf IID_IStatusCallback1
+0001186c PhS100_860_68.elf IID_IGenClientCallback
+0001187c PhS100_860_68.elf IID_IGenClientCallback1
+0001188c PhS100_860_68.elf IID_IIACClientCallback
+0001189c PhS100_860_68.elf IID_IDriverFactoryCallback
+000118ac PhS100_860_68.elf IID_IDiagnosticsCallback
+000118bc PhS100_860_68.elf IID_ISafeConfigCallback
+000118cc PhS100_860_68.elf IID_ISafeConfigCallback1
+000118dc PhS100_860_68.elf IID_ISafeConfigCallback2
+000118ec PhS100_860_68.elf IID_ICRCCallback
+000118fc PhS100_860_68.elf IID_IIOAccessCallback
+0001190c PhS100_860_68.elf IID_CriticalRegionCallback
+0001191c PhS100_860_68.elf IID_VOSExceptionCallback
+0001192c PhS100_860_68.elf IID_DrvCommonCallback
+0001193c PhS100_860_68.elf IID_ProtectedMirroredHeapCallback
+0001194c PhS100_860_68.elf IID_SharedMirroredHeapCallback
+0001195c PhS100_860_68.elf IID_TemporaryMirroredHeapCallback
+0001196c PhS100_860_68.elf IID_IRestrictedVOSCallback
+0001197c PhS100_860_68.elf IID_IVarServerCallback
+0001198c PhS100_860_68.elf IID_IVarServerCallback1
+0001199c PhS100_860_68.elf IID_ISOCKETCallback
+000119ac PhS100_860_68.elf IID_ISOCKETCallback1
+000119bc PhS100_860_68.elf IID_IVOSCallback2
+00014d18 V vtable for CCmPtcDevice PhS100_860_68.elf 
+00014d28 V vtable for CCmPtcDeviceMgr PhS100_860_68.elf 
+00014d38 V vtable for CCollection<CCmPtcDevice> PhS100_860_68.elf 
+00014d48 V vtable for CPhS100 PhS100_860_68.elf 
+00014ec0 V vtable for IPhClient1 PhS100_860_68.elf 
+00014f28 V vtable for IUnknown PhS100_860_68.elf 
+00014f48 V vtable for IPhStatus1 PhS100_860_68.elf 
+00014f70 V vtable for IPhConfig1 PhS100_860_68.elf 
+00014fb8 V vtable for CPhS100PtcBase PhS100_860_68.elf 
+00014fc8 V vtable for CPhS100PtcDiDevice PhS100_860_68.elf 
+00014fd8 V vtable for CPhS100PtcDoDevice PhS100_860_68.elf 
+00014fe8 V vtable for CPhS100PtcMgr PhS100_860_68.elf 
+00014ff8 V vtable for CCollection<CPhS100PtcDiDevice> PhS100_860_68.elf 
+00015008 V vtable for CCollection<CPhS100PtcDoDevice> PhS100_860_68.elf 
+00015018 V vtable for CPhOLU_Base1 PhS100_860_68.elf 
+00015058 V vtable for CPhOLU_Base PhS100_860_68.elf 
+00015090 V vtable for CPhDiagnostics_Base PhS100_860_68.elf 
+000150b8 V vtable for CPhIOAccess_Base PhS100_860_68.elf 
+000150e0 V vtable for CPhStatus_Base1 PhS100_860_68.elf 
+00015108 V vtable for CPhClient_Base1 PhS100_860_68.elf 
+00015170 V vtable for CPhClient_Base PhS100_860_68.elf 
+000151c0 V vtable for CPhConfig_Base1 PhS100_860_68.elf 
+00015208 V vtable for CPhCommon_Base PhS100_860_68.elf 
+00015230 V vtable for IPhClient PhS100_860_68.elf 
+00015280 V vtable for IPhIOAccess PhS100_860_68.elf 
+000152a8 V vtable for IPhDiagnostics PhS100_860_68.elf 
+000152d0 V vtable for IPhOLU PhS100_860_68.elf 
+00015308 V vtable for IPhOLU1 PhS100_860_68.elf 
+00015348 V vtable for IPhCommon PhS100_860_68.elf 
+0001536c PhS100_860_68.elf CRTFuncTabBegin
+0001536c PhS100_860_68.elf scprocs
+00015378 PhS100_860_68.elf printf
+0001537c PhS100_860_68.elf sprintf
+00015380 PhS100_860_68.elf sscanf
+00015384 PhS100_860_68.elf memcpy
+00015388 PhS100_860_68.elf memset
+0001538c PhS100_860_68.elf strcat
+00015390 PhS100_860_68.elf strcmp
+00015394 PhS100_860_68.elf strlen
+00015398 PhS100_860_68.elf strncmp
+0001539c PhS100_860_68.elf strncpy
+000153a0 PhS100_860_68.elf memchr
+000153a4 PhS100_860_68.elf memcmp
+000153a8 PhS100_860_68.elf memmove
+000153ac PhS100_860_68.elf strchr
+000153b0 PhS100_860_68.elf strcoll
+000153b4 PhS100_860_68.elf strcpy
+000153b8 PhS100_860_68.elf strcspn
+000153bc PhS100_860_68.elf strncat
+000153c0 PhS100_860_68.elf strpbrk
+000153c4 PhS100_860_68.elf strrchr
+000153c8 PhS100_860_68.elf strspn
+000153cc PhS100_860_68.elf strstr
+000153d0 PhS100_860_68.elf strtok
+000153d4 PhS100_860_68.elf strxfrm
+000153d8 PhS100_860_68.elf strerror
+000153dc PhS100_860_68.elf pow
+000153e0 PhS100_860_68.elf acos
+000153e4 PhS100_860_68.elf asin
+000153e8 PhS100_860_68.elf atan
+000153ec PhS100_860_68.elf atan2
+000153f0 PhS100_860_68.elf ceil
+000153f4 PhS100_860_68.elf cos
+000153f8 PhS100_860_68.elf cosh
+000153fc PhS100_860_68.elf exp
+00015400 PhS100_860_68.elf fabs
+00015404 PhS100_860_68.elf floor
+00015408 PhS100_860_68.elf fmod
+0001540c PhS100_860_68.elf frexp
+00015410 PhS100_860_68.elf ldexp
+00015414 PhS100_860_68.elf log
+00015418 PhS100_860_68.elf log10
+0001541c PhS100_860_68.elf modf
+00015420 PhS100_860_68.elf sin
+00015424 PhS100_860_68.elf sinh
+00015428 PhS100_860_68.elf sqrt
+0001542c PhS100_860_68.elf tan
+00015430 PhS100_860_68.elf tanh
+00015434 PhS100_860_68.elf acosf
+00015438 PhS100_860_68.elf asinf
+0001543c PhS100_860_68.elf atanf
+00015440 PhS100_860_68.elf atan2f
+00015444 PhS100_860_68.elf ceilf
+00015448 PhS100_860_68.elf cosf
+0001544c PhS100_860_68.elf coshf
+00015450 PhS100_860_68.elf expf
+00015454 PhS100_860_68.elf fabsf
+00015458 PhS100_860_68.elf floorf
+0001545c PhS100_860_68.elf fmodf
+00015460 PhS100_860_68.elf logf
+00015464 PhS100_860_68.elf log10f
+00015468 PhS100_860_68.elf powf
+0001546c PhS100_860_68.elf sinf
+00015470 PhS100_860_68.elf sinhf
+00015474 PhS100_860_68.elf sqrtf
+00015478 PhS100_860_68.elf tanf
+0001547c PhS100_860_68.elf tanhf
+00015480 PhS100_860_68.elf div_r
+00015484 PhS100_860_68.elf labs
+00015488 PhS100_860_68.elf strtol
+0001548c PhS100_860_68.elf free
+00015490 PhS100_860_68.elf abort
+00015494 PhS100_860_68.elf abs
+00015498 PhS100_860_68.elf atof
+0001549c PhS100_860_68.elf atoi
+000154a0 PhS100_860_68.elf atol
+000154a4 PhS100_860_68.elf bsearch
+000154a8 PhS100_860_68.elf ldiv_r
+000154ac PhS100_860_68.elf qsort
+000154b0 PhS100_860_68.elf rand
+000154b4 PhS100_860_68.elf srand
+000154b8 PhS100_860_68.elf strtod
+000154bc PhS100_860_68.elf strtoul
+000154c0 PhS100_860_68.elf malloc
+000154c4 PhS100_860_68.elf __assert
+000154c8 PhS100_860_68.elf time
+000154cc PhS100_860_68.elf asctime
+000154d0 PhS100_860_68.elf gmtime
+000154d4 PhS100_860_68.elf clock
+000154d8 PhS100_860_68.elf ctime
+000154dc PhS100_860_68.elf difftime
+000154e0 PhS100_860_68.elf localtime
+000154e4 PhS100_860_68.elf mktime
+000154e8 PhS100_860_68.elf strftime
+000154ec PhS100_860_68.elf eventcollSem
+000154f0 PhS100_860_68.elf intLock
+000154f4 PhS100_860_68.elf intUnlock
+000154f8 PhS100_860_68.elf _fabs
+000154fc PhS100_860_68.elf _ddec
+00015500 PhS100_860_68.elf _d_mul
+00015504 PhS100_860_68.elf __floatsidf
+00015508 PhS100_860_68.elf _d_sub
+0001550c PhS100_860_68.elf _d_add
+00015510 PhS100_860_68.elf __fixunsdfsi
+00015514 PhS100_860_68.elf __extendsfdf2
+00015518 PhS100_860_68.elf __adddf3
+0001551c PhS100_860_68.elf _dinc
+00015520 PhS100_860_68.elf __fixdfsi
+00015524 PhS100_860_68.elf _d_neg
+00015528 PhS100_860_68.elf _d_dtof
+0001552c PhS100_860_68.elf _f_qtof
+00015530 PhS100_860_68.elf _dpfabs
+00015534 PhS100_860_68.elf _d_dtoq
+00015538 PhS100_860_68.elf _d_div
+0001553c PhS100_860_68.elf __negdf2
+00015540 PhS100_860_68.elf __divdf3
+00015544 PhS100_860_68.elf __muldf3
+00015548 PhS100_860_68.elf _d_dtoi
+0001554c PhS100_860_68.elf _f_ftoq
+00015550 PhS100_860_68.elf __truncdfsf2
+00015554 PhS100_860_68.elf _fp_round
+00015558 PhS100_860_68.elf _d_utod
+0001555c PhS100_860_68.elf _d_qtod
+00015560 PhS100_860_68.elf _d_dtou
+00015564 PhS100_860_68.elf _d_itod
+00015568 PhS100_860_68.elf __subdf3
+0001556c PhS100_860_68.elf _f_ftod
+00015570 PhS100_860_68.elf _d_feq
+00015574 PhS100_860_68.elf __gtdf2
+00015578 PhS100_860_68.elf _d_fne
+0001557c PhS100_860_68.elf _d_cmp
+00015580 PhS100_860_68.elf _d_flt
+00015584 PhS100_860_68.elf _d_cmpe
+00015588 PhS100_860_68.elf __nedf2
+0001558c PhS100_860_68.elf _d_fgt
+00015590 PhS100_860_68.elf _d_fle
+00015594 PhS100_860_68.elf _d_fge
+00015598 PhS100_860_68.elf _fdec
+0001559c PhS100_860_68.elf _f_add
+000155a0 PhS100_860_68.elf __divsf3
+000155a4 PhS100_860_68.elf __fixsfsi
+000155a8 PhS100_860_68.elf __subsf3
+000155ac PhS100_860_68.elf _finc
+000155b0 PhS100_860_68.elf _f_neg
+000155b4 PhS100_860_68.elf _f_sub
+000155b8 PhS100_860_68.elf _f_itof
+000155bc PhS100_860_68.elf _fabsf
+000155c0 PhS100_860_68.elf _f_utof
+000155c4 PhS100_860_68.elf _fpfabs
+000155c8 PhS100_860_68.elf __floatsisf
+000155cc PhS100_860_68.elf _f_div
+000155d0 PhS100_860_68.elf __negsf2
+000155d4 PhS100_860_68.elf __mulsf3
+000155d8 PhS100_860_68.elf _f_ftoi
+000155dc PhS100_860_68.elf _f_mul
+000155e0 PhS100_860_68.elf __fixunssfsi
+000155e4 PhS100_860_68.elf _f_ftou
+000155e8 PhS100_860_68.elf __addsf3
+000155ec PhS100_860_68.elf _f_feq
+000155f0 PhS100_860_68.elf _f_flt
+000155f4 PhS100_860_68.elf _f_fle
+000155f8 PhS100_860_68.elf __nesf2
+000155fc PhS100_860_68.elf __gtsf2
+00015600 PhS100_860_68.elf _f_fge
+00015604 PhS100_860_68.elf _f_fgt
+00015608 PhS100_860_68.elf _f_fne
+0001560c PhS100_860_68.elf _f_cmp
+00015610 PhS100_860_68.elf _f_cmpe
+00015614 PhS100_860_68.elf ldexpf
+00015618 PhS100_860_68.elf modff
+0001561c PhS100_860_68.elf frexpf
+00015620 PhS100_860_68.elf exadd
+00015624 PhS100_860_68.elf exmul
+00015628 PhS100_860_68.elf sigmax
+0001562c PhS100_860_68.elf exdiv
+00015630 PhS100_860_68.elf exsub
+00015634 PhS100_860_68.elf __eqdf2
+00015638 PhS100_860_68.elf __ltdf2
+0001563c PhS100_860_68.elf __lesf2
+00015640 PhS100_860_68.elf __ledf2
+00015644 PhS100_860_68.elf __eqsf2
+00015648 PhS100_860_68.elf __ltsf2
+0001564c PhS100_860_68.elf __gesf2
+00015650 PhS100_860_68.elf __gedf2
+0001565c PhS100_860_68.elf fprintf
+00015660 PhS100_860_68.elf __stdout
+00015664 PhS100_860_68.elf __stderr
+00015668 PhS100_860_68.elf setjmp
+0001566c PhS100_860_68.elf longjmp
+00015670 PhS100_860_68.elf operator new[](unsigned int)
+00015674 PhS100_860_68.elf operator delete[](void*)
+00015678 PhS100_860_68.elf __floatunsisf
+0001567c PhS100_860_68.elf __floatunsidf
+00015680 PhS100_860_68.elf CRTFuncTabEnd
+00015680 PhS100_860_68.elf ecprocs
+00015680 PhS100_860_68.elf etext
+00015680 PhS100_860_68.elf sgot2
+00015bc4 PhS100_860_68.elf egot2
+00015bc4 PhS100_860_68.elf sfixup
+0001623c PhS100_860_68.elf efixup
+0001623c PhS100_860_68.elf restart
+00016240 PhS100_860_68.elf CPhS100PtcBase::g_pHeapCallback
+00016244 PhS100_860_68.elf CPhS100PtcBase::g_pVOSCallback
+00016248 PhS100_860_68.elf CPhS100PtcBase::g_pSysUtilCallback
+0001624c PhS100_860_68.elf CPhS100PtcBase::g_pSysClockCallback
+00016250 PhS100_860_68.elf CPhS100PtcBase::g_pGenClientCallback
+00016254 PhS100_860_68.elf CPhS100PtcBase::g_pIVOSExceptionCallback
+00016258 PhS100_860_68.elf CPhS100PtcBase::g_pICriticalRegionCallback
+0001625c PhS100_860_68.elf CPhS100PtcBase::g_pInstance
+0001628c PhS100_860_68.elf CPhS100PtcBase::m_TagCPhS100Ptc
+00016290 PhS100_860_68.elf g_NrOfMemAreas
+00016294 PhS100_860_68.elf g_TotalMemSize
+00016298 PhS100_860_68.elf g_ObjectMemSize
+0001629c PhS100_860_68.elf CPhS100PtcMgr::ThreadWork()::LastDebugCmd
+000162a0 PhS100_860_68.elf CPhS100::GetStatus(trHWFAddress, teHWFUnitKind, unsigned long*, unsigned long*, teHWFErrorCode*)::prevErrCode
+000162a4 PhS100_860_68.elf CMirroredObject::c_pMirroredObjectMgrImpl
+000162a8 PhS100_860_68.elf CMirroredObjectAgent::c_pHeapCallback
+000162ac PhS100_860_68.elf CMirroredObjectAgent::c_AgentTag
+000162b0 V CComCoClass<CPhS100, &(CLSID_CPhS100)>::m_HeapTag PhS100_860_68.elf 
+000162b4 PhS100_860_68.elf CPhS100::ConfigureIoUnit(trHWFAddress const*, unsigned int*, teHWFErrorCode*)::stulConnectionIdForDummyRegisteration
+000162b8 PhS100_860_68.elf PHproperties
+000162c0 PhS100_860_68.elf gCI856taskNames
+00016300 PhS100_860_68.elf useEXEHEAD
+</SYMBOLS>

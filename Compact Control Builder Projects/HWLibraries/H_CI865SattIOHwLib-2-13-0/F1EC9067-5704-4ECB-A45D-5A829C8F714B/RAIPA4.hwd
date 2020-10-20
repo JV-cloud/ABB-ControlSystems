@@ -1,0 +1,78 @@
+HWUnitInfo (* RAIPA4 *)
+   HWUnitID {A57DCB75-9DA5-46F3-9A6C-C295F303B0A6}
+   Description "RAIPA4"
+   Information "Counter input module, 4 channels"
+   Icons RackIOType
+   Attributes IoUnit 
+   Channels
+      ChannelInfo
+         Number 0
+         ChannelName "Input 0"
+         Datatype Int_In
+         Routine 301
+         CopyParameters 0 0 16#30001 16#8 16#FF00 16#0
+      End ChannelInfo
+      ChannelInfo
+         Number 1
+         ChannelName "Input 1"
+         Datatype Int_In
+         Routine 301
+         CopyParameters 0 0 16#30001 16#0 16#00FF 16#0
+      End ChannelInfo
+      ChannelInfo
+         Number 2
+         ChannelName "Input 2"
+         Datatype Int_In
+         Routine 301
+         CopyParameters 0 0 16#30002 16#8 16#FF00 16#0
+      End ChannelInfo
+      ChannelInfo
+         Number 3
+         ChannelName "Input 3"
+         Datatype Int_In
+         Routine 301
+         CopyParameters 0 0 16#30002 16#0 16#00FF 16#0
+      End ChannelInfo
+      ChannelInfo
+         Number 4
+         ChannelName "Input 0-1"
+         Datatype Int_In
+         Routine 300
+         CopyParameters 0 0 16#30001 16#0
+      End ChannelInfo
+      ChannelInfo
+         Number 5
+         ChannelName "Input 2-3"
+         Datatype Int_In
+         Routine 300
+         CopyParameters 0 0 16#30002 16#0
+      End ChannelInfo
+      ChannelInfo
+         Number 6
+         ChannelName "UnitStatus"
+         Datatype Status_In
+         Routine 900
+         CopyParameters 0 0 16#50000
+      End ChannelInfo
+   End Channels
+   IoUnitStatus
+      StatusType WrongModuleType 
+      StatusData 16#30000 16#1FFF 16#05 16#41
+      StatusType ModuleMissing
+      StatusData 16#30000 16#8000 16#00 16#0
+      StatusType IoError
+      StatusData 16#30000 16#2000 16#00 16#0
+   End IoUnitStatus
+   Configuration
+      ConfigInfo
+         ModuleKey   16#41
+         InAreaSize  3
+         OutAreaSize 0
+         InWord 
+            WORD 16#A041 0
+            WORD 0       1 
+            WORD 0       2
+      End ConfigInfo
+   End Configuration
+  HWUnitInfoCRC 16#7A63
+End HWUnitInfo (* RAIPA4 *)

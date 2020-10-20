@@ -1,0 +1,532 @@
+HWUnitInfo (* CI854 CIDP/DPV1 2004-09-10/01 *)
+  HWUnitID {27B399D7-1430-4457-83C4-FF5BCDD12CC0}
+  Description "CI854"
+  Information "Communication Interface Profibus-DPV1"
+  Icons AC800ComType
+  Attributes SystemUnit AdapterUnit
+  ModuleType 16#5005
+
+(* Changes: 2001-12-12:  Valid range for master address changes from 0..125 to 1..125 *)
+(*          2002-01-09:  New user defined textes *)
+(*          2002-01-11:  InterfaceInfo, CIGIO deleted *)
+(*          2002-02-11:  Range for min. slave intervall is in units of 100 microseconds *)
+(*          2002-02-15:  Changes according PRC #4664 *)
+(*          2002-02-18:  Removed keyword AutoAttach from the Attributes *)
+(*          2002-02-19:  Changed to new syntax 2.0 (changed CLSID/IID to CLSID_CB/CLSID_CTRL) *)
+(*          2002-04-08:  Unit of "Data control time" is 10ms, therefore default value set to 125; ExtendedStatus added *)
+(*          2002-06-11:  Added CI840 in SubUnitTypes, Tracker #5971 *)  
+(*          2002-06-19:  Added "CompileType HWConfig" to the parameter "Data Control Time" and "Line redundancy" *)
+(*          2002-08-01:  Upper limit for G = 100, Default = 1; Lower limit of min. TSDR and max. TSDR = 11 *)
+(*          2003-04-03:  Redundancy information added *)
+(*          2003-04-30:  User defined message text for redundancy*)
+(*          2003-08-25:  Section UnitStatusSeverity and ExternalConfigInfo added, PRC #9028 *)
+(*          2003-08-29:  Trigger event/alarm and severity introduced *)
+(*          2003-09-12:  SupportSwitchover in RedundancyInfo section deleted, PRC #9336 *)
+(*          2003-10-01:  Disable the "ConfigOnDemand" until the version handling has been implemented correctly, PRC #9986 *)
+(*          2003-10-08:  Added text for ExtendedStatus18 and ExtendedStatus19, PRC #10323 *)
+(*          2003-10-20:  UnitStatusSeverity updated according to the mail from Jonas Ludvigsson 10/17/2003 *)
+(*          2003-10-29:  Changed HWUnitID for subunit ABB Drives\NPBA-12 CR# 11167, jludvigs *)
+(*          2003-10-29:  Removed includes of ABB Drives CR #11167, jludvigs *)
+(*          2003-11-25:  Added the ABB Drives again, CR #11766, jludvigs *)
+(*          2004-01-05:  All unit status information according the backup unit set to "warning", PRC #10993 *)
+(*          2004-01-12:  "ConfigOnDemand" enabled, PRC #11062 *)
+(*          2004-01-22:  All "CompileType HWConfig" removed from the ParamInfos. The PH will set the flags in Analyze() *)
+(*          2004-01-29:  Changed Consequence in RedundancyInfo from  HWConfig into IOConfig *)
+(*          2004-02-09:  ExternalConfigInfo removed due to problems with the framwork, PRC #12379 *)
+(*          2004-02-17:  Changed "error on CEX bus communication" from Error to Warning, PRC #12492 *)
+(*          2004-04-26:  New S800 slva type CI801 introduced *)
+(*          2004-09-10:  max. TSDR set to 37, PRC #14774 *)
+(*          2006-02-13:  Alarm/Event and severities changed according to RRC-36, document RRC-4428 ... *)
+(*          2006-02-21:  ... except for TTO and SYN because they may appear cyclically with a bad PROFIBUS line *)
+(*                           (agreed by Anders Mansson via phone, February 21st 2006 *)
+(*          2014-11-20: "Duplicate Slave Address" changed to "Duplicate Address", PRC:#56206 *)
+(*          2014-11-20:  Removed Extended status bits 20, 21 and 22 , PRC :#56207  *)
+(*          2014-11-20:  Added "Bus disturbance detected" Extended status having warning severity WI:99717 in CIT_IN_CMS *)
+(*          2018-10-03:  Bug 88800: Unit status of CI854 should be spacific while using CI854A or CI854B *)
+
+  InterfaceInfo
+    Interface CIGInterface
+    CLSID_CB   {70AC2B68-4487-48e3-9957-EA25FD20A55F}
+    CLSID_CTRL {7a59948b-4432-4d69-9f66-2ca7ed7f9db5}
+    HWConfig  Fail
+  End InterfaceInfo
+
+  RedundancyInfo 
+    RedundancyIcon  RedundantCI
+    Consequence     IOConfig (* HWConfig *)
+  End RedundancyInfo
+
+  (* ExternalConfigInfo *)
+    (* Only one of the following two keywords is allowed at a time, either ConfigOnDemand OR ConfigAtDownload *)
+    (* ConfigOnDemand *)
+    (* ConfigAtDownload *)
+  (* End ExternalConfigInfo *)
+
+  DiscreteNumbers  (*Profibus slave addresses*)
+    2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
+    19 20 21 22 23 24 25 26 27 28 29 30 31 32 33
+    34 35 36 37 38 39 40 41 42 43 44 45 46 47 48
+    49 50 51 52 53 54 55 56 57 58 59 60 61 62 63
+    64 65 66 67 68 69 70 71 72 73 74 75 76 77 78
+    79 80 81 82 83 84 85 86 87 88 89 90 91 92 93
+    94 95 96 97 98 99
+    100 101 102 103 104 105 106 107 108 109 110
+    111 112 113 114 115 116 117 118 119 120 121
+    122 123 124 125
+  End DiscreteNumbers
+
+  SubUnitTypes
+    SubMenu "S800"
+      HWUnitID {D012492C-4784-48ad-BBC9-75FAC7FBB57B} (* CI830 *)
+      HWUnitID {C201BA2D-C0C2-4ce1-B490-CE320FA12BC5} (* CI840 *)
+      HWUnitID {B7286900-25AF-4502-B89D-58B5D74B79DE} (* CI801 *)
+    SubMenuEnd    
+    HWUnitID {900A39C0-CC72-11d5-B504-00C04F11556C}   (* S900 *)
+    SubMenu "S200"
+      HWUnitID {917DF055-C97F-499a-B3BC-F37A6C792B21} (* S200 APB12 *)
+    SubMenuEnd    
+    SubMenu "ABB Drives"
+      HWUnitID 16#00850812 (* RPBA-01 DPV1 *) (* {FAEB4F71-C13F-45b0-AD26-A0818DB4521D}  RPBA-01 *)
+      HWUnitID 16#00856012 (* NPBA-12 *)      (* {FD63275A-C3C6-45d7-8172-BF003F7949E0}  NPBA-12 *)
+    SubMenuEnd    
+    SubMenu "GSD Import"
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+      HWUnitID 16#00000000 (* Empty slot *)
+    SubMenuEnd    
+  End SubUnitTypes
+
+  Parameters
+    ParamInfo (*FDL_Add*)
+      Name NODEADDRESS
+      Description "Node address (FDL_Add)"
+      Datatype INT
+      Default 1
+      ParValIndex 0
+      ParamType Numbered 1
+    End ParamInfo
+    ParamInfo (*Baut_rate*)
+      Name BAUDRATE
+      Description "Baudrate"
+      Datatype ENUM
+      Default 5
+      ParValIndex 1
+      ParamType Numbered 2
+    End ParamInfo
+    ParamInfo (*TSL*)
+      Name SLOTTIME
+      Description "Slot time (TSL)"
+      Datatype INT
+      Default 300
+      ParValIndex 2
+      ParamType Numbered 3
+    End ParamInfo
+    ParamInfo (* min. TSDR*)
+      Name MINSTATIONDELAY
+      Description "Min station delay (min TSDR)"
+      Datatype INT
+      Default 11
+      ParValIndex 3
+      ParamType Numbered 4
+    End ParamInfo
+    ParamInfo (*max TSDR*)
+      Name MAXSTATIONDELAY
+      Description "Max station delay (max TSDR)"
+      Datatype INT
+      Default 150
+      ParValIndex 4
+      ParamType Numbered 5
+    End ParamInfo
+    ParamInfo (*TQui*)
+      Name QUIETTIME
+      Description "Quiet time (TQui)"
+      Datatype INT
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 6
+    End ParamInfo
+    ParamInfo (*Tset*)
+      Name SETUPTIME
+      Description "Setup time (TSet)"
+      Datatype INT
+      Default 20
+      ParValIndex 6
+      ParamType Numbered 7
+    End ParamInfo
+    ParamInfo (*TTR*)
+      Name TTR
+      Description "Target rotation time (TTR)"
+      Datatype INT
+      Default 20000
+      ParValIndex 7
+      ParamType Numbered 8
+    End ParamInfo
+    ParamInfo (*G*)
+      Name GAPFACTOR
+      Description "Gap factor (G)"
+      Datatype INT
+      Default 1
+      ParValIndex 8
+      ParamType Numbered 9
+    End ParamInfo
+    ParamInfo (*HSA*)
+      Name HIGHESTSTATIONADDRESS
+      Description "Highest station address (HSA)"
+      Datatype INT
+      Default 126
+      ParValIndex 9
+      ParamType Numbered 10
+    End ParamInfo
+    ParamInfo (*max_retry_limit*)
+      Name MAXRETRYLIMIT
+      Description "Max retry limit"
+      Datatype INT
+      Default 3
+      ParValIndex 10
+      ParamType Numbered 11
+    End ParamInfo
+    ParamInfo (*Bp_Flag*)
+      Name BPFLAG
+      Description "BP flag"
+      ReadOnlyVisible
+      Datatype ENUM
+      Default 0
+      ParValIndex 11
+      ParamType Numbered 12
+    End ParamInfo
+    ParamInfo (*Min_Slave_Interval*)
+      Name MIN_SLAVE_INTERVAL
+      Description "Min slave interval"
+      Datatype INT
+      Default 20
+      ParValIndex 12
+      ParamType Numbered 13
+    End ParamInfo
+    ParamInfo (*Poll_Timeout*)
+      Name POLLTIMEOUT
+      Description "Poll time out"
+      Datatype INT
+      Default 50
+      ParValIndex 13
+      ParamType Numbered 14
+    End ParamInfo
+    ParamInfo (*Data_Control_Time*)
+      Name DATACTRLTIME
+      Description "Data control time"
+      Datatype INT
+      Default 125
+      ParValIndex 14
+      ParamType Numbered 15
+    End ParamInfo
+    ParamInfo 
+      Name WATCHDOGTIME
+      Description "Watchdog time"
+      Datatype INT
+      Default 200
+      ParValIndex 19
+      ParamType Numbered 16
+    End ParamInfo
+    ParamInfo (*line redundancy*)
+      Name LINEREDCY
+      Description "Line redundancy"
+      Datatype ENUM
+      Default 0
+      ParValIndex 15
+      ParamType Numbered 17
+    End ParamInfo
+    ParamInfo (*delta ttr*)
+      Name DELTATTR
+      Description "Delta TTR"
+      Datatype Int
+      Default 0
+      ParValIndex 16
+      ParamType Numbered 18
+    End ParamInfo
+    ParamInfo (*calculation method*)
+      Name CALCMETHOD
+      Description "Calculation method"
+      Datatype ENUM
+      Default 0
+      ParValIndex 17
+      ParamType Numbered 19
+    End ParamInfo
+  End Parameters
+
+  ParValList
+    ParVal (*FDL_Add*)
+      ParValIndex 0
+      INT 1 125 1 125
+    End ParVal
+    ParVal (*baut_rate*)
+      ParValIndex 1
+      UnitText    "bit/s"
+      ENUM
+      "9.6K"   0
+      "19.2K"  1
+      "93.75K" 2
+      "187.5K" 3
+      "500K"   4
+      "1.5M"   6
+      "3M"     7
+      "6M"     8
+      "12M"    9
+    End ParVal
+    ParVal (*TSL*)
+      ParValIndex 2
+      UnitText    "tbit"
+      INT 37 16383 37 16383
+    End ParVal
+    ParVal (*min.TSDR*)
+      ParValIndex 3
+      UnitText    "tbit"
+      INT 11 1023 11 1023
+    End ParVal
+    ParVal (*max. TSDR*)
+      ParValIndex 4
+      UnitText    "tbit"
+      INT 37 65535 37 65535
+    End ParVal
+    ParVal (*TOui*)
+      ParValIndex 5
+      UnitText    "tbit"
+      INT 0 127 0 127
+    End ParVal
+    ParVal (*TSet*)
+      ParValIndex 6
+      UnitText    "tbit"
+      INT 1 255 1 255
+    End ParVal
+    ParVal (*TTR*)
+      ParValIndex 7
+      UnitText    "tbit"
+      INT 255 999999 255 999999
+    End ParVal
+    ParVal (*GAP*)
+      ParValIndex 8
+      INT 1 100 1 100
+    End ParVal
+    ParVal (*HSA*)
+      ParValIndex 9
+      INT 1 126 1 126
+    End ParVal
+    ParVal (*max_retry_limit*)
+      ParValIndex 10
+      INT 0 7 0 7
+    End ParVal
+    ParVal (*Bp_Flag*)
+      ParValIndex 11
+      ENUM
+      "Auto Clear OFF" 0
+      "Auto Clear ON"  128
+    End ParVal
+    ParVal (*min Slave interval*)
+      ParValIndex 12
+      UnitText    "100us"
+      INT 1 65535 1 65535
+    End ParVal
+    ParVal (*Poll time out *)
+     ParValIndex 13
+     UnitText    "ms"
+     INT 1 65535 1 65535
+    End ParVal
+    ParVal (*Data_Contol_Time*)
+      ParValIndex 14
+      UnitText    "10ms"
+      INT 1 65535 1 65535
+    End ParVal
+    ParVal (*Line redundancy*)
+      ParValIndex 15
+      ENUM
+      "Disabled" 0
+      "Enabled"  1
+    End ParVal
+    ParVal (*delta ttr*)
+      ParValIndex 16
+      UnitText    "%"
+      INT 0 100 0 100
+    End ParVal
+    ParVal (*calculation method*)
+      ParValIndex 17
+      ENUM
+      "Actual value based" 0
+      "Minimum value based" 1
+    End ParVal
+    ParVal (*Watchdog*)
+      ParValIndex 19
+      UnitText    "ms"
+      INT 10 650250 10 650250
+    End ParVal
+  End ParValList
+
+  Channels
+    ChannelInfo
+      Number 0
+      ChannelName "UnitStatus"
+      Datatype Status_In
+      Routine 900
+      CopyParameters 0 0 16#50000
+    End ChannelInfo
+  End Channels
+
+  UnitStatusText
+    DeviceSpecific1  "Firmware needs to be reloaded"           (* e.g. Init missing, Prog missing... *)
+    DeviceSpecific2  "Hardware failure Primary"               (* e.g. Ramtest fail, re/configuration failure ... *)
+    DeviceSpecific3  "No activity on PROFIBUS line B"
+    DeviceSpecific4  "No activity on PROFIBUS line A"
+    DeviceSpecific5  "Duplicate address"
+    DeviceSpecific6  "Communication memory obtained too long"  (* CI854 software isn't able to read/write process date in time *)
+    DeviceSpecific7  "PROFIBUS com. failure between Primary and Backup"
+    DeviceSpecific8  "Error in PROFIBUS master configuration"  (* Always ON after restart on an empty CI854 *)
+    DeviceSpecific9  "Hardware watchdog on Primary expired"
+    DeviceSpecific10 "Wrong pair of CIs used for redundancy"
+    ExtendedStatus1  "Timeout on bus, maybe duplicate slave address (TTO)"
+    ExtendedStatus2  "Bus synchronization failure, check hardware (SYN)"
+    ExtendedStatus3  "Taken out of ring by another master, check system conf."
+    ExtendedStatus4  "Fatal medium access error"
+    ExtendedStatus5  "Fatal hardware error"
+    ExtendedStatus6  "All slaves failed"
+    ExtendedStatus7  "Hardware configuration error on backup"
+    ExtendedStatus8  "Backup device not found"
+    ExtendedStatus9  "I/O configuration error on backup"
+    ExtendedStatus10 "I/O connection error on backup"
+    ExtendedStatus11 "Hardware watchdog on Backup expired"
+    ExtendedStatus12 "Error in PROFIBUS master configuration of Backup"
+    ExtendedStatus13 "No activity on PROFIBUS line A of Backup"
+    ExtendedStatus14 "No activity on PROFIBUS line B of Backup"
+    ExtendedStatus15 "Hardware failure Backup"
+    ExtendedStatus16 "Firmware needs to be reloaded on Backup"
+    ExtendedStatus17 "CEX-Bus com. failure between Primary and Backup"
+    ExtendedStatus18 "Fatal error on Primary detected"
+    ExtendedStatus19 "Fatal error on Backup detected"
+    ExtendedStatus20 "Bus disturbance detected"
+  End UnitStatusText
+
+  UnitStatusSeverity
+    DeviceSpecific1  GeneralError      TriggerAlarm SeverityMedium   (* Firmware needs to be reloaded *)
+    DeviceSpecific2  GeneralError      TriggerAlarm SeverityHigh     (* Hardware failure Primary *)
+    DeviceSpecific3  GeneralWarning    TriggerAlarm SeverityMedium   (* No activity on PROFIBUS line B *)
+    DeviceSpecific4  GeneralWarning    TriggerAlarm SeverityMedium   (* No activity on PROFIBUS line A *)
+    DeviceSpecific5  GeneralWarning    TriggerAlarm SeverityMedium   (* Duplicate address *)
+    DeviceSpecific6  GeneralWarning    TriggerEvent SeverityHigh     (* Communication memory obtained too long *)
+    DeviceSpecific7  GeneralWarning    TriggerAlarm SeverityMedium   (* PROFIBUS com. failure between Primary and Backup *)
+    DeviceSpecific8  GeneralError      TriggerAlarm SeverityMedium   (* Error in PROFIBUS master configuration *)
+    DeviceSpecific9  GeneralError      TriggerAlarm SeverityMedium   (* Hardware watchdog on Primary expired *)
+    DeviceSpecific10 GeneralWarning    TriggerAlarm SeverityMedium   (* Wrong pair of CIs used for Redundancy *)
+    ExtendedStatus1  GeneralWarning                                  (* Timeout on bus, maybe duplicate slave address (TTO) *)
+    ExtendedStatus2  GeneralWarning                                  (* Bus synchronization failure, check hardware (SYN) *)
+    ExtendedStatus3  GeneralWarning    TriggerEvent SeverityLow      (* Taken out of ring by another master, check system conf. *)
+    ExtendedStatus4  GeneralWarning    TriggerEvent SeverityLow      (* Fatal medium access error *)
+    ExtendedStatus5  GeneralWarning    TriggerEvent SeverityLow      (* Fatal hardware error *)
+    ExtendedStatus6  GeneralWarning    TriggerAlarm SeverityMedium   (* All slaves failed *)
+    ExtendedStatus7  GeneralWarning    TriggerEvent SeverityLow      (* Hardware configuration error on backup *)
+    ExtendedStatus8  GeneralWarning    TriggerEvent SeverityLow      (* Backup device not found *)
+    ExtendedStatus9  GeneralWarning    TriggerAlarm SeverityMedium   (* I/O configuration error on backup *)
+    ExtendedStatus10 GeneralWarning    TriggerAlarm SeverityMedium   (* I/O connection error on backup *)
+    ExtendedStatus11 GeneralWarning    TriggerEvent SeverityLow      (* Hardware watchdog on Backup expired *)
+    ExtendedStatus12 GeneralWarning    TriggerEvent SeverityLow      (* Error in PROFIBUS master configuration of Backup *)
+    ExtendedStatus13 GeneralWarning    TriggerAlarm SeverityMedium   (* No activity on PROFIBUS line A of Backup *)
+    ExtendedStatus14 GeneralWarning    TriggerAlarm SeverityMedium   (* No activity on PROFIBUS line B of Backup *)
+    ExtendedStatus15 GeneralWarning    TriggerAlarm SeverityMedium   (* Hardware failure Backup *)
+    ExtendedStatus16 GeneralWarning    TriggerAlarm SeverityMedium   (* Firmware needs to be reloaded on Backup *)
+    ExtendedStatus17 GeneralWarning    TriggerAlarm SeverityMedium   (* CEX-Bus com. failure between Primary and Backup *)
+    ExtendedStatus18 GeneralError      TriggerAlarm SeverityHigh     (* Fatal error on Primary detected *)
+    ExtendedStatus19 GeneralWarning    TriggerAlarm SeverityMedium   (* Fatal error on Backup detected *)
+    ExtendedStatus20 GeneralWarning    TriggerAlarm SeverityMedium   (* Bus disturbance detected - No I/O cycles running*)
+
+  End UnitStatusSeverity
+
+  HWUnitInfoCRC 16#787E
+End HWUnitInfo(*CI854*)

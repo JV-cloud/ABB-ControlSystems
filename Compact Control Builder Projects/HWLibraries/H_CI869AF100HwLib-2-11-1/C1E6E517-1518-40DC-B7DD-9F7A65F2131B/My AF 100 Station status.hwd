@@ -1,0 +1,196 @@
+(*--------------------------------------------------------------------------------------*)
+(* Revision History:                                                                    *)
+(* 2009-12-07 [XAAT/sebjjoh2]                                                           *)
+(* - #39384 Added file header, removed leading (unused) zeros from copy routine         *)
+(*          parameters and removed attributes obsolete in SV5.1                         *)
+(*                                                                                      *)
+(* 2010-04-12 [XAAT/sebjjoj2]                                                           *)  
+(*  -#41828 Added space between AF and 100 in description, information and Contents.    *)
+(*--------------------------------------------------------------------------------------*)
+
+FileHeader
+   Contents               "My AF 100 Station status"
+   Date                   "2009-12-07"
+   Version                "2.0-0"
+   RequiredSyntaxVersion  "3.8"
+End FileHeader
+
+HWUnitInfo  (* MyAF100 Station with Status *)
+   HWUnitID {1DC8BC9F-C900-4032-81C2-15CD5BD22ACB}
+   Description "My AF 100 Station status"
+   Information "Represent this AF 100 station status."
+   Icons S800FciType
+
+   InterfaceInfo
+     Interface CIGInterface
+     IoSysType CIGIO
+     CLSID_CB   {B74AAC83-4502-4a6b-BE9E-E403B0921092} (* CLSID_CB   = GUID for AF100 Protocol handler (PH) in Control builder CB *)
+     CLSID_CTRL {25799801-FB26-4b0a-8762-90F005C39CCF} (* CLSID_CTRL = GUID for AF100 Protocol handler (PH) in Controller *)
+     HWConfig Fail     (* Change of net parameters affect subunits *)
+   End InterfaceInfo
+
+   ConnectionInfo
+      ConnectType OwnUnit  (* was AllUnits *)
+      IOConnect Fail
+      IOConfig NoFail
+   End ConnectionInfo 
+
+   Parameters
+      ParamInfo 
+         Name HWTYPE                  (* Let this parameter always be the 1st parameter i.e "ParamType Numbered 1" *)
+         Description "HW unit type"
+         Hidden
+         CompileType HWConfig
+         Datatype INT
+         Default 32              (* Bit 6 *)
+         ParValIndex 0
+         ParamType Numbered 1
+      End ParamInfo
+      ParamInfo 
+         Name SAFESTATE
+         Description "SafeState"
+         Hidden
+         CompileType IOConfig
+         Datatype ENUMCONTROL
+         Default 1
+         ParValIndex 1
+         ParamType Numbered 2
+         SafeStateInfo
+           SafeStateType SafeStateControl
+           SafeStateRef Connection
+         End SafeStateInfo
+      End ParamInfo 
+  End Parameters
+
+  ParValList
+     ParVal
+        ParValIndex 0
+        INT 0 2147483647 0 2147483647
+     End ParVal
+     ParVal
+        ParValIndex 1
+        ENUMCONTROL
+        "Resetoutputs"  0 ResetValue
+        "Holdlaststate" 1 HoldLastValue
+        "Safevalues"    2 UseSafeValue
+     End ParVal
+   End ParValList
+
+   Channels
+      (* BOOL *)
+      ChannelInfo
+         Number 1 
+         ChannelName "Active"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 16#30001 16#1
+      End ChannelInfo
+      ChannelInfo
+         Number 2
+         ChannelName "Severe error"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 16#30001 16#2
+      End ChannelInfo
+      ChannelInfo
+         Number 3
+         ChannelName "HW error"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 16#30001 16#4
+      End ChannelInfo
+      ChannelInfo
+         Number 4
+         ChannelName "SW error"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 16#30001 16#8
+      End ChannelInfo
+      ChannelInfo
+         Number 5
+         ChannelName "Peripheral HW error"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 16#30001 16#10
+      End ChannelInfo
+      ChannelInfo
+         Number 6
+         ChannelName "Process error"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 16#30001 16#20
+      End ChannelInfo
+      ChannelInfo
+         Number 7
+         ChannelName "Redundancy power A Failure"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 16#30001 16#200
+      End ChannelInfo
+      ChannelInfo
+         Number 8
+         ChannelName "Redundancy power B Failure"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 16#30001 16#400
+      End ChannelInfo
+      ChannelInfo
+         Number 9
+         ChannelName "General station error"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 16#30001 16#4000
+      End ChannelInfo
+      ChannelInfo
+         Number 10
+         ChannelName "General station warning"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 16#30001 16#8000
+      End ChannelInfo
+
+      (* Device Status *)
+      ChannelInfo
+         Number 20
+         ChannelName "UnitStatus"
+         Datatype Status_In
+         Routine 900
+         CopyParameters 16#50000
+      End ChannelInfo
+   End Channels
+
+   UnitStatusText
+     DeviceSpecific1    "Source not polled"
+     DeviceSpecific3    "Owned by other station"
+     DeviceSpecific4    "Bus full"
+     DeviceSpecific6    "Station status valid"
+   End UnitStatusText
+
+   UnitStatusSeverity
+     DeviceSpecific1   GeneralError
+     DeviceSpecific3   GeneralError
+     DeviceSpecific4   GeneralError
+   End UnitStatusSeverity
+
+   Configuration
+      ConfigInfo
+         ModuleKey    16#0203
+         InAreaSize   2
+         InWord 
+            WORD 0       0
+            WORD 0       1
+      End ConfigInfo
+
+      ConfigInfo
+         EmptyConfig
+         ModuleKey     16#FFFF
+         InAreaSize    2
+         InWord
+            WORD 0       0
+            WORD 0       1
+      End ConfigInfo
+
+   End Configuration
+
+  HWUnitInfoCRC 16#45D5
+End HWUnitInfo  (* MyAF100 Station Status *)

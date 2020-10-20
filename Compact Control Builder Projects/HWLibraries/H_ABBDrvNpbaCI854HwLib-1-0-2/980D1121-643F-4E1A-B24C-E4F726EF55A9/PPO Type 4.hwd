@@ -1,0 +1,136 @@
+
+
+
+(*========================================================*)
+(*                                                        *)
+(*            PPO-04, 0 PKW | 6 PZD DPV1                  *)
+(*                                                        *)
+(*========================================================*)
+
+HWUnitInfo
+  HWUnitID         16#04856012
+  Description      "PPO Type 4"
+  Information      "PPO Type 4"
+  Icons            ProtocolType
+  Attributes       IoUnit 
+
+  Channels
+    ChannelInfo
+      Number            0
+      ChannelName      "Status"
+      Datatype          Int_In
+      Routine           310
+      CopyParameters    16#0 16#0 16#30000 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number            1
+      ChannelName      "Speed Actual"
+      Datatype          Int_In
+      Routine           310
+      CopyParameters    16#0 16#0 16#30001 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number            2
+      ChannelName      "Actual 3"
+      Datatype          Int_In
+      Routine           310
+      CopyParameters    16#0 16#0 16#30002 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number            3
+      ChannelName      "Actual 4"
+      Datatype          Int_In
+      Routine           310
+      CopyParameters    16#0 16#0 16#30003 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number            4
+      ChannelName      "Actual 5"
+      Datatype          Int_In
+      Routine           310
+      CopyParameters    16#0 16#0 16#30004 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number            5
+      ChannelName      "Actual 6"
+      Datatype          Int_In
+      Routine           310
+      CopyParameters    16#0 16#0 16#30005 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number            6
+      ChannelName      "Command"
+      Datatype          Int_Out
+      Routine           410
+      CopyParameters    16#0 16#0 16#40000 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number            7
+      ChannelName      "Speed Ref"
+      Datatype          Int_Out
+      Routine           410
+      CopyParameters    16#0 16#0 16#40001 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number            8
+      ChannelName      "Ref 3"
+      Datatype          Int_Out
+      Routine           410
+      CopyParameters    16#0 16#0 16#40002 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number            9
+      ChannelName      "Ref 4"
+      Datatype          Int_Out
+      Routine           410
+      CopyParameters    16#0 16#0 16#40003 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number            10
+      ChannelName      "Ref 5"
+      Datatype          Int_Out
+      Routine           410
+      CopyParameters    16#0 16#0 16#40004 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number            11
+      ChannelName      "Ref 6"
+      Datatype          Int_Out
+      Routine           410
+      CopyParameters    16#0 16#0 16#40005 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number            12
+      ChannelName      "UnitStatus"
+      Datatype          Status_In
+      Routine           900
+      CopyParameters    16#0 16#0 16#50000
+    End ChannelInfo
+  End Channels
+
+  Configuration
+    ConfigInfo
+      ModuleKey        16#4
+      InAreaSize       6 WORD
+      OutAreaSize      6 WORD
+      InWord
+        WORD  0    0
+        WORD  0    1
+        WORD  0    2
+        WORD  0    3
+        WORD  0    4
+        WORD  0    5
+      OutWord
+        WORD  0    0
+        WORD  0    1
+        WORD  0    2
+        WORD  0    3
+        WORD  0    4
+        WORD  0    5
+      CIGIOConnData
+        CIGIOData        16#01 16#F5
+      End CIGIOConnData
+    End ConfigInfo
+  End Configuration
+  HWUnitInfoCRC 16#F6BC
+End HWUnitInfo (* PPO-04, 0 PKW | 6 PZD *)

@@ -1,0 +1,82 @@
+(*=========================================*)
+(* Modified : 2011-11-11 08:52             *)
+(* Modified : 2011-11-11 10:53             *)
+(* Modified : 2012-01-10 12:54             *)
+(* Modified : 2013-01-31 12:51             *)
+(* Modified : 2014-05-13 14:48             *)
+(* -> Changed IO Channels from UInt to Int *)
+(*                                         *)
+(* Modified : 2015-07-08 14:23             *)
+(* -> New GSDML with new DAP-IDs           *)
+(*                                         *)
+(*=========================================*)
+FileHeader
+  Contents              "FENA-11"
+  Date                  "08.07.2015"
+  Version               "Version 1.4.9" (* Device Import Wizard *)
+  (* Parser             "Profinet 1.0.17.0" *)
+  RequiredSyntaxVersion "3.0"
+End FileHeader
+
+SessionID 09af5502-3c7a-4038-a7b6-9745a8d995c8
+
+(*========================================================*)
+(*                        FENA-11                         *)
+(*========================================================*)
+
+HWUnitInfo
+  HWUnitID         {07a1c01f-1578-438f-9d8c-ed6bb8e3644c}
+  Description      "FENA-01_DAP_SUB"
+  Information      "PROFINET IO module FENA"
+  Icons            ProtocolType
+  Attributes       IOUnit
+  DownloadInstanceNamesForSubUnits
+
+  Channels
+    ChannelInfo
+      Number                0
+      ChannelName           "UnitStatus"
+      Datatype              Status_In
+      Routine               900
+      CopyParameters        16#0 16#0 16#50000
+    End ChannelInfo
+  End Channels
+
+  UnitStatusText
+    DeviceSpecific1  "Maintenance required"
+    DeviceSpecific2  "Maintenance demanded"
+    DeviceSpecific3  "Diagnosis data available"
+    DeviceSpecific4  "Locked by other controller/supervisor"
+    DeviceSpecific6  "Parametrization fault"
+  End UnitStatusText
+
+  UnitStatusSeverity
+    DeviceSpecific1  GeneralWarning TriggerEvent SeverityMedium
+    DeviceSpecific2  GeneralWarning TriggerEvent SeverityMedium
+    DeviceSpecific3  GeneralWarning TriggerEvent SeverityMedium
+    DeviceSpecific4  GeneralWarning TriggerEvent SeverityMedium
+    DeviceSpecific6  GeneralError TriggerAlarm SeverityHigh
+  End UnitStatusSeverity
+
+  Configuration
+    ConfigInfo
+      ModuleKey        7
+      InAreaSize       1 BYTE
+      OutAreaSize      1 BYTE
+      OutByte
+        BYTE  16#80    0  (* IOCS_Out *)
+      CIGIOConnData
+        CIGIOData      16#10 16#a5 16#5a 16#0 16#1 16#2 16#1f 16#2 16#2 
+        CIGIOData      16#6 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#1 16#1 16#0 16#0 16#0 16#0 
+      End CIGIOConnData
+    End ConfigInfo
+    ConfigInfo
+      EmptyConfig
+      ModuleKey        16#FFFF
+      InAreaSize       0 BYTE
+      OutAreaSize      0 BYTE
+    End ConfigInfo
+  End Configuration
+
+  HWUnitInfoCRC 16#b2de
+End HWUnitInfo

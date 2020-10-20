@@ -1,0 +1,228 @@
+FileHeader
+  Contents              "FPBA-01"
+  Date                  "09.04.2012"
+  Version               "Version 1.4.0" (* Device Import Wizard *)
+  (* Parser             "Profibus 1.3.3" *)
+  RequiredSyntaxVersion "3.0"
+End FileHeader
+
+(*========================================================*)
+(*                     FPBA-01                            *)
+(*========================================================*)
+
+HWUnitInfo
+  HWUnitID         {456737e1-7c41-43d1-b703-ecd6d2bac98c}
+  Description      "PPO Type 6"
+  Information      "PPO Type 6"
+  Icons            ProtocolType
+  Attributes       IoUnit DigitalIn DigitalOut
+
+  (* ===== No parameter information delivered from the parser ===== *)
+
+  Channels
+    ChannelInfo
+      Number                0
+      ChannelName           "Status"
+      Datatype              Int_In
+      Routine               300
+      CopyParameters        16#0 16#0 16#30000 16#00
+    End ChannelInfo
+    ChannelInfo
+      Number                1
+      ChannelName           "Speed Actual"
+      Datatype              Int_In
+      Routine               310
+      CopyParameters        16#0 16#0 16#30002 16#00
+    End ChannelInfo
+    ChannelInfo
+      Number                2
+      ChannelName           "Actual 3"
+      Datatype              Int_In
+      Routine               310
+      CopyParameters        16#0 16#0 16#30004 16#00
+    End ChannelInfo
+    ChannelInfo
+      Number                3
+      ChannelName           "Actual 4"
+      Datatype              Int_In
+      Routine               310
+      CopyParameters        16#0 16#0 16#30006 16#00
+    End ChannelInfo
+    ChannelInfo
+      Number                4
+      ChannelName           "Actual 5"
+      Datatype              Int_In
+      Routine               310
+      CopyParameters        16#0 16#0 16#30008 16#00
+    End ChannelInfo
+    ChannelInfo
+      Number                5
+      ChannelName           "Actual 6"
+      Datatype              Int_In
+      Routine               310
+      CopyParameters        16#0 16#0 16#3000A 16#00
+    End ChannelInfo
+    ChannelInfo
+      Number                6
+      ChannelName           "Actual 7"
+      Datatype              Int_In
+      Routine               310
+      CopyParameters        16#0 16#0 16#3000C 16#00
+    End ChannelInfo
+    ChannelInfo
+      Number                7
+      ChannelName           "Actual 8"
+      Datatype              Int_In
+      Routine               310
+      CopyParameters        16#0 16#0 16#3000E 16#00
+    End ChannelInfo
+    ChannelInfo
+      Number                8
+      ChannelName           "Actual 9"
+      Datatype              Int_In
+      Routine               310
+      CopyParameters        16#0 16#0 16#30010 16#00
+    End ChannelInfo
+    ChannelInfo
+      Number                9
+      ChannelName           "Actual 10"
+      Datatype              Int_In
+      Routine               310
+      CopyParameters        16#0 16#0 16#30012 16#00
+    End ChannelInfo
+    ChannelInfo
+      Number                10
+      ChannelName           "Command"
+      Datatype              Int_Out
+      Routine               400
+      CopyParameters        16#0 16#0 16#40000 16#00
+    End ChannelInfo
+    ChannelInfo
+      Number                11
+      ChannelName           "Speed Ref"
+      Datatype              Int_Out
+      Routine               410
+      CopyParameters        16#0 16#0 16#40002 16#00
+    End ChannelInfo
+    ChannelInfo
+      Number                12
+      ChannelName           "Ref 3"
+      Datatype              Int_Out
+      Routine               410
+      CopyParameters        16#0 16#0 16#40004 16#00
+    End ChannelInfo
+    ChannelInfo
+      Number                13
+      ChannelName           "Ref 4"
+      Datatype              Int_Out
+      Routine               410
+      CopyParameters        16#0 16#0 16#40006 16#00
+    End ChannelInfo
+    ChannelInfo
+      Number                14
+      ChannelName           "Ref 5"
+      Datatype              Int_Out
+      Routine               410
+      CopyParameters        16#0 16#0 16#40008 16#00
+    End ChannelInfo
+    ChannelInfo
+      Number                15
+      ChannelName           "Ref 6"
+      Datatype              Int_Out
+      Routine               410
+      CopyParameters        16#0 16#0 16#4000A 16#00
+    End ChannelInfo
+    ChannelInfo
+      Number                16
+      ChannelName           "Ref 7"
+      Datatype              Int_Out
+      Routine               410
+      CopyParameters        16#0 16#0 16#4000C 16#00
+    End ChannelInfo
+    ChannelInfo
+      Number                17
+      ChannelName           "Ref 8"
+      Datatype              Int_Out
+      Routine               410
+      CopyParameters        16#0 16#0 16#4000E 16#00
+    End ChannelInfo
+    ChannelInfo
+      Number                18
+      ChannelName           "Ref 9"
+      Datatype              Int_Out
+      Routine               410
+      CopyParameters        16#0 16#0 16#40010 16#00
+    End ChannelInfo
+    ChannelInfo
+      Number                19
+      ChannelName           "Ref 10"
+      Datatype              Int_Out
+      Routine               410
+      CopyParameters        16#0 16#0 16#40012 16#00
+    End ChannelInfo
+    ChannelInfo
+      Number                20
+      ChannelName           "UnitStatus"
+      Datatype              Status_In
+      Routine               900
+      CopyParameters        16#0 16#0 16#50000
+    End ChannelInfo
+  End Channels
+
+  (* ===== No diagnostic information delivered from the parser ===== *)
+
+  Configuration
+    ConfigInfo
+      ModuleKey        16#6
+      InAreaSize       20 BYTE
+      OutAreaSize      20 BYTE
+      InByte
+        BYTE 0 0
+        BYTE 0 1
+        BYTE 0 2
+        BYTE 0 3
+        BYTE 0 4
+        BYTE 0 5
+        BYTE 0 6
+        BYTE 0 7
+        BYTE 0 8
+        BYTE 0 9
+        BYTE 0 10
+        BYTE 0 11
+        BYTE 0 12
+        BYTE 0 13
+        BYTE 0 14
+        BYTE 0 15
+        BYTE 0 16
+        BYTE 0 17
+        BYTE 0 18
+        BYTE 0 19
+      OutByte
+        BYTE 0 0
+        BYTE 0 1
+        BYTE 0 2
+        BYTE 0 3
+        BYTE 0 4
+        BYTE 0 5
+        BYTE 0 6
+        BYTE 0 7
+        BYTE 0 8
+        BYTE 0 9
+        BYTE 0 10
+        BYTE 0 11
+        BYTE 0 12
+        BYTE 0 13
+        BYTE 0 14
+        BYTE 0 15
+        BYTE 0 16
+        BYTE 0 17
+        BYTE 0 18
+        BYTE 0 19
+      CIGIOConnData
+        CIGIOData      16#01 16#F9
+      End CIGIOConnData
+    End ConfigInfo
+  End Configuration
+
+  HWUnitInfoCRC 16#02F4
+End HWUnitInfo

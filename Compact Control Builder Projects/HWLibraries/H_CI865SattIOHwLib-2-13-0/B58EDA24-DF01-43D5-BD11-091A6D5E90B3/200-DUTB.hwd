@@ -1,0 +1,15 @@
+HWUnitInfo  (* 200-DUTB / ControlNet  *)
+   HWUnitID {A6EF6A50-4F38-40C7-91A2-30719A3E7308}
+   Description "200-DUTB"
+   Information "Dummy module covering empty terminal base"
+   Icons Ser200IOType
+   Attributes IoUnit 
+   Configuration
+      ConfigInfo
+         ModuleKey    16#0F00
+         InAreaSize   0
+         OutAreaSize  0
+      End ConfigInfo
+   End Configuration
+  HWUnitInfoCRC 16#2736
+End HWUnitInfo (* 200-DUTB / ControlNet  *)

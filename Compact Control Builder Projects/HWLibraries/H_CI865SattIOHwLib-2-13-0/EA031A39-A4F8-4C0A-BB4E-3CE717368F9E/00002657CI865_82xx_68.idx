@@ -1,0 +1,504 @@
+<HEAD>
+Index of symbols created Thu 02/28/2019 11:36:51.74 
+</HEAD>
+<SECTIONS=15>
+00010000 0001ccc0 .text
+0001ccc0 0001d094 .got2
+0001d094 0001d6f0 .fixup
+0001d6f0 0001d70c .bss
+0001d70c 0001d718 .data
+0001d718 0001ff53 .debug_abbrev
+0001ff53 0004143d .debug_info
+0004143d 0004530c .debug_line
+0004530c 00047498 .debug_frame
+00047498 0004ce29 .debug_loc
+0004ce29 0004f576 .debug_pubnames
+0004f576 0004f89e .debug_aranges
+0004f89e 0005719b .debug_str
+0005719b 00057423 .comment
+00057423 00057423 .debug_ranges
+</SECTIONS>
+<SYMBOLS=482>
+00000000 CI865_82xx_68.elf EXE_HEAD
+00000060 CI865_82xx_68.elf CCIMsg::CCIMsg()
+0000007c CI865_82xx_68.elf CCIMsg::CCIMsg()
+00000098 CI865_82xx_68.elf CCIMsg::~CCIMsg()
+000000a4 CI865_82xx_68.elf CCIMsg::~CCIMsg()
+000000b0 CI865_82xx_68.elf CCIMsg::InitCNCreateConnStruct()
+00000120 CI865_82xx_68.elf CCIMsg::RetrieveConnectInfo(CConnInfo*, bool, eErrorCodes, unsigned long*)
+00000218 CI865_82xx_68.elf CCIMsg::CreateCloseConnectionMsg(CConnInfo*)
+00000244 CI865_82xx_68.elf CCIMsg::RetrieveAsaResult()
+00000278 CI865_82xx_68.elf CCIMsg::CreateDeAllocateMsg(unsigned long, int)
+0000029c CI865_82xx_68.elf CCIMsg::CreateStartConnectionMsg(CConnInfo*)
+000002c8 CI865_82xx_68.elf CCIMsg::CreateStopConnectionMsg(CConnInfo*)
+000002f4 CI865_82xx_68.elf CCIMsg::CreateNetParamMsg(unsigned long*, int)
+0000035c CI865_82xx_68.elf CCIMsg::CreateNodeParamMsg(unsigned short, unsigned long*, int)
+000003e8 CI865_82xx_68.elf CCIMsg::CreateStartUsingMsg(int)
+0000040c CI865_82xx_68.elf CCIMsg::SendConnectionMsg(ICIGDriverCallback*, bool)
+00000780 CI865_82xx_68.elf CCIMsg::Send(ICIGDriverCallback*, bool)
+00000d44 CI865_82xx_68.elf CCIMsg::CreateAsaMsg(CConnInfo*, cicnasainfo*, cicnconninfo*, unsigned short)
+00000e24 CI865_82xx_68.elf CCIMsg::SetupCNCreateConn(CConnInfo*, cicnconninfo*)
+00000f30 CI865_82xx_68.elf CCIMsg::CreateConnectMsg(CConnInfo*, cicnconninfo*)
+00000fa8 CI865_82xx_68.elf CCIMsg::CreateReconnectMsg(CConnInfo*, cicnconninfo*)
+00001020 CI865_82xx_68.elf CConnInfo::CConnInfo()
+0000103c CI865_82xx_68.elf CConnInfo::CConnInfo()
+00001058 CI865_82xx_68.elf CConnInfo::~CConnInfo()
+00001064 CI865_82xx_68.elf CConnInfo::~CConnInfo()
+00001070 CI865_82xx_68.elf CConnInfoContainer::CConnInfoContainer()
+000010c4 CI865_82xx_68.elf CConnInfoContainer::CConnInfoContainer()
+00001118 CI865_82xx_68.elf CConnInfoContainer::~CConnInfoContainer()
+00001124 CI865_82xx_68.elf CConnInfoContainer::~CConnInfoContainer()
+00001130 CI865_82xx_68.elf CConnInfoContainer::Init()
+00001180 CI865_82xx_68.elf CConnInfoContainer::HWAddressesAreEqual(trHWFAddress, trHWFAddress)
+000011f0 CI865_82xx_68.elf CConnInfoContainer::FindConn(trHWFAddress, teHWFErrorCode*)
+00001314 CI865_82xx_68.elf CConnInfoContainer::FindConnByConnId(unsigned long, teHWFErrorCode*)
+0000136c CI865_82xx_68.elf CConnInfoContainer::AllocateNewConnection(trHWFAddress, teHWFErrorCode*)
+00001478 CI865_82xx_68.elf CConnInfo::Close(ICIGDriverCallback*, bool, IVOSCallback2*)
+00001600 CI865_82xx_68.elf CConnInfo::Stop(ICIGDriverCallback*, bool)
+00001690 CI865_82xx_68.elf CConnInfo::Start(ICIGDriverCallback*, bool)
+00001744 CI865_82xx_68.elf CConnInfo::Configure(cicnioconfigmsg*, ICIGDriverCallback*, bool)
+00001860 CI865_82xx_68.elf CConnInfo::ReConnect(cicnconninfo*, ICIGDriverCallback*, bool, IVOSCallback2*)
+00001948 CI865_82xx_68.elf CConnInfo::Connect(cicnioconfigmsg*, ICIGDriverCallback*, bool, IVOSCallback2*, unsigned long*)
+00001a9c CI865_82xx_68.elf CDeallocationInfo::CDeallocationInfo()
+00001ac4 CI865_82xx_68.elf CDeallocationInfo::CDeallocationInfo()
+00001aec CI865_82xx_68.elf CDeallocationInfo::~CDeallocationInfo()
+00001af8 CI865_82xx_68.elf CDeallocationInfo::~CDeallocationInfo()
+00001b04 CI865_82xx_68.elf CDeallocationInfoContainer::CDeallocationInfoContainer()
+00001b94 CI865_82xx_68.elf CDeallocationInfoContainer::CDeallocationInfoContainer()
+00001c24 CI865_82xx_68.elf CDeallocationInfoContainer::~CDeallocationInfoContainer()
+00001c30 CI865_82xx_68.elf CDeallocationInfoContainer::~CDeallocationInfoContainer()
+00001c3c CI865_82xx_68.elf CDeallocationInfoContainer::Init(int)
+00001c7c CI865_82xx_68.elf CDeallocationInfoContainer::AddNewDeallocationTask(unsigned long, unsigned long, int)
+00001cd8 CI865_82xx_68.elf CDeallocationInfoContainer::AllowDeallocation(unsigned long)
+00001d2c CI865_82xx_68.elf CDeallocationInfoContainer::Dealloc(ICIGDriverCallback*, bool)
+00001f64 CI865_82xx_68.elf CPhCICN::GetProductInfo(unsigned char*, unsigned char*, unsigned char*, unsigned long)
+00001ff4 CI865_82xx_68.elf CPhCICN::releaseResources()
+00002050 CI865_82xx_68.elf CPhCICN::allocateResources()
+000021d0 CI865_82xx_68.elf CPhCICN::SetCommonCallbackInterface(ICommonCallback*)
+00002390 CI865_82xx_68.elf CPhCICN::CPhCICN()
+00002458 CI865_82xx_68.elf CPhCICN::CPhCICN()
+0000251c CI865_82xx_68.elf non-virtual thunk to CPhCICN::~CPhCICN()
+00002524 CI865_82xx_68.elf non-virtual thunk to CPhCICN::~CPhCICN()
+0000252c CI865_82xx_68.elf non-virtual thunk to CPhCICN::~CPhCICN()
+00002534 CI865_82xx_68.elf non-virtual thunk to CPhCICN::~CPhCICN()
+00002540 CI865_82xx_68.elf CPhCICN::~CPhCICN()
+00002650 CI865_82xx_68.elf CPhCICN::~CPhCICN()
+0000275c CI865_82xx_68.elf non-virtual thunk to CPhCICN::~CPhCICN()
+00002764 CI865_82xx_68.elf non-virtual thunk to CPhCICN::~CPhCICN()
+0000276c CI865_82xx_68.elf non-virtual thunk to CPhCICN::~CPhCICN()
+00002774 CI865_82xx_68.elf non-virtual thunk to CPhCICN::~CPhCICN()
+00002780 CI865_82xx_68.elf CPhCICN::~CPhCICN()
+00002894 CI865_82xx_68.elf non-virtual thunk to CPhCICN::WriteRes(unsigned long, int, int*)
+0000289c CI865_82xx_68.elf non-virtual thunk to CPhCICN::WriteRes(unsigned long, int, int*)
+000028a8 CI865_82xx_68.elf CPhCICN::WriteRes(unsigned long, int, int*)
+00002918 CI865_82xx_68.elf non-virtual thunk to CPhCICN::ReadRes(unsigned long, int, int*)
+00002920 CI865_82xx_68.elf non-virtual thunk to CPhCICN::ReadRes(unsigned long, int, int*)
+0000292c CI865_82xx_68.elf CPhCICN::ReadRes(unsigned long, int, int*)
+0000299c CI865_82xx_68.elf non-virtual thunk to CPhCICN::SetStatus(unsigned long, int, int*)
+000029a4 CI865_82xx_68.elf non-virtual thunk to CPhCICN::SetStatus(unsigned long, int, int*)
+000029b0 CI865_82xx_68.elf CPhCICN::SetStatus(unsigned long, int, int*)
+00002a20 CI865_82xx_68.elf non-virtual thunk to CPhCICN::GetExtendedStatus(unsigned long, int, teIEC1131Type*, tGCValue*, int*)
+00002a28 CI865_82xx_68.elf non-virtual thunk to CPhCICN::GetExtendedStatus(unsigned long, int, teIEC1131Type*, tGCValue*, int*)
+00002a34 CI865_82xx_68.elf CPhCICN::GetExtendedStatus(unsigned long, int, teIEC1131Type*, tGCValue*, int*)
+00002aa4 CI865_82xx_68.elf non-virtual thunk to CPhCICN::GetExtendedStatusSize(unsigned long, int*, int*)
+00002aac CI865_82xx_68.elf non-virtual thunk to CPhCICN::GetExtendedStatusSize(unsigned long, int*, int*)
+00002ab8 CI865_82xx_68.elf CPhCICN::GetExtendedStatusSize(unsigned long, int*, int*)
+00002b28 CI865_82xx_68.elf non-virtual thunk to CPhCICN::AbortVarReq(unsigned long, int*)
+00002b30 CI865_82xx_68.elf non-virtual thunk to CPhCICN::AbortVarReq(unsigned long, int*)
+00002b3c CI865_82xx_68.elf CPhCICN::AbortVarReq(unsigned long, int*)
+00002bac CI865_82xx_68.elf non-virtual thunk to CPhCICN::AbortRawReq(unsigned long, int*)
+00002bb4 CI865_82xx_68.elf non-virtual thunk to CPhCICN::AbortRawReq(unsigned long, int*)
+00002bc0 CI865_82xx_68.elf CPhCICN::AbortRawReq(unsigned long, int*)
+00002c30 CI865_82xx_68.elf non-virtual thunk to CPhCICN::WriteRawReq(unsigned long, int*)
+00002c38 CI865_82xx_68.elf non-virtual thunk to CPhCICN::WriteRawReq(unsigned long, int*)
+00002c44 CI865_82xx_68.elf CPhCICN::WriteRawReq(unsigned long, int*)
+00002cb4 CI865_82xx_68.elf non-virtual thunk to CPhCICN::ReadRawReq(unsigned long, int*)
+00002cbc CI865_82xx_68.elf non-virtual thunk to CPhCICN::ReadRawReq(unsigned long, int*)
+00002cc8 CI865_82xx_68.elf CPhCICN::ReadRawReq(unsigned long, int*)
+00002d38 CI865_82xx_68.elf non-virtual thunk to CPhCICN::WriteVarReq(unsigned long, int*)
+00002d40 CI865_82xx_68.elf non-virtual thunk to CPhCICN::WriteVarReq(unsigned long, int*)
+00002d4c CI865_82xx_68.elf CPhCICN::WriteVarReq(unsigned long, int*)
+00002e50 CI865_82xx_68.elf non-virtual thunk to CPhCICN::ReadVarReq(unsigned long, int*)
+00002e58 CI865_82xx_68.elf non-virtual thunk to CPhCICN::ReadVarReq(unsigned long, int*)
+00002e64 CI865_82xx_68.elf CPhCICN::ReadVarReq(unsigned long, int*)
+00002f74 CI865_82xx_68.elf non-virtual thunk to CPhCICN::DisconnectReq(unsigned long, unsigned long, int*)
+00002f7c CI865_82xx_68.elf non-virtual thunk to CPhCICN::DisconnectReq(unsigned long, unsigned long, int*)
+00002f88 CI865_82xx_68.elf CPhCICN::DisconnectReq(unsigned long, unsigned long, int*)
+00003098 CI865_82xx_68.elf non-virtual thunk to CPhCICN::ConnectReq(unsigned long, unsigned long*, int*)
+000030a0 CI865_82xx_68.elf non-virtual thunk to CPhCICN::ConnectReq(unsigned long, unsigned long*, int*)
+000030ac CI865_82xx_68.elf CPhCICN::ConnectReq(unsigned long, unsigned long*, int*)
+00003210 CI865_82xx_68.elf CPhCICN::CloseCIGDriver(teHWFErrorCode*)
+000033a0 CI865_82xx_68.elf non-virtual thunk to CPhCICN::PhResponsibilityForRestart(trHWFAddress, teHWFErrorCode*)
+000033ac CI865_82xx_68.elf CPhCICN::PhResponsibilityForRestart(trHWFAddress, teHWFErrorCode*)
+0000348c CI865_82xx_68.elf non-virtual thunk to CPhCICN::PhResponsibilityForHotInsert(trHWFAddress, teHWFErrorCode*)
+00003498 CI865_82xx_68.elf CPhCICN::PhResponsibilityForHotInsert(trHWFAddress, teHWFErrorCode*)
+00003580 CI865_82xx_68.elf non-virtual thunk to CPhCICN::PhResponsibilityForBackupDevice(trHWFAddress, teHWFErrorCode*)
+0000358c CI865_82xx_68.elf CPhCICN::PhResponsibilityForBackupDevice(trHWFAddress, teHWFErrorCode*)
+000035dc CI865_82xx_68.elf non-virtual thunk to CPhCICN::PrepareForTermination(teHWFErrorCode*)
+000035e8 CI865_82xx_68.elf CPhCICN::PrepareForTermination(teHWFErrorCode*)
+00003760 CI865_82xx_68.elf non-virtual thunk to CPhCICN::StartUsingDevice(trHWFAddress, teHWFErrorCode*)
+0000376c CI865_82xx_68.elf CPhCICN::StartUsingDevice(trHWFAddress, teHWFErrorCode*)
+000037bc CI865_82xx_68.elf non-virtual thunk to CPhCICN::PerformSwitchover(trHWFAddress, teHWFErrorCode*)
+000037c8 CI865_82xx_68.elf CPhCICN::PerformSwitchover(trHWFAddress, teHWFErrorCode*)
+00003818 CI865_82xx_68.elf non-virtual thunk to CPhCICN::PerformFailover(trHWFAddress, teHWFErrorCode*)
+00003824 CI865_82xx_68.elf CPhCICN::PerformFailover(trHWFAddress, teHWFErrorCode*)
+00003878 CI865_82xx_68.elf CPhCICN::OpenCIGDriver(trHWFAddress, teHWFErrorCode*)
+00003ba0 CI865_82xx_68.elf non-virtual thunk to CPhCICN::RemoveHWConfiguration(trHWFAddress, teHWFErrorCode*)
+00003bac CI865_82xx_68.elf CPhCICN::RemoveHWConfiguration(trHWFAddress, teHWFErrorCode*)
+00003d6c CI865_82xx_68.elf CPhCICN::ConfigureAdapter(trHWFAddress, bool*, teHWFErrorCode*)
+00004800 CI865_82xx_68.elf non-virtual thunk to CPhCICN::StartUsingIoConnection(trHWFAddress, unsigned long, teHWFErrorCode*)
+0000480c CI865_82xx_68.elf CPhCICN::StartUsingIoConnection(trHWFAddress, unsigned long, teHWFErrorCode*)
+00004990 CI865_82xx_68.elf non-virtual thunk to CPhCICN::RemoveIoConnection(unsigned long, teHWFErrorCode*)
+0000499c CI865_82xx_68.elf CPhCICN::RemoveIoConnection(unsigned long, teHWFErrorCode*)
+00004b70 CI865_82xx_68.elf CPhCICN::HWConfigureConnection(unsigned char*, trHWFAddress, CConnInfo**, teHWFErrorCode*)
+00004d74 CI865_82xx_68.elf CPhCICN::ConfigureIoConnectionSmallChange(trHWFAddress, teHWFErrorCode*)
+000050f0 CI865_82xx_68.elf CPhCICN::HWCreateConnection(unsigned char*, trHWFAddress, CConnInfo**, teHWFErrorCode*)
+00005474 CI865_82xx_68.elf CPhCICN::ConfigureIoConnectionLargeChange(trHWFAddress, teHWFErrorCode*)
+000058c8 CI865_82xx_68.elf non-virtual thunk to CPhCICN::PhResponsibility(trHWFAddress, teHWFErrorCode*)
+000058d4 CI865_82xx_68.elf CPhCICN::PhResponsibility(trHWFAddress, teHWFErrorCode*)
+000061f0 CI865_82xx_68.elf CPhCICN::DoRedundancySwitchOver(trHWFAddress, teHWFErrorCode*)
+00006264 CI865_82xx_68.elf CPhCICN::ReadDataFromDPM(unsigned long, unsigned long, char*, unsigned long*)
+0000637c CI865_82xx_68.elf CPhCICN::ResetStatusOnNodeAndSubNodes(trHWFAddress, unsigned long, unsigned long, teHWFErrorCode*)
+000065d8 CI865_82xx_68.elf CPhCICN::SetStatusOnNodeAndSubNodes(trHWFAddress, unsigned long, unsigned long, teHWFErrorCode*)
+00006830 CI865_82xx_68.elf CPhCICN::CI865NodeSupervision()
+00006e78 CI865_82xx_68.elf spawnCI865StatusThread(int, int, int, int)
+00006e84 CI865_82xx_68.elf non-virtual thunk to CPhCICN::GetStatus(trHWFAddress, teHWFUnitKind, unsigned long*, unsigned long*, teHWFErrorCode*)
+00006e90 CI865_82xx_68.elf CPhCICN::GetStatus(trHWFAddress, teHWFUnitKind, unsigned long*, unsigned long*, teHWFErrorCode*)
+00007178 CI865_82xx_68.elf non-virtual thunk to CPhCICN::KickWatchdog(unsigned short*, teHWFErrorCode*)
+00007184 CI865_82xx_68.elf CPhCICN::KickWatchdog(unsigned short*, teHWFErrorCode*)
+000074e0 CI865_82xx_68.elf ObjectFactory
+00007608 CI865_82xx_68.elf operator delete(void*)
+00007648 CI865_82xx_68.elf __cxa_pure_virtual
+00007684 CI865_82xx_68.elf CPhCommon_Base::CPhCommon_Base()
+000076e8 CI865_82xx_68.elf CPhCommon_Base::CPhCommon_Base()
+00007748 CI865_82xx_68.elf CPhCommon_Base::GetProductInfo(unsigned char*, unsigned char*, unsigned char*, unsigned long)
+00007784 CI865_82xx_68.elf CPhCommon_Base::SetCommonCallbackInterface(ICommonCallback*)
+000077b4 CI865_82xx_68.elf CPhConfig_Base1::PrepareForTermination(teHWFErrorCode*)
+000077e4 CI865_82xx_68.elf CPhConfig_Base1::RemoveHWConfiguration(trHWFAddress, teHWFErrorCode*)
+00007814 CI865_82xx_68.elf CPhConfig_Base1::RemoveIoConnection(unsigned long, teHWFErrorCode*)
+00007848 CI865_82xx_68.elf CPhConfig_Base1::PhResponsibilityForRestart(trHWFAddress, teHWFErrorCode*)
+00007878 CI865_82xx_68.elf CPhConfig_Base1::PhResponsibility(trHWFAddress, teHWFErrorCode*)
+000078a8 CI865_82xx_68.elf CPhConfig_Base1::StartUsingIoConnection(trHWFAddress, unsigned long, teHWFErrorCode*)
+000078dc CI865_82xx_68.elf CPhConfig_Base1::PhResponsibilityForBackupDevice(trHWFAddress, teHWFErrorCode*)
+0000790c CI865_82xx_68.elf CPhConfig_Base1::PhResponsibilityForHotInsert(trHWFAddress, teHWFErrorCode*)
+0000793c CI865_82xx_68.elf CPhConfig_Base1::PerformSwitchover(trHWFAddress, teHWFErrorCode*)
+0000796c CI865_82xx_68.elf CPhConfig_Base1::StartUsingDevice(trHWFAddress, teHWFErrorCode*)
+0000799c CI865_82xx_68.elf CPhConfig_Base1::PerformFailover(trHWFAddress, teHWFErrorCode*)
+000079cc CI865_82xx_68.elf CPhClient_Base::ConnectReq(unsigned long, unsigned long*, int*)
+00007a04 CI865_82xx_68.elf CPhClient_Base::DisconnectReq(unsigned long, unsigned long, int*)
+00007a3c CI865_82xx_68.elf CPhClient_Base::ReadVarReq(unsigned long, int*)
+00007a70 CI865_82xx_68.elf CPhClient_Base::WriteVarReq(unsigned long, int*)
+00007aa4 CI865_82xx_68.elf CPhClient_Base::ReadRawReq(unsigned long, int*)
+00007ad8 CI865_82xx_68.elf CPhClient_Base::WriteRawReq(unsigned long, int*)
+00007b0c CI865_82xx_68.elf CPhClient_Base::AbortRawReq(unsigned long, int*)
+00007b40 CI865_82xx_68.elf CPhClient_Base::AbortVarReq(unsigned long, int*)
+00007b74 CI865_82xx_68.elf CPhClient_Base::GetExtendedStatusSize(unsigned long, int*, int*)
+00007bac CI865_82xx_68.elf CPhClient_Base::GetExtendedStatus(unsigned long, int, teIEC1131Type*, tGCValue*, int*)
+00007bec CI865_82xx_68.elf CPhClient_Base::SetStatus(unsigned long, int, int*)
+00007c24 CI865_82xx_68.elf CPhClient_Base::ReadRes(unsigned long, int, int*)
+00007c5c CI865_82xx_68.elf CPhClient_Base::WriteRes(unsigned long, int, int*)
+00007c94 CI865_82xx_68.elf CPhClient_Base1::ConnectReq(unsigned long, unsigned long*, int*)
+00007ccc CI865_82xx_68.elf CPhClient_Base1::DisconnectReq(unsigned long, unsigned long, int*)
+00007d04 CI865_82xx_68.elf CPhClient_Base1::ReadVarReq(unsigned long, int*)
+00007d38 CI865_82xx_68.elf CPhClient_Base1::WriteVarReq(unsigned long, int*)
+00007d6c CI865_82xx_68.elf CPhClient_Base1::RegisterVarReq(unsigned long, int*)
+00007da0 CI865_82xx_68.elf CPhClient_Base1::ReadRawReq(unsigned long, int*)
+00007dd4 CI865_82xx_68.elf CPhClient_Base1::WriteRawReq(unsigned long, int*)
+00007e08 CI865_82xx_68.elf CPhClient_Base1::AbortRawReq(unsigned long, int*)
+00007e3c CI865_82xx_68.elf CPhClient_Base1::AbortVarReq(unsigned long, int*)
+00007e70 CI865_82xx_68.elf CPhClient_Base1::TimeoutAbortVarReq(unsigned long, int*)
+00007ed4 CI865_82xx_68.elf CPhClient_Base1::GetExtendedStatusSize(unsigned long, int*, int*)
+00007f0c CI865_82xx_68.elf CPhClient_Base1::GetExtendedStatus(unsigned long, int, teIEC1131Type*, tGCValue*, int*)
+00007f4c CI865_82xx_68.elf CPhClient_Base1::BufferTakeForReceive(unsigned long, int*)
+00007f80 CI865_82xx_68.elf CPhClient_Base1::BufferGiveForReceive(unsigned long, int, int*)
+00007fb8 CI865_82xx_68.elf CPhClient_Base1::BufferTakeForSend(unsigned long, unsigned int, int*)
+00007ff0 CI865_82xx_68.elf CPhClient_Base1::BufferGiveForSend(unsigned long, unsigned int, int, int*)
+0000802c CI865_82xx_68.elf CPhClient_Base1::SetStatus(unsigned long, int, int*)
+00008064 CI865_82xx_68.elf CPhClient_Base1::ReadRes(unsigned long, int, int*)
+0000809c CI865_82xx_68.elf CPhClient_Base1::WriteRes(unsigned long, int, int*)
+000080d4 CI865_82xx_68.elf CPhStatus_Base1::KickWatchdog(unsigned short*, teHWFErrorCode*)
+00008108 CI865_82xx_68.elf CPhStatus_Base1::GetStatus(trHWFAddress, teHWFUnitKind, unsigned long*, unsigned long*, teHWFErrorCode*)
+00008144 CI865_82xx_68.elf CPhIOAccess_Base::GetCopyRoutineReference(unsigned int, void (**)(short, void*, void*), IOAccessErrorCode*)
+0000817c CI865_82xx_68.elf CPhIOAccess_Base::ObtainDPM(eAreaType, trHWFAddress, IOAccessErrorCode*)
+000081b0 CI865_82xx_68.elf CPhIOAccess_Base::ReleaseDPM(eAreaType, trHWFAddress, IOAccessErrorCode*)
+000081e4 CI865_82xx_68.elf CPhDiagnostics_Base::PhDiagnosticsTableNew(teDiagErrorCode*)
+00008214 CI865_82xx_68.elf CPhDiagnostics_Base::PhDiagnosticsTableCleared(teDiagErrorCode*)
+00008244 CI865_82xx_68.elf CPhOLU_Base::PrepareForFirmwareDownload(trHWFAddress const*, unsigned long, eOLUStatus*)
+0000827c CI865_82xx_68.elf CPhOLU_Base::PrepareForApplicationStop(trHWFAddress const*, eOLUStatus*)
+000082b0 CI865_82xx_68.elf CPhOLU_Base::ResumeOperation(trHWFAddress const*, eOLUStatus*)
+000082e4 CI865_82xx_68.elf CPhOLU_Base::PhResponsibilityForOLU(trHWFAddress const*, eOLUStatus*)
+00008318 CI865_82xx_68.elf CPhOLU_Base::PrepareForLeavingOLU(trHWFAddress const*, eOLUStatus*)
+0000834c CI865_82xx_68.elf CPhOLU_Base::PrepareForAppAndConfigDownload(trHWFAddress const*, eOLUStatus*)
+00008380 CI865_82xx_68.elf CPhOLU_Base1::PrepareForFirmwareDownload(trHWFAddress const*, unsigned long, eOLUStatus*)
+000083b8 CI865_82xx_68.elf CPhOLU_Base1::PrepareForApplicationStop(trHWFAddress const*, eOLUStatus*)
+000083ec CI865_82xx_68.elf CPhOLU_Base1::ResumeOperation(trHWFAddress const*, eOLUStatus*)
+00008420 CI865_82xx_68.elf CPhOLU_Base1::PhResponsibilityForOLU(trHWFAddress const*, eOLUStatus*)
+00008454 CI865_82xx_68.elf CPhOLU_Base1::PrepareForLeavingOLU(trHWFAddress const*, eOLUStatus*)
+00008488 CI865_82xx_68.elf CPhOLU_Base1::PrepareForAppAndConfigDownload(trHWFAddress const*, eOLUStatus*)
+000084bc CI865_82xx_68.elf CPhOLU_Base1::OLUEnablePhCom(trHWFAddress const*, eOLUStatus*)
+000084f0 CI865_82xx_68.elf CPhOLU_Base1::OLUDisablePhCom(trHWFAddress const*, eOLUStatus*)
+00008524 CI865_82xx_68.elf CPhOLU_Base1::InformPhIsInSwitch(trHWFAddress const*, eOLUStatus*)
+0000855c CI865_82xx_68.elf CPhCommon_Base::~CPhCommon_Base()
+000085d8 CI865_82xx_68.elf CPhCommon_Base::~CPhCommon_Base()
+00008654 CI865_82xx_68.elf CPhCommon_Base::~CPhCommon_Base()
+000086cc CI865_82xx_68.elf non-virtual thunk to CPhCICN::AddRef()
+000086d4 CI865_82xx_68.elf non-virtual thunk to CPhCICN::AddRef()
+000086dc CI865_82xx_68.elf non-virtual thunk to CPhCICN::AddRef()
+000086e4 CI865_82xx_68.elf non-virtual thunk to CPhCICN::AddRef()
+000086ec CI865_82xx_68.elf CPhCICN::AddRef()
+0000870c CI865_82xx_68.elf IUnknown::~IUnknown()
+00008750 CI865_82xx_68.elf IUnknown::~IUnknown()
+00008790 CI865_82xx_68.elf IPhConfig1::~IPhConfig1()
+000087d8 CI865_82xx_68.elf IPhStatus1::~IPhStatus1()
+00008824 CI865_82xx_68.elf IPhStatus1::~IPhStatus1()
+0000886c CI865_82xx_68.elf IPhConfig1::~IPhConfig1()
+000088b4 CI865_82xx_68.elf non-virtual thunk to CPhCICN::QueryInterface(_GUID const&, void**)
+000088bc CI865_82xx_68.elf non-virtual thunk to CPhCICN::QueryInterface(_GUID const&, void**)
+000088c4 CI865_82xx_68.elf non-virtual thunk to CPhCICN::QueryInterface(_GUID const&, void**)
+000088cc CI865_82xx_68.elf non-virtual thunk to CPhCICN::QueryInterface(_GUID const&, void**)
+000088d8 CI865_82xx_68.elf CPhCICN::QueryInterface(_GUID const&, void**)
+00008a08 CI865_82xx_68.elf IPhClient1::~IPhClient1()
+00008a54 CI865_82xx_68.elf IPhClient1::~IPhClient1()
+00008a98 CI865_82xx_68.elf non-virtual thunk to CPhCICN::Release()
+00008aa0 CI865_82xx_68.elf non-virtual thunk to CPhCICN::Release()
+00008aa8 CI865_82xx_68.elf non-virtual thunk to CPhCICN::Release()
+00008ab0 CI865_82xx_68.elf non-virtual thunk to CPhCICN::Release()
+00008ab8 CI865_82xx_68.elf CPhCICN::Release()
+00008b28 CI865_82xx_68.elf IPhClient::~IPhClient()
+00008b74 CI865_82xx_68.elf IPhClient::~IPhClient()
+00008bbc CI865_82xx_68.elf IUnknown::IUnknown()
+00008c14 CI865_82xx_68.elf IPhCommon::IPhCommon()
+00008c78 CI865_82xx_68.elf IUnknown::~IUnknown()
+00008ce8 CI865_82xx_68.elf IPhConfig1::~IPhConfig1()
+00008d64 CI865_82xx_68.elf CPhConfig_Base1::~CPhConfig_Base1()
+00008de0 CI865_82xx_68.elf CPhConfig_Base1::~CPhConfig_Base1()
+00008e5c CI865_82xx_68.elf IPhClient::~IPhClient()
+00008ed8 CI865_82xx_68.elf CPhClient_Base::~CPhClient_Base()
+00008f54 CI865_82xx_68.elf CPhClient_Base::~CPhClient_Base()
+00008fd0 CI865_82xx_68.elf IPhClient1::~IPhClient1()
+0000904c CI865_82xx_68.elf CPhClient_Base1::~CPhClient_Base1()
+000090c8 CI865_82xx_68.elf CPhClient_Base1::~CPhClient_Base1()
+00009144 CI865_82xx_68.elf IPhStatus1::~IPhStatus1()
+000091c0 CI865_82xx_68.elf CPhStatus_Base1::~CPhStatus_Base1()
+0000923c CI865_82xx_68.elf CPhStatus_Base1::~CPhStatus_Base1()
+000092b8 CI865_82xx_68.elf IPhIOAccess::~IPhIOAccess()
+00009334 CI865_82xx_68.elf CPhIOAccess_Base::~CPhIOAccess_Base()
+000093b0 CI865_82xx_68.elf IPhIOAccess::~IPhIOAccess()
+0000942c CI865_82xx_68.elf IPhIOAccess::~IPhIOAccess()
+000094a8 CI865_82xx_68.elf CPhIOAccess_Base::~CPhIOAccess_Base()
+00009524 CI865_82xx_68.elf IPhDiagnostics::~IPhDiagnostics()
+000095a0 CI865_82xx_68.elf CPhDiagnostics_Base::~CPhDiagnostics_Base()
+0000961c CI865_82xx_68.elf IPhDiagnostics::~IPhDiagnostics()
+00009698 CI865_82xx_68.elf IPhDiagnostics::~IPhDiagnostics()
+00009714 CI865_82xx_68.elf CPhDiagnostics_Base::~CPhDiagnostics_Base()
+00009790 CI865_82xx_68.elf IPhOLU::~IPhOLU()
+0000980c CI865_82xx_68.elf CPhOLU_Base::~CPhOLU_Base()
+00009888 CI865_82xx_68.elf IPhOLU::~IPhOLU()
+00009904 CI865_82xx_68.elf IPhOLU::~IPhOLU()
+00009980 CI865_82xx_68.elf CPhOLU_Base::~CPhOLU_Base()
+000099fc CI865_82xx_68.elf IPhOLU1::~IPhOLU1()
+00009a78 CI865_82xx_68.elf CPhOLU_Base1::~CPhOLU_Base1()
+00009af4 CI865_82xx_68.elf IPhOLU1::~IPhOLU1()
+00009b70 CI865_82xx_68.elf IPhOLU1::~IPhOLU1()
+00009bec CI865_82xx_68.elf CPhOLU_Base1::~CPhOLU_Base1()
+00009c68 CI865_82xx_68.elf IPhCommon::~IPhCommon()
+00009ce4 CI865_82xx_68.elf IPhCommon::~IPhCommon()
+00009d60 CI865_82xx_68.elf IPhCommon::~IPhCommon()
+00009e70 CI865_82xx_68.elf CompanyName
+00009e74 CI865_82xx_68.elf ProductName
+00009e80 CI865_82xx_68.elf ProductVersion
+00009ee4 CI865_82xx_68.elf CLSID_CPhCICN
+00009f4c CI865_82xx_68.elf IID_IPhCommonCB
+00009f5c CI865_82xx_68.elf IID_IPhConfigCB
+00009f6c CI865_82xx_68.elf IID_IPhConfigCB1
+00009f7c CI865_82xx_68.elf IID_IPhIOAccessCB
+00009f8c CI865_82xx_68.elf IID_IPhExternalConfigCB1
+00009f9c CI865_82xx_68.elf IID_IPhExternalConfigCB2
+00009fac CI865_82xx_68.elf IID_IPhExternalConfigCB3
+00009fbc CI865_82xx_68.elf IID_IPhOLUCB
+00009fcc CI865_82xx_68.elf IID_IPhCommon
+00009fdc CI865_82xx_68.elf IID_IPhConfig1
+00009fec CI865_82xx_68.elf IID_IPhStatus1
+00009ffc CI865_82xx_68.elf IID_IPhClient
+0000a00c CI865_82xx_68.elf IID_IPhClient1
+0000a01c CI865_82xx_68.elf IID_IPhDiagnostics
+0000a02c CI865_82xx_68.elf IID_IPhIOAccess
+0000a03c CI865_82xx_68.elf IID_IPhSafeConfig
+0000a04c CI865_82xx_68.elf IID_IPhSafeConfig1
+0000a05c CI865_82xx_68.elf IID_IPhSafeConfig2
+0000a06c CI865_82xx_68.elf IID_IPhSimulation
+0000a07c CI865_82xx_68.elf IID_IPhOLU
+0000a08c CI865_82xx_68.elf IID_IPhOLU1
+0000a09c CI865_82xx_68.elf IID_IHeapCallback
+0000a0ac CI865_82xx_68.elf IID_ISystemUtilitiesCallback
+0000a0bc CI865_82xx_68.elf IID_ISystemUtilitiesCallback1
+0000a0cc CI865_82xx_68.elf IID_ISystemUtilitiesCallback2
+0000a0dc CI865_82xx_68.elf IID_ISystemUtilitiesCallback3
+0000a0ec CI865_82xx_68.elf IID_ISystemUtilitiesCallback4
+0000a0fc CI865_82xx_68.elf IID_IEventMgrCallback
+0000a10c CI865_82xx_68.elf IID_IEventMgrCallback1
+0000a11c CI865_82xx_68.elf IID_ISysClockCallback
+0000a12c CI865_82xx_68.elf IID_ISysClockCallback1
+0000a13c CI865_82xx_68.elf IID_ISysClockCallback2
+0000a14c CI865_82xx_68.elf IID_ISysClockCallback3
+0000a15c CI865_82xx_68.elf IID_INetwClockSynchCallback
+0000a16c CI865_82xx_68.elf IID_IConfigCBCallback1
+0000a17c CI865_82xx_68.elf IID_IConfigCBCallback2
+0000a18c CI865_82xx_68.elf IID_IConfigCBCallback3
+0000a19c CI865_82xx_68.elf IID_IExternalConfigCBCallback
+0000a1ac CI865_82xx_68.elf IID_IExternalConfigCBCallback2
+0000a1bc CI865_82xx_68.elf IID_IExternalConfigCBCallback3
+0000a1cc CI865_82xx_68.elf IID_IExternalConfigCBCallback4
+0000a1dc CI865_82xx_68.elf IID_IMessagesCBCallback
+0000a1ec CI865_82xx_68.elf IID_IAIPAccessCBCallback
+0000a1fc CI865_82xx_68.elf IID_IOLUCBCallback
+0000a20c CI865_82xx_68.elf IID_ISystemUtilitiesCBCallback1
+0000a21c CI865_82xx_68.elf IID_IConfigCallback1
+0000a22c CI865_82xx_68.elf IID_IConfigCallback2
+0000a23c CI865_82xx_68.elf IID_IStatusCallback1
+0000a24c CI865_82xx_68.elf IID_IGenClientCallback
+0000a25c CI865_82xx_68.elf IID_IGenClientCallback1
+0000a26c CI865_82xx_68.elf IID_IIACClientCallback
+0000a27c CI865_82xx_68.elf IID_IDriverFactoryCallback
+0000a28c CI865_82xx_68.elf IID_IDiagnosticsCallback
+0000a29c CI865_82xx_68.elf IID_ISafeConfigCallback
+0000a2ac CI865_82xx_68.elf IID_ISafeConfigCallback1
+0000a2bc CI865_82xx_68.elf IID_ISafeConfigCallback2
+0000a2cc CI865_82xx_68.elf IID_ICRCCallback
+0000a2dc CI865_82xx_68.elf IID_IIOAccessCallback
+0000a2ec CI865_82xx_68.elf IID_CriticalRegionCallback
+0000a2fc CI865_82xx_68.elf IID_VOSExceptionCallback
+0000a30c CI865_82xx_68.elf IID_DrvCommonCallback
+0000a31c CI865_82xx_68.elf IID_ProtectedMirroredHeapCallback
+0000a32c CI865_82xx_68.elf IID_SharedMirroredHeapCallback
+0000a33c CI865_82xx_68.elf IID_TemporaryMirroredHeapCallback
+0000a34c CI865_82xx_68.elf IID_IRestrictedVOSCallback
+0000a35c CI865_82xx_68.elf IID_IVarServerCallback
+0000a36c CI865_82xx_68.elf IID_IVarServerCallback1
+0000a37c CI865_82xx_68.elf IID_ISOCKETCallback
+0000a38c CI865_82xx_68.elf IID_ISOCKETCallback1
+0000a39c CI865_82xx_68.elf IID_IVOSCallback2
+0000c560 V vtable for CPhCICN CI865_82xx_68.elf 
+0000c710 V vtable for IPhClient1 CI865_82xx_68.elf 
+0000c778 V vtable for IUnknown CI865_82xx_68.elf 
+0000c798 V vtable for IPhClient CI865_82xx_68.elf 
+0000c7e8 V vtable for IPhStatus1 CI865_82xx_68.elf 
+0000c810 V vtable for IPhConfig1 CI865_82xx_68.elf 
+0000c858 V vtable for CPhOLU_Base1 CI865_82xx_68.elf 
+0000c898 V vtable for CPhOLU_Base CI865_82xx_68.elf 
+0000c8d0 V vtable for CPhDiagnostics_Base CI865_82xx_68.elf 
+0000c8f8 V vtable for CPhIOAccess_Base CI865_82xx_68.elf 
+0000c920 V vtable for CPhStatus_Base1 CI865_82xx_68.elf 
+0000c948 V vtable for CPhClient_Base1 CI865_82xx_68.elf 
+0000c9b0 V vtable for CPhClient_Base CI865_82xx_68.elf 
+0000ca00 V vtable for CPhConfig_Base1 CI865_82xx_68.elf 
+0000ca48 V vtable for CPhCommon_Base CI865_82xx_68.elf 
+0000ca70 V vtable for IPhIOAccess CI865_82xx_68.elf 
+0000ca98 V vtable for IPhDiagnostics CI865_82xx_68.elf 
+0000cac0 V vtable for IPhOLU CI865_82xx_68.elf 
+0000caf8 V vtable for IPhOLU1 CI865_82xx_68.elf 
+0000cb38 V vtable for IPhCommon CI865_82xx_68.elf 
+0000cb5c CI865_82xx_68.elf CRTFuncTabBegin
+0000cb5c CI865_82xx_68.elf scprocs
+0000cb68 CI865_82xx_68.elf printf
+0000cb6c CI865_82xx_68.elf sprintf
+0000cb70 CI865_82xx_68.elf sscanf
+0000cb74 CI865_82xx_68.elf memcpy
+0000cb78 CI865_82xx_68.elf memset
+0000cb7c CI865_82xx_68.elf strcat
+0000cb80 CI865_82xx_68.elf strcmp
+0000cb84 CI865_82xx_68.elf strlen
+0000cb88 CI865_82xx_68.elf strncmp
+0000cb8c CI865_82xx_68.elf strncpy
+0000cb90 CI865_82xx_68.elf memchr
+0000cb94 CI865_82xx_68.elf memcmp
+0000cb98 CI865_82xx_68.elf memmove
+0000cb9c CI865_82xx_68.elf strchr
+0000cba0 CI865_82xx_68.elf strcoll
+0000cba4 CI865_82xx_68.elf strcpy
+0000cba8 CI865_82xx_68.elf strcspn
+0000cbac CI865_82xx_68.elf strncat
+0000cbb0 CI865_82xx_68.elf strpbrk
+0000cbb4 CI865_82xx_68.elf strrchr
+0000cbb8 CI865_82xx_68.elf strspn
+0000cbbc CI865_82xx_68.elf strstr
+0000cbc0 CI865_82xx_68.elf strtok
+0000cbc4 CI865_82xx_68.elf strxfrm
+0000cbc8 CI865_82xx_68.elf strerror
+0000cbcc CI865_82xx_68.elf pow
+0000cbd0 CI865_82xx_68.elf acos
+0000cbd4 CI865_82xx_68.elf asin
+0000cbd8 CI865_82xx_68.elf atan
+0000cbdc CI865_82xx_68.elf atan2
+0000cbe0 CI865_82xx_68.elf ceil
+0000cbe4 CI865_82xx_68.elf cos
+0000cbe8 CI865_82xx_68.elf cosh
+0000cbec CI865_82xx_68.elf exp
+0000cbf0 CI865_82xx_68.elf fabs
+0000cbf4 CI865_82xx_68.elf floor
+0000cbf8 CI865_82xx_68.elf fmod
+0000cbfc CI865_82xx_68.elf frexp
+0000cc00 CI865_82xx_68.elf ldexp
+0000cc04 CI865_82xx_68.elf log
+0000cc08 CI865_82xx_68.elf log10
+0000cc0c CI865_82xx_68.elf modf
+0000cc10 CI865_82xx_68.elf sin
+0000cc14 CI865_82xx_68.elf sinh
+0000cc18 CI865_82xx_68.elf sqrt
+0000cc1c CI865_82xx_68.elf tan
+0000cc20 CI865_82xx_68.elf tanh
+0000cc24 CI865_82xx_68.elf div_r
+0000cc28 CI865_82xx_68.elf labs
+0000cc2c CI865_82xx_68.elf strtol
+0000cc30 CI865_82xx_68.elf free
+0000cc34 CI865_82xx_68.elf abort
+0000cc38 CI865_82xx_68.elf abs
+0000cc3c CI865_82xx_68.elf atof
+0000cc40 CI865_82xx_68.elf atoi
+0000cc44 CI865_82xx_68.elf atol
+0000cc48 CI865_82xx_68.elf bsearch
+0000cc4c CI865_82xx_68.elf ldiv_r
+0000cc50 CI865_82xx_68.elf qsort
+0000cc54 CI865_82xx_68.elf rand
+0000cc58 CI865_82xx_68.elf srand
+0000cc5c CI865_82xx_68.elf strtod
+0000cc60 CI865_82xx_68.elf strtoul
+0000cc64 CI865_82xx_68.elf malloc
+0000cc68 CI865_82xx_68.elf __assert
+0000cc6c CI865_82xx_68.elf time
+0000cc70 CI865_82xx_68.elf asctime
+0000cc74 CI865_82xx_68.elf gmtime
+0000cc78 CI865_82xx_68.elf clock
+0000cc7c CI865_82xx_68.elf ctime
+0000cc80 CI865_82xx_68.elf difftime
+0000cc84 CI865_82xx_68.elf localtime
+0000cc88 CI865_82xx_68.elf mktime
+0000cc8c CI865_82xx_68.elf strftime
+0000cc90 CI865_82xx_68.elf eventcollSem
+0000cc94 CI865_82xx_68.elf intLock
+0000cc98 CI865_82xx_68.elf intUnlock
+0000cca4 CI865_82xx_68.elf fprintf
+0000cca8 CI865_82xx_68.elf __stdout
+0000ccac CI865_82xx_68.elf __stderr
+0000ccb0 CI865_82xx_68.elf setjmp
+0000ccb4 CI865_82xx_68.elf longjmp
+0000ccb8 CI865_82xx_68.elf operator new[](unsigned int)
+0000ccbc CI865_82xx_68.elf operator delete[](void*)
+0000ccc0 CI865_82xx_68.elf CRTFuncTabEnd
+0000ccc0 CI865_82xx_68.elf ecprocs
+0000ccc0 CI865_82xx_68.elf etext
+0000ccc0 CI865_82xx_68.elf sgot2
+0000d094 CI865_82xx_68.elf egot2
+0000d094 CI865_82xx_68.elf sfixup
+0000d6f0 CI865_82xx_68.elf efixup
+0000d6f0 CI865_82xx_68.elf restart
+0000d6f1 CI865_82xx_68.elf hotInsert
+0000d6f4 CI865_82xx_68.elf CPhCICN::GetStatus(trHWFAddress, teHWFUnitKind, unsigned long*, unsigned long*, teHWFErrorCode*)::bIsEAbitLogSet
+0000d6f8 CI865_82xx_68.elf CPhCICN::GetStatus(trHWFAddress, teHWFUnitKind, unsigned long*, unsigned long*, teHWFErrorCode*)::prevErrCode
+0000d6fc CI865_82xx_68.elf CMirroredObject::c_pMirroredObjectMgrImpl
+0000d700 CI865_82xx_68.elf CMirroredObjectAgent::c_pHeapCallback
+0000d704 CI865_82xx_68.elf CMirroredObjectAgent::c_AgentTag
+0000d708 V CComCoClass<CPhCICN, &(CLSID_CPhCICN)>::m_HeapTag CI865_82xx_68.elf 
+0000d70c CI865_82xx_68.elf PHproperties
+0000d714 CI865_82xx_68.elf useEXEHEAD
+</SYMBOLS>

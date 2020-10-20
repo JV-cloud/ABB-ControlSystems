@@ -1,0 +1,485 @@
+(****************************************************************************)
+(* FILE            LS PTRC.hwd                                              *)
+(*                                                                          *)
+(* DESCRIPTION     Hardware definition file for LS PTRC                     *)
+(*                                                                          *)
+(* AUTHOR          Ramachandragowda G                                       *)
+(*                                                                          *)
+(* All rights reserved. Reproduction, modification, use or disclosure       *)
+(* to third parties without express authority, is forbidden.                *)
+(* Copyright ABB Inc. 2006.                                                 *)
+(*                                                                          *)
+(*                                                                          *)
+(* 27-04-2006 Ramachandragowda G            Initial version                 *)
+(* 05-Feb-14  Karthick Raja P        Added InAreaSize for #53247            *)
+(****************************************************************************)
+FileHeader
+   Contents               "LS PTRC"
+   Date                   "2007-04-27"
+   Version                "1.0-0"
+  RequiredSyntaxVersion "3.0"
+End FileHeader
+
+HWUnitInfo  (* LS PTRC *)
+   HWUnitID {223377E4-2343-42c5-B620-50AB81DE975F} (* GUID for LS PTRC, PTRC for Load Shedding *)
+   Description "LS PTRC"
+   Information "Trip Conditioning for Load shedding"
+   Icons LNType
+   Attributes IoUnit DigitalOut AdapterUnit
+   InstanceNameDisable
+   InterfaceInfo
+     IoSysType    CIGIO
+     CLSID_CB    {53315084-E413-4c55-92E1-C2E1FAF19460} (*  CLSID_CB  = GUID for CI868 PH in Control builder CB *)
+     CLSID_CTRL  {4AB844AC-2BEE-4910-BA08-CA109A5D7E81}  (* CLSID_CTRL = GUID for CI868 PH in Controler *)
+   End InterfaceInfo
+
+   ConnectionInfo
+      ConnectType OwnUnit
+      IOConnect Fail
+      IoConfig  Fail
+   End ConnectionInfo
+
+   ExternalConfigInfo
+      ShowExternalChannelDescriptionColumn
+   End ExternalConfigInfo
+
+   Parameters
+      ParamInfo
+         Name IALADDROP
+         Description "IALaddr for Op"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 1
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEOP
+         Description "DMCD Type for Op"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype INT
+         Default 1
+         ParValIndex 2
+         ParamType Numbered 2
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOOP
+         Description "Protocol Info for Op"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 3
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTR1
+         Description "IALaddr for Tr1"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 4
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETR1
+         Description "DMCD Type for Tr1"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype INT
+         Default 1
+         ParValIndex 2
+         ParamType Numbered 5
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTR1
+         Description "ProtocolInfo for Tr1"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 6
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTR2
+         Description "IALaddr for Tr2"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 7
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETR2
+         Description "DMCD Type for Tr2"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype INT
+         Default 1
+         ParValIndex 2
+         ParamType Numbered 8
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTR2
+         Description "ProtocolInfo for Tr2"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 9
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTR3
+         Description "IALaddr for Tr3"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 10
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETR3
+         Description "DMCD Type for Tr3"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype INT
+         Default 1
+         ParValIndex 2
+         ParamType Numbered 11
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTR3
+         Description "ProtocolInfo for Tr3"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 12
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTR4
+         Description "IALaddr for Tr4"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 13
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETR4
+         Description "DMCD Type for Tr4"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype INT
+         Default 1
+         ParValIndex 2
+         ParamType Numbered 14
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTR4
+         Description "ProtocolInfo for Tr4"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 15
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTR5
+         Description "IALaddr for Tr5"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 16
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETR5
+         Description "DMCD Type for Tr5"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype INT
+         Default 1
+         ParValIndex 2
+         ParamType Numbered 17
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTR5
+         Description "ProtocolInfo for Tr5"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 18
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTR6
+         Description "IALaddr for Tr6"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 19
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETR6
+         Description "DMCD Type for Tr6"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype INT
+         Default 1
+         ParValIndex 2
+         ParamType Numbered 20
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTR6
+         Description "ProtocolInfo for Tr6"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 21
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTR7
+         Description "IALaddr for Tr7"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 22
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETR7
+         Description "DMCD Type for Tr7"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype INT
+         Default 1
+         ParValIndex 2
+         ParamType Numbered 23
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTR7
+         Description "ProtocolInfo for Tr7"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 24
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTR8
+         Description "IALaddr for Tr8"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 25
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETR8
+         Description "DMCD Type for Tr8"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype INT
+         Default 1
+         ParValIndex 2
+         ParamType Numbered 26
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTR8
+         Description "ProtocolInfo for Tr8"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 27
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTR9
+         Description "IALaddr for Tr9"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 28
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETR9
+         Description "DMCD Type for Tr9"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype INT
+         Default 1
+         ParValIndex 2
+         ParamType Numbered 29
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTR9
+         Description "ProtocolInfo for Tr9"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 30
+      End ParamInfo
+      ParamInfo
+         Name IALADDRTR10
+         Description "IALaddr for Tr10"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 31
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPETR10
+         Description "DMCD Type for Tr10"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype INT
+         Default 1
+         ParValIndex 2
+         ParamType Numbered 32
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOTR10
+         Description "ProtocolInfo for Tr10"
+         ExternalVisible
+         CompileType IOConnect 
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 33
+      End ParamInfo
+      ParamInfo
+         Name HWDVERSION
+         Description "Version of HWD File"
+         ExternalVisible
+         Datatype STRING
+         Default " 1.0-0 "
+         ParamType Numbered 35
+      End ParamInfo
+      ParamInfo
+         Name LNNAME
+         Description "LN Name"
+         Datatype STRING
+         Default ""100
+         ParamType Numbered 37
+      End ParamInfo
+      ParamInfo
+         Name H_LNNAME
+         Description "Hidden LN Name"
+         ExternalVisible
+         Datatype STRING
+         Default "HIDDENLNNAME"100
+         ParamType Numbered 39
+      End ParamInfo
+      ParamInfo
+         Name H_LNPOSITION
+         Description "Hidden LN Position"
+         ExternalVisible
+         Datatype INT
+         Default 255
+         ParValIndex 2
+         ParamType Numbered 41
+      End ParamInfo
+   End Parameters
+
+   ParValList
+     ParVal
+        ParValIndex 2
+        UnitText    ""
+        INT 0 255 0 255
+     End ParVal
+   End ParValList
+
+   Channels
+    ChannelInfo
+      Number         1
+      ChannelName   "Op"
+      Datatype       Bool_Out
+      Routine        201
+      CopyParameters 16#40000 16#0003
+    End ChannelInfo
+    ChannelInfo
+      Number         2
+      ChannelName   "Tr1"
+      Datatype       Bool_Out
+      Routine        201
+      CopyParameters 16#40008 16#0003
+    End ChannelInfo
+    ChannelInfo
+      Number         3
+      ChannelName   "Tr2"
+      Datatype       Bool_Out
+      Routine        201
+      CopyParameters 16#40010 16#0003
+    End ChannelInfo
+    ChannelInfo
+      Number         4
+      ChannelName   "Tr3"
+      Datatype       Bool_Out
+      Routine        201
+      CopyParameters 16#40018 16#0003
+    End ChannelInfo
+    ChannelInfo
+      Number         5
+      ChannelName   "Tr4"
+      Datatype       Bool_Out
+      Routine        201
+      CopyParameters 16#40020 16#0003
+    End ChannelInfo
+    ChannelInfo
+      Number         6
+      ChannelName   "Tr5"
+      Datatype       Bool_Out
+      Routine        201
+      CopyParameters 16#40028 16#0003
+    End ChannelInfo
+    ChannelInfo
+      Number         7
+      ChannelName   "Tr6"
+      Datatype       Bool_Out
+      Routine        201
+      CopyParameters 16#40030 16#0003
+    End ChannelInfo
+    ChannelInfo
+      Number         8
+      ChannelName   "Tr7"
+      Datatype       Bool_Out
+      Routine        201
+      CopyParameters 16#40038 16#0003
+    End ChannelInfo
+    ChannelInfo
+      Number         9
+      ChannelName   "Tr8"
+      Datatype       Bool_Out
+      Routine        201
+      CopyParameters 16#40040 16#0003
+    End ChannelInfo
+    ChannelInfo
+      Number         10
+      ChannelName   "Tr9"
+      Datatype       Bool_Out
+      Routine        201
+      CopyParameters 16#40048 16#0003
+    End ChannelInfo
+    ChannelInfo
+      Number         11
+      ChannelName   "Tr10"
+      Datatype       Bool_Out
+      Routine        201
+      CopyParameters 16#40050 16#0003
+    End ChannelInfo
+ End Channels
+
+Configuration
+    ConfigInfo
+      ModuleKey       16#04
+      InAreaSize      88 BYTE
+      OutAreaSize     88 BYTE
+    End ConfigInfo
+  End Configuration
+  HWUnitInfoCRC 16#3D77
+End HWUnitInfo

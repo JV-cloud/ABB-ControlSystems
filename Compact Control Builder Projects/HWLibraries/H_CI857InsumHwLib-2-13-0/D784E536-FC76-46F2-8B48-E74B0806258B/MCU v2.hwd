@@ -1,0 +1,236 @@
+HWUnitInfo  (* INSUM MCU Device with Process Warnings disabled *)
+   HWUnitID {5CAB7F7F-7246-4b9d-AE9B-CE9874B54379} (* GUID for special MCU with process related status warnings disabled *)
+   Description "MCU v2"
+   Information "INSUM MCU with Process Warnings disabled "
+(* ###HelpProject INSUMHelp.xxx *)
+   Icons INSUMMCUType
+   Attributes AdapterUnit
+   InterfaceInfo
+     Interface CIGInterface
+     CLSID_CB   {1896BB43-3C0D-11d6-891B-006097B83487} (* CLSID_CB = GUID for INSUM PH in Control Builder *)
+     CLSID_CTRL {1896BB44-3C0D-11d6-891B-006097B83487} (* CLSID_CTRL = GUID for INSUM PH in Controller *)
+     HWConfig Fail     (* Change of net parameters affects subunits *)
+   End InterfaceInfo
+
+   SubUnits 0
+
+   Parameters
+      ParamInfo 
+         Name PROGRAMID
+         Description "INSUM Device Program Id"
+         Hidden
+         CompileType HWConfig
+         Datatype STRING
+         Default "M       " 8  (* MCU, 8 is max length of string *)
+         ParamType Numbered 1
+      End ParamInfo
+      ParamInfo 
+         Name NUMCHARSTOCHECK
+         Description "Number of characters to check in Program Id"
+         Hidden
+         CompileType HWConfig
+         Datatype INT
+         Default 1 (* Check "M" *)
+         ParValIndex 0
+         ParamType Numbered 2
+      End ParamInfo
+      ParamInfo 
+         Name EVENTHANDLING
+         Description "Generate Alarms"
+         CompileType HWConfig
+         Datatype ENUM
+         Default 0
+(*         Default 1*)              
+         ParValIndex 1
+         ParamType Numbered 3
+      End ParamInfo  
+      ParamInfo 
+         Name NVALARMREPINDEX
+         Description "NValarmRep index (default 0x1018=4120)"
+         Hidden
+         CompileType HWConfig
+         Datatype INT
+         Default 4120
+         ParValIndex 2
+         ParamType Numbered 4
+      End ParamInfo  
+      ParamInfo 
+         Name WARNINGMASK0
+         Description "NValarmRep W0 mask(default 65535 (0xFFFF))"
+         Hidden
+         CompileType HWConfig
+         Datatype INT
+         Default 65535
+         ParValIndex 2
+         ParamType Numbered 5
+      End ParamInfo  
+      ParamInfo 
+         Name WARNINGMASK1
+         Description "NValarmRep W1 mask(default 61951 (0xF1FF))"
+         (* Bits that should not generate alarms: *)
+         (* W1/9:  NoROM                          *)
+         (* W1/10: WriteFailROM                   *)
+         (* W1/11: ReadFailROM                    *)
+         (*                        => mask = F1FF *)
+         Hidden
+         CompileType HWConfig
+         Datatype INT
+         Default 61951
+         ParValIndex 2
+         ParamType Numbered 6
+      End ParamInfo  
+      ParamInfo 
+         Name WARNINGMASK2
+         Description "NValarmRep W2 mask(default 16544 (0x40A0))"
+         (* Bits that should not generate alarms: *)
+         (* W2/0:TOL reset level reached          *)
+         (* W2/1:Started1                         *)
+         (* W2/2:Started2                         *)
+         (* W2/3:Stopped                          *)
+         (* W2/4:Local                            *)
+         (* W2/6:TripReset                        *)
+         (* W2/8:StartedCwRCU                     *)
+         (* W2/9:StoppedRCU                       *)
+         (* W2/10:StartedCcwRCU                   *)
+         (* W2/11:TripByPass                      *)
+         (* W2/12:Motor stopped by limit ...      *)
+         (* W2/13:Motor stopped by limit ...      *)
+         (* W2/15:SysClkTimeSync                  *)
+         (*                        => mask = 40A0 *)
+         Hidden
+         CompileType HWConfig
+         Datatype INT
+         Default 16544
+         ParValIndex 2
+         ParamType Numbered 7
+      End ParamInfo  
+      ParamInfo 
+         Name WARNINGMASK3
+         Description "NValarmRep W3 mask(default 65529 (0xFFF9))"
+         (* Bits that should not generate alarms: *)
+         (* W2/0:TOL reset level reached          *)
+         (* W3/1:LimitOpenAct                     *)
+         (* W3/2:LimitCloseAct                    *)
+         (*                        => mask = FFF9 *)
+         Hidden
+         CompileType HWConfig
+         Datatype INT
+         Default 65529
+         ParValIndex 2
+         ParamType Numbered 8
+      End ParamInfo  
+      ParamInfo 
+         Name TRIPMASK0
+         Description "NValarmRep T0 mask(default 65535 (0xFFFF))"
+         Hidden
+         CompileType HWConfig
+         Datatype INT
+         Default 65535
+         ParValIndex 2
+         ParamType Numbered 9
+      End ParamInfo  
+      ParamInfo 
+         Name TRIPMASK1
+         Description "NValarmRep T1 mask(default 65535 (0xFFFF))"
+         Hidden
+         CompileType HWConfig
+         Datatype INT
+         Default 65535
+         ParValIndex 2
+         ParamType Numbered 10
+      End ParamInfo  
+      ParamInfo 
+         Name TRIPMASK2
+         Description "NValarmRep T2 mask(default 65535 (0xFFFF))"
+         Hidden
+         CompileType HWConfig
+         Datatype INT
+         Default 65535
+         ParValIndex 2
+         ParamType Numbered 11
+      End ParamInfo  
+      ParamInfo 
+         Name TRIPMASK3
+         Description "NValarmRep T3 mask(default 65535 (0xFFFF))"
+         Hidden
+         CompileType HWConfig
+         Datatype INT
+         Default 65535
+         ParValIndex 2
+         ParamType Numbered 12
+      End ParamInfo  
+   End Parameters
+
+   ParValList
+      ParVal
+         ParValIndex 0
+         INT 0 8 0 8
+      End ParVal
+      ParVal
+         ParValIndex 1
+         ENUM
+         "Disabled" 0
+         "Enabled"  1
+         "Enable detailed" 2
+         "Enabled Trip/Warning" 3
+      End ParVal
+      ParVal
+         ParValIndex 2
+         INT 0 65535 0 65535
+      End ParVal
+   End ParValList
+
+   Channels
+      ChannelInfo
+         Number 0
+         ChannelName "UnitStatus"
+         Datatype Status_In
+         Routine 900
+         CopyParameters 0 0 16#50000
+      End ChannelInfo
+   End Channels
+
+
+   UnitStatusText
+     DeviceSpecific1    "Error!"
+     DeviceSpecific2    "Warning!"
+     DeviceSpecific3    "INSUM Device not found"
+     DeviceSpecific4    "Wrong INSUM device type"
+     DeviceSpecific5    "MCUErr5"
+     DeviceSpecific6    "MCUErr6"
+     DeviceSpecific7    "MCUErr7"
+     DeviceSpecific8    "MCUErr8"
+     DeviceSpecific9    "GW Connection error"
+     DeviceSpecific10   "MCUErr10"
+     ExtendedStatus1    "Runs1"
+     ExtendedStatus2    "Runs2"
+     ExtendedStatus3    "Stopped"
+     ExtendedStatus4    "Tripped"
+     ExtendedStatus5    "Alarm"
+     ExtendedStatus6    "Actuator open"
+     ExtendedStatus7    "Actuator closed"
+     ExtendedStatus8    "StaggStart"
+     ExtendedStatus9    "Failsafe"
+     ExtendedStatus10   "TOLBypass"
+     ExtendedStatus11   "TestPos"
+     ExtendedStatus12   "Star"
+     ExtendedStatus13   "Delta"
+     ExtendedStatus14   "Soft"
+     ExtendedStatus15   "No remote reset" 
+     ExtendedStatus16   "LocalOpMode"
+     ExtendedStatus17   "MCUExtStatus17"
+     ExtendedStatus18   "MCUExtStatus18"
+   End UnitStatusText
+
+   UnitStatusSeverity
+     DeviceSpecific1    GeneralError    (*"Error!"*)
+     DeviceSpecific2    GeneralWarning  (*"Warning!"*)
+     DeviceSpecific3    GeneralError    TriggerAlarm SeverityMedium (*"INSUM Device not found"*)
+     DeviceSpecific4    GeneralError    TriggerAlarm SeverityMedium (*"Wrong INSUM device type"*)
+
+     DeviceSpecific9    GeneralError    (*"GW Connection error" No Alarm for 2:nd order errors *)
+
+   End UnitStatusSeverity
+
+  HWUnitInfoCRC 16#2C7E
+End HWUnitInfo  (* INSUM MCU Device with Process Warnings disabled *)

@@ -1,0 +1,752 @@
+HWUnitInfo (* RAOD32 *)
+   HWUnitID {C38B9BF2-5E13-48B9-8672-4573E1497D35}
+   Description "RAOD32"
+   Information "Digital output module, 32 channels"
+   Icons RackIOType
+   Attributes IoUnit DigitalOut 
+   Parameters
+      ParamInfo 
+         Name SAFESTATE
+         Description "SafeState"
+         CompileType IOConfig
+         Datatype ENUMCONTROL
+         Default 0
+         ParValIndex 1
+         ParamType Numbered 100
+         SafeStateInfo
+           SafeStateType SafeStateControl
+           SafeStateRef Unit
+         End SafeStateInfo
+      End ParamInfo 
+      ParamInfo 
+         Name SAFEVALUE_0
+         Description "Safe value channel 0"
+         CompileType IOConfig
+         Datatype BOOL
+         Default false
+         (* CNSafeData *)
+         ParamType CIGIOData 1 15 0 WordParam WordOffset 
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 0
+         End SafeStateInfo
+      End ParamInfo 
+      ParamInfo 
+         Name SAFEVALUE_1
+         Description "Safe value channel 1"
+         CompileType IOConfig
+         Datatype BOOL
+         Default false
+         (* CNSafeData *)
+         ParamType CIGIOData 1 14 0 WordParam WordOffset 
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 1
+         End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+         Name SAFEVALUE_2
+         Description "Safe value channel 2"
+         CompileType IOConfig
+         Datatype BOOL
+         Default false
+         (* CNSafeData *)
+         ParamType CIGIOData 1 13 0 WordParam WordOffset 
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 2
+         End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+         Name SAFEVALUE_3
+         Description "Safe value channel 3"
+         CompileType IOConfig
+         Datatype BOOL
+         Default false
+         (* CNSafeData *)
+         ParamType CIGIOData 1 12 0 WordParam WordOffset 
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 3
+         End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+         Name SAFEVALUE_4
+         Description "Safe value channel 4"
+         CompileType IOConfig
+         Datatype BOOL
+         Default false
+         (* CNSafeData *)
+         ParamType CIGIOData 1 11 0 WordParam WordOffset 
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 4
+         End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+         Name SAFEVALUE_5
+         Description "Safe value channel 5"
+         CompileType IOConfig
+         Datatype BOOL
+         Default false
+         (* CNSafeData *)
+         ParamType CIGIOData 1 10 0 WordParam WordOffset 
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 5
+         End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+         Name SAFEVALUE_6
+         Description "Safe value channel 6"
+         CompileType IOConfig
+         Datatype BOOL
+         Default false
+         (* CNSafeData *)
+         ParamType CIGIOData 1 9 0 WordParam WordOffset 
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 6
+         End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+         Name SAFEVALUE_7
+         Description "Safe value channel 7"
+         CompileType IOConfig
+         Datatype BOOL
+         Default false
+         (* CNSafeData *)
+         ParamType CIGIOData 1 8 0 WordParam WordOffset 
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 7
+         End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+         Name SAFEVALUE_10
+         Description "Safe value channel 10"
+         CompileType IOConfig
+         Datatype BOOL
+         Default false
+         (* CNSafeData *)
+         ParamType CIGIOData 1 7 0 WordParam WordOffset 
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 10
+         End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+         Name SAFEVALUE_11
+         Description "Safe value channel 11"
+         CompileType IOConfig
+         Datatype BOOL
+         Default false
+         (* CNSafeData *)
+         ParamType CIGIOData 1 6 0 WordParam WordOffset 
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 11
+         End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+         Name SAFEVALUE_12
+         Description "Safe value channel 12"
+         CompileType IOConfig
+         Datatype BOOL
+         Default false
+         (* CNSafeData *)
+         ParamType CIGIOData 1 5 0 WordParam WordOffset 
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 12
+         End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+         Name SAFEVALUE_13
+         Description "Safe value channel 13"
+         CompileType IOConfig
+         Datatype BOOL
+         Default false
+         (* CNSafeData *)
+         ParamType CIGIOData 1 4 0 WordParam WordOffset 
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 13
+         End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+         Name SAFEVALUE_14
+         Description "Safe value channel 14"
+         CompileType IOConfig
+         Datatype BOOL
+         Default false
+         (* CNSafeData *)
+         ParamType CIGIOData 1 3 0 WordParam WordOffset 
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 14
+         End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+         Name SAFEVALUE_15
+         Description "Safe value channel 15"
+         CompileType IOConfig
+         Datatype BOOL
+         Default false
+         (* CNSafeData *)
+         ParamType CIGIOData 1 2 0 WordParam WordOffset 
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 15
+         End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+         Name SAFEVALUE_16
+         Description "Safe value channel 16"
+         CompileType IOConfig
+         Datatype BOOL
+         Default false
+         (* CNSafeData *)
+         ParamType CIGIOData 1 1 0 WordParam WordOffset 
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 16
+         End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+         Name SAFEVALUE_17
+         Description "Safe value channel 17"
+         CompileType IOConfig
+         Datatype BOOL
+         Default false
+         (* CNSafeData *)
+         ParamType CIGIOData 1 0 0 WordParam WordOffset 
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 17
+         End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+         Name SAFEVALUE_20
+         Description "Safe value channel 20"
+         CompileType IOConfig
+         Datatype BOOL
+         Default false
+         (* CNSafeData *)
+         ParamType CIGIOData 2 15 0 WordParam WordOffset 
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 20
+         End SafeStateInfo
+      End ParamInfo 
+      ParamInfo 
+         Name SAFEVALUE_21
+         Description "Safe value channel 21"
+         CompileType IOConfig
+         Datatype BOOL
+         Default false
+         (* CNSafeData *)
+         ParamType CIGIOData 2 14 0 WordParam WordOffset 
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 21
+         End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+         Name SAFEVALUE_22
+         Description "Safe value channel 22"
+         CompileType IOConfig
+         Datatype BOOL
+         Default false
+         (* CNSafeData *)
+         ParamType CIGIOData 2 13 0 WordParam WordOffset 
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 22
+         End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+         Name SAFEVALUE_23
+         Description "Safe value channel 23"
+         CompileType IOConfig
+         Datatype BOOL
+         Default false
+         (* CNSafeData *)
+         ParamType CIGIOData 2 12 0 WordParam WordOffset 
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 23
+         End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+         Name SAFEVALUE_24
+         Description "Safe value channel 24"
+         CompileType IOConfig
+         Datatype BOOL
+         Default false
+         (* CNSafeData *)
+         ParamType CIGIOData 2 11 0 WordParam WordOffset 
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 24
+         End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+         Name SAFEVALUE_25
+         Description "Safe value channel 25"
+         CompileType IOConfig
+         Datatype BOOL
+         Default false
+         (* CNSafeData *)
+         ParamType CIGIOData 2 10 0 WordParam WordOffset 
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 25
+         End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+         Name SAFEVALUE_26
+         Description "Safe value channel 26"
+         CompileType IOConfig
+         Datatype BOOL
+         Default false
+         (* CNSafeData *)
+         ParamType CIGIOData 2 9 0 WordParam WordOffset 
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 26
+         End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+         Name SAFEVALUE_27
+         Description "Safe value channel 27"
+         CompileType IOConfig
+         Datatype BOOL
+         Default false
+         (* CNSafeData *)
+         ParamType CIGIOData 2 8 0 WordParam WordOffset 
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 27
+         End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+         Name SAFEVALUE_30
+         Description "Safe value channel 30"
+         CompileType IOConfig
+         Datatype BOOL
+         Default false
+         (* CNSafeData *)
+         ParamType CIGIOData 2 7 0 WordParam WordOffset 
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 30
+         End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+         Name SAFEVALUE_31
+         Description "Safe value channel 31"
+         CompileType IOConfig
+         Datatype BOOL
+         Default false
+         (* CNSafeData *)
+         ParamType CIGIOData 2 6 0 WordParam WordOffset 
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 31
+         End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+         Name SAFEVALUE_32
+         Description "Safe value channel 32"
+         CompileType IOConfig
+         Datatype BOOL
+         Default false
+         (* CNSafeData *)
+         ParamType CIGIOData 2 5 0 WordParam WordOffset 
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 32
+         End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+         Name SAFEVALUE_33
+         Description "Safe value channel 33"
+         CompileType IOConfig
+         Datatype BOOL
+         Default false
+         (* CNSafeData *)
+         ParamType CIGIOData 2 4 0 WordParam WordOffset 
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 33
+         End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+         Name SAFEVALUE_34
+         Description "Safe value channel 34"
+         CompileType IOConfig
+         Datatype BOOL
+         Default false
+         (* CNSafeData *)
+         ParamType CIGIOData 2 3 0 WordParam WordOffset 
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 34
+         End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+         Name SAFEVALUE_35
+         Description "Safe value channel 35"
+         CompileType IOConfig
+         Datatype BOOL
+         Default false
+         (* CNSafeData *)
+         ParamType CIGIOData 2 2 0 WordParam WordOffset 
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 35
+         End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+         Name SAFEVALUE_36
+         Description "Safe value channel 36"
+         CompileType IOConfig
+         Datatype BOOL
+         Default false
+         (* CNSafeData *)
+         ParamType CIGIOData 2 1 0 WordParam WordOffset 
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 36
+         End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+         Name SAFEVALUE_37
+         Description "Safe value channel 37"
+         CompileType IOConfig
+         Datatype BOOL
+         Default false
+         (* CNSafeData *)
+         ParamType CIGIOData 2 0 0 WordParam WordOffset 
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 37
+         End SafeStateInfo
+      End ParamInfo
+   End Parameters
+   ParValList
+      ParVal
+         ParValIndex 1
+         ENUMCONTROL
+         "Resetoutputs"  0 ResetValue
+         "Holdlaststate" 1 HoldLastValue
+         "Safevalues"    2 UseSafeValue
+      End ParVal
+   End ParValList
+   Channels
+      ChannelInfo
+         Number 0 
+         ChannelName "Output 0"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40000 16#8000
+         ConflictInfo 16#0201
+      End ChannelInfo
+      ChannelInfo
+         Number 1
+         ChannelName "Output 1"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40000 16#4000
+         ConflictInfo 16#0201
+      End ChannelInfo
+      ChannelInfo
+         Number 2
+         ChannelName "Output 2"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40000 16#2000
+         ConflictInfo 16#0201
+      End ChannelInfo
+      ChannelInfo
+         Number 3
+         ChannelName "Output 3"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40000 16#1000
+         ConflictInfo 16#0201
+      End ChannelInfo
+      ChannelInfo
+         Number 4
+         ChannelName "Output 4"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40000 16#0800
+         ConflictInfo 16#0201
+      End ChannelInfo
+      ChannelInfo
+         Number 5
+         ChannelName "Output 5"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40000 16#0400
+         ConflictInfo 16#0201
+      End ChannelInfo
+      ChannelInfo
+         Number 6
+         ChannelName "Output 6"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40000 16#0200
+         ConflictInfo 16#0201
+      End ChannelInfo
+      ChannelInfo
+         Number 7
+         ChannelName "Output 7"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40000 16#0100
+         ConflictInfo 16#0201
+      End ChannelInfo
+      ChannelInfo
+         Number 10
+         ChannelName "Output 10"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40000 16#0080
+         ConflictInfo 16#0201
+      End ChannelInfo
+      ChannelInfo
+         Number 11
+         ChannelName "Output 11"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40000 16#0040
+         ConflictInfo 16#0201
+      End ChannelInfo
+      ChannelInfo
+         Number 12
+         ChannelName "Output 12"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40000 16#0020
+         ConflictInfo 16#0201
+      End ChannelInfo
+      ChannelInfo
+         Number 13
+         ChannelName "Output 13"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40000 16#0010
+         ConflictInfo 16#0201
+      End ChannelInfo
+      ChannelInfo
+         Number 14
+         ChannelName "Output 14"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40000 16#0008
+         ConflictInfo 16#0201
+      End ChannelInfo
+      ChannelInfo
+         Number 15
+         ChannelName "Output 15"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40000 16#0004
+         ConflictInfo 16#0201
+      End ChannelInfo
+      ChannelInfo
+         Number 16
+         ChannelName "Output 16"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40000 16#0002
+         ConflictInfo 16#0201
+      End ChannelInfo
+      ChannelInfo
+         Number 17
+         ChannelName "Output 17"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40000 16#0001
+         ConflictInfo 16#0201
+      End ChannelInfo
+      ChannelInfo
+         Number 20 
+         ChannelName "Output 20"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40001 16#8000
+         ConflictInfo 16#0804
+      End ChannelInfo
+      ChannelInfo
+         Number 21
+         ChannelName "Output 21"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40001 16#4000
+         ConflictInfo 16#0804
+      End ChannelInfo
+      ChannelInfo
+         Number 22
+         ChannelName "Output 22"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40001 16#2000
+         ConflictInfo 16#0804
+      End ChannelInfo
+      ChannelInfo
+         Number 23
+         ChannelName "Output 23"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40001 16#1000
+         ConflictInfo 16#0804
+      End ChannelInfo
+      ChannelInfo
+         Number 24
+         ChannelName "Output 24"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40001 16#0800
+         ConflictInfo 16#0804
+      End ChannelInfo
+      ChannelInfo
+         Number 25
+         ChannelName "Output 25"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40001 16#0400
+         ConflictInfo 16#0804
+      End ChannelInfo
+      ChannelInfo
+         Number 26
+         ChannelName "Output 26"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40001 16#0200
+         ConflictInfo 16#0804
+      End ChannelInfo
+      ChannelInfo
+         Number 27
+         ChannelName "Output 27"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40001 16#0100
+         ConflictInfo 16#0804
+      End ChannelInfo
+      ChannelInfo
+         Number 30
+         ChannelName "Output 30"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40001 16#0080
+         ConflictInfo 16#0804
+      End ChannelInfo
+      ChannelInfo
+         Number 31
+         ChannelName "Output 31"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40001 16#0040
+         ConflictInfo 16#0804
+      End ChannelInfo
+      ChannelInfo
+         Number 32
+         ChannelName "Output 32"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40001 16#0020
+         ConflictInfo 16#0804
+      End ChannelInfo
+      ChannelInfo
+         Number 33
+         ChannelName "Output 33"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40001 16#0010
+         ConflictInfo 16#0804
+      End ChannelInfo
+      ChannelInfo
+         Number 34
+         ChannelName "Output 34"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40001 16#0008
+         ConflictInfo 16#0804
+      End ChannelInfo
+      ChannelInfo
+         Number 35
+         ChannelName "Output 35"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40001 16#0004
+         ConflictInfo 16#0804
+      End ChannelInfo
+      ChannelInfo
+         Number 36
+         ChannelName "Output 36"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40001 16#0002
+         ConflictInfo 16#0804
+      End ChannelInfo
+      ChannelInfo
+         Number 37
+         ChannelName "Output 37"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40001 16#0001
+         ConflictInfo 16#0804
+      End ChannelInfo
+      ChannelInfo
+         Number 38
+         ChannelName "First word outputs"
+         Datatype Dword_Out
+         Routine 600
+         CopyParameters 0 0 16#40000 16#0 
+         ConflictInfo 16#0102
+      End ChannelInfo
+      ChannelInfo
+         Number 39
+         ChannelName "Second word outputs"
+         Datatype Dword_Out
+         Routine 600
+         CopyParameters 0 0 16#40001 16#0 
+         ConflictInfo 16#0408
+      End ChannelInfo
+      ChannelInfo
+         Number 40
+         ChannelName "UnitStatus"
+         Datatype Status_In
+         Routine 900
+         CopyParameters 0 0 16#50000
+      End ChannelInfo
+   End Channels
+   IoUnitStatus
+      StatusType WrongModuleType 
+      StatusData 16#30000 16#1FFF 16#5 16#43
+      StatusType ModuleMissing 
+      StatusData 16#30000 16#8000 16#0 16#0
+      StatusType IoError 
+      StatusData 16#30000 16#2000 16#0 16#0
+   End IoUnitStatus
+   Configuration
+      ConfigInfo
+         ModuleKey   16#43
+         InAreaSize  1
+         OutAreaSize 2
+         InWord
+            WORD 16#A042 0 
+         OutWord
+            WORD 0       0 
+            WORD 0       1 
+         CIGIOConnData
+            CIGIOData    16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 (* CNSafeData *)
+         End CIGIOConnData
+      End ConfigInfo
+   End Configuration
+  HWUnitInfoCRC 16#D151
+End HWUnitInfo (* RAOD32 *)

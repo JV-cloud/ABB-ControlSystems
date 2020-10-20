@@ -1,0 +1,717 @@
+(* -------------------------------------------------------------- *)
+(*   Module: AI810  FCI:CI830  CI:CI854                           *)
+(* -------------------------------------------------------------- *)
+
+(* Version 1.0/2                                                  *)
+(* 2006-02-23     N Ljungberg                                     *)
+(* AC800M #20425  Changed underrange value                        *)
+(* -------------------------------------------------------------- *)
+(* Version 1.0/1                                                  *)
+(* 2006-02-06     K Gardin                                        *)
+(* AC800M #22647  Changed priorities on Alarms and Events         *)
+(* -------------------------------------------------------------- *)
+(* Version 1.0/0 based on io_ai810_p.hwd version 5.1/8            *)
+(* 2005-09-01    K Gardin                                         *)
+
+
+
+HWUnitInfo (* AI810 / CI830 / CI854 *)
+  HWUnitID      {E182D46E-3FFE-4873-8860-D9BBED4C6A96} 
+  Description   "AI810"
+  Information   "Analog input module, 8 channels"
+  Icons         S800IoType
+  Attributes    IoUnit AnalogIn
+
+  Parameters
+    ParamInfo
+      Name        ACTIVATE1
+      Description "Activate channel 1"
+      CompileType IoConnect
+      DataType    BOOL
+      Default     TRUE
+      ParamType   ConfArea 1 0
+    End ParamInfo
+    ParamInfo
+      Name        ACTIVATE2
+      Description "Activate channel 2"
+      CompileType IoConnect
+      DataType    BOOL
+      Default     TRUE
+      ParamType   ConfArea 1 1
+    End ParamInfo
+    ParamInfo
+      Name        ACTIVATE3
+      Description "Activate channel 3"
+      CompileType IoConnect
+      DataType    BOOL
+      Default     TRUE
+      ParamType   ConfArea 1 2
+    End ParamInfo
+    ParamInfo
+      Name        ACTIVATE4
+      Description "Activate channel 4"
+      CompileType IoConnect
+      DataType    BOOL
+      Default     TRUE
+      ParamType   ConfArea 1 3
+    End ParamInfo
+    ParamInfo
+      Name        ACTIVATE5
+      Description "Activate channel 5"
+      CompileType IoConnect
+      DataType    BOOL
+      Default     TRUE
+      ParamType   ConfArea 1 4
+    End ParamInfo
+    ParamInfo
+      Name        ACTIVATE6
+      Description "Activate channel 6"
+      CompileType IoConnect
+      DataType    BOOL
+      Default     TRUE
+      ParamType   ConfArea 1 5
+    End ParamInfo
+    ParamInfo
+      Name        ACTIVATE7
+      Description "Activate channel 7"
+      CompileType IoConnect
+      DataType    BOOL
+      Default     TRUE
+      ParamType   ConfArea 1 6
+    End ParamInfo
+    ParamInfo
+      Name        ACTIVATE8
+      Description "Activate channel 8"
+      CompileType IoConnect
+      DataType    BOOL
+      Default     TRUE
+      ParamType   ConfArea 1 7
+    End ParamInfo
+    ParamInfo
+      Name        FILT_1
+      Description "Filter time channel 1"
+      CompileType IoConnect
+      DataType    ENUM
+      Default     0
+      ParValindex 5
+      ParamType   ConfArea 0 0
+    End ParamInfo
+    ParamInfo
+      Name        FILT_2
+      Description "Filter time channel 2"
+      CompileType IoConnect
+      DataType    ENUM
+      Default     0
+      ParValindex 5
+      ParamType   ConfArea 0 2
+    End ParamInfo
+    ParamInfo
+      Name        FILT_3
+      Description "Filter time channel 3"
+      CompileType IoConnect
+      DataType    ENUM
+      Default     0
+      ParValindex 5
+      ParamType   ConfArea 0 4
+    End ParamInfo
+    ParamInfo
+      Name        FILT_4
+      Description "Filter time channel 4"
+      CompileType IoConnect
+      DataType    ENUM
+      Default     0
+      ParValindex 5
+      ParamType   ConfArea 0 6
+    End ParamInfo
+    ParamInfo
+      Name        FILT_5
+      Description "Filter time channel 5"
+      CompileType IoConnect
+      DataType    ENUM
+      Default     0
+      ParValindex 5
+      ParamType   ConfArea 0 8
+    End ParamInfo
+    ParamInfo
+      Name        FILT_6
+      Description "Filter time channel 6"
+      CompileType IoConnect
+      DataType    ENUM
+      Default     0
+      ParValindex 5
+      ParamType   ConfArea 0 10
+    End ParamInfo
+    ParamInfo
+      Name        FILT_7
+      Description "Filter time channel 7"
+      CompileType IoConnect
+      DataType    ENUM
+      Default     0
+      ParValindex 5
+      ParamType   ConfArea 0 12
+    End ParamInfo
+    ParamInfo
+      Name        FILT_8
+      Description "Filter time channel 8"
+      CompileType IoConnect
+      DataType    ENUM
+      Default     0
+      ParValindex 5
+      ParamType   ConfArea 0 14
+    End ParamInfo
+    ParamInfo
+      Name        LinCode_1
+      Description "Linearization code channel 1"
+      CompileType IOConnect
+      DataType    ENUM
+      Default     0
+      ParValIndex 3
+      ParamType   CIGIOData 4 5 1 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name        LinCode_2
+      Description "Linearization code channel 2"
+      CompileType IOConnect
+      DataType    ENUM
+      Default     0
+      ParValIndex 3
+      ParamType   CIGIOData 5 5 1 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name        LinCode_3
+      Description "Linearization code channel 3"
+      CompileType IOConnect
+      DataType    ENUM
+      Default     0
+      ParValIndex 3
+      ParamType   CIGIOData 6 5 1 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name        LinCode_4
+      Description "Linearization code channel 4"
+      CompileType IOConnect
+      DataType    ENUM
+      Default     0
+      ParValIndex 3
+      ParamType   CIGIOData 7 5 1 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name        LinCode_5
+      Description "Linearization code channel 5"
+      CompileType IOConnect
+      DataType    ENUM
+      Default     0
+      ParValIndex 3
+      ParamType   CIGIOData 8 5 1 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name        LinCode_6
+      Description "Linearization code channel 6"
+      CompileType IOConnect
+      DataType    ENUM
+      Default     0
+      ParValIndex 3
+      ParamType   CIGIOData 9 5 1 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name        LinCode_7
+      Description "Linearization code channel 7"
+      CompileType IOConnect
+      DataType    ENUM
+      Default     0
+      ParValIndex 3
+      ParamType   CIGIOData 10 5 1 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name        LinCode_8
+      Description "Linearization code channel 8"
+      CompileType IOConnect
+      DataType    ENUM
+      Default     0
+      ParValIndex 3
+      ParamType   CIGIOData 11 5 1 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name        SignalRange_1
+      Description "Signal range channel 1"
+      CompileType IOConnect
+      DataType    ENUMRANGE
+      Default     1
+      ParValIndex 2
+      ParamType   CIGIOData 4 0 1 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name        SignalRange_2
+      Description "Signal range channel 2"
+      CompileType IOConnect
+      DataType    ENUMRANGE
+      Default     1
+      ParValIndex 2
+      ParamType   CIGIOData 5 0 1 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name        SignalRange_3
+      Description "Signal range channel 3"
+      CompileType IOConnect
+      DataType    ENUMRANGE
+      Default     1
+      ParValIndex 2
+      ParamType   CIGIOData 6 0 1 ByteParam ByteOffset
+    End ParamInfo   
+    ParamInfo
+      Name        SignalRange_4
+      Description "Signal range channel 4"
+      CompileType IOConnect
+      DataType    ENUMRANGE
+      Default     1
+      ParValIndex 2
+      ParamType   CIGIOData 7 0 1 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name        SignalRange_5
+      Description "Signal range channel 5"
+      CompileType IOConnect
+      DataType    ENUMRANGE
+      Default     1
+      ParValIndex 2
+      ParamType   CIGIOData 8 0 1 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name        SignalRange_6
+      Description "Signal range channel 6"
+      CompileType IOConnect
+      DataType    ENUMRANGE
+      Default     1
+      ParValIndex 2
+      ParamType   CIGIOData 9 0 1 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name        SignalRange_7
+      Description "Signal range channel 7"
+      CompileType IOConnect
+      DataType    ENUMRANGE
+      Default     1
+      ParValIndex 2
+      ParamType   CIGIOData 10 0 1 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name        SignalRange_8
+      Description "Signal range channel 8"
+      CompileType IOConnect
+      DataType    ENUMRANGE
+      Default     1
+      ParValIndex 2
+      ParamType   CIGIOData 11 0 1 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name ISPControl1
+      Description "ISP Control channel 1"
+      CompileType IoConnect
+      Datatype ENUMCONTROL  (* Description missing in DoF *)
+      Default 0
+      ParValIndex 6
+      ParamType Numbered 10100  (* Value not used, only to fool hwd parser *)
+      SafeStateInfo
+           SafeStateType SafeStateControl
+           SafeStateRef  Channel 1
+      End SafeStateInfo          
+    End ParamInfo
+    ParamInfo
+      Name ISPControl2
+      Description "ISP Control channel 2"
+      CompileType IoConnect
+      Datatype ENUMCONTROL  (* Description missing in DoF *)
+      Default 0
+      ParValIndex 6
+      ParamType Numbered 10100  (* Value not used, only to fool hwd parser *)
+      SafeStateInfo
+           SafeStateType SafeStateControl
+           SafeStateRef  Channel 2
+      End SafeStateInfo          
+    End ParamInfo
+    ParamInfo
+      Name ISPControl3
+      Description "ISP Control channel 3"
+      CompileType IoConnect
+      Datatype ENUMCONTROL  (* Description missing in DoF *)
+      Default 0
+      ParValIndex 6
+      ParamType Numbered 10100  (* Value not used, only to fool hwd parser *)
+      SafeStateInfo
+           SafeStateType SafeStateControl
+           SafeStateRef  Channel 3
+      End SafeStateInfo          
+    End ParamInfo
+    ParamInfo
+      Name ISPControl4
+      Description "ISP Control channel 4"
+      CompileType IoConnect
+      Datatype ENUMCONTROL  (* Description missing in DoF *)
+      Default 0
+      ParValIndex 6
+      ParamType Numbered 10100  (* Value not used, only to fool hwd parser *)
+      SafeStateInfo
+           SafeStateType SafeStateControl
+           SafeStateRef  Channel 4
+      End SafeStateInfo          
+    End ParamInfo
+    ParamInfo
+      Name ISPControl5
+      Description "ISP Control channel 5"
+      CompileType IoConnect
+      Datatype ENUMCONTROL  (* Description missing in DoF *)
+      Default 0
+      ParValIndex 6
+      ParamType Numbered 10100  (* Value not used, only to fool hwd parser *)
+      SafeStateInfo
+           SafeStateType SafeStateControl
+           SafeStateRef  Channel 5
+      End SafeStateInfo          
+    End ParamInfo
+    ParamInfo
+      Name ISPControl6
+      Description "ISP Control channel 6"
+      CompileType IoConnect
+      Datatype ENUMCONTROL  (* Description missing in DoF *)
+      Default 0
+      ParValIndex 6
+      ParamType Numbered 10100  (* Value not used, only to fool hwd parser *)
+      SafeStateInfo
+           SafeStateType SafeStateControl
+           SafeStateRef  Channel 6
+      End SafeStateInfo          
+    End ParamInfo
+    ParamInfo
+      Name ISPControl7
+      Description "ISP Control channel 7"
+      CompileType IoConnect
+      Datatype ENUMCONTROL  (* Description missing in DoF *)
+      Default 0
+      ParValIndex 6
+      ParamType Numbered 10100  (* Value not used, only to fool hwd parser *)
+      SafeStateInfo
+           SafeStateType SafeStateControl
+           SafeStateRef  Channel 7
+      End SafeStateInfo          
+    End ParamInfo
+    ParamInfo
+      Name ISPControl8
+      Description "ISP Control channel 8"
+      CompileType IoConnect
+      Datatype ENUMCONTROL  (* Description missing in DoF *)
+      Default 0
+      ParValIndex 6
+      ParamType Numbered 10100  (* Value not used, only to fool hwd parser *)
+      SafeStateInfo
+           SafeStateType SafeStateControl
+           SafeStateRef  Channel 8
+      End SafeStateInfo          
+    End ParamInfo
+    ParamInfo
+      Name ISPValue1
+      Description "ISP Value channel 1"
+      Corresponding 0
+      CompileType IoConnect
+      Datatype REAL   (* Description missing in DoF verify that this is correct *)
+      Default 0.0
+      ParValIndex 7
+      ParamType Numbered 10100  (* Value not used, only to fool hwd parser *)
+      SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef  Channel 1
+      End SafeStateInfo          
+    End ParamInfo
+    ParamInfo
+      Name ISPValue2
+      Description "ISP Value channel 2"
+      Corresponding 1
+      CompileType IoConnect
+      Datatype REAL   (* Description missing in DoF verify that this is correct *)
+      Default 0.0
+      ParValIndex 7
+      ParamType Numbered 10100  (* Value not used, only to fool hwd parser *)
+      SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef  Channel 2
+      End SafeStateInfo          
+    End ParamInfo
+    ParamInfo
+      Name ISPValue3
+      Description "ISP Value channel 3"
+      Corresponding 2
+      CompileType IoConnect
+      Datatype REAL   (* Description missing in DoF verify that this is correct *)
+      Default 0.0
+      ParValIndex 7
+      ParamType Numbered 10100  (* Value not used, only to fool hwd parser *)
+      SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef  Channel 3
+      End SafeStateInfo          
+    End ParamInfo
+    ParamInfo
+      Name ISPValue4
+      Description "ISP Value channel 4"
+      Corresponding 3
+      CompileType IoConnect
+      Datatype REAL   (* Description missing in DoF verify that this is correct *)
+      Default 0.0
+      ParValIndex 7
+      ParamType Numbered 10100  (* Value not used, only to fool hwd parser *)
+      SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef  Channel 4
+      End SafeStateInfo          
+    End ParamInfo
+    ParamInfo
+      Name ISPValue5
+      Description "ISP Value channel 5"
+      Corresponding 4
+      CompileType IoConnect
+      Datatype REAL   (* Description missing in DoF verify that this is correct *)
+      Default 0.0
+      ParValIndex 7
+      ParamType Numbered 10100  (* Value not used, only to fool hwd parser *)
+      SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef  Channel 5
+      End SafeStateInfo          
+    End ParamInfo
+    ParamInfo
+      Name ISPValue6
+      Description "ISP Value channel 6"
+      Corresponding 5
+      CompileType IoConnect
+      Datatype REAL   (* Description missing in DoF verify that this is correct *)
+      Default 0.0
+      ParValIndex 7
+      ParamType Numbered 10100  (* Value not used, only to fool hwd parser *)
+      SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef  Channel 6
+      End SafeStateInfo          
+    End ParamInfo
+    ParamInfo
+      Name ISPValue7
+      Description "ISP Value channel 7"
+      Corresponding 6
+      CompileType IoConnect
+      Datatype REAL   (* Description missing in DoF verify that this is correct *)
+      Default 0.0
+      ParValIndex 7
+      ParamType Numbered 10100  (* Value not used, only to fool hwd parser *)
+      SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef  Channel 7
+      End SafeStateInfo          
+    End ParamInfo
+    ParamInfo
+      Name ISPValue8
+      Description "ISP Value channel 8"
+      Corresponding 7
+      CompileType IoConnect
+      Datatype REAL   (* Description missing in DoF verify that this is correct *)
+      Default 0.0
+      ParValIndex 7
+      ParamType Numbered 10100  (* Value not used, only to fool hwd parser *)
+      SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef  Channel 8
+      End SafeStateInfo          
+    End ParamInfo
+  End Parameters
+
+  ParValList
+    ParVal
+      ParValIndex 2
+      ENUMRANGE
+      "0..20mA"                      16#00 16#6F40 16#0000 16#7FC0 16#FA70   Bipolar
+      "4..20mA"                      16#01 16#6F40 16#0000 16#7FC0 16#F218   Bipolar
+      "0..10V"                       16#02 16#6F40 16#0000 16#7FC0 16#FA70   Bipolar
+      "2..10V"                       16#03 16#6F40 16#0000 16#7FC0 16#F218   Bipolar
+      "4..20mA, <3,8mA signal error" 16#01 16#6F40 16#0000 16#7FC0 16#FE9C   Bipolar
+      "4..20mA, <3,65mA signal error"16#01 16#6F40 16#0000 16#7FC0 16#FD91   Bipolar
+    End ParVal
+    ParVal
+      ParValIndex 3
+      ENUM
+      "No Linearization" 0
+      "Sqrt"             1
+    End ParVal
+    ParVal
+      ParValIndex 5
+      UnitText   "ms"
+      ENUM
+      "Off"       0
+      "200"       1
+      "500"       2
+      "2000"      3
+    End ParVal
+    ParVal
+      ParValIndex 6
+      ENUMCONTROL
+      "Keep current value" 0 HoldLastValue
+      "Use ISP Value"      1 UseSafeValue
+    End ParVal
+    ParVal
+      ParValIndex 7
+      UnitText "%"
+      REAL 0.0 100.0 0.0 100.0
+    End ParVal
+  End ParValList
+
+  Channels
+    ChannelInfo
+      Number         1
+      ChannelName   "Input 1"
+      DataType       Real_In
+      Routine        701
+      CopyParameters 0 0 16#30001 16#FFFF 0 16#0 16#50000 16#30009 16#0001
+    End ChannelInfo
+    ChannelInfo
+      Number         2
+      ChannelName   "Input 2"
+      DataType       Real_In
+      Routine        701
+      CopyParameters 0 0 16#30002 16#FFFF 1 16#0 16#50000 16#30009 16#0002
+    End ChannelInfo
+    ChannelInfo
+      Number         3
+      ChannelName   "Input 3"
+      DataType       Real_In
+      Routine        701
+      CopyParameters 0 0 16#30003 16#FFFF 2 16#0 16#50000 16#30009 16#0004
+    End ChannelInfo
+    ChannelInfo
+      Number         4
+      ChannelName   "Input 4"
+      DataType       Real_In
+      Routine        701
+      CopyParameters 0 0 16#30004 16#FFFF 3 16#0 16#50000 16#30009 16#0008
+    End ChannelInfo
+    ChannelInfo
+      Number         5
+      ChannelName   "Input 5"
+      DataType       Real_In
+      Routine        701
+      CopyParameters 0 0 16#30005 16#FFFF 4 16#0 16#50000 16#30009 16#0010
+    End ChannelInfo
+    ChannelInfo
+      Number         6
+      ChannelName   "Input 6"
+      DataType       Real_In
+      Routine        701
+      CopyParameters 0 0 16#30006 16#FFFF 5 16#0 16#50000 16#30009 16#0020
+    End ChannelInfo
+    ChannelInfo
+      Number         7
+      ChannelName   "Input 7"
+      DataType       Real_In
+      Routine        701
+      CopyParameters 0 0 16#30007 16#FFFF 6 16#0 16#50000 16#30009 16#0040
+    End ChannelInfo
+    ChannelInfo
+      Number         8
+      ChannelName   "Input 8"
+      DataType       Real_In
+      Routine        701
+      CopyParameters 0 0 16#30008 16#FFFF 7 16#0 16#50000 16#30009 16#0080
+    End ChannelInfo
+    ChannelInfo
+      Number         9
+      ChannelName   "UnitStatus"
+      Datatype       Status_In
+      Routine        900
+      CopyParameters 0 0 16#50000
+    End ChannelInfo   
+  End Channels
+
+  IoUnitStatus
+    StatusType IoWarning
+    StatusData 16#30000 16#0020 16#00 16#00
+    StatusType IoError
+    StatusData 16#30000 16#0010 16#00 16#00
+    StatusType WrongModuleType 
+    StatusData 16#30000 16#000F 16#04 16#000A
+    StatusType ModuleMissing
+    StatusData 16#30000 16#000F 16#04 16#000D
+  End IoUnitStatus
+
+(* Only used due to tracker #10449, problem in PP A *)
+ UnitstatusText
+
+    DeviceSpecific1  "Error"                           
+    DeviceSpecific2  "Warning"                       
+    DeviceSpecific3  "Backup Wrong module type"                    
+    DeviceSpecific4  "Backup Module Missing"             
+    DeviceSpecific5  "Backup Error"    
+    DeviceSpecific6  "Backup Warning" 
+
+    ExtendedStatus1  "OSP"                    
+    ExtendedStatus2  "Backup Not configured"         
+    ExtendedStatus3  "Backup OSP"             
+    ExtendedStatus4  "Backup Process power missing"    
+    ExtendedStatus5  "Not configured"   
+    ExtendedStatus6  "Backup Internal channel error"  
+    ExtendedStatus7  "Backup PulseSyncError"  
+    ExtendedStatus8  "Process power missing" 
+    ExtendedStatus9  "Internal channel error"                 
+    ExtendedStatus10 "Channel short circuit"                 
+    ExtendedStatus11 "Channel open wire"                     
+    ExtendedStatus12 "Channel sensor power sup. error"       
+
+  End UnitStatusText
+
+
+ UnitStatusSeverity
+
+    DeviceSpecific1  GeneralError   TriggerAlarm SeverityHigh
+    DeviceSpecific2  GeneralWarning TriggerEvent SeverityLow
+    DeviceSpecific3  GeneralWarning TriggerAlarm SeverityMedium
+    DeviceSpecific4  GeneralWarning TriggerAlarm SeverityMedium
+    DeviceSpecific5  GeneralWarning TriggerAlarm SeverityMedium
+    DeviceSpecific6  GeneralWarning TriggerEvent SeverityLow
+
+    ExtendedStatus1  GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus2  GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus3  GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus4  GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus5  GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus6  GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus7  GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus8  GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus9  GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus10  GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus11  GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus12  GeneralWarning TriggerEvent SeverityLow
+
+  End UnitStatusSeverity
+
+  Configuration
+    ConfigInfo
+      ModuleKey   16#09
+      InAreaSize  10
+      OutAreaSize 2
+      InWord
+        WORD 0        0 (*MODULE STATUS*)
+        WORD 0        1 (*INPUTS*)
+        WORD 0        2 (*INPUTS*)
+        WORD 0        3 (*INPUTS*) 
+        WORD 0        4 (*INPUTS*)
+        WORD 0        5 (*INPUTS*)
+        WORD 0        6 (*INPUTS*)
+        WORD 0        7 (*INPUTS*)
+        WORD 0        8 (*INPUTS*)
+        WORD 0        9 (*CHANNEL STATUS*)
+      ConfWord
+        WORD 0        0 (*FILTER TIMES*)
+        WORD 0        1 (*ENABLE*)
+      CIGIOConnData
+        CIGIOData     16#01 16#C0 16#C1 16#C9                                                  (* CfgData     *)
+        CIGIOData     16#05 16#04 16#0A 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00  (* UserPrmData *)
+      End CIGIOConnData     
+    End ConfigInfo
+  End Configuration
+
+  HWUnitInfoCRC 16#F92D
+End HWUnitInfo (* AI810 / CI830 / CI854 *)

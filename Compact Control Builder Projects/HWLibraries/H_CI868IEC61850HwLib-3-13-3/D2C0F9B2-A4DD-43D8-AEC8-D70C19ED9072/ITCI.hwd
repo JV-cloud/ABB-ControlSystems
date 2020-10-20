@@ -1,0 +1,96 @@
+(****************************************************************************)
+(* FILE            ITCI.hwd                                                 *)
+(*                                                                          *)
+(* DESCRIPTION     Hardware definition file for ITCI                        *)
+(*                                                                          *)
+(* AUTHOR          Akhilesh Patel                                           *)
+(*                                                                          *)
+(* All rights reserved. Reproduction, modification, use or disclosure       *)
+(* to third parties without express authority, is forbidden.                *)
+(* Copyright ABB Inc. 2006.                                                 *)
+(*                                                                          *)
+(*                                                                          *)
+(* 03-11-2011     Akhilesh Patel            Initial version                 *)
+(*                                                                          *)
+(****************************************************************************)
+FileHeader
+   Contents               "ITCI"
+   Date                   "2011-10-20"
+   Version                "1.0-0"
+  RequiredSyntaxVersion "3.0"
+End FileHeader
+
+HWUnitInfo  (* ITCI *)
+   HWUnitID {E5FF6D9D-7882-4026-ADEE-4C0CF5F5A9F5} (* GUID for ITCI *)
+   Description "ITCI"
+   Information "Telecontrol interface"
+   Icons LNType
+   InstanceNameDisable
+   InterfaceInfo
+     IoSysType    CIGIO
+     CLSID_CB    {53315084-E413-4c55-92E1-C2E1FAF19460} (*  CLSID_CB  = GUID for CI868 PH in Control builder CB *)
+     CLSID_CTRL  {4AB844AC-2BEE-4910-BA08-CA109A5D7E81}  (* CLSID_CTRL = GUID for CI868 PH in Controler *)
+   End InterfaceInfo
+
+   ConnectionInfo
+      ConnectType OwnUnit
+      IOConnect Fail
+      IOConfig NoFail
+   End ConnectionInfo
+
+   Parameters
+      ParamInfo
+         Name HWDVERSION
+         Description "Version of HWD File"
+         ExternalVisible
+         Datatype STRING
+         Default " 1.0-0 "
+         ParamType Numbered 1
+      End ParamInfo
+      ParamInfo
+         Name LNNAME
+         Description "LN Name"
+         Datatype STRING
+         Default ""100
+         ParamType Numbered 3
+      End ParamInfo
+      ParamInfo
+         Name H_LNNAME
+         Description "Hidden LN Name"
+         ExternalVisible
+         Datatype STRING
+         Default "HIDDENLNNAME"100
+         ParamType Numbered 5
+      End ParamInfo
+      ParamInfo
+         Name H_LNPOSITION
+         Description "Hidden LN Position"
+         ExternalVisible
+         Datatype INT
+         Default 255
+         ParValIndex 2
+         ParamType Numbered 7
+      End ParamInfo 
+   End Parameters
+
+   ParValList
+     ParVal
+        ParValIndex 2
+        UnitText    ""
+        INT 0 255 0 255
+     End ParVal
+   End ParValList
+
+   Channels   
+   End Channels
+
+   Configuration
+    ConfigInfo
+      ModuleKey       16#80
+      InAreaSize      0 BYTE
+      OutAreaSize     0 BYTE
+    End ConfigInfo
+  End Configuration
+
+  HWUnitInfoCRC 16#6BC8
+End HWUnitInfo 

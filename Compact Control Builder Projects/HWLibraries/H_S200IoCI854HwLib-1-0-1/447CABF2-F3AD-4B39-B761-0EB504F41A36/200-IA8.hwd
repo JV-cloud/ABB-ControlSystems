@@ -1,0 +1,123 @@
+HWUnitInfo (* 200-IA8 /  Profibus DP Full Format *)
+   HWUnitID {3A7D8231-B256-40ac-913F-BF106D30958E}
+   Description "200-IA8"
+   Information "Digital input module, 8 channels 120 VAC"
+   Icons Ser200IOType
+   Attributes IoUnit DigitalIn
+   Parameters
+      ParamInfo 
+         Name DELAY0_7
+         Description "Delay time channel 0 - 7"
+         CompileType IOConnect
+         Datatype ENUM
+         Default 0
+         ParValIndex 0
+         ParamType CIGIOData  5  0 1  ByteParam ByteOffset 
+      End ParamInfo
+   End Parameters
+   ParValList
+      ParVal
+         ParValIndex 0
+         UnitText    "ms"
+         ENUM
+         "On=8.6 Off=26.6"  16#0
+         "On=9 Off=27"      16#1
+         "On=10 Off=28"     16#2
+         "On=12 Off=30"     16#3
+         "On=17 Off=35"     16#4
+         "On=26 Off=44"     16#5
+         "On=43 Off=61"     16#6
+         "On=78 Off=98"     16#7
+      End ParVal
+   End ParValList
+   Channels
+      ChannelInfo
+         Number 0 
+         ChannelName "Input  0"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30000 16#1
+      End ChannelInfo
+      ChannelInfo
+         Number 1
+         ChannelName "Input  1"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30000 16#2
+      End ChannelInfo
+      ChannelInfo
+         Number 2
+         ChannelName "Input  2"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30000 16#4
+      End ChannelInfo
+      ChannelInfo
+         Number 3
+         ChannelName "Input  3"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30000 16#8
+      End ChannelInfo
+      ChannelInfo
+         Number   4
+         ChannelName "Input  4"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30000 16#10
+      End ChannelInfo
+      ChannelInfo
+         Number 5
+         ChannelName "Input  5"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30000 16#20
+      End ChannelInfo
+      ChannelInfo
+         Number 6
+         ChannelName "Input  6"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30000 16#40
+      End ChannelInfo
+      ChannelInfo
+         Number 7
+         ChannelName "Input  7"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30000 16#80
+      End ChannelInfo
+      ChannelInfo
+         Number 8
+         ChannelName "All inputs"
+         Datatype Dword_In
+         Routine 501
+         CopyParameters 0 0 16#30000 0 16#FF 16#0
+      End ChannelInfo
+      ChannelInfo
+         Number 9
+         ChannelName "UnitStatus"
+         Datatype Status_In
+         Routine 900
+         CopyParameters 0 0 16#50000 
+      End ChannelInfo
+   End Channels
+   IoUnitStatus
+      StatusType IoError
+      StatusData 16#10000 16#100100 16#0 16#0
+   End IoUnitStatus
+   Configuration
+      ConfigInfo
+         ModuleKey   16#0285
+         InAreaSize  1
+         OutAreaSize 0
+         InWord 
+            WORD 0       0
+         CIGIOConnData
+            CIGIOData     16#01 16#50 16#00
+            CIGIOData     16#05 16#02 16#85 16#10 16#00 16#00
+         End CIGIOConnData
+      End ConfigInfo
+   End Configuration
+  HWUnitInfoCRC 16#157A
+End HWUnitInfo (* 200-IA8 / Profibus DP Full Format *)

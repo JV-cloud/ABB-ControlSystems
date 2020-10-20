@@ -1,0 +1,512 @@
+<HEAD>
+Index of symbols created Fri 07/20/2012 13:17:50.32 
+</HEAD>
+<SECTIONS=10>
+00010000 00017f24 .text
+00017f24 000180ac .got2
+000180ac 00018414 .fixup
+00018414 00018448 .bss
+00018448 000195f0 .data
+000195f0 000195f0 .sdata
+000195f0 0002e974 .stab
+0002e974 00017f24 .comment
+00017f24 0002eaf4 .sdata2
+0002eaf4 0002eaf4 .stabstr
+</SECTIONS>
+<SYMBOLS=495>
+00000000 CI858.elf EXE_HEAD
+00000064 CI858.elf CDrive::CDrive(short, trHWFAddress)
+000000d8 CI858.elf CDrive::~CDrive(void)
+00000120 CI858.elf CDrive::operator new(unsigned int, IHeapCallback *)
+000001d4 CI858.elf CDrive::heap_delete(IHeapCallback *)
+00000240 CI858.elf CDrive::GetConnectionID(void)
+0000024c CI858.elf CDrive::ResetDPM(unsigned long, IIOAccessCallback *)
+000002e8 CI858.elf CDrive::ConfigureDPM(bool, unsigned long, IIOAccessCallback *)
+00000690 CI858.elf CDrive::SetConfigData(unsigned char *)
+00000698 CI858.elf CDrive::SetConfigDataSize(short)
+000006a4 CI858.elf CSpecialIO::CSpecialIO(short, trHWFAddress)
+00000718 CI858.elf CSpecialIO::~CSpecialIO(void)
+0000076c CI858.elf CSpecialIO::operator new(unsigned int, IHeapCallback *)
+00000820 CI858.elf CSpecialIO::heap_delete(IHeapCallback *)
+0000088c CI858.elf CSpecialIO::GetConnectionID(void)
+00000898 CI858.elf CSpecialIO::ResetDPM(unsigned long, IIOAccessCallback *)
+0000092c CI858.elf CSpecialIO::ConfigureDPM(bool, unsigned long, IIOAccessCallback *)
+00000cb4 CI858.elf CSpecialIO::SetConfigData(unsigned char *)
+00000cbc CI858.elf CSpecialIO::SetConfigDataSize(short)
+00000cc8 CI858.elf CConfigManager::CConfigManager(CPhCI858 *)
+00000d7c CI858.elf CConfigManager::~CConfigManager(void)
+00000e34 CI858.elf CConfigManager::operator new(unsigned int, IHeapCallback *)
+00000ee8 CI858.elf CConfigManager::heap_delete(void)
+00000f54 CI858.elf CConfigManager::ProtocolHandlerResponsibility(trHWFAddress, bool)
+00001cec CI858.elf CConfigManager::InitiateCI858(void)
+00001fcc CI858.elf CConfigManager::ConfigDriveChannel(trHWFAddress)
+0000260c CI858.elf CConfigManager::ConfigSpecialIOChannel(trHWFAddress)
+00002c60 CI858.elf CConfigManager::ConfigVirtualChannel(trHWFAddress)
+00002c68 CI858.elf CConfigManager::StartUsingIoConnection(trHWFAddress, unsigned long)
+00002e44 CI858.elf CConfigManager::ConfigRedundancyUnit(trHWFAddress)
+000030f0 CI858.elf CConfigManager::CalculateDriveArea(short)
+00003150 CI858.elf CConfigManager::CalculateDriveCopyArea(short)
+00003174 CI858.elf CConfigManager::GetDriveArea(void)
+00003198 CI858.elf CConfigManager::RemoveDrive(int)
+00003244 CI858.elf CConfigManager::GetDriveFromList(int)
+0000333c CI858.elf CConfigManager::CalculateSpecialIOArea(short)
+00003394 CI858.elf CConfigManager::CalculateSpecialIOCopyArea(short)
+000033b8 CI858.elf CConfigManager::GetSpecialIOArea(void)
+000033dc CI858.elf CConfigManager::GetRedundantUnitIOArea(void)
+0000340c CI858.elf CConfigManager::RemoveSpecialIO(int)
+000034c0 CI858.elf CConfigManager::GetSpecialIOFromList(int)
+000035bc CI858.elf CConfigManager::MakeRegistrationsInError(trHWFAddress)
+00003e40 CI858.elf CIOAccessManager::CIOAccessManager(CPhCI858 *)
+00003ea4 CI858.elf CIOAccessManager::~CIOAccessManager(void)
+00003ef8 CI858.elf CIOAccessManager::operator new(unsigned int, IHeapCallback *)
+00003fac CI858.elf CIOAccessManager::heap_delete(void)
+00004018 CI858.elf CIOAccessManager::ResetMemoryMap(short)
+000043f0 CI858.elf CIOAccessManager::CI858CopyIn(short, void *, void *)
+00004528 CI858.elf CIOAccessManager::CI858CopyOut(short, void *, void *)
+0000465c CI858.elf CIOAccessManager::CopyInChannel(unsigned short *, int *)
+00004a44 CI858.elf CIOAccessManager::CopyOutChannel(unsigned short *, int *, unsigned char const &)
+00004c00 CI858.elf CIOAccessManager::GetDataSet(unsigned short *)
+00004ce0 CI858.elf CIOAccessManager::GetDriveDataSetOffset(short)
+00004d08 CI858.elf CIOAccessManager::GetSpecialIODataSetOffset(short)
+00004d30 CI858.elf CIOAccessManager::SetCopyAreas(short)
+00004d58 CI858.elf CStatusManager::CStatusManager(CPhCI858 *)
+00004dc8 CI858.elf CStatusManager::~CStatusManager(void)
+00004e1c CI858.elf CStatusManager::operator new(unsigned int, IHeapCallback *)
+00004ed0 CI858.elf CStatusManager::heap_delete(void)
+00004f38 CI858.elf CStatusManager::KickWatchdog(unsigned short *)
+0000503c CI858.elf CStatusManager::TimeSync(void)
+000050f0 CI858.elf CStatusManager::UpdateStatus(void)
+0000549c CI858.elf CStatusManager::RegConnForStatus(short, trHWFAddress *)
+000054d0 CI858.elf CStatusManager::RemoveConnFromStatus(short)
+00005544 CI858.elf CPhCI858::CPhCI858(void)
+00005658 CI858.elf CPhCI858::~CPhCI858(void)
+000056ec CI858.elf CPhCI858::GetProductInfo(unsigned char *, unsigned char *, unsigned char *, unsigned long)
+00005784 CI858.elf CPhCI858::SetCommonCallbackInterface(ICommonCallback *)
+00005a80 CI858.elf CPhCI858::PrepareForTermination(teHWFErrorCode *)
+00005bf8 CI858.elf CPhCI858::RemoveHWConfiguration(trHWFAddress, teHWFErrorCode *)
+00005c08 CI858.elf CPhCI858::RemoveIoConnection(unsigned long, teHWFErrorCode *)
+00005c58 CI858.elf CPhCI858::PhResponsibilityForRestart(trHWFAddress, teHWFErrorCode *)
+00005e28 CI858.elf CPhCI858::PhResponsibilityForHotInsert(trHWFAddress, teHWFErrorCode *)
+00005ffc CI858.elf CPhCI858::PhResponsibility(trHWFAddress, teHWFErrorCode *)
+000061c4 CI858.elf CPhCI858::StartUsingIoConnection(trHWFAddress, unsigned long, teHWFErrorCode *)
+00006238 CI858.elf CPhCI858::KickWatchdog(unsigned short *, teHWFErrorCode *)
+000062b4 CI858.elf CPhCI858::GetStatus(trHWFAddress, teHWFUnitKind, unsigned long *, unsigned long *, teHWFErrorCode *)
+000062cc CI858.elf CPhCI858::ConnectReq(unsigned long, unsigned long *, int *)
+0000631c CI858.elf CPhCI858::DisconnectReq(unsigned long, unsigned long, int *)
+00006324 CI858.elf CPhCI858::ReadVarReq(unsigned long, int *)
+0000632c CI858.elf CPhCI858::WriteVarReq(unsigned long, int *)
+00006334 CI858.elf CPhCI858::ReadRawReq(unsigned long, int *)
+0000633c CI858.elf CPhCI858::WriteRawReq(unsigned long, int *)
+00006344 CI858.elf CPhCI858::AbortRawReq(unsigned long, int *)
+0000634c CI858.elf CPhCI858::AbortVarReq(unsigned long, int *)
+00006354 CI858.elf CPhCI858::GetExtendedStatusSize(unsigned long, int *, int *)
+0000635c CI858.elf CPhCI858::GetExtendedStatus(unsigned long, int, teIEC1131Type *, tGCValue *, int *)
+00006364 CI858.elf CPhCI858::SetStatus(unsigned long, int, int *)
+0000636c CI858.elf CPhCI858::ReadRes(unsigned long, int, int *)
+00006374 CI858.elf CPhCI858::WriteRes(unsigned long, int, int *)
+00006380 CI858.elf CPhCI858::GetCopyRoutineReference(unsigned int, void (**)(short, void *, void *), IOAccessErrorCode *)
+000063f8 CI858.elf CPhCI858::ThreadWork(void)
+000064c8 CI858.elf CPhCI858::CI858INCOPY_1(short, void *, void *)
+0000657c CI858.elf CPhCI858::CI858OUTCOPY_1(short, void *, void *)
+0000662c CI858.elf CPhCI858::ResetMemoryMap(short)
+00006650 CI858.elf CPhCI858::GetCEXPosition(unsigned short *)
+0000665c CI858.elf CPhCI858::RegForStatus(short, trHWFAddress *)
+00006680 CI858.elf CPhCI858::RemoveFromStatus(short)
+000066a4 CI858.elf CPhCI858::GetCEXBussPos(void)
+000066ac CI858.elf CPhCI858::HotRemovalAction(void)
+00006794 CI858.elf CPhCI858::StartUsingDevice(trHWFAddress, teHWFErrorCode *)
+0000681c CI858.elf CPhCI858::PerformSwitchover(trHWFAddress, teHWFErrorCode *)
+000068a4 CI858.elf CPhCI858::PerformFailover(trHWFAddress, teHWFErrorCode *)
+0000692c CI858.elf CPhCI858::PhResponsibilityForBackupDevice(trHWFAddress, teHWFErrorCode *)
+000069b4 CI858.elf CPhCI858::operator new(unsigned int, IHeapCallback *)
+00006a68 CI858.elf CPhCI858::heap_delete(void)
+00006ad4 CI858.elf CPhCI858::QueryInterface(_GUID const &, void **)
+00006c1c CI858.elf CPhCI858::AddRef(void)
+00006c34 CI858.elf CPhCI858::Release(void)
+00006cb0 CI858.elf CPhCI858::GetHeapCallback(void)
+00006cb8 CI858.elf CPhCI858::GetConfigCallback(void)
+00006cc0 CI858.elf CPhCI858::GetCIGDriverCallback(void)
+00006cc8 CI858.elf CPhCI858::GetVOSCallback(void)
+00006cd0 CI858.elf CPhCI858::GetStatusCallback(void)
+00006cd8 CI858.elf CPhCI858::GetCIGDriverFactoryCallback(void)
+00006ce0 CI858.elf CPhCI858::GetIOAccessCallback(void)
+00006ce8 CI858.elf CPhCI858::GetSystemUtilitiesCallback(void)
+00006cf0 CI858.elf CPhCI858::SetCIGDriverCallback(ICIGDriverCallback *)
+00006cf8 CI858.elf CPhCI858::Restarting(bool)
+00006d00 CI858.elf CPhCI858::FirstDownload(void)
+00006d08 CI858.elf CPhCI858::GetThreadID(void)
+00006d10 CI858.elf CPhCI858::ThreadStub(void *)
+00006d30 CI858.elf CDrive::operator delete(void *)
+00006d34 CI858.elf CDrive::GetHWFAddress(void)
+00006d3c CI858.elf CDrive::SetDPMPosition(short)
+00006d44 CI858.elf CDrive::GetDPMPosition(void)
+00006d4c CI858.elf CSpecialIO::GetHWFAddress(void)
+00006d54 CI858.elf CSpecialIO::SetDPMPosition(short)
+00006d5c CI858.elf CSpecialIO::GetDPMPosition(void)
+00006d64 CI858.elf CStatusManager::SetCI858ConfigError(bool)
+00006d6c CI858.elf Letext
+00006d70 CI858.elf ObjectFactory
+00006eb4 CI858.elf Letext
+00006eb8 CI858.elf __pure_virtual
+00006f20 CI858.elf __builtin_delete
+00006f84 CI858.elf Letext
+00006f84 CI858.elf Letext
+00006f84 CI858.elf Letext
+00006f88 CI858.elf CPhCommon_Base::CPhCommon_Base(void)
+00006ff4 CI858.elf CPhCommon_Base::~CPhCommon_Base(void)
+0000706c CI858.elf CPhCommon_Base::GetProductInfo(unsigned char *, unsigned char *, unsigned char *, unsigned long)
+000070a8 CI858.elf CPhCommon_Base::SetCommonCallbackInterface(ICommonCallback *)
+000070d8 CI858.elf CPhConfig_Base1::PrepareForTermination(teHWFErrorCode *)
+00007108 CI858.elf CPhConfig_Base1::RemoveHWConfiguration(trHWFAddress, teHWFErrorCode *)
+0000713c CI858.elf CPhConfig_Base1::RemoveIoConnection(unsigned long, teHWFErrorCode *)
+00007170 CI858.elf CPhConfig_Base1::PhResponsibilityForRestart(trHWFAddress, teHWFErrorCode *)
+000071a4 CI858.elf CPhConfig_Base1::PhResponsibility(trHWFAddress, teHWFErrorCode *)
+000071d8 CI858.elf CPhConfig_Base1::StartUsingIoConnection(trHWFAddress, unsigned long, teHWFErrorCode *)
+00007210 CI858.elf CPhConfig_Base1::PhResponsibilityForBackupDevice(trHWFAddress, teHWFErrorCode *)
+00007244 CI858.elf CPhConfig_Base1::PhResponsibilityForHotInsert(trHWFAddress, teHWFErrorCode *)
+00007278 CI858.elf CPhConfig_Base1::PerformSwitchover(trHWFAddress, teHWFErrorCode *)
+000072ac CI858.elf CPhConfig_Base1::StartUsingDevice(trHWFAddress, teHWFErrorCode *)
+000072e0 CI858.elf CPhConfig_Base1::PerformFailover(trHWFAddress, teHWFErrorCode *)
+00007314 CI858.elf CPhClient_Base::ConnectReq(unsigned long, unsigned long *, int *)
+0000734c CI858.elf CPhClient_Base::DisconnectReq(unsigned long, unsigned long, int *)
+00007384 CI858.elf CPhClient_Base::ReadVarReq(unsigned long, int *)
+000073b8 CI858.elf CPhClient_Base::WriteVarReq(unsigned long, int *)
+000073ec CI858.elf CPhClient_Base::ReadRawReq(unsigned long, int *)
+00007420 CI858.elf CPhClient_Base::WriteRawReq(unsigned long, int *)
+00007454 CI858.elf CPhClient_Base::AbortRawReq(unsigned long, int *)
+00007488 CI858.elf CPhClient_Base::AbortVarReq(unsigned long, int *)
+000074bc CI858.elf CPhClient_Base::GetExtendedStatusSize(unsigned long, int *, int *)
+000074f4 CI858.elf CPhClient_Base::GetExtendedStatus(unsigned long, int, teIEC1131Type *, tGCValue *, int *)
+00007534 CI858.elf CPhClient_Base::SetStatus(unsigned long, int, int *)
+0000756c CI858.elf CPhClient_Base::ReadRes(unsigned long, int, int *)
+000075a4 CI858.elf CPhClient_Base::WriteRes(unsigned long, int, int *)
+000075dc CI858.elf CPhClient_Base1::ConnectReq(unsigned long, unsigned long *, int *)
+00007614 CI858.elf CPhClient_Base1::DisconnectReq(unsigned long, unsigned long, int *)
+0000764c CI858.elf CPhClient_Base1::ReadVarReq(unsigned long, int *)
+00007680 CI858.elf CPhClient_Base1::WriteVarReq(unsigned long, int *)
+000076b4 CI858.elf CPhClient_Base1::RegisterVarReq(unsigned long, int *)
+000076e8 CI858.elf CPhClient_Base1::ReadRawReq(unsigned long, int *)
+0000771c CI858.elf CPhClient_Base1::WriteRawReq(unsigned long, int *)
+00007750 CI858.elf CPhClient_Base1::AbortRawReq(unsigned long, int *)
+00007784 CI858.elf CPhClient_Base1::AbortVarReq(unsigned long, int *)
+000077b8 CI858.elf CPhClient_Base1::TimeoutAbortVarReq(unsigned long, int *)
+00007848 CI858.elf CPhClient_Base1::GetExtendedStatusSize(unsigned long, int *, int *)
+00007880 CI858.elf CPhClient_Base1::GetExtendedStatus(unsigned long, int, teIEC1131Type *, tGCValue *, int *)
+000078c0 CI858.elf CPhClient_Base1::BufferTakeForReceive(unsigned long, int *)
+000078f4 CI858.elf CPhClient_Base1::BufferGiveForReceive(unsigned long, int, int *)
+0000792c CI858.elf CPhClient_Base1::BufferTakeForSend(unsigned long, unsigned int, int *)
+00007964 CI858.elf CPhClient_Base1::BufferGiveForSend(unsigned long, unsigned int, int, int *)
+000079a0 CI858.elf CPhClient_Base1::SetStatus(unsigned long, int, int *)
+000079d8 CI858.elf CPhClient_Base1::ReadRes(unsigned long, int, int *)
+00007a10 CI858.elf CPhClient_Base1::WriteRes(unsigned long, int, int *)
+00007a48 CI858.elf CPhStatus_Base1::KickWatchdog(unsigned short *, teHWFErrorCode *)
+00007a7c CI858.elf CPhStatus_Base1::GetStatus(trHWFAddress, teHWFUnitKind, unsigned long *, unsigned long *, teHWFErrorCode *)
+00007abc CI858.elf CPhIOAccess_Base::GetCopyRoutineReference(unsigned int, void (**)(short, void *, void *), IOAccessErrorCode *)
+00007af4 CI858.elf CPhIOAccess_Base::ObtainDPM(eAreaType, trHWFAddress, IOAccessErrorCode *)
+00007b2c CI858.elf CPhIOAccess_Base::ReleaseDPM(eAreaType, trHWFAddress, IOAccessErrorCode *)
+00007b64 CI858.elf CPhDiagnostics_Base::PhDiagnosticsTableNew(teDiagErrorCode *)
+00007b94 CI858.elf CPhDiagnostics_Base::PhDiagnosticsTableCleared(teDiagErrorCode *)
+00007bc4 CI858.elf CPhOLU_Base::PrepareForFirmwareDownload(trHWFAddress const *, unsigned long, eOLUStatus *)
+00007bfc CI858.elf CPhOLU_Base::PrepareForApplicationStop(trHWFAddress const *, eOLUStatus *)
+00007c30 CI858.elf CPhOLU_Base::ResumeOperation(trHWFAddress const *, eOLUStatus *)
+00007c64 CI858.elf CPhOLU_Base::PhResponsibilityForOLU(trHWFAddress const *, eOLUStatus *)
+00007c98 CI858.elf CPhOLU_Base::PrepareForLeavingOLU(trHWFAddress const *, eOLUStatus *)
+00007ccc CI858.elf CPhOLU_Base::PrepareForAppAndConfigDownload(trHWFAddress const *, eOLUStatus *)
+00007d04 CI858.elf IPhCommon::IPhCommon(void)
+00007d70 CI858.elf IUnknown::IUnknown(void)
+00007dc8 CI858.elf CRTFuncTabBegin
+00007dc8 CI858.elf Letext
+00007dc8 CI858.elf scprocs
+00007dd4 CI858.elf printf
+00007dd8 CI858.elf sprintf
+00007ddc CI858.elf sscanf
+00007de0 CI858.elf memcpy
+00007de4 CI858.elf memset
+00007de8 CI858.elf strcat
+00007dec CI858.elf strcmp
+00007df0 CI858.elf strlen
+00007df4 CI858.elf strncmp
+00007df8 CI858.elf strncpy
+00007dfc CI858.elf memchr
+00007e00 CI858.elf memcmp
+00007e04 CI858.elf memmove
+00007e08 CI858.elf strchr
+00007e0c CI858.elf strcoll
+00007e10 CI858.elf strcpy
+00007e14 CI858.elf strcspn
+00007e18 CI858.elf strncat
+00007e1c CI858.elf strpbrk
+00007e20 CI858.elf strrchr
+00007e24 CI858.elf strspn
+00007e28 CI858.elf strstr
+00007e2c CI858.elf strtok
+00007e30 CI858.elf strxfrm
+00007e34 CI858.elf strerror
+00007e38 CI858.elf pow
+00007e3c CI858.elf acos
+00007e40 CI858.elf asin
+00007e44 CI858.elf atan
+00007e48 CI858.elf atan2
+00007e4c CI858.elf ceil
+00007e50 CI858.elf cos
+00007e54 CI858.elf cosh
+00007e58 CI858.elf exp
+00007e5c CI858.elf fabs
+00007e60 CI858.elf floor
+00007e64 CI858.elf fmod
+00007e68 CI858.elf frexp
+00007e6c CI858.elf ldexp
+00007e70 CI858.elf log
+00007e74 CI858.elf log10
+00007e78 CI858.elf modf
+00007e7c CI858.elf sin
+00007e80 CI858.elf sinh
+00007e84 CI858.elf sqrt
+00007e88 CI858.elf tan
+00007e8c CI858.elf tanh
+00007e90 CI858.elf div_r
+00007e94 CI858.elf labs
+00007e98 CI858.elf strtol
+00007e9c CI858.elf free
+00007ea0 CI858.elf abort
+00007ea4 CI858.elf abs
+00007ea8 CI858.elf atof
+00007eac CI858.elf atoi
+00007eb0 CI858.elf atol
+00007eb4 CI858.elf bsearch
+00007eb8 CI858.elf ldiv_r
+00007ebc CI858.elf qsort
+00007ec0 CI858.elf rand
+00007ec4 CI858.elf srand
+00007ec8 CI858.elf strtod
+00007ecc CI858.elf strtoul
+00007ed0 CI858.elf malloc
+00007ed4 CI858.elf __assert
+00007ed8 CI858.elf time
+00007edc CI858.elf asctime
+00007ee0 CI858.elf gmtime
+00007ee4 CI858.elf clock
+00007ee8 CI858.elf ctime
+00007eec CI858.elf difftime
+00007ef0 CI858.elf localtime
+00007ef4 CI858.elf mktime
+00007ef8 CI858.elf strftime
+00007efc CI858.elf eventcollSem
+00007f00 CI858.elf intLock
+00007f04 CI858.elf intUnlock
+00007f08 CI858.elf __builtin_vec_new
+00007f0c CI858.elf __builtin_vec_delete
+00007f10 CI858.elf fprintf
+00007f14 CI858.elf __stdout
+00007f18 CI858.elf __stderr
+00007f1c CI858.elf setjmp
+00007f20 CI858.elf longjmp
+00007f24 CI858.elf CRTFuncTabEnd
+00007f24 CI858.elf ecprocs
+00007f24 CI858.elf etext
+00007f24 CI858.elf sgot2
+000080ac CI858.elf egot2
+000080ac CI858.elf sfixup
+00008180 G _SDA2_BASE_ CI858.elf 
+00008414 CI858.elf CI858Instances
+00008414 CI858.elf efixup
+00008444 CI858.elf useEXEHEAD
+00008454 CI858.elf cSWModbusSrcNameSuff
+00008464 CI858.elf cSWInsumSrcNameSuff
+00008474 CI858.elf cSWProfibusSrcNameSuff
+00008484 CI858.elf cSWMB300SrcNameSuff
+00008490 CI858.elf cSWS100SrcNameSuff
+000084a0 CI858.elf CDrive::HeapTag
+000084c8 CI858.elf CSpecialIO::HeapTag
+000084f0 CI858.elf CConfigManager::HeapTag
+0000869c CI858.elf CIOAccessManager::TheTag
+000086cc CI858.elf CStatusManager::HeapTag
+000086dc CI858.elf CComCoClass<CPhCI858, &CLSID_CPhCI858>::m_HeapTag
+000087c8 CI858.elf CStatusManager virtual table
+000087e0 CI858.elf CIOAccessManager virtual table
+000087f8 CI858.elf CConfigManager virtual table
+00008810 CI858.elf CSpecialIO virtual table
+00008828 CI858.elf CDrive virtual table
+00008840 CI858.elf CPhCI858::CPhIOAccess_Base virtual table
+00008880 CI858.elf CPhCI858::CPhStatus_Base1 virtual table
+000088b8 CI858.elf CPhCI858::CPhClient_Base1 virtual table
+00008978 CI858.elf CPhCI858::CPhConfig_Base1 virtual table
+000089f8 CI858.elf CPhCI858 virtual table
+00008a38 CI858.elf IPhIOAccess virtual table
+00008a78 CI858.elf IPhClient1 virtual table
+00008b38 CI858.elf IPhStatus1 virtual table
+00008b70 CI858.elf IPhConfig1 virtual table
+00008bf0 CI858.elf IUnknown virtual table
+00008c18 CI858.elf CompanyName
+00008c1c CI858.elf ProductName
+00008c24 CI858.elf ProductVersion
+00008c3c CI858.elf cPHDriveBusGUID
+00008c74 CI858.elf cSWModbusSrcNameSuff
+00008c84 CI858.elf cSWInsumSrcNameSuff
+00008c94 CI858.elf cSWProfibusSrcNameSuff
+00008ca4 CI858.elf cSWMB300SrcNameSuff
+00008cb0 CI858.elf cSWS100SrcNameSuff
+00008cc0 CI858.elf CLSID_CPhCI858
+00008cdc CI858.elf PHproperties
+00008ce4 CI858.elf CMirroredObject::c_pMirroredObjectMgrImpl
+00008ce8 CI858.elf CMirroredObjectAgent::c_pHeapCallback
+00008cec CI858.elf CMirroredObjectAgent::c_AgentTag
+00008d40 CI858.elf GUID_NULL
+00008d50 CI858.elf IID_IPhCommonCB
+00008d60 CI858.elf IID_IPhConfigCB
+00008d70 CI858.elf IID_IPhConfigCB1
+00008d80 CI858.elf IID_IPhIOAccessCB
+00008d90 CI858.elf IID_IPhExternalConfigCB1
+00008da0 CI858.elf IID_IPhExternalConfigCB2
+00008db0 CI858.elf IID_IPhExternalConfigCB3
+00008dc0 CI858.elf IID_IPhOLUCB
+00008dd0 CI858.elf IID_IPhCommon
+00008de0 CI858.elf IID_IPhConfig1
+00008df0 CI858.elf IID_IPhStatus1
+00008e00 CI858.elf IID_IPhClient
+00008e10 CI858.elf IID_IPhClient1
+00008e20 CI858.elf IID_IPhDiagnostics
+00008e30 CI858.elf IID_IPhIOAccess
+00008e40 CI858.elf IID_IPhSafeConfig
+00008e50 CI858.elf IID_IPhSafeConfig1
+00008e60 CI858.elf IID_IPhSimulation
+00008e70 CI858.elf IID_IPhOLU
+00008e80 CI858.elf IID_IHeapCallback
+00008e90 CI858.elf IID_ISystemUtilitiesCallback
+00008ea0 CI858.elf IID_ISystemUtilitiesCallback1
+00008eb0 CI858.elf IID_ISystemUtilitiesCallback2
+00008ec0 CI858.elf IID_IEventMgrCallback
+00008ed0 CI858.elf IID_IEventMgrCallback1
+00008ee0 CI858.elf IID_ISysClockCallback
+00008ef0 CI858.elf IID_ISysClockCallback1
+00008f00 CI858.elf IID_ISysClockCallback2
+00008f10 CI858.elf IID_ISysClockCallback3
+00008f20 CI858.elf IID_IVarServerCallback
+00008f30 CI858.elf IID_IVOSCallback
+00008f40 CI858.elf IID_INetwClockSynchCallback
+00008f50 CI858.elf IID_IConfigCBCallback1
+00008f60 CI858.elf IID_IConfigCBCallback2
+00008f70 CI858.elf IID_IConfigCBCallback3
+00008f80 CI858.elf IID_IExternalConfigCBCallback
+00008f90 CI858.elf IID_IExternalConfigCBCallback2
+00008fa0 CI858.elf IID_IExternalConfigCBCallback3
+00008fb0 CI858.elf IID_IExternalConfigCBCallback4
+00008fc0 CI858.elf IID_IMessagesCBCallback
+00008fd0 CI858.elf IID_IAIPAccessCBCallback
+00008fe0 CI858.elf IID_IOLUCBCallback
+00008ff0 CI858.elf IID_ISystemUtilitiesCBCallback1
+00009000 CI858.elf IID_IConfigCallback1
+00009010 CI858.elf IID_IConfigCallback2
+00009020 CI858.elf IID_IStatusCallback1
+00009030 CI858.elf IID_IGenClientCallback
+00009040 CI858.elf IID_IGenClientCallback1
+00009050 CI858.elf IID_IDriverFactoryCallback
+00009060 CI858.elf IID_IDiagnosticsCallback
+00009070 CI858.elf IID_ISafeConfigCallback
+00009080 CI858.elf IID_ISafeConfigCallback1
+00009090 CI858.elf IID_ICRCCallback
+000090a0 CI858.elf IID_IIOAccessCallback
+000090b0 CI858.elf IID_CriticalRegionCallback
+000090c0 CI858.elf IID_VOSExceptionCallback
+000090d0 CI858.elf IID_DrvCommonCallback
+000090e0 CI858.elf IID_ProtectedMirroredHeapCallback
+000090f0 CI858.elf IID_SharedMirroredHeapCallback
+00009100 CI858.elf IID_TemporaryMirroredHeapCallback
+00009110 CI858.elf IID_IRestrictedVOSCallback
+00009120 CI858.elf CPhOLU_Base virtual table
+00009178 CI858.elf CPhDiagnostics_Base virtual table
+000091b0 CI858.elf CPhIOAccess_Base virtual table
+000091f0 CI858.elf CPhStatus_Base1 virtual table
+00009228 CI858.elf CPhClient_Base1 virtual table
+000092e8 CI858.elf CPhClient_Base virtual table
+00009378 CI858.elf CPhConfig_Base1 virtual table
+000093f8 CI858.elf CPhCommon_Base virtual table
+00009438 CI858.elf GUID_NULL
+00009448 CI858.elf MaxCompanyNameLen
+0000944c CI858.elf MaxProductNameLen
+00009450 CI858.elf MaxProductVersionLen
+00009454 CI858.elf cMaxNrOfHWFAdrLevels
+00009458 CI858.elf cGCWrite
+0000945c CI858.elf cGCRead
+00009460 CI858.elf cGCSubscription
+00009464 CI858.elf cGCRegistration
+00009468 CI858.elf cGCAddMemoryAreaArrayNumberPlaces
+0000946c CI858.elf cPONotFound
+00009470 CI858.elf cGCBusyDisconnecting
+00009474 CI858.elf cGCRemovingPO
+00009478 CI858.elf cGCParametersMissing
+0000947c CI858.elf cGCAlreadyDefined
+00009480 CI858.elf cGCTypeNotSupported
+00009484 CI858.elf cGCIndexOutOfRange
+00009488 CI858.elf cGCTypeNotDefined
+0000948c CI858.elf cGCStringMismatch
+00009490 CI858.elf cGCFacadeError
+00009494 CI858.elf cGCInvalidHandle
+00009498 CI858.elf cGCAddedMemoryAreaError
+0000949c CI858.elf cGCBSErrorDetected
+000094a0 CI858.elf cAborted
+000094a4 CI858.elf cSuccess
+000094a8 CI858.elf cPending
+000094ac CI858.elf cGCDisconnected
+000094b0 CI858.elf cGCExtendedStatus
+000094b4 CI858.elf cPHHeapFull
+000094b8 CI858.elf cPHTypeMismatch
+000094bc CI858.elf cPHSizeMismatch
+000094c0 CI858.elf cPHErrAccessData
+000094c4 CI858.elf cPHErrProtocolData
+000094c8 CI858.elf cPHAccessVarNotFound
+000094cc CI858.elf cPHErrInvalidPar
+000094d0 CI858.elf cPHDirAddrFormatNotSupported
+000094d4 CI858.elf cPHGenericFormatNotSupported
+000094d8 CI858.elf cPHNotImplemented
+000094dc CI858.elf cPHVarDataUnsupportedDirection
+000094e0 CI858.elf cPHVarDataNotSupported
+000094e4 CI858.elf cPHRawDataNotSupported
+000094e8 CI858.elf cPHDriverError
+000094ec CI858.elf cPHHardwareError
+000094f0 CI858.elf cPHTRAdisconnect
+000094f4 CI858.elf cLegacyFormat
+000094f8 CI858.elf cDirAddrFormat
+000094fc CI858.elf cGenericFormat
+00009500 CI858.elf eHWFDeviceSpecific1
+00009504 CI858.elf eHWFUnitBPrimary
+00009508 CI858.elf cHWFOPCMask
+0000950c CI858.elf cHWFOPCChannelOk
+00009510 CI858.elf cHWFOPCChannelError
+00009514 CI858.elf cHWFOPCChannelForced
+00009518 CI858.elf cHWFOPCDeviceError
+0000951c CI858.elf cHWFOPCChannelErrorLow
+00009520 CI858.elf cHWFOPCChannelErrorHigh
+00009524 CI858.elf cHWFOPCChannelHigh
+00009528 CI858.elf cHWFOPCChannelLow
+0000952c CI858.elf cHWFChannelRedundant
+00009530 CI858.elf cHWFUnitBPrimary
+00009534 CI858.elf cHWFBackupUnitError
+00009538 CI858.elf cHWFXSPValueUsed
+0000953c CI858.elf cHWFChannelSimulated
+00009540 CI858.elf cHWFChannelForced
+00009544 CI858.elf cHWFChannelInverted
+00009548 CI858.elf cHWFXSPMask
+0000954c CI858.elf cHWFXSPNoSetting
+00009550 CI858.elf cHWFXSPValue
+00009554 CI858.elf cHWFXSPClear
+00009558 CI858.elf cHWFXSPFreeze
+0000955c CI858.elf cHWFXSPInvert
+00009560 CI858.elf cHWFXSPInitDPM
+00009564 CI858.elf HWFNO_XSP_FORCE
+00009565 CI858.elf HWFFORCE_OSP
+00009566 CI858.elf HWFFORCE_CLEAR
+00009567 CI858.elf HWFFORCE_BLOCK_IO_DPM_OUT_WRITE
+00009568 CI858.elf HWFFORCE_BLOCK_SM_DPM_OUT_WRITE
+0000956c CI858.elf cHWFMaxNrOfChannels
+00009570 CI858.elf cHWFStatusErrorsMask
+00009574 CI858.elf cHWFRootStatusErrorMask
+00009578 CI858.elf cHWFDoNotCopyUnitErrorMask
+0000957c CI858.elf cFWUpgradePrimary
+00009580 CI858.elf cFWUpgradeBackup
+00009584 CI858.elf cNewPhVersion
+00009588 CI858.elf cNewPMFirmware
+00009590 CI858.elf IPhCommon virtual table
+000095c8 CI858.elf IUnknown virtual table
+000115f0 G _SDA_BASE_ CI858.elf 
+</SYMBOLS>

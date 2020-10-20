@@ -1,0 +1,670 @@
+HWUnitInfo  (* PM891 *)
+   HWUnitID 16#02404E21
+   Description "PM891"
+   Information "Controller AC800MR"
+   Icons AC800CpuType
+   Attributes SystemUnit CPUUnit CompileAlways
+   ModuleType  16#2190
+   MaxNrOfHardwareUnits       5000
+   MaxNrOfVariableConnections 50000
+
+   InterfaceInfo
+      Interface CpuDriver
+      HWConfig NoFail
+   End InterfaceInfo
+   RedundancyInfo
+     RedundancyIcon RedundantCPU
+     Consequence    HWConfig
+     SupportSwitchover
+     SupportResetBackup
+     BackupPositionOffset 13
+   End RedundancyInfo
+   DiscreteNumbers
+      0 1 2 5 6 11
+   End DiscreteNumbers
+   SubUnitTypes
+      HWUnitID {07B38A6B-F8B3-4a8d-AB1C-FB740189C26B} Positions 0 FixedPositions 0 (* SD Reader *)
+      HWUnitID 16#03000050 Positions 1 FixedPositions 1 (* Ethernet *)
+      HWUnitID 16#03000060 Positions 2 FixedPositions 2 (* Ethernet channel that can be disabled *)
+      HWUnitID {2290D54A-CD13-4418-8C74-AB1C29082D1C} Positions 5 DefaultPositions 5 (* IP (IAC)   *)
+    HwUnitID {E28FB414-29C6-40bf-8B16-B5DF0BE4A052} Positions 6 (* SW *)
+      HWUnitID 16#01480005 Positions 11 FixedPositions 11 (* ModuleBus with S800 High Integrity I/O, only optical clusters *)
+   End SubUnitTypes
+   Parameters
+     ParamInfo 
+        Name MMSTCPIP    (* Coldstart is needed *)
+        Description "Enable MMS on TCP/IP"
+        Hidden
+        CompileType HWConfig  (* If true gives that the TCP/IP enable bit in EEPROM should be set *)
+        Datatype BOOL
+        Default FALSE
+        ParamType Numbered 0
+     End ParamInfo
+     ParamInfo 
+        Name MMSETHERNET    (* Coldstart is needed *)
+        Description "Enable MMS on Ethernet"
+        Hidden
+        CompileType HWConfig  (* If true gives that the Ethernet enable bit in EEPROM should be set for this CIE *)
+        Datatype BOOL
+        Default FALSE
+        ParamType Numbered 1
+     End ParamInfo
+     ParamInfo 
+        Name EnableSattbusTCPIP
+        Description "Enable SattBus on TCP/IP"
+        CompileType HWConfig
+        Datatype BOOL
+        Default FALSE
+        ParamType Numbered 2
+     End ParamInfo
+     ParamInfo 
+        Name SattbusTCPIPNode
+        Description "SattbusTCPIPNode"
+        Hidden
+        CompileType HWConfig
+        Datatype INT
+        Default 0
+        ParValIndex 0
+        ParamType Numbered 3
+     End ParamInfo
+     ParamInfo 
+        Name SattBusTCPIPChannel
+        Description "SattBus Channel"
+        Hidden
+        CompileType HWConfig
+        Datatype INT
+        Default 5
+        ParValIndex 1
+        ParamType Numbered 4
+     End ParamInfo
+     ParamInfo 
+        Name SattBusTCPIPNetwork
+        Description "SattBusTCPIPNetwork"
+        Hidden
+        CompileType HWConfig
+        Datatype STRING
+        Default ""
+        ParamType Numbered 5
+     End ParamInfo
+     ParamInfo                    
+        Name ROUTINGTYPE
+        Description "Routing method"
+        CompileType HWConfig
+        Datatype ENUM
+        Default 0
+        ParValIndex 15
+        ParamType Numbered 6
+     End ParamInfo
+     ParamInfo 
+        Name DEFGATEWID
+        Description "Default gateway"
+        CompileType HWConfig
+        Datatype STRING
+        Default ""
+        ParamType Numbered 7
+     End ParamInfo     
+     ParamInfo
+        Name SYSTEMAECLASS
+        Description "AE System AE class"
+        CompileType HWConfig
+        Datatype INT
+        Default 9950
+        ParValIndex 13
+        ParamType Numbered 8
+     End ParamInfo
+     ParamInfo
+        Name SYSTEMAELOWSEVERITY
+        Description "AE System AE low severity"
+        CompileType HWConfig
+        DataType INT
+        Default 200
+        ParValIndex 14
+        ParamType Numbered 24
+     End ParamInfo
+     ParamInfo
+        Name SYSTEMAEMEDIUMSEVERITY
+        Description "AE System AE medium severity"
+        CompileType HWConfig
+        DataType INT
+        Default 400
+        ParValIndex 14
+        ParamType Numbered 25
+     End ParamInfo
+     ParamInfo
+        Name SYSTEMAEHIGHSEVERITY
+        Description "AE System AE high severity"
+        CompileType HWConfig
+        DataType INT
+        Default 600
+        ParValIndex 14
+        ParamType Numbered 26
+     End ParamInfo
+     ParamInfo
+        Name SYSTEMAECRITICALSEVERITY
+        Description "AE System AE critical severity"
+        CompileType HWConfig
+        DataType INT
+        Default 800
+        ParValIndex 14
+        ParamType Numbered 27
+     End ParamInfo
+     ParamInfo
+        Name SYSTEMAEFATALSEVERITY
+        Description "AE System AE fatal severity"
+        CompileType HWConfig
+        DataType INT
+        Default 1000
+        ParValIndex 14
+        ParamType Numbered 28
+     End ParamInfo
+     ParamInfo 
+        Name SYSTEMEVENTSTOSESSIONLOG
+        Description "AE System events to controller log"
+        CompileType HWConfig
+        Datatype ENUM
+        Default 2
+        ParValIndex 21
+        ParamType Numbered 29
+     End ParamInfo
+     ParamInfo 
+        Name EVENTQUEUESIZE
+        Description "AE Local printer event queue size"
+        CompileType HWConfig
+        Datatype INT
+        Default 300
+        ParValIndex 2
+        ParamType Numbered 10
+     End ParamInfo
+     ParamInfo 
+        Name MAXNOOFEVENTQUEUES
+        Description "AE Max no of local printer event queues"
+        CompileType HWConfig
+        Datatype INT
+        Default 0
+        ParValIndex 26
+        ParamType Numbered 12
+     End ParamInfo
+     ParamInfo 
+        Name EVENTENROLLMENTQUEUESIZE
+        Description "AE Event subscription queue size"
+        CompileType HWConfig
+        Datatype INT
+        Default 300
+        ParValIndex 3
+        ParamType Numbered 11
+     End ParamInfo
+     ParamInfo 
+        Name MAXNOOFENROLLMENTS
+        Description "AE Max number of event subscriptions"
+        CompileType HWConfig
+        Datatype INT
+        Default 1
+        ParValIndex 10
+        ParamType Numbered 13
+     End ParamInfo
+     ParamInfo 
+        Name EVENTENROLLMENTTIMEOUT
+        Description "AE Event subscription time out"
+        CompileType HWConfig
+        Datatype INT
+        Default 360
+        ParValIndex 11
+        ParamType Numbered 14
+     End ParamInfo
+     ParamInfo 
+        Name LOWLEVELEVENTBUFFERSIZE
+        Description "AE Buffer size of low level event"
+        CompileType HWConfig
+        Datatype INT
+        Default 2
+        ParValIndex 4
+        ParamType Numbered 31
+     End ParamInfo
+     ParamInfo 
+        Name MAXNOOFNAMEDVALUEITEMS
+        Description "AE Max no of Named Value items"
+        CompileType HWConfig
+        Datatype INT
+        Default 0
+        ParValIndex 23
+        ParamType Numbered 42
+     End ParamInfo
+     ParamInfo 
+        Name MAXPERCOFLOGSTRINGS
+        Description "AE Max percent of log strings"
+        CompileType HWConfig
+        Datatype INT
+        Default 10
+        ParValIndex 24
+        ParamType Numbered 43
+     End ParamInfo
+     ParamInfo 
+        Name ALARMAUTODISABLELIMIT
+        Description "AE Limit auto disable"
+        CompileType HWConfig
+        Datatype INT
+        Default 3
+        ParValIndex 25
+        ParamType Numbered 32
+     End ParamInfo
+     ParamInfo 
+        Name DEFNETWID
+        Description "RNRP Default network ID"
+        CompileType HWConfig
+        Datatype STRING
+        Default "172.16.0.0"
+        ParamType Numbered 15
+     End ParamInfo
+     ParamInfo 
+        Name NUMOWNAREAS
+        Description "RNRP Number of own areas"
+        CompileType HWConfig
+        Datatype INT
+        Default 2
+        ParValIndex 5
+        ParamType Numbered 16
+     End ParamInfo
+     ParamInfo 
+        Name NUMREMOTEAREAS
+        Description "RNRP Number of remote areas"
+        CompileType HWConfig
+        Datatype INT
+        Default 4
+        ParValIndex 20
+        ParamType Numbered 17
+     End ParamInfo
+     ParamInfo 
+        Name MAXLOSTMSG  
+        Description "RNRP Max Lost Messages"
+        CompileType HWConfig
+        Datatype INT
+        Default 3
+        ParValIndex 6
+        ParamType Numbered 18
+     End ParamInfo
+     ParamInfo 
+        Name SENDPERIOD  
+        Description "RNRP Send Period"
+        CompileType HWConfig
+        Datatype INT
+        Default 1
+        ParValIndex 7
+        ParamType Numbered 19
+     End ParamInfo
+     ParamInfo 
+        Name MAXDIAMETER  
+        Description "RNRP Max no of hops"
+        CompileType HWConfig
+        Datatype INT
+        Default 3
+        ParValIndex 8
+        ParamType Numbered 20
+     End ParamInfo
+     ParamInfo                    
+        Name SYSTEMTYPE
+        Description "RNRP System type"
+        Hidden
+        CompileType HWConfig
+        Datatype ENUM
+        Default 15
+        ParValIndex 9
+        ParamType Numbered 21
+     End ParamInfo
+     ParamInfo 
+        Name EXTNETW
+        Description "RNRP Ext network"
+        CompileType HWConfig
+        Datatype STRING
+        Default ""
+        ParamType Numbered 44
+     End ParamInfo
+     ParamInfo 
+        Name EXTNETWMASK
+        Description "RNRP Ext netw mask"
+        CompileType HWConfig
+        Datatype STRING
+        Default ""
+        ParamType Numbered 45
+     End ParamInfo
+     ParamInfo 
+        Name EXTROUTER1
+        Description "RNRP Ext router1 addr"
+        CompileType HWConfig
+        Datatype STRING
+        Default ""
+        ParamType Numbered 46
+     End ParamInfo
+    ParamInfo 
+        Name EXTROUTER2
+        Description "RNRP Ext router2 addr"
+        CompileType HWConfig
+        Datatype STRING
+        Default ""
+        ParamType Numbered 47
+     End ParamInfo
+     ParamInfo                    
+        Name CNRPNAMESERVERIPADDRESS
+        Description "Name server IP Address"
+        Hidden
+        CompileType HWConfig
+        Datatype STRING
+        Default ""
+        ParamType Numbered 22
+     End ParamInfo
+     ParamInfo                    
+        Name CNRPIPADDRESSTOREG1
+        Description "IP Address to register"
+        Hidden
+        CompileType HWConfig
+        Datatype STRING
+        Default ""
+        ParamType Numbered 23
+     End ParamInfo
+     ParamInfo
+        Name TOOLROUTING
+        Description "Tool Routing"
+        CompileType HWConfig
+        Datatype ENUM
+        Default 0
+        ParValIndex 12
+        ParamType Numbered 30
+     End ParamInfo
+     ParamInfo
+        Name TOOLROUTINGNBRCON
+        Description "Tool Routing max no of connections"
+        CompileType HWConfig
+        Datatype INT
+        Default 20
+        ParValIndex 22
+        ParamType Numbered 38
+     End ParamInfo
+     ParamInfo 
+        Name CLOCKMASTERORDERNO                 (*ClockSynch*)
+        Description "CS CNCP ClockMaster Order No"
+        CompileType HWConfig
+        Datatype INT
+        Default 0
+        ParValIndex 16
+        ParamType Numbered 34
+     End ParamInfo
+     ParamInfo                    
+        Name CSPROTTYPE                         (*ClockSynch*)
+        Description "CS Protocol Type"
+        CompileType HWConfig
+        Datatype ENUM
+        Default 1
+        ParValIndex 17
+        ParamType Numbered 35
+     End ParamInfo
+     ParamInfo                    
+        Name CSTIMESETENABLE                    (*ClockSynch*)
+        Description "CS Time Set Enabled"
+        CompileType HWConfig
+        Datatype ENUM
+        Default 0
+        ParValIndex 18
+        ParamType Numbered 36
+     End ParamInfo
+     ParamInfo 
+        Name CLOCKSYNCHINTERVAL                 (*ClockSynch*)
+        Description "CS Synch Interval"
+        CompileType HWConfig
+        Datatype INT
+        Default 20
+        ParValIndex 19
+        ParamType Numbered 37
+     End ParamInfo
+     ParamInfo 
+        Name SNTPSERVERADDR1                   (*ClockSynch*)
+        Description "CS SNTP ServerAddr 1"
+        CompileType HWConfig
+        Datatype STRING
+        Default ""
+        ParamType Numbered 40
+     End ParamInfo
+     ParamInfo 
+        Name SNTPSERVERADDR2                   (*ClockSynch*)
+        Description "CS SNTP ServerAddr 2"
+        CompileType HWConfig
+        Datatype STRING
+        Default ""
+        ParamType Numbered 41
+     End ParamInfo
+     ParamInfo 
+        Name SNTPSERVERENABLED                 (*ClockSynch*)
+        Description "CS SNTP Server Enabled"
+        Hidden
+        CompileType HWConfig
+        Datatype ENUM
+        Default 0
+        ParValIndex 18
+        ParamType Numbered 39
+     End ParamInfo
+     ParamInfo 
+        Name ToolVersion                 (*ToolVersion*)
+        Description "Tool version for PM firmware"
+        Hidden
+        CompileType HWConfig
+        Datatype INT
+        Default 4001
+        ParValIndex 27
+        ParamType Numbered 10998 (*Do not change nbr hardcoded in CB*)
+     End ParamInfo
+     ParamInfo 
+        Name HwArchitecture                 (*HwArchitecture*)
+        Description "Hardware Architecture in Controller"
+        Hidden
+        CompileType HWConfig
+        Datatype INT
+        Default 8200
+        ParValIndex 28
+        ParamType Numbered 10999 (*Do not change nbr hardcoded in CB*)
+     End ParamInfo
+   End Parameters
+   ParValList
+      ParVal
+         ParValIndex 0
+         INT 0 127 0 127
+      End ParVal
+      ParVal
+         ParValIndex 1
+         INT 1 5 1 5
+      End ParVal
+      ParVal
+         ParValIndex 2
+         INT 10 3000 10 3000
+      End ParVal
+      ParVal
+         ParValIndex 3
+         INT 200 3000 200 3000
+      End ParVal
+      ParVal
+         ParValIndex 4
+         INT 2 4000 2 4000
+      End ParVal
+      ParVal
+         ParValIndex 5
+         INT 1 4 1 4
+      End ParVal
+      ParVal
+         ParValIndex 20
+         INT 0 15 0 15
+      End ParVal
+      ParVal
+         ParValIndex 6
+         INT 1 10 1 10
+      End ParVal
+      ParVal
+         ParValIndex 7
+         UnitText    "s"
+         INT 1 60 1 60
+      End ParVal
+      ParVal
+         ParValIndex 8
+         INT 1 5 1 5
+      End ParVal
+      ParVal
+         ParValIndex 9
+         ENUM
+         "AC800M PM860/TP810" 5
+         "AC800M PM860/TP830" 6
+         "AC800M PM856/TP830" 7
+         "AC800M PM861/TP830" 8
+         "AC800C" 9
+         "AC250 PM253" 10
+         "AC250 PM254" 11
+         "AC250 PM255" 12
+         "AC800M PM862/TP830" 13
+         "AC800M PM864/TP830" 14
+         "AC800M PM865/TP830" 15
+         "AC800M PM851/TP830" 16
+         "AC800M PM892" 17
+         "AC800M PM894" 18
+         "AC800M PM895" 19
+         "AC800M PM866/TP830" 20
+      End ParVal
+      ParVal
+         ParValIndex 10
+         INT 0 18 0 18
+      End ParVal
+      ParVal
+         ParValIndex 11
+         UnitText    "min"
+         INT 0 1440 0 1440
+      End ParVal
+      ParVal
+         ParValIndex 12
+         ENUM
+         "Disabled" 0
+         "Enabled"  1
+      End ParVal
+      ParVal
+         ParValIndex 13
+         INT 1 9999 1 9999
+      End ParVal
+      ParVal
+         ParValIndex 14
+         INT 1 1000 1 1000
+      End ParVal
+      ParVal
+         ParValIndex 15
+         ENUM
+         "rnrp" 1
+         "default gateway" 2
+      End ParVal   
+      ParVal
+         ParValIndex 16               (*ClockSynch MasterOrderNo*)
+         INT 0 10 0 10
+      End ParVal
+      ParVal
+         ParValIndex 17               (*ClockSynch SynchProtocol*)
+         ENUM
+         "No Synch" 0
+         "CNCP" 1
+         "SNTP" 2
+         "MMS" 3
+         "MB300" 4
+         "SNTP on CI" 5
+      End ParVal
+      ParVal
+         ParValIndex 18               (*ClockSynch  TimeSetEnable*)
+         ENUM
+         "False" 0
+         "True" 1
+      End ParVal
+      ParVal
+         ParValIndex 19              (*ClockSynch  SynchInterval*)
+         UnitText    "s"
+         INT 1 240 1 240
+      End ParVal
+      ParVal
+         ParValIndex 21
+         ENUM
+         "None" 0
+         "Low Severity" 1
+         "Medium Severity" 2
+         "High Severity" 3
+         "Critical Severity" 4
+         "Fatal Severity" 5
+      End ParVal  
+      ParVal
+         ParValIndex 22               (*Number of connections for toolrouting*)
+         INT 5 50 5 50
+      End ParVal
+      ParVal
+         ParValIndex 23
+         INT 0 9000 0 9000
+      End ParVal
+      ParVal
+         ParValIndex 24
+         UnitText    "%"
+         INT 0 100 0 100
+      End ParVal 
+      ParVal
+         ParValIndex 25
+         INT 0 127 0 127
+      End ParVal 
+      ParVal
+         ParValIndex 26
+         INT 0 5 0 5
+      End ParVal
+      ParVal
+         ParValIndex 27
+         INT 4001 4001 4001 4001
+      End ParVal 
+      ParVal
+         ParValIndex 28
+         INT 8200 8200 8200 8200
+      End ParVal  
+   End ParValList
+   Channels
+      ChannelInfo
+         Number 0
+         ChannelName "UnitStatus"
+         Datatype Status_In
+         Routine 900
+         CopyParameters 0 0 16#50000
+      End ChannelInfo
+   End Channels
+   UnitStatusText
+     DeviceSpecific1 "Battery Low"
+     DeviceSpecific2 "RPB"
+     DeviceSpecific3 "RPA"
+     DeviceSpecific4 "CEX-bus fuse"
+     DeviceSpecific5 "No Time sync"
+     DeviceSpecific6 "Battery Low on Backup"
+     DeviceSpecific7 "RPA on Backup"
+     DeviceSpecific8 "RPB on Backup"
+     DeviceSpecific9 "CEX-bus fuse on Backup"
+     ExtendedStatus1 "Backup CPU stopped"
+     ExtendedStatus2 "Switchover occured"
+     ExtendedStatus3 "Hanging or invalid CEX IRQ: All CEMs on the upper CEX bus segment are disabled."
+     ExtendedStatus4 "Hanging or invalid CEX IRQ: All CEMs on the lower CEX bus segment are disabled."
+     ExtendedStatus5 "Hanging or invalid CEX IRQ: A PM has been shut down."
+     ExtendedStatus6 "Hanging or invalid CEX IRQ: All CEMs on the direct CEX bus segment are disabled."
+     ExtendedStatus7 "Hanging or invalid CEX IRQ: All CEMs on the indirect CEX bus segment are disabled."
+     ExtendedStatus8 "RCUcable connector is open"
+     ExtendedStatus9 "Controller password is default"
+   End UnitStatusText
+   UnitStatusSeverity
+     DeviceSpecific1 GeneralWarning TriggerAlarm SeverityMedium
+     DeviceSpecific2 GeneralWarning TriggerAlarm SeverityMedium
+     DeviceSpecific3 GeneralWarning TriggerAlarm SeverityMedium
+     DeviceSpecific4 GeneralWarning TriggerAlarm SeverityHigh
+     DeviceSpecific5 GeneralWarning TriggerAlarm SeverityMedium
+     DeviceSpecific6 GeneralWarning TriggerAlarm SeverityMedium
+     DeviceSpecific7 GeneralWarning TriggerAlarm SeverityMedium
+     DeviceSpecific8 GeneralWarning TriggerAlarm SeverityMedium
+     DeviceSpecific9 GeneralWarning TriggerAlarm SeverityMedium
+     ExtendedStatus1 GeneralWarning TriggerAlarm SeverityMedium
+     ExtendedStatus2 GeneralWarning TriggerAlarm SeverityMedium
+     ExtendedStatus3 GeneralWarning TriggerAlarm SeverityHigh
+     ExtendedStatus4 GeneralWarning TriggerAlarm SeverityHigh
+     ExtendedStatus5 GeneralWarning TriggerAlarm SeverityMedium
+     ExtendedStatus6 GeneralWarning TriggerAlarm SeverityHigh
+     ExtendedStatus7 GeneralWarning TriggerAlarm SeverityHigh
+     ExtendedStatus8 GeneralWarning TriggerAlarm SeverityMedium
+     ExtendedStatus9 GeneralWarning
+   End UnitStatusSeverity
+  HWUnitInfoCRC 16#3994
+End HWUnitInfo (* PM891 *)

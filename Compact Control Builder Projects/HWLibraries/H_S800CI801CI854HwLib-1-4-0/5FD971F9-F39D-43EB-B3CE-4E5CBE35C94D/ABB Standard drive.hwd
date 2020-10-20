@@ -1,0 +1,254 @@
+(* -------------------------------------------------------------- *)
+(*    Module: ACS600  FCI:CI801  CI:CI854                         *)
+(* -------------------------------------------------------------- *)
+
+(* Version 1.0/3                                                  *)
+(* 2006-08-28     K Gardin                                        *)
+(* AC800M #26023  Changed copy routine for Ref2                   *) 
+(* -------------------------------------------------------------- *)
+(* Version 1.0/2                                                  *)
+(* 2006-08-10     K Gardin                                        *)
+(* AC800M #24287  Changed copy routine for Ref1                   *) 
+(* -------------------------------------------------------------- *)
+(* Version 1.0/1                                                  *)
+(* 2006-01-23    K Gardin                                         *)
+(* AC800M #22647  Changed priorities on Alarms and Events         *) 
+(* -------------------------------------------------------------- *)
+(* Version 1.0/0 based on io_acs600.hwd version 5.2/5             *)
+(* 2005-08-31    N Ljungberg                                      *)
+
+
+HWUnitInfo (* ACS600 / CI801 / CI854 *)
+  HWUnitID    {F2A040EE-D7CE-4111-9EFE-AE8D9BB7BD92}  (* ACS600 Standard Drive *)
+  Description "ABB Standard drive"
+  Information "ABB Standard drive"
+  Icons       MotorType
+  Attributes  IoUnit
+  Channels
+    ChannelInfo
+      Number         1
+      ChannelName   "Status"
+      Datatype       Int_In
+      Routine        310
+      CopyParameters 0 0 16#30001 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number         2
+      ChannelName   "Actual 1"
+      DataType       Int_In
+      Routine        310
+      CopyParameters 0 0 16#30003 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number         3
+      ChannelName   "Actual 2"
+      DataType       Int_In
+      Routine        310
+      CopyParameters 0 0 16#30005 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number         4
+      ChannelName   "Actual 3"
+      DataType       Int_In
+      Routine        310
+      CopyParameters 0 0 16#30007 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number         5
+      ChannelName   "Actual 4"
+      DataType       Int_In
+      Routine        310
+      CopyParameters 0 0 16#30009 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number         6
+      ChannelName   "Actual 5"
+      DataType       Int_In
+      Routine        310
+      CopyParameters 0 0 16#3000B 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number         7
+      ChannelName   "Command"
+      DataType       Int_Out
+      Routine        400
+      CopyParameters 0 0 16#40000 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number         8
+      ChannelName   "Ref 1"
+      DataType       Int_Out
+      Routine        410
+      CopyParameters 0 0 16#40002 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number         9
+      ChannelName   "Ref 2"
+      DataType       Int_Out
+      Routine        410
+      CopyParameters 0 0 16#40004 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number         10
+      ChannelName   "Ref 3"
+      DataType       Int_Out
+      Routine        400
+      CopyParameters 0 0 16#40006 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number         11
+      ChannelName   "Ref 4"
+      DataType       Int_Out
+      Routine        400
+      CopyParameters 0 0 16#40008 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number         12
+      ChannelName   "Ref 5"
+      DataType       Int_Out
+      Routine        400
+      CopyParameters 0 0 16#4000A 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number         13
+      ChannelName   "Module Status"
+      Datatype       Int_In
+      Routine        311
+      CopyParameters 0 0 16#30000 16#0 16#8 16#1
+    End ChannelInfo
+    ChannelInfo
+      Number         20
+      ChannelName   "UnitStatus"
+      Datatype       Status_In
+      Routine        900
+      CopyParameters 0 0 16#50000
+    End ChannelInfo  
+  End Channels
+
+
+
+  Diagnostics
+     DiagInfo
+       Number          70
+       Description     "Primary module error"
+       Datatype        EnumDiag
+       DiagValueIndex  0  (* If channel No=0 *)
+       DiagAreaOffset  3  0000   0000   OrdinalOne  
+     End DiagInfo
+
+  End Diagnostics
+
+  DiagValueList
+    DiagValue
+      DiagValueIndex                   0  (* primary unit, channel=0 *)
+      DiagDataSize                     5  (* max 5 bits long *)   
+      ENUMDIAG
+      "Error"                          9  DeviceSpecific1  
+     (* "Warning"                       16  DeviceSpecific2 *) 
+      "OSP"                           17  ExtendedStatus1  
+      "Not configured"                18  ExtendedStatus5  
+      "Module Missing"                19  ModuleMissing          
+      "Process power missing"         20  ExtendedStatus8  
+      "Wrong module type"             21  WrongModuleType        
+      "Internal channel error"        22  ExtendedStatus9  
+    End DiagValue
+
+    DiagValue
+      DiagValueIndex                   1  (* backup unit, channel=63 *)
+      DiagDataSize                     5
+      ENUMDIAG
+      "Backup Error"                   9  DeviceSpecific5  
+      "Backup Warning"                16  DeviceSpecific6 
+      "Backup OSP"                    17  ExtendedStatus3  
+      "Backup Not configured"         18  ExtendedStatus2  
+      "Backup Module Missing"         19  DeviceSpecific4  
+      "Backup Process power missing"  20  ExtendedStatus4  
+      "Backup Wrong module type"      21  DeviceSpecific3  
+      "Backup Internal channel error" 22  ExtendedStatus6  
+      "Backup PulseSyncError"         23  ExtendedStatus7       
+    End DiagValue
+   End DiagValueList
+
+ UnitstatusText
+
+    DeviceSpecific1  "Error"                           
+    DeviceSpecific2  "Warning"                       
+
+    ExtendedStatus1  "OSP"                    
+    ExtendedStatus5  "Not configured"   
+    ExtendedStatus8  "Process power missing" 
+    ExtendedStatus9  "Internal channel error"                 
+    ExtendedStatus10 "Channel short circuit"                 
+    ExtendedStatus11 "Channel open wire"                     
+    ExtendedStatus12 "Channel sensor power sup. error"       
+
+  End UnitStatusText
+
+
+ UnitStatusSeverity
+
+    DeviceSpecific1  GeneralError   TriggerAlarm SeverityHigh
+    DeviceSpecific2  GeneralWarning TriggerEvent SeverityLow
+    DeviceSpecific3  GeneralWarning TriggerAlarm SeverityMedium
+    DeviceSpecific4  GeneralWarning TriggerAlarm SeverityMedium
+    DeviceSpecific5  GeneralWarning TriggerAlarm SeverityMedium
+    DeviceSpecific6  GeneralWarning TriggerEvent SeverityLow
+
+    ExtendedStatus1  GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus2  GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus3  GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus4  GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus5  GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus6  GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus7  GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus8  GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus9  GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus10  GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus11  GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus12  GeneralWarning TriggerEvent SeverityLow
+
+  End UnitStatusSeverity
+
+
+
+
+  Configuration
+    ConfigInfo
+      ModuleKey   16#0F
+      InAreaSize  13 BYTE
+      OutAreaSize 12 BYTE
+      InBYTE
+        BYTE 0        0 (* STATUS *)
+        BYTE 0        1 (* STATUS MSB *)
+        BYTE 0        2 (* STATUS LSB *)
+        BYTE 0        3 (*ACTUAL 1 MSB *)
+        BYTE 0        4 (*ACTUAL 1 LSB *)
+        BYTE 0        5 (*ACTUAL 2 MSB *)
+        BYTE 0        6 (*ACTUAL 2 LSB *)
+        BYTE 0        7 (*ACTUAL 3 MSB *)
+        BYTE 0        8 (*ACTUAL 3 LSB *)
+        BYTE 0        9 (*ACTUAL 4 MSB *)
+        BYTE 0       10 (*ACTUAL 4 LSB *)
+        BYTE 0       11 (*ACTUAL 5 MSB *)
+        BYTE 0       12 (*ACTUAL 5 LSB *)
+      OutBYTE
+        BYTE 0        0 (* COMMAND MSB *)
+        BYTE 0        1 (* COMMAND LSB *)
+        BYTE 0        2 (*REF 1 MSB*)
+        BYTE 0        3 (*REF 1 LSB*)
+        BYTE 0        4 (*REF 2 MSB*)
+        BYTE 0        5 (*REF 2 LSB*)
+        BYTE 0        6 (*REF 3 MSB*)
+        BYTE 0        7 (*REF 3 LSB*)
+        BYTE 0        8 (*REF 4 MSB*)
+        BYTE 0        9 (*REF 4 LSB*)
+        BYTE 0       10 (*REF 5 MSB*)
+        BYTE 0       11 (*REF 5 LSB*)
+      CIGIOConnData
+        CIGIOData   16#01 16#C0 16#8B 16#8C (* ConfigData *)
+        CIGIOData   16#05 16#89 16#0A 16#00 16#10 
+      End CIGIOConnData
+    End ConfigInfo
+  End Configuration
+  HWUnitInfoCRC 16#2A23
+End HWUnitInfo (* ACS600 / CI801 / CI854 *)

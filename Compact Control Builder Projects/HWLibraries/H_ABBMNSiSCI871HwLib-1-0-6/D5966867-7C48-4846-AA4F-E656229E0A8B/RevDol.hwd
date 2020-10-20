@@ -1,0 +1,102 @@
+(*=============================*)
+(* Modified : 2010-02-16 10:59 *)
+(* Modified : 2010-03-08 14:38 *)
+(* Modified : 2010-03-25 16:04 *)
+(* Modified : 2010-05-07 13:44 *)
+(* Modified : 2010-05-07 14:01 *)
+(* Modified : 2010-05-11 11:08 *)
+(* Modified : 2012-03-12 14:18 *)
+(* Modified : 2013-01-31 12:49 *)
+(*=============================*)
+FileHeader
+  Contents              "MLink"
+  Date                  "31.01.2013"
+  Version               "Version 1.4.9" (* Device Import Wizard *)
+  (* Parser             "Profinet 1.0.17.0" *)
+  RequiredSyntaxVersion "3.0"
+End FileHeader
+
+SessionID d2ea4b6b-69fe-43e0-8406-35492fafb797
+
+(*========================================================*)
+(*                         MLink                          *)
+(*========================================================*)
+
+HWUnitInfo
+  HWUnitID         {6117b1cf-b194-4d1c-baca-9b3b1a469409}
+  Description      "RevDol"
+  Information      "Reversing Direct On Line Motor Starter"
+  Icons            RackIOType
+  Attributes       AdapterUnit
+  DownloadInstanceNamesForSubUnits
+
+  InterfaceInfo
+    IoSysType  CIGIO
+    CLSID_CB   {D9720536-1BB9-4f74-A5CD-DCDDED2398CA}
+    CLSID_CTRL {38CEFCC8-23D7-43f9-BE6D-4251F87BF421}
+  End InterfaceInfo
+
+  ConnectionInfo
+    ConnectType  AllUnits
+    IOConnect    Fail
+    IOConfig     NoFail
+  End ConnectionInfo
+
+  DiscreteNumbers
+    1 2 3 4 5 6 7 8 9 10
+  End DiscreteNumbers
+
+  SubUnitTypes
+    HWUnitID {4201ef18-86eb-4e25-bce6-e589cc753605} Positions 1 DefaultPositions 1
+    HWUnitID {3ecd087b-8c75-46e6-a89d-2ee959dfbb27} Positions 2 DefaultPositions 2
+    HWUnitID {a94ef476-e194-41b1-8aae-cb58b8527b4d} Positions 3
+    HWUnitID {5317d6b2-9846-46bf-a67f-b86546417ca8} Positions 4
+  End SubUnitTypes
+
+  Channels
+    ChannelInfo
+      Number                1
+      ChannelName           "UnitStatus"
+      Datatype              Status_In
+      Routine               900
+      CopyParameters        16#0 16#0 16#50000
+    End ChannelInfo
+  End Channels
+
+  UnitStatusText
+    DeviceSpecific1  "Maintenance required"
+    DeviceSpecific2  "Maintenance demanded"
+    DeviceSpecific3  "Diagnosis data available"
+    DeviceSpecific4  "Locked by other controller/supervisor"
+    DeviceSpecific6  "Parametrization fault"
+  End UnitStatusText
+
+  UnitStatusSeverity
+    DeviceSpecific1  GeneralWarning TriggerEvent SeverityMedium
+    DeviceSpecific2  GeneralWarning TriggerEvent SeverityMedium
+    DeviceSpecific3  GeneralWarning TriggerEvent SeverityMedium
+    DeviceSpecific4  GeneralWarning TriggerEvent SeverityMedium
+    DeviceSpecific6  GeneralError TriggerAlarm SeverityHigh
+  End UnitStatusSeverity
+
+  Configuration
+    ConfigInfo
+      ModuleKey        1
+      InAreaSize       0 BYTE
+      OutAreaSize      0 BYTE
+      CIGIOConnData
+        CIGIOData      16#10 16#a5 16#5a 16#0 16#1 16#2 16#1 16#2 16#1 
+        CIGIOData      16#5 16#e0 16#0 16#0 16#2 
+        SyncronizeDataExchange
+      End CIGIOConnData
+    End ConfigInfo
+    ConfigInfo
+      EmptyConfig
+      ModuleKey        16#FFFF
+      InAreaSize       0 BYTE
+      OutAreaSize      0 BYTE
+    End ConfigInfo
+  End Configuration
+
+  HWUnitInfoCRC 16#efcb
+End HWUnitInfo

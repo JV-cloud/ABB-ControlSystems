@@ -1,0 +1,2073 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Patched for use in 800xA: Interface&Port submodules and CertificationInfo commented out-->
+<ISO15745Profile xmlns="http://www.profibus.com/GSDML/2003/11/DeviceProfile" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.profibus.com/GSDML/2003/11/DeviceProfile ..\xsd\GSDML-DeviceProfile-V2.33.xsd">
+  <ProfileHeader>
+    <ProfileIdentification>PROFINET Device Profile</ProfileIdentification>
+    <ProfileRevision>1.00</ProfileRevision>
+    <ProfileName>Device Profile for PROFINET Devices</ProfileName>
+    <ProfileSource>PROFIBUS Nutzerorganisation e. V. (PNO)</ProfileSource>
+    <ProfileClassID>Device</ProfileClassID>
+    <ISO15745Reference>
+      <ISO15745Part>4</ISO15745Part>
+      <ISO15745Edition>1</ISO15745Edition>
+      <ProfileTechnology>GSDML</ProfileTechnology>
+    </ISO15745Reference>
+  </ProfileHeader>
+  <ProfileBody>
+    <DeviceIdentity VendorID="0x001A" DeviceID="0x0020">
+      <InfoText TextId="DEVICE_DESCRIPTION"/>
+      <VendorName Value="ABB"/>
+    </DeviceIdentity>
+    <DeviceFunction>
+      <Family MainFamily="I/O" ProductFamily="PNQ22"/>
+    </DeviceFunction>
+    <ApplicationProcess>
+      <DeviceAccessPointList>
+        <DeviceAccessPointItem ID="DAP_PNQ22" PhysicalSlots="0..4" ModuleIdentNumber="0x00000001" MinDeviceInterval="64" ImplementationType="netX" DNS_CompatibleName="pnq22-fbp-01" FixedInSlots="0" ObjectUUID_LocalIndex="1" MultipleWriteSupported="true" DeviceAccessSupported="true" NumberOfDeviceAccessAR="1" PNIO_Version="V2.2" CheckDeviceID_Allowed="true" NameOfStationNotTransferable="true" LLDP_NoD_Supported="true" ResetToFactoryModes="2" IO_SupervisorSupported="false">
+         <ModuleInfo>
+            <Name TextId="DAP_Name" />
+            <InfoText TextId="DAP_Info" />
+            <VendorName Value="ABB" />
+            <OrderNumber Value="1SAJ261000R0100" />
+            <HardwareRelease Value="1.0" />
+            <SoftwareRelease Value="1.1.x" />
+          </ModuleInfo>
+
+
+          <SubslotList>
+             <SubslotItem SubslotNumber="32768" TextId="X1" />
+             <SubslotItem SubslotNumber="32769" TextId="X1P1" />
+             <SubslotItem SubslotNumber="32770" TextId="X1P2" />
+          </SubslotList>
+		  <IOConfigData MaxInputLength="1024" MaxOutputLength="1024" />
+         <UseableModules>
+            <ModuleItemRef ModuleItemTarget="UMC100" AllowedInSlots="1 2 3 4" />
+            <ModuleItemRef ModuleItemTarget="UMC100.3" AllowedInSlots="1 2 3 4" />
+            <ModuleItemRef ModuleItemTarget="EmptySlot" AllowedInSlots="1 2 3 4" />
+          </UseableModules>
+
+         <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="GENERAL_DATA_FBP" SubmoduleIdentNumber="0x00001001" FixedInSubslots="1" API="0"  MayIssueProcessAlarm="true">
+              <IOData />
+              <RecordDataList>
+			    <ParameterRecordDataItem Index="1" Length="3">
+				  <Name TextId="FBPPort1_Record" />
+				  <Ref ValueItemTarget="ENUM_SPARE_PORT" ByteOffset="0" DataType="Unsigned8" DefaultValue="1" AllowedValues="0..1" Changeable="true" TextId="SparePort" />
+				  <Ref ValueItemTarget="ENUM_WRITIN_PARAM_PORT" ByteOffset="1" DataType="Unsigned8" DefaultValue="1" AllowedValues="0..1" Changeable="true" TextId="WritingParamTypeText" />
+				  <Ref ByteOffset="2" DataType="Unsigned8" DefaultValue="1" AllowedValues="0..255" Changeable="true" TextId="ExpectedAddress" />
+                </ParameterRecordDataItem>
+				<ParameterRecordDataItem Index="2" Length="3">
+				  <Name TextId="FBPPort2_Record" />
+				  <Ref ValueItemTarget="ENUM_SPARE_PORT" ByteOffset="0" DataType="Unsigned8" DefaultValue="1" AllowedValues="0..1" Changeable="true" TextId="SparePort" />
+				  <Ref ValueItemTarget="ENUM_WRITIN_PARAM_PORT" ByteOffset="1" DataType="Unsigned8" DefaultValue="1" AllowedValues="0..1" Changeable="true" TextId="WritingParamTypeText" />
+				  <Ref ByteOffset="2" DataType="Unsigned8" DefaultValue="2" AllowedValues="0..255" Changeable="true" TextId="ExpectedAddress" />
+                </ParameterRecordDataItem>
+				<ParameterRecordDataItem Index="3" Length="3">
+				  <Name TextId="FBPPort3_Record" />
+				  <Ref ValueItemTarget="ENUM_SPARE_PORT" ByteOffset="0" DataType="Unsigned8" DefaultValue="1" AllowedValues="0..1" Changeable="true" TextId="SparePort" />
+				  <Ref ValueItemTarget="ENUM_WRITIN_PARAM_PORT" ByteOffset="1" DataType="Unsigned8" DefaultValue="1" AllowedValues="0..1" Changeable="true" TextId="WritingParamTypeText" />
+				  <Ref ByteOffset="2" DataType="Unsigned8" DefaultValue="3" AllowedValues="0..255" Changeable="true" TextId="ExpectedAddress" />
+                </ParameterRecordDataItem>
+				<ParameterRecordDataItem Index="4" Length="3">
+				  <Name TextId="FBPPort4_Record" />
+				  <Ref ValueItemTarget="ENUM_SPARE_PORT" ByteOffset="0" DataType="Unsigned8" DefaultValue="1" AllowedValues="0..1" Changeable="true" TextId="SparePort" />
+				  <Ref ValueItemTarget="ENUM_WRITIN_PARAM_PORT" ByteOffset="1" DataType="Unsigned8" DefaultValue="1" AllowedValues="0..1" Changeable="true" TextId="WritingParamTypeText" />
+				  <Ref ByteOffset="2" DataType="Unsigned8" DefaultValue="4" AllowedValues="0..255" Changeable="true" TextId="ExpectedAddress" />
+                </ParameterRecordDataItem>
+				<ParameterRecordDataItem Index="5" Length="4">
+                  <Name TextId="SNTPServerIP" />
+				  <Ref ByteOffset="0" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..255" Changeable="true" TextId="SNTPServerIPOctet1" />
+				  <Ref ByteOffset="1" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..255" Changeable="true" TextId="SNTPServerIPOctet2" />
+				  <Ref ByteOffset="2" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..255" Changeable="true" TextId="SNTPServerIPOctet3" />
+				  <Ref ByteOffset="3" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..255" Changeable="true" TextId="SNTPServerIPOctet4" />
+                </ParameterRecordDataItem>
+				<ParameterRecordDataItem Index="6" Length="1">
+                  <Name TextId="ConfigurationsFlagsText" />
+				  <Ref ValueItemTarget="ENUM_DIAG_TYPE" ByteOffset="0" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..1" Changeable="true" TextId="DiagnosisModelText" />
+                </ParameterRecordDataItem>
+              </RecordDataList>
+              <ModuleInfo CategoryRef="GENERAL_DATA_FBP">
+                <Name TextId="GENERAL_DATA_FBP_1" />
+                <InfoText TextId="GENERAL_DATA_FBP_INFO" />
+              </ModuleInfo>
+            </VirtualSubmoduleItem>
+         </VirtualSubmoduleList>
+
+          <SystemDefinedSubmoduleList>
+            <!--InterfaceSubmoduleItem ID="IDS_DAP_PNQ22I" SupportedRT_Classes="RT_CLASS_1" SupportedProtocols="SNMP;LLDP" NetworkComponentDiagnosisSupported="true" DelayMeasurementSupported="true" SubslotNumber="32768" TextId="PN-IO" SubmoduleIdentNumber="0x00000002">
+              <ApplicationRelations>
+                <TimingProperties SendClock="32 64 128" />
+              </ApplicationRelations>
+            </InterfaceSubmoduleItem>
+            <PortSubmoduleItem ID="IDS_DAP_PNQ22P1" SubslotNumber="32769" MAUType="100BASETXFD" MaxPortTxDelay="92" MaxPortRxDelay="308" TextId="Port1" SubmoduleIdentNumber="0x00000003" LinkStateDiagnosisCapability="Up+Down">
+			  <MAUTypeList>
+				<MAUTypeItem Value="16"/>
+			  </MAUTypeList>
+			</PortSubmoduleItem>
+            <PortSubmoduleItem ID="IDS_DAP_PNQ22P2" SubslotNumber="32770" MAUType="100BASETXFD" MaxPortTxDelay="92" MaxPortRxDelay="308" TextId="Port2" SubmoduleIdentNumber="0x00000003" LinkStateDiagnosisCapability="Up+Down">
+			  <MAUTypeList>
+				<MAUTypeItem Value="16"/>
+			  </MAUTypeList>
+			</PortSubmoduleItem-->
+          </SystemDefinedSubmoduleList>
+
+		  <Graphics>
+            <GraphicItemRef GraphicItemTarget="1" Type="DeviceSymbol" />
+            <GraphicItemRef GraphicItemTarget="4" Type="DeviceIcon" />
+          </Graphics>
+        </DeviceAccessPointItem>
+
+        <DeviceAccessPointItem ID="DAP_PNQ22_V2_0" PhysicalSlots="0..4" ModuleIdentNumber="0x00000001" MinDeviceInterval="64" ImplementationType="netX" DNS_CompatibleName="pnq22-fbp-01" FixedInSlots="0" ObjectUUID_LocalIndex="1" MultipleWriteSupported="true" DeviceAccessSupported="true" NumberOfDeviceAccessAR="1" PNIO_Version="V2.33" CheckDeviceID_Allowed="true" NameOfStationNotTransferable="true" LLDP_NoD_Supported="true" ResetToFactoryModes="2" IO_SupervisorSupported="false">
+         <ModuleInfo>
+            <Name TextId="DAP_V2_0_Name"/>
+            <InfoText TextId="DAP_Info"/>
+            <VendorName Value="ABB"/>
+            <OrderNumber Value="1SAJ261000R0100"/>
+            <HardwareRelease Value="1"/>
+            <SoftwareRelease Value="2.0.x"/>
+          </ModuleInfo>
+          <!--CertificationInfo ConformanceClass="B" ApplicationClass="" NetloadClass="I"/-->
+          <SubslotList>
+             <SubslotItem SubslotNumber="32768" TextId="X1"/>
+             <SubslotItem SubslotNumber="32769" TextId="X1P1"/>
+             <SubslotItem SubslotNumber="32770" TextId="X1P2"/>
+          </SubslotList>
+		  <IOConfigData MaxInputLength="1024" MaxOutputLength="1024"/>
+         <UseableModules>
+            <ModuleItemRef ModuleItemTarget="UMC100" AllowedInSlots="1 2 3 4"/>
+            <ModuleItemRef ModuleItemTarget="UMC100.3" AllowedInSlots="1 2 3 4"/>
+            <ModuleItemRef ModuleItemTarget="EmptySlot" AllowedInSlots="1 2 3 4"/>
+          </UseableModules>
+
+         <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="GENERAL_DATA_FBP_V2_0" SubmoduleIdentNumber="0x00001001" Writeable_IM_Records="1 2 3 4" FixedInSubslots="1" MayIssueProcessAlarm="true">
+              <IOData/>
+              <RecordDataList>
+			    <ParameterRecordDataItem Index="1" Length="3">
+				  <Name TextId="FBPPort1_Record"/>
+				  <Ref ValueItemTarget="ENUM_SPARE_PORT" ByteOffset="0" DataType="Unsigned8" DefaultValue="1" AllowedValues="0..1" Changeable="true" TextId="SparePort"/>
+				  <Ref ValueItemTarget="ENUM_WRITIN_PARAM_PORT" ByteOffset="1" DataType="Unsigned8" DefaultValue="1" AllowedValues="0..1" Changeable="true" TextId="WritingParamTypeText"/>
+				  <Ref ByteOffset="2" DataType="Unsigned8" DefaultValue="1" AllowedValues="0..255" Changeable="true" TextId="ExpectedAddress"/>
+                </ParameterRecordDataItem>
+				<ParameterRecordDataItem Index="2" Length="3">
+				  <Name TextId="FBPPort2_Record"/>
+				  <Ref ValueItemTarget="ENUM_SPARE_PORT" ByteOffset="0" DataType="Unsigned8" DefaultValue="1" AllowedValues="0..1" Changeable="true" TextId="SparePort"/>
+				  <Ref ValueItemTarget="ENUM_WRITIN_PARAM_PORT" ByteOffset="1" DataType="Unsigned8" DefaultValue="1" AllowedValues="0..1" Changeable="true" TextId="WritingParamTypeText"/>
+				  <Ref ByteOffset="2" DataType="Unsigned8" DefaultValue="2" AllowedValues="0..255" Changeable="true" TextId="ExpectedAddress"/>
+                </ParameterRecordDataItem>
+				<ParameterRecordDataItem Index="3" Length="3">
+				  <Name TextId="FBPPort3_Record"/>
+				  <Ref ValueItemTarget="ENUM_SPARE_PORT" ByteOffset="0" DataType="Unsigned8" DefaultValue="1" AllowedValues="0..1" Changeable="true" TextId="SparePort"/>
+				  <Ref ValueItemTarget="ENUM_WRITIN_PARAM_PORT" ByteOffset="1" DataType="Unsigned8" DefaultValue="1" AllowedValues="0..1" Changeable="true" TextId="WritingParamTypeText"/>
+				  <Ref ByteOffset="2" DataType="Unsigned8" DefaultValue="3" AllowedValues="0..255" Changeable="true" TextId="ExpectedAddress"/>
+                </ParameterRecordDataItem>
+				<ParameterRecordDataItem Index="4" Length="3">
+				  <Name TextId="FBPPort4_Record"/>
+				  <Ref ValueItemTarget="ENUM_SPARE_PORT" ByteOffset="0" DataType="Unsigned8" DefaultValue="1" AllowedValues="0..1" Changeable="true" TextId="SparePort"/>
+				  <Ref ValueItemTarget="ENUM_WRITIN_PARAM_PORT" ByteOffset="1" DataType="Unsigned8" DefaultValue="1" AllowedValues="0..1" Changeable="true" TextId="WritingParamTypeText"/>
+				  <Ref ByteOffset="2" DataType="Unsigned8" DefaultValue="4" AllowedValues="0..255" Changeable="true" TextId="ExpectedAddress"/>
+                </ParameterRecordDataItem>
+				<ParameterRecordDataItem Index="5" Length="4">
+                  <Name TextId="SNTPServerIP"/>
+				  <Ref ByteOffset="0" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..255" Changeable="true" TextId="SNTPServerIPOctet1"/>
+				  <Ref ByteOffset="1" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..255" Changeable="true" TextId="SNTPServerIPOctet2"/>
+				  <Ref ByteOffset="2" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..255" Changeable="true" TextId="SNTPServerIPOctet3"/>
+				  <Ref ByteOffset="3" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..255" Changeable="true" TextId="SNTPServerIPOctet4"/>
+                </ParameterRecordDataItem>
+				<ParameterRecordDataItem Index="6" Length="3">
+                  <Name TextId="ConfigurationsFlagsText"/>
+				  <Ref ValueItemTarget="ENUM_DIAG_TYPE" ByteOffset="0" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..1" Changeable="true" TextId="DiagnosisModelText"/>
+				  <Ref ByteOffset="1" DataType="Unsigned16" DefaultValue="0" AllowedValues="0..10000" Changeable="true" TextId="CommKeepAliveTimeText"/>
+                </ParameterRecordDataItem>
+              </RecordDataList>
+              <ModuleInfo CategoryRef="GENERAL_DATA_FBP">
+                <Name TextId="GENERAL_DATA_FBP_1"/>
+                <InfoText TextId="GENERAL_DATA_FBP_INFO"/>
+              </ModuleInfo>
+            </VirtualSubmoduleItem>
+         </VirtualSubmoduleList>
+
+          <SystemDefinedSubmoduleList>
+            <!--InterfaceSubmoduleItem DelayMeasurementSupported="true" ID="IDS_DAP_PNQ22_V2_0I" SupportedRT_Classes="RT_CLASS_1" SupportedProtocols="SNMP;LLDP" NetworkComponentDiagnosisSupported="true" SubslotNumber="32768" TextId="PN-IO" SubmoduleIdentNumber="0x00000002" PTP_BoundarySupported="true" DCP_BoundarySupported="true">
+		<ApplicationRelations StartupMode="Advanced;Legacy">
+                <TimingProperties SendClock="32 64 128" ReductionRatio="1 2 4 8 16 32 64 128 256 512"/>
+              </ApplicationRelations>
+              <MediaRedundancy SupportedRole="Client"/>
+            </InterfaceSubmoduleItem>
+            <PortSubmoduleItem CheckMAUTypeSupported="true" ID="IDS_DAP_PNQ22_V2_0P1" IsDefaultRingport="true" SubslotNumber="32769" MAUType="100BASETXFD" MaxPortTxDelay="92" MaxPortRxDelay="308" PortDeactivationSupported="true" TextId="Port1" SubmoduleIdentNumber="0x00000003" LinkStateDiagnosisCapability="Up+Down">
+			  <MAUTypeList>
+				<MAUTypeItem Value="16"/>
+			  </MAUTypeList>
+			</PortSubmoduleItem>
+            <PortSubmoduleItem CheckMAUTypeSupported="true" ID="IDS_DAP_PNQ22_V2_0P2" IsDefaultRingport="true" SubslotNumber="32770" MAUType="100BASETXFD" MaxPortTxDelay="92" MaxPortRxDelay="308" PortDeactivationSupported="true" TextId="Port2" SubmoduleIdentNumber="0x00000003" LinkStateDiagnosisCapability="Up+Down">
+			  <MAUTypeList>
+			    <MAUTypeItem Value="16"/>
+			  </MAUTypeList>
+			</PortSubmoduleItem-->
+          </SystemDefinedSubmoduleList>
+
+		  <Graphics>
+            <GraphicItemRef GraphicItemTarget="1" Type="DeviceSymbol"/>
+            <GraphicItemRef GraphicItemTarget="4" Type="DeviceIcon"/>
+          </Graphics>
+
+        </DeviceAccessPointItem>
+      </DeviceAccessPointList>
+
+	<!-- List and description of modules -->
+	<ModuleList>
+        <ModuleItem ID="UMC100" ModuleIdentNumber="0x00002BC0">
+          <ModuleInfo CategoryRef="UMC100">
+            <Name TextId="UMC100"/>
+            <InfoText TextId="UMC100_INFO"/>
+          </ModuleInfo>
+
+          <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="UMC100" SubmoduleIdentNumber="0x00000109" FixedInSubslots="1" MayIssueProcessAlarm="true">
+              <IOData>
+                <Input Consistency="All items consistency">
+                  <DataItem DataType="Unsigned8" TextId="UMC100_Monitoring_Byte_0"/>
+                  <DataItem DataType="Unsigned8" TextId="UMC100_Monitoring_Byte_1"/>
+                  <DataItem DataType="Unsigned16" TextId="UMC100_Monitoring_Word_0"/>
+                  <DataItem DataType="Unsigned16" TextId="UMC100_Monitoring_Word_1"/>
+                  <DataItem DataType="Unsigned16" TextId="UMC100_Monitoring_Word_2"/>
+                  <DataItem DataType="Unsigned16" TextId="UMC100_Monitoring_Word_3"/>
+                  <DataItem DataType="Unsigned16" TextId="UMC100_Monitoring_Word_4"/>
+                  <DataItem DataType="Unsigned16" TextId="UMC100_Monitoring_Word_5"/>
+                  <DataItem DataType="Unsigned16" TextId="UMC100_Monitoring_Word_6"/>
+                </Input>
+                <Output Consistency="All items consistency">
+                  <DataItem DataType="Unsigned8" TextId="UMC100_Command_Byte_0"/>
+                  <DataItem DataType="Unsigned8" TextId="UMC100_Command_Byte_1"/>
+                  <DataItem DataType="Unsigned8" TextId="UMC100_Command_Byte_2"/>
+                  <DataItem DataType="Unsigned8" TextId="UMC100_Command_Byte_3"/>
+                  <DataItem DataType="Unsigned16" TextId="UMC100_Command_Word_0"/>
+                  <DataItem DataType="Unsigned16" TextId="UMC100_Command_Word_1"/>
+                  <DataItem DataType="Unsigned16" TextId="UMC100_Command_Word_2"/>
+                  <DataItem DataType="Unsigned16" TextId="UMC100_Command_Word_3"/>
+                </Output>
+              </IOData>
+
+              <RecordDataList>
+			    <ParameterRecordDataItem Index="0" Length="144">
+				  <Name TextId="UMC100_Record"/>
+					<Ref ByteOffset="0" DataType="Unsigned32" DefaultValue="50" AllowedValues="24..320000" Changeable="true" TextId="UMC100_SETTING_IE_1"/>
+					<Ref ByteOffset="4" DataType="Unsigned32" DefaultValue="50" AllowedValues="24..320000" Changeable="true" TextId="UMC100_SETTING_IE_2"/>
+					<Ref ByteOffset="8" DataType="Unsigned16" DefaultValue="600" AllowedValues="10..36000" Changeable="true" TextId="UMC100_YD_STARTING_TIME"/>
+					<Ref ByteOffset="10" DataType="Unsigned16" DefaultValue="100" AllowedValues="2..64000" Changeable="true" TextId="UMC100_CURRENT_FACTOR"/>
+					<Ref ByteOffset="12" DataType="Unsigned16" DefaultValue="120" AllowedValues="30..64000" Changeable="true" TextId="UMC100_COOLING_TIME"/>
+					<Ref ByteOffset="14" DataType="Unsigned8" DefaultValue="255" AllowedValues="20..255" Changeable="true" TextId="UMC100_Earth_Flt_Trip_Level"/>
+					<Ref ByteOffset="15" DataType="Unsigned8" DefaultValue="5" AllowedValues="0..255" Changeable="true" TextId="UMC100_Earth_Flt_Trip_Delay"/>
+					<Ref ValueItemTarget="ENUM_UMC100_LANGUAGE" ByteOffset="16" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..6" Changeable="true" TextId="UMC100_LANGUAGE"/>
+					<Ref ByteOffset="17" DataType="Unsigned8" DefaultValue="1" AllowedValues="1..255" Changeable="true" TextId="UMC100_REV_LOCK_OUT_TIME"/>
+					<Ref ValueItemTarget="ENUM_UMC100_FAULT_OUTPUT" ByteOffset="18" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..6" Changeable="true" TextId="UMC100_FAULT_OUTPUT"/>
+					<Ref ValueItemTarget="ENUM_UMC100_TRIP_CLASS" ByteOffset="19" DataType="Unsigned8" DefaultValue="1" AllowedValues="0..4" Changeable="true" TextId="UMC100_TRIP_CLASS"/>
+					<Ref ByteOffset="20" DataType="Unsigned8" DefaultValue="10" AllowedValues="0..20" Changeable="true" TextId="UMC100_LOW_CURR_WARN_LEVEL"/>
+					<Ref ByteOffset="21" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..20" Changeable="true" TextId="UMC100_LOW_CURR_TRIP_LEVEL"/>
+					<Ref ByteOffset="22" DataType="Unsigned8" DefaultValue="30" AllowedValues="20..160" Changeable="true" TextId="UMC100_HIGH_CURR_WARN_LEVEL"/>
+					<Ref ByteOffset="23" DataType="Unsigned8" DefaultValue="160" AllowedValues="20..160" Changeable="true" TextId="UMC100_HIGH_CURR_TRIP_LEVEL"/>
+					<Ref ByteOffset="24" DataType="Unsigned8" DefaultValue="160" AllowedValues="20..160" Changeable="true" TextId="UMC100_LOCKED_ROTOR_LEVEL"/>
+					<Ref ByteOffset="25" DataType="Unsigned8" DefaultValue="5" AllowedValues="0..255" Changeable="true" TextId="UMC100_LOCKED_ROTOR_DELAY"/>
+					<Ref ByteOffset="26" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..255" Changeable="true" TextId="UMC100_CUSTOM_APP_PARAMETER"/>
+					<Ref ValueItemTarget="ENUM_UMC100_MULTIF" ByteOffset="27" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..20" Changeable="true" TextId="UMC100_MULTIF_IN_0"/>
+					<Ref ValueItemTarget="ENUM_UMC100_MULTIF" ByteOffset="28" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..20" Changeable="true" TextId="UMC100_MULTIF_IN_1"/>
+					<Ref ValueItemTarget="ENUM_UMC100_MULTIF" ByteOffset="29" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..20" Changeable="true" TextId="UMC100_MULTIF_IN_2"/>
+					<Ref ByteOffset="30" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..255" Changeable="true" TextId="UMC100_MULTIF_IN_0_DELAY"/>
+					<Ref ByteOffset="31" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..255" Changeable="true" TextId="UMC100_MULTIF_IN_1_DELAY"/>
+					<Ref ByteOffset="32" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..255" Changeable="true" TextId="UMC100_MULTIF_IN_2_DELAY"/>
+					<Ref ValueItemTarget="ENUM_UMC100_CONTROL_FUNCTION" ByteOffset="33" DataType="Unsigned8" DefaultValue="3" AllowedValues="1 2 3 4 5 7 9 10 11 12" Changeable="true" TextId="UMC100_Control_Function"/>
+					<Ref ValueItemTarget="ENUM_UMC100_BUS_FAULT" ByteOffset="34" BitLength="4" DataType="BitArea" DefaultValue="0" AllowedValues="0 1 2 3" Changeable="true" TextId="UMC100_Busfault_Reaction"/>
+					<Ref ByteOffset="34" BitOffset="4" BitLength="4" DataType="BitArea" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ValueItemTarget="ENUM_UMC100_AUX_INP_REACTION" ByteOffset="35" DataType="BitArea" BitLength="4" DefaultValue="0" AllowedValues="0..8" Changeable="true" TextId="UMC100_AUX_INP_1_REACTION"/>
+					<Ref ValueItemTarget="ENUM_UMC100_AUX_INP_REACTION" ByteOffset="35" BitOffset="4" DataType="BitArea" BitLength="4" DefaultValue="0" AllowedValues="0..8" Changeable="true" TextId="UMC100_AUX_INP_2_REACTION"/>
+					<Ref ValueItemTarget="ENUM_UMC100_AUX_INP_REACTION" ByteOffset="36" DataType="BitArea" BitLength="4" DefaultValue="0" AllowedValues="0..8" Changeable="true" TextId="UMC100_AUX_INP_3_REACTION"/>
+					<Ref ValueItemTarget="ENUM_UMC100_AUX_INP_REACTION" ByteOffset="36" BitOffset="4" DataType="BitArea" BitLength="4" DefaultValue="0" AllowedValues="0..8" Changeable="true" TextId="UMC100_AUX_INP_4_REACTION"/>
+					<Ref ValueItemTarget="ENUM_UMC100_AUX_INP_REACTION" ByteOffset="37" DataType="BitArea" BitLength="4" DefaultValue="0" AllowedValues="0..8" Changeable="true" TextId="UMC100_AUX_INP_5_REACTION"/>
+					<Ref ValueItemTarget="ENUM_UMC100_AUX_INP_REACTION" ByteOffset="37" BitOffset="4" DataType="BitArea" BitLength="4" DefaultValue="0" AllowedValues="0..8" Changeable="true" TextId="UMC100_AUX_INP_6_REACTION"/>
+					<Ref ValueItemTarget="DISABLE_TRIP_WARNING_Switch" ByteOffset="38" BitLength="2" DataType="BitArea" DefaultValue="0" AllowedValues="0 1 2" Changeable="true" TextId="UMC100_PTC_Thermistor"/>
+					<Ref ValueItemTarget="ENUM_UMC100_CHECK_BACK" ByteOffset="38" BitOffset="2" BitLength="2" DataType="BitArea" DefaultValue="2" AllowedValues="1..3" Changeable="true" TextId="UMC100_CHECK_BACK"/>
+					<Ref ValueItemTarget="ENUM_UMC100_CHECK_PHASE_SEQUENCE" ByteOffset="38" BitOffset="4" DataType="BitArea" BitLength="2" DefaultValue="0" AllowedValues="0..2" Changeable="true" TextId="UMC100_CHECK_PHASE_SEQUENCE"/>
+					<Ref ByteOffset="38" BitOffset="6" BitLength="2" DataType="BitArea" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ValueItemTarget="ENUM_Switch" ByteOffset="39" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_Fault_Auto_Reset"/>
+					<Ref ValueItemTarget="ENUM_Switch" ByteOffset="39" BitOffset="1" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_Emergency_Start"/>
+					<Ref ValueItemTarget="ENUM_UMC100_EARTH_FAULT" ByteOffset="39" BitOffset="2" DataType="Bit" DefaultValue="1" AllowedValues="0 1" Changeable="true" TextId="UMC100_Earth_Flt_Detection"/>
+					<Ref ValueItemTarget="ENUM_Switch" ByteOffset="39" BitOffset="3" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_Address_Check"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="39" BitOffset="4" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_Enable_Custom_Logic"/>
+					<Ref ValueItemTarget="ENUM_UMC100_YD_CHANGE_OVER_MODE" ByteOffset="39" BitOffset="5" DataType="Bit" DefaultValue="1" AllowedValues="0 1" Changeable="true" TextId="UMC100_YD_CHANGE_OVER_MODE"/>
+					<Ref ValueItemTarget="ENUM_Switch" ByteOffset="39" BitOffset="6" DataType="Bit" DefaultValue="1" AllowedValues="0 1" Changeable="true" TextId="UMC100_PHASE_LOSS_PROT"/>
+					<Ref ByteOffset="39" BitOffset="7" DataType="Bit" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ValueItemTarget="ENUM_Switch" ByteOffset="40" BitOffset="0" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_DX1xx_Enabled"/>
+					<Ref ByteOffset="40" BitOffset="1" DataType="Bit" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="40" BitOffset="2" DataType="Bit" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ValueItemTarget="ENUM_Switch" ByteOffset="40" BitOffset="3" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_VI15x_Enabled"/>
+					<Ref ByteOffset="40" BitOffset="4" DataType="Bit" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="40" BitOffset="5" DataType="Bit" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="40" BitOffset="6" DataType="Bit" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ValueItemTarget="ERROR_WARNING_Switch" ByteOffset="40" BitOffset="7" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_Missing_Module_React"/>
+					<Ref ValueItemTarget="ENUM_UMC100_AUX_INP_ACK_MODE" ByteOffset="41" BitOffset="0" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_AUX_INP_1_ACK_MODE"/>
+					<Ref ValueItemTarget="ENUM_UMC100_AUX_INP_ACK_MODE" ByteOffset="41" BitOffset="1" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_AUX_INP_2_ACK_MODE"/>
+					<Ref ValueItemTarget="ENUM_UMC100_AUX_INP_ACK_MODE" ByteOffset="41" BitOffset="2" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_AUX_INP_3_ACK_MODE"/>
+					<Ref ValueItemTarget="ENUM_UMC100_AUX_INP_ACK_MODE" ByteOffset="41" BitOffset="3" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_AUX_INP_4_ACK_MODE"/>
+					<Ref ValueItemTarget="ENUM_UMC100_AUX_INP_ACK_MODE" ByteOffset="41" BitOffset="4" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_AUX_INP_5_ACK_MODE"/>
+					<Ref ValueItemTarget="ENUM_UMC100_AUX_INP_ACK_MODE" ByteOffset="41" BitOffset="5" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_AUX_INP_6_ACK_MODE"/>
+					<Ref ByteOffset="41" BitOffset="6" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ValueItemTarget="ENUM_UMC100_COOLING_MODE" ByteOffset="41" BitOffset="7" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_COOLING_MODE"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="42" BitOffset="0" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_INVERT_DI_START_INP."/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="42" BitOffset="1" DataType="Bit" DefaultValue="1" AllowedValues="0 1" Changeable="true" TextId="UMC100_INVERT_DI_STOP_INP."/>
+					<Ref ByteOffset="42" BitOffset="2" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="42" BitOffset="3" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="42" BitOffset="4" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_INCHING_DI_START_INP"/>
+					<Ref ByteOffset="42" BitOffset="5" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="42" BitOffset="6" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="42" BitOffset="7" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="43" BitOffset="0" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_LOC_1_START_BUS_CYC"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="43" BitOffset="1" DataType="Bit" DefaultValue="1" AllowedValues="0 1" Changeable="true" TextId="UMC100_LOC_1_STOP_BUS_CYC"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="43" BitOffset="2" DataType="Bit" DefaultValue="1" AllowedValues="0 1" Changeable="true" TextId="UMC100_LOC_1_START_DI"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="43" BitOffset="3" DataType="Bit" DefaultValue="1" AllowedValues="0 1" Changeable="true" TextId="UMC100_LOC_1_STOP_DI"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="43" BitOffset="4" DataType="Bit" DefaultValue="1" AllowedValues="0 1" Changeable="true" TextId="UMC100_LOC_1_START_LCD"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="43" BitOffset="5" DataType="Bit" DefaultValue="1" AllowedValues="0 1" Changeable="true" TextId="UMC100_LOC_1_STOP_LCD"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="43" BitOffset="6" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_LOC_1_START_BUS_ACYC"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="43" BitOffset="7" DataType="Bit" DefaultValue="1" AllowedValues="0 1" Changeable="true" TextId="UMC100_LOC_1_STOP_BUS_ACYC"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="44" BitOffset="0" DataType="Bit" DefaultValue="1" AllowedValues="0 1" Changeable="true" TextId="UMC100_AUTO_START_BUS_CYC"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="44" BitOffset="1" DataType="Bit" DefaultValue="1" AllowedValues="0 1" Changeable="true" TextId="UMC100_AUTO_STOP_BUS_CYC"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="44" BitOffset="2" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_AUTO_START_DI"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="44" BitOffset="3" DataType="Bit" DefaultValue="1" AllowedValues="0 1" Changeable="true" TextId="UMC100_AUTO_STOP_DI"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="44" BitOffset="4" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_AUTO_START_LCD"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="44" BitOffset="5" DataType="Bit" DefaultValue="1" AllowedValues="0 1" Changeable="true" TextId="UMC100_AUTO_STOP_LCD"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="44" BitOffset="6" DataType="Bit" DefaultValue="1" AllowedValues="0 1" Changeable="true" TextId="UMC100_AUTO_START_BUS_ACYC"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="44" BitOffset="7" DataType="Bit" DefaultValue="1" AllowedValues="0 1" Changeable="true" TextId="UMC100_AUTO_STOP_BUS_ACYC"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="45" BitOffset="0" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_LOC_2_START_BUS_CYC"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="45" BitOffset="1" DataType="Bit" DefaultValue="1" AllowedValues="0 1" Changeable="true" TextId="UMC100_LOC_2_STOP_BUS_CYC"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="45" BitOffset="2" DataType="Bit" DefaultValue="1" AllowedValues="0 1" Changeable="true" TextId="UMC100_LOC_2_START_DI"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="45" BitOffset="3" DataType="Bit" DefaultValue="1" AllowedValues="0 1" Changeable="true" TextId="UMC100_LOC_2_STOP_DI"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="45" BitOffset="4" DataType="Bit" DefaultValue="1" AllowedValues="0 1" Changeable="true" TextId="UMC100_LOC_2_START_LCD"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="45" BitOffset="5" DataType="Bit" DefaultValue="1" AllowedValues="0 1" Changeable="true" TextId="UMC100_LOC_2_STOP_LCD"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="45" BitOffset="6" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_LOC_2_START_BUS_ACYC"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="45" BitOffset="7" DataType="Bit" DefaultValue="1" AllowedValues="0 1" Changeable="true" TextId="UMC100_LOC_2_STOP_BUS_ACYC"/>
+					<Ref ByteOffset="46" BitOffset="0" DataType="Bit" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="46" BitOffset="1" DataType="Bit" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="46" BitOffset="2" DataType="Bit" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="46" BitOffset="3" DataType="Bit" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="46" BitOffset="4" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_MULTIF_IN_0_AUTORESET"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="46" BitOffset="5" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_MULTIF_IN_1_AUTORESET"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="46" BitOffset="6" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_MULTIF_IN_2_AUTORESET"/>
+					<Ref ByteOffset="46" BitOffset="7" DataType="Bit" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="47" BitOffset="0" DataType="Bit" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="47" BitOffset="1" DataType="Bit" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="47" BitOffset="2" DataType="Bit" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="47" BitOffset="3" DataType="Bit" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="47" BitOffset="4" DataType="Bit" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="47" BitOffset="5" DataType="Bit" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="47" BitOffset="6" DataType="Bit" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="47" BitOffset="7" DataType="Bit" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="48" DataType="Unsigned8" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="49" DataType="Unsigned8" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="50" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..255" Changeable="true" TextId="UMC100_AUX_INP_1_DELAY"/>
+					<Ref ByteOffset="51" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..255" Changeable="true" TextId="UMC100_AUX_INP_2_DELAY"/>
+					<Ref ByteOffset="52" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..255" Changeable="true" TextId="UMC100_AUX_INP_3_DELAY"/>
+					<Ref ByteOffset="53" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..255" Changeable="true" TextId="UMC100_AUX_INP_4_DELAY"/>
+					<Ref ByteOffset="54" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..255" Changeable="true" TextId="UMC100_AUX_INP_5_DELAY"/>
+					<Ref ByteOffset="55" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..255" Changeable="true" TextId="UMC100_AUX_INP_6_DELAY"/>
+					<Ref ByteOffset="56" DataType="Unsigned8" DefaultValue="5" AllowedValues="1..255" Changeable="true" TextId="UMC100_CHECK_BACK_TIME"/>
+					<Ref ByteOffset="57" DataType="Unsigned8" DefaultValue="5" AllowedValues="0..255" Changeable="true" TextId="UMC100_LOW_CURR_WARN_DELAY"/>
+					<Ref ByteOffset="58" DataType="Unsigned8" DefaultValue="5" AllowedValues="0..255" Changeable="true" TextId="UMC100_LOW_CURR_TRIP_DELAY"/>
+					<Ref ByteOffset="59" DataType="Unsigned8" DefaultValue="5" AllowedValues="0..255" Changeable="true" TextId="UMC100_HIGH_CURR_TRIP_DELAY"/>
+					<Ref ByteOffset="60" DataType="Unsigned8" DefaultValue="5" AllowedValues="0..255" Changeable="true" TextId="UMC100_HIGH_CURR_WARN_DELAY"/>
+					<Ref ByteOffset="61" DataType="Unsigned8" DefaultValue="50" AllowedValues="0..100" Changeable="true" TextId="UMC100_CURR_IMB_TRIP_LEVEL"/>
+					<Ref ByteOffset="62" DataType="Unsigned8" DefaultValue="100" AllowedValues="0..100" Changeable="true" TextId="UMC100_CURR_IMB_WARN_LEVEL"/>
+					<Ref ValueItemTarget="ENUM_UMC100_PHASE_REVERSAL" ByteOffset="63" BitOffset="0" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_PHASE_REVERSAL"/>
+					<Ref ByteOffset="63" BitOffset="1" DataType="BitArea" BitLength="7" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="64" DataType="Unsigned8" DefaultValue="30" AllowedValues="10..100" Changeable="true" TextId="UMC100_RESTART_LEVEL"/>
+					<Ref ValueItemTarget="ENUM_UMC100_USER_DISPLAY_TYPE_1" ByteOffset="65" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..7" Changeable="true" TextId="UMC100_USER_DISPLAY_1"/>
+					<Ref ValueItemTarget="ENUM_UMC100_USER_DISPLAY_TYPE_1" ByteOffset="66" DataType="Unsigned8" DefaultValue="6" AllowedValues="0..7" Changeable="true" TextId="UMC100_USER_DISPLAY_2"/>
+					<Ref ValueItemTarget="ENUM_UMC100_USER_DISPLAY_TYPE_1" ByteOffset="67" DataType="Unsigned8" DefaultValue="7" AllowedValues="0..7" Changeable="true" TextId="UMC100_USER_DISPLAY_3"/>
+					<Ref ValueItemTarget="ENUM_UMC100_USER_DISPLAY_TYPE_2" ByteOffset="68" DataType="Unsigned8" DefaultValue="4" AllowedValues="0..6" Changeable="true" TextId="UMC100_USER_DISPLAY_4"/>
+					<Ref ValueItemTarget="ENUM_UMC100_USER_DISPLAY_TYPE_2" ByteOffset="69" DataType="Unsigned8" DefaultValue="5" AllowedValues="0..6" Changeable="true" TextId="UMC100_USER_DISPLAY_5"/>
+					<Ref ByteOffset="70" DataType="Unsigned8" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="71" DataType="Unsigned8" DefaultValue="5" AllowedValues="1..255" Changeable="true" TextId="UMC100_DIP_DURATION"/>
+					<Ref ByteOffset="72" DataType="Unsigned8" DefaultValue="1" AllowedValues="1..10" Changeable="true" TextId="UMC100_DIP_AUTORESTART_WINDOW"/>
+					<Ref ByteOffset="73" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..255" Changeable="true" TextId="UMC100_DIP_AUTORESTART_DELAY"/>
+					<Ref ByteOffset="74" DataType="Unsigned8" DefaultValue="100" AllowedValues="20..100" Changeable="true" TextId="UMC100_THERMAL_LOAD_WARNLEV"/>
+					<Ref ByteOffset="75" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..32" Changeable="true" TextId="UMC100_NUM_STARTS_ALLOWED"/>
+					<Ref ByteOffset="76" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..255" Changeable="true" TextId="UMC100_NUM_STARTS_WINDOW"/>
+					<Ref ByteOffset="77" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..255" Changeable="true" TextId="UMC100_NUM_STARTS_PAUSE"/>
+					<Ref ByteOffset="78" DataType="Unsigned8" DefaultValue="255" AllowedValues="20..255" Changeable="true" TextId="UMC100_Earth_Flt_Warn_Level"/>
+					<Ref ByteOffset="79" DataType="Unsigned8" DefaultValue="5" AllowedValues="0..255" Changeable="true" TextId="UMC100_Earth_Flt_Warn_Delay"/>
+					<Ref ByteOffset="80" DataType="Unsigned8" DefaultValue="90" AllowedValues="50..115" Changeable="true" TextId="UMC100_DIP_RESTART_LEVEL"/>
+					<Ref ByteOffset="81" DataType="Unsigned8" DefaultValue="70" AllowedValues="50..115" Changeable="true" TextId="UMC100_DIP_LEVEL"/>
+					<Ref ByteOffset="82" DataType="Unsigned8" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="83" DataType="Unsigned8" DefaultValue="20" AllowedValues="3..200" Changeable="true" TextId="UMC100_DX1XX_DI_DELAY"/>
+					<Ref ByteOffset="84" DataType="Unsigned8" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="85" DataType="Unsigned8" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="86" DataType="Unsigned8" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="87" DataType="Unsigned8" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="88" DataType="Unsigned8" DefaultValue="70" AllowedValues="70..100" Changeable="true" TextId="UMC100_U_LOW_TRIP_LEVEL"/>
+					<Ref ByteOffset="89" DataType="Unsigned8" DefaultValue="30" AllowedValues="0..255" Changeable="true" TextId="UMC100_U_LOW_TRIP_DELAY"/>
+					<Ref ByteOffset="90" DataType="Unsigned8" DefaultValue="70" AllowedValues="70..100" Changeable="true" TextId="UMC100_U_LOW_WARN_LEVEL"/>
+					<Ref ByteOffset="91" DataType="Unsigned8" DefaultValue="30" AllowedValues="0..255" Changeable="true" TextId="UMC100_U_LOW_WARN_DELAY"/>
+					<Ref ByteOffset="92" DataType="Unsigned8" DefaultValue="116" AllowedValues="100..116" Changeable="true" TextId="UMC100_U_HIGH_TRIP_LEVEL"/>
+					<Ref ByteOffset="93" DataType="Unsigned8" DefaultValue="30" AllowedValues="0..255" Changeable="true" TextId="UMC100_U_HIGH_TRIP_DELAY"/>
+					<Ref ByteOffset="94" DataType="Unsigned8" DefaultValue="116" AllowedValues="100..116" Changeable="true" TextId="UMC100_U_HIGH_WARN_LEVEL"/>
+					<Ref ByteOffset="95" DataType="Unsigned8" DefaultValue="30" AllowedValues="0..255" Changeable="true" TextId="UMC100_U_HIGH_WARN_DELAY"/>
+					<Ref ByteOffset="96" DataType="Unsigned8" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="97" DataType="Unsigned8" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="98" DataType="Unsigned8" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="99" DataType="Unsigned8" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="100" DataType="Unsigned8" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="101" DataType="Unsigned8" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="102" DataType="Unsigned8" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="103" DataType="Unsigned8" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="104" DataType="Unsigned8" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="105" DataType="Unsigned8" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="106" DataType="Unsigned8" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="107" DataType="Unsigned8" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="108" DataType="Unsigned16" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="110" DataType="Unsigned16" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ValueItemTarget="ENUM_UMC100_ANALOG_TYPE" ByteOffset="112" BitOffset="0" DataType="BitArea" BitLength="2" DefaultValue="0" AllowedValues="0..3" Changeable="true" TextId="UMC100_DX1XX_AO_TYPE"/>
+					<Ref ValueItemTarget="ENUM_UMC100_ANALOG_ERR_REACTION" ByteOffset="112" BitOffset="2" DataType="BitArea" BitLength="2" DefaultValue="0" AllowedValues="0..2" Changeable="true" TextId="UMC100_DX1XX_AO_ERR_REAC"/>
+					<Ref ByteOffset="112" BitOffset="4" DataType="BitArea" BitLength="2" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="112" BitOffset="6" DataType="BitArea" BitLength="2" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="113" BitOffset="0" DataType="BitArea" BitLength="2" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="113" BitOffset="2" DataType="BitArea" BitLength="2" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="113" BitOffset="4" DataType="BitArea" BitLength="2" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="113" BitOffset="6" DataType="BitArea" BitLength="2" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="114" BitOffset="0" DataType="BitArea" BitLength="2" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="114" BitOffset="2" DataType="BitArea" BitLength="2" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="114" BitOffset="4" DataType="BitArea" BitLength="2" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="114" BitOffset="6" DataType="BitArea" BitLength="2" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="115" BitOffset="0" DataType="BitArea" BitLength="2" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="115" BitOffset="2" DataType="BitArea" BitLength="2" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="115" BitOffset="4" DataType="BitArea" BitLength="2" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="115" BitOffset="6" DataType="BitArea" BitLength="2" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="116" BitOffset="0" DataType="BitArea" BitLength="2" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ValueItemTarget="ENUM_UMC100_ANALOG_ERR_REACTION" ByteOffset="116" BitOffset="2" DataType="BitArea" BitLength="2" DefaultValue="0" AllowedValues="0..2" Changeable="true" TextId="UMC100_NUM_STARTS_OVERRUN"/>
+					<Ref ValueItemTarget="ENUM_UMC100_ANALOG_ERR_REACTION" ByteOffset="116" BitOffset="4" DataType="BitArea" BitLength="2" DefaultValue="0" AllowedValues="0..2" Changeable="true" TextId="UMC100_NUM_STARTS_PREWARN"/>
+					<Ref ValueItemTarget="ENUM_UMC100_POWER_SCALE_FACTOR" ByteOffset="116" BitOffset="6" DataType="BitArea" BitLength="2" DefaultValue="1" AllowedValues="0..3" Changeable="true" TextId="UMC100_POWER_SCALE_FACTOR"/>
+					<Ref ValueItemTarget="ENUM_Switch" ByteOffset="117" BitOffset="0" DataType="Bit" DefaultValue="1" AllowedValues="0 1" Changeable="true" TextId="UMC100_BACKLIGHT"/>
+					<Ref ValueItemTarget="ENUM_UMC100_PASSWORD_PROTECTION" ByteOffset="117" BitOffset="1" DataType="BitArea" BitLength="2" DefaultValue="0" AllowedValues="0..2" Changeable="true" TextId="UMC100_PASSWORD_PROTECTION"/>
+					<Ref ValueItemTarget="ENUM_UMC100_ENABLE_VOLTAGE_DIP" ByteOffset="117" BitOffset="3" DataType="BitArea" BitLength="2" DefaultValue="0" AllowedValues="0..2" Changeable="true" TextId="UMC100_DIP_ENABLE"/>
+					<Ref ValueItemTarget="ENUM_Switch" ByteOffset="117" BitOffset="5" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_DIP_AUTORESTART_ENABLE"/>
+					<Ref ByteOffset="117" BitOffset="6" DataType="Bit" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="117" BitOffset="7" DataType="Bit" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="118" DataType="Unsigned16" DefaultValue="400" AllowedValues="150..690" Changeable="true" TextId="UMC100_NOMINAL_LINE_VOLTAGE"/>
+					<Ref ByteOffset="120" DataType="Unsigned8" DefaultValue="30" AllowedValues="30..100" Changeable="true" TextId="UMC100_PWRFACTOR_TRIP_LEVEL"/>
+					<Ref ByteOffset="121" DataType="Unsigned8" DefaultValue="30" AllowedValues="0..255" Changeable="true" TextId="UMC100_PWRFACTOR_TRIP_DELAY"/>
+					<Ref ByteOffset="122" DataType="Unsigned8" DefaultValue="30" AllowedValues="30..100" Changeable="true" TextId="UMC100_PWRFACTOR_WARN_LEVEL"/>
+					<Ref ByteOffset="123" DataType="Unsigned8" DefaultValue="30" AllowedValues="0..255" Changeable="true" TextId="UMC100_PWRFACTOR_WARN_DELAY"/>
+					<Ref ByteOffset="124" DataType="Unsigned8" DefaultValue="200" AllowedValues="2..200" Changeable="true" TextId="UMC100_U_IMB._TRIP_LEVEL"/>
+					<Ref ByteOffset="125" DataType="Unsigned8" DefaultValue="10" AllowedValues="0..255" Changeable="true" TextId="UMC100_U_IMB._TRIP_DELAY"/>
+					<Ref ByteOffset="126" DataType="Unsigned8" DefaultValue="200" AllowedValues="2..200" Changeable="true" TextId="UMC100_U_IMB._WARN_LEVEL"/>
+					<Ref ByteOffset="127" DataType="Unsigned8" DefaultValue="10" AllowedValues="0..255" Changeable="true" TextId="UMC100_U_IMB._WARN_DELAY"/>
+					<Ref ByteOffset="128" DataType="Unsigned8" DefaultValue="20" AllowedValues="20..100" Changeable="true" TextId="UMC100_P_LOW_TRIP_LEVEL"/>
+					<Ref ByteOffset="129" DataType="Unsigned8" DefaultValue="5" AllowedValues="0..255" Changeable="true" TextId="UMC100_P_LOW_TRIP_DELAY"/>
+					<Ref ByteOffset="130" DataType="Unsigned8" DefaultValue="20" AllowedValues="20..100" Changeable="true" TextId="UMC100_P_LOW_WARN_LEVEL"/>
+					<Ref ByteOffset="131" DataType="Unsigned8" DefaultValue="5" AllowedValues="0..255" Changeable="true" TextId="UMC100_P_LOW_WARN_DELAY"/>
+					<Ref ByteOffset="132" DataType="Unsigned8" DefaultValue="200" AllowedValues="20..200" Changeable="true" TextId="UMC100_P_HIGH_TRIP_LEVEL"/>
+					<Ref ByteOffset="133" DataType="Unsigned8" DefaultValue="10" AllowedValues="0..255" Changeable="true" TextId="UMC100_P_HIGH_TRIP_DELAY"/>
+					<Ref ByteOffset="134" DataType="Unsigned8" DefaultValue="200" AllowedValues="20..200" Changeable="true" TextId="UMC100_P_HIGH_WARN_LEVEL"/>
+					<Ref ByteOffset="135" DataType="Unsigned8" DefaultValue="10" AllowedValues="0..255" Changeable="true" TextId="UMC100_P_HIGH_WARN_DELAY"/>
+					<Ref ByteOffset="136" DataType="Unsigned8" DefaultValue="100" AllowedValues="1..100" Changeable="true" TextId="UMC100_NOMINAL_POWER_FACTOR"/>
+					<Ref ByteOffset="137" DataType="Unsigned8" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="138" DataType="Unsigned8" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="139" DataType="Unsigned8" DefaultValue="10" AllowedValues="3..10" Changeable="true" TextId="UMC100_THD_WARNING_LEVEL"/>
+					<Ref ByteOffset="140" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..255" Changeable="true" TextId="UMC100_LOAD_STARTUP_DELAY"/>
+					<Ref ByteOffset="141" DataType="Unsigned8" DefaultValue="5" AllowedValues="0..255" Changeable="true" TextId="UMC100_THD_WARNING_DELAY"/>
+					<Ref ByteOffset="142" DataType="Unsigned8" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="143" DataType="Unsigned8" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+                </ParameterRecordDataItem>
+              </RecordDataList>
+              <ModuleInfo CategoryRef="Data">
+                <Name TextId="UMC100_DATA"/>
+                <InfoText TextId="UMC100"/>
+              </ModuleInfo>
+            </VirtualSubmoduleItem>
+          </VirtualSubmoduleList>
+
+		  <Graphics>
+		    <GraphicItemRef GraphicItemTarget="2" Type="DeviceSymbol"/>
+            <GraphicItemRef GraphicItemTarget="5" Type="DeviceIcon"/>
+          </Graphics>
+
+        </ModuleItem>
+        <ModuleItem ID="UMC100.3" ModuleIdentNumber="0x00002BC1">
+          <ModuleInfo CategoryRef="UMC100.3">
+            <Name TextId="UMC100.3"/>
+            <InfoText TextId="UMC100.3_INFO"/>
+          </ModuleInfo>
+
+          <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="UMC100.3" SubmoduleIdentNumber="0x00000109" FixedInSubslots="1" MayIssueProcessAlarm="true">
+              <IOData>
+                <Input Consistency="All items consistency">
+                  <DataItem DataType="Unsigned8" TextId="UMC100_Monitoring_Byte_0"/>
+                  <DataItem DataType="Unsigned8" TextId="UMC100_Monitoring_Byte_1"/>
+                  <DataItem DataType="Unsigned16" TextId="UMC100_Monitoring_Word_0"/>
+                  <DataItem DataType="Unsigned16" TextId="UMC100_Monitoring_Word_1"/>
+                  <DataItem DataType="Unsigned16" TextId="UMC100_Monitoring_Word_2"/>
+                  <DataItem DataType="Unsigned16" TextId="UMC100_Monitoring_Word_3"/>
+                  <DataItem DataType="Unsigned16" TextId="UMC100_Monitoring_Word_4"/>
+                  <DataItem DataType="Unsigned16" TextId="UMC100_Monitoring_Word_5"/>
+                  <DataItem DataType="Unsigned16" TextId="UMC100_Monitoring_Word_6"/>
+                </Input>
+                <Output Consistency="All items consistency">
+                  <DataItem DataType="Unsigned8" TextId="UMC100_Command_Byte_0"/>
+                  <DataItem DataType="Unsigned8" TextId="UMC100_Command_Byte_1"/>
+                  <DataItem DataType="Unsigned8" TextId="UMC100_Command_Byte_2"/>
+                  <DataItem DataType="Unsigned8" TextId="UMC100_Command_Byte_3"/>
+                  <DataItem DataType="Unsigned16" TextId="UMC100_Command_Word_0"/>
+                  <DataItem DataType="Unsigned16" TextId="UMC100_Command_Word_1"/>
+                  <DataItem DataType="Unsigned16" TextId="UMC100_Command_Word_2"/>
+                  <DataItem DataType="Unsigned16" TextId="UMC100_Command_Word_3"/>
+                </Output>
+              </IOData>
+
+              <RecordDataList>
+			    <ParameterRecordDataItem Index="0" Length="144">
+				  <Name TextId="UMC100_Record"/>
+					<Ref ByteOffset="0" DataType="Unsigned32" DefaultValue="50" AllowedValues="24..320000" Changeable="true" TextId="UMC100_SETTING_IE_1"/>
+					<Ref ByteOffset="4" DataType="Unsigned32" DefaultValue="50" AllowedValues="24..320000" Changeable="true" TextId="UMC100_SETTING_IE_2"/>
+					<Ref ByteOffset="8" DataType="Unsigned16" DefaultValue="600" AllowedValues="10..36000" Changeable="true" TextId="UMC100_YD_STARTING_TIME"/>
+					<Ref ByteOffset="10" DataType="Unsigned16" DefaultValue="100" AllowedValues="2..64000" Changeable="true" TextId="UMC100_CURRENT_FACTOR"/>
+					<Ref ByteOffset="12" DataType="Unsigned16" DefaultValue="120" AllowedValues="30..64000" Changeable="true" TextId="UMC100_COOLING_TIME"/>
+					<Ref ByteOffset="14" DataType="Unsigned8" DefaultValue="255" AllowedValues="20..255" Changeable="true" TextId="UMC100_Earth_Flt_Trip_Level"/>
+					<Ref ByteOffset="15" DataType="Unsigned8" DefaultValue="5" AllowedValues="0..255" Changeable="true" TextId="UMC100_Earth_Flt_Trip_Delay"/>
+					<Ref ValueItemTarget="ENUM_UMC100_3_LANGUAGE" ByteOffset="16" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..7" Changeable="true" TextId="UMC100_LANGUAGE"/>
+					<Ref ByteOffset="17" DataType="Unsigned8" DefaultValue="1" AllowedValues="1..255" Changeable="true" TextId="UMC100_REV_LOCK_OUT_TIME"/>
+					<Ref ValueItemTarget="ENUM_UMC100_FAULT_OUTPUT" ByteOffset="18" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..6" Changeable="true" TextId="UMC100_FAULT_OUTPUT"/>
+					<Ref ValueItemTarget="ENUM_UMC100_TRIP_CLASS" ByteOffset="19" DataType="Unsigned8" DefaultValue="1" AllowedValues="0..4" Changeable="true" TextId="UMC100_TRIP_CLASS"/>
+					<Ref ByteOffset="20" DataType="Unsigned8" DefaultValue="10" AllowedValues="0..20" Changeable="true" TextId="UMC100_LOW_CURR_WARN_LEVEL"/>
+					<Ref ByteOffset="21" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..20" Changeable="true" TextId="UMC100_LOW_CURR_TRIP_LEVEL"/>
+					<Ref ByteOffset="22" DataType="Unsigned8" DefaultValue="30" AllowedValues="20..160" Changeable="true" TextId="UMC100_HIGH_CURR_WARN_LEVEL"/>
+					<Ref ByteOffset="23" DataType="Unsigned8" DefaultValue="160" AllowedValues="20..160" Changeable="true" TextId="UMC100_HIGH_CURR_TRIP_LEVEL"/>
+					<Ref ByteOffset="24" DataType="Unsigned8" DefaultValue="160" AllowedValues="20..160" Changeable="true" TextId="UMC100_LOCKED_ROTOR_LEVEL"/>
+					<Ref ByteOffset="25" DataType="Unsigned8" DefaultValue="5" AllowedValues="0..255" Changeable="true" TextId="UMC100_LOCKED_ROTOR_DELAY"/>
+					<Ref ByteOffset="26" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..255" Changeable="true" TextId="UMC100_CUSTOM_APP_PARAMETER"/>
+					<Ref ValueItemTarget="ENUM_UMC100_MULTIF" ByteOffset="27" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..20" Changeable="true" TextId="UMC100_MULTIF_IN_0"/>
+					<Ref ValueItemTarget="ENUM_UMC100_MULTIF" ByteOffset="28" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..20" Changeable="true" TextId="UMC100_MULTIF_IN_1"/>
+					<Ref ValueItemTarget="ENUM_UMC100_MULTIF" ByteOffset="29" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..20" Changeable="true" TextId="UMC100_MULTIF_IN_2"/>
+					<Ref ByteOffset="30" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..255" Changeable="true" TextId="UMC100_MULTIF_IN_0_DELAY"/>
+					<Ref ByteOffset="31" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..255" Changeable="true" TextId="UMC100_MULTIF_IN_1_DELAY"/>
+					<Ref ByteOffset="32" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..255" Changeable="true" TextId="UMC100_MULTIF_IN_2_DELAY"/>
+					<Ref ValueItemTarget="ENUM_UMC100_3_CONTROL_FUNCTION" ByteOffset="33" DataType="Unsigned8" DefaultValue="3" AllowedValues="1 2 3 4 5 7 9 10 11 12 13" Changeable="true" TextId="UMC100_Control_Function"/>
+					<Ref ValueItemTarget="ENUM_UMC100_BUS_FAULT" ByteOffset="34" BitLength="4" DataType="BitArea" DefaultValue="0" AllowedValues="0 1 2 3" Changeable="true" TextId="UMC100_Busfault_Reaction"/>
+					<Ref ByteOffset="34" BitOffset="4" BitLength="4" DataType="BitArea" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ValueItemTarget="ENUM_UMC100_AUX_INP_REACTION" ByteOffset="35" DataType="BitArea" BitLength="4" DefaultValue="0" AllowedValues="0..8" Changeable="true" TextId="UMC100_AUX_INP_1_REACTION"/>
+					<Ref ValueItemTarget="ENUM_UMC100_AUX_INP_REACTION" ByteOffset="35" BitOffset="4" DataType="BitArea" BitLength="4" DefaultValue="0" AllowedValues="0..8" Changeable="true" TextId="UMC100_AUX_INP_2_REACTION"/>
+					<Ref ValueItemTarget="ENUM_UMC100_AUX_INP_REACTION" ByteOffset="36" DataType="BitArea" BitLength="4" DefaultValue="0" AllowedValues="0..8" Changeable="true" TextId="UMC100_AUX_INP_3_REACTION"/>
+					<Ref ValueItemTarget="ENUM_UMC100_AUX_INP_REACTION" ByteOffset="36" BitOffset="4" DataType="BitArea" BitLength="4" DefaultValue="0" AllowedValues="0..8" Changeable="true" TextId="UMC100_AUX_INP_4_REACTION"/>
+					<Ref ValueItemTarget="ENUM_UMC100_AUX_INP_REACTION" ByteOffset="37" DataType="BitArea" BitLength="4" DefaultValue="0" AllowedValues="0..8" Changeable="true" TextId="UMC100_AUX_INP_5_REACTION"/>
+					<Ref ValueItemTarget="ENUM_UMC100_AUX_INP_REACTION" ByteOffset="37" BitOffset="4" DataType="BitArea" BitLength="4" DefaultValue="0" AllowedValues="0..8" Changeable="true" TextId="UMC100_AUX_INP_6_REACTION"/>
+					<Ref ValueItemTarget="DISABLE_TRIP_WARNING_Switch" ByteOffset="38" BitLength="2" DataType="BitArea" DefaultValue="0" AllowedValues="0 1 2" Changeable="true" TextId="UMC100_PTC_Thermistor"/>
+					<Ref ValueItemTarget="ENUM_UMC100_CHECK_BACK" ByteOffset="38" BitOffset="2" BitLength="2" DataType="BitArea" DefaultValue="2" AllowedValues="1..3" Changeable="true" TextId="UMC100_CHECK_BACK"/>
+					<Ref ValueItemTarget="ENUM_UMC100_CHECK_PHASE_SEQUENCE" ByteOffset="38" BitOffset="4" DataType="BitArea" BitLength="2" DefaultValue="0" AllowedValues="0..2" Changeable="true" TextId="UMC100_CHECK_PHASE_SEQUENCE"/>
+					<Ref ByteOffset="38" BitOffset="6" BitLength="2" DataType="BitArea" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ValueItemTarget="ENUM_Switch" ByteOffset="39" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_Fault_Auto_Reset"/>
+					<Ref ValueItemTarget="ENUM_Switch" ByteOffset="39" BitOffset="1" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_Emergency_Start"/>
+					<Ref ValueItemTarget="ENUM_UMC100_EARTH_FAULT" ByteOffset="39" BitOffset="2" DataType="Bit" DefaultValue="1" AllowedValues="0 1" Changeable="true" TextId="UMC100_Earth_Flt_Detection"/>
+					<Ref ValueItemTarget="ENUM_Switch" ByteOffset="39" BitOffset="3" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_Address_Check"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="39" BitOffset="4" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_Enable_Custom_Logic"/>
+					<Ref ValueItemTarget="ENUM_UMC100_YD_CHANGE_OVER_MODE" ByteOffset="39" BitOffset="5" DataType="Bit" DefaultValue="1" AllowedValues="0 1" Changeable="true" TextId="UMC100_YD_CHANGE_OVER_MODE"/>
+					<Ref ValueItemTarget="ENUM_Switch" ByteOffset="39" BitOffset="6" DataType="Bit" DefaultValue="1" AllowedValues="0 1" Changeable="true" TextId="UMC100_PHASE_LOSS_PROT"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="39" BitOffset="7" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_Resistive_Load"/>
+					<Ref ValueItemTarget="ENUM_Switch" ByteOffset="40" BitOffset="0" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_DX1xx_Enabled"/>
+					<Ref ValueItemTarget="ENUM_Switch" ByteOffset="40" BitOffset="1" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_AI111_AM1_Enabled"/>
+					<Ref ValueItemTarget="ENUM_Switch" ByteOffset="40" BitOffset="2" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_AI111_AM2_Enabled"/>
+					<Ref ValueItemTarget="ENUM_Switch" ByteOffset="40" BitOffset="3" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_VI15x_Enabled"/>
+					<Ref ByteOffset="40" BitOffset="4" DataType="Bit" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="40" BitOffset="5" DataType="Bit" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="40" BitOffset="6" DataType="Bit" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ValueItemTarget="ERROR_WARNING_Switch" ByteOffset="40" BitOffset="7" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_Missing_Module_React"/>
+					<Ref ValueItemTarget="ENUM_UMC100_AUX_INP_ACK_MODE" ByteOffset="41" BitOffset="0" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_AUX_INP_1_ACK_MODE"/>
+					<Ref ValueItemTarget="ENUM_UMC100_AUX_INP_ACK_MODE" ByteOffset="41" BitOffset="1" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_AUX_INP_2_ACK_MODE"/>
+					<Ref ValueItemTarget="ENUM_UMC100_AUX_INP_ACK_MODE" ByteOffset="41" BitOffset="2" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_AUX_INP_3_ACK_MODE"/>
+					<Ref ValueItemTarget="ENUM_UMC100_AUX_INP_ACK_MODE" ByteOffset="41" BitOffset="3" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_AUX_INP_4_ACK_MODE"/>
+					<Ref ValueItemTarget="ENUM_UMC100_AUX_INP_ACK_MODE" ByteOffset="41" BitOffset="4" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_AUX_INP_5_ACK_MODE"/>
+					<Ref ValueItemTarget="ENUM_UMC100_AUX_INP_ACK_MODE" ByteOffset="41" BitOffset="5" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_AUX_INP_6_ACK_MODE"/>
+					<Ref ValueItemTarget="ENUM_UMC100_NUMBER_OF_PHASES" ByteOffset="41" BitOffset="6" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_Number_of_Phases"/>
+					<Ref ValueItemTarget="ENUM_UMC100_COOLING_MODE" ByteOffset="41" BitOffset="7" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_COOLING_MODE"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="42" BitOffset="0" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_INVERT_DI_START_INP."/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="42" BitOffset="1" DataType="Bit" DefaultValue="1" AllowedValues="0 1" Changeable="true" TextId="UMC100_INVERT_DI_STOP_INP."/>
+					<Ref ByteOffset="42" BitOffset="2" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="42" BitOffset="3" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="42" BitOffset="4" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_INCHING_DI_START_INP"/>
+					<Ref ByteOffset="42" BitOffset="5" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="42" BitOffset="6" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="42" BitOffset="7" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="43" BitOffset="0" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_LOC_1_START_BUS_CYC"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="43" BitOffset="1" DataType="Bit" DefaultValue="1" AllowedValues="0 1" Changeable="true" TextId="UMC100_LOC_1_STOP_BUS_CYC"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="43" BitOffset="2" DataType="Bit" DefaultValue="1" AllowedValues="0 1" Changeable="true" TextId="UMC100_LOC_1_START_DI"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="43" BitOffset="3" DataType="Bit" DefaultValue="1" AllowedValues="0 1" Changeable="true" TextId="UMC100_LOC_1_STOP_DI"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="43" BitOffset="4" DataType="Bit" DefaultValue="1" AllowedValues="0 1" Changeable="true" TextId="UMC100_LOC_1_START_LCD"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="43" BitOffset="5" DataType="Bit" DefaultValue="1" AllowedValues="0 1" Changeable="true" TextId="UMC100_LOC_1_STOP_LCD"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="43" BitOffset="6" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_LOC_1_START_BUS_ACYC"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="43" BitOffset="7" DataType="Bit" DefaultValue="1" AllowedValues="0 1" Changeable="true" TextId="UMC100_LOC_1_STOP_BUS_ACYC"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="44" BitOffset="0" DataType="Bit" DefaultValue="1" AllowedValues="0 1" Changeable="true" TextId="UMC100_AUTO_START_BUS_CYC"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="44" BitOffset="1" DataType="Bit" DefaultValue="1" AllowedValues="0 1" Changeable="true" TextId="UMC100_AUTO_STOP_BUS_CYC"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="44" BitOffset="2" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_AUTO_START_DI"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="44" BitOffset="3" DataType="Bit" DefaultValue="1" AllowedValues="0 1" Changeable="true" TextId="UMC100_AUTO_STOP_DI"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="44" BitOffset="4" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_AUTO_START_LCD"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="44" BitOffset="5" DataType="Bit" DefaultValue="1" AllowedValues="0 1" Changeable="true" TextId="UMC100_AUTO_STOP_LCD"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="44" BitOffset="6" DataType="Bit" DefaultValue="1" AllowedValues="0 1" Changeable="true" TextId="UMC100_AUTO_START_BUS_ACYC"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="44" BitOffset="7" DataType="Bit" DefaultValue="1" AllowedValues="0 1" Changeable="true" TextId="UMC100_AUTO_STOP_BUS_ACYC"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="45" BitOffset="0" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_LOC_2_START_BUS_CYC"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="45" BitOffset="1" DataType="Bit" DefaultValue="1" AllowedValues="0 1" Changeable="true" TextId="UMC100_LOC_2_STOP_BUS_CYC"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="45" BitOffset="2" DataType="Bit" DefaultValue="1" AllowedValues="0 1" Changeable="true" TextId="UMC100_LOC_2_START_DI"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="45" BitOffset="3" DataType="Bit" DefaultValue="1" AllowedValues="0 1" Changeable="true" TextId="UMC100_LOC_2_STOP_DI"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="45" BitOffset="4" DataType="Bit" DefaultValue="1" AllowedValues="0 1" Changeable="true" TextId="UMC100_LOC_2_START_LCD"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="45" BitOffset="5" DataType="Bit" DefaultValue="1" AllowedValues="0 1" Changeable="true" TextId="UMC100_LOC_2_STOP_LCD"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="45" BitOffset="6" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_LOC_2_START_BUS_ACYC"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="45" BitOffset="7" DataType="Bit" DefaultValue="1" AllowedValues="0 1" Changeable="true" TextId="UMC100_LOC_2_STOP_BUS_ACYC"/>
+					<Ref ByteOffset="46" BitOffset="0" DataType="Bit" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="46" BitOffset="1" DataType="Bit" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="46" BitOffset="2" DataType="Bit" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="46" BitOffset="3" DataType="Bit" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="46" BitOffset="4" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_MULTIF_IN_0_AUTORESET"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="46" BitOffset="5" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_MULTIF_IN_1_AUTORESET"/>
+					<Ref ValueItemTarget="ENUM_NO_YES_Switch" ByteOffset="46" BitOffset="6" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_MULTIF_IN_2_AUTORESET"/>
+					<Ref ByteOffset="46" BitOffset="7" DataType="Bit" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="47" BitOffset="0" DataType="Bit" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="47" BitOffset="1" DataType="Bit" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="47" BitOffset="2" DataType="Bit" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="47" BitOffset="3" DataType="Bit" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="47" BitOffset="4" DataType="Bit" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="47" BitOffset="5" DataType="Bit" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="47" BitOffset="6" DataType="Bit" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="47" BitOffset="7" DataType="Bit" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="48" DataType="Unsigned8" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="49" DataType="Unsigned8" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="50" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..255" Changeable="true" TextId="UMC100_AUX_INP_1_DELAY"/>
+					<Ref ByteOffset="51" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..255" Changeable="true" TextId="UMC100_AUX_INP_2_DELAY"/>
+					<Ref ByteOffset="52" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..255" Changeable="true" TextId="UMC100_AUX_INP_3_DELAY"/>
+					<Ref ByteOffset="53" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..255" Changeable="true" TextId="UMC100_AUX_INP_4_DELAY"/>
+					<Ref ByteOffset="54" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..255" Changeable="true" TextId="UMC100_AUX_INP_5_DELAY"/>
+					<Ref ByteOffset="55" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..255" Changeable="true" TextId="UMC100_AUX_INP_6_DELAY"/>
+					<Ref ByteOffset="56" DataType="Unsigned8" DefaultValue="5" AllowedValues="1..255" Changeable="true" TextId="UMC100_CHECK_BACK_TIME"/>
+					<Ref ByteOffset="57" DataType="Unsigned8" DefaultValue="5" AllowedValues="0..255" Changeable="true" TextId="UMC100_LOW_CURR_WARN_DELAY"/>
+					<Ref ByteOffset="58" DataType="Unsigned8" DefaultValue="5" AllowedValues="0..255" Changeable="true" TextId="UMC100_LOW_CURR_TRIP_DELAY"/>
+					<Ref ByteOffset="59" DataType="Unsigned8" DefaultValue="5" AllowedValues="0..255" Changeable="true" TextId="UMC100_HIGH_CURR_TRIP_DELAY"/>
+					<Ref ByteOffset="60" DataType="Unsigned8" DefaultValue="5" AllowedValues="0..255" Changeable="true" TextId="UMC100_HIGH_CURR_WARN_DELAY"/>
+					<Ref ByteOffset="61" DataType="Unsigned8" DefaultValue="50" AllowedValues="0..100" Changeable="true" TextId="UMC100_CURR_IMB_TRIP_LEVEL"/>
+					<Ref ByteOffset="62" DataType="Unsigned8" DefaultValue="100" AllowedValues="0..100" Changeable="true" TextId="UMC100_CURR_IMB_WARN_LEVEL"/>
+					<Ref ValueItemTarget="ENUM_UMC100_PHASE_REVERSAL" ByteOffset="63" BitOffset="0" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_PHASE_REVERSAL"/>
+					<Ref ByteOffset="63" BitOffset="1" DataType="BitArea" BitLength="7" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="64" DataType="Unsigned8" DefaultValue="30" AllowedValues="10..100" Changeable="true" TextId="UMC100_RESTART_LEVEL"/>
+					<Ref ValueItemTarget="ENUM_UMC100_USER_DISPLAY_TYPE_1" ByteOffset="65" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..7" Changeable="true" TextId="UMC100_USER_DISPLAY_1"/>
+					<Ref ValueItemTarget="ENUM_UMC100_USER_DISPLAY_TYPE_1" ByteOffset="66" DataType="Unsigned8" DefaultValue="6" AllowedValues="0..7" Changeable="true" TextId="UMC100_USER_DISPLAY_2"/>
+					<Ref ValueItemTarget="ENUM_UMC100_USER_DISPLAY_TYPE_1" ByteOffset="67" DataType="Unsigned8" DefaultValue="7" AllowedValues="0..7" Changeable="true" TextId="UMC100_USER_DISPLAY_3"/>
+					<Ref ValueItemTarget="ENUM_UMC100_USER_DISPLAY_TYPE_2" ByteOffset="68" DataType="Unsigned8" DefaultValue="4" AllowedValues="0..6" Changeable="true" TextId="UMC100_USER_DISPLAY_4"/>
+					<Ref ValueItemTarget="ENUM_UMC100_USER_DISPLAY_TYPE_2" ByteOffset="69" DataType="Unsigned8" DefaultValue="5" AllowedValues="0..6" Changeable="true" TextId="UMC100_USER_DISPLAY_5"/>
+					<Ref ByteOffset="70" DataType="Unsigned8" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="71" DataType="Unsigned8" DefaultValue="5" AllowedValues="1..255" Changeable="true" TextId="UMC100_DIP_DURATION"/>
+					<Ref ByteOffset="72" DataType="Unsigned8" DefaultValue="1" AllowedValues="1..10" Changeable="true" TextId="UMC100_DIP_AUTORESTART_WINDOW"/>
+					<Ref ByteOffset="73" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..255" Changeable="true" TextId="UMC100_DIP_AUTORESTART_DELAY"/>
+					<Ref ByteOffset="74" DataType="Unsigned8" DefaultValue="100" AllowedValues="20..100" Changeable="true" TextId="UMC100_THERMAL_LOAD_WARNLEV"/>
+					<Ref ByteOffset="75" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..32" Changeable="true" TextId="UMC100_NUM_STARTS_ALLOWED"/>
+					<Ref ByteOffset="76" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..255" Changeable="true" TextId="UMC100_NUM_STARTS_WINDOW"/>
+					<Ref ByteOffset="77" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..255" Changeable="true" TextId="UMC100_NUM_STARTS_PAUSE"/>
+					<Ref ByteOffset="78" DataType="Unsigned8" DefaultValue="255" AllowedValues="20..255" Changeable="true" TextId="UMC100_Earth_Flt_Warn_Level"/>
+					<Ref ByteOffset="79" DataType="Unsigned8" DefaultValue="5" AllowedValues="0..255" Changeable="true" TextId="UMC100_Earth_Flt_Warn_Delay"/>
+					<Ref ByteOffset="80" DataType="Unsigned8" DefaultValue="90" AllowedValues="50..115" Changeable="true" TextId="UMC100_DIP_RESTART_LEVEL"/>
+					<Ref ByteOffset="81" DataType="Unsigned8" DefaultValue="70" AllowedValues="50..115" Changeable="true" TextId="UMC100_DIP_LEVEL"/>
+					<Ref ByteOffset="82" DataType="Unsigned8" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="83" DataType="Unsigned8" DefaultValue="20" AllowedValues="3..200" Changeable="true" TextId="UMC100_DX1XX_DI_DELAY"/>
+					<Ref ByteOffset="84" DataType="Unsigned8" DefaultValue="6" AllowedValues="0..255" Changeable="true" TextId="UMC100_AM1_Tmax_Delay"/>
+					<Ref ByteOffset="85" DataType="Unsigned8" DefaultValue="6" AllowedValues="0..255" Changeable="true" TextId="UMC100_AM2_Tmax_Delay"/>
+					<Ref ValueItemTarget="DISABLE_TRIP_WARNING_Switch" ByteOffset="86" BitOffset="0" DataType="BitArea" BitLength="2" DefaultValue="0" AllowedValues="0 1 2" Changeable="true" TextId="UMC100_AM2_Ch2_Err_Reac"/>
+					<Ref ValueItemTarget="DISABLE_TRIP_WARNING_Switch" ByteOffset="86" BitOffset="2" DataType="BitArea" BitLength="2" DefaultValue="0" AllowedValues="0 1 2" Changeable="true" TextId="UMC100_AM2_Ch3_Err_Reac"/>
+					<Ref ValueItemTarget="ENUM_UMC100_AM_MODE" ByteOffset="86" BitOffset="4" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_AM1_Mode"/>
+					<Ref ValueItemTarget="ENUM_UMC100_AM_MODE" ByteOffset="86" BitOffset="5" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_AM2_Mode"/>
+					<Ref ByteOffset="86" BitOffset="6" DataType="Bit" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="86" BitOffset="7" DataType="Bit" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="87" DataType="Unsigned8" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="88" DataType="Unsigned8" DefaultValue="70" AllowedValues="70..100" Changeable="true" TextId="UMC100_U_LOW_TRIP_LEVEL"/>
+					<Ref ByteOffset="89" DataType="Unsigned8" DefaultValue="30" AllowedValues="0..255" Changeable="true" TextId="UMC100_U_LOW_TRIP_DELAY"/>
+					<Ref ByteOffset="90" DataType="Unsigned8" DefaultValue="70" AllowedValues="70..100" Changeable="true" TextId="UMC100_U_LOW_WARN_LEVEL"/>
+					<Ref ByteOffset="91" DataType="Unsigned8" DefaultValue="30" AllowedValues="0..255" Changeable="true" TextId="UMC100_U_LOW_WARN_DELAY"/>
+					<Ref ByteOffset="92" DataType="Unsigned8" DefaultValue="116" AllowedValues="100..116" Changeable="true" TextId="UMC100_U_HIGH_TRIP_LEVEL"/>
+					<Ref ByteOffset="93" DataType="Unsigned8" DefaultValue="30" AllowedValues="0..255" Changeable="true" TextId="UMC100_U_HIGH_TRIP_DELAY"/>
+					<Ref ByteOffset="94" DataType="Unsigned8" DefaultValue="116" AllowedValues="100..116" Changeable="true" TextId="UMC100_U_HIGH_WARN_LEVEL"/>
+					<Ref ByteOffset="95" DataType="Unsigned8" DefaultValue="30" AllowedValues="0..255" Changeable="true" TextId="UMC100_U_HIGH_WARN_DELAY"/>
+					<Ref ByteOffset="96" DataType="Unsigned16" DefaultValue="65535" AllowedValues="0..65535" Changeable="true" TextId="UMC100_AM1_Tmax_Trip_Level"/>
+					<Ref ByteOffset="98" DataType="Unsigned16" DefaultValue="65535" AllowedValues="0..65535" Changeable="true" TextId="UMC100_AM1_Tmax_Warn_Level"/>
+					<Ref ByteOffset="100" DataType="Unsigned16" DefaultValue="65535" AllowedValues="0..65535" Changeable="true" TextId="UMC100_AM2_Tmax_Trip_Level"/>
+					<Ref ByteOffset="102" DataType="Unsigned16" DefaultValue="65535" AllowedValues="0..65535" Changeable="true" TextId="UMC100_AM2_Tmax_Warn_Level"/>
+					<Ref ValueItemTarget="ENUM_UMC100_AM_CH_TYPE" ByteOffset="104" BitOffset="0" DataType="BitArea" BitLength="4" DefaultValue="0" AllowedValues="0..12" Changeable="true" TextId="UMC100_AM1_Ch1_Type"/>
+					<Ref ValueItemTarget="ENUM_UMC100_AM_CH_TYPE" ByteOffset="104" BitOffset="4" DataType="BitArea" BitLength="4" DefaultValue="0" AllowedValues="0..12" Changeable="true" TextId="UMC100_AM1_Ch2_Type"/>
+					<Ref ValueItemTarget="ENUM_UMC100_AM_CH_TYPE" ByteOffset="105" BitOffset="0" DataType="BitArea" BitLength="4" DefaultValue="0" AllowedValues="0..12" Changeable="true" TextId="UMC100_AM1_Ch3_Type"/>
+					<Ref ValueItemTarget="ENUM_UMC100_AM_CH_TYPE" ByteOffset="105" BitOffset="4" DataType="BitArea" BitLength="4" DefaultValue="0" AllowedValues="0..12" Changeable="true" TextId="UMC100_AM2_Ch1_Type"/>
+					<Ref ValueItemTarget="ENUM_UMC100_AM_CH_TYPE" ByteOffset="106" BitOffset="0" DataType="BitArea" BitLength="4" DefaultValue="0" AllowedValues="0..12" Changeable="true" TextId="UMC100_AM2_Ch2_Type"/>
+					<Ref ValueItemTarget="ENUM_UMC100_AM_CH_TYPE" ByteOffset="106" BitOffset="4" DataType="BitArea" BitLength="4" DefaultValue="0" AllowedValues="0..12" Changeable="true" TextId="UMC100_AM2_Ch3_Type"/>
+					<Ref ValueItemTarget="DISABLE_TRIP_WARNING_Switch" ByteOffset="107" BitOffset="0" DataType="BitArea" BitLength="2" DefaultValue="0" AllowedValues="0 1 2" Changeable="true" TextId="UMC100_AM1_Ch1_Err_Reac"/>
+					<Ref ValueItemTarget="DISABLE_TRIP_WARNING_Switch" ByteOffset="107" BitOffset="2" DataType="BitArea" BitLength="2" DefaultValue="0" AllowedValues="0 1 2" Changeable="true" TextId="UMC100_AM1_Ch2_Err_Reac"/>
+					<Ref ValueItemTarget="DISABLE_TRIP_WARNING_Switch" ByteOffset="107" BitOffset="4" DataType="BitArea" BitLength="2" DefaultValue="0" AllowedValues="0 1 2" Changeable="true" TextId="UMC100_AM1_Ch3_Err_Reac"/>
+					<Ref ValueItemTarget="DISABLE_TRIP_WARNING_Switch" ByteOffset="107" BitOffset="6" DataType="BitArea" BitLength="2" DefaultValue="0" AllowedValues="0 1 2" Changeable="true" TextId="UMC100_AM2_Ch1_Err_Reac"/>
+					<Ref ByteOffset="108" DataType="Unsigned8" DefaultValue="1" AllowedValues="0..255" Changeable="true" TextId="UMC100_Param_To_PV_1"/>
+					<Ref ByteOffset="109" DataType="Unsigned8" DefaultValue="2" AllowedValues="0..255" Changeable="true" TextId="UMC100_Param_To_PV_2"/>
+					<Ref ByteOffset="110" DataType="Unsigned8" DefaultValue="3" AllowedValues="0..255" Changeable="true" TextId="UMC100_Param_To_PV_3"/>
+					<Ref ByteOffset="111" DataType="Unsigned8" DefaultValue="4" AllowedValues="0..255" Changeable="true" TextId="UMC100_Param_To_PV_4"/>
+					<Ref ValueItemTarget="ENUM_UMC100_ANALOG_TYPE" ByteOffset="112" BitOffset="0" DataType="BitArea" BitLength="2" DefaultValue="0" AllowedValues="0..3" Changeable="true" TextId="UMC100_DX1XX_AO_TYPE"/>
+					<Ref ValueItemTarget="DISABLE_TRIP_WARNING_Switch" ByteOffset="112" BitOffset="2" DataType="BitArea" BitLength="2" DefaultValue="0" AllowedValues="0..2" Changeable="true" TextId="UMC100_DX1XX_AO_ERR_REAC"/>
+					<Ref ByteOffset="112" BitOffset="4" DataType="BitArea" BitLength="2" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="112" BitOffset="6" DataType="BitArea" BitLength="2" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="113" DataType="Unsigned8" DefaultValue="5" AllowedValues="0..255" Changeable="true" TextId="UMC100_Param_To_PV_5"/>
+					<Ref ByteOffset="114" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..255" Changeable="true" TextId="UMC100_Motor_Op_Hours_Level"/>
+					<Ref ByteOffset="115" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..255" Changeable="true" TextId="UMC100_Motor_Stand_Still_Level"/>
+					<Ref ByteOffset="116" BitOffset="0" DataType="BitArea" BitLength="2" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ValueItemTarget="DISABLE_TRIP_WARNING_Switch" ByteOffset="116" BitOffset="2" DataType="BitArea" BitLength="2" DefaultValue="0" AllowedValues="0..2" Changeable="true" TextId="UMC100_NUM_STARTS_OVERRUN"/>
+					<Ref ValueItemTarget="DISABLE_TRIP_WARNING_Switch" ByteOffset="116" BitOffset="4" DataType="BitArea" BitLength="2" DefaultValue="0" AllowedValues="0..2" Changeable="true" TextId="UMC100_NUM_STARTS_PREWARN"/>
+					<Ref ValueItemTarget="ENUM_UMC100_POWER_SCALE_FACTOR" ByteOffset="116" BitOffset="6" DataType="BitArea" BitLength="2" DefaultValue="1" AllowedValues="0..3" Changeable="true" TextId="UMC100_POWER_SCALE_FACTOR"/>
+					<Ref ValueItemTarget="ENUM_Switch" ByteOffset="117" BitOffset="0" DataType="Bit" DefaultValue="1" AllowedValues="0 1" Changeable="true" TextId="UMC100_BACKLIGHT"/>
+					<Ref ValueItemTarget="ENUM_UMC100_PASSWORD_PROTECTION" ByteOffset="117" BitOffset="1" DataType="BitArea" BitLength="2" DefaultValue="0" AllowedValues="0..2" Changeable="true" TextId="UMC100_PASSWORD_PROTECTION"/>
+					<Ref ValueItemTarget="ENUM_UMC100_ENABLE_VOLTAGE_DIP" ByteOffset="117" BitOffset="3" DataType="BitArea" BitLength="2" DefaultValue="0" AllowedValues="0..2" Changeable="true" TextId="UMC100_DIP_ENABLE"/>
+					<Ref ValueItemTarget="ENUM_Switch" ByteOffset="117" BitOffset="5" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_DIP_AUTORESTART_ENABLE"/>
+					<Ref ValueItemTarget="ENUM_UMC100_TEMP_UNIT" ByteOffset="117" BitOffset="6" DataType="Bit" DefaultValue="0" AllowedValues="0 1" Changeable="true" TextId="UMC100_Panel_Temp_Unit"/>
+					<Ref ByteOffset="117" BitOffset="7" DataType="Bit" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="118" DataType="Unsigned16" DefaultValue="400" AllowedValues="90..690" Changeable="true" TextId="UMC100_3_NOMINAL_VOLTAGE"/>
+					<Ref ByteOffset="120" DataType="Unsigned8" DefaultValue="30" AllowedValues="30..100" Changeable="true" TextId="UMC100_PWRFACTOR_TRIP_LEVEL"/>
+					<Ref ByteOffset="121" DataType="Unsigned8" DefaultValue="30" AllowedValues="0..255" Changeable="true" TextId="UMC100_PWRFACTOR_TRIP_DELAY"/>
+					<Ref ByteOffset="122" DataType="Unsigned8" DefaultValue="30" AllowedValues="30..100" Changeable="true" TextId="UMC100_PWRFACTOR_WARN_LEVEL"/>
+					<Ref ByteOffset="123" DataType="Unsigned8" DefaultValue="30" AllowedValues="0..255" Changeable="true" TextId="UMC100_PWRFACTOR_WARN_DELAY"/>
+					<Ref ByteOffset="124" DataType="Unsigned8" DefaultValue="200" AllowedValues="2..200" Changeable="true" TextId="UMC100_U_IMB._TRIP_LEVEL"/>
+					<Ref ByteOffset="125" DataType="Unsigned8" DefaultValue="10" AllowedValues="0..255" Changeable="true" TextId="UMC100_U_IMB._TRIP_DELAY"/>
+					<Ref ByteOffset="126" DataType="Unsigned8" DefaultValue="200" AllowedValues="2..200" Changeable="true" TextId="UMC100_U_IMB._WARN_LEVEL"/>
+					<Ref ByteOffset="127" DataType="Unsigned8" DefaultValue="10" AllowedValues="0..255" Changeable="true" TextId="UMC100_U_IMB._WARN_DELAY"/>
+					<Ref ByteOffset="128" DataType="Unsigned8" DefaultValue="20" AllowedValues="20..100" Changeable="true" TextId="UMC100_P_LOW_TRIP_LEVEL"/>
+					<Ref ByteOffset="129" DataType="Unsigned8" DefaultValue="5" AllowedValues="0..255" Changeable="true" TextId="UMC100_P_LOW_TRIP_DELAY"/>
+					<Ref ByteOffset="130" DataType="Unsigned8" DefaultValue="20" AllowedValues="20..100" Changeable="true" TextId="UMC100_P_LOW_WARN_LEVEL"/>
+					<Ref ByteOffset="131" DataType="Unsigned8" DefaultValue="5" AllowedValues="0..255" Changeable="true" TextId="UMC100_P_LOW_WARN_DELAY"/>
+					<Ref ByteOffset="132" DataType="Unsigned8" DefaultValue="200" AllowedValues="20..200" Changeable="true" TextId="UMC100_P_HIGH_TRIP_LEVEL"/>
+					<Ref ByteOffset="133" DataType="Unsigned8" DefaultValue="10" AllowedValues="0..255" Changeable="true" TextId="UMC100_P_HIGH_TRIP_DELAY"/>
+					<Ref ByteOffset="134" DataType="Unsigned8" DefaultValue="200" AllowedValues="20..200" Changeable="true" TextId="UMC100_P_HIGH_WARN_LEVEL"/>
+					<Ref ByteOffset="135" DataType="Unsigned8" DefaultValue="10" AllowedValues="0..255" Changeable="true" TextId="UMC100_P_HIGH_WARN_DELAY"/>
+					<Ref ByteOffset="136" DataType="Unsigned8" DefaultValue="100" AllowedValues="1..100" Changeable="true" TextId="UMC100_NOMINAL_POWER_FACTOR"/>
+					<Ref ByteOffset="137" DataType="Unsigned8" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="138" DataType="Unsigned8" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="139" DataType="Unsigned8" DefaultValue="10" AllowedValues="3..10" Changeable="true" TextId="UMC100_THD_WARNING_LEVEL"/>
+					<Ref ByteOffset="140" DataType="Unsigned8" DefaultValue="0" AllowedValues="0..255" Changeable="true" TextId="UMC100_LOAD_STARTUP_DELAY"/>
+					<Ref ByteOffset="141" DataType="Unsigned8" DefaultValue="5" AllowedValues="0..255" Changeable="true" TextId="UMC100_THD_WARNING_DELAY"/>
+					<Ref ByteOffset="142" DataType="Unsigned8" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+					<Ref ByteOffset="143" DataType="Unsigned8" DefaultValue="0" AllowedValues="0" Changeable="false" TextId="UMC100_RESERVED"/>
+                </ParameterRecordDataItem>
+              </RecordDataList>
+              <ModuleInfo CategoryRef="Data">
+                <Name TextId="UMC100.3_DATA"/>
+                <InfoText TextId="UMC100.3"/>
+              </ModuleInfo>
+            </VirtualSubmoduleItem>
+          </VirtualSubmoduleList>
+
+		  <Graphics>
+		    <GraphicItemRef GraphicItemTarget="3" Type="DeviceSymbol"/>
+            <GraphicItemRef GraphicItemTarget="6" Type="DeviceIcon"/>
+          </Graphics>
+
+        </ModuleItem>
+
+       <ModuleItem ID="EmptySlot" ModuleIdentNumber="0x0000FFFF">
+          <ModuleInfo CategoryRef="EmptySlot">
+            <Name TextId="EmptySlot"/>
+            <InfoText TextId="EmptySlot_INFO"/>
+          </ModuleInfo>
+
+          <VirtualSubmoduleList>
+            <VirtualSubmoduleItem ID="EmptySlot" SubmoduleIdentNumber="0x00000109" FixedInSubslots="1" MayIssueProcessAlarm="true">
+              <IOData>
+                <Input Consistency="All items consistency">
+                  <DataItem DataType="Unsigned8" TextId="DummyInputByte"/>
+                </Input>
+                <Output Consistency="All items consistency">
+                  <DataItem DataType="Unsigned8" TextId="DummyOutputByte"/>
+                </Output>
+              </IOData>
+              <ModuleInfo CategoryRef="Data">
+                <Name TextId="EmptySlot_Data"/>
+                <InfoText TextId="EmptySlot_Data_INFO"/>
+              </ModuleInfo>
+            </VirtualSubmoduleItem>
+          </VirtualSubmoduleList>
+        </ModuleItem>
+    </ModuleList>
+
+	<!-- List of enums used in GSDML -->
+	<ValueList>
+		<!-- Slot 0 enums -->
+        <ValueItem ID="ENUM_SPARE_PORT">
+          <Assignments>
+            <Assign Content="0" TextId="ENUM_ENTRY_Port_Spare"/>
+            <Assign Content="1" TextId="ENUM_ENTRY_Port_Used"/>
+          </Assignments>
+        </ValueItem>
+		<ValueItem ID="ENUM_DIAG_TYPE">
+          <Assignments>
+            <Assign Content="0" TextId="ENUM_ENTRY_DiagType_Standard"/>
+            <Assign Content="1" TextId="ENUM_ENTRY_DiagType_SoE"/>
+          </Assignments>
+        </ValueItem>
+		<ValueItem ID="ENUM_WRITIN_PARAM_PORT">
+          <Assignments>
+            <Assign Content="0" TextId="ENUM_ENTRY_Writing_Disabled"/>
+            <Assign Content="1" TextId="ENUM_ENTRY_Writing_Enabled"/>
+          </Assignments>
+        </ValueItem>
+
+        <!-- UMC100 enums -->
+        <ValueItem ID="ENUM_Switch">
+          <Assignments>
+            <Assign Content="0" TextId="ENUM_ENTRY_Off"/>
+            <Assign Content="1" TextId="ENUM_ENTRY_On"/>
+          </Assignments>
+        </ValueItem>
+        <ValueItem ID="ENUM_NO_YES_Switch">
+          <Assignments>
+            <Assign Content="0" TextId="ENUM_ENTRY_NO"/>
+            <Assign Content="1" TextId="ENUM_ENTRY_YES"/>
+          </Assignments>
+        </ValueItem>
+        <ValueItem ID="ERROR_WARNING_Switch">
+          <Assignments>
+            <Assign Content="0" TextId="ENUM_ENTRY_ERROR"/>
+            <Assign Content="1" TextId="ENUM_ENTRY_WARNING"/>
+          </Assignments>
+        </ValueItem>
+        <ValueItem ID="DISABLE_TRIP_WARNING_Switch">
+          <Assignments>
+            <Assign Content="0" TextId="ENUM_ENTRY_DISABLE"/>
+            <Assign Content="1" TextId="ENUM_ENTRY_TRIP"/>
+            <Assign Content="2" TextId="ENUM_ENTRY_WARNING"/>
+          </Assignments>
+        </ValueItem>
+        <ValueItem ID="ENUM_UMC100_EARTH_FAULT">
+          <Assignments>
+            <Assign Content="0" TextId="ENUM_ENTRY_UMC100_EARTH_FAULT_ALWAYS"/>
+            <Assign Content="1" TextId="ENUM_ENTRY_UMC100_EARTH_FAULT_AFTER_STARTUP"/>
+          </Assignments>
+        </ValueItem>
+        <ValueItem ID="ENUM_UMC100_BUS_FAULT">
+          <Assignments>
+            <Assign Content="0" TextId="ENUM_ENTRY_UMC100_BUS_FAULT_MOTOR_OFF"/>
+            <Assign Content="1" TextId="ENUM_ENTRY_UMC100_BUS_FAULT_RETAIN"/>
+            <Assign Content="2" TextId="ENUM_ENTRY_UMC100_BUS_FAULT_START_FORWARD"/>
+            <Assign Content="3" TextId="ENUM_ENTRY_UMC100_BUS_FAULT_START_REVERSE"/>
+          </Assignments>
+        </ValueItem>
+        <ValueItem ID="ENUM_UMC100_CONTROL_FUNCTION">
+          <Assignments>
+            <Assign Content="1" TextId="ENUM_ENTRY_UMC100_CONTROL_FUNCTION_TRANSPARENT"/>
+            <Assign Content="2" TextId="ENUM_ENTRY_UMC100_CONTROL_FUNCTION_OVERLOAD_RELAY"/>
+            <Assign Content="3" TextId="ENUM_ENTRY_UMC100_CONTROL_FUNCTION_DIRECT_STARTER"/>
+            <Assign Content="4" TextId="ENUM_ENTRY_UMC100_CONTROL_FUNCTION_REVERSE_STARTER"/>
+            <Assign Content="5" TextId="ENUM_ENTRY_UMC100_CONTROL_FUNCTION_STAR_DELTA_STARTER"/>
+            <Assign Content="7" TextId="ENUM_ENTRY_UMC100_CONTROL_FUNCTION_POLE_CHANGING_STARTER"/>
+            <Assign Content="9" TextId="ENUM_ENTRY_UMC100_CONTROL_FUNCTION_ACTUATOR_1"/>
+            <Assign Content="10" TextId="ENUM_ENTRY_UMC100_CONTROL_FUNCTION_ACTUATOR_2"/>
+            <Assign Content="11" TextId="ENUM_ENTRY_UMC100_CONTROL_FUNCTION_ACTUATOR_3"/>
+            <Assign Content="12" TextId="ENUM_ENTRY_UMC100_CONTROL_FUNCTION_ACTUATOR_4"/>
+          </Assignments>
+        </ValueItem>
+        <ValueItem ID="ENUM_UMC100_3_CONTROL_FUNCTION">
+          <Assignments>
+            <Assign Content="1" TextId="ENUM_ENTRY_UMC100_CONTROL_FUNCTION_TRANSPARENT"/>
+            <Assign Content="2" TextId="ENUM_ENTRY_UMC100_CONTROL_FUNCTION_OVERLOAD_RELAY"/>
+            <Assign Content="3" TextId="ENUM_ENTRY_UMC100_CONTROL_FUNCTION_DIRECT_STARTER"/>
+            <Assign Content="4" TextId="ENUM_ENTRY_UMC100_CONTROL_FUNCTION_REVERSE_STARTER"/>
+            <Assign Content="5" TextId="ENUM_ENTRY_UMC100_CONTROL_FUNCTION_STAR_DELTA_STARTER"/>
+            <Assign Content="7" TextId="ENUM_ENTRY_UMC100_CONTROL_FUNCTION_POLE_CHANGING_STARTER"/>
+            <Assign Content="9" TextId="ENUM_ENTRY_UMC100_CONTROL_FUNCTION_ACTUATOR_1"/>
+            <Assign Content="10" TextId="ENUM_ENTRY_UMC100_CONTROL_FUNCTION_ACTUATOR_2"/>
+            <Assign Content="11" TextId="ENUM_ENTRY_UMC100_CONTROL_FUNCTION_ACTUATOR_3"/>
+            <Assign Content="12" TextId="ENUM_ENTRY_UMC100_CONTROL_FUNCTION_ACTUATOR_4"/>
+            <Assign Content="13" TextId="ENUM_ENTRY_UMC100_CONTROL_FUNCTION_SOFTSTARTER"/>
+          </Assignments>
+        </ValueItem>
+        <ValueItem ID="ENUM_UMC100_CHECK_BACK">
+          <Assignments>
+            <Assign Content="1" TextId="ENUM_ENTRY_UMC100_CHECK_BACK_CONTACT_DI0"/>
+            <Assign Content="2" TextId="ENUM_ENTRY_UMC100_CHECK_BACK_CURRENT"/>
+            <Assign Content="3" TextId="ENUM_ENTRY_UMC100_CHECK_BACK_SIMULATION"/>
+          </Assignments>
+        </ValueItem>
+
+        <ValueItem ID="ENUM_UMC100_YD_CHANGE_OVER_MODE">
+          <Assignments>
+            <Assign Content="0" TextId="ENUM_ENTRY_UMC100_YD_CHANGE_OVER_MODE_TIME"/>
+            <Assign Content="1" TextId="ENUM_ENTRY_UMC100_YD_CHANGE_OVER_MODE_CURRENT"/>
+          </Assignments>
+        </ValueItem>
+
+		<ValueItem ID="ENUM_UMC100_LANGUAGE">
+          <Assignments>
+            <Assign Content="0" TextId="ENUM_ENTRY_LANGUAGE_English"/>
+            <Assign Content="1" TextId="ENUM_ENTRY_LANGUAGE_Deutsch"/>
+			<Assign Content="2" TextId="ENUM_ENTRY_LANGUAGE_Francais"/>
+			<Assign Content="3" TextId="ENUM_ENTRY_LANGUAGE_Espanol"/>
+			<Assign Content="4" TextId="ENUM_ENTRY_LANGUAGE_Italiano"/>
+			<Assign Content="5" TextId="ENUM_ENTRY_LANGUAGE_Portugues"/>
+			<Assign Content="6" TextId="ENUM_ENTRY_LANGUAGE_Russian"/>
+          </Assignments>
+        </ValueItem>
+
+		<ValueItem ID="ENUM_UMC100_3_LANGUAGE">
+          <Assignments>
+            <Assign Content="0" TextId="ENUM_ENTRY_LANGUAGE_English"/>
+            <Assign Content="1" TextId="ENUM_ENTRY_LANGUAGE_Deutsch"/>
+			<Assign Content="2" TextId="ENUM_ENTRY_LANGUAGE_Francais"/>
+			<Assign Content="3" TextId="ENUM_ENTRY_LANGUAGE_Espanol"/>
+			<Assign Content="4" TextId="ENUM_ENTRY_LANGUAGE_Italiano"/>
+			<Assign Content="5" TextId="ENUM_ENTRY_LANGUAGE_Portugues"/>
+			<Assign Content="6" TextId="ENUM_ENTRY_LANGUAGE_Russian"/>
+			<Assign Content="7" TextId="ENUM_ENTRY_LANGUAGE_Polish"/>
+          </Assignments>
+        </ValueItem>
+
+		<ValueItem ID="ENUM_UMC100_MULTIF">
+          <Assignments>
+            <Assign Content="0" TextId="ENUM_ENTRY_MULTIF_Off"/>
+            <Assign Content="1" TextId="ENUM_ENTRY_MULTIF_Stop_(NC)"/>
+			<Assign Content="2" TextId="ENUM_ENTRY_MULTIF_Stop_(NO)"/>
+			<Assign Content="3" TextId="ENUM_ENTRY_MULTIF_Ext._Flt_(NC)_always"/>
+			<Assign Content="4" TextId="ENUM_ENTRY_MULTIF_Ext._Flt_(NO)_always"/>
+			<Assign Content="5" TextId="ENUM_ENTRY_MULTIF_Ext._Flt_(NC)_Motor_on"/>
+			<Assign Content="6" TextId="ENUM_ENTRY_MULTIF_Ext._Flt_(NO)_Motor_on"/>
+			<Assign Content="7" TextId="ENUM_ENTRY_MULTIF_Prep._emerg._Start_(NC)"/>
+			<Assign Content="8" TextId="ENUM_ENTRY_MULTIF_Prep._emerg._Start_(NO)"/>
+			<Assign Content="9" TextId="ENUM_ENTRY_MULTIF_Testposition_(NC)"/>
+			<Assign Content="10" TextId="ENUM_ENTRY_MULTIF_Testposition_(NO)"/>
+			<Assign Content="11" TextId="ENUM_ENTRY_MULTIF_Force_local_(NC)"/>
+			<Assign Content="12" TextId="ENUM_ENTRY_MULTIF_Force_local-(NO)"/>
+			<Assign Content="13" TextId="ENUM_ENTRY_MULTIF_Fault_reset_(NC)"/>
+			<Assign Content="14" TextId="ENUM_ENTRY_MULTIF_Fault_reset_(NO)"/>
+			<Assign Content="15" TextId="ENUM_ENTRY_MULTIF_Voltage_DIP_(NC)"/>
+			<Assign Content="16" TextId="ENUM_ENTRY_MULTIF_Voltage_DIP-(NO)"/>
+			<Assign Content="17" TextId="ENUM_ENTRY_MULTIF_CEM11_always_(Warning)"/>
+			<Assign Content="18" TextId="ENUM_ENTRY_MULTIF_CEM11_after startup_(Warning)"/>
+			<Assign Content="19" TextId="ENUM_ENTRY_MULTIF_CEM11_always (Fault)"/>
+			<Assign Content="20" TextId="ENUM_ENTRY_MULTIF_CEM11_after_startup_time_(Fault)"/>
+
+          </Assignments>
+        </ValueItem>
+
+        <ValueItem ID="ENUM_UMC100_FAULT_OUTPUT">
+          <Assignments>
+            <Assign Content="0" TextId="ENUM_ENTRY_UMC100_FAULT_OUTPUT_OFF"/>
+            <Assign Content="1" TextId="ENUM_ENTRY_UMC100_FAULT_OUTPUT_FLASH_DO2"/>
+            <Assign Content="2" TextId="ENUM_ENTRY_UMC100_FAULT_OUTPUT_ON_DO2"/>
+            <Assign Content="3" TextId="ENUM_ENTRY_UMC100_FAULT_OUTPUT_INVERT_DO2"/>
+            <Assign Content="4" TextId="ENUM_ENTRY_UMC100_FAULT_OUTPUT_FLASH_DO3"/>
+            <Assign Content="5" TextId="ENUM_ENTRY_UMC100_FAULT_OUTPUT_ON_DO3"/>
+            <Assign Content="6" TextId="ENUM_ENTRY_UMC100_FAULT_OUTPUT_INVERT_DO3"/>
+          </Assignments>
+        </ValueItem>
+
+        <ValueItem ID="ENUM_UMC100_TRIP_CLASS">
+          <Assignments>
+            <Assign Content="0" TextId="ENUM_ENTRY_UMC100_TRIP_CLASS_5"/>
+            <Assign Content="1" TextId="ENUM_ENTRY_UMC100_TRIP_CLASS_10"/>
+            <Assign Content="2" TextId="ENUM_ENTRY_UMC100_TRIP_CLASS_20"/>
+            <Assign Content="3" TextId="ENUM_ENTRY_UMC100_TRIP_CLASS_30"/>
+            <Assign Content="4" TextId="ENUM_ENTRY_UMC100_TRIP_CLASS_40"/>
+          </Assignments>
+        </ValueItem>
+
+        <ValueItem ID="ENUM_UMC100_AUX_INP_ACK_MODE">
+          <Assignments>
+            <Assign Content="0" TextId="ENUM_ENTRY_UMC100_AUX_INP_ACK_MODE_MANUAL_RESET"/>
+            <Assign Content="1" TextId="ENUM_ENTRY_UMC100_AUX_INP_ACK_MODE_AUTO_RESET"/>
+          </Assignments>
+        </ValueItem>
+
+        <ValueItem ID="ENUM_UMC100_PHASE_REVERSAL">
+          <Assignments>
+            <Assign Content="0" TextId="ENUM_ENTRY_UMC100_PHASE_REVERSAL_PHASE_SEQUENCE_L1_L2_L3"/>
+            <Assign Content="1" TextId="ENUM_ENTRY_UMC100_PHASE_REVERSAL_PHASE_SEQUENCE_L3_L2_L1"/>
+          </Assignments>
+        </ValueItem>
+
+		<ValueItem ID="ENUM_UMC100_USER_DISPLAY_TYPE_1">
+          <Assignments>
+            <Assign Content="0" TextId="ENUM_ENTRY_UMC100_USER_DISPLAY_TYPE_1_Thermal_Load"/>
+            <Assign Content="1" TextId="ENUM_ENTRY_UMC100_USER_DISPLAY_TYPE_1_DX1xx_DI"/>
+			<Assign Content="2" TextId="ENUM_ENTRY_UMC100_USER_DISPLAY_TYPE_1_DX1xx_DO"/>
+			<Assign Content="3" TextId="ENUM_ENTRY_UMC100_USER_DISPLAY_TYPE_1_Operating_Hours"/>
+			<Assign Content="4" TextId="ENUM_ENTRY_UMC100_USER_DISPLAY_TYPE_1_Number_of_Trips"/>
+			<Assign Content="5" TextId="ENUM_ENTRY_UMC100_USER_DISPLAY_TYPE_1_Number_of_Starts"/>
+			<Assign Content="6" TextId="ENUM_ENTRY_UMC100_USER_DISPLAY_TYPE_1_max._Startup_Current"/>
+			<Assign Content="7" TextId="ENUM_ENTRY_UMC100_USER_DISPLAY_TYPE_1_Real_Startup_Time"/>
+          </Assignments>
+        </ValueItem>
+
+		<ValueItem ID="ENUM_UMC100_USER_DISPLAY_TYPE_2">
+          <Assignments>
+            <Assign Content="0" TextId="ENUM_UMC100_USER_DISPLAY_TYPE_2_Binary_0"/>
+            <Assign Content="1" TextId="ENUM_UMC100_USER_DISPLAY_TYPE_2_Binary_1"/>
+			<Assign Content="2" TextId="ENUM_UMC100_USER_DISPLAY_TYPE_2_Analog_0"/>
+			<Assign Content="3" TextId="ENUM_UMC100_USER_DISPLAY_TYPE_2_Analog_1"/>
+			<Assign Content="4" TextId="ENUM_UMC100_USER_DISPLAY_TYPE_2_Time_to_Trip"/>
+			<Assign Content="5" TextId="ENUM_UMC100_USER_DISPLAY_TYPE_2_Time_to_Cool"/>
+			<Assign Content="6" TextId="ENUM_UMC100_USER_DISPLAY_TYPE_2_Current_to_earth"/>
+          </Assignments>
+        </ValueItem>
+
+		<ValueItem ID="ENUM_UMC100_ANALOG_TYPE">
+          <Assignments>
+            <Assign Content="0" TextId="ENUM_UMC100_ANALOG_TYPE_0-20mA"/>
+            <Assign Content="1" TextId="ENUM_UMC100_ANALOG_TYPE_4-20mA"/>
+			<Assign Content="2" TextId="ENUM_UMC100_ANALOG_TYPE_0-10mA"/>
+			<Assign Content="3" TextId="ENUM_UMC100_ANALOG_TYPE_0-10V"/>
+          </Assignments>
+        </ValueItem>
+
+		<ValueItem ID="ENUM_UMC100_ANALOG_ERR_REACTION">
+          <Assignments>
+            <Assign Content="0" TextId="ENUM_UMC100_ANALOG_ERR_REACTION_Disabled"/>
+            <Assign Content="1" TextId="ENUM_UMC100_ANALOG_ERR_REACTION_Trip"/>
+			<Assign Content="2" TextId="ENUM_UMC100_ANALOG_ERR_REACTION_Warning"/>
+          </Assignments>
+        </ValueItem>
+
+		<ValueItem ID="ENUM_UMC100_TEMP_TYPE">
+          <Assignments>
+            <Assign Content="0" TextId="ENUM_UMC100_TEMP_TYPE_Thermistor_(PTC)"/>
+            <Assign Content="1" TextId="ENUM_UMC100_TEMP_TYPE_Pt100,_-50_C...+400_C"/>
+			<Assign Content="2" TextId="ENUM_UMC100_TEMP_TYPE_Pt1000,_-50_C...+400_C"/>
+			<Assign Content="3" TextId="ENUM_UMC100_TEMP_TYPE_Ni1000,_-50_C...+150_C"/>
+          </Assignments>
+        </ValueItem>
+
+		<ValueItem ID="ENUM_UMC100_SAMPLE_MODE_CURRENT">
+          <Assignments>
+            <Assign Content="0" TextId="ENUM_UMC100_SAMPLE_MODE_CURRENT_Disabled"/>
+            <Assign Content="1" TextId="ENUM_UMC100_SAMPLE_MODE_CURRENT_Motor_Start_up"/>
+			<Assign Content="2" TextId="ENUM_UMC100_SAMPLE_MODE_CURRENT_Stop_at_Trip_Restart_after_Read"/>
+          </Assignments>
+        </ValueItem>
+
+		<ValueItem ID="ENUM_UMC100_POWER_SCALE_FACTOR">
+          <Assignments>
+            <Assign Content="0" TextId="ENUM_UMC100_POWER_SCALE_FACTOR_PowerScaleFactor1"/>
+            <Assign Content="1" TextId="ENUM_UMC100_POWER_SCALE_FACTOR_PowerScaleFactor10"/>
+			<Assign Content="2" TextId="ENUM_UMC100_POWER_SCALE_FACTOR_PowerScaleFactor100"/>
+			<Assign Content="3" TextId="ENUM_UMC100_POWER_SCALE_FACTOR_PowerScaleFactor1000"/>
+          </Assignments>
+        </ValueItem>
+
+		<ValueItem ID="ENUM_UMC100_PASSWORD_PROTECTION">
+          <Assignments>
+            <Assign Content="0" TextId="ENUM_UMC100_PASSWORD_PROTECTION_Off"/>
+            <Assign Content="1" TextId="ENUM_UMC100_PASSWORD_PROTECTION_On_for_Parameters"/>
+			<Assign Content="2" TextId="ENUM_UMC100_PASSWORD_PROTECTION_On_for_Param_Motor_Control"/>
+          </Assignments>
+        </ValueItem>
+
+		<ValueItem ID="ENUM_UMC100_ENABLE_VOLTAGE_DIP">
+          <Assignments>
+            <Assign Content="0" TextId="ENUM_UMC100_ENABLE_VOLTAGE_DIP_Off"/>
+            <Assign Content="1" TextId="ENUM_UMC100_ENABLE_VOLTAGE_DIP_On"/>
+			<Assign Content="2" TextId="ENUM_UMC100_ENABLE_VOLTAGE_DIP_On_Rapid_Cycle_Lockout"/>
+          </Assignments>
+        </ValueItem>
+
+		<ValueItem ID="ENUM_UMC100_TRIGGER_POS_NEG">
+          <Assignments>
+            <Assign Content="0" TextId="ENUM_UMC100_TRIGGER_POS_NEG_Pos_Edge"/>
+            <Assign Content="1" TextId="ENUM_UMC100_TRIGGER_POS_NEG_Neg_Edge"/>
+          </Assignments>
+        </ValueItem>
+
+        <ValueItem ID="ENUM_UMC100_CHECK_PHASE_SEQUENCE">
+          <Assignments>
+            <Assign Content="0" TextId="ENUM_ENTRY_UMC100_CHECK_PHASE_SEQUENCE_DISABLED"/>
+            <Assign Content="1" TextId="ENUM_ENTRY_UMC100_CHECK_PHASE_SEQUENCE_TRIP"/>
+            <Assign Content="2" TextId="ENUM_ENTRY_UMC100_CHECK_PHASE_SEQUENCE_WARNING"/>
+          </Assignments>
+        </ValueItem>
+
+        <ValueItem ID="ENUM_UMC100_COOLING_MODE">
+          <Assignments>
+            <Assign Content="0" TextId="ENUM_ENTRY_UMC100_COOLING_MODE_TIME"/>
+            <Assign Content="1" TextId="ENUM_ENTRY_UMC100_COOLING_MODE_X_THERMAL_LOAD"/>
+          </Assignments>
+        </ValueItem>
+
+        <ValueItem ID="ENUM_UMC100_AUX_INP_REACTION">
+          <Assignments>
+            <Assign Content="0" TextId="ENUM_UMC100_AUX_INP_REACTION_DISABLED"/>
+            <Assign Content="1" TextId="ENUM_UMC100_AUX_INP_REACTION_FAULT_NC_MOTOR_IN_ON_OFF"/>
+            <Assign Content="2" TextId="ENUM_UMC100_AUX_INP_REACTION_FAULT_NO_MOTOR_IN_ON_OFF"/>
+            <Assign Content="3" TextId="ENUM_UMC100_AUX_INP_REACTION_FAULT_NC_MOTOR_IN_ON"/>
+            <Assign Content="4" TextId="ENUM_UMC100_AUX_INP_REACTION_FAULT_NO_MOTOR_IN_ON"/>
+            <Assign Content="5" TextId="ENUM_UMC100_AUX_INP_REACTION_WARNING_NC_MOTOR_IN_ON_OFF"/>
+            <Assign Content="6" TextId="ENUM_UMC100_AUX_INP_REACTION_WARNING_NO_MOTOR_IN_ON_OFF"/>
+            <Assign Content="7" TextId="ENUM_UMC100_AUX_INP_REACTION_WARNING_NC_MOTOR_IN_ON"/>
+            <Assign Content="8" TextId="ENUM_UMC100_AUX_INP_REACTION_WARNING_NO_MOTOR_IN_ON"/>
+          </Assignments>
+        </ValueItem>
+
+        <ValueItem ID="ENUM_UMC100_NUMBER_OF_PHASES">
+          <Assignments>
+            <Assign Content="0" TextId="ENUM_ENTRY_UMC100_NUMBER_OF_PHASES_3"/>
+            <Assign Content="1" TextId="ENUM_ENTRY_UMC100_NUMBER_OF_PHASES_1"/>
+          </Assignments>
+        </ValueItem>
+
+        <ValueItem ID="ENUM_UMC100_AM_MODE">
+          <Assignments>
+            <Assign Content="0" TextId="ENUM_ENTRY_UMC100_AM_MODE_TEMPERATURE"/>
+            <Assign Content="1" TextId="ENUM_ENTRY_UMC100_AM_MODE_UNIVERSAL"/>
+          </Assignments>
+        </ValueItem>
+
+        <ValueItem ID="ENUM_UMC100_AM_CH_TYPE">
+          <Assignments>
+            <Assign Content="0" TextId="ENUM_ENTRY_UMC100_AM_CH_TYPE_DISABLED"/>
+            <Assign Content="1" TextId="ENUM_ENTRY_UMC100_AM_CH_TYPE_PT100_-50..+400_2WIRE"/>
+            <Assign Content="2" TextId="ENUM_ENTRY_UMC100_AM_CH_TYPE_PT100_-50..+400_3WIRE"/>
+            <Assign Content="3" TextId="ENUM_ENTRY_UMC100_AM_CH_TYPE_PT100_-50..+70_2WIRE"/>
+            <Assign Content="4" TextId="ENUM_ENTRY_UMC100_AM_CH_TYPE_PT100_-50..+70_3WIRE"/>
+            <Assign Content="5" TextId="ENUM_ENTRY_UMC100_AM_CH_TYPE_PT1000_-50..+400_2WIRE"/>
+            <Assign Content="6" TextId="ENUM_ENTRY_UMC100_AM_CH_TYPE_PT1000_-50..+400_3WIRE"/>
+            <Assign Content="7" TextId="ENUM_ENTRY_UMC100_AM_CH_TYPE_KTY83_-50..+175"/>
+            <Assign Content="8" TextId="ENUM_ENTRY_UMC100_AM_CH_TYPE_KTY84_-40..+300"/>
+            <Assign Content="9" TextId="ENUM_ENTRY_UMC100_AM_CH_TYPE_NTC_+80..+160"/>
+            <Assign Content="10" TextId="ENUM_ENTRY_UMC100_AM_CH_TYPE_0..10V"/>
+            <Assign Content="11" TextId="ENUM_ENTRY_UMC100_AM_CH_TYPE_0..20mA"/>
+            <Assign Content="12" TextId="ENUM_ENTRY_UMC100_AM_CH_TYPE_4..20mA"/>
+          </Assignments>
+        </ValueItem>
+
+        <ValueItem ID="ENUM_UMC100_TEMP_UNIT">
+          <Assignments>
+            <Assign Content="0" TextId="ENUM_ENTRY_UMC100_TEMP_UNIT_CELSIUS"/>
+            <Assign Content="1" TextId="ENUM_ENTRY_UMC100_TEMP_UNIT_FAHRENHEIT"/>
+          </Assignments>
+        </ValueItem>
+
+      </ValueList>
+	<!-- Diagnosis channels description -->
+	<ChannelDiagList>
+		<!-- PNQ diagnosis 0x0020 - configuration problems diagnosis -->
+		<ChannelDiagItem ErrorType="32">
+			<Name TextId="PNQ22_Error"/>
+			<ExtChannelDiagList>
+				<!-- Slot 1 wrong address and wrong product code-->
+				<ExtChannelDiagItem ErrorType="257">
+					<Name TextId="ConfigDiag_WrongAddress_Slot1"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType="258">
+					<Name TextId="ConfigDiag_WrongProductCode_Slot1"/>
+					</ExtChannelDiagItem>
+				<!-- Slot 2 wrong address and wrong product code-->
+				<ExtChannelDiagItem ErrorType="513">
+					<Name TextId="ConfigDiag_WrongAddress_Slot2"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType="541">
+					<Name TextId="ConfigDiag_WrongProductCode_Slot2"/>
+				</ExtChannelDiagItem>
+				<!-- Slot 3 wrong address and wrong product code-->
+				<ExtChannelDiagItem ErrorType="769">
+					<Name TextId="ConfigDiag_WrongAddress_Slot3"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType="770">
+					<Name TextId="ConfigDiag_WrongProductCode_Slot3"/>
+				</ExtChannelDiagItem>
+				<!-- Slot 4 wrong address and wrong product code-->
+				<ExtChannelDiagItem ErrorType="1025">
+					<Name TextId="ConfigDiag_WrongAddress_Slot4"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType="1026">
+					<Name TextId="ConfigDiag_WrongProductCode_Slot4"/>
+				</ExtChannelDiagItem>
+			</ExtChannelDiagList>
+		</ChannelDiagItem>
+
+		<!-- UMC100-FBP Diag -->
+	  	<ChannelDiagItem ErrorType="11200">
+			<Name TextId="UMC100_Error"/>
+			<ExtChannelDiagList>
+				<ExtChannelDiagItem ErrorType="1">
+					<Name TextId="Thermal_Overload_Trip"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType="2">
+					<Name TextId="Phase_Loss"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType="3">
+					<Name TextId="Phase_Imbalance"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType="4">
+					<Name TextId="Locked_Rotor"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType="5">
+					<Name TextId="Thermal_Load_Prewarn"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType="6">
+					<Name TextId="PTC_Temperature_High"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType="7">
+					<Name TextId="PTC_Wiring_Problem"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType="8">
+					<Name TextId="Check-Back_Error"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType="9">
+					<Name TextId="I_below_Trip_Level"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType="10">
+					<Name TextId="I_below_Warn_Level"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType="11">
+					<Name TextId="I_above_Trip_Level"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType="12">
+					<Name TextId="I_above_Warn_Level"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType="13">
+					<Name TextId="Earthfault_Trip"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType="14">
+					<Name TextId="Earthfault_Warning"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType="15">
+					<Name TextId="UMC_Selftest_Error"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType="16">
+					<Name TextId="Actuator"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType="17">
+					<Name TextId="IO-Module_Missing"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType="18">
+					<Name TextId="Application_Error"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType="19">
+					<Name TextId="IO-Module_Warning/Error"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType="20">
+					<Name TextId="Auxiliary_Input_1"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType="21">
+					<Name TextId="Auxiliary_Input_2"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType="22">
+					<Name TextId="Auxiliary_Input_3"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType="23">
+					<Name TextId="Auxiliary_Input_4"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType="24">
+					<Name TextId="Auxiliary_Input_5"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType="25">
+					<Name TextId="Auxiliary_Input_6"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType="26">
+					<Name TextId="Ext_Fault_Multif_DI0"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType="27">
+					<Name TextId="Ext_Fault_Multif_DI1"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType="28">
+					<Name TextId="Ext_Fault_Multif_DI2"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType="29">
+					<Name TextId="T0_above_Trip_Limit"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType="30">
+					<Name TextId="T0_Warning"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType="31">
+					<Name TextId="T1_above_Trip_Limit"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType="32">
+					<Name TextId="T1_Warning"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType="33">
+					<Name TextId="T2_above_Trip_Limit"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType="34">
+					<Name TextId="T2_Warning"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType="35">
+					<Name TextId="Underload_Power"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType="36">
+					<Name TextId="Overload_Power"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType="37">
+					<Name TextId="Voltage_out_of_spec"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType="38">
+					<Name TextId="THD_Warning"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType="44">
+					<Name TextId="Num_Starts_Overrun"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType="45">
+					<Name TextId="Just_one_start_left"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType="46">
+					<Name TextId="Cooling_Time_Running"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType="55">
+					<Name TextId="Parameter_out_of_range"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType="56">
+					<Name TextId="Ext_Diag_Available"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType="57">
+					<Name TextId="Bit0_ext_UMC-Diagnosis"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType="58">
+					<Name TextId="Bit1_ext_UMC-Diagnosis"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType="59">
+					<Name TextId="Bit2_ext_UMC-Diagnosis"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType="60">
+					<Name TextId="Bit3_ext_UMC-Diagnosis"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType="61">
+					<Name TextId="Bit4_ext_UMC-Diagnosis"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType="62">
+					<Name TextId="Bit5_ext_UMC-Diagnosis"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType="63">
+					<Name TextId="Bit6_ext_UMC-Diagnosis"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType="64">
+					<Name TextId="Bit7_ext_UMC-Diagnosis"/>
+				</ExtChannelDiagItem>
+			</ExtChannelDiagList>
+		</ChannelDiagItem>
+
+		<!-- UMC100.3 Diag -->
+		<ChannelDiagItem ErrorType="11201">
+			<Name TextId="UMC100.3_Error"/>
+			<ExtChannelDiagList>
+				<ExtChannelDiagItem ErrorType=" 1 ">
+					<Name TextId="Thermal_Overload_Trip"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType=" 2 ">
+					<Name TextId="Phase_Loss"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType=" 3 ">
+					<Name TextId="Phase_Imbalance"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType=" 4 ">
+					<Name TextId="Locked_Rotor"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType=" 5 ">
+					<Name TextId="Thermal_Load_Prewarn"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType=" 6 ">
+					<Name TextId="PTC_Temperature_High"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType=" 7 ">
+					<Name TextId="PTC_Wiring_Problem"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType=" 8 ">
+					<Name TextId="Check-Back_Error"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType=" 9 ">
+					<Name TextId="I_below_Trip_Level"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType=" 10 ">
+					<Name TextId="I_below_Warn_Level"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType=" 11 ">
+					<Name TextId="I_above_Trip_Level"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType=" 12 ">
+					<Name TextId="I_above_Warn_Level"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType=" 13 ">
+					<Name TextId="Earthfault_Trip"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType=" 14 ">
+					<Name TextId="Earthfault_Warning"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType=" 15 ">
+					<Name TextId="UMC_Selftest_Error"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType=" 16 ">
+					<Name TextId="Actuator"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType=" 17 ">
+					<Name TextId="IO-Module_Missing"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType=" 18 ">
+					<Name TextId="Application_Error"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType=" 19 ">
+					<Name TextId="IO-Module_Warning/Error"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType=" 20 ">
+					<Name TextId="Auxiliary_Input_1"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType=" 21 ">
+					<Name TextId="Auxiliary_Input_2"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType=" 22 ">
+					<Name TextId="Auxiliary_Input_3"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType=" 23 ">
+					<Name TextId="Auxiliary_Input_4"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType=" 24 ">
+					<Name TextId="Auxiliary_Input_5"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType=" 25 ">
+					<Name TextId="Auxiliary_Input_6"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType=" 26 ">
+					<Name TextId="Ext_Fault_Multif_DI0"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType=" 27 ">
+					<Name TextId="Ext_Fault_Multif_DI1"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType=" 28 ">
+					<Name TextId="Ext_Fault_Multif_DI2"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType=" 29 ">
+					<Name TextId="AM1_above_Trip_Level"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType=" 30 ">
+					<Name TextId="AM1_above_Warn_Level"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType=" 31 ">
+					<Name TextId="AM2_above_Trip_Level"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType=" 32 ">
+					<Name TextId="AM2_above_Warn_Level"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType=" 33 ">
+					<Name TextId="LCD_Panel_missing"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType=" 35 ">
+					<Name TextId="Underload_Power"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType=" 36 ">
+					<Name TextId="Overload_Power"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType=" 37 ">
+					<Name TextId="Voltage_out_of_spec"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType=" 38 ">
+					<Name TextId="THD_Warning"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType=" 44 ">
+					<Name TextId="Num_Starts_Overrun"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType=" 45 ">
+					<Name TextId="Just_one_start_left"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType=" 46 ">
+					<Name TextId="Cooling_Time_Running"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType=" 55 ">
+					<Name TextId="Parameter_out_of_range"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType=" 56 ">
+					<Name TextId="Ext_Diag_Available"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType=" 57 ">
+					<Name TextId="Bit0_ext_UMC-Diagnosis"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType=" 58 ">
+					<Name TextId="Bit1_ext_UMC-Diagnosis"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType=" 59 ">
+					<Name TextId="Bit2_ext_UMC-Diagnosis"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType=" 60 ">
+					<Name TextId="Bit3_ext_UMC-Diagnosis"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType=" 61 ">
+					<Name TextId="Bit4_ext_UMC-Diagnosis"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType=" 62 ">
+					<Name TextId="Bit5_ext_UMC-Diagnosis"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType=" 63 ">
+					<Name TextId="Bit6_ext_UMC-Diagnosis"/>
+				</ExtChannelDiagItem>
+				<ExtChannelDiagItem ErrorType=" 64 ">
+					<Name TextId="Bit7_ext_UMC-Diagnosis"/>
+				</ExtChannelDiagItem>
+			</ExtChannelDiagList>
+		</ChannelDiagItem>
+	</ChannelDiagList>
+
+	<GraphicsList>
+        <GraphicItem GraphicFile="GSDML-001A-0020-PNQ22-IMG" ID="1"/>
+		<GraphicItem GraphicFile="GSDML-001A-0020-UMC100-IMG" ID="2"/>
+		<GraphicItem GraphicFile="GSDML-001A-0020-UMC100_3-IMG" ID="3"/>
+        <GraphicItem GraphicFile="GSDML-001A-0020-PNQ22-ICO" ID="4"/>
+		<GraphicItem GraphicFile="GSDML-001A-0020-UMC100-ICO" ID="5"/>
+		<GraphicItem GraphicFile="GSDML-001A-0020-UMC100_3-ICO" ID="6"/>
+    </GraphicsList>
+
+	<CategoryList>
+        <CategoryItem ID="GENERAL_DATA" TextId="GENERAL_DATA"/>
+        <CategoryItem ID="GENERAL_DATA_FBP" TextId="GENERAL_DATA_FBP"/>
+        <CategoryItem ID="GENERAL_DATA_DAP" TextId="GENERAL_DATA_DAP"/>
+        <CategoryItem ID="Data" TextId="Data"/>
+        <CategoryItem ID="Para" TextId="Para"/>
+        <CategoryItem ID="UMC100" TextId="UMC100"/>
+        <CategoryItem ID="UMC100.3" TextId="UMC100.3"/>
+        <CategoryItem ID="EmptySlot" TextId="EmptySlot"/>
+      </CategoryList>
+	<!-- List of strings used in GSDML -->
+	<ExternalTextList>
+        <PrimaryLanguage>
+			<!-- PNQ general data-->
+			<Text TextId="GENERAL_DATA" Value="General config"/>
+
+			<Text TextId="GENERAL_DATA_DAP" Value="Device configuration"/>
+
+			<Text TextId="GENERAL_DATA_FBP" Value="FieldbusPlug"/>
+			<Text TextId="GENERAL_DATA_FBP_1" Value="PNQ22 Configuration"/>
+			<Text TextId="GENERAL_DATA_FBP_INFO" Value="FieldbusPlug configuration"/>
+
+			<!-- DAP (PNQ22) -->
+			<Text TextId="DAP_Name" Value="PNQ22" />
+			<Text TextId="DAP_V2_0_Name" Value="PNQ22 V2.0"/>
+			<Text TextId="DAP_Info" Value="PROFINET IO FieldbusPlug with 4 ports"/>
+			<Text TextId="DEVICE_DESCRIPTION" Value="PNQ22 Profinet to FieldbusPlug gateway"/>
+			<!-- SystemDefinedSubmoduleList -->
+			<Text TextId="Port1" Value="Port1"/>
+			<Text TextId="Port2" Value="Port2"/>
+			<Text TextId="PN-IO" Value="PN-IO"/>
+			<Text TextId="X1" Value="X1"/>
+			<Text TextId="X1P1" Value="X1P1"/>
+			<Text TextId="X1P2" Value="X1P2"/>
+
+			<!-- Module / Sub module-->
+			<Text TextId="EmptySlot" Value="Empty Slot"/>
+
+			<!-- Enumerations -->
+			<!-- General purpose enums -->
+			<Text TextId="ENUM_ENTRY_On" Value="On"/>
+			<Text TextId="ENUM_ENTRY_Off" Value="Off"/>
+			<Text TextId="ENUM_ENTRY_YES" Value="Yes"/>
+			<Text TextId="ENUM_ENTRY_NO" Value="No"/>
+			<Text TextId="ENUM_ENTRY_ERROR" Value="Error"/>
+			<Text TextId="ENUM_ENTRY_TRIP" Value="Trip"/>
+			<Text TextId="ENUM_ENTRY_WARNING" Value="Warning"/>
+			<Text TextId="ENUM_ENTRY_DISABLE" Value="Disabled"/>
+
+			<!-- GENERAL Port setting enums -->
+			<Text TextId="ENUM_ENTRY_Port_Spare" Value="Spare Port"/>
+			<Text TextId="ENUM_ENTRY_Port_Used" Value="Port Active"/>
+
+			<Text TextId="ENUM_ENTRY_DiagType_Standard" Value="Standard"/>
+			<Text TextId="ENUM_ENTRY_DiagType_SoE" Value="SoE"/>
+
+			<Text TextId="ENUM_ENTRY_Writing_Enabled" Value="Enabled"/>
+			<Text TextId="ENUM_ENTRY_Writing_Disabled" Value="Disabled"/>
+
+			<Text TextId="ConfigDiag_WrongAddress_Slot1" Value="Wrong FPB address on Slot 1"/>
+			<Text TextId="ConfigDiag_WrongAddress_Slot2" Value="Wrong FPB address on Slot 2"/>
+			<Text TextId="ConfigDiag_WrongAddress_Slot3" Value="Wrong FPB address on Slot 3"/>
+			<Text TextId="ConfigDiag_WrongAddress_Slot4" Value="Wrong FPB address on Slot 4"/>
+			<Text TextId="ConfigDiag_WrongProductCode_Slot1" Value="Wrong FBP device on Slot 1"/>
+			<Text TextId="ConfigDiag_WrongProductCode_Slot2" Value="Wrong FBP device on Slot 2"/>
+			<Text TextId="ConfigDiag_WrongProductCode_Slot3" Value="Wrong FBP device on Slot 3"/>
+			<Text TextId="ConfigDiag_WrongProductCode_Slot4" Value="Wrong FBP device on Slot 4"/>
+
+			<Text TextId="Thermal_Overload_Trip" Value="Thermal Overload Trip"/>
+			<Text TextId="Phase_Loss" Value="Phase Loss"/>
+			<Text TextId="Phase_Imbalance" Value="Phase Imbalance"/>
+			<Text TextId="Locked_Rotor" Value="Locked Rotor"/>
+			<Text TextId="Thermal_Load_Prewarn" Value="Thermal Load Prewarn."/>
+			<Text TextId="PTC_Temperature_High" Value="PTC Temperature High"/>
+			<Text TextId="PTC_Wiring_Problem" Value="PTC Wiring Problem"/>
+			<Text TextId="Check-Back_Error" Value="Check-Back Error"/>
+			<Text TextId="I_below_Trip_Level" Value="I below Trip Level"/>
+			<Text TextId="I_below_Warn_Level" Value="I below Warn Level"/>
+			<Text TextId="I_above_Trip_Level" Value="I above Trip Level"/>
+			<Text TextId="I_above_Warn_Level" Value="I above Warn Level"/>
+			<Text TextId="Earthfault_Trip" Value="Earthfault Trip"/>
+			<Text TextId="Earthfault_Warning" Value="Earthfault Warning"/>
+			<Text TextId="UMC_Selftest_Error" Value="UMC Selftest Error"/>
+			<Text TextId="Actuator" Value="Actuator"/>
+			<Text TextId="IO-Module_Missing" Value="IO-Module Missing"/>
+			<Text TextId="Application_Error" Value="Application Error"/>
+			<Text TextId="IO-Module_Warning/Error" Value="IO-Module Warning/Error"/>
+			<Text TextId="Auxiliary_Input_1" Value="Auxiliary Input 1"/>
+			<Text TextId="Auxiliary_Input_2" Value="Auxiliary Input 2"/>
+			<Text TextId="Auxiliary_Input_3" Value="Auxiliary Input 3"/>
+			<Text TextId="Auxiliary_Input_4" Value="Auxiliary Input 4"/>
+			<Text TextId="Auxiliary_Input_5" Value="Auxiliary Input 5"/>
+			<Text TextId="Auxiliary_Input_6" Value="Auxiliary Input 6"/>
+			<Text TextId="Ext_Fault_Multif_DI0" Value="Ext. Fault Multif. DI0"/>
+			<Text TextId="Ext_Fault_Multif_DI1" Value="Ext. Fault Multif. DI1"/>
+			<Text TextId="Ext_Fault_Multif_DI2" Value="Ext. Fault Multif. DI2"/>
+			<Text TextId="T0_above_Trip_Limit" Value="T0 above Trip Limit"/>
+			<Text TextId="T0_Warning" Value="T0 Warning"/>
+			<Text TextId="T1_above_Trip_Limit" Value="T1 above Trip Limit"/>
+			<Text TextId="T1_Warning" Value="T1 Warning"/>
+			<Text TextId="T2_above_Trip_Limit" Value="T2 above Trip Limit"/>
+			<Text TextId="T2_Warning" Value="T2 Warning"/>
+			<Text TextId="AM1_above_Trip_Level" Value="AM1 &gt;/&lt; Trip Level"/>
+			<Text TextId="AM1_above_Warn_Level" Value="AM1 &gt;/&lt; Warn Level"/>
+			<Text TextId="AM2_above_Trip_Level" Value="AM2 &gt;/&lt; Trip Level"/>
+			<Text TextId="AM2_above_Warn_Level" Value="AM2 &gt;/&lt; Warn Level"/>
+			<Text TextId="Underload_Power" Value="Underload Power"/>
+			<Text TextId="LCD_Panel_missing" Value="LCD Panel missing"/>
+			<Text TextId="Overload_Power" Value="Overload Power"/>
+			<Text TextId="Voltage_out_of_spec" Value="Voltage out of spec."/>
+			<Text TextId="THD_Warning" Value="THD Warning"/>
+			<Text TextId="Num_Starts_Overrun" Value="Num Starts Overrun"/>
+			<Text TextId="Just_one_start_left" Value="Just one start left"/>
+			<Text TextId="Cooling_Time_Running" Value="Cooling Time Running"/>
+			<Text TextId="Parameter_out_of_range" Value="Parameter out of range"/>
+			<Text TextId="Ext_Diag_Available" Value="Ext. Diag. Available"/>
+			<Text TextId="Bit0_ext_UMC-Diagnosis" Value="Bit0 ext. UMC-Diagnosis"/>
+			<Text TextId="Bit1_ext_UMC-Diagnosis" Value="Bit1 ext. UMC-Diagnosis"/>
+			<Text TextId="Bit2_ext_UMC-Diagnosis" Value="Bit2 ext. UMC-Diagnosis"/>
+			<Text TextId="Bit3_ext_UMC-Diagnosis" Value="Bit3 ext. UMC-Diagnosis"/>
+			<Text TextId="Bit4_ext_UMC-Diagnosis" Value="Bit4 ext. UMC-Diagnosis"/>
+			<Text TextId="Bit5_ext_UMC-Diagnosis" Value="Bit5 ext. UMC-Diagnosis"/>
+			<Text TextId="Bit6_ext_UMC-Diagnosis" Value="Bit6 ext. UMC-Diagnosis"/>
+			<Text TextId="Bit7_ext_UMC-Diagnosis" Value="Bit7 ext. UMC-Diagnosis"/>
+
+
+			<!-- ========================================================================================= -->
+			<!-- ** UMC 100                                                                             ** -->
+			<!-- ========================================================================================= -->
+			<!-- Enums for UMC100 -->
+			<Text TextId="ENUM_ENTRY_LANGUAGE_English" Value="English"/>
+			<Text TextId="ENUM_ENTRY_LANGUAGE_Deutsch" Value="Deutsch"/>
+			<Text TextId="ENUM_ENTRY_LANGUAGE_Francais" Value="Francais"/>
+			<Text TextId="ENUM_ENTRY_LANGUAGE_Espanol" Value="Espanol"/>
+			<Text TextId="ENUM_ENTRY_LANGUAGE_Italiano" Value="Italiano"/>
+			<Text TextId="ENUM_ENTRY_LANGUAGE_Portugues" Value="Portugues"/>
+			<Text TextId="ENUM_ENTRY_LANGUAGE_Russian" Value="Russian"/>
+			<Text TextId="ENUM_ENTRY_LANGUAGE_Polish" Value="Polish"/>
+
+			<Text TextId="ENUM_ENTRY_MULTIF_Off" Value="Off"/>
+			<Text TextId="ENUM_ENTRY_MULTIF_Stop_(NC)" Value="Stop (NC)"/>
+			<Text TextId="ENUM_ENTRY_MULTIF_Stop_(NO)" Value="Stop (NO)"/>
+			<Text TextId="ENUM_ENTRY_MULTIF_Ext._Flt_(NC)_always" Value="Ext. Flt (NC) always"/>
+			<Text TextId="ENUM_ENTRY_MULTIF_Ext._Flt_(NO)_always" Value="Ext. Flt (NO) always"/>
+			<Text TextId="ENUM_ENTRY_MULTIF_Ext._Flt_(NC)_Motor_on" Value="Ext. Flt (NC) Motor on"/>
+			<Text TextId="ENUM_ENTRY_MULTIF_Ext._Flt_(NO)_Motor_on" Value="Ext. Flt (NO) Motor on"/>
+			<Text TextId="ENUM_ENTRY_MULTIF_Prep._emerg._Start_(NC)" Value="Prep. emerg. Start (NC)"/>
+			<Text TextId="ENUM_ENTRY_MULTIF_Prep._emerg._Start_(NO)" Value="Prep. emerg. Start (NO)"/>
+			<Text TextId="ENUM_ENTRY_MULTIF_Testposition_(NC)" Value="Testposition (NC)"/>
+			<Text TextId="ENUM_ENTRY_MULTIF_Testposition_(NO)" Value="Testposition (NO)"/>
+			<Text TextId="ENUM_ENTRY_MULTIF_Force_local_(NC)" Value="Force local (NC)"/>
+			<Text TextId="ENUM_ENTRY_MULTIF_Force_local-(NO)" Value="Force local (NO)"/>
+			<Text TextId="ENUM_ENTRY_MULTIF_Fault_reset_(NC)" Value="Fault reset (NC)"/>
+			<Text TextId="ENUM_ENTRY_MULTIF_Fault_reset_(NO)" Value="Fault reset (NO)"/>
+			<Text TextId="ENUM_ENTRY_MULTIF_Voltage_DIP_(NC)" Value="Voltage DIP (NC)"/>
+			<Text TextId="ENUM_ENTRY_MULTIF_Voltage_DIP-(NO)" Value="Voltage DIP (NO)"/>
+			<Text TextId="ENUM_ENTRY_MULTIF_CEM11_always_(Warning)" Value="CEM11 always (Warning)"/>
+			<Text TextId="ENUM_ENTRY_MULTIF_CEM11_after startup_(Warning)" Value="CEM11 after startup (Warning)"/>
+			<Text TextId="ENUM_ENTRY_MULTIF_CEM11_always (Fault)" Value="CEM11 always (Fault)"/>
+			<Text TextId="ENUM_ENTRY_MULTIF_CEM11_after_startup_time_(Fault)" Value="CEM11 after startup time (Fault)"/>
+
+
+			<Text TextId="ENUM_ENTRY_UMC100_BUS_FAULT_MOTOR_OFF" Value="Motor Off"/>
+			<Text TextId="ENUM_ENTRY_UMC100_BUS_FAULT_RETAIN" Value="Retain"/>
+			<Text TextId="ENUM_ENTRY_UMC100_BUS_FAULT_START_FORWARD" Value="Start Forward"/>
+			<Text TextId="ENUM_ENTRY_UMC100_BUS_FAULT_START_REVERSE" Value="Start Reverse"/>
+
+			<Text TextId="ENUM_ENTRY_UMC100_EARTH_FAULT_ALWAYS" Value="Always"/>
+			<Text TextId="ENUM_ENTRY_UMC100_EARTH_FAULT_AFTER_STARTUP" Value="After Startup"/>
+
+			<Text TextId="ENUM_ENTRY_UMC100_CONTROL_FUNCTION_TRANSPARENT" Value="Transparent"/>
+			<Text TextId="ENUM_ENTRY_UMC100_CONTROL_FUNCTION_OVERLOAD_RELAY" Value="Overload Relay"/>
+			<Text TextId="ENUM_ENTRY_UMC100_CONTROL_FUNCTION_DIRECT_STARTER" Value="Direct Starter"/>
+			<Text TextId="ENUM_ENTRY_UMC100_CONTROL_FUNCTION_REVERSE_STARTER" Value="Reverse Starter"/>
+			<Text TextId="ENUM_ENTRY_UMC100_CONTROL_FUNCTION_STAR_DELTA_STARTER" Value="Star-delta Starter"/>
+			<Text TextId="ENUM_ENTRY_UMC100_CONTROL_FUNCTION_POLE_CHANGING_STARTER" Value="Pole-Changing Starter"/>
+			<Text TextId="ENUM_ENTRY_UMC100_CONTROL_FUNCTION_ACTUATOR_1" Value="Actuator 1"/>
+			<Text TextId="ENUM_ENTRY_UMC100_CONTROL_FUNCTION_ACTUATOR_2" Value="Actuator 2"/>
+			<Text TextId="ENUM_ENTRY_UMC100_CONTROL_FUNCTION_ACTUATOR_3" Value="Actuator 3"/>
+			<Text TextId="ENUM_ENTRY_UMC100_CONTROL_FUNCTION_ACTUATOR_4" Value="Actuator 4"/>
+			<Text TextId="ENUM_ENTRY_UMC100_CONTROL_FUNCTION_SOFTSTARTER" Value="Softstarter"/>
+
+			<Text TextId="ENUM_ENTRY_UMC100_CHECK_BACK_CONTACT_DI0" Value="Contact DI0"/>
+			<Text TextId="ENUM_ENTRY_UMC100_CHECK_BACK_CURRENT" Value="Current"/>
+			<Text TextId="ENUM_ENTRY_UMC100_CHECK_BACK_SIMULATION" Value="Simulation"/>
+
+			<Text TextId="ENUM_ENTRY_UMC100_YD_CHANGE_OVER_MODE_TIME" Value="Time"/>
+			<Text TextId="ENUM_ENTRY_UMC100_YD_CHANGE_OVER_MODE_CURRENT" Value="Current"/>
+
+			<Text TextId="ENUM_ENTRY_UMC100_FAULT_OUTPUT_OFF" Value="Off"/>
+			<Text TextId="ENUM_ENTRY_UMC100_FAULT_OUTPUT_FLASH_DO2" Value="Flash DO2"/>
+			<Text TextId="ENUM_ENTRY_UMC100_FAULT_OUTPUT_ON_DO2" Value="On DO2"/>
+			<Text TextId="ENUM_ENTRY_UMC100_FAULT_OUTPUT_INVERT_DO2" Value="Invert DO2"/>
+			<Text TextId="ENUM_ENTRY_UMC100_FAULT_OUTPUT_FLASH_DO3" Value="Flash DO3"/>
+			<Text TextId="ENUM_ENTRY_UMC100_FAULT_OUTPUT_ON_DO3" Value="On DO3"/>
+			<Text TextId="ENUM_ENTRY_UMC100_FAULT_OUTPUT_INVERT_DO3" Value="Invert DO3"/>
+
+			<Text TextId="ENUM_ENTRY_UMC100_TRIP_CLASS_5" Value="Class 5"/>
+			<Text TextId="ENUM_ENTRY_UMC100_TRIP_CLASS_10" Value="Class 10"/>
+			<Text TextId="ENUM_ENTRY_UMC100_TRIP_CLASS_20" Value="Class 20"/>
+			<Text TextId="ENUM_ENTRY_UMC100_TRIP_CLASS_30" Value="Class 30"/>
+			<Text TextId="ENUM_ENTRY_UMC100_TRIP_CLASS_40" Value="Class 40"/>
+
+			<Text TextId="ENUM_ENTRY_UMC100_AUX_INP_ACK_MODE_MANUAL_RESET" Value="Manual reset"/>
+			<Text TextId="ENUM_ENTRY_UMC100_AUX_INP_ACK_MODE_AUTO_RESET" Value="Auto reset"/>
+
+			<Text TextId="ENUM_ENTRY_UMC100_PHASE_REVERSAL_PHASE_SEQUENCE_L1_L2_L3" Value="Phase Sequence L1 L2 L3"/>
+			<Text TextId="ENUM_ENTRY_UMC100_PHASE_REVERSAL_PHASE_SEQUENCE_L3_L2_L1" Value="Phase Sequence L3 L2 L1"/>
+
+			<Text TextId="ENUM_ENTRY_UMC100_USER_DISPLAY_TYPE_1_Thermal_Load" Value="Thermal Load"/>
+			<Text TextId="ENUM_ENTRY_UMC100_USER_DISPLAY_TYPE_1_DX1xx_DI" Value="DX1xx DI"/>
+			<Text TextId="ENUM_ENTRY_UMC100_USER_DISPLAY_TYPE_1_DX1xx_DO" Value="DX1xx DO"/>
+			<Text TextId="ENUM_ENTRY_UMC100_USER_DISPLAY_TYPE_1_Operating_Hours" Value="Operating Hours"/>
+			<Text TextId="ENUM_ENTRY_UMC100_USER_DISPLAY_TYPE_1_Number_of_Trips" Value="Number of Trips"/>
+			<Text TextId="ENUM_ENTRY_UMC100_USER_DISPLAY_TYPE_1_Number_of_Starts" Value="Number of Starts"/>
+			<Text TextId="ENUM_ENTRY_UMC100_USER_DISPLAY_TYPE_1_max._Startup_Current" Value="max. Startup Current"/>
+			<Text TextId="ENUM_ENTRY_UMC100_USER_DISPLAY_TYPE_1_Real_Startup_Time" Value="Real Startup Time"/>
+
+			<Text TextId="ENUM_UMC100_USER_DISPLAY_TYPE_2_Binary_0" Value="Binary 0"/>
+			<Text TextId="ENUM_UMC100_USER_DISPLAY_TYPE_2_Binary_1" Value="Binary 1"/>
+			<Text TextId="ENUM_UMC100_USER_DISPLAY_TYPE_2_Analog_0" Value="Analog 0"/>
+			<Text TextId="ENUM_UMC100_USER_DISPLAY_TYPE_2_Analog_1" Value="Analog 1"/>
+			<Text TextId="ENUM_UMC100_USER_DISPLAY_TYPE_2_Time_to_Trip" Value="Time to Trip"/>
+			<Text TextId="ENUM_UMC100_USER_DISPLAY_TYPE_2_Time_to_Cool" Value="Time to Cool"/>
+			<Text TextId="ENUM_UMC100_USER_DISPLAY_TYPE_2_Current_to_earth" Value="Current to earth"/>
+
+			<Text TextId="ENUM_UMC100_ANALOG_TYPE_0-20mA" Value="0-20mA"/>
+			<Text TextId="ENUM_UMC100_ANALOG_TYPE_4-20mA" Value="4-20mA"/>
+			<Text TextId="ENUM_UMC100_ANALOG_TYPE_0-10mA" Value="0-10mA"/>
+			<Text TextId="ENUM_UMC100_ANALOG_TYPE_0-10V" Value="0-10V"/>
+
+			<Text TextId="ENUM_UMC100_ANALOG_ERR_REACTION_Disabled" Value="Disabled"/>
+			<Text TextId="ENUM_UMC100_ANALOG_ERR_REACTION_Trip" Value="Trip"/>
+			<Text TextId="ENUM_UMC100_ANALOG_ERR_REACTION_Warning" Value="Warning"/>
+
+			<Text TextId="ENUM_UMC100_TEMP_TYPE_Thermistor_(PTC)" Value="Thermistor (PTC)"/>
+			<Text TextId="ENUM_UMC100_TEMP_TYPE_Pt100,_-50_C...+400_C" Value="Pt100, -50 C...+400 C"/>
+			<Text TextId="ENUM_UMC100_TEMP_TYPE_Pt1000,_-50_C...+400_C" Value="Pt1000, -50 C...+400 C"/>
+			<Text TextId="ENUM_UMC100_TEMP_TYPE_Ni1000,_-50_C...+150_C" Value="Ni1000, -50 C...+150 C"/>
+
+			<Text TextId="ENUM_UMC100_SAMPLE_MODE_CURRENT_Disabled" Value="Disabled"/>
+			<Text TextId="ENUM_UMC100_SAMPLE_MODE_CURRENT_Motor_Start_up" Value="Motor Start up"/>
+			<Text TextId="ENUM_UMC100_SAMPLE_MODE_CURRENT_Stop_at_Trip_Restart_after_Read" Value="Stop at Trip/Restart after Read"/>
+
+			<Text TextId="ENUM_UMC100_POWER_SCALE_FACTOR_PowerScaleFactor1" Value="PowerScaleFactor1"/>
+			<Text TextId="ENUM_UMC100_POWER_SCALE_FACTOR_PowerScaleFactor10" Value="PowerScaleFactor10"/>
+			<Text TextId="ENUM_UMC100_POWER_SCALE_FACTOR_PowerScaleFactor100" Value="PowerScaleFactor100"/>
+			<Text TextId="ENUM_UMC100_POWER_SCALE_FACTOR_PowerScaleFactor1000" Value="PowerScaleFactor1000"/>
+
+			<Text TextId="ENUM_UMC100_PASSWORD_PROTECTION_Off" Value="Off"/>
+			<Text TextId="ENUM_UMC100_PASSWORD_PROTECTION_On_for_Parameters" Value="On for Parameters"/>
+			<Text TextId="ENUM_UMC100_PASSWORD_PROTECTION_On_for_Param_Motor_Control" Value="On for Param. + Motor Control"/>
+
+			<Text TextId="ENUM_UMC100_ENABLE_VOLTAGE_DIP_Off" Value="Off"/>
+			<Text TextId="ENUM_UMC100_ENABLE_VOLTAGE_DIP_On" Value="On"/>
+			<Text TextId="ENUM_UMC100_ENABLE_VOLTAGE_DIP_On_Rapid_Cycle_Lockout" Value="On + Rapid Cycle Lockout"/>
+
+			<Text TextId="ENUM_UMC100_TRIGGER_POS_NEG_Pos_Edge" Value="Pos. Edge"/>
+			<Text TextId="ENUM_UMC100_TRIGGER_POS_NEG_Neg_Edge" Value="Neg. Edge"/>
+
+			<Text TextId="ENUM_ENTRY_UMC100_CHECK_PHASE_SEQUENCE_DISABLED" Value="Disabled"/>
+			<Text TextId="ENUM_ENTRY_UMC100_CHECK_PHASE_SEQUENCE_TRIP" Value="Trip"/>
+			<Text TextId="ENUM_ENTRY_UMC100_CHECK_PHASE_SEQUENCE_WARNING" Value="Warning"/>
+
+			<Text TextId="ENUM_ENTRY_UMC100_COOLING_MODE_TIME" Value="Time"/>
+			<Text TextId="ENUM_ENTRY_UMC100_COOLING_MODE_X_THERMAL_LOAD" Value="x% Therm. Load"/>
+
+			<Text TextId="ENUM_UMC100_AUX_INP_REACTION_DISABLED" Value="Disabled"/>
+			<Text TextId="ENUM_UMC100_AUX_INP_REACTION_FAULT_NC_MOTOR_IN_ON_OFF" Value="Fault (NC) Motor in On/Off"/>
+			<Text TextId="ENUM_UMC100_AUX_INP_REACTION_FAULT_NO_MOTOR_IN_ON_OFF" Value="Fault (NO) Motor in On/Off"/>
+			<Text TextId="ENUM_UMC100_AUX_INP_REACTION_FAULT_NC_MOTOR_IN_ON" Value="Fault (NC) Motor in On"/>
+			<Text TextId="ENUM_UMC100_AUX_INP_REACTION_FAULT_NO_MOTOR_IN_ON" Value="Fault (NO) Motor in On"/>
+			<Text TextId="ENUM_UMC100_AUX_INP_REACTION_WARNING_NC_MOTOR_IN_ON_OFF" Value="Warning (NC) Motor in On/Off"/>
+			<Text TextId="ENUM_UMC100_AUX_INP_REACTION_WARNING_NO_MOTOR_IN_ON_OFF" Value="Warning (NO) Motor in On/Off"/>
+			<Text TextId="ENUM_UMC100_AUX_INP_REACTION_WARNING_NC_MOTOR_IN_ON" Value="Warning (NC) Motor in On"/>
+			<Text TextId="ENUM_UMC100_AUX_INP_REACTION_WARNING_NO_MOTOR_IN_ON" Value="Warning (NO) Motor in On"/>
+
+			<Text TextId="ENUM_ENTRY_UMC100_NUMBER_OF_PHASES_3" Value="3 Phases"/>
+			<Text TextId="ENUM_ENTRY_UMC100_NUMBER_OF_PHASES_1" Value="1 Phase"/>
+
+			<Text TextId="ENUM_ENTRY_UMC100_AM_MODE_TEMPERATURE" Value="Temperature"/>
+			<Text TextId="ENUM_ENTRY_UMC100_AM_MODE_UNIVERSAL" Value="Universal"/>
+
+			<Text TextId="ENUM_ENTRY_UMC100_AM_CH_TYPE_DISABLED" Value="Disabled"/>
+			<Text TextId="ENUM_ENTRY_UMC100_AM_CH_TYPE_PT100_-50..+400_2WIRE" Value="PT100 -50 C...+400 C (2 wire)"/>
+			<Text TextId="ENUM_ENTRY_UMC100_AM_CH_TYPE_PT100_-50..+400_3WIRE" Value="PT100 -50 C...+400 C (3 wire)"/>
+			<Text TextId="ENUM_ENTRY_UMC100_AM_CH_TYPE_PT100_-50..+70_2WIRE" Value="PT100 -50 C...+70 C (2 wire)"/>
+			<Text TextId="ENUM_ENTRY_UMC100_AM_CH_TYPE_PT100_-50..+70_3WIRE" Value="PT100 -50 C...+70 C (3 wire)"/>
+			<Text TextId="ENUM_ENTRY_UMC100_AM_CH_TYPE_PT1000_-50..+400_2WIRE" Value="PT1000 -50 C...+400 C (2 wire)"/>
+			<Text TextId="ENUM_ENTRY_UMC100_AM_CH_TYPE_PT1000_-50..+400_3WIRE" Value="PT1000 -50 C...+400 C (3 wire)"/>
+			<Text TextId="ENUM_ENTRY_UMC100_AM_CH_TYPE_KTY83_-50..+175" Value="KTY83 -50 C...+175 C"/>
+			<Text TextId="ENUM_ENTRY_UMC100_AM_CH_TYPE_KTY84_-40..+300" Value="KTY84 -40 C...+300 C"/>
+			<Text TextId="ENUM_ENTRY_UMC100_AM_CH_TYPE_NTC_+80..+160" Value="NTC +80 C...+160 C"/>
+			<Text TextId="ENUM_ENTRY_UMC100_AM_CH_TYPE_0..10V" Value="0...10V"/>
+			<Text TextId="ENUM_ENTRY_UMC100_AM_CH_TYPE_0..20mA" Value="0...20mA"/>
+			<Text TextId="ENUM_ENTRY_UMC100_AM_CH_TYPE_4..20mA" Value="4...20mA"/>
+
+			<Text TextId="ENUM_ENTRY_UMC100_TEMP_UNIT_CELSIUS" Value="Celsius"/>
+			<Text TextId="ENUM_ENTRY_UMC100_TEMP_UNIT_FAHRENHEIT" Value="Fahrenheit"/>
+
+
+			<!-- UMC General data -->
+			<Text TextId="Data" Value="Data"/>
+			<Text TextId="Para" Value="Para"/>
+
+			<Text TextId="UMC100" Value="UMC100-FBP"/>
+			<Text TextId="UMC100.3" Value="UMC100.3"/>
+			<Text TextId="UMC100_INFO" Value="UMC100-FBP"/>
+			<Text TextId="UMC100.3_INFO" Value="UMC100.3"/>
+			<Text TextId="UMC100_DATA" Value="UMC100 Data"/>
+			<Text TextId="UMC100.3_DATA" Value="UMC100.3 Data"/>
+
+			<!-- UMC100 Cyclic data -->
+			<Text TextId="UMC100_Monitoring_Byte_0" Value="Monitoring Byte 0"/>
+			<Text TextId="UMC100_Monitoring_Byte_1" Value="Monitoring Byte 1"/>
+			<Text TextId="UMC100_Monitoring_Word_0" Value="Monitoring Word 0"/>
+			<Text TextId="UMC100_Monitoring_Word_1" Value="Monitoring Word 1"/>
+			<Text TextId="UMC100_Monitoring_Word_2" Value="Monitoring Word 2"/>
+			<Text TextId="UMC100_Monitoring_Word_3" Value="Monitoring Word 3"/>
+			<Text TextId="UMC100_Monitoring_Word_4" Value="Monitoring Word 4"/>
+			<Text TextId="UMC100_Monitoring_Word_5" Value="Monitoring Word 5"/>
+			<Text TextId="UMC100_Monitoring_Word_6" Value="Monitoring Word 6"/>
+			<Text TextId="UMC100_Command_Byte_0" Value="Command Byte 0"/>
+			<Text TextId="UMC100_Command_Byte_1" Value="Command Byte 1"/>
+			<Text TextId="UMC100_Command_Byte_2" Value="Command Byte 2"/>
+			<Text TextId="UMC100_Command_Byte_3" Value="Command Byte 3"/>
+			<Text TextId="UMC100_Command_Word_0" Value="Command Word 0"/>
+			<Text TextId="UMC100_Command_Word_1" Value="Command Word 1"/>
+			<Text TextId="UMC100_Command_Word_2" Value="Command Word 2"/>
+			<Text TextId="UMC100_Command_Word_3" Value="Command Word 3"/>
+
+			<!-- Parameter Record Data -->
+			<!-- GENERAL_DATA -->
+			<Text TextId="FBPPort1_Record" Value="FBP Port 1 Parameter"/>
+			<Text TextId="FBPPort2_Record" Value="FBP Port 2 Parameter"/>
+			<Text TextId="FBPPort3_Record" Value="FBP Port 3 Parameter"/>
+			<Text TextId="FBPPort4_Record" Value="FBP Port 4 Parameter"/>
+			<Text TextId="SparePort" Value="Port Activation"/>
+			<Text TextId="ExpectedAddress" Value="Expected FBP Address"/>
+			<Text TextId="WritingParamTypeText" Value="Write Blockparameters"/>
+			<Text TextId="DiagnosisModelText" Value="Diagnosis Model"/>
+			<Text TextId="CommKeepAliveTimeText" Value="Comm. Keep Alive Time [ms]"/>
+
+			<!--  UMC100/UMC100.3 parameters -->
+			<Text TextId="UMC100_Record" Value="Parameter"/>
+			<Text TextId="UMC100_DX1xx_Enabled" Value="DX1xx Enabled"/>
+			<Text TextId="UMC100_VI15x_Enabled" Value="VI15x Enabled"/>
+			<Text TextId="UMC100_AI111_AM1_Enabled" Value="AI111 AM1 Enabled"/>
+			<Text TextId="UMC100_AI111_AM2_Enabled" Value="AI111 AM2 Enabled"/>
+			<Text TextId="UMC100_Missing_Module_React" Value="Missing Module React."/>
+			<Text TextId="UMC100_PTC_Thermistor" Value="PTC, Thermistor"/>
+			<Text TextId="UMC100_Earth_Flt_Trip_Level" Value="Earth Flt Trip Level [%]"/>
+			<Text TextId="UMC100_Earth_Flt_Trip_Delay" Value="Earth Flt Trip Delay [0.1s]"/>
+			<Text TextId="UMC100_Earth_Flt_Warn_Level" Value="Earth Flt Warn Level [%]"/>
+			<Text TextId="UMC100_Earth_Flt_Warn_Delay" Value="Earth Flt Warn Delay [0.1s]"/>
+			<Text TextId="UMC100_Fault_Auto_Reset" Value="Fault Auto Reset"/>
+			<Text TextId="UMC100_Emergency_Start" Value="Emergency Start"/>
+			<Text TextId="UMC100_Earth_Flt_Detection" Value="Earth Flt Detection"/>
+			<Text TextId="UMC100_Address_Check" Value="Address Check"/>
+			<Text TextId="UMC100_Busfault_Reaction" Value="Busfault Reaction"/>
+			<Text TextId="UMC100_Enable_Custom_Logic" Value="Enable Custom Logic"/>
+			<Text TextId="UMC100_Control_Function" Value="Control Function"/>
+			<Text TextId="UMC100_REV_LOCK_OUT_TIME" Value="Rev Lock-Out Time"/>
+			<Text TextId="UMC100_CHECK_BACK" Value="Check-Back"/>
+			<Text TextId="UMC100_CHECK_BACK_TIME" Value="Check-Back Time [0.1s]"/>
+			<Text TextId="UMC100_YD_CHANGE_OVER_MODE" Value="YD Change-Over Mode"/>
+			<Text TextId="UMC100_YD_STARTING_TIME" Value="YD Starting Time  [0.1s]"/>
+			<Text TextId="UMC100_Resistive_Load" Value="Resistive Load"/>
+			<Text TextId="UMC100_FAULT_OUTPUT" Value="Fault Output"/>
+			<Text TextId="UMC100_TRIP_CLASS" Value="Trip Class"/>
+			<Text TextId="UMC100_SETTING_IE_1" Value="Setting Ie 1  [0.01A]"/>
+			<Text TextId="UMC100_SETTING_IE_2" Value="Setting Ie 2  [0.01A]"/>
+			<Text TextId="UMC100_CURRENT_FACTOR" Value="Current Factor [%]"/>
+			<Text TextId="UMC100_LOW_CURR_TRIP_LEVEL" Value="Low Curr Trip Level [5%]"/>
+			<Text TextId="UMC100_LOW_CURR_TRIP_DELAY" Value="Low Curr Trip Delay [0.1s]"/>
+			<Text TextId="UMC100_LOW_CURR_WARN_LEVEL" Value="Low Curr Warn Level [5%]"/>
+			<Text TextId="UMC100_LOW_CURR_WARN_DELAY" Value="Low Curr Warn Delay [0.1s]"/>
+			<Text TextId="UMC100_HIGH_CURR_TRIP_LEVEL" Value="High Curr Trip Level [5%]"/>
+			<Text TextId="UMC100_HIGH_CURR_TRIP_DELAY" Value="High Curr Trip Delay [0.1s]"/>
+			<Text TextId="UMC100_HIGH_CURR_WARN_LEVEL" Value="High Curr Warn Level [5%]"/>
+			<Text TextId="UMC100_HIGH_CURR_WARN_DELAY" Value="High Curr Warn Delay [0.1s]"/>
+			<Text TextId="UMC100_LOCKED_ROTOR_LEVEL" Value="Locked Rotor Level [5%]"/>
+			<Text TextId="UMC100_LOCKED_ROTOR_DELAY" Value="Locked Rotor Delay [0.1s]"/>
+			<Text TextId="UMC100_PHASE_LOSS_PROT" Value="Phase Loss Prot."/>
+			<Text TextId="UMC100_CURR_IMB_TRIP_LEVEL" Value="Curr Imb Trip Level [%]"/>
+			<Text TextId="UMC100_CURR_IMB_WARN_LEVEL" Value="Curr Imb Warn Level [%]"/>
+			<Text TextId="UMC100_PHASE_REVERSAL" Value="Phase Reversal"/>
+			<Text TextId="UMC100_CHECK_PHASE_SEQUENCE" Value="Check Phase Sequence"/>
+			<Text TextId="UMC100_Number_of_Phases" Value="Number of Phases"/>
+			<Text TextId="UMC100_COOLING_MODE" Value="Cooling Mode"/>
+			<Text TextId="UMC100_COOLING_TIME" Value="Cooling Time [s]"/>
+			<Text TextId="UMC100_RESTART_LEVEL" Value="Restart Level [%]"/>
+			<Text TextId="UMC100_AUX_INP_1_ACK_MODE" Value="Aux Inp 1 Ack Mode"/>
+			<Text TextId="UMC100_AUX_INP_2_ACK_MODE" Value="Aux Inp 2 Ack Mode"/>
+			<Text TextId="UMC100_AUX_INP_3_ACK_MODE" Value="Aux Inp 3 Ack Mode"/>
+			<Text TextId="UMC100_AUX_INP_4_ACK_MODE" Value="Aux Inp 4 Ack Mode"/>
+			<Text TextId="UMC100_AUX_INP_5_ACK_MODE" Value="Aux Inp 5 Ack Mode"/>
+			<Text TextId="UMC100_AUX_INP_6_ACK_MODE" Value="Aux Inp 6 Ack Mode"/>
+			<Text TextId="UMC100_AUX_INP_1_REACTION" Value="Aux Inp 1 Reaction"/>
+			<Text TextId="UMC100_AUX_INP_2_REACTION" Value="Aux Inp 2 Reaction"/>
+			<Text TextId="UMC100_AUX_INP_3_REACTION" Value="Aux Inp 3 Reaction"/>
+			<Text TextId="UMC100_AUX_INP_4_REACTION" Value="Aux Inp 4 Reaction"/>
+			<Text TextId="UMC100_AUX_INP_5_REACTION" Value="Aux Inp 5 Reaction"/>
+			<Text TextId="UMC100_AUX_INP_6_REACTION" Value="Aux Inp 6 Reaction"/>
+
+			<Text TextId="UMC100_AUX_INP_1_DELAY" Value="Aux Inp 1 Delay [0.1s]"/>
+			<Text TextId="UMC100_AUX_INP_2_DELAY" Value="Aux Inp 2 Delay [0.1s]"/>
+			<Text TextId="UMC100_AUX_INP_3_DELAY" Value="Aux Inp 3 Delay [0.1s]"/>
+			<Text TextId="UMC100_AUX_INP_4_DELAY" Value="Aux Inp 4 Delay [0.1s]"/>
+			<Text TextId="UMC100_AUX_INP_5_DELAY" Value="Aux Inp 5 Delay [0.1s]"/>
+			<Text TextId="UMC100_AUX_INP_6_DELAY" Value="Aux Inp 6 Delay [0.1s]"/>
+			<Text TextId="UMC100_CUSTOM_APP_PARAMETER" Value="Custom App Parameter"/>
+			<Text TextId="UMC100_INVERT_DI_START_INP." Value="Invert DI Start Inp."/>
+			<Text TextId="UMC100_INVERT_DI_STOP_INP." Value="Invert DI Stop Inp."/>
+
+			<Text TextId="UMC100_INCHING_DI_START_INP" Value="Inching DI Start Inp"/>
+
+			<Text TextId="UMC100_LOC_1_START_BUS_CYC" Value="Loc 1 Start Bus Cyc"/>
+			<Text TextId="UMC100_LOC_1_STOP_BUS_CYC" Value="Loc 1 Stop Bus Cyc"/>
+			<Text TextId="UMC100_LOC_1_START_DI" Value="Loc 1 Start DI"/>
+			<Text TextId="UMC100_LOC_1_STOP_DI" Value="Loc 1 Stop DI"/>
+			<Text TextId="UMC100_LOC_1_START_LCD" Value="Loc 1 Start LCD"/>
+			<Text TextId="UMC100_LOC_1_STOP_LCD" Value="Loc 1 Stop LCD"/>
+			<Text TextId="UMC100_LOC_1_START_BUS_ACYC" Value="Loc 1 Start Bus Acyc"/>
+			<Text TextId="UMC100_LOC_1_STOP_BUS_ACYC" Value="Loc 1 Stop Bus Acyc"/>
+			<Text TextId="UMC100_AUTO_START_BUS_CYC" Value="Auto Start Bus Cyc"/>
+			<Text TextId="UMC100_AUTO_STOP_BUS_CYC" Value="Auto Stop Bus Cyc"/>
+			<Text TextId="UMC100_AUTO_START_DI" Value="Auto Start DI"/>
+			<Text TextId="UMC100_AUTO_STOP_DI" Value="Auto Stop DI"/>
+			<Text TextId="UMC100_AUTO_START_LCD" Value="Auto Start LCD"/>
+			<Text TextId="UMC100_AUTO_STOP_LCD" Value="Auto Stop LCD"/>
+			<Text TextId="UMC100_AUTO_START_BUS_ACYC" Value="Auto Start Bus Acyc"/>
+			<Text TextId="UMC100_AUTO_STOP_BUS_ACYC" Value="Auto Stop Bus Acyc"/>
+			<Text TextId="UMC100_LOC_2_START_BUS_CYC" Value="Loc 2 Start Bus Cyc"/>
+			<Text TextId="UMC100_LOC_2_STOP_BUS_CYC" Value="Loc 2 Stop Bus Cyc"/>
+			<Text TextId="UMC100_LOC_2_START_DI" Value="Loc 2 Start DI"/>
+			<Text TextId="UMC100_LOC_2_STOP_DI" Value="Loc 2 Stop DI"/>
+			<Text TextId="UMC100_LOC_2_START_LCD" Value="Loc 2 Start LCD"/>
+			<Text TextId="UMC100_LOC_2_STOP_LCD" Value="Loc 2 Stop LCD"/>
+			<Text TextId="UMC100_LOC_2_START_BUS_ACYC" Value="Loc 2 Start Bus Acyc"/>
+			<Text TextId="UMC100_LOC_2_STOP_BUS_ACYC" Value="Loc 2 Stop Bus Acyc"/>
+			<Text TextId="UMC100_MULTIF_IN_0" Value="Multif In 0"/>
+			<Text TextId="UMC100_MULTIF_IN_1" Value="Multif In 1"/>
+			<Text TextId="UMC100_MULTIF_IN_2" Value="Multif In 2"/>
+			<Text TextId="UMC100_MULTIF_IN_0_DELAY" Value="Multif In 0 Delay [0.1s]"/>
+			<Text TextId="UMC100_MULTIF_IN_1_DELAY" Value="Multif In 1 Delay [0.1s]"/>
+			<Text TextId="UMC100_MULTIF_IN_2_DELAY" Value="Multif In 2 Delay [0.1s]"/>
+			<Text TextId="UMC100_MULTIF_IN_0_AUTORESET" Value="Multif In 0 Autoreset"/>
+			<Text TextId="UMC100_MULTIF_IN_1_AUTORESET" Value="Multif In 1 Autoreset"/>
+			<Text TextId="UMC100_MULTIF_IN_2_AUTORESET" Value="Multif In 2 Autoreset"/>
+			<Text TextId="UMC100_LANGUAGE" Value="Language"/>
+
+			<Text TextId="UMC100_BACKLIGHT" Value="Backlight"/>
+			<Text TextId="UMC100_PASSWORD_PROTECTION" Value="Password Protection"/>
+
+			<Text TextId="UMC100_USER_DISPLAY_1" Value="User Display 1"/>
+			<Text TextId="UMC100_USER_DISPLAY_2" Value="User Display 2"/>
+			<Text TextId="UMC100_USER_DISPLAY_3" Value="User Display 3"/>
+			<Text TextId="UMC100_USER_DISPLAY_4" Value="User Display 4"/>
+			<Text TextId="UMC100_USER_DISPLAY_5" Value="User Display 5"/>
+
+			<Text TextId="UMC100_DIP_ENABLE" Value="Dip Enable"/>
+			<Text TextId="UMC100_DIP_DURATION" Value="Dip Duration [0.1 s]"/>
+			<Text TextId="UMC100_DIP_AUTORESTART_WINDOW" Value="Dip Autorestart Window [0.1s]"/>
+			<Text TextId="UMC100_DIP_AUTORESTART_DELAY" Value="Dip Autorestart Delay [s]"/>
+			<Text TextId="UMC100_THERMAL_LOAD_WARNLEV" Value="Thermal Load Warnlev [%]"/>
+			<Text TextId="UMC100_DIP_AUTORESTART_ENABLE" Value="Dip Autorestart Enable"/>
+			<Text TextId="UMC100_NUM_STARTS_ALLOWED" Value="Num Starts Allowed"/>
+			<Text TextId="UMC100_NUM_STARTS_WINDOW" Value="Num Starts Window [1 min]"/>
+			<Text TextId="UMC100_NUM_STARTS_PAUSE" Value="Num Starts Pause [1 min]"/>
+			<Text TextId="UMC100_DX1XX_DI_DELAY" Value="DX1xx DI Delay [ms]"/>
+			<Text TextId="UMC100_DX1XX_AO_TYPE" Value="DX1xx AO Type"/>
+			<Text TextId="UMC100_DX1XX_AO_ERR_REAC" Value="DX1xx AO Err Reac"/>
+			<Text TextId="UMC100_AM1_Tmax_Delay" Value="AM1 Tmax Delay [s]"/>
+			<Text TextId="UMC100_NUM_STARTS_OVERRUN" Value="Num Starts Overrun"/>
+			<Text TextId="UMC100_DIP_RESTART_LEVEL" Value="Dip Restart Level [%]"/>
+			<Text TextId="UMC100_DIP_LEVEL" Value="Dip Level [%]"/>
+			<Text TextId="UMC100_NOMINAL_LINE_VOLTAGE" Value="Nominal Line Voltage [V]"/>
+			<Text TextId="UMC100_3_NOMINAL_VOLTAGE" Value="Nominal Voltage [V]"/>
+			<Text TextId="UMC100_U_LOW_TRIP_LEVEL" Value="U Low Trip Level [%]"/>
+			<Text TextId="UMC100_U_LOW_TRIP_DELAY" Value="U Low Trip Delay [0.1s]"/>
+			<Text TextId="UMC100_U_LOW_WARN_LEVEL" Value="U Low Warn Level [%]"/>
+			<Text TextId="UMC100_U_LOW_WARN_DELAY" Value="U Low Warn Delay [0.1s]"/>
+			<Text TextId="UMC100_U_HIGH_TRIP_LEVEL" Value="U High Trip Level [%]"/>
+			<Text TextId="UMC100_U_HIGH_TRIP_DELAY" Value="U High Trip Delay [0.1s]"/>
+			<Text TextId="UMC100_U_HIGH_WARN_LEVEL" Value="U High Warn Level [%]"/>
+			<Text TextId="UMC100_U_HIGH_WARN_DELAY" Value="U High Warn Delay [0.1s]"/>
+			<Text TextId="UMC100_AM2_Tmax_Delay" Value="AM2 Tmax Delay [s]"/>
+			<Text TextId="UMC100_AM2_Ch2_Err_Reac" Value="AM2 Ch2 Error Reaction"/>
+			<Text TextId="UMC100_AM2_Ch3_Err_Reac" Value="AM2 Ch3 Error Reaction"/>
+			<Text TextId="UMC100_AM1_Tmax_Trip_Level" Value="AM1 Tmax Trip Level"/>
+			<Text TextId="UMC100_AM1_Tmax_Warn_Level" Value="AM1 Tmax Warn Level"/>
+			<Text TextId="UMC100_AM2_Tmax_Trip_Level" Value="AM2 Tmax Trip Level"/>
+			<Text TextId="UMC100_AM2_Tmax_Warn_Level" Value="AM2 Tmax Warn Level"/>
+			<Text TextId="UMC100_AM1_Mode" Value="AM1 Mode"/>
+			<Text TextId="UMC100_AM2_Mode" Value="AM2 Mode"/>
+			<Text TextId="UMC100_Panel_Temp_Unit" Value="LCD Panel Temp. Unit"/>
+			<Text TextId="UMC100_Param_To_PV_1" Value="Param. to Process Value 1"/>
+			<Text TextId="UMC100_Param_To_PV_2" Value="Param. to Process Value 2"/>
+			<Text TextId="UMC100_Param_To_PV_3" Value="Param. to Process Value 3"/>
+			<Text TextId="UMC100_Param_To_PV_4" Value="Param. to Process Value 4"/>
+			<Text TextId="UMC100_Param_To_PV_5" Value="Param. to Process Value 5"/>
+			<Text TextId="UMC100_AM1_Ch1_Type" Value="AM1 Channel 1 Type"/>
+			<Text TextId="UMC100_AM1_Ch2_Type" Value="AM1 Channel 2 Type"/>
+			<Text TextId="UMC100_AM1_Ch3_Type" Value="AM1 Channel 3 Type"/>
+			<Text TextId="UMC100_AM2_Ch1_Type" Value="AM2 Channel 1 Type"/>
+			<Text TextId="UMC100_AM2_Ch2_Type" Value="AM2 Channel 2 Type"/>
+			<Text TextId="UMC100_AM2_Ch3_Type" Value="AM2 Channel 3 Type"/>
+			<Text TextId="UMC100_AM1_Ch1_Err_Reac" Value="AM1 Ch1 Error Reaction"/>
+			<Text TextId="UMC100_AM1_Ch2_Err_Reac" Value="AM1 Ch2 Error Reaction"/>
+			<Text TextId="UMC100_AM1_Ch3_Err_Reac" Value="AM1 Ch3 Error Reaction"/>
+			<Text TextId="UMC100_AM2_Ch1_Err_Reac" Value="AM2 Ch1 Error Reaction"/>
+			<Text TextId="UMC100_Motor_Op_Hours_Level" Value="Motor Operating Hours Level"/>
+			<Text TextId="UMC100_Motor_Stand_Still_Level" Value="Motor Stand Still Level"/>
+
+			<Text TextId="UMC100_PWRFACTOR_TRIP_LEVEL" Value="PwrFactor Trip Level [%]"/>
+			<Text TextId="UMC100_PWRFACTOR_TRIP_DELAY" Value="PwrFactor Trip Delay [0.1s]"/>
+			<Text TextId="UMC100_PWRFACTOR_WARN_LEVEL" Value="PwrFactor Warn Level [%]"/>
+			<Text TextId="UMC100_PWRFACTOR_WARN_DELAY" Value="PwrFactor Warn Delay [0.1s]"/>
+			<Text TextId="UMC100_U_IMB._TRIP_LEVEL" Value="U Imb. Trip Level [0.1%]"/>
+			<Text TextId="UMC100_U_IMB._TRIP_DELAY" Value="U Imb. Trip Delay [0.1s]"/>
+			<Text TextId="UMC100_U_IMB._WARN_LEVEL" Value="U Imb. Warn Level [0.1%]"/>
+			<Text TextId="UMC100_U_IMB._WARN_DELAY" Value="U Imb. Warn Delay [0.1s]"/>
+			<Text TextId="UMC100_P_LOW_TRIP_LEVEL" Value="P Low Trip Level [%]"/>
+			<Text TextId="UMC100_P_LOW_TRIP_DELAY" Value="P Low Trip Delay [s]"/>
+			<Text TextId="UMC100_P_LOW_WARN_LEVEL" Value="P Low Warn Level [%]"/>
+			<Text TextId="UMC100_P_LOW_WARN_DELAY" Value="P Low Warn Delay [s]"/>
+			<Text TextId="UMC100_P_HIGH_TRIP_LEVEL" Value="P High Trip Level [5%]"/>
+			<Text TextId="UMC100_P_HIGH_TRIP_DELAY" Value="P High Trip Delay [s]"/>
+			<Text TextId="UMC100_P_HIGH_WARN_LEVEL" Value="P High Warn Level [5%]"/>
+			<Text TextId="UMC100_P_HIGH_WARN_DELAY" Value="P High Warn Delay [s]"/>
+			<Text TextId="UMC100_NOMINAL_POWER_FACTOR" Value="Nominal Power Factor"/>
+			<Text TextId="UMC100_POWER_SCALE_FACTOR" Value="Power Scale Factor"/>
+			<Text TextId="UMC100_THD_WARNING_LEVEL" Value="THD Warning Level [%]"/>
+			<Text TextId="UMC100_LOAD_STARTUP_DELAY" Value="Load Startup Delay [s]"/>
+			<Text TextId="UMC100_NUM_STARTS_PREWARN" Value="Num Starts Prewarn"/>
+			<Text TextId="UMC100_THD_WARNING_DELAY" Value="THD Warning Delay [s]"/>
+			<Text TextId="UMC100_RESERVED" Value="Reserved"/>
+
+			<Text TextId="PNQ22_Error" Value="Configuration Error PNQ22"/>
+			<Text TextId="UMC100_Error" Value="Error in UMC100"/>
+			<Text TextId="UMC100.3_Error" Value="Error in UMC100.3"/>
+
+			<Text TextId="SNTPServerIP" Value="SNTP Server IP"/>
+			<Text TextId="SNTPServerIPOctet1" Value="First octet"/>
+			<Text TextId="SNTPServerIPOctet2" Value="Second octet"/>
+			<Text TextId="SNTPServerIPOctet3" Value="Third octet"/>
+			<Text TextId="SNTPServerIPOctet4" Value="Fourth octet"/>
+			<Text TextId="ConfigurationsFlagsText" Value="Configuration flags"/>
+
+			<!-- ========================================================================================= -->
+			<!-- ** Empty slot data                                                                     ** -->
+			<!-- ========================================================================================= -->
+			<Text TextId="EmptySlot_INFO" Value="Dummy module for unused ports"/>
+			<Text TextId="EmptySlot_Data" Value="Empty Slot Data"/>
+			<Text TextId="EmptySlot_Data_INFO" Value="Dummy data for unused slot"/>
+			<Text TextId="DummyInputByte" Value="Dummy Input Byte"/>
+			<Text TextId="DummyOutputByte" Value="Dummy Output Byte"/>
+
+        </PrimaryLanguage>
+      </ExternalTextList>
+
+    </ApplicationProcess>
+  </ProfileBody>
+</ISO15745Profile>

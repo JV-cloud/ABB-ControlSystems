@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-16"?><DataType xmlns="CBSourceCodeSchema3_0" Name="MBConnectData" Protected="0" Hidden="1" Scope="private" Guid="472a5590-f240-417f-9a2e-bd9b0e1c6acd" InternalChangeTime="2006-03-15-05:43:46.171" BuildVersion="6.0.300.21" SaveDate="2019-09-18-05:56:53.022" CodePage="1252"><Components><Component Name="Partner" Type="string[32]" TypeGuid="49d3a1c9-a834-46c6-9f71-88a69e045a5d" AccessLevel="Read Only" SafetyType="None" Attribute="retain" InitialValue="" ReadPermission="" WritePermission="" AuthenticationLevel="None" ISPValue=""><Description>It's assigned in the code of the Connect function block</Description></Component><Component Name="Dummy" Type="dint" TypeGuid="d59be854-1395-4e4f-9cf6-6a4ba4ccdc98" AccessLevel="Read Only" SafetyType="None" Attribute="retain" InitialValue="" ReadPermission="" WritePermission="" AuthenticationLevel="None" ISPValue=""><Description>Not used, a data type in CB must consist of at least two components</Description></Component></Components><Description>This structure is used to assign the ProtocolData- parameter
+of the " GCConnectReq" firmware function call when adapting
+a specific protocol.
+
+Note!
+This data type MUST consist of at least two components,
+therefore the existence of the second dummy component.
+
+The structure is permitted to be modified by the user
+with the only one constraints; It must consist of at
+least two components.</Description><CheckSum Value="59270"/></DataType>

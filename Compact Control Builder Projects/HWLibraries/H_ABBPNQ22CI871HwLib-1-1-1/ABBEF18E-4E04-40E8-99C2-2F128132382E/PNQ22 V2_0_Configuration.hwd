@@ -1,0 +1,282 @@
+(*=============================*)
+(* Modified : 2013-11-21 15:24 *)
+(* Modified : 2019-03-20 15:27 *)
+(* Modified : 2019-05-23 16:59 *)
+(*=============================*)
+FileHeader
+  Contents              "PNQ22"
+  Date                  "23.05.2019"
+  Version               "Version 1.4.9" (* Device Import Wizard *)
+  (* Parser             "Profinet 1.0.17.0" *)
+  RequiredSyntaxVersion "3.0"
+End FileHeader
+
+SessionID bd07358a-7947-4de8-9c8c-9bc6949e99b2
+
+(*========================================================*)
+(*                         PNQ22                          *)
+(*========================================================*)
+
+HWUnitInfo
+  HWUnitID         {315da5d4-6184-4eaa-a046-cfa02fce4cf5}
+  Description      "PNQ22 V2_0_Configuration"
+  Information      "FieldbusPlug configuration"
+  Icons            RackIOType
+  Attributes       IOUnit
+  DownloadInstanceNamesForSubUnits
+
+  Parameters
+    ParamInfo
+      Name            FBP_Port_1_Parameter_Port_Activation
+      Description     "FBP Port 1 Parameter Port Activation"
+      CompileType     IOConfig
+      Datatype        ENUM
+      Default         1
+      ParValIndex     0
+      ParamType       CIGIOData 7 0 2 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            FBP_Port_1_Parameter_Write_Blockparameters
+      Description     "FBP Port 1 Parameter Write Blockparameters"
+      CompileType     IOConfig
+      Datatype        ENUM
+      Default         1
+      ParValIndex     1
+      ParamType       CIGIOData 8 0 2 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            FBP_Port_1_Parameter_Expected_FBP_Address
+      Description     "FBP Port 1 Parameter Expected FBP Address"
+      CompileType     IOConfig
+      Datatype        INT
+      Default         1
+      ParValIndex     2
+      ParamType       CIGIOData 9 0 2 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            FBP_Port_2_Parameter_Port_Activation
+      Description     "FBP Port 2 Parameter Port Activation"
+      CompileType     IOConfig
+      Datatype        ENUM
+      Default         1
+      ParValIndex     0
+      ParamType       CIGIOData 7 0 3 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            FBP_Port_2_Parameter_Write_Blockparameters
+      Description     "FBP Port 2 Parameter Write Blockparameters"
+      CompileType     IOConfig
+      Datatype        ENUM
+      Default         1
+      ParValIndex     1
+      ParamType       CIGIOData 8 0 3 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            FBP_Port_2_Parameter_Expected_FBP_Address
+      Description     "FBP Port 2 Parameter Expected FBP Address"
+      CompileType     IOConfig
+      Datatype        INT
+      Default         2
+      ParValIndex     2
+      ParamType       CIGIOData 9 0 3 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            FBP_Port_3_Parameter_Port_Activation
+      Description     "FBP Port 3 Parameter Port Activation"
+      CompileType     IOConfig
+      Datatype        ENUM
+      Default         1
+      ParValIndex     0
+      ParamType       CIGIOData 7 0 4 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            FBP_Port_3_Parameter_Write_Blockparameters
+      Description     "FBP Port 3 Parameter Write Blockparameters"
+      CompileType     IOConfig
+      Datatype        ENUM
+      Default         1
+      ParValIndex     1
+      ParamType       CIGIOData 8 0 4 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            FBP_Port_3_Parameter_Expected_FBP_Address
+      Description     "FBP Port 3 Parameter Expected FBP Address"
+      CompileType     IOConfig
+      Datatype        INT
+      Default         3
+      ParValIndex     2
+      ParamType       CIGIOData 9 0 4 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            FBP_Port_4_Parameter_Port_Activation
+      Description     "FBP Port 4 Parameter Port Activation"
+      CompileType     IOConfig
+      Datatype        ENUM
+      Default         1
+      ParValIndex     0
+      ParamType       CIGIOData 7 0 5 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            FBP_Port_4_Parameter_Write_Blockparameters
+      Description     "FBP Port 4 Parameter Write Blockparameters"
+      CompileType     IOConfig
+      Datatype        ENUM
+      Default         1
+      ParValIndex     1
+      ParamType       CIGIOData 8 0 5 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            FBP_Port_4_Parameter_Expected_FBP_Address
+      Description     "FBP Port 4 Parameter Expected FBP Address"
+      CompileType     IOConfig
+      Datatype        INT
+      Default         4
+      ParValIndex     2
+      ParamType       CIGIOData 9 0 5 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            SNTP_Server_IP_First_octet
+      Description     "SNTP Server IP First octet"
+      CompileType     IOConfig
+      Datatype        INT
+      Default         0
+      ParValIndex     2
+      ParamType       CIGIOData 7 0 6 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            SNTP_Server_IP_Second_octet
+      Description     "SNTP Server IP Second octet"
+      CompileType     IOConfig
+      Datatype        INT
+      Default         0
+      ParValIndex     2
+      ParamType       CIGIOData 8 0 6 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            SNTP_Server_IP_Third_octet
+      Description     "SNTP Server IP Third octet"
+      CompileType     IOConfig
+      Datatype        INT
+      Default         0
+      ParValIndex     2
+      ParamType       CIGIOData 9 0 6 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            SNTP_Server_IP_Fourth_octet
+      Description     "SNTP Server IP Fourth octet"
+      CompileType     IOConfig
+      Datatype        INT
+      Default         0
+      ParValIndex     2
+      ParamType       CIGIOData 10 0 6 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            Configuration_flags_Diagnosis_Model
+      Description     "Configuration flags Diagnosis Model"
+      CompileType     IOConfig
+      Datatype        ENUM
+      Default         0
+      ParValIndex     3
+      ParamType       CIGIOData 7 0 7 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            Configuration_flags_Comm__Keep_Alive_Time__ms_
+      Description     "Configuration flags Comm. Keep Alive Time [ms]"
+      CompileType     IOConfig
+      Datatype        INT
+      Default         0
+      ParValIndex     4
+      ParamType       CIGIOData 8 0 7 WordParam ByteOffset
+    End ParamInfo
+  End Parameters
+
+  ParValList
+    ParVal
+      ParValIndex     0
+      UnitText        ""
+      ENUM
+      "Spare Port" 0
+      "Port Active" 1
+    End ParVal
+    ParVal
+      ParValIndex     1
+      UnitText        ""
+      ENUM
+      "Disabled" 0
+      "Enabled" 1
+    End ParVal
+    ParVal
+      ParValIndex     2
+      UnitText        ""
+      INT
+      0 255 0 255 
+    End ParVal
+    ParVal
+      ParValIndex     3
+      UnitText        ""
+      ENUM
+      "Standard" 0
+      "SoE" 1
+    End ParVal
+    ParVal
+      ParValIndex     4
+      UnitText        ""
+      INT
+      0 10000 0 10000 
+    End ParVal
+  End ParValList
+
+  Channels
+    ChannelInfo
+      Number                1
+      ChannelName           "UnitStatus"
+      Datatype              Status_In
+      Routine               900
+      CopyParameters        16#0 16#0 16#50000
+    End ChannelInfo
+  End Channels
+
+  UnitStatusText
+    DeviceSpecific1  "Maintenance required"
+    DeviceSpecific2  "Maintenance demanded"
+    DeviceSpecific3  "Diagnosis data available"
+    DeviceSpecific4  "Locked by other controller/supervisor"
+    DeviceSpecific6  "Parametrization fault"
+  End UnitStatusText
+
+  UnitStatusSeverity
+    DeviceSpecific1  GeneralWarning TriggerEvent SeverityMedium
+    DeviceSpecific2  GeneralWarning TriggerEvent SeverityMedium
+    DeviceSpecific3  GeneralWarning TriggerEvent SeverityMedium
+    DeviceSpecific4  GeneralWarning TriggerEvent SeverityMedium
+    DeviceSpecific6  GeneralError TriggerAlarm SeverityHigh
+  End UnitStatusSeverity
+
+  Configuration
+    ConfigInfo
+      ModuleKey        5
+      InAreaSize       1 BYTE
+      OutAreaSize      1 BYTE
+      OutByte
+        BYTE  16#80    0  (* IOCS_Out *)
+      CIGIOConnData
+        CIGIOData      16#10 16#a5 16#5a 16#0 16#1 16#2 16#21 16#2 16#2 
+        CIGIOData      16#6 16#0 16#0 16#10 16#1 16#0 16#0 16#0 16#0 16#1 16#1 16#0 16#0 16#0 16#0 
+        CIGIOData      16#7 16#0 16#1 16#0 16#3 16#0 16#0 16#0 16#0 16#0
+        CIGIOData      16#7 16#0 16#2 16#0 16#3 16#0 16#0 16#0 16#0 16#0
+        CIGIOData      16#7 16#0 16#3 16#0 16#3 16#0 16#0 16#0 16#0 16#0
+        CIGIOData      16#7 16#0 16#4 16#0 16#3 16#0 16#0 16#0 16#0 16#0
+        CIGIOData      16#7 16#0 16#5 16#0 16#4 16#0 16#0 16#0 16#0 16#0 16#0
+        CIGIOData      16#7 16#0 16#6 16#0 16#3 16#0 16#0 16#0 16#0 16#0
+      End CIGIOConnData
+    End ConfigInfo
+    ConfigInfo
+      EmptyConfig
+      ModuleKey        16#FFFF
+      InAreaSize       0 BYTE
+      OutAreaSize      0 BYTE
+    End ConfigInfo
+  End Configuration
+
+  HWUnitInfoCRC 16#c550
+End HWUnitInfo

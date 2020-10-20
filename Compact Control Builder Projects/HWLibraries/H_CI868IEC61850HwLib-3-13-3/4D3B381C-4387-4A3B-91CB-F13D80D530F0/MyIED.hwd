@@ -1,0 +1,127 @@
+(****************************************************************************)
+(* FILE            My IED.hwd                                               *)
+(*                                                                          *)
+(* DESCRIPTION     Hardware definition file for My IED                      *)
+(*                                                                          *)
+(* AUTHOR          Ramachandragowda G                                       *)
+(*                                                                          *)
+(* All rights reserved. Reproduction, modification, use or disclosure       *)
+(* to third parties without express authority, is forbidden.                *)
+(* Copyright ABB Inc. 2006.                                                 *)
+(*                                                                          *)
+(*                                                                          *)
+(* 27-04-2006 Ramachandragowda G            Initial version                 *)
+(* 17-Jan-2012 Karthick Raja P              Changed AC800M IED to CI868 IED #45975  *)
+(****************************************************************************)
+FileHeader
+   Contents               "My IED"
+   Date                   "2007-04-27"
+   Version                "1.0-1"
+  RequiredSyntaxVersion "3.0"
+End FileHeader
+
+HWUnitInfo  (* MyIED *)
+   HWUnitID {F57FBF0A-504C-4b1a-9453-C2EF59B38F79} (* GUID for MyIED, i.e. the representation of CI868 as IED *)
+   Description "MyIED"
+   Information "CI868 IED"
+   Icons DeviceType
+   InstanceNameDisable
+   InterfaceInfo
+     Interface    CIGInterface
+     IoSysType    CIGIO
+     CLSID_CB    {53315084-E413-4c55-92E1-C2E1FAF19460} (*  CLSID_CB  = GUID for CI868 PH in Control builder CB *)
+     CLSID_CTRL  {4AB844AC-2BEE-4910-BA08-CA109A5D7E81}  (* CLSID_CTRL = GUID for CI868 PH in Controler *)
+     HWConfig Fail     (* Change of any parameters affect subunits *)
+   End InterfaceInfo
+   ConnectionInfo
+     ConnectType OneUnit
+     IOConnect   Fail
+     IOConfig    NoFail
+   End ConnectionInfo
+
+
+   DiscreteNumbers
+      1 2 3 4 5 6 7 8 9 10
+   End DiscreteNumbers
+   SubUnitTypes
+      HWUnitID {2CF708A3-62A8-4f7d-B848-D0B6EF9A1768}  (* GUID for LD (Logical Device) *)
+   End SubUnitTypes
+
+   Parameters
+      ParamInfo 
+         Name IEDTAG
+         Description "MyIED Name"
+         CompileType HWConfig
+         Datatype STRING
+         Default "CI868IED"20
+         ParamType Numbered 1
+      End ParamInfo
+      ParamInfo
+         Name MYIEDDESCRIPTION
+         Description "MyIED Description"
+         Datatype STRING
+         Default "CI868IED"150
+         ParamType Numbered 2
+      End ParamInfo
+      ParamInfo
+         Name HWDVERSION
+         Description "Version of HWD File"
+         ExternalVisible
+         Datatype STRING
+         Default " 1.0-0 "
+         ParamType Numbered 3
+      End ParamInfo
+      ParamInfo
+         Name H_IEDTAG
+         Description "Hidden MyIED Name"
+         ExternalVisible
+         Datatype STRING
+         Default "HIDDENMyIEDNAME"100
+         ParamType Numbered 4
+      End ParamInfo
+      ParamInfo
+         Name H_NUMBEROFLD
+         Description "Hidden Number of LD"
+         ExternalVisible
+         Datatype INT
+         Default 255
+         ParValIndex 2
+         ParamType Numbered 5
+      End ParamInfo
+      ParamInfo 
+         Name H_CCFGENCLIENT
+         Description "Hidden CCF GenClient"
+         ExternalVisible
+         Datatype BOOL
+         Default 0
+         ParamType Numbered 6
+      End ParamInfo
+   End Parameters
+
+   ParValList
+     ParVal
+        ParValIndex 2
+        UnitText    ""
+        INT 0 255 0 255
+     End ParVal
+   End ParValList
+
+   Channels
+      ChannelInfo
+         Number 0
+         ChannelName "UnitStatus"
+         Datatype Status_In
+         Routine 900
+         CopyParameters 0 0 16#50000
+      End ChannelInfo
+   End Channels
+
+   UnitStatusText
+   End UnitStatusText
+
+   UnitStatusSeverity
+   End UnitStatusSeverity
+
+
+  HWUnitInfoCRC 16#CAFD
+End HWUnitInfo

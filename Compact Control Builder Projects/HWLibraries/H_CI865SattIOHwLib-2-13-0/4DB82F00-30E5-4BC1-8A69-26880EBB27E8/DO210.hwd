@@ -1,0 +1,409 @@
+HWUnitInfo (* DO210 / ControlNet *)
+   HWUnitID {EF835A95-F2F1-4F26-8065-2AC81D27AE7C}
+   Description "DO210"
+   Information "Digital output module, 16 channels 24 VDC 0,6A short circuit proof, current source"
+   Icons Ser200CompactIoType
+   Attributes IoUnit DigitalOut
+   Parameters
+      ParamInfo 
+         Name SAFESTATE
+         Description "SafeState"
+         CompileType IOConfig
+         Datatype ENUMCONTROL
+         Default 0
+         ParValIndex 0
+         ParamType Numbered 100
+         SafeStateInfo
+           SafeStateType SafeStateControl
+           SafeStateRef Unit
+         End SafeStateInfo
+      End ParamInfo 
+      ParamInfo 
+         Name SAFEVALUE_0
+         Description "Safe value channel 0"
+         CompileType IOConfig
+         Datatype BOOL
+         Default false
+         (* CNSafeData *)
+         ParamType CIGIOData 1 0 0 WordParam WordOffset 
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 0
+         End SafeStateInfo
+      End ParamInfo 
+      ParamInfo 
+         Name SAFEVALUE_1
+         Description "Safe value channel 1"
+         CompileType IOConfig
+         Datatype BOOL
+         Default false
+         (* CNSafeData *)
+         ParamType CIGIOData 1 1 0 WordParam WordOffset 
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 1
+         End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+         Name SAFEVALUE_2
+         Description "Safe value channel 2"
+         CompileType IOConfig
+         Datatype BOOL
+         Default false
+         (* CNSafeData *)
+         ParamType CIGIOData 1 2 0 WordParam WordOffset 
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 2
+         End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+         Name SAFEVALUE_3
+         Description "Safe value channel 3"
+         CompileType IOConfig
+         Datatype BOOL
+         Default false
+         (* CNSafeData *)
+         ParamType CIGIOData 1 3 0 WordParam WordOffset 
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 3
+         End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+         Name SAFEVALUE_4
+         Description "Safe value channel 4"
+         CompileType IOConfig
+         Datatype BOOL
+         Default false
+         (* CNSafeData *)
+         ParamType CIGIOData 1 4 0 WordParam WordOffset 
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 4
+         End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+         Name SAFEVALUE_5
+         Description "Safe value channel 5"
+         CompileType IOConfig
+         Datatype BOOL
+         Default false
+         (* CNSafeData *)
+         ParamType CIGIOData 1 5 0 WordParam WordOffset 
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 5
+         End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+         Name SAFEVALUE_6
+         Description "Safe value channel 6"
+         CompileType IOConfig
+         Datatype BOOL
+         Default false
+         (* CNSafeData *)
+         ParamType CIGIOData 1 6 0 WordParam WordOffset 
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 6
+         End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+         Name SAFEVALUE_7
+         Description "Safe value channel 7"
+         CompileType IOConfig
+         Datatype BOOL
+         Default false
+         (* CNSafeData *)
+         ParamType CIGIOData 1 7 0 WordParam WordOffset 
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 7
+         End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+         Name SAFEVALUE_8
+         Description "Safe value channel 8"
+         CompileType IOConfig
+         Datatype BOOL
+         Default false
+         (* CNSafeData *)
+         ParamType CIGIOData 1 8 0 WordParam WordOffset 
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 8
+         End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+         Name SAFEVALUE_9
+         Description "Safe value channel 9"
+         CompileType IOConfig
+         Datatype BOOL
+         Default false
+         (* CNSafeData *)
+         ParamType CIGIOData 1 9 0 WordParam WordOffset 
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 9
+         End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+         Name SAFEVALUE_10
+         Description "Safe value channel 10"
+         CompileType IOConfig
+         Datatype BOOL
+         Default false
+         (* CNSafeData *)
+         ParamType CIGIOData 1 10 0 WordParam WordOffset 
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 10
+         End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+         Name SAFEVALUE_11
+         Description "Safe value channel 11"
+         CompileType IOConfig
+         Datatype BOOL
+         Default false
+         (* CNSafeData *)
+         ParamType CIGIOData 1 11 0 WordParam WordOffset 
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 11
+         End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+         Name SAFEVALUE_12
+         Description "Safe value channel 12"
+         CompileType IOConfig
+         Datatype BOOL
+         Default false
+         (* CNSafeData *)
+         ParamType CIGIOData 1 12 0 WordParam WordOffset 
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 12
+         End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+         Name SAFEVALUE_13
+         Description "Safe value channel 13"
+         CompileType IOConfig
+         Datatype BOOL
+         Default false
+         (* CNSafeData *)
+         ParamType CIGIOData 1 13 0 WordParam WordOffset 
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 13
+         End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+         Name SAFEVALUE_14
+         Description "Safe value channel 14"
+         CompileType IOConfig
+         Datatype BOOL
+         Default false
+         (* CNSafeData *)
+         ParamType CIGIOData 1 14 0 WordParam WordOffset 
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 14
+         End SafeStateInfo
+      End ParamInfo
+      ParamInfo 
+         Name SAFEVALUE_15
+         Description "Safe value channel 15"
+         CompileType IOConfig
+         Datatype BOOL
+         Default false
+         (* CNSafeData *)
+         ParamType CIGIOData 1 15 0 WordParam WordOffset 
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 15
+         End SafeStateInfo
+      End ParamInfo
+   End Parameters
+   ParValList
+      ParVal
+         ParValIndex 0
+         ENUMCONTROL
+         "Resetoutputs"  0 ResetValue
+         "Holdlaststate" 1 HoldLastValue
+         "Safevalues"    2 UseSafeValue
+      End ParVal
+   End ParValList
+   Channels
+   ChannelInfo
+         Number 0 
+         ChannelName "Output 0"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40000 16#1
+         ConflictInfo 16#0201
+      End ChannelInfo
+      ChannelInfo
+         Number 1
+         ChannelName "Output 1"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40000 16#2
+         ConflictInfo 16#0201
+      End ChannelInfo
+      ChannelInfo
+         Number 2
+         ChannelName "Output 2"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40000 16#4
+         ConflictInfo 16#0201
+      End ChannelInfo
+      ChannelInfo
+         Number 3
+         ChannelName "Output 3"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40000 16#8 
+         ConflictInfo 16#0201
+      End ChannelInfo
+      ChannelInfo
+         Number 4
+         ChannelName "Output 4"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40000 16#10
+         ConflictInfo 16#0201
+      End ChannelInfo
+      ChannelInfo
+         Number 5
+         ChannelName "Output 5"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40000 16#20
+         ConflictInfo 16#0201
+      End ChannelInfo
+      ChannelInfo
+         Number 6
+         ChannelName "Output 6"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40000 16#40
+         ConflictInfo 16#0201
+      End ChannelInfo
+      ChannelInfo
+         Number 7
+         ChannelName "Output 7"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40000 16#80
+         ConflictInfo 16#0201
+      End ChannelInfo
+      ChannelInfo
+         Number 8
+         ChannelName "Output 8"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40000 16#100
+         ConflictInfo 16#0201
+      End ChannelInfo
+      ChannelInfo
+         Number 9
+         ChannelName "Output 9"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40000 16#200
+         ConflictInfo 16#0201
+      End ChannelInfo
+      ChannelInfo
+         Number 10
+         ChannelName "Output 10"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40000 16#400 
+         ConflictInfo 16#0201
+      End ChannelInfo
+      ChannelInfo
+         Number 11
+         ChannelName "Output 11"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40000 16#800 
+         ConflictInfo 16#0201
+      End ChannelInfo
+      ChannelInfo
+         Number 12
+         ChannelName "Output 12"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40000 16#1000 
+         ConflictInfo 16#0201
+      End ChannelInfo
+      ChannelInfo
+         Number 13
+         ChannelName "Output 13"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40000 16#2000
+         ConflictInfo 16#0201
+      End ChannelInfo
+      ChannelInfo
+         Number 14
+         ChannelName "Output 14"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40000 16#4000
+         ConflictInfo 16#0201
+      End ChannelInfo
+      ChannelInfo
+         Number 15
+         ChannelName "Output 15"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40000 16#8000
+         ConflictInfo 16#0201
+      End ChannelInfo
+      ChannelInfo
+         Number 16
+         ChannelName "All outputs"
+         Datatype Dword_Out
+         Routine 600
+         CopyParameters 0 0 16#40000 16#0 
+         ConflictInfo 16#0102
+      End ChannelInfo
+      ChannelInfo
+         Number 17
+         ChannelName "UnitStatus"
+         Datatype Status_In
+         Routine 900
+         CopyParameters 0 0 16#50000
+      End ChannelInfo
+   End Channels
+   IoUnitStatus
+      StatusType WrongModuleType 
+      StatusData 16#30000 16#1FFF 16#5 16#115
+      StatusType ModuleMissing
+      StatusData 16#30000 16#8000 16#0 16#0
+      StatusType IoError
+      StatusData 16#30000 16#2000 16#0 16#0
+   End IoUnitStatus
+   Configuration
+      ConfigInfo
+         ModuleKey   16#0115
+         InAreaSize  1
+         OutAreaSize 1
+         InWord
+            WORD 16#A115 0 
+         OutWord
+            WORD 0       0 
+         CIGIOConnData
+            CIGIOData       16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 (* CNSafeData *)
+            CIGIOData       16#03 16#00 16#10 16#7D 16#00 16#00 16#0C (* Out data *)
+            CIGIOData       16#04 16#00 16#10 16#07 16#00 16#00 16#05 (* In data  *)
+         End CIGIOConnData
+      End ConfigInfo
+   End Configuration
+  HWUnitInfoCRC 16#09EE
+End HWUnitInfo (* DO210 / ControlNet *)

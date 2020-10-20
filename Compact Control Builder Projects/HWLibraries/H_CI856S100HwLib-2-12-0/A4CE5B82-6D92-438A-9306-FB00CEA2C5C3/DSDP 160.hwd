@@ -1,0 +1,346 @@
+(****************************************************************************)
+(* FILE            dsdp160.hwd                                              *)
+(*                                                                          *)
+(* DESCRIPTION     Hardware definition file for S100 I/O module DSDP 160    *)
+(*                                                                          *)
+(* AUTHOR          PA/VT J Ruth                                             *)
+(*                                                                          *)
+(* All rights reserved. Reproduction, modification, use or disclosure       *)
+(* to third parties without express authority, is forbidden.                *)
+(* Copyright ABB Process Automation AB, Sweden, 2009.                       *)
+(*                                                                          *)
+(*                                                                          *)
+(* HISTORY $Log:  $ *)
+(*  *)
+(*                                                                          *)
+(*                                                                          *)
+(* ABSTRACT                                                                 *)
+(*                                                                          *)
+(****************************************************************************)
+
+HWUnitInfo (* DSDP 160 *)
+  HWUnitID {665105C6-8410-4f26-8DE7-252BD866D2C7}
+  Description "DSDP 160"
+  Information "Loop transducer interface board with 4 channels" 
+  Icons RackIOType
+  Attributes AdapterUnit IoUnit 
+  InterfaceInfo
+    (*Interface CIGInterface*) (* If GetDeviceStatus is wanted or Numbered parameters specified *)
+    IoSysType CIGIO        (* GetConnStatus will be called from framework *)
+    CLSID_CB {E15630B2-7F2A-4fab-ACDC-9A46839D335B} (* CLSID_CB = GUID for S100 Protocol handler (PH) in Control builder CB *)
+    CLSID_CTRL   {41ACBED2-973D-48d1-B5B5-51836FEF4B26} (* CLSID_CTRL   = GUID for S100 Protocol handler (PH) in Controller *)
+    HWConfig Fail
+  End InterfaceInfo 
+  ConnectionInfo
+    ConnectType OwnUnit
+    IOConnect   Fail
+    IOConfig    NoFail
+  End ConnectionInfo
+  Parameters
+    ParamInfo 
+      Name Ver
+      Description "Version"
+      Hidden
+      CompileType IOConnect
+      Datatype INT
+      Default 1 
+      ParValIndex 3
+      ParamType CIGIOData 0 0 0 ByteParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name AccessMode
+      Description "Access Mode"
+      Hidden
+      CompileType IOConnect
+      Datatype INT
+      Default 0 
+      ParValIndex 3
+      ParamType CIGIOData 1 0 0 ByteParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name NoOfAddresses
+      Description "No of Address"
+      Hidden
+      CompileType IOConnect
+      Datatype INT
+      Default 1 
+      ParValIndex 0
+      ParamType CIGIOData 2 0 0 ByteParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name Address
+      Description "Address"
+      CompileType IOConnect
+      Datatype INT
+      Default 192
+      ParValIndex 1
+      ParamType CIGIOData 3 0 0 ByteParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ModType
+      Description "Module type"
+      Hidden
+      CompileType IOConnect
+      Datatype INT
+      Default 65 
+      ParValIndex 3
+      ParamType CIGIOData 4 0 0 ByteParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ScanUpdateInterval
+      Description "Scan/update interval"
+      CompileType IOConfig
+      Datatype INT
+      Default 1000
+      ParValIndex 2
+      ParamType CIGIOData 2 0 1 WordParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel1
+      Description "Active channel 1"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 0 0 2 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel2
+      Description "Active channel 2"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 0 0 3 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel3
+      Description "Active channel 3"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 0 0 4 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel4
+      Description "Active channel 4"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 0 0 5 WordParam ByteOffset
+    End ParamInfo
+  End Parameters
+
+  ParValList
+    ParVal
+      ParValIndex 0      (* No of addresses which this unit uses *)
+      UnitText    " "
+      INT 1 4 1 4
+    End ParVal
+
+    ParVal
+      ParValIndex 1      (* Strapped address interval *)
+      UnitText    " "
+      INT 192 239 192 239
+    End ParVal
+
+    ParVal
+      ParValIndex 2      (* Scan/update time *)
+      UnitText    "0.1 ms"
+      INT 100 50000 100 50000
+    End ParVal
+
+    ParVal
+      ParValIndex 3      (* General INT type *)
+      UnitText    " "
+      INT 0 65535 0 65535
+    End ParVal
+  End ParValList
+
+  Channels
+    ChannelInfo
+      Number 1
+      ChannelName "Material position channel 1"
+      Datatype Int_In
+      Routine 300
+      CopyParameters 0 0 16#30002 0 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 2
+      ChannelName "Material position channel 2"
+      Datatype Int_In
+      Routine 300
+      CopyParameters 0 0 16#30004 0 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 3
+      ChannelName "Material position channel 3"
+      Datatype Int_In
+      Routine 300
+      CopyParameters 0 0 16#30006 0
+    End ChannelInfo
+
+    ChannelInfo
+      Number 4
+      ChannelName "Material position channel 4"
+      Datatype Int_In
+      Routine 300
+      CopyParameters 0 0 16#30008 0 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 5
+      ChannelName "Material detected channel 1"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30003 16#0004 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 6
+      ChannelName "Material detected channel 2"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30005 16#0004 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 7 
+      ChannelName "Material detected channel 3"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30007 16#0004 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 8
+      ChannelName "Material detected channel 4"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30009 16#0004 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 9
+      ChannelName "Synch error channel 1"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30003 16#0002 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 10
+      ChannelName "Synch error channel 2"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30005 16#0002 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 11
+      ChannelName "Synch error channel 3"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30007 16#0002 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 12
+      ChannelName "Synch error channel 4"
+      Datatype Bool_In
+      Routine 101
+      CopyParameters 0 0 16#30009 16#0002 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 13
+      ChannelName "Test transducer channel 1"
+      Datatype Bool_out
+      Routine 200
+      CopyParameters 0 0 16#40000 16#0001 0 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 14
+      ChannelName "Test transducer channel 2"
+      Datatype Bool_out
+      Routine 200
+      CopyParameters 0 0 16#40001 16#0001 0 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 15
+      ChannelName "Test transducer channel 3"
+      Datatype Bool_out
+      Routine 200
+      CopyParameters 0 0 16#40002 16#0001 0 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 16
+      ChannelName "Test transducer channel 4"
+      Datatype Bool_out
+      Routine 200
+      CopyParameters 0 0 16#40003 16#0001 0 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 17
+      ChannelName "UnitStatus"
+      Datatype Status_In
+      Routine 900
+      CopyParameters 0 0 16#50000
+    End ChannelInfo      
+  End Channels
+
+  IoUnitStatus
+    StatusType ModuleMissing
+    StatusData 16#30001 16#0001 16#0 16#0
+    StatusType WrongModuleType
+    StatusData 16#30001 16#0002 16#0 16#0
+    StatusType IoError
+    StatusData 16#30001 16#0004 16#0 16#0
+  End IoUnitStatus
+
+  Configuration
+    ConfigInfo
+      ModuleKey   16#0000
+      InAreaSize  10
+      OutAreaSize 4
+      InWord 
+        WORD 0       16#0000  (* State *)
+        WORD 0       16#0001  (* Module status *)
+        WORD 0       16#0002  (* Position ch 1 *)
+        WORD 0       16#0003  (* Status ch 1 *)
+        WORD 0       16#0004  (* Position ch 2 *)
+        WORD 0       16#0005  (* Status ch 2 *)
+        WORD 0       16#0006  (* Position ch 3 *)
+        WORD 0       16#0007  (* Status ch 3 *)
+        WORD 0       16#0008  (* Position ch 4 *)
+        WORD 0       16#0009  (* Status ch 4 *)
+      OutWord
+        WORD 0       16#0000  (* Test transducer ch 1 *) 
+        WORD 0       16#0001  (* Test transducer ch 2 *)
+        WORD 0       16#0002  (* Test transducer ch 3 *)
+        WORD 0       16#0003  (* Test transducer ch 4 *)
+      CIGIOConnData
+        CIGIOData 0 0 0 0 0   (* Common parameters *)
+        CIGIOData 0 0 0 0     (* Common board specific parameters *)
+        CIGIOData 0 0         (* Channel 1 parameters *)     
+        CIGIOData 0 0         (* Channel 2 parameters *) 
+        CIGIOData 0 0         (* Channel 3 parameters *) 
+        CIGIOData 0 0         (* Channel 4 parameters *) 
+      End CIGIOConnData
+    End ConfigInfo
+  End Configuration
+  HWUnitInfoCRC 16#D1EF
+ End HWUnitInfo (* DSDP 160 *)

@@ -1,0 +1,55 @@
+HwUnitInfo  (* Secure Digital Card *)
+   HWUnitID {E1982706-AE94-4093-AD8D-2B100710B614}
+   Description "SD Card"
+   Information "SD Memory Card"
+   Icons CompactFlash
+   Attributes CompileAlways
+   InterfaceInfo
+     Interface CompactFlashCard
+     HWConfig Fail
+   End InterfaceInfo
+   Parameters
+      ParamInfo 
+         Name RETAIN
+         Description "Save cold retain values"
+         CompileType HWConfig
+         Datatype INT      
+         Default 60
+         ParValIndex 0
+         ParamType Numbered 0
+      End ParamInfo 
+   End Parameters
+   ParValList
+      ParVal
+         ParValIndex 0
+         UnitText    "min"
+         INT 0 65535 0 65535 
+      End ParVal
+   End ParValList
+   Channels
+      ChannelInfo
+         Number 0
+         ChannelName "UnitStatus"
+         Datatype Status_In
+         Routine 900
+         CopyParameters 0 0 16#50000
+      End ChannelInfo
+   End Channels
+   UnitStatusText
+      DeviceSpecific1 "No card present"
+      DeviceSpecific2 "Application version mismatch"
+      DeviceSpecific3 "Invalid save setting"
+      DeviceSpecific4 "Controller version mismatch"
+      DeviceSpecific5 "Image is corrupt"
+      DeviceSpecific6 "No image"
+   End UnitStatusText
+   UnitStatusSeverity
+      DeviceSpecific1 GeneralWarning TriggerAlarm SeverityLow
+      DeviceSpecific2 GeneralWarning TriggerAlarm SeverityLow
+      DeviceSpecific3 GeneralWarning TriggerAlarm SeverityLow
+      DeviceSpecific4 GeneralWarning TriggerAlarm SeverityLow
+      DeviceSpecific5 GeneralWarning TriggerAlarm SeverityLow
+      DeviceSpecific6 GeneralWarning TriggerAlarm SeverityLow
+   End UnitStatusSeverity
+  HWUnitInfoCRC 16#C3A0
+End HWUnitInfo (* Secure Digital Card *)

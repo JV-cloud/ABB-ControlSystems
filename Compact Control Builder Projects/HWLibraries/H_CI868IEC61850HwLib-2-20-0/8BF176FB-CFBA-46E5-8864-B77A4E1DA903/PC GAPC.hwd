@@ -1,0 +1,292 @@
+(****************************************************************************)
+(* FILE            PC GAPC.hwd                                              *)
+(*                                                                          *)
+(* DESCRIPTION     Hardware definition file for PC GAPC                     *)
+(*                                                                          *)
+(* AUTHOR          Ramachandragowda G                                       *)
+(*                                                                          *)
+(* All rights reserved. Reproduction, modification, use or disclosure       *)
+(* to third parties without express authority, is forbidden.                *)
+(* Copyright ABB Inc. 2006.                                                 *)
+(*                                                                          *)
+(*                                                                          *)
+(* 27-04-2006 Ramachandragowda G            Initial version                 *)
+(*                                                                          *)
+(****************************************************************************)
+FileHeader
+   Contents               "PC GAPC"
+   Date                   "2007-04-27"
+   Version                "1.0-0"
+  RequiredSyntaxVersion "3.0"
+End FileHeader
+
+HWUnitInfo  (* PC GAPC *)
+   HWUnitID {4A0F9ACF-9177-492a-82C6-7E03ECC9EDFD} (* GUID for PC GAPC, GAPCfor Power control*)
+   Description "PC GAPC"
+   Information "GAPC for Active Power Control of Generators"
+   Icons LNType
+   Attributes IoUnit AdapterUnit DigitalOut
+   InterfaceInfo
+     IoSysType    CIGIO
+     CLSID_CB    {53315084-E413-4c55-92E1-C2E1FAF19460} (*  CLSID_CB  = GUID for CI868 PH in Control builder CB *)
+     CLSID_CTRL  {4AB844AC-2BEE-4910-BA08-CA109A5D7E81}  (* CLSID_CTRL = GUID for CI868 PH in Controler *)
+   End InterfaceInfo
+
+   ConnectionInfo
+      ConnectType OwnUnit
+      IOConnect Fail
+      IoConfig  NoFail
+   End ConnectionInfo
+
+   ExternalConfigInfo
+      ShowExternalChannelDescriptionColumn
+   End ExternalConfigInfo
+
+   Parameters
+      ParamInfo
+         Name IALADDRSTR
+         Description "IALaddr for Str"
+         ExternalVisible
+         CompileType IOConnect  
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 1
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPESTR
+         Description "DMCD Type for Str"
+         ExternalVisible
+         CompileType IOConnect  
+         Datatype INT
+         Default 1
+         ParValIndex 2
+         ParamType Numbered 2
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOSTR
+         Description "Protocol Info for Str"
+         ExternalVisible
+         CompileType IOConnect  
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 3
+      End ParamInfo
+      ParamInfo
+         Name IALADDROP
+         Description "IALaddr for Op"
+         ExternalVisible
+         CompileType IOConnect  
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 4
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEOP
+         Description "DMCD Type for Op"
+         ExternalVisible
+         CompileType IOConnect  
+         Datatype INT
+         Default 1
+         ParValIndex 2
+         ParamType Numbered 5
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOOP
+         Description "Protocol Info for Op"
+         ExternalVisible
+         CompileType IOConnect  
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 6
+      End ParamInfo
+      ParamInfo
+         Name IALADDRSPCSO1
+         Description "IALaddr for SPCSO1"
+         ExternalVisible
+         CompileType IOConnect  
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 7
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPESPCSO1
+         Description "DMCD Type for SPCSO1"
+         ExternalVisible
+         CompileType IOConnect  
+         Datatype INT
+         Default 1
+         ParValIndex 2
+         ParamType Numbered 8
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOSPCSO1
+         Description "Protocol Info for SPCSO1"
+         ExternalVisible
+         CompileType IOConnect  
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 9
+      End ParamInfo
+      ParamInfo
+         Name IALADDRSPCSO2
+         Description "IALaddr for SPCSO2"
+         ExternalVisible
+         CompileType IOConnect  
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 10
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPESPCSO2
+         Description "DMCD Type for SPCSO2"
+         ExternalVisible
+         CompileType IOConnect  
+         Datatype INT
+         Default 1
+         ParValIndex 2
+         ParamType Numbered 11
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOSPCSO2
+         Description "Protocol Info for SPCSO2"
+         ExternalVisible
+         CompileType IOConnect  
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 12
+      End ParamInfo
+      ParamInfo
+         Name IALADDRWATT
+         Description "IALaddr for Watt"
+         ExternalVisible
+         CompileType IOConnect  
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 13
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEWATT
+         Description "DMCD Type for Watt"
+         ExternalVisible
+         CompileType IOConnect  
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 14
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOWATT
+         Description "Protocol Info for Watt"
+         ExternalVisible
+         CompileType IOConnect  
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 15
+      End ParamInfo
+      ParamInfo
+         Name IALADDRHZ
+         Description "IALaddr for Hz"
+         ExternalVisible
+         CompileType IOConnect  
+         Datatype STRING
+         Default "1"15
+         ParamType Numbered 16
+      End ParamInfo
+      ParamInfo
+         Name DMCDTYPEHZ
+         Description "DMCD Type for Hz"
+         ExternalVisible
+         CompileType IOConnect  
+         Datatype INT
+         Default 13
+         ParValIndex 2
+         ParamType Numbered 17
+      End ParamInfo
+      ParamInfo
+         Name PROTOCOLINFOHZ
+         Description "Protocol Info for Hz"
+         ExternalVisible
+         CompileType IOConnect  
+         Datatype STRING
+         Default ""500
+         ParamType Numbered 18
+      End ParamInfo
+      ParamInfo
+         Name HWDVERSION
+         Description "Version of HWD File"
+         ExternalVisible
+         Datatype STRING
+         Default " 1.0-0 "
+         ParamType Numbered 20
+      End ParamInfo
+      ParamInfo
+         Name LNNAME
+         Description "LN Name"
+         Datatype STRING
+         Default " "100
+         ParamType Numbered 22
+      End ParamInfo
+   End Parameters
+
+   ParValList
+     ParVal
+        ParValIndex 2
+        UnitText    " "
+        INT 0 255 0 255
+     End ParVal
+   End ParValList
+
+   Channels
+   ChannelInfo
+      Number         1
+      ChannelName   "Str"
+      Datatype       Bool_Out
+      Routine        201
+      CopyParameters 16#40000 16#0003
+    End ChannelInfo
+    ChannelInfo
+      Number         2
+      ChannelName   "Op"
+      Datatype       Bool_Out
+      Routine        201
+      CopyParameters 16#40008 16#0003
+    End ChannelInfo
+    ChannelInfo
+      Number         3
+      ChannelName   "SPCSO1"
+      Datatype       Bool_Out
+      Routine        201
+      CopyParameters 16#40010 16#0003
+    End ChannelInfo
+    ChannelInfo
+      Number         4
+      ChannelName   "SPCSO2"
+      Datatype       Bool_Out
+      Routine        201
+      CopyParameters 16#40018 16#0003
+    End ChannelInfo
+    ChannelInfo
+      Number         5
+      ChannelName   "Watt"
+      Datatype       Real_Out
+      Routine        820
+      CopyParameters 16#40020 0
+    End ChannelInfo
+    ChannelInfo
+      Number         6
+      ChannelName   "Hz"
+      Datatype       Real_Out
+      Routine        820
+      CopyParameters 16#40028 0
+    End ChannelInfo
+ End Channels
+
+Configuration
+    ConfigInfo
+      ModuleKey       16#05
+      OutAreaSize     48 BYTE
+    End ConfigInfo
+  End Configuration
+
+  HWUnitInfoCRC 16#CDA7
+End HWUnitInfo 

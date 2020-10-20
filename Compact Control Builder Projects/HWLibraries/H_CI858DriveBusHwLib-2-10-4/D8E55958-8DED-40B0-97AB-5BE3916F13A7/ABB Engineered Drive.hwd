@@ -1,0 +1,1159 @@
+HwUnitInfo  (* ACS600 Eng *)
+   HWUnitID {B2A76D01-05BD-4825-9E2A-2659FB38D6CE}
+   Description "ABB Engineered Drive"
+   Information "ABB Engineered Drive connected to Drives channel"
+   Icons MotorType
+   Attributes AdapterUnit IoUnit DigitalOut
+   InterfaceInfo
+     IoSysType CIGIO
+     CLSID_CB   {6FBF3F0D-6D1B-4C2D-A55D-8EB36EB2A274} (*  CLSID_CB = GUID for CI858 Protocol handler (PH) in Control builder CB *)
+     CLSID_CTRL {8D9E7478-89A5-4ADA-B10A-4D3A82652E9C} (* CLSID_CTRL  = GUID for CI858 Protocol handler (PH) in Controler *)
+     HWConfig   Fail
+   End InterfaceInfo
+
+   ConnectionInfo
+     ConnectType AllUnits
+     IOConnect   Fail
+     IOConfig    NoFail
+   End ConnectionInfo
+
+   Parameters    
+      ParamInfo 
+         Name NUM_PRE_BRANCH_UNITS (*Parameter 14*)
+         Description "Number of preceding branching units (max 3)"
+         Hidden
+         CompileType IoConnect
+         Datatype INT
+         Default 1
+         ParValIndex 11
+         ParamType CIGIOData 1 0 3 WordParam WordOffset
+      End ParamInfo   
+      ParamInfo 
+         Name DEVICE_ADDR_FIRST_BRU (*Parameter 15*)
+         Description "Device address of first BRU"
+         Hidden
+         CompileType IoConnect
+         Datatype INT
+         Default 124
+         ParValIndex 9
+         ParamType CIGIOData 2 0 3 WordParam WordOffset
+      End ParamInfo   
+      ParamInfo 
+         Name USED_CHANNEL_FIRST_BRU (*Parameter 16*)
+         Description "Used channel of first BRU"
+         Hidden
+         CompileType IoConnect
+         Datatype INT
+         Default 1
+         ParValIndex 10
+         ParamType CIGIOData 3 0 3 WordParam WordOffset
+      End ParamInfo   
+      ParamInfo 
+         Name DEVICE_ADDR_SECOND_BRU (*Parameter 17*)
+         Description "Device address of second BRU"
+         Hidden
+         CompileType IoConnect
+         Datatype INT
+         Default 123
+         ParValIndex 9
+         ParamType CIGIOData 4 0 3 WordParam WordOffset
+      End ParamInfo   
+      ParamInfo 
+         Name USED_CHANNEL_SECOND_BRU (*Parameter 18*)
+         Description "Used channel of second BRU"
+         Hidden
+         CompileType IoConnect
+         Datatype INT
+         Default 1
+         ParValIndex 10
+         ParamType CIGIOData 5 0 3 WordParam WordOffset
+      End ParamInfo   
+      ParamInfo 
+         Name DEVICE_ADDR_THIRD_BRU (*Parameter 19*)
+         Description "Device address of third BRU"
+         Hidden
+         CompileType IoConnect
+         Datatype INT
+         Default 122
+         ParValIndex 9
+         ParamType CIGIOData 6 0 3 WordParam WordOffset
+      End ParamInfo   
+      ParamInfo 
+         Name USED_CHANNEL_THIRD_BRU (*Parameter 20*)
+         Description "Used channel of third BRU"
+         Hidden
+         CompileType IoConnect
+         Datatype INT
+         Default 1
+         ParValIndex 10
+         ParamType CIGIOData 7 0 3 WordParam WordOffset
+      End ParamInfo   
+      ParamInfo 
+         Name DRIVEBUS_CAPABILITY (*Parameter 3*)
+         Description "DriveBus capability"
+         Hidden
+         CompileType IoConnect
+         Datatype BOOL
+         Default TRUE  (*DriveBus capable*)
+         ParamType CIGIOData 0 0 4 WordParam WordOffset
+      End ParamInfo
+      ParamInfo 
+         Name NODE_ADDR (*Parameter 1*)
+         Description "Address of node address"
+         Hidden
+         CompileType IoConnect
+         Datatype INT
+         Default 7001
+         ParValIndex 0
+         ParamType CIGIOData 0 0 2 WordParam WordOffset
+      End ParamInfo
+      ParamInfo 
+         Name USE_BUSMANAGER (*Parameter 4*)
+         Description "Use BusManager"
+         CompileType IoConnect
+         Datatype BOOL
+         Default TRUE
+         ParamType CIGIOData 1 0 4 WordParam WordOffset
+      End ParamInfo
+      ParamInfo 
+         Name PHYSICAL_NODE_ADDR (*Parameter 2*)
+         Description "Physical node address"
+         Hidden (*Node address not read from here. Read from HWtree position*)
+         CompileType IoConnect
+         Datatype INT
+         Default 1
+         ParValIndex 1
+         ParamType CIGIOData 0 0 3 WordParam WordOffset
+      End ParamInfo      
+      ParamInfo 
+         Name APPL_ID_ADDR (*Parameter 10*)
+         Description "Address of Application ID in Drive"
+         CompileType IoConnect
+         Datatype INT
+         Default 9910
+         ParValIndex 0
+         ParamType CIGIOData 2 0 2 WordParam WordOffset
+      End ParamInfo
+      ParamInfo 
+         Name APPL_ID (*Parameter 12*)
+         Description "Configured Application ID"
+         CompileType IoConnect
+         Datatype INT
+         Default 1
+         ParValIndex 2
+         ParamType CIGIOData 3 0 2 WordParam WordOffset
+      End ParamInfo
+      ParamInfo 
+         Name CONF_APPL_ID_DATA_TYPE (*Parameter 9*)
+         Description "Configured Application ID data type"
+         CompileType IoConnect
+         Datatype ENUM
+         Default 0
+         ParValIndex 3
+         ParamType CIGIOData 0 0 5 WordParam WordOffset
+      End ParamInfo
+      ParamInfo 
+         Name DRIVETYPE_ADDRESS_IN_DRIVE (*Parameter 5*)
+         Description "Address of drive type in drive"
+         CompileType IoConnect
+         Datatype INT
+         Default 401
+         ParValIndex 0
+         ParamType CIGIOData 1 0 2 WordParam WordOffset
+      End ParamInfo
+
+      (*Numbered*)
+      ParamInfo 
+         Name DRIVE_TYPE
+         Description "Drive Type"
+         CompileType IoConnect
+         Datatype STRING
+         Default "AMXG6040" 32
+         ParamType Numbered 0
+      End ParamInfo
+      ParamInfo 
+         Name DRIVE_TYPE_CHECK_MASK
+         Description "Drive Type Checking Mask" (*Find out how this should look???*)
+         CompileType IoConnect
+         Datatype STRING
+         Default "AM??????" 32
+         ParamType Numbered 1
+      End ParamInfo
+
+      (* DS Parameters *)
+      ParamInfo 
+        Name DATASET1_ID
+        Description "Dataset 1 ID"
+        Hidden
+        CompileType IoConnect
+        Datatype ENUM
+        Default  0
+        ParValIndex 8
+        ParamType CIGIOData 0 0 6 ByteParam ByteOffset
+      End ParamInfo
+      ParamInfo 
+        Name DATASET2_ID
+        Description "Dataset 2 ID"
+        Hidden
+        CompileType IoConnect
+        Datatype ENUM
+        Default  1
+        ParValIndex 8
+        ParamType CIGIOData 0 0 7 ByteParam ByteOffset
+      End ParamInfo
+      ParamInfo 
+        Name DATASET3_ID
+        Description "Dataset 3 ID"
+        Hidden
+        CompileType IoConnect
+        Datatype ENUM
+        Default  2
+        ParValIndex 8
+        ParamType CIGIOData 0 0 8 ByteParam ByteOffset
+      End ParamInfo
+      ParamInfo 
+        Name DATASET4_ID
+        Description "Dataset 4 ID"
+        Hidden
+        CompileType IoConnect
+        Datatype ENUM
+        Default  3
+        ParValIndex 8
+        ParamType CIGIOData 0 0 9 ByteParam ByteOffset
+      End ParamInfo
+      ParamInfo 
+        Name DATASET5_ID
+        Description "Dataset 5 ID"
+        Hidden
+        CompileType IoConnect
+        Datatype ENUM
+        Default  4
+        ParValIndex 8
+        ParamType CIGIOData 0 0 10 ByteParam ByteOffset
+      End ParamInfo
+      ParamInfo 
+        Name DATASET6_ID
+        Description "Dataset 6 ID"
+        Hidden
+        CompileType IoConnect
+        Datatype ENUM
+        Default  5
+        ParValIndex 8
+        ParamType CIGIOData 0 0 11 ByteParam ByteOffset
+      End ParamInfo
+      ParamInfo 
+        Name DATASET7_ID
+        Description "Dataset 7 ID"
+        Hidden
+        CompileType IoConnect
+        Datatype ENUM
+        Default  6
+        ParValIndex 8
+        ParamType CIGIOData 0 0 12 ByteParam ByteOffset
+      End ParamInfo
+      ParamInfo 
+        Name DATASET8_ID
+        Description "Dataset 8 ID"
+        Hidden
+        CompileType IoConnect
+        Datatype ENUM
+        Default  7
+        ParValIndex 8
+        ParamType CIGIOData 0 0 13 ByteParam ByteOffset
+      End ParamInfo
+      ParamInfo 
+        Name DATASET1_STATUS
+        Description "Dataset 10 config status"
+        CompileType IoConnect
+        Datatype ENUM
+        Default  0
+        ParValIndex 12
+        ParamType CIGIOData 1 0 6 ByteParam ByteOffset
+      End ParamInfo
+      ParamInfo 
+        Name DATASET2_STATUS
+        Description "Dataset 12 config status"
+        CompileType IoConnect
+        Datatype ENUM
+        Default  0
+        ParValIndex 12
+        ParamType CIGIOData 1 0 7 ByteParam ByteOffset
+      End ParamInfo
+      ParamInfo 
+        Name DATASET3_STATUS
+        Description "Dataset 14 config status"
+        CompileType IoConnect
+        Datatype ENUM
+        Default  0
+        ParValIndex 12
+        ParamType CIGIOData 1 0 8 ByteParam ByteOffset
+      End ParamInfo
+      ParamInfo 
+        Name DATASET4_STATUS
+        Description "Dataset 16 config status"
+        CompileType IoConnect
+        Datatype ENUM
+        Default  0
+        ParValIndex 12
+        ParamType CIGIOData 1 0 9 ByteParam ByteOffset
+      End ParamInfo
+      ParamInfo 
+        Name DATASET5_STATUS
+        Description "Dataset 18 config status"
+        CompileType IoConnect
+        Datatype ENUM
+        Default  0
+        ParValIndex 12
+        ParamType CIGIOData 1 0 10 ByteParam ByteOffset
+      End ParamInfo
+      ParamInfo 
+        Name DATASET6_STATUS
+        Description "Dataset 20 config status"
+        CompileType IoConnect
+        Datatype ENUM
+        Default  0
+        ParValIndex 12
+        ParamType CIGIOData 1 0 11 ByteParam ByteOffset
+      End ParamInfo
+      ParamInfo 
+        Name DATASET7_STATUS
+        Description "Dataset 22 config status"
+        CompileType IoConnect
+        Datatype ENUM
+        Default  0
+        ParValIndex 12
+        ParamType CIGIOData 1 0 12 ByteParam ByteOffset
+      End ParamInfo
+      ParamInfo 
+        Name DATASET8_STATUS
+        Description "Dataset 24 config status"
+        CompileType IoConnect
+        Datatype ENUM
+        Default  0
+        ParValIndex 12
+        ParamType CIGIOData 1 0 13 ByteParam ByteOffset
+      End ParamInfo
+      ParamInfo 
+        Name DATASET1_PRIORITY
+        Description "Dataset 10 Priority"
+        CompileType IoConnect
+        Datatype ENUM
+        Default  0
+        ParValIndex 13
+        ParamType CIGIOData 2 0 6 ByteParam ByteOffset
+      End ParamInfo
+      ParamInfo 
+        Name DATASET2_PRIORITY
+        Description "Dataset 12 Priority"
+        CompileType IoConnect
+        Datatype ENUM
+        Default  0
+        ParValIndex 13
+        ParamType CIGIOData 2 0 7 ByteParam ByteOffset
+      End ParamInfo
+      ParamInfo 
+        Name DATASET3_PRIORITY
+        Description "Dataset 14 Priority"
+        CompileType IoConnect
+        Datatype ENUM
+        Default  0
+        ParValIndex 13
+        ParamType CIGIOData 2 0 8 ByteParam ByteOffset
+      End ParamInfo
+      ParamInfo 
+        Name DATASET4_PRIORITY
+        Description "Dataset 16 Priority"
+        CompileType IoConnect
+        Datatype ENUM
+        Default  0
+        ParValIndex 13
+        ParamType CIGIOData 2 0 9 ByteParam ByteOffset
+      End ParamInfo
+      ParamInfo 
+        Name DATASET5_PRIORITY
+        Description "Dataset 18 Priority"
+        CompileType IoConnect
+        Datatype ENUM
+        Default  0
+        ParValIndex 13
+        ParamType CIGIOData 2 0 10 ByteParam ByteOffset
+      End ParamInfo
+      ParamInfo 
+        Name DATASET6_PRIORITY
+        Description "Dataset 20 Priority"
+        CompileType IoConnect
+        Datatype ENUM
+        Default  0
+        ParValIndex 13
+        ParamType CIGIOData 2 0 11 ByteParam ByteOffset
+      End ParamInfo
+      ParamInfo 
+        Name DATASET7_PRIORITY
+        Description "Dataset 22 Priority"
+        CompileType IoConnect
+        Datatype ENUM
+        Default  0
+        ParValIndex 13
+        ParamType CIGIOData 2 0 12 ByteParam ByteOffset
+      End ParamInfo
+      ParamInfo 
+        Name DATASET8_PRIORITY
+        Description "Dataset 24 Priority"
+        CompileType IoConnect
+        Datatype ENUM
+        Default  0
+        ParValIndex 13
+        ParamType CIGIOData 2 0 13 ByteParam ByteOffset
+      End ParamInfo
+    End Parameters
+
+    ParValList
+       ParVal
+          ParValIndex 0
+          INT 1 9999 1 9999
+       End ParVal
+       ParVal
+          ParValIndex 1
+          INT 1 125 1 125
+       End ParVal
+       ParVal
+          ParValIndex 2
+          INT 1 65535 1 65535
+       End ParVal
+       ParVal
+         ParValIndex 3
+         ENUM
+         "No Checking"        0
+         "Check Numbers"      1
+       End ParVal
+       ParVal
+          ParValIndex 8
+          ENUM
+          "10"     10
+          "12"     12
+          "14"     14
+          "16"     16
+          "18"     18
+          "20"     20
+          "22"     22
+          "24"     24
+       End ParVal
+       ParVal
+          ParValIndex 9
+          INT 0 255 0 255
+       End ParVal
+       ParVal
+          ParValIndex 10
+          INT 1 8 1 8
+       End ParVal
+       ParVal
+          ParValIndex 11
+          INT 0 3 0 3
+       End ParVal
+       ParVal
+          ParValIndex 12
+          ENUM
+          "Off"            0
+          "Read"           1
+          "Read/Write"     2
+       End ParVal
+       ParVal
+          ParValIndex 13
+          ENUM
+          "Normal Prio"    0
+          "High Prio"      1
+       End ParVal       
+    End ParValList
+   Channels
+     ChannelInfo
+         Number 1 
+         ChannelName "DS 11, in channel 1"
+         Datatype Int_In
+         Routine 1300
+         CopyParameters 0 0 16#30004 16#0
+         TaskRestrictionGroup 10
+     End ChannelInfo
+     ChannelInfo
+         Number 2 
+         ChannelName "DS 11, in channel 2"
+         Datatype Int_In
+         Routine 1300
+         CopyParameters 0 0 16#30005 16#0
+         TaskRestrictionGroup 10
+     End ChannelInfo
+     ChannelInfo
+         Number 3 
+         ChannelName "DS 11, in channel 3"
+         Datatype Int_In
+         Routine 1300
+         CopyParameters 0 0 16#30006 16#0
+         TaskRestrictionGroup 10
+     End ChannelInfo
+     ChannelInfo
+         Number 4 
+         ChannelName "DS 13, in channel 1"
+         Datatype Int_In
+         Routine 1300
+         CopyParameters 0 0 16#30014 16#0
+         TaskRestrictionGroup 12
+     End ChannelInfo
+     ChannelInfo
+         Number 5 
+         ChannelName "DS 13, in channel 2"
+         Datatype Int_In
+         Routine 1300
+         CopyParameters 0 0 16#30015 16#0
+         TaskRestrictionGroup 12
+     End ChannelInfo
+     ChannelInfo
+         Number 6 
+         ChannelName "DS 13, in channel 3"
+         Datatype Int_In
+         Routine 1300
+         CopyParameters 0 0 16#30016 16#0
+         TaskRestrictionGroup 12
+     End ChannelInfo
+     ChannelInfo
+         Number 7
+         ChannelName "DS 15, in channel 1"
+         Datatype Int_In
+         Routine 1300
+         CopyParameters 0 0 16#30024 16#0
+         TaskRestrictionGroup 14
+     End ChannelInfo
+     ChannelInfo
+         Number 8
+         ChannelName "DS 15, in channel 2"
+         Datatype Int_In
+         Routine 1300
+         CopyParameters 0 0 16#30025 16#0
+         TaskRestrictionGroup 14
+     End ChannelInfo
+     ChannelInfo
+         Number 9
+         ChannelName "DS 15, in channel 3"
+         Datatype Int_In
+         Routine 1300
+         CopyParameters 0 0 16#30026 16#0
+         TaskRestrictionGroup 14
+     End ChannelInfo
+     ChannelInfo
+         Number 10
+         ChannelName "DS 17, in channel 1"
+         Datatype Int_In
+         Routine 1300
+         CopyParameters 0 0 16#30034 16#0
+         TaskRestrictionGroup 16
+     End ChannelInfo
+     ChannelInfo
+         Number 11
+         ChannelName "DS 17, in channel 2"
+         Datatype Int_In
+         Routine 1300
+         CopyParameters 0 0 16#30035 16#0
+         TaskRestrictionGroup 16
+     End ChannelInfo
+     ChannelInfo
+         Number 12
+         ChannelName "DS 17, in channel 3"
+         Datatype Int_In
+         Routine 1300
+         CopyParameters 0 0 16#30036 16#0
+         TaskRestrictionGroup 16
+     End ChannelInfo
+     ChannelInfo
+         Number 13
+         ChannelName "DS 19, in channel 1"
+         Datatype Int_In
+         Routine 1300
+         CopyParameters 0 0 16#30044 16#0
+         TaskRestrictionGroup 18
+     End ChannelInfo
+     ChannelInfo
+         Number 14
+         ChannelName "DS 19, in channel 2"
+         Datatype Int_In
+         Routine 1300
+         CopyParameters 0 0 16#30045 16#0
+         TaskRestrictionGroup 18
+     End ChannelInfo
+     ChannelInfo
+         Number 15
+         ChannelName "DS 19, in channel 3"
+         Datatype Int_In
+         Routine 1300
+         CopyParameters 0 0 16#30046 16#0
+         TaskRestrictionGroup 18
+     End ChannelInfo
+     ChannelInfo
+         Number 16
+         ChannelName "DS 21, in channel 1"
+         Datatype Int_In
+         Routine 1300
+         CopyParameters 0 0 16#30054 16#0
+         TaskRestrictionGroup 20
+     End ChannelInfo
+     ChannelInfo
+         Number 17
+         ChannelName "DS 21, in channel 2"
+         Datatype Int_In
+         Routine 1300
+         CopyParameters 0 0 16#30055 16#0
+         TaskRestrictionGroup 20
+     End ChannelInfo
+     ChannelInfo
+         Number 18
+         ChannelName "DS 21, in channel 3"
+         Datatype Int_In
+         Routine 1300 
+         CopyParameters 0 0 16#30056 16#0
+         TaskRestrictionGroup 20
+     End ChannelInfo
+     ChannelInfo
+         Number 19
+         ChannelName "DS 23, in channel 1"
+         Datatype Int_In
+         Routine 1300
+         CopyParameters 0 0 16#30064 16#0
+         TaskRestrictionGroup 22
+     End ChannelInfo
+     ChannelInfo
+         Number 20
+         ChannelName "DS 23, in channel 2"
+         Datatype Int_In
+         Routine 1300
+         CopyParameters 0 0 16#30065 16#0
+         TaskRestrictionGroup 22
+     End ChannelInfo
+     ChannelInfo
+         Number 21
+         ChannelName "DS 23, in channel 3"
+         Datatype Int_In
+         Routine 1300
+         CopyParameters 0 0 16#30066 16#0
+         TaskRestrictionGroup 22
+     End ChannelInfo
+     ChannelInfo
+         Number 22
+         ChannelName "DS 25, in channel 1"
+         Datatype Int_In
+         Routine 1300
+         CopyParameters 0 0 16#30074 16#0
+         TaskRestrictionGroup 24
+     End ChannelInfo
+     ChannelInfo
+         Number 23
+         ChannelName "DS 25, in channel 2"
+         Datatype Int_In
+         Routine 1300
+         CopyParameters 0 0 16#30075 16#0
+         TaskRestrictionGroup 24
+     End ChannelInfo
+     ChannelInfo
+         Number 24
+         ChannelName "DS 25, in channel 3"
+         Datatype Int_In
+         Routine 1300
+         CopyParameters 0 0 16#30076 16#0
+         TaskRestrictionGroup 24
+     End ChannelInfo
+     ChannelInfo
+         Number 25
+         ChannelName "DS 10, out channel 1"
+         Datatype Int_Out
+         Routine 1400
+         CopyParameters 0 0 16#40007 16#0
+         TaskRestrictionGroup 10
+     End ChannelInfo
+     ChannelInfo
+         Number 26
+         ChannelName "DS 10, out channel 2"
+         Datatype Int_Out
+         Routine 1400
+         CopyParameters 0 0 16#40008 16#0
+         TaskRestrictionGroup 10
+     End ChannelInfo
+     ChannelInfo
+         Number 27
+         ChannelName "DS 10, out channel 3"
+         Datatype Int_Out
+         Routine 1400
+         CopyParameters 0 0 16#40009 16#0
+         TaskRestrictionGroup 10
+     End ChannelInfo
+     ChannelInfo
+         Number 28
+         ChannelName "DS 12, out channel 1"
+         Datatype Int_Out
+         Routine 1400
+         CopyParameters 0 0 16#40017 16#0
+         TaskRestrictionGroup 12
+     End ChannelInfo
+     ChannelInfo
+         Number 29
+         ChannelName "DS 12, out channel 2"
+         Datatype Int_Out
+         Routine 1400
+         CopyParameters 0 0 16#40018 16#0
+         TaskRestrictionGroup 12
+     End ChannelInfo
+     ChannelInfo
+         Number 30
+         ChannelName "DS 12, out channel 3"
+         Datatype Int_Out
+         Routine 1400
+         CopyParameters 0 0 16#40019 16#0
+         TaskRestrictionGroup 12
+     End ChannelInfo
+     ChannelInfo
+         Number 31
+         ChannelName "DS 14, out channel 1"
+         Datatype Int_Out
+         Routine 1400
+         CopyParameters 0 0 16#40027 16#0
+         TaskRestrictionGroup 14
+     End ChannelInfo
+     ChannelInfo
+         Number 32
+         ChannelName "DS 14, out channel 2"
+         Datatype Int_Out
+         Routine 1400
+         CopyParameters 0 0 16#40028 16#0
+         TaskRestrictionGroup 14
+     End ChannelInfo
+     ChannelInfo
+         Number 33
+         ChannelName "DS 14, out channel 3"
+         Datatype Int_Out
+         Routine 1400
+         CopyParameters 0 0 16#40029 16#0
+         TaskRestrictionGroup 14
+     End ChannelInfo
+     ChannelInfo
+         Number 34
+         ChannelName "DS 16, out channel 1"
+         Datatype Int_Out
+         Routine 1400
+         CopyParameters 0 0 16#40037 16#0
+         TaskRestrictionGroup 16
+     End ChannelInfo
+     ChannelInfo
+         Number 35
+         ChannelName "DS 16, out channel 2"
+         Datatype Int_Out
+         Routine 1400
+         CopyParameters 0 0 16#40038 16#0
+         TaskRestrictionGroup 16
+     End ChannelInfo
+     ChannelInfo
+         Number 36
+         ChannelName "DS 16, out channel 3"
+         Datatype Int_Out
+         Routine 1400
+         CopyParameters 0 0 16#40039 16#0
+         TaskRestrictionGroup 16
+     End ChannelInfo
+     ChannelInfo
+         Number 37
+         ChannelName "DS 18, out channel 1"
+         Datatype Int_Out
+         Routine 1400
+         CopyParameters 0 0 16#40047 16#0
+         TaskRestrictionGroup 18
+     End ChannelInfo
+     ChannelInfo
+         Number 38
+         ChannelName "DS 18, out channel 2"
+         Datatype Int_Out
+         Routine 1400
+         CopyParameters 0 0 16#40048 16#0
+         TaskRestrictionGroup 18
+     End ChannelInfo
+     ChannelInfo
+         Number 39
+         ChannelName "DS 18, out channel 3"
+         Datatype Int_Out
+         Routine 1400
+         CopyParameters 0 0 16#40049 16#0
+         TaskRestrictionGroup 18
+     End ChannelInfo
+     ChannelInfo
+         Number 40
+         ChannelName "DS 20, out channel 1"
+         Datatype Int_Out
+         Routine 1400
+         CopyParameters 0 0 16#40057 16#0
+         TaskRestrictionGroup 20
+     End ChannelInfo
+     ChannelInfo
+         Number 41
+         ChannelName "DS 20, out channel 2"
+         Datatype Int_Out
+         Routine 1400
+         CopyParameters 0 0 16#40058 16#0
+         TaskRestrictionGroup 20
+     End ChannelInfo
+     ChannelInfo
+         Number 42
+         ChannelName "DS 20, out channel 3"
+         Datatype Int_Out
+         Routine 1400
+         CopyParameters 0 0 16#40059 16#0
+         TaskRestrictionGroup 20
+     End ChannelInfo
+     ChannelInfo
+         Number 43
+         ChannelName "DS 22, out channel 1"
+         Datatype Int_Out
+         Routine 1400
+         CopyParameters 0 0 16#40067 16#0
+         TaskRestrictionGroup 22
+     End ChannelInfo
+     ChannelInfo
+         Number 44
+         ChannelName "DS 22, out channel 2"
+         Datatype Int_Out
+         Routine 1400
+         CopyParameters 0 0 16#40068 16#0
+         TaskRestrictionGroup 22
+     End ChannelInfo
+     ChannelInfo
+         Number 45
+         ChannelName "DS 22, out channel 3"
+         Datatype Int_Out
+         Routine 1400
+         CopyParameters 0 0 16#40069 16#0
+         TaskRestrictionGroup 22
+     End ChannelInfo
+     ChannelInfo
+         Number 46
+         ChannelName "DS 24, out channel 1"
+         Datatype Int_Out
+         Routine 1400
+         CopyParameters 0 0 16#40077 16#0
+         TaskRestrictionGroup 24
+     End ChannelInfo
+     ChannelInfo
+         Number 47
+         ChannelName "DS 24, out channel 2"
+         Datatype Int_Out
+         Routine 1400
+         CopyParameters 0 0 16#40078 16#0
+         TaskRestrictionGroup 24
+     End ChannelInfo
+     ChannelInfo
+         Number 48
+         ChannelName "DS 24, out channel 3"
+         Datatype Int_Out
+         Routine 1400
+         CopyParameters 0 0 16#40079 16#0
+         TaskRestrictionGroup 24
+     End ChannelInfo
+     ChannelInfo
+         Number 49
+         ChannelName "UnitStatus"
+         Datatype Status_In
+         Routine 900
+         CopyParameters 0 0 16#50000
+     End ChannelInfo
+   End Channels
+   UnitStatusText
+     ExtendedStatus1 "Communication broken"
+     ExtendedStatus2 "Wrong drive type"
+     ExtendedStatus3 "Wrong application ID"
+     ExtendedStatus4 "Undefined error"
+   End UnitStatusText
+
+  UnitStatusSeverity
+    ExtendedStatus1      GeneralError   TriggerAlarm SeverityMedium
+    ExtendedStatus2      GeneralError   TriggerAlarm SeverityHigh
+    ExtendedStatus3      GeneralError   TriggerAlarm SeverityHigh
+    ExtendedStatus4      GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus5      GeneralWarning TriggerEvent SeverityMedium
+    ExtendedStatus6      GeneralWarning TriggerEvent SeverityMedium
+    ExtendedStatus7      GeneralWarning TriggerEvent SeverityMedium
+  End UnitStatusSeverity
+    Configuration
+      ConfigInfo
+         ModuleKey    16#0000
+         InAreaSize   128
+         OutAreaSize  128
+         InWord
+            WORD 0       0
+            WORD 0       1
+            WORD 0       2
+            WORD 0       3
+            WORD 0       4
+            WORD 0       5
+            WORD 0       6
+            WORD 0       7
+            WORD 0       8
+            WORD 0       9
+            WORD 0       10
+            WORD 0       11
+            WORD 0       12
+            WORD 0       13
+            WORD 0       14
+            WORD 0       15
+            WORD 0       16
+            WORD 0       17
+            WORD 0       18
+            WORD 0       19
+            WORD 0       20
+            WORD 0       21
+            WORD 0       22
+            WORD 0       23
+            WORD 0       24
+            WORD 0       25
+            WORD 0       26
+            WORD 0       27
+            WORD 0       28
+            WORD 0       29
+            WORD 0       30
+            WORD 0       31
+            WORD 0       32
+            WORD 0       33
+            WORD 0       34
+            WORD 0       35
+            WORD 0       36
+            WORD 0       37
+            WORD 0       38
+            WORD 0       39
+            WORD 0       40
+            WORD 0       41
+            WORD 0       42
+            WORD 0       43
+            WORD 0       44
+            WORD 0       45
+            WORD 0       46
+            WORD 0       47
+            WORD 0       48
+            WORD 0       49
+            WORD 0       50
+            WORD 0       51
+            WORD 0       52
+            WORD 0       53
+            WORD 0       54
+            WORD 0       55
+            WORD 0       56
+            WORD 0       57
+            WORD 0       58
+            WORD 0       59
+            WORD 0       60
+            WORD 0       61
+            WORD 0       62
+            WORD 0       63
+            WORD 0       64
+            WORD 0       65
+            WORD 0       66
+            WORD 0       67
+            WORD 0       68
+            WORD 0       69
+            WORD 0       70
+            WORD 0       71
+            WORD 0       72
+            WORD 0       73
+            WORD 0       74
+            WORD 0       75
+            WORD 0       76
+            WORD 0       77
+            WORD 0       78
+            WORD 0       79
+            WORD 0       80
+            WORD 0       81
+            WORD 0       82
+            WORD 0       83
+            WORD 0       84
+            WORD 0       85
+            WORD 0       86
+            WORD 0       87
+            WORD 0       88
+            WORD 0       89
+            WORD 0       90
+            WORD 0       91
+            WORD 0       92
+            WORD 0       93
+            WORD 0       94
+            WORD 0       95
+            WORD 0       96
+            WORD 0       97
+            WORD 0       98
+            WORD 0       99
+            WORD 0       100
+            WORD 0       101
+            WORD 0       102
+            WORD 0       103
+            WORD 0       104
+            WORD 0       105
+            WORD 0       106
+            WORD 0       107
+            WORD 0       108
+            WORD 0       109
+            WORD 0       110
+            WORD 0       111
+            WORD 0       112
+            WORD 0       113
+            WORD 0       114
+            WORD 0       115
+            WORD 0       116
+            WORD 0       117
+            WORD 0       118
+            WORD 0       119
+            WORD 0       120
+            WORD 0       121
+            WORD 0       122
+            WORD 0       123
+            WORD 0       124
+            WORD 0       125
+            WORD 0       126
+            WORD 0       127
+         OutWord
+            WORD 0       0
+            WORD 0       1
+            WORD 0       2
+            WORD 0       3
+            WORD 0       4
+            WORD 0       5
+            WORD 0       6
+            WORD 0       7
+            WORD 0       8
+            WORD 0       9
+            WORD 0       10
+            WORD 0       11
+            WORD 0       12
+            WORD 0       13
+            WORD 0       14
+            WORD 0       15
+            WORD 0       16
+            WORD 0       17
+            WORD 0       18
+            WORD 0       19
+            WORD 0       20
+            WORD 0       21
+            WORD 0       22
+            WORD 0       23
+            WORD 0       24
+            WORD 0       25
+            WORD 0       26
+            WORD 0       27
+            WORD 0       28
+            WORD 0       29
+            WORD 0       30
+            WORD 0       31
+            WORD 0       32
+            WORD 0       33
+            WORD 0       34
+            WORD 0       35
+            WORD 0       36
+            WORD 0       37
+            WORD 0       38
+            WORD 0       39
+            WORD 0       40
+            WORD 0       41
+            WORD 0       42
+            WORD 0       43
+            WORD 0       44
+            WORD 0       45
+            WORD 0       46
+            WORD 0       47
+            WORD 0       48
+            WORD 0       49
+            WORD 0       50
+            WORD 0       51
+            WORD 0       52
+            WORD 0       53
+            WORD 0       54
+            WORD 0       55
+            WORD 0       56
+            WORD 0       57
+            WORD 0       58
+            WORD 0       59
+            WORD 0       60
+            WORD 0       61
+            WORD 0       62
+            WORD 0       63
+            WORD 0       64
+            WORD 0       65
+            WORD 0       66
+            WORD 0       67
+            WORD 0       68
+            WORD 0       69
+            WORD 0       70
+            WORD 0       71
+            WORD 0       72
+            WORD 0       73
+            WORD 0       74
+            WORD 0       75
+            WORD 0       76
+            WORD 0       77
+            WORD 0       78
+            WORD 0       79
+            WORD 0       80
+            WORD 0       81
+            WORD 0       82
+            WORD 0       83
+            WORD 0       84
+            WORD 0       85
+            WORD 0       86
+            WORD 0       87
+            WORD 0       88
+            WORD 0       89
+            WORD 0       90
+            WORD 0       91
+            WORD 0       92
+            WORD 0       93
+            WORD 0       94
+            WORD 0       95
+            WORD 0       96
+            WORD 0       97
+            WORD 0       98
+            WORD 0       99
+            WORD 0       100
+            WORD 0       101
+            WORD 0       102
+            WORD 0       103
+            WORD 0       104
+            WORD 0       105
+            WORD 0       106
+            WORD 0       107
+            WORD 0       108
+            WORD 0       109
+            WORD 0       110
+            WORD 0       111
+            WORD 0       112
+            WORD 0       113
+            WORD 0       114
+            WORD 0       115
+            WORD 0       116
+            WORD 0       117
+            WORD 0       118
+            WORD 0       119
+            WORD 0       120
+            WORD 0       121
+            WORD 0       122
+            WORD 0       123
+            WORD 0       124
+            WORD 0       125
+            WORD 0       126
+            WORD 0       127
+
+        CIGIOConnData
+          CIGIOData       16#08 (*number of datasets supported by this Drive*)   
+          CIGIOData       16#00 (*DriveTempBase or Ext false*)   
+          CIGIOData       16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00                   (*INT16*)
+          CIGIOData       16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00                   (*INT8*)
+          CIGIOData       16#00 16#00 16#00 16#00                                           (*BOOL*)
+          CIGIOData       16#00 16#00                                                       (*ENUM Parameter 9*)
+          CIGIOData       16#00 16#00 16#00  (* Dataset 1 Parameter *)
+          CIGIOData       16#00 16#00 16#00  (* Dataset 2 Parameter *)
+          CIGIOData       16#00 16#00 16#00  (* Dataset 3 Parameter *)
+          CIGIOData       16#00 16#00 16#00  (* Dataset 4 Parameter *)
+          CIGIOData       16#00 16#00 16#00  (* Dataset 5 Parameter *)
+          CIGIOData       16#00 16#00 16#00  (* Dataset 6 Parameter *)
+          CIGIOData       16#00 16#00 16#00  (* Dataset 7 Parameter *)
+          CIGIOData       16#00 16#00 16#00  (* Dataset 8 Parameter *)
+        End CIGIOConnData
+      End ConfigInfo
+   End Configuration
+  HWUnitInfoCRC 16#5511
+End HWUnitInfo (* ACS600 Eng *)

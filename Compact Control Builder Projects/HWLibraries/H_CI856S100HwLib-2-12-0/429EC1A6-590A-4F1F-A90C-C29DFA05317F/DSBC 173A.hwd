@@ -1,0 +1,184 @@
+(****************************************************************************)
+(* FILE            dsbc173a.hwd                                             *)
+(*                                                                          *)
+(* DESCRIPTION     Hardware definition file for S100 I/O module DSBC 173A   *)
+(*                                                                          *)
+(* AUTHOR          SEPID/FVT J Ruth                                         *)
+(*                                                                          *)
+(* All rights reserved. Reproduction, modification, use or disclosure       *)
+(* to third parties without express authority, is forbidden.                *)
+(* Copyright ABB Process Industries AB, Sweden, 2002.                       *)
+(*                                                                          *)
+(*                                                                          *)
+(* HISTORY $Log: /S100/workplace/current/source/hwdefinitions/definitionfiles/s100/dsbc173a.hwd $  *)
+(*  *)
+(* 5    07-12-17 11:20 sepewah *)
+(* #30692 Tighter HWD parsing due to SIL-3*)
+(* ParValIndex 1 added and a reference to this from "Version", *)
+(* "Access Mode" and "Module Type".*)
+(*  *)
+(* 4     02-09-16 21:06 Jruth *)
+(* PRC #6428 *)
+(* Spaces removed to get F1 button to work for online help *)
+(*  *)
+(* 3     02-09-05 14:24 Jruth *)
+(* PRC #6412 *)
+(* Changed GUID *)
+(*  *)
+(* 2     02-06-26 13:29 Jruth *)
+(* Tab removed *)
+(*  *)
+(* 1     02-06-24 22:58 Jruth *)
+(* Initial version *)
+(*                                                                          *)
+(*                                                                          *)
+(* ABSTRACT                                                                 *)
+(*                                                                          *)
+(****************************************************************************)
+
+HWUnitInfo (* DSBC 173A *)
+  HWUnitID {3946F5D9-972F-43dc-A3EC-A3005EAF6A1F}
+  Description "DSBC 173A"
+  Information "Bus extension board" 
+  Icons RackIOType
+  Attributes AdapterUnit IoUnit 
+
+  InterfaceInfo
+    (*Interface CIGInterface*) (* If GetDeviceStatus is wanted or Numbered parameters specified *)
+    IoSysType CIGIO        (* GetConnStatus will be called from framework *)
+    CLSID_CB {E15630B2-7F2A-4fab-ACDC-9A46839D335B} (* CLSID_CB = GUID for S100 Protocol handler (PH) in Control builder CB *)
+    CLSID_CTRL   {41ACBED2-973D-48d1-B5B5-51836FEF4B26} (* CLSID_CTRL   = GUID for S100 Protocol handler (PH) in Controller *)
+    HWConfig Fail     (* Change of net parameters affect subunits *)
+  End InterfaceInfo 
+
+  ConnectionInfo
+    ConnectType OwnUnit
+    IOConnect   Fail
+    IOConfig    NoFail
+  End ConnectionInfo
+
+  Parameters
+    ParamInfo 
+      Name Ver
+      Description "Version"
+      Hidden
+      CompileType IOConnect
+      Datatype INT
+      Default 1 
+      ParValIndex 1
+      ParamType CIGIOData 0 0 0 ByteParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name AccessMode
+      Description "Access Mode"
+      Hidden
+      CompileType IOConnect
+      Datatype INT
+      Default 0 
+      ParValIndex 1
+     ParamType CIGIOData 1 0 0 ByteParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name NoOfAddresses
+      Description "No of Address"
+      Hidden
+      CompileType IOConnect
+      Datatype INT
+      Default 1 
+      ParValIndex 0
+      ParamType CIGIOData 2 0 0 ByteParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ModType
+      Description "Module type"
+      Hidden
+      CompileType IOConnect
+      Datatype INT
+      Default 3 
+      ParValIndex 1
+      ParamType CIGIOData 4 0 0 ByteParam ByteOffset
+    End ParamInfo
+  End Parameters
+
+  ParValList
+    ParVal
+      ParValIndex 0      (* No of addresses which this unit uses *)
+      UnitText    " "
+      INT 1 4 1 4
+    End ParVal
+    ParVal
+      ParValIndex 1      (* General INT type *)
+      UnitText    " "
+      INT 0 65535 0 65535
+    End ParVal
+  End ParValList
+
+  Channels
+    ChannelInfo
+      Number 1
+      ChannelName "UnitStatus"
+      Datatype Status_In
+      Routine 900
+      CopyParameters 0 0 16#50000
+    End ChannelInfo      
+  End Channels
+
+  IoUnitStatus
+    StatusType ModuleMissing
+    StatusData 16#30001 16#0001 16#0 16#0
+    StatusType WrongModuleType 
+    StatusData 16#30001 16#0002 16#0 16#0
+    StatusType IoError
+    StatusData 16#30001 16#0004 16#0 16#0
+    StatusType GeneralWarning DeviceSpecific1
+    StatusData 16#30001 16#0100 16#0 16#0
+    StatusType GeneralWarning DeviceSpecific2
+    StatusData 16#30001 16#0200 16#0 16#0
+    StatusType GeneralWarning DeviceSpecific3
+    StatusData 16#30001 16#0400 16#0 16#0
+    StatusType GeneralWarning DeviceSpecific4
+    StatusData 16#30001 16#0800 16#0 16#0
+    StatusType GeneralWarning DeviceSpecific5
+    StatusData 16#30001 16#1000 16#0 16#0
+    StatusType GeneralWarning DeviceSpecific6
+    StatusData 16#30001 16#2000 16#0 16#0
+  End IoUnitStatus
+
+  UnitstatusText
+    DeviceSpecific1 "Voltage warning"
+    DeviceSpecific2 "Fan failure"
+    DeviceSpecific3 "Regulator missing"
+    DeviceSpecific4 "Regulator failure"
+    DeviceSpecific5 "Parity error"
+    DeviceSpecific6 "Inhibit"
+  End UnitStatusText
+
+  UnitstatusSeverity
+    DeviceSpecific1 GeneralWarning TriggerAlarm SeverityLow
+    DeviceSpecific2 GeneralWarning TriggerAlarm SeverityMedium
+    DeviceSpecific3 GeneralWarning TriggerAlarm SeverityLow
+    DeviceSpecific4 GeneralWarning TriggerAlarm SeverityLow
+    DeviceSpecific5 GeneralWarning TriggerEvent SeverityLow
+    DeviceSpecific6 GeneralWarning TriggerAlarm SeverityLow
+  End UnitStatusSeverity
+
+  Configuration
+    ConfigInfo
+      ModuleKey   16#0000
+      InAreaSize  2
+      OutAreaSize 0
+
+      InWord 
+        WORD 0        0  (* State                   *)
+        WORD 0        1  (* Module status           *)
+
+       CIGIOConnData
+        CIGIOData 0 0 0 0 0
+      End CIGIOConnData
+    End ConfigInfo
+  End Configuration
+  HWUnitInfoCRC 16#73D0
+End HWUnitInfo (* DSBC 173A *)

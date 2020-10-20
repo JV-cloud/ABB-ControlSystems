@@ -1,0 +1,170 @@
+HWUnitInfo  (* AC 800M *)
+   HWUnitID 16#0F400000
+   Description "AC 800M"
+   Information "Product type AC 800M"
+   Icons DefaultAdapterType
+   SubUnits 14
+   SubUnitTypes
+      HWUnitID 16#02403300  Positions 0 (* PM851/TP830 *)
+      HWUnitID 16#02403302  Positions 0 (* PM856/TP830 *)
+      HWUnitID 16#0240330C  Positions 0 (* PM858/TP830 *)
+      HWUnitID 16#02403101  Positions 0 (* PM860/TP810 *)      
+      HWUnitID 16#02403301  Positions 0 (* PM860/TP830 *)
+      HWUnitID 16#02403303  Positions 0 (* PM861/TP830 *)
+      HWUnitID 16#02403304  Positions 0 (* PM862/TP830 *)
+      HWUnitID 16#02403305  Positions 0 (* PM864/TP830 *)
+      HWUnitID 16#02403307  Positions 0 (* PM865/TP830 PA version *)
+      HWUnitID 16#02403308  Positions 0 (* PM866/TP830 *)
+      (* HWUnitID 16#02404E20  Positions 0 *) (* PM890 *)
+      HWUnitID 16#02404E21  Positions 0 (* PM891 *)
+      (* HWUnitID 16#02404E22  Positions 0 *)(* PM892 *)
+      (* HWUnitID 16#02404E23  Positions 0 *)(* PM893 *)
+      (* HWUnitID 16#02404E24  Positions 0 *)(* PM894 *)
+      (* HWUnitID 16#02404E25  Positions 0 *)(* PM895 *)
+      HWUnitID 16#02430851  Positions 1 2 3 4 5 6 7 8 9 10 11 12 (* CI851 PROFIBUS-DP         *)
+      HWUnitID 16#02440852  Positions 1 2 3 4 5 6 7 8 9 10 11 12 (* CI852 Foundation FieldBus *)
+      HWUnitID 16#02400853  Positions 1 2 3 4 5 6 7 8 9 10 11 12 (* CI853 RS-232              *)                            
+      HWUnitID {27B399D7-1430-4457-83C4-FF5BCDD12CC0} Positions 1 2 3 4 5 6 7 8 9 10 11 12 (* CI854 PROFIBUS-DPV1 *)                         
+      HWUnitID {23A5048F-8AFC-4e71-A2EA-D5B2B1D69D5A} Positions 1 2 3 4 5 6 7 8 9 10 11 12 (* CI855 MB300 *)
+      HWUnitID {BFCEB4AF-0C82-4197-AD57-D248D8EFBC32} Positions 1 2 3 4 5 6 7 8 9 10 11 12 (* CI856 S100  *)
+      HWUnitID {FDA25AA8-C9A5-453e-8656-23B72687CE36} Positions 1 2 3 4 5 6 7 8 9 10 11 12 (* CI857 INSUM *)
+      HWUnitID {23A5048F-8AFC-4E71-ABBB-D5B2B1D69D5A} Positions 1 2 3 4 5 6 7 8 9 10 11 12 (* CI858 DriveBus *)
+      HWUnitID {06F11690-6E3F-4766-B9AE-99B2FBFED876} Positions 1 2 3 4 5 6 7 8 9 10 11 12 (* CI859 SERCOS *)
+      HWUnitID {392833E5-9F0D-4cda-988D-136AB206E4E2} Positions 1 2 3 4 5 6 7 8 9 10 11 12 (* CI860 HSE *)
+      HWUnitID {344975C3-68A7-4787-BCE5-1417FDAB4E99} Positions 1 2 3 4 5 6 7 8 9 10 11 12 (* CI861 *)
+      HWUnitID {CA0AD8C3-1CB2-4064-8024-4125F2AEE393} Positions 1 2 3 4 5 6 7 8 9 10 11 12 (* CI862 TRIO*)
+      HWUnitID {58065380-1CAC-4eb6-BAB0-B46E2C5298EC} Positions 1 2 3 4 5 6 7 8 9 10 11 12 (* CI863 *)
+      HWUnitID {733B964E-6262-4f2f-882B-B58EEEAEAA2B} Positions 1 2 3 4 5 6 7 8 9 10 11 12 (* CI864 *)
+      HWUnitID {4634F1A2-E602-4fd3-B06C-94DFABFECA51} Positions 1 2 3 4 5 6 7 8 9 10 11 12 (* CI865 *)
+      HWUnitID {B991D724-D618-4ee3-BF69-42557B60AD85} Positions 1 2 3 4 5 6 7 8 9 10 11 12 (* CI866 *)
+      HWUnitID {2F5EAEAB-BD31-4fa9-A447-2C809250C09F} Positions 1 2 3 4 5 6 7 8 9 10 11 12 (* CI867 *)
+      HWUnitID {BBBC9FB2-FC1E-4509-938A-096556234785} Positions 1 2 3 4 5 6 7 8 9 10 11 12 (* CI868 *)
+      HWUnitID {C321D11D-EFD1-46c7-8F11-FC97B8DF0F40} Positions 1 2 3 4 5 6 7 8 9 10 11 12 (* CI869 *)
+      HWUnitID {4F99FB70-863D-4c85-A728-719D0A5621B0} Positions 1 2 3 4 5 6 7 8 9 10 11 12 (* CI870 *)
+      HWUnitID {3419EDF3-C9BD-4817-B228-B09F80BD98BB} Positions 1 2 3 4 5 6 7 8 9 10 11 12 (* CI871 PILOT?? *)
+      HWUnitID {F5887AC9-909A-4248-BDAD-94FE6E3F51EE} Positions 1 2 3 4 5 6 7 8 9 10 11 12 (* CI871 *)
+      HWUnitID {2270C1D7-4341-4bb3-BBC8-4DF22BC6BB14} Positions 1 2 3 4 5 6 7 8 9 10 11 12 (* CI872 *)
+      HWUnitID {BED04F9F-B76C-49fb-8D66-FDB417B73D7D} Positions 1 2 3 4 5 6 7 8 9 10 11 12 (* CI873 *)
+      HWUnitID {8AD3DC77-1943-4844-8F77-01640C6921CB} Positions 1 2 3 4 5 6 7 8 9 10 11 12 (* CI874 *)
+      HWUnitID {A568537B-18F4-4fc4-B171-40E2AE53AB24} Positions 1 2 3 4 5 6 7 8 9 10 11 12 (* CI875 *)
+      HWUnitID {38EC4956-C5A7-4101-8B96-231EB2F33BD3} Positions 1 2 3 4 5 6 7 8 9 10 11 12 (* CI876 *)
+      HWUnitID {D8689879-7B55-41f1-80EA-90F84590F4C2} Positions 1 2 3 4 5 6 7 8 9 10 11 12 (* CI877 *)
+      HWUnitID {ED595C10-3761-485e-A1FC-FCAF292523F2} Positions 1 2 3 4 5 6 7 8 9 10 11 12 (* CI878 *)
+      HWUnitID {7D70565E-7096-48c2-9312-70CDA1FA1B65} Positions 1 2 3 4 5 6 7 8 9 10 11 12 (* CI879 *)
+
+      HWUnitID {A7E72236-A5E4-4db6-9E25-43C9AAE834F0} Positions 1 2 3 4 5 6 7 8 9 10 11 12 (* CI890 INFI90*)      
+   End SubUnitTypes
+   Parameters
+      ParamInfo 
+         Name BACKGROUNDCOPY
+         Description "Copy unconnected channels"
+         Datatype ENUM
+         Default 0
+         ParValIndex 0
+         ParamType Numbered 1000
+      End ParamInfo
+      ParamInfo 
+         Name LATCHEDHWSTATE
+         Description "Latched hardware state"
+         Datatype ENUM
+         Default 1
+         ParValIndex 1
+         ParamType Numbered 2000
+      End ParamInfo        
+      ParamInfo
+        Name ENABLESYSTEMALARMS
+        Description "System alarms on hardware units"
+        Datatype ENUM
+        Default 1
+        ParValIndex 1
+        ParamType Numbered 4000
+      End ParamInfo
+      ParamInfo
+        Name ENABLESIMPLEEVENTS
+        Description "Simple events on hardware units"
+        Datatype ENUM
+        Default 1
+        ParValIndex 1
+        ParamType Numbered 4001
+      End ParamInfo
+      ParamInfo
+        Name ALARMFILTER
+        Description "Filter out system alarms from hardware units"
+        Datatype ENUM
+        Default 0
+        ParValIndex 3
+        ParamType Numbered 4002
+      End ParamInfo
+      ParamInfo
+        Name HWBACKGROUNDCYCLETIME
+        Description "HwStatus update cycle time"
+        Datatype INT
+        Default 1000
+        ParValIndex 2
+        ParamType Numbered 1100
+      End ParamInfo
+      ParamInfo
+        Name CLAMPANALOGINVALUES
+        Description "Clamp Analog in values"
+        Datatype BOOL
+        Default TRUE
+        ParamType Numbered 1150
+      End ParamInfo
+      ParamInfo
+        Name CLAMPANALOGOUTVALUES
+        Description "Clamp Analog out values"
+        Datatype BOOL
+        Default TRUE
+        ParamType Numbered 1200
+      End ParamInfo
+      ParamInfo
+        Name IAC_HWADDRESS
+        Description "IAC Active HW"
+        ReadOnlyVisible
+        CompileType HWConfig
+        Datatype STRING
+        Default "0.5.1"
+        ParamType Numbered 5000
+      End ParamInfo
+   End Parameters
+   ParValList
+      ParVal
+         ParValIndex 0
+         ENUM
+         "None"   0
+         "Inputs"     1
+         "Outputs"    2
+         "Inputs/Outputs" 3
+      End ParVal
+      ParVal
+         ParValIndex 1
+         ENUM
+         "Disabled"   0
+         "Enabled"    1
+      End ParVal      
+      ParVal
+         ParValIndex 2
+         UnitText "ms"
+         INT 500 30000 500 30000
+      End ParVal
+      ParVal
+        ParValIndex 3
+        ENUM
+          "Off"                  0
+          "Underflow"            1
+          "Over- and underflow"  2
+          "Channel error"        3
+          "All"                  4
+      End ParVal
+   End ParValList
+   Channels
+      ChannelInfo
+         Number 0
+         ChannelName "AllUnitStatus"
+         Datatype Status_In
+         Routine 900
+         CopyParameters 0 0 16#50000
+      End ChannelInfo
+   End Channels
+  HWUnitInfoCRC 16#C460
+End HWUnitInfo (* AC 800M *)

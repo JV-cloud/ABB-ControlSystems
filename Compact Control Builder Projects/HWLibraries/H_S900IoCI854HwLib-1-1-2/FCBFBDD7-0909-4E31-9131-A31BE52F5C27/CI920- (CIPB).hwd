@@ -1,0 +1,256 @@
+(*-------------------------------------------------------------------*)
+(* $Workfile: io_CI920_p.hwd $ *)
+(* Modified: 2009-12-08 Olaf Schmidt, ABB ATG-LEF *)
+(* added FileHeader, removed Attributes Adapter Unit (see Tracker #39351) *)
+(* $Revision: 1 $ *)
+(* Created:       15.01.2008 (DD.MM.YY) *)
+(* by:            T.Bosch, ABB  ATG-LEH *)
+(* Part of 900IoCI854HwLib 2.0-0 *)
+(* Separate GUIDs for library 900IoCI854HwLib 2.0-0  *)
+(* Adding Parameter for internal Bus redundancy *)
+(* Changing Text for better overview *)
+
+(* $Revision: 2 $ *)
+(* Modified: 07.09.2009 (DD.MM.YY) *)
+(* USE HWUnitID CI920 of Version 1.1.1 *)
+(* TRACKER Database AC800M - Tracker PRC #38666 *)
+
+(*-------------------------------------------------------------------*)
+
+FileHeader
+  Contents              "CI920* (CIPB)"
+  Date                  "2009-12-08"
+  Version               "Version 1.2.0"
+  RequiredSyntaxVersion "3.0"
+End FileHeader
+
+(*----------------------------------------------------------------------------*)
+(*----------------------------------------------------------------------------*)
+(* Coding for CI920 *)
+(*----------------------------------------------------------------------------*)
+(*----------------------------------------------------------------------------*)
+
+HWUnitInfo
+
+  HWUnitID         {900A39C1-CC72-11d5-B504-00C04F11556C}
+  Description      "CI920* (CIPB)"
+  Information      "Communication Interface, Profibus DPV1"
+  Icons            S900CiType
+
+  Parameters
+
+    ParamInfo
+      Name            GRID_FREQUENCY
+      Description     "Grid Frequency"
+      CompileType     IOConfig
+      Datatype        ENUM 
+      Default         0
+      ParValIndex     12
+      ParamType       CIGIOData  4 2 1 ByteParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo
+      Name            ANALOG_STATUS
+      Description     "Analog Status"
+      CompileType     IOConfig
+      Datatype        ENUM 
+      Default         0
+      ParValIndex     13
+      ParamType       CIGIOData  4 3 1 ByteParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo
+      Name            INTERNAL_REDUNDANCY
+      Description     "Internal Bus Redundancy"
+      CompileType     IOConfig
+      Datatype        BOOL
+      Default         FALSE
+      ParamType       CIGIOData  4 7 1 ByteParam ByteOffset
+    End ParamInfo
+
+    ParamInfo
+      Name            CIPB_REDUNDANCY
+      Description     "CIPB Redundancy"
+      CompileType     IOConfig
+      Datatype        BOOL 
+      Default         FALSE
+      ParamType       CIGIOData  5 0 1 ByteParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo
+      Name            POWER_REDUNDANCY
+      Description     "Power Supply Redundancy"
+      CompileType     IOConfig
+      Datatype        BOOL
+      Default         FALSE
+      ParamType       CIGIOData  5 3 1 ByteParam ByteOffset
+    End ParamInfo
+
+
+  End Parameters
+
+
+  ParValList
+
+    ParVal
+      ParValIndex      12
+      UnitText         ""
+      ENUM
+      "50 Hz" 0
+      "60 Hz" 1
+    End ParVal
+
+    ParVal
+      ParValIndex      13
+      UnitText         ""
+      ENUM
+      "on" 0
+      "off" 2
+    End ParVal
+
+    ParVal
+      ParValIndex      18
+      UnitText         ""
+      ENUM
+      "single" 0
+      "redundant" 1
+    End ParVal
+
+  End ParValList
+
+
+  Channels
+
+    ChannelInfo
+      Number            1
+      ChannelName       "UnitStatus"
+      Datatype          Status_In
+      Routine           900
+      CopyParameters    0 0 16#50000
+    End ChannelInfo
+
+  End Channels
+
+
+  Diagnostics
+
+    DiagInfo
+      Number            2
+      Description       "Module state"
+      UnitText          ""
+      Datatype          ENUMDIAG
+      DiagValueIndex    1
+      DiagAreaOffset    1 4 16#00020003
+    End DiagInfo
+
+    DiagInfo
+      Number            3
+      Description       "CIPB"
+      UnitText          ""
+      Datatype          ENUMDIAG
+      DiagValueIndex    2
+      DiagAreaOffset    3 0 0 
+    End DiagInfo
+
+  End Diagnostics
+
+
+  DiagValueList
+
+    DiagValue
+      DiagValueIndex    1
+      DiagDataSize      2
+      ENUMDIAG
+      "Red. CIPB OK"      0 NoAction
+      "Red. CIPB error"   1 DeviceSpecific1
+      "reserved"          2 DeviceSpecific2
+      "Red. CIPB missing" 3 DeviceSpecific3
+    End DiagValue
+
+    DiagValue
+      DiagValueIndex    2
+      DiagDataSize      5
+      ENUMDIAG
+      "ROM error"                     16 ExtendedStatus1
+      "RAM error"                     17 ExtendedStatus2
+      "EEPROM error"                  18 ExtendedStatus3
+      "Cold start"                    19 ExtendedStatus4
+      "Error 20"                      20 ExtendedStatus5
+      "Error 21"                      21 ExtendedStatus6
+      "Internal bus fault"            22 ExtendedStatus7
+      "Internal bus fault (passive)"  23 ExtendedStatus8
+      "Power supply 1 error"          24 ExtendedStatus9
+      "Power supply 2 error"          25 ExtendedStatus10
+      "Reset after watchdog"          26 ExtendedStatus11
+      "Redundancy switchover"         27 ExtendedStatus12
+      "Red. CIPB missing"             28 ExtendedStatus13
+      "Red. CIPB not ready"           29 ExtendedStatus14
+      "Red. CIPB error"               30 ExtendedStatus15
+      "Red. CIPB no DP comm."         31 ExtendedStatus16
+     End DiagValue
+
+  End DiagValueList  
+
+
+  UnitStatusText
+    DeviceSpecific1 "Red. CIPB error"
+    DeviceSpecific2 "reserved"
+    DeviceSpecific3 "Red. CIPB missing"
+    ExtendedStatus1 "ROM error"                   
+    ExtendedStatus2 "RAM error"                   
+    ExtendedStatus3 "EEPROM error"                
+    ExtendedStatus4 "Cold start"                  
+    ExtendedStatus5 "Error 20"                    
+    ExtendedStatus6 "Error 21"                    
+    ExtendedStatus7 "Internal bus fault"          
+    ExtendedStatus8 "Internal bus fault (passive)"
+    ExtendedStatus9 "Power supply 1 error"        
+    ExtendedStatus10 "Power supply 2 error"        
+    ExtendedStatus11 "Reset after watchdog"        
+    ExtendedStatus12 "Redundancy switchover"       
+    ExtendedStatus13 "Red. CIPB missing"           
+    ExtendedStatus14 "Red. CIPB not ready"         
+    ExtendedStatus15 "Red. CIPB error"             
+    ExtendedStatus16 "Red. CIPB no DP comm."       
+  End UnitStatusText
+
+  UnitStatusSeverity
+    DeviceSpecific1 GeneralWarning TriggerEvent SeverityLow
+    DeviceSpecific3 GeneralWarning TriggerAlarm SeverityLow
+    ExtendedStatus1 GeneralError TriggerAlarm SeverityMedium
+    ExtendedStatus2 GeneralError TriggerAlarm SeverityMedium
+    ExtendedStatus3 GeneralError TriggerAlarm SeverityMedium
+    ExtendedStatus4 GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus5 GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus6 GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus7 GeneralError TriggerEvent SeverityMedium
+    ExtendedStatus8 GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus9 GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus10 GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus11 GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus12 GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus13 GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus14 GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus15 GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus16 GeneralWarning TriggerEvent SeverityLow
+  End UnitStatusSeverity
+
+
+  Configuration
+
+    ConfigInfo
+      ModuleKey           16#0002
+      InAreaSize          0
+      OutAreaSize         0
+      CIGIOConnData
+        CIGIOData         16#01 16#01 16#02             (* CfgData *)
+        CIGIOData         16#05 16#00 16#00 16#00 16#41 16#00 16#C0 16#05 (* UserPrmData *)
+        CIGIOData         16#0A 16#01 16#06 16#00       (* HCIR supported *)
+      End CIGIOConnData
+
+    End ConfigInfo
+
+  End Configuration
+
+  HWUnitInfoCRC 16#54AD
+End HWUnitInfo (* CI920* (CIPB) *)

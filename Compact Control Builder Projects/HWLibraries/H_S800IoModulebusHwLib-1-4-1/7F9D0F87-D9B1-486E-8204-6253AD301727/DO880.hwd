@@ -1,0 +1,1442 @@
+FileHeader
+    Contents               "DO880/Modulebus"
+    Date                   "2012-11-02"
+    Version                "1.0-8"
+    RequiredSyntaxVersion  "3.3"
+End FileHeader
+(* SIL class: SIL-3    *)
+
+(* -------------------------------------------------------------- *)
+(*    Module: DO880  Modulebus                                    *)
+(* -------------------------------------------------------------- *)
+(* Version 1.0-8                                                  *)
+(* 2012-11-02     N Ljungberg                                     *)
+(* AC800M #45907  ExtendedStatus3 text changed                    *)
+(* -------------------------------------------------------------- *)
+(* Version 1.0-7                                                  *)
+(* 2008-09-05     K Gardin                                        *)
+(* AC800M #35222  Outcommented all InWord definitions             *)
+(* -------------------------------------------------------------- *)
+(* Version 1.0-6                                                  *)
+(* 2008-07-01     N Ljungberg                                     *)
+(* AC800M #34514  Changed Ext Status3                             *)
+(* -------------------------------------------------------------- *)
+(* Version 1.0-5                                                  *)
+(* 2008-05-13     K Gardin                                        *)
+(* AC800M #33827  Added ext status for discrepancy                *)
+(* -------------------------------------------------------------- *)
+(* Version 1.0-4                                                  *)
+(* 2008-03-25     K Gardin                                        *)
+(* AC800M #32334  Added Degraded mode status indication           *)
+(* -------------------------------------------------------------- *)
+(* Version 1.0-3                                                  *)
+(* 2008-02-21     K Gardin                                        *)
+(* AC800M #31031 Removed code that was annonated away             *)
+(* AC800M #32063  Added setting for Normal State - Degraded mode  *)
+(* -------------------------------------------------------------- *)
+(* Version 1.0/2                                                  *)
+(* 2006-05-06     K Gardin                                        *)
+(* AC800M #24391  Support of diag. of outdated Safety IO versions *)
+(* -------------------------------------------------------------- *)
+(* Version 1.0/1                                                  *)
+(* 2006-02-27     K Gardin                                        *)
+(* AC800M #22647  Changed priorities on Alarms and Events         *)
+(* -------------------------------------------------------------- *)
+(* Version 1.0/0 based on io_safety_do880m.hwd version 5.0/2      *)
+(* 2005-09-01    N Ljungberg                                      *)
+
+
+HWUnitInfo (* DO880 *)
+  HWUnitID {54DE288A-FC7E-4a3c-83CB-3AC4924CF960}
+  Description "DO880"
+  Information "High Integrity Digital output module, 16 channels 24 VDC, 0,5A "
+  Icons S800IoType
+  Attributes AdapterUnit IoUnit DigitalOut SafetyIO
+
+  InterfaceInfo
+    IoSysType CIGIO
+    CLSID_CB     {02A678FA-CA7D-4e4b-ABEA-888CF8CCE2F8}
+    CLSID_CTRL   {90F15C58-7EFA-4565-B572-246C19BBBB85}
+  End InterfaceInfo
+
+  ConnectionInfo
+    ConnectType OwnUnit
+    IOConnect   NoFail
+    IOConfig    NoFail
+  End ConnectionInfo
+
+  RedundancyInfo 
+    RedundancyIcon       RedundantIo
+    Consequence          IoConfig
+    BackupPositionOffset 800
+  End RedundancyInfo
+
+  Parameters
+    ParamInfo
+      Name OPMODE
+      Description "Operation Mode"
+      CompileType IoConfig
+      DataType ENUM
+      Default 2
+      ParValIndex 11
+      ParamType CIGIOData 0 0 6 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name TMOUT
+      Description "Modulebus timeout"
+      CompileType IoConfig
+      DataType ENUM
+      Default 7
+      ParValIndex 6
+      ParamType CIGIOData 2 0 6 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name ACTIVATE1
+      Description "Activate channel 1"
+      CompileType IoConfig
+      DataType BOOL
+      Default TRUE
+      ParamType CIGIOData 0 5 7 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name ACTIVATE2
+      Description "Activate channel 2"
+      CompileType IoConfig
+      DataType BOOL
+      Default TRUE
+      ParamType CIGIOData 0 5 8 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name ACTIVATE3
+      Description "Activate channel 3"
+      CompileType IoConfig
+      DataType BOOL
+      Default TRUE
+      ParamType CIGIOData 0 5 9 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name ACTIVATE4
+      Description "Activate channel 4"
+      CompileType IoConfig
+      DataType BOOL
+      Default TRUE
+      ParamType CIGIOData 0 5 10 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name ACTIVATE5
+      Description "Activate channel 5"
+      CompileType IoConfig
+      DataType BOOL
+      Default TRUE
+      ParamType CIGIOData 0 5 11 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name ACTIVATE6
+      Description "Activate channel 6"
+      CompileType IoConfig
+      DataType BOOL
+      Default TRUE
+      ParamType CIGIOData 0 5 12 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name ACTIVATE7
+      Description "Activate channel 7"
+      CompileType IoConfig
+      DataType BOOL
+      Default TRUE
+      ParamType CIGIOData 0 5 13 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name ACTIVATE8
+      Description "Activate channel 8"
+      CompileType IoConfig
+      DataType BOOL
+      Default TRUE
+      ParamType CIGIOData 0 5 14 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name ACTIVATE9
+      Description "Activate channel 9"
+      CompileType IoConfig
+      DataType BOOL
+      Default TRUE
+      ParamType CIGIOData 0 5 15 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name ACTIVATE10
+      Description "Activate channel 10"
+      CompileType IoConfig
+      DataType BOOL
+      Default TRUE
+      ParamType CIGIOData 0 5 16 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name ACTIVATE11
+      Description "Activate channel 11"
+      CompileType IoConfig
+      DataType BOOL
+      Default TRUE
+      ParamType CIGIOData 0 5 17 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name ACTIVATE12
+      Description "Activate channel 12"
+      CompileType IoConfig
+      DataType BOOL
+      Default TRUE
+      ParamType CIGIOData 0 5 18 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name ACTIVATE13
+      Description "Activate channel 13"
+      CompileType IoConfig
+      DataType BOOL
+      Default TRUE
+      ParamType CIGIOData 0 5 19 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name ACTIVATE14
+      Description "Activate channel 14"
+      CompileType IoConfig
+      DataType BOOL
+      Default TRUE
+      ParamType CIGIOData 0 5 20 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name ACTIVATE15
+      Description "Activate channel 15"
+      CompileType IoConfig
+      DataType BOOL
+      Default TRUE
+      ParamType CIGIOData 0 5 21 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name ACTIVATE16
+      Description "Activate channel 16"
+      CompileType IoConfig
+      DataType BOOL
+      Default TRUE
+      ParamType CIGIOData 0 5 22 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name SHORT1
+      Description "Output mode channel 1"
+      CompileType IoConfig
+      DataType ENUM
+      Default 1
+      ParValIndex 1
+      ParamType CIGIOData 0 4 7 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name SHORT2
+      Description "Output mode channel 2"
+      CompileType IoConfig
+      DataType ENUM
+      Default 1
+      ParValIndex 1
+      ParamType CIGIOData 0 4 8 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name SHORT3
+      Description "Output mode channel 3"
+      CompileType IoConfig
+      DataType ENUM
+      Default 1
+      ParValIndex 1
+      ParamType CIGIOData 0 4 9 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name SHORT4
+      Description "Output mode channel 4"
+      CompileType IoConfig
+      DataType ENUM
+      Default 1
+      ParValIndex 1
+      ParamType CIGIOData 0 4 10 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name SHORT5
+      Description "Output mode channel 5"
+      CompileType IoConfig
+      DataType ENUM
+      Default 1
+      ParValIndex 1
+      ParamType CIGIOData 0 4 11 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name SHORT6
+      Description "Output mode channel 6"
+      CompileType IoConfig
+      DataType ENUM
+      Default 1
+      ParValIndex 1
+      ParamType CIGIOData 0 4 12 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name SHORT7
+      Description "Output mode channel 7"
+      CompileType IoConfig
+      DataType ENUM
+      Default 1
+      ParValIndex 1
+      ParamType CIGIOData 0 4 13 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name SHORT8
+      Description "Output mode channel 8"
+      CompileType IoConfig
+      DataType ENUM
+      Default 1
+      ParValIndex 1
+      ParamType CIGIOData 0 4 14 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name SHORT9
+      Description "Output mode channel 9"
+      CompileType IoConfig
+      DataType ENUM
+      Default 1
+      ParValIndex 1
+      ParamType CIGIOData 0 4 15 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name SHORT10
+      Description "Output mode channel 10"
+      CompileType IoConfig
+      DataType ENUM
+      Default 1
+      ParValIndex 1
+      ParamType CIGIOData 0 4 16 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name SHORT11
+      Description "Output mode channel 11"
+      CompileType IoConfig
+      DataType ENUM
+      Default 1
+      ParValIndex 1
+      ParamType CIGIOData 0 4 17 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name SHORT12
+      Description "Output mode channel 12"
+      CompileType IoConfig
+      DataType ENUM
+      Default 1
+      ParValIndex 1
+      ParamType CIGIOData 0 4 18 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name SHORT13
+      Description "Output mode channel 13"
+      CompileType IoConfig
+      DataType ENUM
+      Default 1
+      ParValIndex 1
+      ParamType CIGIOData 0 4 19 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name SHORT14
+      Description "Output mode channel 14"
+      CompileType IoConfig
+      DataType ENUM
+      Default 1
+      ParValIndex 1
+      ParamType CIGIOData 0 4 20 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name SHORT15
+      Description "Output mode channel 15"
+      CompileType IoConfig
+      DataType ENUM
+      Default 1
+      ParValIndex 1
+      ParamType CIGIOData 0 4 21 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name SHORT16
+      Description "Output mode channel 16"
+      CompileType IoConfig
+      DataType ENUM
+      Default 1
+      ParValIndex 1
+      ParamType CIGIOData 0 4 22 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name CHMODE1
+      Description "Normal State channel 1"
+      CompileType IoConfig
+      DataType ENUM
+      Default 2
+      ParValIndex 3
+      ParamType CIGIOData 0 3 7 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name CHMODE2
+      Description "Normal State channel 2"
+      CompileType IoConfig
+      DataType ENUM
+      Default 2
+      ParValIndex 3
+      ParamType CIGIOData 0 3 8 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name CHMODE3
+      Description "Normal State channel 3"
+      CompileType IoConfig
+      DataType ENUM
+      Default 2
+      ParValIndex 3
+      ParamType CIGIOData 0 3 9 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name CHMODE4
+      Description "Normal State channel 4"
+      CompileType IoConfig
+      DataType ENUM
+      Default 2
+      ParValIndex 3
+      ParamType CIGIOData 0 3 10 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name CHMODE5
+      Description "Normal State channel 5"
+      CompileType IoConfig
+      DataType ENUM
+      Default 2
+      ParValIndex 3
+      ParamType CIGIOData 0 3 11 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name CHMODE6
+      Description "Normal State channel 6"
+      CompileType IoConfig
+      DataType ENUM
+      Default 2
+      ParValIndex 3
+      ParamType CIGIOData 0 3 12 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name CHMODE7
+      Description "Normal State channel 7"
+      CompileType IoConfig
+      DataType ENUM
+      Default 2
+      ParValIndex 3
+      ParamType CIGIOData 0 3 13 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name CHMODE8
+      Description "Normal State channel 8"
+      CompileType IoConfig
+      DataType ENUM
+      Default 2
+      ParValIndex 3
+      ParamType CIGIOData 0 3 14 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name CHMODE9
+      Description "Normal State channel 9"
+      CompileType IoConfig
+      DataType ENUM
+      Default 2
+      ParValIndex 3
+      ParamType CIGIOData 0 3 15 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name CHMODE10
+      Description "Normal State channel 10"
+      CompileType IoConfig
+      DataType ENUM
+      Default 2
+      ParValIndex 3
+      ParamType CIGIOData 0 3 16 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name CHMODE11
+      Description "Normal State channel 11"
+      CompileType IoConfig
+      DataType ENUM
+      Default 2
+      ParValIndex 3
+      ParamType CIGIOData 0 3 17 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name CHMODE12
+      Description "Normal State channel 12"
+      CompileType IoConfig
+      DataType ENUM
+      Default 2
+      ParValIndex 3
+      ParamType CIGIOData 0 3 18 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name CHMODE13
+      Description "Normal State channel 13"
+      CompileType IoConfig
+      DataType ENUM
+      Default 2
+      ParValIndex 3
+      ParamType CIGIOData 0 3 19 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name CHMODE14
+      Description "Normal State channel 14"
+      CompileType IoConfig
+      DataType ENUM
+      Default 2
+      ParValIndex 3
+      ParamType CIGIOData 0 3 20 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name CHMODE15
+      Description "Normal State channel 15"
+      CompileType IoConfig
+      DataType ENUM
+      Default 2
+      ParValIndex 3
+      ParamType CIGIOData 0 3 21 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name CHMODE16
+      Description "Normal State channel 16"
+      CompileType IoConfig
+      DataType ENUM
+      Default 2
+      ParValIndex 3
+      ParamType CIGIOData 0 3 22 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name EOPEN1
+      Description "Trig limit open energized channel 1"
+      CompileType IoConfig
+      DataType ENUM
+      Default 1
+      ParValIndex 4
+      ParamType CIGIOData 2 0 7 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name EOPEN2
+      Description "Trig limit open energized channel 2"
+      CompileType IoConfig
+      DataType ENUM
+      Default 1
+      ParValIndex 4
+      ParamType CIGIOData 2 0 8 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name EOPEN3
+      Description "Trig limit open energized channel 3"
+      CompileType IoConfig
+      DataType ENUM
+      Default 1
+      ParValIndex 4
+      ParamType CIGIOData 2 0 9 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name EOPEN4
+      Description "Trig limit open energized channel 4"
+      CompileType IoConfig
+      DataType ENUM
+      Default 1
+      ParValIndex 4
+      ParamType CIGIOData 2 0 10 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name EOPEN5
+      Description "Trig limit open energized channel 5"
+      CompileType IoConfig
+      DataType ENUM
+      Default 1
+      ParValIndex 4
+      ParamType CIGIOData 2 0 11 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name EOPEN6
+      Description "Trig limit open energized channel 6"
+      CompileType IoConfig
+      DataType ENUM
+      Default 1
+      ParValIndex 4
+      ParamType CIGIOData 2 0 12 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name EOPEN7
+      Description "Trig limit open energized channel 7"
+      CompileType IoConfig
+      DataType ENUM
+      Default 1
+      ParValIndex 4
+      ParamType CIGIOData 2 0 13 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name EOPEN8
+      Description "Trig limit open energized channel 8"
+      CompileType IoConfig
+      DataType ENUM
+      Default 1
+      ParValIndex 4
+      ParamType CIGIOData 2 0 14 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name EOPEN9
+      Description "Trig limit open energized channel 9"
+      CompileType IoConfig
+      DataType ENUM
+      Default 1
+      ParValIndex 4
+      ParamType CIGIOData 2 0 15 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name EOPEN10
+      Description "Trig limit open energized channel 10"
+      CompileType IoConfig
+      DataType ENUM
+      Default 1
+      ParValIndex 4
+      ParamType CIGIOData 2 0 16 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name EOPEN11
+      Description "Trig limit open energized channel 11"
+      CompileType IoConfig
+      DataType ENUM
+      Default 1
+      ParValIndex 4
+      ParamType CIGIOData 2 0 17 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name EOPEN12
+      Description "Trig limit open energized channel 12"
+      CompileType IoConfig
+      DataType ENUM
+      Default 1
+      ParValIndex 4
+      ParamType CIGIOData 2 0 18 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name EOPEN13
+      Description "Trig limit open energized channel 13"
+      CompileType IoConfig
+      DataType ENUM
+      Default 1
+      ParValIndex 4
+      ParamType CIGIOData 2 0 19 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name EOPEN14
+      Description "Trig limit open energized channel 14"
+      CompileType IoConfig
+      DataType ENUM
+      Default 1
+      ParValIndex 4
+      ParamType CIGIOData 2 0 20 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name EOPEN15
+      Description "Trig limit open energized channel 15"
+      CompileType IoConfig
+      DataType ENUM
+      Default 1
+      ParValIndex 4
+      ParamType CIGIOData 2 0 21 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name EOPEN16
+      Description "Trig limit open energized channel 16"
+      CompileType IoConfig
+      DataType ENUM
+      Default 1
+      ParValIndex 4
+      ParamType CIGIOData 2 0 22 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name ESHORT1
+      Description "Trig limit short energized channel 1"
+      CompileType IoConfig
+      DataType ENUM
+      Default 5
+      ParValIndex 5
+      ParamType CIGIOData 1 0 7 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name ESHORT2
+      Description "Trig limit short energized channel 2"
+      CompileType IoConfig
+      DataType ENUM
+      Default 5
+      ParValIndex 5
+      ParamType CIGIOData 1 0 8 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name ESHORT3
+      Description "Trig limit short energized channel 3"
+      CompileType IoConfig
+      DataType ENUM
+      Default 5
+      ParValIndex 5
+      ParamType CIGIOData 1 0 9 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name ESHORT4
+      Description "Trig limit short energized channel 4"
+      CompileType IoConfig
+      DataType ENUM
+      Default 5
+      ParValIndex 5
+      ParamType CIGIOData 1 0 10 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name ESHORT5
+      Description "Trig limit short energized channel 5"
+      CompileType IoConfig
+      DataType ENUM
+      Default 5
+      ParValIndex 5
+      ParamType CIGIOData 1 0 11 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name ESHORT6
+      Description "Trig limit short energized channel 6"
+      CompileType IoConfig
+      DataType ENUM
+      Default 5
+      ParValIndex 5
+      ParamType CIGIOData 1 0 12 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name ESHORT7
+      Description "Trig limit short energized channel 7"
+      CompileType IoConfig
+      DataType ENUM
+      Default 5
+      ParValIndex 5
+      ParamType CIGIOData 1 0 13 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name ESHORT8
+      Description "Trig limit short energized channel 8"
+      CompileType IoConfig
+      DataType ENUM
+      Default 5
+      ParValIndex 5
+      ParamType CIGIOData 1 0 14 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name ESHORT9
+      Description "Trig limit short energized channel 9"
+      CompileType IoConfig
+      DataType ENUM
+      Default 5
+      ParValIndex 5
+      ParamType CIGIOData 1 0 15 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name ESHORT10
+      Description "Trig limit short energized channel 10"
+      CompileType IoConfig
+      DataType ENUM
+      Default 5
+      ParValIndex 5
+      ParamType CIGIOData 1 0 16 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name ESHORT11
+      Description "Trig limit short energized channel 11"
+      CompileType IoConfig
+      DataType ENUM
+      Default 5
+      ParValIndex 5
+      ParamType CIGIOData 1 0 17 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name ESHORT12
+      Description "Trig limit short energized channel 12"
+      CompileType IoConfig
+      DataType ENUM
+      Default 5
+      ParValIndex 5
+      ParamType CIGIOData 1 0 18 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name ESHORT13
+      Description "Trig limit short energized channel 13"
+      CompileType IoConfig
+      DataType ENUM
+      Default 5
+      ParValIndex 5
+      ParamType CIGIOData 1 0 19 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name ESHORT14
+      Description "Trig limit short energized channel 14"
+      CompileType IoConfig
+      DataType ENUM
+      Default 5
+      ParValIndex 5
+      ParamType CIGIOData 1 0 20 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name ESHORT15
+      Description "Trig limit short energized channel 15"
+      CompileType IoConfig
+      DataType ENUM
+      Default 5
+      ParValIndex 5
+      ParamType CIGIOData 1 0 21 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name ESHORT16
+      Description "Trig limit short energized channel 16"
+      CompileType IoConfig
+      DataType ENUM
+      Default 5
+      ParValIndex 5
+      ParamType CIGIOData 1 0 22 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name DOPEN1
+      Description "Trig limit open de-energized channel 1"
+      CompileType IoConfig
+      DataType ENUM
+      Default 12
+      ParValIndex 8
+      ParamType CIGIOData 4 0 7 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name DOPEN2
+      Description "Trig limit open de-energized channel 2"
+      CompileType IoConfig
+      DataType ENUM
+      Default 12
+      ParValIndex 8
+      ParamType CIGIOData 4 0 8 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name DOPEN3
+      Description "Trig limit open de-energized channel 3"
+      CompileType IoConfig
+      DataType ENUM
+      Default 12
+      ParValIndex 8
+      ParamType CIGIOData 4 0 9 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name DOPEN4
+      Description "Trig limit open de-energized channel 4"
+      CompileType IoConfig
+      DataType ENUM
+      Default 12
+      ParValIndex 8
+      ParamType CIGIOData 4 0 10 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name DOPEN5
+      Description "Trig limit open de-energized channel 5"
+      CompileType IoConfig
+      DataType ENUM
+      Default 12
+      ParValIndex 8
+      ParamType CIGIOData 4 0 11 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name DOPEN6
+      Description "Trig limit open de-energized channel 6"
+      CompileType IoConfig
+      DataType ENUM
+      Default 12
+      ParValIndex 8
+      ParamType CIGIOData 4 0 12 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name DOPEN7
+      Description "Trig limit open de-energized channel 7"
+      CompileType IoConfig
+      DataType ENUM
+      Default 12
+      ParValIndex 8
+      ParamType CIGIOData 4 0 13 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name DOPEN8
+      Description "Trig limit open de-energized channel 8"
+      CompileType IoConfig
+      DataType ENUM
+      Default 12
+      ParValIndex 8
+      ParamType CIGIOData 4 0 14 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name DOPEN9
+      Description "Trig limit open de-energized channel 9"
+      CompileType IoConfig
+      DataType ENUM
+      Default 12
+      ParValIndex 8
+      ParamType CIGIOData 4 0 15 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name DOPEN10
+      Description "Trig limit open de-energized channel 10"
+      CompileType IoConfig
+      DataType ENUM
+      Default 12
+      ParValIndex 8
+      ParamType CIGIOData 4 0 16 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name DOPEN11
+      Description "Trig limit open de-energized channel 11"
+      CompileType IoConfig
+      DataType ENUM
+      Default 12
+      ParValIndex 8
+      ParamType CIGIOData 4 0 17 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name DOPEN12
+      Description "Trig limit open de-energized channel 12"
+      CompileType IoConfig
+      DataType ENUM
+      Default 12
+      ParValIndex 8
+      ParamType CIGIOData 4 0 18 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name DOPEN13
+      Description "Trig limit open de-energized channel 13"
+      CompileType IoConfig
+      DataType ENUM
+      Default 12
+      ParValIndex 8
+      ParamType CIGIOData 4 0 19 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name DOPEN14
+      Description "Trig limit open de-energized channel 14"
+      CompileType IoConfig
+      DataType ENUM
+      Default 12
+      ParValIndex 8
+      ParamType CIGIOData 4 0 20 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name DOPEN15
+      Description "Trig limit open de-energized channel 15"
+      CompileType IoConfig
+      DataType ENUM
+      Default 12
+      ParValIndex 8
+      ParamType CIGIOData 4 0 21 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name DOPEN16
+      Description "Trig limit open de-energized channel 16"
+      CompileType IoConfig
+      DataType ENUM
+      Default 12
+      ParValIndex 8
+      ParamType CIGIOData 4 0 22 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name DSHORT1
+      Description "Trig limit short de-energized channel 1"
+      CompileType IoConfig
+      DataType ENUM
+      Default 4
+      ParValIndeX 10
+      ParamType CIGIOData 3 0 7 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name DSHORT2
+      Description "Trig limit short de-energized channel 2"
+      CompileType IoConfig
+      DataType ENUM
+      Default 4
+      ParValIndeX 10
+      ParamType CIGIOData 3 0 8 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name DSHORT3
+      Description "Trig limit short de-energized channel 3"
+      CompileType IoConfig
+      DataType ENUM
+      Default 4
+      ParValIndeX 10
+      ParamType CIGIOData 3 0 9 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name DSHORT4
+      Description "Trig limit short de-energized channel 4"
+      CompileType IoConfig
+      DataType ENUM
+      Default 4
+      ParValIndeX 10
+      ParamType CIGIOData 3 0 10 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name DSHORT5
+      Description "Trig limit short de-energized channel 5"
+      CompileType IoConfig
+      DataType ENUM
+      Default 4
+      ParValIndeX 10
+      ParamType CIGIOData 3 0 11 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name DSHORT6
+      Description "Trig limit short de-energized channel 6"
+      CompileType IoConfig
+      DataType ENUM
+      Default 4
+      ParValIndeX 10
+      ParamType CIGIOData 3 0 12 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name DSHORT7
+      Description "Trig limit short de-energized channel 7"
+      CompileType IoConfig
+      DataType ENUM
+      Default 4
+      ParValIndeX 10
+      ParamType CIGIOData 3 0 13 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name DSHORT8
+      Description "Trig limit short de-energized channel 8"
+      CompileType IoConfig
+      DataType ENUM
+      Default 4
+      ParValIndeX 10
+      ParamType CIGIOData 3 0 14 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name DSHORT9
+      Description "Trig limit short de-energized channel 9"
+      CompileType IoConfig
+      DataType ENUM
+      Default 4
+      ParValIndeX 10
+      ParamType CIGIOData 3 0 15 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name DSHORT10
+      Description "Trig limit short de-energized channel 10"
+      CompileType IoConfig
+      DataType ENUM
+      Default 4
+      ParValIndeX 10
+      ParamType CIGIOData 3 0 16 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name DSHORT11
+      Description "Trig limit short de-energized channel 11"
+      CompileType IoConfig
+      DataType ENUM
+      Default 4
+      ParValIndeX 10
+      ParamType CIGIOData 3 0 17 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name DSHORT12
+      Description "Trig limit short de-energized channel 12"
+      CompileType IoConfig
+      DataType ENUM
+      Default 4
+      ParValIndeX 10
+      ParamType CIGIOData 3 0 18 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name DSHORT13
+      Description "Trig limit short de-energized channel 13"
+      CompileType IoConfig
+      DataType ENUM
+      Default 4
+      ParValIndeX 10
+      ParamType CIGIOData 3 0 19 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name DSHORT14
+      Description "Trig limit short de-energized channel 14"
+      CompileType IoConfig
+      DataType ENUM
+      Default 4
+      ParValIndeX 10
+      ParamType CIGIOData 3 0 20 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name DSHORT15
+      Description "Trig limit short de-energized channel 15"
+      CompileType IoConfig
+      DataType ENUM
+      Default 4
+      ParValIndeX 10
+      ParamType CIGIOData 3 0 21 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name DSHORT16
+      Description "Trig limit short de-energized channel 16"
+      CompileType IoConfig
+      DataType ENUM
+      Default 4
+      ParValIndeX 10
+      ParamType CIGIOData 3 0 22 ByteParam ByteOffset
+    End ParamInfo
+  End Parameters
+  ParValList
+    ParVal
+      ParValIndex 1
+      ENUM
+      "Automatic reset mode"    0
+      "Latched on short mode"        1 
+    End ParVal
+    ParVal
+      ParValIndex 3
+      ENUM
+      "Normally de-energized (ND)"   2#00000
+      "Continuous Control      (CC)"   2#01000
+      "Normally energized      (NE)"   2#11000
+      "Normally energized Degraded Mode (NE DM)"   2#11001
+    End ParVal 
+    ParVal
+      ParValIndex 4
+      UnitText "mA"
+      ENUM
+      "  0"         0
+      "  5"         8 
+      " 10"       15
+      " 20"       30
+      " 40"       60
+      " 80"      119
+      "120"     178
+      "160"     237
+    End ParVal
+    ParVal
+      ParValIndex 5
+      UnitText "mA"
+      ENUM
+      " 100"      40
+      " 200"      74 
+      " 300"     111
+      " 400"     148
+      " 500"     185
+      " 600"     222  
+    End ParVal
+    ParVal
+      ParValIndex 6
+      UnitText "ms"
+      ENUM
+      "   4"           1
+      "   8"           2
+      "  16"          3
+      "  32"          4
+      "  64"          5
+      " 128"          6
+      " 256"          7
+      " 512"         8
+      "1024"         9
+      "2048"        10
+      "4096"        11
+    End ParVal
+    ParVal
+      ParValIndex 8
+      UnitText "ohm"
+      ENUM
+      "  100"  18
+      "  200"  32
+      "  300"  44 
+      "  400"  55
+      "  500"  64 
+      "  600"  71
+      "  700"  78 
+      "  800"  84
+      "  900"  90
+      " 1000"  94
+      " 1100"  99
+      " 1200"  103
+      " 1300"  106
+      " 1400"  109
+      " 1500"  112
+      " 2000"  124
+      ">2000"  255
+    End ParVal
+    ParVal
+      ParValIndex 10
+      UnitText "ohm"
+      ENUM
+      "   0"     0
+      "  10"    8 
+      "  20"   15
+      "  30"   23
+      "  40"   30
+      "  50"   37 
+      " 100"   71
+      " 200"   129
+      " 300"   178
+      " 400"   219 
+    End ParVal
+    ParVal
+      ParvalIndex 11
+      ENUM
+      "Single"            0
+      "Hot replacement"   1
+      "Redundant"         2
+    End ParVal
+  End ParValList
+  Channels
+    ChannelInfo
+      Number 1
+      ChannelName "Output 1"
+      DataType Bool_Out
+      Routine 280
+      CopyParameters 16#40000 16#30000 16#30005 16#0001
+    End ChannelInfo
+    ChannelInfo
+      Number 2
+      ChannelName "Output 2"
+      DataType Bool_Out
+      Routine 280
+      CopyParameters 16#40001 16#30000 16#30005 16#0002
+    End ChannelInfo
+    ChannelInfo
+      Number 3
+      ChannelName "Output 3"
+      DataType Bool_Out
+      Routine 280
+      CopyParameters 16#40002 16#30000 16#30005 16#0004
+    End ChannelInfo
+    ChannelInfo
+      Number 4
+      ChannelName "Output 4"
+      DataType Bool_Out
+      Routine 280
+      CopyParameters 16#40003 16#30000 16#30005 16#0008
+    End ChannelInfo
+    ChannelInfo
+      Number 5
+      ChannelName "Output 5"
+      DataType Bool_Out
+      Routine 280
+      CopyParameters 16#40004 16#30000 16#30005 16#0010 
+    End ChannelInfo
+    ChannelInfo
+      Number 6
+      ChannelName "Output 6"
+      DataType Bool_Out
+      Routine 280
+      CopyParameters 16#40005 16#30000 16#30005 16#0020
+    End ChannelInfo
+    ChannelInfo
+      Number 7
+      ChannelName "Output 7"
+      DataType Bool_Out
+      Routine 280
+      CopyParameters 16#40006 16#30000 16#30005 16#0040
+    End ChannelInfo
+    ChannelInfo
+      Number 8
+      ChannelName "Output 8"
+      DataType Bool_Out
+      Routine 280
+      CopyParameters 16#40007 16#30000 16#30005 16#0080
+    End ChannelInfo
+    ChannelInfo
+      Number 9
+      ChannelName "Output 9"
+      DataType Bool_Out
+      Routine 280
+      CopyParameters 16#40008 16#30000 16#30005 16#0100
+    End ChannelInfo
+    ChannelInfo
+      Number 10
+      ChannelName "Output 10"
+      DataType Bool_Out
+      Routine 280
+      CopyParameters 16#40009 16#30000 16#30005 16#0200
+    End ChannelInfo
+    ChannelInfo
+      Number 11
+      ChannelName "Output 11"
+      DataType Bool_Out
+      Routine 280
+      CopyParameters 16#4000A 16#30000 16#30005 16#0400
+    End ChannelInfo
+    ChannelInfo
+      Number 12
+      ChannelName "Output 12"
+      DataType Bool_Out
+      Routine 280
+      CopyParameters 16#4000B 16#30000 16#30005 16#0800
+    End ChannelInfo
+    ChannelInfo
+      Number 13
+      ChannelName "Output 13"
+      DataType Bool_Out
+      Routine 280
+      CopyParameters 16#4000C 16#30000 16#30005 16#1000
+    End ChannelInfo
+    ChannelInfo
+      Number 14
+      ChannelName "Output 14"
+      DataType Bool_Out
+      Routine 280
+      CopyParameters 16#4000D 16#30000 16#30005 16#2000
+    End ChannelInfo
+    ChannelInfo
+      Number 15
+      ChannelName "Output 15"
+      DataType Bool_Out
+      Routine 280
+      CopyParameters 16#4000E 16#30000 16#30005 16#4000
+    End ChannelInfo
+    ChannelInfo
+      Number 16
+      ChannelName "Output 16"
+      DataType Bool_Out
+      Routine 280
+      CopyParameters 16#4000F 16#30000 16#30005 16#8000
+    End ChannelInfo
+    ChannelInfo
+      Number 17
+      ChannelName "UnitStatus"
+      Datatype Status_In
+      Routine 900
+      CopyParameters 0 0 16#50000
+    End ChannelInfo     
+  End Channels
+
+
+  IoUnitStatus
+    StatusType IoError
+    StatusData 16#30000 16#1000 16#00 16#00
+    StatusType WrongModuleType 
+    StatusData 16#30000 16#0F00 16#04 16#0A00
+    StatusType ModuleMissing
+    StatusData 16#30000 16#0F00 16#04 16#0D00
+    StatusType IoWarning
+    StatusData 16#30000 16#2000 16#00 16#00
+    StatusType DeviceSpecific1
+    StatusData 16#30001 16#0F10 16#04 16#0410 (* Including Redundancy bit *)
+    StatusType DeviceSpecific2
+    StatusData 16#30001 16#0F10 16#04 16#0A10 (* Including Redundancy bit *)
+    StatusType DeviceSpecific3
+    StatusData 16#30001 16#0F10 16#04 16#0D10 (* Including Redundancy bit *)
+    StatusType DeviceSpecific4
+    StatusData 16#30001 16#2010 16#04 16#2010 (* Including Redundancy bit *)
+    StatusType DeviceSpecific5
+    StatusData 16#30000 16#0F00 16#04 16#0200 
+    StatusType DeviceSpecific6
+    StatusData 16#30000 16#0F00 16#04 16#0600 
+    StatusType DeviceSpecific7
+    StatusData 16#30000 16#0F00 16#04 16#0400 
+    StatusType DeviceSpecific8
+    StatusData 16#30000 16#0F00 16#04 16#0700 
+    StatusType UnitBPrimary
+    StatusData 16#30001 16#0004 16#00 16#00
+
+    StatusType ExtendedStatus1                (* Degrade Mode *)
+    StatusData 16#30000 16#0020 16#00 16#00
+    StatusType ExtendedStatus2                (* Degraded Mode Expired *)
+    StatusData 16#30000 16#0010 16#00 16#00
+    StatusType ExtendedStatus3                (* PM/SM diff *)
+    StatusData 16#30001 16#0080 16#00 16#00
+    StatusType ExtendedStatus7                (* FW in primary too old *)
+    StatusData 16#30001 16#0040 16#00 16#00
+    StatusType ExtendedStatus8                (* FW in back-up too old *)
+    StatusData 16#30001 16#0020 16#00 16#00
+    StatusType ExtendedStatus9                (* ICHE *)
+    StatusData 16#30000 16#4000 16#00 16#00
+  End IoUnitStatus
+
+  UnitstatusText                                    
+    DeviceSpecific1    "Backup Error"               
+    DeviceSpecific2    "Backup Wrong module type"
+    DeviceSpecific3    "Backup Module Missing"
+    DeviceSpecific4    "Backup Warning"                   
+    DeviceSpecific5    "Ready State"                   
+    DeviceSpecific6    "Safe Config State"                   
+    DeviceSpecific7    "Error State"                   
+    DeviceSpecific8    "Error State"     (* really Safe State *)              
+
+    ExtendedStatus1    "Degraded Mode"
+    ExtendedStatus2    "Degraded Mode Expired" 
+    ExtendedStatus3    "PM/SM diff" 
+    ExtendedStatus7    "Outdated FW in primary"                 
+    ExtendedStatus8    "Outdated FW in backup"                 
+    ExtendedStatus9    "Internal channel error"
+  End UnitstatusText  
+
+  UnitstatusSeverity                                    
+    DeviceSpecific1    GeneralWarning TriggerAlarm SeverityMedium
+    DeviceSpecific2    GeneralWarning TriggerAlarm SeverityMedium
+    DeviceSpecific3    GeneralWarning TriggerAlarm SeverityMedium
+    DeviceSpecific4    GeneralWarning TriggerEvent SeverityLow                 
+    DeviceSpecific7    GeneralWarning TriggerAlarm SeverityHigh
+    DeviceSpecific8    GeneralWarning TriggerAlarm SeverityHigh
+
+    ExtendedStatus1    GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus2    GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus3    GeneralError TriggerAlarm SeverityHigh   
+    ExtendedStatus7    GeneralWarning TriggerAlarm SeverityMedium
+    ExtendedStatus8    GeneralWarning TriggerAlarm SeverityMedium
+    ExtendedStatus9    GeneralWarning TriggerEvent SeverityLow
+  End UnitstatusSeverity  
+
+  Configuration
+    ConfigInfo
+      ModuleKey   0
+      InAreaSize  6
+      OutAreaSize 16 BYTE
+      InWord
+      (*WORD 16#1200     0  Module status + Degrade Mode                  *)
+      (*WORD 16#1200     1  Backup Module Status + Extended Module Status *)
+      (*WORD 16#0        2  Spare            *) 
+      (*WORD 16#0        3  Values           *)
+      (*WORD 16#0        4  Channel Status   *)
+      (*WORD 16#0        5  Channel Quality  *)
+      OutByte
+        BYTE 16#0         0 (* OUTPUTS *)
+        BYTE 16#0         1 (* OUTPUTS  *)
+        BYTE 16#0         2 (* OUTPUTS  *)
+        BYTE 16#0         3 (* OUTPUTS  *)
+        BYTE 16#0         4 (* OUTPUTS *)
+        BYTE 16#0         5 (* OUTPUTS *)
+        BYTE 16#0         6 (* OUTPUTS *)
+        BYTE 16#0         7 (* OUTPUTS *)
+        BYTE 16#0         8 (* OUTPUTS *)
+        BYTE 16#0         9 (* OUTPUTS  *)
+        BYTE 16#0         10 (* OUTPUTS  *)
+        BYTE 16#0         11 (* OUTPUTS  *)
+        BYTE 16#0         12 (* OUTPUTS *)
+        BYTE 16#0         13 (* OUTPUTS *)
+        BYTE 16#0         14 (* OUTPUTS *)
+        BYTE 16#0         15 (* OUTPUTS *)
+      CIGIOConnData
+        CIGIOData    16#0C  (* FamilyType *)
+        CIGIOData    16#50  (* ModuleNumber  *)
+        CIGIOData    16#00  (* ModuleRevision *)
+        CIGIOData    16#00  (* TreatmentType *)
+        CIGIOData    16#04  (* Length of module parameter *)
+        CIGIOData    16#10  (* Number of channels *)
+        CIGIOData    16#00 16#00 16#10 16#68  (* ModuleParam *)
+        CIGIOData    16#00 16#00 16#00 16#00 16#00 16#00 (* ChannelParam *)
+        CIGIOData    16#00 16#00 16#00 16#00 16#00 16#00 (* ChannelParam *)
+        CIGIOData    16#00 16#00 16#00 16#00 16#00 16#00 (* ChannelParam *)
+        CIGIOData    16#00 16#00 16#00 16#00 16#00 16#00 (* ChannelParam *)
+        CIGIOData    16#00 16#00 16#00 16#00 16#00 16#00 (* ChannelParam *)
+        CIGIOData    16#00 16#00 16#00 16#00 16#00 16#00 (* ChannelParam *)
+        CIGIOData    16#00 16#00 16#00 16#00 16#00 16#00 (* ChannelParam *)
+        CIGIOData    16#00 16#00 16#00 16#00 16#00 16#00 (* ChannelParam *)
+        CIGIOData    16#00 16#00 16#00 16#00 16#00 16#00 (* ChannelParam *)
+        CIGIOData    16#00 16#00 16#00 16#00 16#00 16#00 (* ChannelParam *)
+        CIGIOData    16#00 16#00 16#00 16#00 16#00 16#00 (* ChannelParam *)
+        CIGIOData    16#00 16#00 16#00 16#00 16#00 16#00 (* ChannelParam *)
+        CIGIOData    16#00 16#00 16#00 16#00 16#00 16#00 (* ChannelParam *)
+        CIGIOData    16#00 16#00 16#00 16#00 16#00 16#00 (* ChannelParam *)
+        CIGIOData    16#00 16#00 16#00 16#00 16#00 16#00 (* ChannelParam *)
+        CIGIOData    16#00 16#00 16#00 16#00 16#00 16#00 (* ChannelParam *)
+      End CIGIOConnData
+    End ConfigInfo
+  End Configuration
+  HWUnitInfoCRC 16#0C78
+End HWUnitInfo (* Safety DO880 *)

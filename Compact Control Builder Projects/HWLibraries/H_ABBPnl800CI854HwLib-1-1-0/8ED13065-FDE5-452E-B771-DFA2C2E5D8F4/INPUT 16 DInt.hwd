@@ -1,0 +1,176 @@
+
+
+
+(*========================================================*)
+(*                                                        *)
+(*            INPUT: 16 DInt DPV1                         *)
+(*                                                        *)
+(*========================================================*)
+
+HWUnitInfo
+  HWUnitID         16#13D509DA
+  Description      "INPUT 16 DInt"
+  Information      "double word (32 bit) including the sign bi"
+  Icons            ProtocolType
+  Attributes       IoUnit 
+
+  Channels
+    ChannelInfo
+      Number            0
+      ChannelName      "Input DInt 0"
+      Datatype          Int_In
+      Routine           303
+      CopyParameters    16#0 16#0 16#30000 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number            1
+      ChannelName      "Input DInt 1"
+      Datatype          Int_In
+      Routine           303
+      CopyParameters    16#0 16#0 16#30002 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number            2
+      ChannelName      "Input DInt 2"
+      Datatype          Int_In
+      Routine           303
+      CopyParameters    16#0 16#0 16#30004 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number            3
+      ChannelName      "Input DInt 3"
+      Datatype          Int_In
+      Routine           303
+      CopyParameters    16#0 16#0 16#30006 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number            4
+      ChannelName      "Input DInt 4"
+      Datatype          Int_In
+      Routine           303
+      CopyParameters    16#0 16#0 16#30008 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number            5
+      ChannelName      "Input DInt 5"
+      Datatype          Int_In
+      Routine           303
+      CopyParameters    16#0 16#0 16#3000A 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number            6
+      ChannelName      "Input DInt 6"
+      Datatype          Int_In
+      Routine           303
+      CopyParameters    16#0 16#0 16#3000C 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number            7
+      ChannelName      "Input DInt 7"
+      Datatype          Int_In
+      Routine           303
+      CopyParameters    16#0 16#0 16#3000E 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number            8
+      ChannelName      "Input DInt 8"
+      Datatype          Int_In
+      Routine           303
+      CopyParameters    16#0 16#0 16#30010 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number            9
+      ChannelName      "Input DInt 9"
+      Datatype          Int_In
+      Routine           303
+      CopyParameters    16#0 16#0 16#30012 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number            10
+      ChannelName      "Input DInt 10"
+      Datatype          Int_In
+      Routine           303
+      CopyParameters    16#0 16#0 16#30014 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number            11
+      ChannelName      "Input DInt 11"
+      Datatype          Int_In
+      Routine           303
+      CopyParameters    16#0 16#0 16#30016 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number            12
+      ChannelName      "Input DInt 12"
+      Datatype          Int_In
+      Routine           303
+      CopyParameters    16#0 16#0 16#30018 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number            13
+      ChannelName      "Input DInt 13"
+      Datatype          Int_In
+      Routine           303
+      CopyParameters    16#0 16#0 16#3001A 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number            14
+      ChannelName      "Input DInt 14"
+      Datatype          Int_In
+      Routine           303
+      CopyParameters    16#0 16#0 16#3001C 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number            15
+      ChannelName      "Input DInt 15"
+      Datatype          Int_In
+      Routine           303
+      CopyParameters    16#0 16#0 16#3001E 16#0
+    End ChannelInfo
+  End Channels
+
+  Configuration
+    ConfigInfo
+      ModuleKey        16#13
+      InAreaSize       32 WORD
+      OutAreaSize      0 WORD
+      InWord
+        WORD  0    0
+        WORD  0    1
+        WORD  0    2
+        WORD  0    3
+        WORD  0    4
+        WORD  0    5
+        WORD  0    6
+        WORD  0    7
+        WORD  0    8
+        WORD  0    9
+        WORD  0    10
+        WORD  0    11
+        WORD  0    12
+        WORD  0    13
+        WORD  0    14
+        WORD  0    15
+        WORD  0    16
+        WORD  0    17
+        WORD  0    18
+        WORD  0    19
+        WORD  0    20
+        WORD  0    21
+        WORD  0    22
+        WORD  0    23
+        WORD  0    24
+        WORD  0    25
+        WORD  0    26
+        WORD  0    27
+        WORD  0    28
+        WORD  0    29
+        WORD  0    30
+        WORD  0    31
+      CIGIOConnData
+        CIGIOData        16#01 16#5F 16#5F
+      End CIGIOConnData
+    End ConfigInfo
+  End Configuration
+  HWUnitInfoCRC 16#8030
+End HWUnitInfo (* INPUT: 16 DInt *)

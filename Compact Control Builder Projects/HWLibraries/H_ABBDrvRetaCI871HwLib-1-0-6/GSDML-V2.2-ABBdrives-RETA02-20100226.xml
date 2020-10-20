@@ -1,0 +1,1197 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Created by ABB Drives -->
+<ISO15745Profile xmlns="http://www.profibus.com/GSDML/2003/11/DeviceProfile" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.profibus.com/GSDML/2003/11/DeviceProfile ..\XSD\GSDML-DeviceProfile-v2.2.xsd">
+   <ProfileHeader>
+      <ProfileIdentification>PROFINET Device Profile</ProfileIdentification>
+      <ProfileRevision>1.00</ProfileRevision>
+      <ProfileName>Device Profile for PROFINET Devices</ProfileName>
+      <ProfileSource>PROFIBUS Nutzerorganisation e. V. (PNO)</ProfileSource>
+      <ProfileClassID>Device</ProfileClassID>
+      <ISO15745Reference>
+         <ISO15745Part>4</ISO15745Part>
+         <ISO15745Edition>1</ISO15745Edition>
+         <ProfileTechnology>GSDML</ProfileTechnology>
+      </ISO15745Reference>
+   </ProfileHeader>
+   <ProfileBody>
+      <DeviceIdentity VendorID="0x001A" DeviceID="0x0001">
+         <InfoText TextId="T_ID_DEV_DESCRIPTION"/>
+         <VendorName Value="ABB Drives"/>
+      </DeviceIdentity>
+      <DeviceFunction>
+         <Family MainFamily="Drives" ProductFamily="ABB RETA-02"/>
+      </DeviceFunction>
+      <ApplicationProcess>
+
+
+<!-- List of Device Access Points (DAP) -->
+         <DeviceAccessPointList>
+
+            <DeviceAccessPointItem ID="RETA_DAP_V1" PhysicalSlots="0..1" ModuleIdentNumber="0x00000001" MinDeviceInterval="64" ImplementationType="Motorola Coldfire" DNS_CompatibleName="RETA-02" ExtendedAddressAssignmentSupported="true" FixedInSlots="0" ObjectUUID_LocalIndex="1">
+               <ModuleInfo>
+                  <Name TextId="T_ID_RETA_DAP_V1"/>
+                  <InfoText TextId="T_ID_DAP10_DEV_DESCRIPTION"/>
+                  <VendorName Value="ABB Drives"/>
+                  <OrderNumber Value="68840830"/>
+                  <HardwareRelease Value="V2"/>
+                  <SoftwareRelease Value="V3.00"/>
+               </ModuleInfo>
+               <IOConfigData MaxInputLength="42" MaxOutputLength="42"/>
+               <UseableModules>
+                  <ModuleItemRef ModuleItemTarget="ID_MODULE_PPO3" AllowedInSlots="1"/>
+                  <ModuleItemRef ModuleItemTarget="ID_MODULE_PPO4" AllowedInSlots="1"/>
+                  <ModuleItemRef ModuleItemTarget="ID_MODULE_PPO6" AllowedInSlots="1"/>
+               </UseableModules>
+               <VirtualSubmoduleList>
+                  <VirtualSubmoduleItem ID="RETA_DAP_V1_SUB" SubmoduleIdentNumber="0x00000000" API="0" Writeable_IM_Records="1 2 3 4">
+                     <IOData/>
+                     <RecordDataList/>
+                     <ModuleInfo>
+                        <Name TextId="T_ID_RETA_DAP_V1"/>
+                        <InfoText TextId="T_ID_DAP10_DEV_DESCRIPTION"/>
+                     </ModuleInfo>
+                  </VirtualSubmoduleItem>
+               </VirtualSubmoduleList>
+				<Graphics>
+					<GraphicItemRef Type="DeviceSymbol" GraphicItemTarget="1"/>
+                </Graphics>			   
+            </DeviceAccessPointItem>
+
+            <DeviceAccessPointItem ID="RETA_DAP_V2" PhysicalSlots="0..1" ModuleIdentNumber="0x00000001" MinDeviceInterval="64" ImplementationType="Motorola Coldfire" DNS_CompatibleName="RETA-02" ExtendedAddressAssignmentSupported="true" FixedInSlots="0" ObjectUUID_LocalIndex="1" ParameterizationSpeedupSupported="true" PowerOnToCommReady="20000">
+               <ModuleInfo>
+                  <Name TextId="T_ID_RETA_DAP_V2"/>
+                  <InfoText TextId="T_ID_DAP20_DEV_DESCRIPTION"/>
+                  <VendorName Value="ABB Drives"/>
+                  <OrderNumber Value="68840830"/>
+                  <HardwareRelease Value="V2"/>
+                  <SoftwareRelease Value="V3.00"/>
+               </ModuleInfo>
+               <SubslotList>
+                  <SubslotItem SubslotNumber="32768" TextId="T_ID_DAP20_SS_Interface"/>
+                  <SubslotItem SubslotNumber="32769" TextId="T_ID_DAP20_SS_Port1"/>
+               </SubslotList>
+               <IOConfigData MaxInputLength="42" MaxOutputLength="42"/>
+                  <UseableModules>
+                     <ModuleItemRef ModuleItemTarget="ID_MODULE_STD_TGM1" AllowedInSlots="1"/>
+                     <ModuleItemRef ModuleItemTarget="ID_MODULE_STD_TGM1_1PZD" AllowedInSlots="1"/>
+                     <ModuleItemRef ModuleItemTarget="ID_MODULE_STD_TGM1_2PZD" AllowedInSlots="1"/>
+                     <ModuleItemRef ModuleItemTarget="ID_MODULE_STD_TGM1_3PZD" AllowedInSlots="1"/>
+                     <ModuleItemRef ModuleItemTarget="ID_MODULE_STD_TGM1_4PZD" AllowedInSlots="1"/>
+                     <ModuleItemRef ModuleItemTarget="ID_MODULE_STD_TGM1_5PZD" AllowedInSlots="1"/>
+                     <ModuleItemRef ModuleItemTarget="ID_MODULE_STD_TGM1_6PZD" AllowedInSlots="1"/>
+                     <ModuleItemRef ModuleItemTarget="ID_MODULE_STD_TGM1_7PZD" AllowedInSlots="1"/>
+                     <ModuleItemRef ModuleItemTarget="ID_MODULE_STD_TGM1_8PZD" AllowedInSlots="1"/>
+                  </UseableModules>
+
+               <VirtualSubmoduleList>
+                  <VirtualSubmoduleItem ID="RETA_DAP_V2_SUB" SubmoduleIdentNumber="0x00000000" API="0" Writeable_IM_Records="1 2 3 4">
+                     <IOData/>
+                     <RecordDataList/>
+                     <ModuleInfo>
+                        <Name TextId="T_ID_RETA_DAP_V2"/>
+                        <InfoText TextId="T_ID_DAP20_DEV_DESCRIPTION"/>
+                     </ModuleInfo>
+                  </VirtualSubmoduleItem>
+               </VirtualSubmoduleList>
+
+               <SystemDefinedSubmoduleList>
+                  <InterfaceSubmoduleItem SubslotNumber="32768" SubmoduleIdentNumber="0x0001" SupportedRT_Class="Class1" TextId="T_ID_DAP20_INTERFACE_MODULE" SupportedProtocols="SNMP;LLDP" SupportedMibs="" IsochroneModeSupported="false" DCP_HelloSupported="true">
+                     <ApplicationRelations NumberOfAdditionalInputCR="1" NumberOfAdditionalMulticastProviderCR="0" NumberOfAdditionalOutputCR="0" NumberOfMulticastConsumerCR="0">
+                        <TimingProperties SendClock="32 64 128" ReductionRatio="1 2 4 8 16 32 64 128 256 512"/>
+                     </ApplicationRelations>
+                  </InterfaceSubmoduleItem>
+                  <PortSubmoduleItem SubslotNumber="32769" SubmoduleIdentNumber="0x0002" MAUType="100BASETXFD" TextId="T_ID_DAP20_PORT1"/>
+               </SystemDefinedSubmoduleList>
+				<Graphics>
+					<GraphicItemRef Type="DeviceSymbol" GraphicItemTarget="1"/>
+                </Graphics>			   
+            </DeviceAccessPointItem>
+         </DeviceAccessPointList>
+
+
+<!-- List of modules -->
+         <ModuleList>
+
+            <!--* Vendor specific object, PPO3 *-->
+            <ModuleItem ID="ID_MODULE_PPO3" ModuleIdentNumber="0x00000100">
+               <ModuleInfo CategoryRef="CAT_REF_VENDOR_MODULES">
+                  <Name TextId="T_ID_VENDOR_MODULE_NAME_PPO3"/>
+                  <InfoText TextId="T_ID_VENDOR_INFO_TEXT_PPO3"/>
+                  <OrderNumber Value="68840830"/>
+                  <HardwareRelease Value="V2"/>
+                  <SoftwareRelease Value="V3.00"/>
+               </ModuleInfo>
+               <VirtualSubmoduleList>
+                  <VirtualSubmoduleItem ID="ID_SUBMOD_PPO3" SubmoduleIdentNumber="0x00000000" API="0" FixedInSubslots="1" Writeable_IM_Records="1 2 3 4">
+                     <IOData IOPS_Length="1" IOCS_Length="1">
+                        <Input Consistency="All items consistency">
+                           <DataItem DataType="Unsigned16" TextId="T_ID_VENDOR_INPUT_W1" UseAsBits="true">
+                              <BitDataItem BitOffset="0" TextId="T_ID_VENDOR_STATUS_BIT0"/>
+                              <BitDataItem BitOffset="1" TextId="T_ID_VENDOR_STATUS_BIT1"/>
+                              <BitDataItem BitOffset="2" TextId="T_ID_VENDOR_STATUS_BIT2"/>
+                              <BitDataItem BitOffset="3" TextId="T_ID_VENDOR_STATUS_BIT3"/>
+                              <BitDataItem BitOffset="4" TextId="T_ID_VENDOR_STATUS_BIT4"/>
+                              <BitDataItem BitOffset="5" TextId="T_ID_VENDOR_STATUS_BIT5"/>
+                              <BitDataItem BitOffset="6" TextId="T_ID_VENDOR_STATUS_BIT6"/>
+                              <BitDataItem BitOffset="7" TextId="T_ID_VENDOR_STATUS_BIT7"/>
+                              <BitDataItem BitOffset="8" TextId="T_ID_VENDOR_STATUS_BIT8"/>
+                              <BitDataItem BitOffset="9" TextId="T_ID_VENDOR_STATUS_BIT9"/>
+                              <BitDataItem BitOffset="10" TextId="T_ID_VENDOR_STATUS_BIT10"/>
+                              <BitDataItem BitOffset="11" TextId="T_ID_VENDOR_STATUS_BIT11"/>
+                              <BitDataItem BitOffset="12" TextId="T_ID_VENDOR_STATUS_BIT12"/>
+                              <BitDataItem BitOffset="13" TextId="T_ID_VENDOR_STATUS_BIT13"/>
+                              <BitDataItem BitOffset="14" TextId="T_ID_VENDOR_STATUS_BIT14"/>
+                              <BitDataItem BitOffset="15" TextId="T_ID_VENDOR_STATUS_BIT15"/>
+                           </DataItem>
+                           <DataItem DataType="Unsigned16" TextId="T_ID_VENDOR_INPUT_W2"/>
+                        </Input>
+                        <Output Consistency="All items consistency">
+                           <DataItem DataType="Unsigned16" TextId="T_ID_VENDOR_OUTPUT_W1" UseAsBits="true">
+                              <BitDataItem BitOffset="0" TextId="T_ID_VENDOR_COMMAND_BIT0"/>
+                              <BitDataItem BitOffset="1" TextId="T_ID_VENDOR_COMMAND_BIT1"/>
+                              <BitDataItem BitOffset="2" TextId="T_ID_VENDOR_COMMAND_BIT2"/>
+                              <BitDataItem BitOffset="3" TextId="T_ID_VENDOR_COMMAND_BIT3"/>
+                              <BitDataItem BitOffset="4" TextId="T_ID_VENDOR_COMMAND_BIT4"/>
+                              <BitDataItem BitOffset="5" TextId="T_ID_VENDOR_COMMAND_BIT5"/>
+                              <BitDataItem BitOffset="6" TextId="T_ID_VENDOR_COMMAND_BIT6"/>
+                              <BitDataItem BitOffset="7" TextId="T_ID_VENDOR_COMMAND_BIT7"/>
+                              <BitDataItem BitOffset="8" TextId="T_ID_VENDOR_COMMAND_BIT8"/>
+                              <BitDataItem BitOffset="9" TextId="T_ID_VENDOR_COMMAND_BIT9"/>
+                              <BitDataItem BitOffset="10" TextId="T_ID_VENDOR_COMMAND_BIT10"/>
+                              <BitDataItem BitOffset="11" TextId="T_ID_VENDOR_COMMAND_BIT11"/>
+                              <BitDataItem BitOffset="12" TextId="T_ID_VENDOR_COMMAND_BIT12"/>
+                              <BitDataItem BitOffset="13" TextId="T_ID_VENDOR_COMMAND_BIT13"/>
+                              <BitDataItem BitOffset="14" TextId="T_ID_VENDOR_COMMAND_BIT14"/>
+                              <BitDataItem BitOffset="15" TextId="T_ID_VENDOR_COMMAND_BIT15"/>
+                           </DataItem>
+                           <DataItem DataType="Unsigned16" TextId="T_ID_VENDOR_OUTPUT_W2"/>
+                        </Output>
+                     </IOData>
+                     <RecordDataList>
+                        <ParameterRecordDataItem Index="1" Length="6" TransferSequence="0">
+                           <Name TextId="T_ID_PPOX_PARAMETERS"/>
+                           <Ref ValueItemTarget="VI_ID_VENDOR_STOP_ACTION_VALUES" DataType="Integer8" ByteOffset="0" DefaultValue="0" AllowedValues="0..1" TextId="T_ID_VENDOR_STOP_ACTION_VALUES"/>
+                           <Ref ValueItemTarget="VI_ID_VENDOR_CONTROL_ZERO_MODE_VALUES" DataType="Integer8" ByteOffset="1" DefaultValue="0" AllowedValues="0..1" TextId="T_ID_VENDOR_CONTROL_ZERO_MODE_VALUES"/>
+                           <Ref DataType="Unsigned16" ByteOffset="2" DefaultValue="0" AllowedValues="0..65535" TextId="T_ID_VENDOR_FS_CW"/>
+                           <Ref DataType="Unsigned16" ByteOffset="4" DefaultValue="0" AllowedValues="0..65535" TextId="T_ID_VENDOR_FS_REF"/>
+                        </ParameterRecordDataItem>
+                     </RecordDataList>
+                     <ModuleInfo>
+						<Name TextId="T_ID_VENDOR_SUBMOD_NAME_PPO3"/>
+						<InfoText TextId="T_ID_VENDOR_SUBMOD_INFO_PPO3"/>
+                     </ModuleInfo>
+                  </VirtualSubmoduleItem>
+               </VirtualSubmoduleList>
+            </ModuleItem>
+
+
+            <!--* Vendor specific object, PPO4 *-->
+            <ModuleItem ID="ID_MODULE_PPO4" ModuleIdentNumber="0x00000200">
+               <ModuleInfo CategoryRef="CAT_REF_VENDOR_MODULES">
+                  <Name TextId="T_ID_VENDOR_MODULE_NAME_PPO4"/>
+                  <InfoText TextId="T_ID_VENDOR_INFO_TEXT_PPO4"/>
+                  <OrderNumber Value="68840830"/>
+                  <HardwareRelease Value="V2"/>
+                  <SoftwareRelease Value="V3.00"/>
+               </ModuleInfo>
+               <VirtualSubmoduleList>
+                  <VirtualSubmoduleItem ID="ID_SUBMOD_PPO4" SubmoduleIdentNumber="0x00000000" API="0" FixedInSubslots="1" Writeable_IM_Records="1 2 3 4">
+                     <IOData IOPS_Length="1" IOCS_Length="1">
+                        <Input Consistency="All items consistency">
+                           <DataItem DataType="Unsigned16" TextId="T_ID_VENDOR_INPUT_W1" UseAsBits="true">
+                              <BitDataItem BitOffset="0" TextId="T_ID_VENDOR_STATUS_BIT0"/>
+                              <BitDataItem BitOffset="1" TextId="T_ID_VENDOR_STATUS_BIT1"/>
+                              <BitDataItem BitOffset="2" TextId="T_ID_VENDOR_STATUS_BIT2"/>
+                              <BitDataItem BitOffset="3" TextId="T_ID_VENDOR_STATUS_BIT3"/>
+                              <BitDataItem BitOffset="4" TextId="T_ID_VENDOR_STATUS_BIT4"/>
+                              <BitDataItem BitOffset="5" TextId="T_ID_VENDOR_STATUS_BIT5"/>
+                              <BitDataItem BitOffset="6" TextId="T_ID_VENDOR_STATUS_BIT6"/>
+                              <BitDataItem BitOffset="7" TextId="T_ID_VENDOR_STATUS_BIT7"/>
+                              <BitDataItem BitOffset="8" TextId="T_ID_VENDOR_STATUS_BIT8"/>
+                              <BitDataItem BitOffset="9" TextId="T_ID_VENDOR_STATUS_BIT9"/>
+                              <BitDataItem BitOffset="10" TextId="T_ID_VENDOR_STATUS_BIT10"/>
+                              <BitDataItem BitOffset="11" TextId="T_ID_VENDOR_STATUS_BIT11"/>
+                              <BitDataItem BitOffset="12" TextId="T_ID_VENDOR_STATUS_BIT12"/>
+                              <BitDataItem BitOffset="13" TextId="T_ID_VENDOR_STATUS_BIT13"/>
+                              <BitDataItem BitOffset="14" TextId="T_ID_VENDOR_STATUS_BIT14"/>
+                              <BitDataItem BitOffset="15" TextId="T_ID_VENDOR_STATUS_BIT15"/>
+                           </DataItem>
+                           <DataItem DataType="Unsigned16" TextId="T_ID_VENDOR_INPUT_W2"/>
+                           <DataItem DataType="Unsigned16" TextId="T_ID_VENDOR_INPUT_W3"/>
+                           <DataItem DataType="Unsigned16" TextId="T_ID_VENDOR_INPUT_W4"/>
+                           <DataItem DataType="Unsigned16" TextId="T_ID_VENDOR_INPUT_W5"/>
+                           <DataItem DataType="Unsigned16" TextId="T_ID_VENDOR_INPUT_W6"/>
+                        </Input>
+                        <Output Consistency="All items consistency">
+                           <DataItem DataType="Unsigned16" TextId="T_ID_VENDOR_OUTPUT_W1" UseAsBits="true">
+                              <BitDataItem BitOffset="0" TextId="T_ID_VENDOR_COMMAND_BIT0"/>
+                              <BitDataItem BitOffset="1" TextId="T_ID_VENDOR_COMMAND_BIT1"/>
+                              <BitDataItem BitOffset="2" TextId="T_ID_VENDOR_COMMAND_BIT2"/>
+                              <BitDataItem BitOffset="3" TextId="T_ID_VENDOR_COMMAND_BIT3"/>
+                              <BitDataItem BitOffset="4" TextId="T_ID_VENDOR_COMMAND_BIT4"/>
+                              <BitDataItem BitOffset="5" TextId="T_ID_VENDOR_COMMAND_BIT5"/>
+                              <BitDataItem BitOffset="6" TextId="T_ID_VENDOR_COMMAND_BIT6"/>
+                              <BitDataItem BitOffset="7" TextId="T_ID_VENDOR_COMMAND_BIT7"/>
+                              <BitDataItem BitOffset="8" TextId="T_ID_VENDOR_COMMAND_BIT8"/>
+                              <BitDataItem BitOffset="9" TextId="T_ID_VENDOR_COMMAND_BIT9"/>
+                              <BitDataItem BitOffset="10" TextId="T_ID_VENDOR_COMMAND_BIT10"/>
+                              <BitDataItem BitOffset="11" TextId="T_ID_VENDOR_COMMAND_BIT11"/>
+                              <BitDataItem BitOffset="12" TextId="T_ID_VENDOR_COMMAND_BIT12"/>
+                              <BitDataItem BitOffset="13" TextId="T_ID_VENDOR_COMMAND_BIT13"/>
+                              <BitDataItem BitOffset="14" TextId="T_ID_VENDOR_COMMAND_BIT14"/>
+                              <BitDataItem BitOffset="15" TextId="T_ID_VENDOR_COMMAND_BIT15"/>
+                           </DataItem>
+                           <DataItem DataType="Unsigned16" TextId="T_ID_VENDOR_OUTPUT_W2"/>
+                           <DataItem DataType="Unsigned16" TextId="T_ID_VENDOR_OUTPUT_W3"/>
+                           <DataItem DataType="Unsigned16" TextId="T_ID_VENDOR_OUTPUT_W4"/>
+                           <DataItem DataType="Unsigned16" TextId="T_ID_VENDOR_OUTPUT_W5"/>
+                           <DataItem DataType="Unsigned16" TextId="T_ID_VENDOR_OUTPUT_W6"/>
+                        </Output>
+                     </IOData>
+                     <RecordDataList>
+                        <ParameterRecordDataItem Index="1" Length="32" TransferSequence="0">
+                           <Name TextId="T_ID_PPOX_PARAMETERS"/>
+                           <Ref ValueItemTarget="VI_ID_VENDOR_STOP_ACTION_VALUES" DataType="Integer8" ByteOffset="0" DefaultValue="0" AllowedValues="0..1" TextId="T_ID_VENDOR_STOP_ACTION_VALUES"/>
+                           <Ref ValueItemTarget="VI_ID_VENDOR_CONTROL_ZERO_MODE_VALUES" DataType="Integer8" ByteOffset="1" DefaultValue="0" AllowedValues="0..1" TextId="T_ID_VENDOR_CONTROL_ZERO_MODE_VALUES"/>
+                           <Ref ValueItemTarget="VI_ID_INP_OUTP_PRM_SRC_SEL" DataType="Integer8" ByteOffset="2" DefaultValue="1" AllowedValues="0..1" TextId="T_ID_INP_OUTP_PRM_SRC_SEL"/>
+                           <Ref DataType="Unsigned16" ByteOffset="4" DefaultValue="0" AllowedValues="0..65535" TextId="T_ID_PRM_NBR_O1"/>
+                           <Ref DataType="Unsigned16" ByteOffset="6" DefaultValue="0" AllowedValues="0..65535" TextId="T_ID_PRM_NBR_O2"/>
+                           <Ref DataType="Unsigned16" ByteOffset="8" DefaultValue="0" AllowedValues="0..65535" TextId="T_ID_PRM_NBR_O3"/>
+                           <Ref DataType="Unsigned16" ByteOffset="10" DefaultValue="0" AllowedValues="0..65535" TextId="T_ID_PRM_NBR_O4"/>
+                           <Ref DataType="Unsigned16" ByteOffset="12" DefaultValue="0" AllowedValues="0..65535" TextId="T_ID_PRM_NBR_I1"/>
+                           <Ref DataType="Unsigned16" ByteOffset="14" DefaultValue="0" AllowedValues="0..65535" TextId="T_ID_PRM_NBR_I2"/>
+                           <Ref DataType="Unsigned16" ByteOffset="16" DefaultValue="0" AllowedValues="0..65535" TextId="T_ID_PRM_NBR_I3"/>
+                           <Ref DataType="Unsigned16" ByteOffset="18" DefaultValue="0" AllowedValues="0..65535" TextId="T_ID_PRM_NBR_I4"/>
+                           <Ref DataType="Unsigned16" ByteOffset="20" DefaultValue="0" AllowedValues="0..65535" TextId="T_ID_VENDOR_FS_CW"/>
+                           <Ref DataType="Unsigned16" ByteOffset="22" DefaultValue="0" AllowedValues="0..65535" TextId="T_ID_VENDOR_FS_REF"/>
+                           <Ref DataType="Unsigned16" ByteOffset="24" DefaultValue="0" AllowedValues="0..65535" TextId="T_ID_FAIL_SAFE_VALUE_O1"/>
+                           <Ref DataType="Unsigned16" ByteOffset="26" DefaultValue="0" AllowedValues="0..65535" TextId="T_ID_FAIL_SAFE_VALUE_O2"/>
+                           <Ref DataType="Unsigned16" ByteOffset="28" DefaultValue="0" AllowedValues="0..65535" TextId="T_ID_FAIL_SAFE_VALUE_O3"/>
+                           <Ref DataType="Unsigned16" ByteOffset="30" DefaultValue="0" AllowedValues="0..65535" TextId="T_ID_FAIL_SAFE_VALUE_O4"/>
+                        </ParameterRecordDataItem>
+                     </RecordDataList>
+                     <ModuleInfo>
+                        <Name TextId="T_ID_VENDOR_SUBMOD_NAME_PPO4"/>
+                        <InfoText TextId="T_ID_VENDOR_SUBMOD_INFO_PPO4"/>
+                     </ModuleInfo>
+                  </VirtualSubmoduleItem>
+               </VirtualSubmoduleList>
+            </ModuleItem>
+
+
+            <!--* Vendor specific object, PPO6 *-->
+            <ModuleItem ID="ID_MODULE_PPO6" ModuleIdentNumber="0x00000300">
+               <ModuleInfo CategoryRef="CAT_REF_VENDOR_MODULES">
+                  <Name TextId="T_ID_VENDOR_MODULE_NAME_PPO6"/>
+                  <InfoText TextId="T_ID_VENDOR_MODULE_NAME_PPO6"/>
+                  <OrderNumber Value="68840830"/>
+                  <HardwareRelease Value="V2"/>
+                  <SoftwareRelease Value="V3.00"/>
+               </ModuleInfo>
+               <VirtualSubmoduleList>
+                  <VirtualSubmoduleItem ID="ID_SUBMOD_PPO6" SubmoduleIdentNumber="0x00000000" API="0" FixedInSubslots="1" Writeable_IM_Records="1 2 3 4">
+                     <IOData IOPS_Length="1" IOCS_Length="1">
+                        <Input Consistency="All items consistency">
+                           <DataItem DataType="Unsigned16" TextId="T_ID_VENDOR_INPUT_W1" UseAsBits="true">
+                              <BitDataItem BitOffset="0" TextId="T_ID_VENDOR_STATUS_BIT0"/>
+                              <BitDataItem BitOffset="1" TextId="T_ID_VENDOR_STATUS_BIT1"/>
+                              <BitDataItem BitOffset="2" TextId="T_ID_VENDOR_STATUS_BIT2"/>
+                              <BitDataItem BitOffset="3" TextId="T_ID_VENDOR_STATUS_BIT3"/>
+                              <BitDataItem BitOffset="4" TextId="T_ID_VENDOR_STATUS_BIT4"/>
+                              <BitDataItem BitOffset="5" TextId="T_ID_VENDOR_STATUS_BIT5"/>
+                              <BitDataItem BitOffset="6" TextId="T_ID_VENDOR_STATUS_BIT6"/>
+                              <BitDataItem BitOffset="7" TextId="T_ID_VENDOR_STATUS_BIT7"/>
+                              <BitDataItem BitOffset="8" TextId="T_ID_VENDOR_STATUS_BIT8"/>
+                              <BitDataItem BitOffset="9" TextId="T_ID_VENDOR_STATUS_BIT9"/>
+                              <BitDataItem BitOffset="10" TextId="T_ID_VENDOR_STATUS_BIT10"/>
+                              <BitDataItem BitOffset="11" TextId="T_ID_VENDOR_STATUS_BIT11"/>
+                              <BitDataItem BitOffset="12" TextId="T_ID_VENDOR_STATUS_BIT12"/>
+                              <BitDataItem BitOffset="13" TextId="T_ID_VENDOR_STATUS_BIT13"/>
+                              <BitDataItem BitOffset="14" TextId="T_ID_VENDOR_STATUS_BIT14"/>
+                              <BitDataItem BitOffset="15" TextId="T_ID_VENDOR_STATUS_BIT15"/>
+                           </DataItem>
+                           <DataItem DataType="Unsigned16" TextId="T_ID_VENDOR_INPUT_W2"/>
+                           <DataItem DataType="Unsigned16" TextId="T_ID_VENDOR_INPUT_W3"/>
+                           <DataItem DataType="Unsigned16" TextId="T_ID_VENDOR_INPUT_W4"/>
+                           <DataItem DataType="Unsigned16" TextId="T_ID_VENDOR_INPUT_W5"/>
+                           <DataItem DataType="Unsigned16" TextId="T_ID_VENDOR_INPUT_W6"/>
+                           <DataItem DataType="Unsigned16" TextId="T_ID_VENDOR_INPUT_W7"/>
+                           <DataItem DataType="Unsigned16" TextId="T_ID_VENDOR_INPUT_W8"/>
+                           <DataItem DataType="Unsigned16" TextId="T_ID_VENDOR_INPUT_W9"/>
+                           <DataItem DataType="Unsigned16" TextId="T_ID_VENDOR_INPUT_W10"/>
+                        </Input>
+                        <Output Consistency="All items consistency">
+                           <DataItem DataType="Unsigned16" TextId="T_ID_VENDOR_OUTPUT_W1" UseAsBits="true">
+                              <BitDataItem BitOffset="0" TextId="T_ID_VENDOR_COMMAND_BIT0"/>
+                              <BitDataItem BitOffset="1" TextId="T_ID_VENDOR_COMMAND_BIT1"/>
+                              <BitDataItem BitOffset="2" TextId="T_ID_VENDOR_COMMAND_BIT2"/>
+                              <BitDataItem BitOffset="3" TextId="T_ID_VENDOR_COMMAND_BIT3"/>
+                              <BitDataItem BitOffset="4" TextId="T_ID_VENDOR_COMMAND_BIT4"/>
+                              <BitDataItem BitOffset="5" TextId="T_ID_VENDOR_COMMAND_BIT5"/>
+                              <BitDataItem BitOffset="6" TextId="T_ID_VENDOR_COMMAND_BIT6"/>
+                              <BitDataItem BitOffset="7" TextId="T_ID_VENDOR_COMMAND_BIT7"/>
+                              <BitDataItem BitOffset="8" TextId="T_ID_VENDOR_COMMAND_BIT8"/>
+                              <BitDataItem BitOffset="9" TextId="T_ID_VENDOR_COMMAND_BIT9"/>
+                              <BitDataItem BitOffset="10" TextId="T_ID_VENDOR_COMMAND_BIT10"/>
+                              <BitDataItem BitOffset="11" TextId="T_ID_VENDOR_COMMAND_BIT11"/>
+                              <BitDataItem BitOffset="12" TextId="T_ID_VENDOR_COMMAND_BIT12"/>
+                              <BitDataItem BitOffset="13" TextId="T_ID_VENDOR_COMMAND_BIT13"/>
+                              <BitDataItem BitOffset="14" TextId="T_ID_VENDOR_COMMAND_BIT14"/>
+                              <BitDataItem BitOffset="15" TextId="T_ID_VENDOR_COMMAND_BIT15"/>
+                           </DataItem>
+                           <DataItem DataType="Unsigned16" TextId="T_ID_VENDOR_OUTPUT_W2"/>
+                           <DataItem DataType="Unsigned16" TextId="T_ID_VENDOR_OUTPUT_W3"/>
+                           <DataItem DataType="Unsigned16" TextId="T_ID_VENDOR_OUTPUT_W4"/>
+                           <DataItem DataType="Unsigned16" TextId="T_ID_VENDOR_OUTPUT_W5"/>
+                           <DataItem DataType="Unsigned16" TextId="T_ID_VENDOR_OUTPUT_W6"/>
+                           <DataItem DataType="Unsigned16" TextId="T_ID_VENDOR_OUTPUT_W7"/>
+                           <DataItem DataType="Unsigned16" TextId="T_ID_VENDOR_OUTPUT_W8"/>
+                           <DataItem DataType="Unsigned16" TextId="T_ID_VENDOR_OUTPUT_W9"/>
+                           <DataItem DataType="Unsigned16" TextId="T_ID_VENDOR_OUTPUT_W10"/>
+                        </Output>
+                     </IOData>
+                     <RecordDataList>
+                        <ParameterRecordDataItem Index="1" Length="56" TransferSequence="0">
+                           <Name TextId="T_ID_PPOX_PARAMETERS"/>
+                           <Ref ValueItemTarget="VI_ID_VENDOR_STOP_ACTION_VALUES" DataType="Integer8" ByteOffset="0" DefaultValue="0" AllowedValues="0..1" TextId="T_ID_VENDOR_STOP_ACTION_VALUES"/>
+                           <Ref ValueItemTarget="VI_ID_VENDOR_CONTROL_ZERO_MODE_VALUES" DataType="Integer8" ByteOffset="1" DefaultValue="0" AllowedValues="0..1" TextId="T_ID_VENDOR_CONTROL_ZERO_MODE_VALUES"/>
+                           <Ref ValueItemTarget="VI_ID_INP_OUTP_PRM_SRC_SEL" DataType="Integer8" ByteOffset="2" DefaultValue="1" AllowedValues="0..1" TextId="T_ID_INP_OUTP_PRM_SRC_SEL"/>
+                           <Ref DataType="Unsigned16" ByteOffset="4" DefaultValue="0" AllowedValues="0..65535" TextId="T_ID_PRM_NBR_O1"/>
+                           <Ref DataType="Unsigned16" ByteOffset="6" DefaultValue="0" AllowedValues="0..65535" TextId="T_ID_PRM_NBR_O2"/>
+                           <Ref DataType="Unsigned16" ByteOffset="8" DefaultValue="0" AllowedValues="0..65535" TextId="T_ID_PRM_NBR_O3"/>
+                           <Ref DataType="Unsigned16" ByteOffset="10" DefaultValue="0" AllowedValues="0..65535" TextId="T_ID_PRM_NBR_O4"/>
+                           <Ref DataType="Unsigned16" ByteOffset="12" DefaultValue="0" AllowedValues="0..65535" TextId="T_ID_PRM_NBR_O5"/>
+                           <Ref DataType="Unsigned16" ByteOffset="14" DefaultValue="0" AllowedValues="0..65535" TextId="T_ID_PRM_NBR_O6"/>
+                           <Ref DataType="Unsigned16" ByteOffset="16" DefaultValue="0" AllowedValues="0..65535" TextId="T_ID_PRM_NBR_O7"/>
+                           <Ref DataType="Unsigned16" ByteOffset="18" DefaultValue="0" AllowedValues="0..65535" TextId="T_ID_PRM_NBR_O8"/>
+                           <Ref DataType="Unsigned16" ByteOffset="20" DefaultValue="0" AllowedValues="0..65535" TextId="T_ID_PRM_NBR_I1"/>
+                           <Ref DataType="Unsigned16" ByteOffset="22" DefaultValue="0" AllowedValues="0..65535" TextId="T_ID_PRM_NBR_I2"/>
+                           <Ref DataType="Unsigned16" ByteOffset="24" DefaultValue="0" AllowedValues="0..65535" TextId="T_ID_PRM_NBR_I3"/>
+                           <Ref DataType="Unsigned16" ByteOffset="26" DefaultValue="0" AllowedValues="0..65535" TextId="T_ID_PRM_NBR_I4"/>
+                           <Ref DataType="Unsigned16" ByteOffset="28" DefaultValue="0" AllowedValues="0..65535" TextId="T_ID_PRM_NBR_I5"/>
+                           <Ref DataType="Unsigned16" ByteOffset="30" DefaultValue="0" AllowedValues="0..65535" TextId="T_ID_PRM_NBR_I6"/>
+                           <Ref DataType="Unsigned16" ByteOffset="32" DefaultValue="0" AllowedValues="0..65535" TextId="T_ID_PRM_NBR_I7"/>
+                           <Ref DataType="Unsigned16" ByteOffset="34" DefaultValue="0" AllowedValues="0..65535" TextId="T_ID_PRM_NBR_I8"/>
+                           <Ref DataType="Unsigned16" ByteOffset="36" DefaultValue="0" AllowedValues="0..65535" TextId="T_ID_VENDOR_FS_CW"/>
+                           <Ref DataType="Unsigned16" ByteOffset="38" DefaultValue="0" AllowedValues="0..65535" TextId="T_ID_VENDOR_FS_REF"/>
+                           <Ref DataType="Unsigned16" ByteOffset="40" DefaultValue="0" AllowedValues="0..65535" TextId="T_ID_FAIL_SAFE_VALUE_O1"/>
+                           <Ref DataType="Unsigned16" ByteOffset="42" DefaultValue="0" AllowedValues="0..65535" TextId="T_ID_FAIL_SAFE_VALUE_O2"/>
+                           <Ref DataType="Unsigned16" ByteOffset="44" DefaultValue="0" AllowedValues="0..65535" TextId="T_ID_FAIL_SAFE_VALUE_O3"/>
+                           <Ref DataType="Unsigned16" ByteOffset="46" DefaultValue="0" AllowedValues="0..65535" TextId="T_ID_FAIL_SAFE_VALUE_O4"/>
+                           <Ref DataType="Unsigned16" ByteOffset="48" DefaultValue="0" AllowedValues="0..65535" TextId="T_ID_FAIL_SAFE_VALUE_O5"/>
+                           <Ref DataType="Unsigned16" ByteOffset="50" DefaultValue="0" AllowedValues="0..65535" TextId="T_ID_FAIL_SAFE_VALUE_O6"/>
+                           <Ref DataType="Unsigned16" ByteOffset="52" DefaultValue="0" AllowedValues="0..65535" TextId="T_ID_FAIL_SAFE_VALUE_O7"/>
+                           <Ref DataType="Unsigned16" ByteOffset="54" DefaultValue="0" AllowedValues="0..65535" TextId="T_ID_FAIL_SAFE_VALUE_O8"/>
+                        </ParameterRecordDataItem>
+                     </RecordDataList>
+                     <ModuleInfo>
+                        <Name TextId="T_ID_VENDOR_SUBMOD_NAME_PPO6"/>
+                        <InfoText TextId="T_ID_VENDOR_SUBMOD_INFO_PPO6"/>
+                     </ModuleInfo>
+                  </VirtualSubmoduleItem>
+               </VirtualSubmoduleList>
+            </ModuleItem>
+
+
+            <!--* Profile object, Map/Pap + Std Tgm1 *-->
+            <ModuleItem ID="ID_MODULE_STD_TGM1" ModuleIdentNumber="0x00000010" PhysicalSubslots="2">
+               <ModuleInfo CategoryRef="CAT_REF_PROFILE_MODULES">
+                  <Name TextId="T_ID_PROFILE_MODULE_MAP_STD_TGM_NAME"/>
+                  <InfoText TextId="T_ID_PROFILE_MODULE_MAP_STD_TGM_INFO_TEXT"/>
+                  <OrderNumber Value="68840830"/>
+                  <HardwareRelease Value="V2"/>
+                  <SoftwareRelease Value="V3.00"/>
+               </ModuleInfo>
+					<VirtualSubmoduleList>
+					   <VirtualSubmoduleItem ID="ID_PROFILE_MAPPAP_1" SubmoduleIdentNumber="0x0000FFFF" API="14848" Writeable_IM_Records="1 2 3 4" FixedInSubslots="1">
+                     <IOData/>
+                     <ModuleInfo>
+                        <Name TextId="T_ID_PROFILE_MAPPAP_NAME"/>
+                        <InfoText TextId="T_ID_PROFILE_MAPPAP_INFO_TEXT"/>
+                     </ModuleInfo>
+                  </VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+					<UseableSubmodules>
+						<SubmoduleItemRef SubmoduleItemTarget="ID_PROFILE_STD_TGM1" FixedInSubslots="2"/>
+					</UseableSubmodules>
+            </ModuleItem>
+
+
+            <!--* Profile object, Map/Pap + Std Tgm1 + 1 Input/Output Pzd *-->
+            <ModuleItem ID="ID_MODULE_STD_TGM1_1PZD" ModuleIdentNumber="0x00000010" PhysicalSubslots="2..4">
+               <ModuleInfo CategoryRef="CAT_REF_PROFILE_MODULES">
+                  <Name TextId="T_ID_PROFILE_MODULE_MAP_STD_TGM_1PZD_NAME"/>
+                  <InfoText TextId="T_ID_PROFILE_MODULE_MAP_STD_TGM_1PZD_INFO_TEXT"/>
+                  <OrderNumber Value="68840830"/>
+                  <HardwareRelease Value="V2"/>
+                  <SoftwareRelease Value="V3.00"/>
+               </ModuleInfo>
+					<VirtualSubmoduleList>
+					   <VirtualSubmoduleItem ID="ID_PROFILE_MAPPAP_2" SubmoduleIdentNumber="0x0000FFFF" API="14848" Writeable_IM_Records="1 2 3 4" FixedInSubslots="1">
+                     <IOData/>
+                     <ModuleInfo>
+                        <Name TextId="T_ID_PROFILE_MAPPAP_NAME"/>
+                        <InfoText TextId="T_ID_PROFILE_MAPPAP_INFO_TEXT"/>
+                     </ModuleInfo>
+                  </VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+               <UseableSubmodules>
+						<SubmoduleItemRef SubmoduleItemTarget="ID_PROFILE_STD_TGM1" FixedInSubslots="2"/>
+						<SubmoduleItemRef SubmoduleItemTarget="ID_PROFILE_INPUT2B" FixedInSubslots="3"/>
+						<SubmoduleItemRef SubmoduleItemTarget="ID_PROFILE_OUTPUT2B" FixedInSubslots="4"/>
+					</UseableSubmodules>
+            </ModuleItem>
+
+
+            <!--* Profile object, Map/Pap + Std Tgm1 + 2 Input/Output Pzd *-->
+            <ModuleItem ID="ID_MODULE_STD_TGM1_2PZD" ModuleIdentNumber="0x00000010" PhysicalSubslots="2..6">
+               <ModuleInfo CategoryRef="CAT_REF_PROFILE_MODULES">
+                  <Name TextId="T_ID_PROFILE_MODULE_MAP_STD_TGM_2PZD_NAME"/>
+                  <InfoText TextId="T_ID_PROFILE_MODULE_MAP_STD_TGM_2PZD_INFO_TEXT"/>
+                  <OrderNumber Value="68840830"/>
+                  <HardwareRelease Value="V2"/>
+                  <SoftwareRelease Value="V3.00"/>
+               </ModuleInfo>
+					<VirtualSubmoduleList>
+					   <VirtualSubmoduleItem ID="ID_PROFILE_MAPPAP_3" SubmoduleIdentNumber="0x0000FFFF" API="14848" Writeable_IM_Records="1 2 3 4" FixedInSubslots="1">
+                     <IOData/>
+                     <ModuleInfo>
+                        <Name TextId="T_ID_PROFILE_MAPPAP_NAME"/>
+                        <InfoText TextId="T_ID_PROFILE_MAPPAP_INFO_TEXT"/>
+                     </ModuleInfo>
+                  </VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+               <UseableSubmodules>
+						<SubmoduleItemRef SubmoduleItemTarget="ID_PROFILE_STD_TGM1" FixedInSubslots="2"/>
+						<SubmoduleItemRef SubmoduleItemTarget="ID_PROFILE_INPUT2B" FixedInSubslots="3..4"/>
+						<SubmoduleItemRef SubmoduleItemTarget="ID_PROFILE_OUTPUT2B" FixedInSubslots="5..6"/>
+					</UseableSubmodules>
+            </ModuleItem>
+
+
+            <!--* Profile object, Map/Pap + Std Tgm1 + 3 Input/Output Pzd *-->
+            <ModuleItem ID="ID_MODULE_STD_TGM1_3PZD" ModuleIdentNumber="0x00000010" PhysicalSubslots="2..8">
+               <ModuleInfo CategoryRef="CAT_REF_PROFILE_MODULES">
+                  <Name TextId="T_ID_PROFILE_MODULE_MAP_STD_TGM_3PZD_NAME"/>
+                  <InfoText TextId="T_ID_PROFILE_MODULE_MAP_STD_TGM_3PZD_INFO_TEXT"/>
+                  <OrderNumber Value="68840830"/>
+                  <HardwareRelease Value="V2"/>
+                  <SoftwareRelease Value="V3.00"/>
+               </ModuleInfo>
+					<VirtualSubmoduleList>
+					   <VirtualSubmoduleItem ID="ID_PROFILE_MAPPAP_4" SubmoduleIdentNumber="0x0000FFFF" API="14848" Writeable_IM_Records="1 2 3 4" FixedInSubslots="1">
+                     <IOData/>
+                     <ModuleInfo>
+                        <Name TextId="T_ID_PROFILE_MAPPAP_NAME"/>
+                        <InfoText TextId="T_ID_PROFILE_MAPPAP_INFO_TEXT"/>
+                     </ModuleInfo>
+                  </VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+               <UseableSubmodules>
+						<SubmoduleItemRef SubmoduleItemTarget="ID_PROFILE_STD_TGM1" FixedInSubslots="2"/>
+						<SubmoduleItemRef SubmoduleItemTarget="ID_PROFILE_INPUT2B" FixedInSubslots="3..5"/>
+						<SubmoduleItemRef SubmoduleItemTarget="ID_PROFILE_OUTPUT2B" FixedInSubslots="6..8"/>
+					</UseableSubmodules>
+            </ModuleItem>
+
+
+            <!--* Profile object, Map/Pap + Std Tgm1 + 4 Input/Output Pzd *-->
+            <ModuleItem ID="ID_MODULE_STD_TGM1_4PZD" ModuleIdentNumber="0x00000010" PhysicalSubslots="2..10">
+               <ModuleInfo CategoryRef="CAT_REF_PROFILE_MODULES">
+                  <Name TextId="T_ID_PROFILE_MODULE_MAP_STD_TGM_4PZD_NAME"/>
+                  <InfoText TextId="T_ID_PROFILE_MODULE_MAP_STD_TGM_4PZD_INFO_TEXT"/>
+                  <OrderNumber Value="68840830"/>
+                  <HardwareRelease Value="V2"/>
+                  <SoftwareRelease Value="V3.00"/>
+               </ModuleInfo>
+					<VirtualSubmoduleList>
+					   <VirtualSubmoduleItem ID="ID_PROFILE_MAPPAP_5" SubmoduleIdentNumber="0x0000FFFF" API="14848" Writeable_IM_Records="1 2 3 4" FixedInSubslots="1">
+                     <IOData/>
+                     <ModuleInfo>
+                        <Name TextId="T_ID_PROFILE_MAPPAP_NAME"/>
+                        <InfoText TextId="T_ID_PROFILE_MAPPAP_INFO_TEXT"/>
+                     </ModuleInfo>
+                  </VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+               <UseableSubmodules>
+						<SubmoduleItemRef SubmoduleItemTarget="ID_PROFILE_STD_TGM1" FixedInSubslots="2"/>
+						<SubmoduleItemRef SubmoduleItemTarget="ID_PROFILE_INPUT2B" FixedInSubslots="3..6"/>
+						<SubmoduleItemRef SubmoduleItemTarget="ID_PROFILE_OUTPUT2B" FixedInSubslots="7..10"/>
+					</UseableSubmodules>
+            </ModuleItem>
+
+
+            <!--* Profile object, Map/Pap + Std Tgm1 + 5 Input/Output Pzd *-->
+            <ModuleItem ID="ID_MODULE_STD_TGM1_5PZD" ModuleIdentNumber="0x00000010" PhysicalSubslots="2..12">
+               <ModuleInfo CategoryRef="CAT_REF_PROFILE_MODULES">
+                  <Name TextId="T_ID_PROFILE_MODULE_MAP_STD_TGM_5PZD_NAME"/>
+                  <InfoText TextId="T_ID_PROFILE_MODULE_MAP_STD_TGM_5PZD_INFO_TEXT"/>
+                  <OrderNumber Value="68840830"/>
+                  <HardwareRelease Value="V2"/>
+                  <SoftwareRelease Value="V3.00"/>
+               </ModuleInfo>
+					<VirtualSubmoduleList>
+					   <VirtualSubmoduleItem ID="ID_PROFILE_MAPPAP_6" SubmoduleIdentNumber="0x0000FFFF" API="14848" Writeable_IM_Records="1 2 3 4" FixedInSubslots="1">
+                     <IOData/>
+                     <ModuleInfo>
+                        <Name TextId="T_ID_PROFILE_MAPPAP_NAME"/>
+                        <InfoText TextId="T_ID_PROFILE_MAPPAP_INFO_TEXT"/>
+                     </ModuleInfo>
+                  </VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+               <UseableSubmodules>
+						<SubmoduleItemRef SubmoduleItemTarget="ID_PROFILE_STD_TGM1" FixedInSubslots="2"/>
+						<SubmoduleItemRef SubmoduleItemTarget="ID_PROFILE_INPUT2B" FixedInSubslots="3..7"/>
+						<SubmoduleItemRef SubmoduleItemTarget="ID_PROFILE_OUTPUT2B" FixedInSubslots="8..12"/>
+					</UseableSubmodules>
+            </ModuleItem>
+
+
+            <!--* Profile object, Map/Pap + Std Tgm1 + 6 Input/Output Pzd *-->
+            <ModuleItem ID="ID_MODULE_STD_TGM1_6PZD" ModuleIdentNumber="0x00000010" PhysicalSubslots="2..14">
+               <ModuleInfo CategoryRef="CAT_REF_PROFILE_MODULES">
+                  <Name TextId="T_ID_PROFILE_MODULE_MAP_STD_TGM_6PZD_NAME"/>
+                  <InfoText TextId="T_ID_PROFILE_MODULE_MAP_STD_TGM_6PZD_INFO_TEXT"/>
+                  <OrderNumber Value="68840830"/>
+                  <HardwareRelease Value="V2"/>
+                  <SoftwareRelease Value="V3.00"/>
+               </ModuleInfo>
+					<VirtualSubmoduleList>
+					   <VirtualSubmoduleItem ID="ID_PROFILE_MAPPAP_7" SubmoduleIdentNumber="0x0000FFFF" API="14848" Writeable_IM_Records="1 2 3 4" FixedInSubslots="1">
+                     <IOData/>
+                     <ModuleInfo>
+                        <Name TextId="T_ID_PROFILE_MAPPAP_NAME"/>
+                        <InfoText TextId="T_ID_PROFILE_MAPPAP_INFO_TEXT"/>
+                     </ModuleInfo>
+                  </VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+               <UseableSubmodules>
+						<SubmoduleItemRef SubmoduleItemTarget="ID_PROFILE_STD_TGM1" FixedInSubslots="2"/>
+						<SubmoduleItemRef SubmoduleItemTarget="ID_PROFILE_INPUT2B" FixedInSubslots="3..8"/>
+						<SubmoduleItemRef SubmoduleItemTarget="ID_PROFILE_OUTPUT2B" FixedInSubslots="9..14"/>
+					</UseableSubmodules>
+            </ModuleItem>
+
+
+            <!--* Profile object, Map/Pap + Std Tgm1 + 7 Input/Output Pzd *-->
+            <ModuleItem ID="ID_MODULE_STD_TGM1_7PZD" ModuleIdentNumber="0x00000010" PhysicalSubslots="2..16">
+               <ModuleInfo CategoryRef="CAT_REF_PROFILE_MODULES">
+                  <Name TextId="T_ID_PROFILE_MODULE_MAP_STD_TGM_7PZD_NAME"/>
+                  <InfoText TextId="T_ID_PROFILE_MODULE_MAP_STD_TGM_7PZD_INFO_TEXT"/>
+                  <OrderNumber Value="68840830"/>
+                  <HardwareRelease Value="V2"/>
+                  <SoftwareRelease Value="V3.00"/>
+               </ModuleInfo>
+					<VirtualSubmoduleList>
+					   <VirtualSubmoduleItem ID="ID_PROFILE_MAPPAP_8" SubmoduleIdentNumber="0x0000FFFF" API="14848" Writeable_IM_Records="1 2 3 4" FixedInSubslots="1">
+                     <IOData/>
+                     <ModuleInfo>
+                        <Name TextId="T_ID_PROFILE_MAPPAP_NAME"/>
+                        <InfoText TextId="T_ID_PROFILE_MAPPAP_INFO_TEXT"/>
+                     </ModuleInfo>
+                  </VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+               <UseableSubmodules>
+						<SubmoduleItemRef SubmoduleItemTarget="ID_PROFILE_STD_TGM1" FixedInSubslots="2"/>
+						<SubmoduleItemRef SubmoduleItemTarget="ID_PROFILE_INPUT2B" FixedInSubslots="3..9"/>
+						<SubmoduleItemRef SubmoduleItemTarget="ID_PROFILE_OUTPUT2B" FixedInSubslots="10..16"/>
+					</UseableSubmodules>
+            </ModuleItem>
+
+
+            <!--* Profile object, Map/Pap + Std Tgm1 + 8 Input/Output Pzd *-->
+            <ModuleItem ID="ID_MODULE_STD_TGM1_8PZD" ModuleIdentNumber="0x00000010" PhysicalSubslots="2..18">
+               <ModuleInfo CategoryRef="CAT_REF_PROFILE_MODULES">
+                  <Name TextId="T_ID_PROFILE_MODULE_MAP_STD_TGM_8PZD_NAME"/>
+                  <InfoText TextId="T_ID_PROFILE_MODULE_MAP_STD_TGM_8PZD_INFO_TEXT"/>
+                  <OrderNumber Value="68840830"/>
+                  <HardwareRelease Value="V2"/>
+                  <SoftwareRelease Value="V3.00"/>
+               </ModuleInfo>
+					<VirtualSubmoduleList>
+					   <VirtualSubmoduleItem ID="ID_PROFILE_MAPPAP_9" SubmoduleIdentNumber="0x0000FFFF" API="14848" Writeable_IM_Records="1 2 3 4" FixedInSubslots="1">
+                     <IOData/>
+                     <ModuleInfo>
+                        <Name TextId="T_ID_PROFILE_MAPPAP_NAME"/>
+                        <InfoText TextId="T_ID_PROFILE_MAPPAP_INFO_TEXT"/>
+                     </ModuleInfo>
+                  </VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+               <UseableSubmodules>
+						<SubmoduleItemRef SubmoduleItemTarget="ID_PROFILE_STD_TGM1" FixedInSubslots="2"/>
+						<SubmoduleItemRef SubmoduleItemTarget="ID_PROFILE_INPUT2B" FixedInSubslots="3..10"/>
+						<SubmoduleItemRef SubmoduleItemTarget="ID_PROFILE_OUTPUT2B" FixedInSubslots="11..18"/>
+					</UseableSubmodules>
+            </ModuleItem>
+
+         </ModuleList>
+
+
+<!-- List of SubModules -->
+			<SubmoduleList>
+           
+            <!-- Std Tgm 1 Sub-Module -->
+            <SubmoduleItem ID="ID_PROFILE_STD_TGM1" SubmoduleIdentNumber="0x00000001" API="14848" Writeable_IM_Records="1 2 3 4">
+               <IOData IOPS_Length="1" IOCS_Length="1">
+                  <Input Consistency="All items consistency">
+                     <DataItem DataType="Unsigned16" TextId="T_ID_PROFILE_STD_TGM1_INPUT" UseAsBits="true">
+                        <BitDataItem BitOffset="0" TextId="T_ID_PROFILE_STATUS_BIT0"/>
+                        <BitDataItem BitOffset="1" TextId="T_ID_PROFILE_STATUS_BIT1"/>
+                        <BitDataItem BitOffset="2" TextId="T_ID_PROFILE_STATUS_BIT2"/>
+                        <BitDataItem BitOffset="3" TextId="T_ID_PROFILE_STATUS_BIT3"/>
+                        <BitDataItem BitOffset="4" TextId="T_ID_PROFILE_STATUS_BIT4"/>
+                        <BitDataItem BitOffset="5" TextId="T_ID_PROFILE_STATUS_BIT5"/>
+                        <BitDataItem BitOffset="6" TextId="T_ID_PROFILE_STATUS_BIT6"/>
+                        <BitDataItem BitOffset="7" TextId="T_ID_PROFILE_STATUS_BIT7"/>
+                        <BitDataItem BitOffset="8" TextId="T_ID_PROFILE_STATUS_BIT8"/>
+                        <BitDataItem BitOffset="9" TextId="T_ID_PROFILE_STATUS_BIT9"/>
+                        <BitDataItem BitOffset="10" TextId="T_ID_PROFILE_STATUS_BIT10"/>
+                        <BitDataItem BitOffset="11" TextId="T_ID_PROFILE_STATUS_BIT11"/>
+                        <BitDataItem BitOffset="12" TextId="T_ID_PROFILE_STATUS_BIT12"/>
+                        <BitDataItem BitOffset="13" TextId="T_ID_PROFILE_STATUS_BIT13"/>
+                        <BitDataItem BitOffset="14" TextId="T_ID_PROFILE_STATUS_BIT14"/>
+                        <BitDataItem BitOffset="15" TextId="T_ID_PROFILE_STATUS_BIT15"/>
+                     </DataItem>
+                     <DataItem DataType="Unsigned16" TextId="T_ID_PROFILE_STD_TGM1_INPUT"/>
+                  </Input>
+                  <Output Consistency="All items consistency">
+                     <DataItem DataType="Unsigned16" TextId="T_ID_PROFILE_STD_TGM1_OUTPUT" UseAsBits="true">
+                        <BitDataItem BitOffset="0" TextId="T_ID_PROFILE_COMMAND_BIT0"/>
+                        <BitDataItem BitOffset="1" TextId="T_ID_PROFILE_COMMAND_BIT1"/>
+                        <BitDataItem BitOffset="2" TextId="T_ID_PROFILE_COMMAND_BIT2"/>
+                        <BitDataItem BitOffset="3" TextId="T_ID_PROFILE_COMMAND_BIT3"/>
+                        <BitDataItem BitOffset="4" TextId="T_ID_PROFILE_COMMAND_BIT4"/>
+                        <BitDataItem BitOffset="5" TextId="T_ID_PROFILE_COMMAND_BIT5"/>
+                        <BitDataItem BitOffset="6" TextId="T_ID_PROFILE_COMMAND_BIT6"/>
+                        <BitDataItem BitOffset="7" TextId="T_ID_PROFILE_COMMAND_BIT7"/>
+                        <BitDataItem BitOffset="8" TextId="T_ID_PROFILE_COMMAND_BIT8"/>
+                        <BitDataItem BitOffset="9" TextId="T_ID_PROFILE_COMMAND_BIT9"/>
+                        <BitDataItem BitOffset="10" TextId="T_ID_PROFILE_COMMAND_BIT10"/>
+                        <BitDataItem BitOffset="11" TextId="T_ID_PROFILE_COMMAND_BIT11"/>
+                        <BitDataItem BitOffset="12" TextId="T_ID_PROFILE_COMMAND_BIT12"/>
+                        <BitDataItem BitOffset="13" TextId="T_ID_PROFILE_COMMAND_BIT13"/>
+                        <BitDataItem BitOffset="14" TextId="T_ID_PROFILE_COMMAND_BIT14"/>
+                        <BitDataItem BitOffset="15" TextId="T_ID_PROFILE_COMMAND_BIT15"/>
+                     </DataItem>
+                     <DataItem DataType="Unsigned16" TextId="T_ID_PROFILE_STD_TGM1_OUTPUT"/>
+                  </Output>
+               </IOData>
+               <RecordDataList>
+                  <ParameterRecordDataItem Index="1" Length="6" TransferSequence="0">
+                     <Name TextId="T_ID_PROFILE_STD_TGM1_PARAMETERS"/>
+                     <Ref ValueItemTarget="VI_ID_PROFILE_STOP_ACTION_VALUES" DataType="Integer8" ByteOffset="0" DefaultValue="0" AllowedValues="0..2" TextId="T_ID_PROFILE_STOP_ACTION_VALUES"/>
+                     <Ref ValueItemTarget="VI_ID_INP_OUTP_PRM_SRC_SEL" DataType="Integer8" ByteOffset="1" DefaultValue="1" AllowedValues="0..1" TextId="T_ID_INP_OUTP_PRM_SRC_SEL"/>
+                     <Ref DataType="Unsigned16" ByteOffset="2" DefaultValue="0" AllowedValues="0..65535" TextId="T_ID_PROFILE_STD_TGM1_FS_STW1"/>
+                     <Ref DataType="Unsigned16" ByteOffset="4" DefaultValue="0" AllowedValues="0..65535" TextId="T_ID_PROFILE_STD_TGM1_FS_NSOLLA"/>
+                  </ParameterRecordDataItem>
+               </RecordDataList>
+               <ModuleInfo>
+                  <Name TextId="T_ID_PROFILE_STD_TGM1_NAME"/>
+                  <InfoText TextId="T_ID_PROFILE_STD_TGM1_INFO_TEXT"/>
+               </ModuleInfo>
+            </SubmoduleItem>
+
+            <!-- Input 2 byte Sub-Module -->
+            <SubmoduleItem ID="ID_PROFILE_INPUT2B" SubmoduleIdentNumber="0x00000068" API="14848" Writeable_IM_Records="1 2 3 4">
+               <IOData IOPS_Length="1" IOCS_Length="1">
+                  <Input Consistency="Item consistency">
+                     <DataItem DataType="Unsigned16" TextId="T_ID_PROFILE_INPUT_2B_TEXT"/>
+                  </Input>
+               </IOData>
+               <RecordDataList>
+                  <ParameterRecordDataItem Index="1" Length="2" TransferSequence="0">
+                     <Name TextId="T_ID_PROFILE_INPUT_2B_PARAMETERS"/>
+                     <Ref DataType="Unsigned16" ByteOffset="0" DefaultValue="0" AllowedValues="0..65535" TextId="T_ID_PROFILE_INPUT_2B_PRM_NBR"/>
+                  </ParameterRecordDataItem>
+               </RecordDataList>
+               <ModuleInfo>
+                  <Name TextId="T_ID_PROFILE_SUBMOD_INPUT_2B_NAME"/>
+                  <InfoText TextId="T_ID_PROFILE_SUBMOD_INPUT_2B_INFO_TEXT"/>
+               </ModuleInfo>
+            </SubmoduleItem>
+
+            <!-- Output 2 byte Sub-Module -->
+            <SubmoduleItem ID="ID_PROFILE_OUTPUT2B" SubmoduleIdentNumber="0x00000067" API="14848" Writeable_IM_Records="1 2 3 4">
+               <IOData IOPS_Length="1" IOCS_Length="1">
+                  <Output Consistency="Item consistency">
+                     <DataItem DataType="Unsigned16" TextId="T_ID_PROFILE_OUTPUT_2B_TEXT"/>
+                  </Output>
+               </IOData>
+               <RecordDataList>
+                  <ParameterRecordDataItem Index="1" Length="4" TransferSequence="0">
+                     <Name TextId="T_ID_PROFILE_OUTPUT_2B_PARAMETERS"/>
+                     <Ref DataType="Unsigned16" ByteOffset="0" DefaultValue="0" AllowedValues="0..65535" TextId="T_ID_PROFILE_OUTPUT_2B_PRM_NBR"/>
+                     <Ref DataType="Unsigned16" ByteOffset="2" DefaultValue="0" AllowedValues="0..65535" TextId="T_ID_PROFILE_OUTPUT_2B_FS_VALUE"/>
+                  </ParameterRecordDataItem>
+               </RecordDataList>
+               <ModuleInfo>
+                  <Name TextId="T_ID_PROFILE_SUBMOD_OUTPUT_2B_NAME"/>
+                  <InfoText TextId="T_ID_PROFILE_SUBMOD_OUTPUT_2B_INFO_TEXT"/>
+               </ModuleInfo>
+            </SubmoduleItem>
+
+
+			</SubmoduleList>
+
+
+<!-- List of values -->
+         <ValueList>
+            <ValueItem ID="VI_ID_PROFILE_STOP_ACTION_VALUES">
+               <Assignments>
+                  <Assign Content="0" TextId="T_ID_PROFILE_STOP_ACTION_STOP"/>
+                  <Assign Content="1" TextId="T_ID_PROFILE_STOP_ACTION_FREEZE"/>
+                  <Assign Content="2" TextId="T_ID_PROFILE_STOP_ACTION_USE_FAIL_SAFE"/>
+               </Assignments>
+            </ValueItem>
+            <ValueItem ID="VI_ID_VENDOR_STOP_ACTION_VALUES">
+               <Assignments>
+                  <Assign Content="0" TextId="T_ID_VENDOR_STOP_ACTION_FREEZE"/>
+                  <Assign Content="1" TextId="T_ID_VENDOR_STOP_ACTION_USE_FAIL_SAFE"/>
+               </Assignments>
+            </ValueItem>
+            <ValueItem ID="VI_ID_VENDOR_CONTROL_ZERO_MODE_VALUES">
+               <Assignments>
+                  <Assign Content="0" TextId="T_ID_VENDOR_CONTROL_ZERO_USE"/>
+                  <Assign Content="1" TextId="T_ID_VENDOR_CONTROL_ZERO_IGNORE"/>
+               </Assignments>
+            </ValueItem>
+            <ValueItem ID="VI_ID_INP_OUTP_PRM_SRC_SEL">
+               <Assignments>
+                  <Assign Content="0" TextId="T_ID_SRC_SEL_INITIAL_REC_DATA"/>
+                  <Assign Content="1" TextId="T_ID_SRC_SEL_BUS_CFG_PRM"/>
+               </Assignments>
+            </ValueItem>
+
+            <ValueItem ID="VI_ID_VENDOR_PARAMETERS_SEL">
+            </ValueItem>
+
+         </ValueList>
+
+<!-- List of graphic files -->		 
+		 <GraphicsList>
+			<GraphicItem ID="1" GraphicFile="GSDML_RETA-02"/>            
+         </GraphicsList>		 
+		 
+<!-- List of categorys -->
+         <CategoryList>
+            <CategoryItem ID="CAT_REF_PROFILE_MODULES" TextId="T_ID_CAT_REF_PROFILE_MODULES"/>
+            <CategoryItem ID="CAT_REF_VENDOR_MODULES" TextId="T_ID_CAT_REF_VENDOR_MODULES"/>
+         </CategoryList>
+
+
+<!-- List of texts -->
+         <ExternalTextList>
+            <PrimaryLanguage>
+               <!--Device Access Point information etc -->
+               <Text TextId="T_ID_DEV_DESCRIPTION" Value="PROFINET IO module RETA-02"/>
+               <Text TextId="T_ID_DAP10_DEV_DESCRIPTION" Value="PROFINET IO module RETA-02 Vendor mode"/>
+               <Text TextId="T_ID_DAP20_DEV_DESCRIPTION" Value="PROFINET IO module RETA-02 PROFIdrive mode"/>
+               <Text TextId="T_ID_RETA_DAP_V1" Value="RETA-02 Vendor"/>
+               <Text TextId="T_ID_RETA_DAP_V2" Value="RETA-02 PROFIdrive"/>
+               <Text TextId="T_ID_DAP20_SS_Interface" Value="X1"/>
+               <Text TextId="T_ID_DAP20_SS_Port1" Value="X1 P1"/>
+               <Text TextId="T_ID_DAP20_INTERFACE_MODULE" Value="Interface"/>
+               <Text TextId="T_ID_DAP20_PORT1" Value="Port 1"/>
+               <!--Module category-->
+               <Text TextId="T_ID_CAT_REF_PROFILE_MODULES" Value="Drive Object"/>
+               <Text TextId="T_ID_CAT_REF_VENDOR_MODULES" Value="Vendor specific"/>
+               <!-- Enumerations, Profile and Vendor -->
+               <Text TextId="T_ID_PROFILE_STOP_ACTION_VALUES" Value="Stop Action selection"/>
+               <Text TextId="T_ID_VENDOR_STOP_ACTION_VALUES" Value="Stop Action selection"/>
+               <Text TextId="T_ID_VENDOR_CONTROL_ZERO_MODE_VALUES" Value="Control-zero mode"/>
+               <Text TextId="T_ID_PROFILE_STOP_ACTION_STOP" Value="Stop"/>
+               <Text TextId="T_ID_PROFILE_STOP_ACTION_FREEZE" Value="Freeze"/>
+               <Text TextId="T_ID_PROFILE_STOP_ACTION_USE_FAIL_SAFE" Value="Fail-safe values"/>
+               <Text TextId="T_ID_VENDOR_STOP_ACTION_FREEZE" Value="Freeze"/>
+               <Text TextId="T_ID_VENDOR_STOP_ACTION_USE_FAIL_SAFE" Value="Fail-safe values"/>
+               <Text TextId="T_ID_VENDOR_CONTROL_ZERO_USE" Value="Use data"/>
+               <Text TextId="T_ID_VENDOR_CONTROL_ZERO_IGNORE" Value="Ignore data"/>
+               <Text TextId="T_ID_INP_OUTP_PRM_SRC_SEL" Value="Input/Output 1-4 (PZD3-6) parameter source selection"/>
+               <Text TextId="T_ID_SRC_SEL_INITIAL_REC_DATA" Value="Initial record data (IO controller)"/>
+               <Text TextId="T_ID_SRC_SEL_BUS_CFG_PRM" Value="RETA-02 configuration parameters (Drive)"/>
+
+               <!-- Profile module texts -->
+               <Text TextId="T_ID_PROFILE_STD_TGM1_PARAMETERS" Value="General parameters"/>
+               <Text TextId="T_ID_PROFILE_STD_TGM1_FS_STW1" Value="Fail safe Control Word (STW1)"/>
+               <Text TextId="T_ID_PROFILE_STD_TGM1_FS_NSOLLA" Value="Fail safe Reference (NSOLL_A)"/>
+               <Text TextId="T_ID_PROFILE_STD_TGM1_INPUT" Value="Input"/>
+               <Text TextId="T_ID_PROFILE_STD_TGM1_OUTPUT" Value="Output"/>
+               <Text TextId="T_ID_PROFILE_MAPPAP_NAME" Value="Module Access Point"/>
+               <Text TextId="T_ID_PROFILE_MAPPAP_INFO_TEXT" Value="Acyclic parameter access is possible through this module"/>
+               <Text TextId="T_ID_PROFILE_STD_TGM1_NAME" Value="Standard telegram 1"/>
+               <Text TextId="T_ID_PROFILE_STD_TGM1_INFO_TEXT" Value="Control/Reference and Status/Actual values"/>
+               <Text TextId="T_ID_PROFILE_MODULE_MAP_STD_TGM_NAME" Value="Std Tgm 1"/>
+               <Text TextId="T_ID_PROFILE_MODULE_MAP_STD_TGM_INFO_TEXT" Value="Std Tgm 1"/>
+               <Text TextId="T_ID_PROFILE_MODULE_MAP_STD_TGM_1PZD_NAME" Value="Std Tgm 1 + 1 PZD"/>
+               <Text TextId="T_ID_PROFILE_MODULE_MAP_STD_TGM_1PZD_INFO_TEXT" Value="Std Tgm 1 + 1 PZD"/>
+               <Text TextId="T_ID_PROFILE_MODULE_MAP_STD_TGM_2PZD_NAME" Value="Std Tgm 1 + 2 PZD"/>
+               <Text TextId="T_ID_PROFILE_MODULE_MAP_STD_TGM_2PZD_INFO_TEXT" Value="Std Tgm 1 + 2 PZD"/>
+               <Text TextId="T_ID_PROFILE_MODULE_MAP_STD_TGM_3PZD_NAME" Value="Std Tgm 1 + 3 PZD"/>
+               <Text TextId="T_ID_PROFILE_MODULE_MAP_STD_TGM_3PZD_INFO_TEXT" Value="Std Tgm 1 + 3 PZD"/>
+               <Text TextId="T_ID_PROFILE_MODULE_MAP_STD_TGM_4PZD_NAME" Value="Std Tgm 1 + 4 PZD"/>
+               <Text TextId="T_ID_PROFILE_MODULE_MAP_STD_TGM_4PZD_INFO_TEXT" Value="Std Tgm 1 + 4 PZD"/>
+               <Text TextId="T_ID_PROFILE_MODULE_MAP_STD_TGM_5PZD_NAME" Value="Std Tgm 1 + 5 PZD"/>
+               <Text TextId="T_ID_PROFILE_MODULE_MAP_STD_TGM_5PZD_INFO_TEXT" Value="Std Tgm 1 + 5 PZD"/>
+               <Text TextId="T_ID_PROFILE_MODULE_MAP_STD_TGM_6PZD_NAME" Value="Std Tgm 1 + 6 PZD"/>
+               <Text TextId="T_ID_PROFILE_MODULE_MAP_STD_TGM_6PZD_INFO_TEXT" Value="Std Tgm 1 + 6 PZD"/>
+               <Text TextId="T_ID_PROFILE_MODULE_MAP_STD_TGM_7PZD_NAME" Value="Std Tgm 1 + 7 PZD"/>
+               <Text TextId="T_ID_PROFILE_MODULE_MAP_STD_TGM_7PZD_INFO_TEXT" Value="Std Tgm 1 + 7 PZD"/>
+               <Text TextId="T_ID_PROFILE_MODULE_MAP_STD_TGM_8PZD_NAME" Value="Std Tgm 1 + 8 PZD"/>
+               <Text TextId="T_ID_PROFILE_MODULE_MAP_STD_TGM_8PZD_INFO_TEXT" Value="Std Tgm 1 + 8 PZD"/>
+               <Text TextId="T_ID_PROFILE_SUBMOD_INPUT_2B_NAME" Value="Input 2 bytes"/>
+               <Text TextId="T_ID_PROFILE_SUBMOD_INPUT_2B_INFO_TEXT" Value="Input 2 bytes, freely configurable"/>
+               <Text TextId="T_ID_PROFILE_SUBMOD_OUTPUT_2B_NAME" Value="Output 2 bytes"/>
+               <Text TextId="T_ID_PROFILE_SUBMOD_OUTPUT_2B_INFO_TEXT" Value="Output 2 bytes, freely configurable"/>
+               <Text TextId="T_ID_PROFILE_INPUT_2B_TEXT" Value="Input"/>
+               <Text TextId="T_ID_PROFILE_OUTPUT_2B_TEXT" Value="Output"/>
+               <Text TextId="T_ID_PROFILE_INPUT_2B_PARAMETERS" Value="Input PZD configuration parameters"/>
+               <Text TextId="T_ID_PROFILE_OUTPUT_2B_PARAMETERS" Value="Output PZD configuration parameters"/>
+               <Text TextId="T_ID_PROFILE_INPUT_2B_PRM_NBR" Value="Drive parameter number"/>
+               <Text TextId="T_ID_PROFILE_OUTPUT_2B_PRM_NBR" Value="Drive parameter number"/>
+               <Text TextId="T_ID_PROFILE_OUTPUT_2B_FS_VALUE" Value="Fail safe value"/>
+               <!-- Vendor module texts -->
+               <Text TextId="T_ID_VENDOR_INPUT_W1" Value="Status"/>
+               <Text TextId="T_ID_VENDOR_INPUT_W2" Value="Speed Actual"/>
+               <Text TextId="T_ID_VENDOR_INPUT_W3" Value="Actual PZD3"/>
+               <Text TextId="T_ID_VENDOR_INPUT_W4" Value="Actual PZD4"/>
+               <Text TextId="T_ID_VENDOR_INPUT_W5" Value="Actual PZD5"/>
+               <Text TextId="T_ID_VENDOR_INPUT_W6" Value="Actual PZD6"/>
+               <Text TextId="T_ID_VENDOR_INPUT_W7" Value="Actual PZD7"/>
+               <Text TextId="T_ID_VENDOR_INPUT_W8" Value="Actual PZD8"/>
+               <Text TextId="T_ID_VENDOR_INPUT_W9" Value="Actual PZD9"/>
+               <Text TextId="T_ID_VENDOR_INPUT_W10" Value="Actual PZD10"/>
+               <Text TextId="T_ID_VENDOR_OUTPUT_W1" Value="Command"/>
+               <Text TextId="T_ID_VENDOR_OUTPUT_W2" Value="Speed Reference"/>
+               <Text TextId="T_ID_VENDOR_OUTPUT_W3" Value="Reference PZD3"/>
+               <Text TextId="T_ID_VENDOR_OUTPUT_W4" Value="Reference PZD4"/>
+               <Text TextId="T_ID_VENDOR_OUTPUT_W5" Value="Reference PZD5"/>
+               <Text TextId="T_ID_VENDOR_OUTPUT_W6" Value="Reference PZD6"/>
+               <Text TextId="T_ID_VENDOR_OUTPUT_W7" Value="Reference PZD7"/>
+               <Text TextId="T_ID_VENDOR_OUTPUT_W8" Value="Reference PZD8"/>
+               <Text TextId="T_ID_VENDOR_OUTPUT_W9" Value="Reference PZD9"/>
+               <Text TextId="T_ID_VENDOR_OUTPUT_W10" Value="Reference PZD10"/>
+
+               <Text TextId="T_ID_PPOX_PARAMETERS" Value="General parameters"/>
+               <Text TextId="T_ID_VENDOR_FS_CW" Value="Fail safe Control Word"/>
+               <Text TextId="T_ID_VENDOR_FS_REF" Value="Fail safe Reference value"/>
+               <Text TextId="T_ID_VENDOR_MODULE_NAME_PPO3" Value="Vendor Object PPO3"/>
+               <Text TextId="T_ID_VENDOR_INFO_TEXT_PPO3" Value="Vendor Object PPO3"/>
+               <Text TextId="T_ID_VENDOR_SUBMOD_NAME_PPO3" Value="Vendor specific object, PPO3"/>
+               <Text TextId="T_ID_VENDOR_SUBMOD_INFO_PPO3" Value="Control/Reference and Status/Actual values"/>
+               <Text TextId="T_ID_VENDOR_MODULE_NAME_PPO4" Value="Vendor Object PPO4"/>
+               <Text TextId="T_ID_VENDOR_INFO_TEXT_PPO4" Value="Vendor Object PPO4"/>
+               <Text TextId="T_ID_VENDOR_SUBMOD_NAME_PPO4" Value="Vendor specific object, PPO4"/>
+               <Text TextId="T_ID_VENDOR_SUBMOD_INFO_PPO4" Value="Control/Reference, Status/Actual values + 4 IN/OUT words"/>
+               <Text TextId="T_ID_VENDOR_MODULE_NAME_PPO6" Value="Vendor Object PPO6"/>
+               <Text TextId="T_ID_VENDOR_INFO_TEXT_PPO6" Value="Vendor Object PPO6"/>
+               <Text TextId="T_ID_VENDOR_SUBMOD_NAME_PPO6" Value="Vendor specific object, PPO6"/>
+               <Text TextId="T_ID_VENDOR_SUBMOD_INFO_PPO6" Value="Control/Reference, Status/Actual values + 8 IN/OUT words"/>
+			   
+               <!-- All module texts -->
+               <Text TextId="T_ID_FAIL_SAFE_VALUE_O1" Value="Fail safe value of Ref PZD3 "/>
+               <Text TextId="T_ID_FAIL_SAFE_VALUE_O2" Value="Fail safe value of Ref PZD4"/>
+               <Text TextId="T_ID_FAIL_SAFE_VALUE_O3" Value="Fail safe value of Ref PZD5"/>
+               <Text TextId="T_ID_FAIL_SAFE_VALUE_O4" Value="Fail safe value of Ref PZD6"/>
+               <Text TextId="T_ID_FAIL_SAFE_VALUE_O5" Value="Fail safe value of Ref PZD7"/>
+               <Text TextId="T_ID_FAIL_SAFE_VALUE_O6" Value="Fail safe value of Ref PZD8"/>
+               <Text TextId="T_ID_FAIL_SAFE_VALUE_O7" Value="Fail safe value of Ref PZD9"/>
+               <Text TextId="T_ID_FAIL_SAFE_VALUE_O8" Value="Fail safe value of Ref PZD10"/>
+               <Text TextId="T_ID_PRM_NBR_O1" Value="Drive parameter number of Ref PZD3"/>
+               <Text TextId="T_ID_PRM_NBR_O2" Value="Drive parameter number of Ref PZD4"/>
+               <Text TextId="T_ID_PRM_NBR_O3" Value="Drive parameter number of Ref PZD5"/>
+               <Text TextId="T_ID_PRM_NBR_O4" Value="Drive parameter number of Ref PZD6"/>
+               <Text TextId="T_ID_PRM_NBR_O5" Value="Drive parameter number of Ref PZD7"/>
+               <Text TextId="T_ID_PRM_NBR_O6" Value="Drive parameter number of Ref PZD8"/>
+               <Text TextId="T_ID_PRM_NBR_O7" Value="Drive parameter number of Ref PZD9"/>
+               <Text TextId="T_ID_PRM_NBR_O8" Value="Drive parameter number of Ref PZD10"/>
+               <Text TextId="T_ID_PRM_NBR_I1" Value="Drive parameter number of Act PZD3"/>
+               <Text TextId="T_ID_PRM_NBR_I2" Value="Drive parameter number of Act PZD4"/>
+               <Text TextId="T_ID_PRM_NBR_I3" Value="Drive parameter number of Act PZD5"/>
+               <Text TextId="T_ID_PRM_NBR_I4" Value="Drive parameter number of Act PZD6"/>
+               <Text TextId="T_ID_PRM_NBR_I5" Value="Drive parameter number of Act PZD7"/>
+               <Text TextId="T_ID_PRM_NBR_I6" Value="Drive parameter number of Act PZD8"/>
+               <Text TextId="T_ID_PRM_NBR_I7" Value="Drive parameter number of Act PZD9"/>
+               <Text TextId="T_ID_PRM_NBR_I8" Value="Drive parameter number of Act PZD10"/>
+
+               <!-- Profile Status bits -->
+               <Text TextId="T_ID_PROFILE_STATUS_BIT0" Value="Ready To Switch On"/>
+               <Text TextId="T_ID_PROFILE_STATUS_BIT1" Value="Ready To Operate"/>
+               <Text TextId="T_ID_PROFILE_STATUS_BIT2" Value="Operation Enabled"/>
+               <Text TextId="T_ID_PROFILE_STATUS_BIT3" Value="Fault Present"/>
+               <Text TextId="T_ID_PROFILE_STATUS_BIT4" Value="Coast Stop Not Activated"/>
+               <Text TextId="T_ID_PROFILE_STATUS_BIT5" Value="Quick Stop Not Activated"/>
+               <Text TextId="T_ID_PROFILE_STATUS_BIT6" Value="Switching On Inhibited"/>
+               <Text TextId="T_ID_PROFILE_STATUS_BIT7" Value="Warning Present"/>
+               <Text TextId="T_ID_PROFILE_STATUS_BIT8" Value="Speed Error Within Tolerance"/>
+               <Text TextId="T_ID_PROFILE_STATUS_BIT9" Value="Control Requested"/>
+               <Text TextId="T_ID_PROFILE_STATUS_BIT10" Value="f Or n Reached or Exceeded"/>
+               <Text TextId="T_ID_PROFILE_STATUS_BIT11" Value="Reserved"/>
+               <Text TextId="T_ID_PROFILE_STATUS_BIT12" Value="Reserved"/>
+               <Text TextId="T_ID_PROFILE_STATUS_BIT13" Value="Reserved"/>
+               <Text TextId="T_ID_PROFILE_STATUS_BIT14" Value="Reserved"/>
+               <Text TextId="T_ID_PROFILE_STATUS_BIT15" Value="Reserved"/>
+
+               <!-- Profile Command bits -->
+               <Text TextId="T_ID_PROFILE_COMMAND_BIT0" Value="ON"/>
+               <Text TextId="T_ID_PROFILE_COMMAND_BIT1" Value="No Coast Stop"/>
+               <Text TextId="T_ID_PROFILE_COMMAND_BIT2" Value="No Quick Stop"/>
+               <Text TextId="T_ID_PROFILE_COMMAND_BIT3" Value="Enable Operation"/>
+               <Text TextId="T_ID_PROFILE_COMMAND_BIT4" Value="Enable Ramp Generator"/>
+               <Text TextId="T_ID_PROFILE_COMMAND_BIT5" Value="Unfreeze Ramp Generator"/>
+               <Text TextId="T_ID_PROFILE_COMMAND_BIT6" Value="Enable Setpoint"/>
+               <Text TextId="T_ID_PROFILE_COMMAND_BIT7" Value="Fault Acknowledge"/>
+               <Text TextId="T_ID_PROFILE_COMMAND_BIT8" Value="Jog 1 ON"/>
+               <Text TextId="T_ID_PROFILE_COMMAND_BIT9" Value="Jog 2 ON"/>
+               <Text TextId="T_ID_PROFILE_COMMAND_BIT10" Value="Control By PLC"/>
+               <Text TextId="T_ID_PROFILE_COMMAND_BIT11" Value="Reserved"/>
+               <Text TextId="T_ID_PROFILE_COMMAND_BIT12" Value="Reserved"/>
+               <Text TextId="T_ID_PROFILE_COMMAND_BIT13" Value="Reserved"/>
+               <Text TextId="T_ID_PROFILE_COMMAND_BIT14" Value="Reserved"/>
+               <Text TextId="T_ID_PROFILE_COMMAND_BIT15" Value="Reserved"/>
+
+               <!-- Vendor Status bits -->
+               <Text TextId="T_ID_VENDOR_STATUS_BIT0" Value="RDY_ON"/>
+               <Text TextId="T_ID_VENDOR_STATUS_BIT1" Value="RDY_RUN"/>
+               <Text TextId="T_ID_VENDOR_STATUS_BIT2" Value="RDY_REF"/>
+               <Text TextId="T_ID_VENDOR_STATUS_BIT3" Value="TRIPPED"/>
+               <Text TextId="T_ID_VENDOR_STATUS_BIT4" Value="OFF_2_STA"/>
+               <Text TextId="T_ID_VENDOR_STATUS_BIT5" Value="OFF_3_STA"/>
+               <Text TextId="T_ID_VENDOR_STATUS_BIT6" Value="SWC_ON_INHIB"/>
+               <Text TextId="T_ID_VENDOR_STATUS_BIT7" Value="ALARM"/>
+               <Text TextId="T_ID_VENDOR_STATUS_BIT8" Value="AT_SETPOINT"/>
+               <Text TextId="T_ID_VENDOR_STATUS_BIT9" Value="REMOTE"/>
+               <Text TextId="T_ID_VENDOR_STATUS_BIT10" Value="ABOVE_LIMIT"/>
+               <Text TextId="T_ID_VENDOR_STATUS_BIT11" Value="EXT_CTRL_LOC"/>
+               <Text TextId="T_ID_VENDOR_STATUS_BIT12" Value="Reserved"/>
+               <Text TextId="T_ID_VENDOR_STATUS_BIT13" Value="Reserved"/>
+               <Text TextId="T_ID_VENDOR_STATUS_BIT14" Value="Reserved"/>
+               <Text TextId="T_ID_VENDOR_STATUS_BIT15" Value="COMM_ERROR"/>
+
+               <!-- Vendor Command bits -->
+               <Text TextId="T_ID_VENDOR_COMMAND_BIT0" Value="OFF1_CONTROL"/>
+               <Text TextId="T_ID_VENDOR_COMMAND_BIT1" Value="OFF2_CONTROL"/>
+               <Text TextId="T_ID_VENDOR_COMMAND_BIT2" Value="OFF3_CONTROL"/>
+               <Text TextId="T_ID_VENDOR_COMMAND_BIT3" Value="INHIBIT_OPERATION"/>
+               <Text TextId="T_ID_VENDOR_COMMAND_BIT4" Value="RAMP_OUT_ZERO"/>
+               <Text TextId="T_ID_VENDOR_COMMAND_BIT5" Value="RAMP_HOLD"/>
+               <Text TextId="T_ID_VENDOR_COMMAND_BIT6" Value="RAMP_IN_ZERO"/>
+               <Text TextId="T_ID_VENDOR_COMMAND_BIT7" Value="RESET"/>
+               <Text TextId="T_ID_VENDOR_COMMAND_BIT8" Value="Reserved"/>
+               <Text TextId="T_ID_VENDOR_COMMAND_BIT9" Value="Reserved"/>
+               <Text TextId="T_ID_VENDOR_COMMAND_BIT10" Value="REMOTE_CMD"/>
+               <Text TextId="T_ID_VENDOR_COMMAND_BIT11" Value="EXT_CTRL_LOC"/>
+               <Text TextId="T_ID_VENDOR_COMMAND_BIT12" Value="Reserved"/>
+               <Text TextId="T_ID_VENDOR_COMMAND_BIT13" Value="Reserved"/>
+               <Text TextId="T_ID_VENDOR_COMMAND_BIT14" Value="Reserved"/>
+               <Text TextId="T_ID_VENDOR_COMMAND_BIT15" Value="Reserved"/>
+
+            </PrimaryLanguage>
+            <Language xml:lang="en">
+                <!--Device Access Point information etc -->
+               <Text TextId="T_ID_DEV_DESCRIPTION" Value="PROFINET IO module RETA-02"/>
+               <Text TextId="T_ID_DAP10_DEV_DESCRIPTION" Value="PROFINET IO module RETA-02 Vendor mode"/>
+               <Text TextId="T_ID_DAP20_DEV_DESCRIPTION" Value="PROFINET IO module RETA-02 PROFIdrive mode"/>
+               <Text TextId="T_ID_RETA_DAP_V1" Value="RETA-02 Vendor"/>
+               <Text TextId="T_ID_RETA_DAP_V2" Value="RETA-02 PROFIdrive"/>
+               <Text TextId="T_ID_DAP20_SS_Interface" Value="X1"/>
+               <Text TextId="T_ID_DAP20_SS_Port1" Value="X1 P1"/>
+               <Text TextId="T_ID_DAP20_INTERFACE_MODULE" Value="Interface"/>
+               <Text TextId="T_ID_DAP20_PORT1" Value="Port 1"/>
+               <!--Module category-->
+               <Text TextId="T_ID_CAT_REF_PROFILE_MODULES" Value="Drive Object"/>
+               <Text TextId="T_ID_CAT_REF_VENDOR_MODULES" Value="Vendor specific"/>
+               <!-- Enumerations, Profile and Vendor -->
+               <Text TextId="T_ID_PROFILE_STOP_ACTION_VALUES" Value="Stop Action selection"/>
+               <Text TextId="T_ID_VENDOR_STOP_ACTION_VALUES" Value="Stop Action selection"/>
+               <Text TextId="T_ID_VENDOR_CONTROL_ZERO_MODE_VALUES" Value="Control-zero mode"/>
+               <Text TextId="T_ID_PROFILE_STOP_ACTION_STOP" Value="Stop"/>
+               <Text TextId="T_ID_PROFILE_STOP_ACTION_FREEZE" Value="Freeze"/>
+               <Text TextId="T_ID_PROFILE_STOP_ACTION_USE_FAIL_SAFE" Value="Fail-safe values"/>
+               <Text TextId="T_ID_VENDOR_STOP_ACTION_FREEZE" Value="Freeze"/>
+               <Text TextId="T_ID_VENDOR_STOP_ACTION_USE_FAIL_SAFE" Value="Fail-safe values"/>
+               <Text TextId="T_ID_VENDOR_CONTROL_ZERO_USE" Value="Use data"/>
+               <Text TextId="T_ID_VENDOR_CONTROL_ZERO_IGNORE" Value="Ignore data"/>
+               <Text TextId="T_ID_INP_OUTP_PRM_SRC_SEL" Value="Input/Output 1-4 (PZD3-6) parameter source selection"/>
+               <Text TextId="T_ID_SRC_SEL_INITIAL_REC_DATA" Value="Initial record data (IO controller)"/>
+               <Text TextId="T_ID_SRC_SEL_BUS_CFG_PRM" Value="RETA-02 configuration parameters (Drive)"/>
+
+               <!-- Profile module texts -->
+               <Text TextId="T_ID_PROFILE_STD_TGM1_PARAMETERS" Value="General parameters"/>
+               <Text TextId="T_ID_PROFILE_STD_TGM1_FS_STW1" Value="Fail safe Control Word (STW1)"/>
+               <Text TextId="T_ID_PROFILE_STD_TGM1_FS_NSOLLA" Value="Fail safe Reference (NSOLL_A)"/>
+               <Text TextId="T_ID_PROFILE_STD_TGM1_INPUT" Value="Input"/>
+               <Text TextId="T_ID_PROFILE_STD_TGM1_OUTPUT" Value="Output"/>
+               <Text TextId="T_ID_PROFILE_MAPPAP_NAME" Value="Module Access Point"/>
+               <Text TextId="T_ID_PROFILE_MAPPAP_INFO_TEXT" Value="Acyclic parameter access is possible through this module"/>
+               <Text TextId="T_ID_PROFILE_STD_TGM1_NAME" Value="Standard telegram 1"/>
+               <Text TextId="T_ID_PROFILE_STD_TGM1_INFO_TEXT" Value="Control/Reference and Status/Actual values"/>
+               <Text TextId="T_ID_PROFILE_MODULE_MAP_STD_TGM_NAME" Value="Std Tgm 1"/>
+               <Text TextId="T_ID_PROFILE_MODULE_MAP_STD_TGM_INFO_TEXT" Value="Std Tgm 1"/>
+               <Text TextId="T_ID_PROFILE_MODULE_MAP_STD_TGM_1PZD_NAME" Value="Std Tgm 1 + 1 PZD"/>
+               <Text TextId="T_ID_PROFILE_MODULE_MAP_STD_TGM_1PZD_INFO_TEXT" Value="Std Tgm 1 + 1 PZD"/>
+               <Text TextId="T_ID_PROFILE_MODULE_MAP_STD_TGM_2PZD_NAME" Value="Std Tgm 1 + 2 PZD"/>
+               <Text TextId="T_ID_PROFILE_MODULE_MAP_STD_TGM_2PZD_INFO_TEXT" Value="Std Tgm 1 + 2 PZD"/>
+               <Text TextId="T_ID_PROFILE_MODULE_MAP_STD_TGM_3PZD_NAME" Value="Std Tgm 1 + 3 PZD"/>
+               <Text TextId="T_ID_PROFILE_MODULE_MAP_STD_TGM_3PZD_INFO_TEXT" Value="Std Tgm 1 + 3 PZD"/>
+               <Text TextId="T_ID_PROFILE_MODULE_MAP_STD_TGM_4PZD_NAME" Value="Std Tgm 1 + 4 PZD"/>
+               <Text TextId="T_ID_PROFILE_MODULE_MAP_STD_TGM_4PZD_INFO_TEXT" Value="Std Tgm 1 + 4 PZD"/>
+               <Text TextId="T_ID_PROFILE_MODULE_MAP_STD_TGM_5PZD_NAME" Value="Std Tgm 1 + 5 PZD"/>
+               <Text TextId="T_ID_PROFILE_MODULE_MAP_STD_TGM_5PZD_INFO_TEXT" Value="Std Tgm 1 + 5 PZD"/>
+               <Text TextId="T_ID_PROFILE_MODULE_MAP_STD_TGM_6PZD_NAME" Value="Std Tgm 1 + 6 PZD"/>
+               <Text TextId="T_ID_PROFILE_MODULE_MAP_STD_TGM_6PZD_INFO_TEXT" Value="Std Tgm 1 + 6 PZD"/>
+               <Text TextId="T_ID_PROFILE_MODULE_MAP_STD_TGM_7PZD_NAME" Value="Std Tgm 1 + 7 PZD"/>
+               <Text TextId="T_ID_PROFILE_MODULE_MAP_STD_TGM_7PZD_INFO_TEXT" Value="Std Tgm 1 + 7 PZD"/>
+               <Text TextId="T_ID_PROFILE_MODULE_MAP_STD_TGM_8PZD_NAME" Value="Std Tgm 1 + 8 PZD"/>
+               <Text TextId="T_ID_PROFILE_MODULE_MAP_STD_TGM_8PZD_INFO_TEXT" Value="Std Tgm 1 + 8 PZD"/>
+               <Text TextId="T_ID_PROFILE_SUBMOD_INPUT_2B_NAME" Value="Input 2 bytes"/>
+               <Text TextId="T_ID_PROFILE_SUBMOD_INPUT_2B_INFO_TEXT" Value="Input 2 bytes, freely configurable"/>
+               <Text TextId="T_ID_PROFILE_SUBMOD_OUTPUT_2B_NAME" Value="Output 2 bytes"/>
+               <Text TextId="T_ID_PROFILE_SUBMOD_OUTPUT_2B_INFO_TEXT" Value="Output 2 bytes, freely configurable"/>
+               <Text TextId="T_ID_PROFILE_INPUT_2B_TEXT" Value="Input"/>
+               <Text TextId="T_ID_PROFILE_OUTPUT_2B_TEXT" Value="Output"/>
+               <Text TextId="T_ID_PROFILE_INPUT_2B_PARAMETERS" Value="Input PZD configuration parameters"/>
+               <Text TextId="T_ID_PROFILE_OUTPUT_2B_PARAMETERS" Value="Output PZD configuration parameters"/>
+               <Text TextId="T_ID_PROFILE_INPUT_2B_PRM_NBR" Value="Drive parameter number"/>
+               <Text TextId="T_ID_PROFILE_OUTPUT_2B_PRM_NBR" Value="Drive parameter number"/>
+               <Text TextId="T_ID_PROFILE_OUTPUT_2B_FS_VALUE" Value="Fail safe value"/>
+               <!-- Vendor module texts -->
+               <Text TextId="T_ID_VENDOR_INPUT_W1" Value="Status"/>
+               <Text TextId="T_ID_VENDOR_INPUT_W2" Value="Speed Actual"/>
+               <Text TextId="T_ID_VENDOR_INPUT_W3" Value="Actual PZD3"/>
+               <Text TextId="T_ID_VENDOR_INPUT_W4" Value="Actual PZD4"/>
+               <Text TextId="T_ID_VENDOR_INPUT_W5" Value="Actual PZD5"/>
+               <Text TextId="T_ID_VENDOR_INPUT_W6" Value="Actual PZD6"/>
+               <Text TextId="T_ID_VENDOR_INPUT_W7" Value="Actual PZD7"/>
+               <Text TextId="T_ID_VENDOR_INPUT_W8" Value="Actual PZD8"/>
+               <Text TextId="T_ID_VENDOR_INPUT_W9" Value="Actual PZD9"/>
+               <Text TextId="T_ID_VENDOR_INPUT_W10" Value="Actual PZD10"/>
+               <Text TextId="T_ID_VENDOR_OUTPUT_W1" Value="Command"/>
+               <Text TextId="T_ID_VENDOR_OUTPUT_W2" Value="Speed Reference"/>
+               <Text TextId="T_ID_VENDOR_OUTPUT_W3" Value="Reference PZD3"/>
+               <Text TextId="T_ID_VENDOR_OUTPUT_W4" Value="Reference PZD4"/>
+               <Text TextId="T_ID_VENDOR_OUTPUT_W5" Value="Reference PZD5"/>
+               <Text TextId="T_ID_VENDOR_OUTPUT_W6" Value="Reference PZD6"/>
+               <Text TextId="T_ID_VENDOR_OUTPUT_W7" Value="Reference PZD7"/>
+               <Text TextId="T_ID_VENDOR_OUTPUT_W8" Value="Reference PZD8"/>
+               <Text TextId="T_ID_VENDOR_OUTPUT_W9" Value="Reference PZD9"/>
+               <Text TextId="T_ID_VENDOR_OUTPUT_W10" Value="Reference PZD10"/>
+
+               <Text TextId="T_ID_PPOX_PARAMETERS" Value="General parameters"/>
+               <Text TextId="T_ID_VENDOR_FS_CW" Value="Fail safe Control Word"/>
+               <Text TextId="T_ID_VENDOR_FS_REF" Value="Fail safe Reference value"/>
+               <Text TextId="T_ID_VENDOR_MODULE_NAME_PPO3" Value="Vendor Object PPO3"/>
+               <Text TextId="T_ID_VENDOR_INFO_TEXT_PPO3" Value="Vendor Object PPO3"/>
+               <Text TextId="T_ID_VENDOR_SUBMOD_NAME_PPO3" Value="Vendor specific object, PPO3"/>
+               <Text TextId="T_ID_VENDOR_SUBMOD_INFO_PPO3" Value="Control/Reference and Status/Actual values"/>
+               <Text TextId="T_ID_VENDOR_MODULE_NAME_PPO4" Value="Vendor Object PPO4"/>
+               <Text TextId="T_ID_VENDOR_INFO_TEXT_PPO4" Value="Vendor Object PPO4"/>
+               <Text TextId="T_ID_VENDOR_SUBMOD_NAME_PPO4" Value="Vendor specific object, PPO4"/>
+               <Text TextId="T_ID_VENDOR_SUBMOD_INFO_PPO4" Value="Control/Reference, Status/Actual values + 4 IN/OUT words"/>
+               <Text TextId="T_ID_VENDOR_MODULE_NAME_PPO6" Value="Vendor Object PPO6"/>
+               <Text TextId="T_ID_VENDOR_INFO_TEXT_PPO6" Value="Vendor Object PPO6"/>
+               <Text TextId="T_ID_VENDOR_SUBMOD_NAME_PPO6" Value="Vendor specific object, PPO6"/>
+               <Text TextId="T_ID_VENDOR_SUBMOD_INFO_PPO6" Value="Control/Reference, Status/Actual values + 8 IN/OUT words"/>
+			   
+               <!-- All module texts -->
+               <Text TextId="T_ID_FAIL_SAFE_VALUE_O1" Value="Fail safe value of Ref PZD3 "/>
+               <Text TextId="T_ID_FAIL_SAFE_VALUE_O2" Value="Fail safe value of Ref PZD4"/>
+               <Text TextId="T_ID_FAIL_SAFE_VALUE_O3" Value="Fail safe value of Ref PZD5"/>
+               <Text TextId="T_ID_FAIL_SAFE_VALUE_O4" Value="Fail safe value of Ref PZD6"/>
+               <Text TextId="T_ID_FAIL_SAFE_VALUE_O5" Value="Fail safe value of Ref PZD7"/>
+               <Text TextId="T_ID_FAIL_SAFE_VALUE_O6" Value="Fail safe value of Ref PZD8"/>
+               <Text TextId="T_ID_FAIL_SAFE_VALUE_O7" Value="Fail safe value of Ref PZD9"/>
+               <Text TextId="T_ID_FAIL_SAFE_VALUE_O8" Value="Fail safe value of Ref PZD10"/>
+               <Text TextId="T_ID_PRM_NBR_O1" Value="Drive parameter number of Ref PZD3"/>
+               <Text TextId="T_ID_PRM_NBR_O2" Value="Drive parameter number of Ref PZD4"/>
+               <Text TextId="T_ID_PRM_NBR_O3" Value="Drive parameter number of Ref PZD5"/>
+               <Text TextId="T_ID_PRM_NBR_O4" Value="Drive parameter number of Ref PZD6"/>
+               <Text TextId="T_ID_PRM_NBR_O5" Value="Drive parameter number of Ref PZD7"/>
+               <Text TextId="T_ID_PRM_NBR_O6" Value="Drive parameter number of Ref PZD8"/>
+               <Text TextId="T_ID_PRM_NBR_O7" Value="Drive parameter number of Ref PZD9"/>
+               <Text TextId="T_ID_PRM_NBR_O8" Value="Drive parameter number of Ref PZD10"/>
+               <Text TextId="T_ID_PRM_NBR_I1" Value="Drive parameter number of Act PZD3"/>
+               <Text TextId="T_ID_PRM_NBR_I2" Value="Drive parameter number of Act PZD4"/>
+               <Text TextId="T_ID_PRM_NBR_I3" Value="Drive parameter number of Act PZD5"/>
+               <Text TextId="T_ID_PRM_NBR_I4" Value="Drive parameter number of Act PZD6"/>
+               <Text TextId="T_ID_PRM_NBR_I5" Value="Drive parameter number of Act PZD7"/>
+               <Text TextId="T_ID_PRM_NBR_I6" Value="Drive parameter number of Act PZD8"/>
+               <Text TextId="T_ID_PRM_NBR_I7" Value="Drive parameter number of Act PZD9"/>
+               <Text TextId="T_ID_PRM_NBR_I8" Value="Drive parameter number of Act PZD10"/>
+
+               <!-- Profile Status bits -->
+               <Text TextId="T_ID_PROFILE_STATUS_BIT0" Value="Ready To Switch On"/>
+               <Text TextId="T_ID_PROFILE_STATUS_BIT1" Value="Ready To Operate"/>
+               <Text TextId="T_ID_PROFILE_STATUS_BIT2" Value="Operation Enabled"/>
+               <Text TextId="T_ID_PROFILE_STATUS_BIT3" Value="Fault Present"/>
+               <Text TextId="T_ID_PROFILE_STATUS_BIT4" Value="Coast Stop Not Activated"/>
+               <Text TextId="T_ID_PROFILE_STATUS_BIT5" Value="Quick Stop Not Activated"/>
+               <Text TextId="T_ID_PROFILE_STATUS_BIT6" Value="Switching On Inhibited"/>
+               <Text TextId="T_ID_PROFILE_STATUS_BIT7" Value="Warning Present"/>
+               <Text TextId="T_ID_PROFILE_STATUS_BIT8" Value="Speed Error Within Tolerance"/>
+               <Text TextId="T_ID_PROFILE_STATUS_BIT9" Value="Control Requested"/>
+               <Text TextId="T_ID_PROFILE_STATUS_BIT10" Value="f Or n Reached or Exceeded"/>
+               <Text TextId="T_ID_PROFILE_STATUS_BIT11" Value="Reserved"/>
+               <Text TextId="T_ID_PROFILE_STATUS_BIT12" Value="Reserved"/>
+               <Text TextId="T_ID_PROFILE_STATUS_BIT13" Value="Reserved"/>
+               <Text TextId="T_ID_PROFILE_STATUS_BIT14" Value="Reserved"/>
+               <Text TextId="T_ID_PROFILE_STATUS_BIT15" Value="Reserved"/>
+
+               <!-- Profile Command bits -->
+               <Text TextId="T_ID_PROFILE_COMMAND_BIT0" Value="ON"/>
+               <Text TextId="T_ID_PROFILE_COMMAND_BIT1" Value="No Coast Stop"/>
+               <Text TextId="T_ID_PROFILE_COMMAND_BIT2" Value="No Quick Stop"/>
+               <Text TextId="T_ID_PROFILE_COMMAND_BIT3" Value="Enable Operation"/>
+               <Text TextId="T_ID_PROFILE_COMMAND_BIT4" Value="Enable Ramp Generator"/>
+               <Text TextId="T_ID_PROFILE_COMMAND_BIT5" Value="Unfreeze Ramp Generator"/>
+               <Text TextId="T_ID_PROFILE_COMMAND_BIT6" Value="Enable Setpoint"/>
+               <Text TextId="T_ID_PROFILE_COMMAND_BIT7" Value="Fault Acknowledge"/>
+               <Text TextId="T_ID_PROFILE_COMMAND_BIT8" Value="Jog 1 ON"/>
+               <Text TextId="T_ID_PROFILE_COMMAND_BIT9" Value="Jog 2 ON"/>
+               <Text TextId="T_ID_PROFILE_COMMAND_BIT10" Value="Control By PLC"/>
+               <Text TextId="T_ID_PROFILE_COMMAND_BIT11" Value="Reserved"/>
+               <Text TextId="T_ID_PROFILE_COMMAND_BIT12" Value="Reserved"/>
+               <Text TextId="T_ID_PROFILE_COMMAND_BIT13" Value="Reserved"/>
+               <Text TextId="T_ID_PROFILE_COMMAND_BIT14" Value="Reserved"/>
+               <Text TextId="T_ID_PROFILE_COMMAND_BIT15" Value="Reserved"/>
+
+               <!-- Vendor Status bits -->
+               <Text TextId="T_ID_VENDOR_STATUS_BIT0" Value="RDY_ON"/>
+               <Text TextId="T_ID_VENDOR_STATUS_BIT1" Value="RDY_RUN"/>
+               <Text TextId="T_ID_VENDOR_STATUS_BIT2" Value="RDY_REF"/>
+               <Text TextId="T_ID_VENDOR_STATUS_BIT3" Value="TRIPPED"/>
+               <Text TextId="T_ID_VENDOR_STATUS_BIT4" Value="OFF_2_STA"/>
+               <Text TextId="T_ID_VENDOR_STATUS_BIT5" Value="OFF_3_STA"/>
+               <Text TextId="T_ID_VENDOR_STATUS_BIT6" Value="SWC_ON_INHIB"/>
+               <Text TextId="T_ID_VENDOR_STATUS_BIT7" Value="ALARM"/>
+               <Text TextId="T_ID_VENDOR_STATUS_BIT8" Value="AT_SETPOINT"/>
+               <Text TextId="T_ID_VENDOR_STATUS_BIT9" Value="REMOTE"/>
+               <Text TextId="T_ID_VENDOR_STATUS_BIT10" Value="ABOVE_LIMIT"/>
+               <Text TextId="T_ID_VENDOR_STATUS_BIT11" Value="EXT_CTRL_LOC"/>
+               <Text TextId="T_ID_VENDOR_STATUS_BIT12" Value="Reserved"/>
+               <Text TextId="T_ID_VENDOR_STATUS_BIT13" Value="Reserved"/>
+               <Text TextId="T_ID_VENDOR_STATUS_BIT14" Value="Reserved"/>
+               <Text TextId="T_ID_VENDOR_STATUS_BIT15" Value="COMM_ERROR"/>
+
+               <!-- Vendor Command bits -->
+               <Text TextId="T_ID_VENDOR_COMMAND_BIT0" Value="OFF1_CONTROL"/>
+               <Text TextId="T_ID_VENDOR_COMMAND_BIT1" Value="OFF2_CONTROL"/>
+               <Text TextId="T_ID_VENDOR_COMMAND_BIT2" Value="OFF3_CONTROL"/>
+               <Text TextId="T_ID_VENDOR_COMMAND_BIT3" Value="INHIBIT_OPERATION"/>
+               <Text TextId="T_ID_VENDOR_COMMAND_BIT4" Value="RAMP_OUT_ZERO"/>
+               <Text TextId="T_ID_VENDOR_COMMAND_BIT5" Value="RAMP_HOLD"/>
+               <Text TextId="T_ID_VENDOR_COMMAND_BIT6" Value="RAMP_IN_ZERO"/>
+               <Text TextId="T_ID_VENDOR_COMMAND_BIT7" Value="RESET"/>
+               <Text TextId="T_ID_VENDOR_COMMAND_BIT8" Value="Reserved"/>
+               <Text TextId="T_ID_VENDOR_COMMAND_BIT9" Value="Reserved"/>
+               <Text TextId="T_ID_VENDOR_COMMAND_BIT10" Value="REMOTE_CMD"/>
+               <Text TextId="T_ID_VENDOR_COMMAND_BIT11" Value="EXT_CTRL_LOC"/>
+               <Text TextId="T_ID_VENDOR_COMMAND_BIT12" Value="Reserved"/>
+               <Text TextId="T_ID_VENDOR_COMMAND_BIT13" Value="Reserved"/>
+               <Text TextId="T_ID_VENDOR_COMMAND_BIT14" Value="Reserved"/>
+               <Text TextId="T_ID_VENDOR_COMMAND_BIT15" Value="Reserved"/>
+
+            </Language>
+         </ExternalTextList>
+      </ApplicationProcess>
+   </ProfileBody>
+</ISO15745Profile>

@@ -1,0 +1,148 @@
+(*---------------------------------------------------------------*)
+(* 2007-12-12  Alfred Theorin                                    *)
+(*             PRC #31009                                        *)
+(*             Decreased CIGIOData 16#08 from 488 to 255 due     *)
+(*             to overlow.                                       *)
+(*             OK since the value is unused and byte splitting,  *)
+(*             is currently not supported here by CI854.         *)
+(*             Added FileHeader, assuming previous version 1.0-0 *)
+(*---------------------------------------------------------------*)
+
+FileHeader
+  Contents              "200-APB12"
+  Date                  "2008-01-29"
+  Version               "Version 1.0-1"
+  RequiredSyntaxVersion "3.0"
+End FileHeader
+
+HWUnitInfo  (* 200-APB12 Full Format *)
+   HWUnitID {917DF055-C97F-499a-B3BC-F37A6C792B21}
+   Description "200-APB12"
+   Information "PROFIBUS-DP slave for S200 I/O"
+   Icons Ser200AdapterType
+   Attributes AdapterUnit
+  InterfaceInfo
+    IoSysType   CIGIO
+    CLSID_CB    {70AC2B68-4487-48e3-9957-EA25FD20A55F}
+    CLSID_CTRL  {7a59948b-4432-4d69-9f66-2ca7ed7f9db5}
+    HWConfig    Fail
+  End InterfaceInfo
+  ConnectionInfo
+    ConnectType AllUnits
+    IOConnect   Fail
+    IOConfig    NoFail
+  End ConnectionInfo
+   SubUnits 8
+   SubUnitTypes
+      Submenu "S200L I/O"
+        HWUnitID {FAC17C43-6B4A-4f4d-86B3-DD259A7BBAE0}  (* AI210        *)
+        HWUnitID {D6FBCA73-815F-48a6-8F67-E1C08D6E3141}  (* AX210        *)
+        HWUnitID {89F1E5C9-6EC2-4f28-8C70-14D537287FE0}  (* AO210        *)
+        HWUnitID {7156F2FC-DD79-440d-98A8-E1D47D2BEF47}  (* DI210        *)
+        HWUnitID {99CFAA13-313A-459a-970E-804EEBA52D10}  (* DX210        *)
+        HWUnitID {E2E53325-B994-4e68-BDE3-39709C130A54}  (* DO210        *)
+      SubMenuEnd
+      SubMenu "S200 I/O"
+        HWUnitID {D5F9F02A-4223-452f-91B1-2FCA220316F8}  (* 200-IE8      *)
+        HWUnitID {41F1F752-7834-4133-BDFE-5ADD8355C792}  (* 200-IT8      *)
+        HWUnitID {A7126405-A033-444b-8994-AAECB18FFCF0}  (* 200-IR8      *)
+        HWUnitID {D5396562-4053-4e3b-8F30-2F98B7BA505A}  (* 200-IR8R     *)
+        HWUnitID {9BB69EF6-D029-4fb9-BA0F-65925CC190F4}  (* 200-IF4I     *)
+        HWUnitID {2B5B24F5-F29A-4966-8A02-EF4E67AECBE3}  (* 200-IE4xOE2  *)
+        Separator
+        HWUnitID {A066CEF0-2E2B-4bee-94E0-1C5AA332323D}  (* 200-OE4      *)
+        HWUnitID {2E7AB23F-E6AB-48c1-B29A-C494023F5114}  (* 200-OF4I     *)
+        Separator
+        HWUnitID {EAF3B51D-04AC-436e-9E6C-8FD0889C7928}  (* 200-IB16     *)
+        HWUnitID {0F4471DF-E2FB-44f6-ABE8-33A708E266AA}  (* 200-IB32     *)
+        HWUnitID {3A7D8231-B256-40ac-913F-BF106D30958E}  (* 200-IA8      *)
+        HWUnitID {2F9BBC53-44F3-4257-99D3-FCE4DE6246E7}  (* 200-IM8      *)
+        HWUnitID {E2ACC841-E273-474c-A022-53201A96AE0B}  (* 200-IB10xOB6 *)
+        HWUnitID {60DCE29F-3509-454d-9E1E-F733866686BD}  (* 200-IB16xOB16P *)
+        HWUnitID 16#00030111  (* 200-IB2xOB2P *)
+        Separator
+        HWUnitID {981FB5B0-1E35-4202-9725-02584AB55BDF}  (* 200-OB16     *)
+        HWUnitID {9F0785C8-AAA2-45ef-8AF6-D321B5F1036C}  (* 200-OB16P    *)
+        HWUnitID {ED92022B-3FDC-4361-BD23-756A4F1514E6}  (* 200-OB32P    *)
+        HWUnitID {B49ECD6D-6FF1-4516-BDEA-AEE0D9B80072}  (* 200-OA8      *)
+        HWUnitID {96B79663-DBE7-4ca0-AB5F-86276F2422D1}  (* 200-OW8      *)
+        HWUnitID {733006FB-3DE0-4203-9620-7C4AC9F909A9}  (* 200-OB8EP    *)
+        HWUnitID {B591EEC5-5CBF-4d56-99BE-EEEBC5F59E77}  (* 200-OM8      *)
+        Separator
+        HWUnitID {B9154656-7F77-417f-81E4-68BF0F0A1BF5}  (* 200-IP2      *)
+        HWUnitID {0D7FE0AD-0E87-40e9-A0E7-C1323EA3517E}  (* 200-IP4      *)
+        HWUnitID 16#00031804  (* 1794-ID2     *)
+        HWUnitID 16#0003FFFF  (* 200-DUTB     *)
+      SubMenuEnd
+      Submenu "I/O 200C"
+        HWUnitID {AF11985B-A246-4e3c-94AD-45C2DE0A42EF}  (* 200C-IE8     *)
+        HWUnitID {75C56AB5-408F-475b-BA5E-CC8D967886E4}  (* 200C-IE4xOE2 *)
+        HWUnitID {F6AC5C9A-1C9F-4423-8A93-3744B8CBB3C4}  (* 200C-OE4     *)
+        HWUnitID {C29112AE-C273-41b7-B88A-96BFE356F518}  (* 200C-IB16    *)
+        HWUnitID {56D24BF8-28A8-4e34-86EE-2748FA329E49}  (* 200C-IB10xOB6*)
+        HWUnitID {56252EBC-7BC2-4cdf-B346-F7EA8615B11F}  (* 200C-OB16P   *)
+      SubMenuEnd
+   End SubUnitTypes
+   Parameters
+      ParamInfo 
+         Name SAFESTATE
+         Description "SafeState"
+         CompileType IOConnect
+         Datatype ENUM
+         Default 0
+         ParValIndex 0
+         ParamType CIGIOData  2  2 1  ByteParam ByteOffset
+         OSPInfo
+           OSPType OSPControl
+           OSPRef Connection
+         End OSPInfo
+      End ParamInfo
+   End Parameters
+   ParValList
+      ParVal
+         ParValIndex 0
+         ENUM
+         "Resetoutputs" 0
+         "Holdlaststate" 1
+         "Safevalues" 2
+      End ParVal
+   End ParValList
+   IoUnitStatus
+        StatusType IoError 
+        StatusData 16#30000 16#100 16#0 16#0
+   End IoUnitStatus
+   Configuration
+      ConfigInfo
+         ModuleKey    16#7363
+         InAreaSize   1
+         OutAreaSize  1
+         InWord 
+            WORD     0 0
+         ConfWord 
+            WORD     0 0
+         CIGIOConnData
+            CIGIOData     16#01 16#50 16#60
+            CIGIOData     16#05 16#00 16#13   (* Full Format/HOLDLASTINPUTS *)
+
+            CIGIOData     16#02 16#88 16#00 16#00 16#00 16#73 16#63 16#01 
+            CIGIOData     16#03 16#00 16#3C 16#00 16#3C 16#00 16#3C 16#00 16#3C 16#00 16#64 16#00 16#00 16#00 16#96 16#00 16#FA 16#01 16#C2 16#03 16#20
+            CIGIOData     16#04 10
+            CIGIOData     16#06 244
+            CIGIOData     16#07 244
+            CIGIOData     16#08 255
+            CIGIOData     16#0A 16#00 16#00 16#00
+         End CIGIOConnData
+      End ConfigInfo
+      ConfigInfo
+         EmptyConfig
+         ModuleKey    16#FFFF
+         InAreaSize   0
+         OutAreaSize  0
+         CIGIOConnData
+            CIGIOData     16#01 16#00 16#00
+            CIGIOData     16#05 16#FF 16#FF 16#00
+         End CIGIOConnData
+      End ConfigInfo
+   End Configuration
+  HWUnitInfoCRC 16#1C0A
+End HWUnitInfo (* 200-APB12 Full Format *)

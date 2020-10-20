@@ -1,0 +1,362 @@
+(*************************************************)
+(*                                               *)
+(* Note:                                         *)
+(* NTAC.hwd is maintained by ABB Drives, Finland *)
+(* Any changes have to be confirmed.             *)
+(*                                               *)
+(*************************************************)
+(*---------------- History ----------------------*)
+(* 1 2007-12-20 13:30 pa/xa/ahc sepewah *)
+(* #30692 More strict HWD parsing due to SIL-3 *)
+(* ParValIndex 99 and a reference to "Initialization style for device" *)
+(* and "MAFR Code" added. *)
+(* *)
+(*************************************************)
+
+HwUnitInfo  (* NTAC *)
+   HWUnitID {04D13DE1-56CF-492d-9755-63B951A0BB3D}
+   Description "NTAC"
+   Information "NTAC"
+(*###HelpProject CI858.xxx *)
+   Icons S800IoType
+   Attributes AdapterUnit IoUnit
+   InterfaceInfo
+     IoSysType CIGIO
+     CLSID_CB   {6FBF3F0D-6D1B-4C2D-A55D-8EB36EB2A274} (*  CLSID_CB = GUID for CI858 Protocol handler (PH) in Control builder CB *)
+     CLSID_CTRL {8D9E7478-89A5-4ADA-B10A-4D3A82652E9C} (* CLSID_CTRL  = GUID for CI858 Protocol handler (PH) in Controler *)
+     HWConfig   Fail
+   End InterfaceInfo
+
+   ConnectionInfo
+     ConnectType AllUnits
+     IOConnect   Fail
+     IOConfig    NoFail
+   End ConnectionInfo
+
+   Parameters    
+      ParamInfo 
+         Name PHYSICAL_NODE_ADDR (*Parameter 1*)
+         Description "Physical node address"
+         Hidden (*Node address not read from here. Read from HWtree position*)
+         CompileType IoConnect
+         Datatype INT
+         Default 1
+         ParValIndex 0
+         ParamType CIGIOData 0 0 1 WordParam WordOffset
+      End ParamInfo      
+      ParamInfo 
+         Name CONF_DEVICE_TYPE (*Parameter 2*)
+         Description "Configured Device type"
+         Hidden
+         CompileType IoConnect
+         Datatype ENUM
+         Default 0
+         ParValIndex 1
+         ParamType CIGIOData 1 0 1 WordParam WordOffset
+      End ParamInfo
+      ParamInfo 
+         Name INIT_STYLE_FOR_DEVICE (*Parameter 3*)
+         Description "Initialization style for device"
+         Hidden
+         CompileType IoConnect
+         Datatype INT
+         Default 0
+         ParValIndex 99
+         ParamType CIGIOData 2 0 1 WordParam WordOffset
+      End ParamInfo
+      ParamInfo 
+         Name MAFR_CODE (*To Dataset word 13*)
+         Description "MAFR Code"
+         Hidden
+         CompileType IoConnect
+         Datatype INT
+         Default 30
+         ParValIndex 99
+         ParamType CIGIOData 3 0 1 WordParam WordOffset
+      End ParamInfo
+      ParamInfo 
+         Name OVERLAYED_DS_ID (*To Dataset Word 2 bit 4*)
+         Description "Overlayed Datasets"
+         Hidden
+         CompileType IoConnect
+         Datatype BOOL
+         Default TRUE
+         ParamType CIGIOData 0 0 2 ByteParam ByteOffset
+      End ParamInfo
+
+      (* DS Parameters *)
+      ParamInfo 
+        Name DATASET1_ID
+        Description "Dataset 1 ID"
+        Hidden
+        CompileType IoConnect
+        Datatype ENUM
+        Default  0
+        ParValIndex 2
+        ParamType CIGIOData 0 0 3 ByteParam ByteOffset
+      End ParamInfo
+      ParamInfo 
+        Name DATASET2_ID
+        Description "Dataset 2 ID"
+        Hidden
+        CompileType IoConnect
+        Datatype ENUM
+        Default  1
+        ParValIndex 2
+        ParamType CIGIOData 0 0 4 ByteParam ByteOffset
+      End ParamInfo
+      ParamInfo 
+        Name DATASET1_STATUS
+        Description "Dataset 1 config status"
+        CompileType IoConnect
+        Datatype ENUM
+        Default  1
+        ParValIndex 9
+        ParamType CIGIOData 1 0 3 ByteParam ByteOffset
+      End ParamInfo
+      ParamInfo 
+        Name DATASET2_STATUS
+        Description "Dataset 2 config status"
+        CompileType IoConnect
+        Datatype ENUM
+        Default  0
+        ParValIndex 8
+        ParamType CIGIOData 1 0 4 ByteParam ByteOffset
+      End ParamInfo
+      ParamInfo 
+        Name DATASET1_PRIORITY
+        Description "Dataset 1 Priority"
+        CompileType IoConnect
+        Datatype ENUM
+        Default  0
+        ParValIndex 13
+        ParamType CIGIOData 2 0 3 ByteParam ByteOffset
+      End ParamInfo
+      ParamInfo 
+        Name DATASET2_PRIORITY
+        Description "Dataset 2 Priority"
+        CompileType IoConnect
+        Datatype ENUM
+        Default  0
+        ParValIndex 13
+        ParamType CIGIOData 2 0 4 ByteParam ByteOffset
+      End ParamInfo
+    End Parameters
+
+    ParValList
+       ParVal
+          ParValIndex 0
+          INT 1 125 1 125
+       End ParVal
+       ParVal
+         ParValIndex 1
+         ENUM
+         "Type 0"    0
+         "Type 1"    1
+         "Type 2"    2
+       End ParVal
+       ParVal
+         ParValIndex 2
+         ENUM
+         "1"       1
+         "2"       2
+       End ParVal
+       ParVal
+          ParValIndex 8
+          ENUM
+          "Off"            0
+          "Read/Write"     2
+       End ParVal
+       ParVal
+          ParValIndex 9
+          ENUM
+          "Off"            0
+          "Read"           1
+       End ParVal
+       ParVal
+          ParValIndex 13
+          ENUM
+          "Normal Prio"    0
+          "High Prio"      1
+       End ParVal       
+       ParVal                     (* General INT type *)
+          ParValIndex 99
+          INT 0 65535 0 65535
+       End ParVal
+    End ParValList
+   Channels
+     ChannelInfo
+         Number 1 
+         ChannelName "DS 1 in 1"
+         Datatype Int_In
+         Routine 1300
+         CopyParameters 0 0 16#30004 16#0
+         TaskRestrictionGroup 1
+     End ChannelInfo
+     ChannelInfo
+         Number 2 
+         ChannelName "DS 1 in 2"
+         Datatype Int_In
+         Routine 1300
+         CopyParameters 0 0 16#30005 16#0
+         TaskRestrictionGroup 1
+     End ChannelInfo
+     ChannelInfo
+         Number 3 
+         ChannelName "DS 1 in 3"
+         Datatype Int_In
+         Routine 1300
+         CopyParameters 0 0 16#30006 16#0
+         TaskRestrictionGroup 1
+     End ChannelInfo
+     ChannelInfo
+         Number 4 
+         ChannelName "DS 2 in 1"
+         Datatype Int_In
+         Routine 1300
+         CopyParameters 0 0 16#30014 16#0
+         TaskRestrictionGroup 2
+     End ChannelInfo
+     ChannelInfo
+         Number 5 
+         ChannelName "DS 2 in 2"
+         Datatype Int_In
+         Routine 1300
+         CopyParameters 0 0 16#30015 16#0
+         TaskRestrictionGroup 2
+     End ChannelInfo
+     ChannelInfo
+         Number 6 
+         ChannelName "DS 2 in 3"
+         Datatype Int_In
+         Routine 1300
+         CopyParameters 0 0 16#30016 16#0
+         TaskRestrictionGroup 2
+     End ChannelInfo
+     ChannelInfo
+         Number 7
+         ChannelName "DS 2 out 1"
+         Datatype Int_Out
+         Routine 1400
+         CopyParameters 0 0 16#40017 16#0
+         TaskRestrictionGroup 2
+     End ChannelInfo
+     ChannelInfo
+         Number 8
+         ChannelName "DS 2 out 2"
+         Datatype Int_Out
+         Routine 1400
+         CopyParameters 0 0 16#40018 16#0
+         TaskRestrictionGroup 2
+     End ChannelInfo
+     ChannelInfo
+         Number 9
+         ChannelName "DS 2 out 3"
+         Datatype Int_Out
+         Routine 1400
+         CopyParameters 0 0 16#40019 16#0
+         TaskRestrictionGroup 2
+     End ChannelInfo
+     ChannelInfo
+         Number 10
+         ChannelName "UnitStatus"
+         Datatype Status_In
+         Routine 900
+         CopyParameters 0 0 16#50000
+     End ChannelInfo
+   End Channels
+   UnitStatusText
+     ExtendedStatus1 "Communication broken"
+   End UnitStatusText
+
+  UnitStatusSeverity
+    ExtendedStatus1      GeneralError   TriggerAlarm SeverityMedium
+    ExtendedStatus2      GeneralError   TriggerAlarm SeverityHigh
+    ExtendedStatus3      GeneralError   TriggerAlarm SeverityHigh
+    ExtendedStatus4      GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus5      GeneralWarning TriggerEvent SeverityMedium
+    ExtendedStatus6      GeneralWarning TriggerEvent SeverityMedium
+    ExtendedStatus7      GeneralWarning TriggerEvent SeverityMedium
+  End UnitStatusSeverity
+    Configuration
+      ConfigInfo
+         ModuleKey    16#0000
+         InAreaSize   32
+         OutAreaSize  32
+         InWord
+            WORD 0       0
+            WORD 0       1
+            WORD 0       2
+            WORD 0       3
+            WORD 0       4
+            WORD 0       5
+            WORD 0       6
+            WORD 0       7
+            WORD 0       8
+            WORD 0       9
+            WORD 0       10
+            WORD 0       11
+            WORD 0       12
+            WORD 0       13
+            WORD 0       14
+            WORD 0       15
+            WORD 0       16
+            WORD 0       17
+            WORD 0       18
+            WORD 0       19
+            WORD 0       20
+            WORD 0       21
+            WORD 0       22
+            WORD 0       23
+            WORD 0       24
+            WORD 0       25
+            WORD 0       26
+            WORD 0       27
+            WORD 0       28
+            WORD 0       29
+            WORD 0       30
+            WORD 0       31
+         OutWord
+            WORD 0       0
+            WORD 0       1
+            WORD 0       2
+            WORD 0       3
+            WORD 0       4
+            WORD 0       5
+            WORD 0       6
+            WORD 0       7
+            WORD 0       8
+            WORD 0       9
+            WORD 0       10
+            WORD 0       11
+            WORD 0       12
+            WORD 0       13
+            WORD 0       14
+            WORD 0       15
+            WORD 0       16
+            WORD 0       17
+            WORD 0       18
+            WORD 0       19
+            WORD 0       20
+            WORD 0       21
+            WORD 0       22
+            WORD 0       23
+            WORD 0       24
+            WORD 0       25
+            WORD 0       26
+            WORD 0       27
+            WORD 0       28
+            WORD 0       29
+            WORD 0       30
+            WORD 0       31
+        CIGIOConnData     
+          CIGIOData       16#02  (*number of datasets supported by this Special IO*)   
+          CIGIOData       16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 (*INT16*)
+          CIGIOData       16#00 (*BOOL*)          
+          CIGIOData       16#00 16#00 16#00  (* DS 1 Parameter *)
+          CIGIOData       16#00 16#00 16#00  (* DS 2 Parameter *)
+        End CIGIOConnData
+      End ConfigInfo
+   End Configuration
+  HWUnitInfoCRC 16#5465
+End HWUnitInfo (* NTAC *)

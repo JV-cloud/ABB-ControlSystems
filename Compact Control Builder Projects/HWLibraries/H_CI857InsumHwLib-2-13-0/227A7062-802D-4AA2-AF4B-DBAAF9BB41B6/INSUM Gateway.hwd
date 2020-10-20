@@ -1,0 +1,179 @@
+HWUnitInfo  (* INSUM Gateway *)
+   HWUnitID {2677B90E-70DE-4808-ADB6-98C31B25CBBB} (* GUID for INSUM Gateway *)
+   Description "INSUM Gateway"
+   Information "INSUM TCP/IP Gateway"
+(* ###HelpProject INSUMHelp.xxx *)
+   Icons INSUMGatewayType
+   Attributes AdapterUnit
+   InterfaceInfo
+     Interface CIGInterface
+     CLSID_CB   {1896BB43-3C0D-11d6-891B-006097B83487} (* CLSID_CB = GUID for INSUM PH in Control Builder *)
+     CLSID_CTRL {1896BB44-3C0D-11d6-891B-006097B83487} (* CLSID_CTRL = GUID for INSUM PH in Controller *)
+     HWConfig Fail     (* Change of net parameters affect subunits *)
+   End InterfaceInfo
+
+   DiscreteNumbers
+      101 102 103 104 105 106 107 108 109 110
+      111 112 113 114 115 116 117 118 119 120
+      121 122 123 124 125 126 127 128 129 130
+      131 132
+      201 202 203 204 205 206 207 208 209 210
+      211 212 213 214 215 216 217 218 219 220
+      221 222 223 224 225 226 227 228 229 230
+      231 232
+      301 302 303 304 305 306 307 308 309 310
+      311 312 313 314 315 316 317 318 319 320
+      321 322 323 324 325 326 327 328 329 330
+      331 332
+      401 402 403 404 405 406 407 408 409 410
+      411 412 413 414 415 416 417 418 419 420
+      421 422 423 424 425 426 427 428 429 430
+      431 432
+   End DiscreteNumbers
+
+   SubUnitTypes
+      HWUnitID {22F2182A-B6F3-4856-8409-980509DD8025}  (* GUID for generic INSUM Device *)
+      HWUnitID {953600DB-E48D-4ce5-86DC-8A6179F83311}  (* GUID for generic MCU *)
+      HWUnitID {A9C21A40-E673-4757-BB35-D5D1246EB859}  (* GUID for MCU A+ (reusing GUID from MCU1) *)
+      HWUnitID {5CAB7F7F-7246-4b9d-AE9B-CE9874B54379}  (* GUID for MCU v2 with process related status warnings disabled *)
+      HWUnitID {C2939E73-F212-4491-B38E-2223C39BE18C}  (* GUID for MCU v2 A+, MCU v2 and A+ merged (reusing GUID from MCU2) *)
+      (* Reused!! Begin *)
+      HWUnitID {E579BCC8-91CB-43aa-8B55-9D076FC57431}  (* GUID for MCU1 *)      
+      HWUnitID {BCC3969C-9225-47c4-A28C-096F02BEFEFB}  (* GUID for MCU2 *)
+      (* Reused!! End *)
+      HWUnitID {92CE4116-36C9-41ab-A99C-3DC9355B9940}  (* GUID for MCU3 *)
+      HWUnitID {33D65573-CABE-4f49-BD6A-C95EE6AF5B70}  (* GUID for Circuit Breaker *)
+      HWUnitID {E15CA5A6-2537-4c7d-B7D0-27B0072AF48F}  (* GUID for ITS *)
+   End SubUnitTypes
+
+   Parameters
+      ParamInfo 
+         Name GWIPADDRESS
+         Description "GW IP Address"
+         CompileType HWConfig
+         Datatype STRING
+         Default "" 15 (* 15 is max length of string *)
+         ParamType Numbered 1
+      End ParamInfo
+      ParamInfo 
+         Name FAILSAFETIMEOUT
+         Description "Failsafe Time Out (0=off)"
+         CompileType HWConfig
+         Datatype INT
+         Default 5
+         ParValIndex 0
+         ParamType Numbered 2
+      End ParamInfo
+      ParamInfo 
+         Name FAILSAFESUBNET1
+         Description "Failsafe sup Subnet 1"
+         CompileType HWConfig
+         Datatype ENUM
+         Default 1
+         ParValIndex 1
+         ParamType Numbered 3
+      End ParamInfo
+      ParamInfo 
+         Name FAILSAFESUBNET2
+         Description "Failsafe sup Subnet 2"
+         CompileType HWConfig
+         Datatype ENUM
+         Default 1
+         ParValIndex 1
+         ParamType Numbered 4
+      End ParamInfo
+      ParamInfo 
+         Name FAILSAFESUBNET3
+         Description "Failsafe sup Subnet 3"
+         CompileType HWConfig
+         Datatype ENUM
+         Default 1
+         ParValIndex 1
+         ParamType Numbered 5
+      End ParamInfo
+      ParamInfo 
+         Name FAILSAFESUBNET4
+         Description "Failsafe sup Subnet 4"
+         CompileType HWConfig
+         Datatype ENUM
+         Default 1
+         ParValIndex 1
+         ParamType Numbered 6
+      End ParamInfo
+   End Parameters
+
+   ParValList
+      ParVal
+         ParValIndex 0
+         UnitText "s"
+         INT 0 100 0 100
+      End ParVal
+      ParVal
+         ParValIndex 1
+         ENUM
+         "Disabled" 0
+         "Enabled"  1
+      End ParVal
+   End ParValList
+
+   Channels
+      ChannelInfo
+         Number 0
+         ChannelName "UnitStatus"
+         Datatype Status_In
+         Routine 900
+         CopyParameters 0 0 16#50000
+      End ChannelInfo
+   End Channels
+
+   UnitStatusText
+     DeviceSpecific1    "Error!"
+     DeviceSpecific2    "Warning!"
+     DeviceSpecific3    "Connected"
+     DeviceSpecific4    "Status unknown"
+     DeviceSpecific5    "GW shutdown"
+     DeviceSpecific6    "GW paused"
+     DeviceSpecific7    "HA Offline"
+     DeviceSpecific8    "Loading Bindings"
+     DeviceSpecific9    "CI857 Connection error"
+     DeviceSpecific10   "GW Disconnected"
+
+     ExtendedStatus1    "Using default bindings"
+     ExtendedStatus2    "Bindings loaded via LNT"
+     ExtendedStatus3    "Eval. alarm updates"
+     ExtendedStatus4    "GW sending lifelist"
+     ExtendedStatus5    "Consistency check failed"
+     ExtendedStatus6    "Switched Offline via LNT"
+     ExtendedStatus7    "GWExtStat7" 
+     ExtendedStatus8    "GWExtStat8" 
+     ExtendedStatus9    "GWExtStat9" 
+     ExtendedStatus10   "GWExtStat10" 
+     ExtendedStatus11   "GWExtStat11" 
+     ExtendedStatus12   "GWExtStat12" 
+     ExtendedStatus13   "GWExtStat13" 
+     ExtendedStatus14   "GWExtStat14" 
+     ExtendedStatus15   "GWExtStat15" 
+     ExtendedStatus16   "GWExtStat16" 
+   End UnitStatusText
+
+   UnitStatusSeverity
+     DeviceSpecific1    GeneralError                                (*"Error!"*)
+     DeviceSpecific2    GeneralWarning                              (*"Warning!"*)
+
+     DeviceSpecific4    GeneralWarning  TriggerEvent SeverityLow    (*"Status unknown"*)
+     DeviceSpecific5    GeneralWarning  TriggerAlarm SeverityMedium (*"GW shutdown"*)
+     DeviceSpecific6    GeneralWarning  TriggerEvent SeverityLow    (*"GW paused"*)
+     DeviceSpecific7    GeneralWarning  TriggerEvent SeverityLow    (*"HA Offline"*)
+
+     DeviceSpecific9    GeneralError                                (*"CI857 Connection error" No Alarm for 2:nd order errors *)
+     DeviceSpecific10   GeneralError    TriggerAlarm SeverityMedium (*"GW Disconnected"*)
+
+
+     ExtendedStatus5    GeneralWarning  TriggerAlarm SeverityMedium (*"Consistency check failed"*)
+     ExtendedStatus6    GeneralWarning  TriggerEvent SeverityLow    (*"Switched Offline via LNT"*)
+
+   End UnitStatusSeverity
+
+
+  HWUnitInfoCRC 16#7BF8
+End HWUnitInfo  (* INSUM Gateway *)

@@ -1,0 +1,124 @@
+(****************************************************************************)
+(* FILE            CI873 Scanner Diagnostics.hwd                            *)
+(*                                                                          *)
+(* DESCRIPTION     Hardware definition file for CI873 Scanner Diagnostics   *)
+(*                                                                          *)
+(* AUTHOR          Ramachandragowda G                                       *)
+(*                                                                          *)
+(* All rights reserved. Reproduction, modification, use or disclosure       *)
+(* to third parties without express authority, is forbidden.                *)
+(* Copyright ABB Inc. 2008.                                                 *)
+(*                                                                          *)
+(*                                                                          *)
+(* 05-12-2008 Ramachandragowda G            Initial version                 *)
+(*                                                                          *)
+(****************************************************************************)
+FileHeader
+   Contents               "CI873 Diagnostics"
+   Date                   "2008-12-05"
+   Version                "1.0-0"
+  RequiredSyntaxVersion "3.0"
+End FileHeader
+
+HWUnitInfo  (* CI Diagnostics *)
+   HWUnitID {5D308043-4CCA-4d70-8D05-5A026D3B3661} (* GUID for CI Diagnostics *)
+   Description "CI873 Scanner Diagnostics"
+   Information "CI873 Scanner Diagnostics"
+   Icons ETHERNETIP_DIAGNOSTICSType
+   Attributes IoUnit AdapterUnit DigitalIn
+   InterfaceInfo
+     IoSysType    CIGIO
+     CLSID_CB    {4CDF91C2-C5C4-4153-8502-15783AA2384B} (*  CLSID_CB  = GUID for CI873 PH in Control builder CB *)
+     CLSID_CTRL  {2DA9F31E-56AB-4ffa-A07B-CC488F4F88BC}  (* CLSID_CTRL = GUID for CI873 PH in Controler *)
+   End InterfaceInfo
+
+   ConnectionInfo
+      ConnectType OwnUnit
+      IOConnect Fail
+      IoConfig  NoFail
+   End ConnectionInfo
+   Parameters
+    ParamInfo 
+     Name NODE_TYPE
+     Description "Node Type"
+     Hidden
+     CompileType HWConfig
+     Datatype ENUM
+     Default 1
+     ParValIndex 1
+     ParamType Numbered 1
+   End ParamInfo
+   End Parameters
+
+   ParValList
+     ParVal
+        ParValIndex 1
+        ENUM
+          "Node_CI873"                      1
+          "Node_CI_Diagnostics"             2
+          "Node_EIPDevice"                  3
+          "Node_EIPMAdapter"                4
+          "Node_LD800DN"                    5
+          "Node_DNetDevice"                 6
+          "Node_DNetMAdapter"               7
+          "Node_EIPIOUnit"                  8
+          "Node_DNetIOUnit"                 9
+          "Node_LD_Diagnostics"             10
+     End ParVal
+   End ParValList
+
+   Channels
+    ChannelInfo
+      Number         0
+      ChannelName   "Number of Class1 Connections"
+      Datatype       Int_In
+      Routine        303
+      CopyParameters 16#30000 0 
+    End ChannelInfo
+    ChannelInfo
+      Number         1
+      ChannelName   "CPU Load of CI"
+      Datatype       Int_In
+      Routine        303
+      CopyParameters 16#30004 0 
+    End ChannelInfo
+    ChannelInfo
+      Number         2
+      ChannelName   "EthernetIP Messages received per second"
+      Datatype       Int_In
+      Routine        303
+      CopyParameters 16#30008 0 
+    End ChannelInfo
+    ChannelInfo
+      Number         3
+      ChannelName   "EthernetIP Messages sent per second"
+      Datatype       Int_In
+      Routine        303
+      CopyParameters 16#3000C 0
+    End ChannelInfo
+    ChannelInfo
+      Number         4
+      ChannelName   "Number of lost EthernetIP messages"
+      Datatype       Int_In
+      Routine        303
+      CopyParameters 16#30010 0
+    End ChannelInfo
+    ChannelInfo
+      Number         5
+      ChannelName   "UnitStatus"
+      Datatype       Status_In
+      Routine        900
+      CopyParameters 16#50000
+    End ChannelInfo
+
+   End Channels
+
+Configuration
+    ConfigInfo
+      ModuleKey       16#01
+      InAreaSize      20 BYTE
+      OutAreaSize     0 BYTE
+    End ConfigInfo
+  End Configuration
+  HWUnitInfoCRC 16#4755
+End HWUnitInfo

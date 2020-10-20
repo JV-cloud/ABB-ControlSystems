@@ -1,0 +1,219 @@
+HWUnitInfo (* 200-OF4I / ControlNet *)
+   HWUnitID {5A1F0DE3-1C7C-452B-BAA4-6B811D43921B}
+   Description "200-OF4I"
+   Information "Isolated analog output module, 4 channels"
+   Icons Ser200IOType
+   Attributes IoUnit AnalogOut 
+   Parameters
+      ParamInfo 
+         Name RANGE_0
+         Description "Range Output 0"
+         CompileType IOConfig
+         Datatype ENUMRANGE
+         Default 0
+         ParValIndex 0
+         ParamType ConfArea 0 0
+      End ParamInfo 
+      ParamInfo 
+         Name RANGE_1
+         Description "Range Output 1"
+         CompileType IOConfig
+         Datatype ENUMRANGE
+         Default 0
+         ParValIndex 0
+         ParamType ConfArea 0 4
+      End ParamInfo 
+      ParamInfo 
+         Name RANGE_2
+         Description "Range Output 2"
+         CompileType IOConfig
+         Datatype ENUMRANGE
+         Default 0
+         ParValIndex 0
+         ParamType ConfArea 0 8
+      End ParamInfo 
+      ParamInfo 
+         Name RANGE_3
+         Description "Range Output 3"
+         CompileType IOConfig
+         Datatype ENUMRANGE
+         Default 0
+         ParValIndex 0
+         ParamType ConfArea 0 12
+      End ParamInfo
+      ParamInfo 
+         Name SAFESTATE
+         Description "SafeState"
+         CompileType IOConfig
+         Datatype ENUMCONTROL
+         Default 0
+         ParValIndex 1
+         ParamType Numbered 100
+         SafeStateInfo
+           SafeStateType SafeStateControl
+           SafeStateRef Unit
+         End SafeStateInfo
+      End ParamInfo 
+      ParamInfo 
+         Name SAFEVALUE_0
+         Description "Safe value channel 0"
+         Corresponding 0
+         CompileType IOConfig
+         Datatype REAL
+         Default 0
+         ParValIndex 2
+         (* CNSafeData *)
+         ParamType CIGIOData 2 0 0 WordParam WordOffset ScaleToRange
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 0
+         End SafeStateInfo
+      End ParamInfo 
+      ParamInfo 
+         Name SAFEVALUE_1
+         Description "Safe value channel 1"
+         Corresponding 1
+         CompileType IOConfig
+         Datatype REAL
+         Default 0
+         ParValIndex 2
+         (* CNSafeData *)
+         ParamType CIGIOData 3 0 0 WordParam WordOffset ScaleToRange
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 1
+         End SafeStateInfo
+      End ParamInfo 
+      ParamInfo 
+         Name SAFEVALUE_2
+         Description "Safe value channel 2"
+         Corresponding 2
+         CompileType IOConfig
+         Datatype REAL
+         Default 0
+         ParValIndex 2
+         (* CNSafeData *)
+         ParamType CIGIOData 4 0 0 WordParam WordOffset ScaleToRange
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 2
+         End SafeStateInfo
+      End ParamInfo 
+      ParamInfo 
+         Name SAFEVALUE_3
+         Description "Safe value channel 3"
+         Corresponding 3
+         CompileType IOConfig
+         Datatype REAL
+         Default 0
+         ParValIndex 2
+         (* CNSafeData *)
+         ParamType CIGIOData 5 0 0 WordParam WordOffset ScaleToRange
+         SafeStateInfo
+           SafeStateType SafeStateValue
+           SafeStateRef Channel 3
+         End SafeStateInfo
+      End ParamInfo
+   End Parameters
+   ParValList
+      ParVal
+         ParValIndex 0
+         ENUMRANGE
+         "off"     0 0 0 0 0
+         "0-20mA"  16#0008 16#F3CF 16#0000 16#0 16#0
+         "4-20mA"  16#0008 16#F3CF 16#30C3 16#0 16#0
+         "0-10V"   16#000A 16#F3CF 16#0000 16#0 16#0 
+         "0-5V"    16#000B 16#F3CF 16#0000 16#0 16#0 
+         "+/-10V"  16#0002 16#79E8 16#8618 16#8000 16#8000 Bipolar
+         "+/-5V"   16#0003 16#79E8 16#8618 16#8000 16#8000 Bipolar
+      End ParVal
+      ParVal
+         ParValIndex 1
+         ENUMCONTROL
+         "Resetoutputs"  0 ResetValue
+         "Holdlaststate" 1 HoldLastValue
+         "Safevalues"    2 UseSafeValue
+      End ParVal
+      ParVal
+         ParValIndex 2
+         UnitText    "%"
+         REAL 0.0 100.0 0.0 100.0
+      End ParVal
+   End ParValList
+   Channels
+    ChannelInfo
+       Number 0 
+       ChannelName "Output 0"
+       Datatype Real_out
+       Routine 803
+       (*                                 UnitErr  Wire off      Pwr Up           Field Pwr       *)
+       CopyParameters 0 0 16#40001 0 16#0 16#50000 16#30006 16#1 16#30005 16#8000 16#30005 16#4000
+    End ChannelInfo
+    ChannelInfo
+       Number 1 
+       ChannelName "Output 1"
+       Datatype Real_out
+       Routine 803
+       CopyParameters 0 0 16#40002 1 16#0 16#50000 16#30006 16#2 16#30005 16#8000 16#30005 16#4000
+    End ChannelInfo
+    ChannelInfo
+       Number 2 
+       ChannelName "Output 2"
+       Datatype Real_out
+       Routine 803
+       CopyParameters 0 0 16#40003 2 16#0 16#50000 16#30006 16#4 16#30005 16#8000 16#30005 16#4000
+    End ChannelInfo
+    ChannelInfo
+       Number 3 
+       ChannelName "Output 3"
+       Datatype Real_out
+       Routine 803
+       CopyParameters 0 0 16#40004 3 16#0 16#50000 16#30006 16#8 16#30005 16#8000 16#30005 16#4000
+    End ChannelInfo
+    ChannelInfo
+       Number 4
+       ChannelName "UnitStatus"
+       Datatype Status_In
+       Routine 900
+       CopyParameters 0 0 16#50000
+    End ChannelInfo
+  End Channels
+   IoUnitStatus
+      StatusType WrongModuleType 
+      StatusData 16#30000 16#1FFF 16#5 16#1621
+      StatusType ModuleMissing
+      StatusData 16#30000 16#8000 16#0 16#0
+      StatusType IoError
+      StatusData 16#30000 16#2000 16#0 16#0
+   End IoUnitStatus
+  Configuration
+    ConfigInfo
+       ModuleKey   16#1621
+       InAreaSize  7
+       OutAreaSize 7
+       InWord
+          WORD 16#B621   16#0 
+          WORD 0         16#1 
+          WORD 0         16#2 
+          WORD 0         16#3 
+          WORD 0         16#4 
+          WORD 0         16#5 
+          WORD 0         16#6 
+       OutWord 
+          WORD 16#8000   16#0
+          WORD 0         16#1
+          WORD 0         16#2
+          WORD 0         16#3
+          WORD 0         16#4 
+       ConfWord
+          WORD 0         16#5
+          WORD 16#6000   16#6
+       CIGIOConnData
+          CIGIOData      16#00 16#00 16#80 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 (* CNSafeData *)
+          CIGIOData      16#03 16#00 16#50 16#7D 16#00 16#00 16#0C 16#10 16#07 16#0C 16#00 16#05 16#10 16#07 16#0D 16#00 16#05    (* Out data *)
+          CIGIOData      16#04 16#00 16#10 16#07 16#00 16#00 16#05 16#60 16#7D 16#00 16#00 16#0A                                  (* In data  *)
+       End CIGIOConnData
+    End ConfigInfo
+  End Configuration
+  HWUnitInfoCRC 16#1BF6
+End HWUnitInfo (* 200-OF4I / ControlNet *)

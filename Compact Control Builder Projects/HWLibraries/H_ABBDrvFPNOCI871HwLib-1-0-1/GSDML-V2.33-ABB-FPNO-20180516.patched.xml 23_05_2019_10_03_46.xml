@@ -1,0 +1,586 @@
+<?xml version="1.0"?>
+<DeviceImportWizard xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <GsdmlMerge>
+    <SelectedDapId DapId="FPNO_DAP_V4">
+      <SelectedModuleId ModuleId="FPNO_DAP_V4">
+        <SelectedSubmoduleId SubmoduleId="FPNO_DAP_V4" />
+      </SelectedModuleId>
+      <SelectedModuleId ModuleId="ID_MODULE_PPO3">
+        <SelectedSubmoduleId SubmoduleId="ID_SUBMOD_PPO3" />
+      </SelectedModuleId>
+      <SelectedModuleId ModuleId="ID_MODULE_PPO4">
+        <SelectedSubmoduleId SubmoduleId="ID_SUBMOD_PPO4" />
+      </SelectedModuleId>
+      <SelectedModuleId ModuleId="ID_MODULE_PPO6">
+        <SelectedSubmoduleId SubmoduleId="ID_SUBMOD_PPO6" />
+      </SelectedModuleId>
+      <SelectedModuleId ModuleId="ID_MODULE_PPO7">
+        <SelectedSubmoduleId SubmoduleId="ID_SUBMOD_PPO7" />
+      </SelectedModuleId>
+    </SelectedDapId>
+  </GsdmlMerge>
+  <Hwd>
+    <HardwareUnit guid="1a4a23be-462a-4f8e-ae8c-09f4a1d67cfd" hwGsdmlUnitID="DEV_FPNO_DAP_V4" description="FPNO-21" information="PROFINET IO module FPNO" icon="MotorType" />
+    <HardwareUnit guid="110772c2-893f-41d6-a301-b20c97eaf807" hwGsdmlUnitID="DAP_FPNO_DAP_V4" description="FPNO-21_DAP" information="PROFINET IO module FPNO" icon="ProtocolType" />
+    <HardwareUnit guid="4d56eb3a-0bd9-42f5-b70e-2cb7bb08add7" hwGsdmlUnitID="VSM_FPNO_DAP_V4_MOD_FPNO_DAP_V4" description="FPNO-21_DAP_SUB" information="PROFINET IO module FPNO" icon="ProtocolType">
+      <Channels>
+        <InputArea AreaByteSize="0" GSDMLHash="" />
+        <OutputArea AreaByteSize="0" GSDMLHash="" />
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="95d64d83-5751-4432-b03d-caa4a35f12f0" hwGsdmlUnitID="MOD_ID_MODULE_STD_TGM1" description="Standard Telegram 1_MOD_ID_MODULE_STD_TGM1" information="Standard Telegram 1" icon="RackIOType" />
+    <HardwareUnit guid="ff8f502d-612b-4843-b782-2e088e2078ee" hwGsdmlUnitID="VSM_ID_STD_MAPPAP_1_MOD_ID_MODULE_STD_TGM1" description="Module Access Point_SUB_ID_STD_MAPPAP_1_MOD_ID_MODULE_STD_TGM1" information="Acyclic parameter access is possible through this module" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="0" GSDMLHash="" />
+        <OutputArea AreaByteSize="0" GSDMLHash="" />
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="3c1afb18-75ff-4fd3-ac2f-62ebbd9a8907" hwGsdmlUnitID="VSM_ID_STD_STD_TGM1_1_MOD_ID_MODULE_STD_TGM1" description="Standard Telegram 1_SUB_ID_STD_STD_TGM1_1_MOD_ID_MODULE_STD_TGM1" information="Control/Reference and Status/Actual values" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="4" GSDMLHash="l5pfQwRGK02aX03PjQ6L4g==">
+          <Channel Name="Input" StartBit="0" EndBit="15" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Input_1" StartBit="16" EndBit="31" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </InputArea>
+        <OutputArea AreaByteSize="4" GSDMLHash="W6wUwLsL4l22dMUmFSzLQw==">
+          <Channel Name="Output" StartBit="0" EndBit="15" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Output_1" StartBit="16" EndBit="31" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </OutputArea>
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="abfac30d-6b6e-4d21-ac2a-3967113640ed" hwGsdmlUnitID="MOD_ID_MODULE_STD_TGM2" description="Standard Telegram 2_MOD_ID_MODULE_STD_TGM2" information="Standard Telegram 2" icon="RackIOType" />
+    <HardwareUnit guid="03922a66-1aaf-42cc-b6b4-5c228bca9c30" hwGsdmlUnitID="VSM_ID_STD_MAPPAP_2_MOD_ID_MODULE_STD_TGM2" description="Module Access Point_SUB_ID_STD_MAPPAP_2_MOD_ID_MODULE_STD_TGM2" information="Acyclic parameter access is possible through this module" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="0" GSDMLHash="" />
+        <OutputArea AreaByteSize="0" GSDMLHash="" />
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="334219d0-57c7-4ba3-83cf-a0b70da8b98f" hwGsdmlUnitID="VSM_ID_STD_STD_TGM2_1_MOD_ID_MODULE_STD_TGM2" description="Standard Telegram 2_SUB_ID_STD_STD_TGM2_1_MOD_ID_MODULE_STD_TGM2" information="Control/Reference and Status/Actual values" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="8" GSDMLHash="Haqwl6NELjxC8CEZAGyH9g==">
+          <Channel Name="Input" StartBit="0" EndBit="15" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Input_1" StartBit="16" EndBit="47" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Input_2" StartBit="48" EndBit="63" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </InputArea>
+        <OutputArea AreaByteSize="8" GSDMLHash="0sRpwSMPAYRx9N101wF0rg==">
+          <Channel Name="Output" StartBit="0" EndBit="15" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Output_1" StartBit="16" EndBit="47" Type="ChannelUInt32">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Output_2" StartBit="48" EndBit="63" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </OutputArea>
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="92a67e3a-8b34-40e6-a4c0-e15f9f8557cd" hwGsdmlUnitID="MOD_ID_MODULE_PPO3" description="PPO Type 3" information="PPO Type 3" icon="ProtocolType" />
+    <HardwareUnit guid="6e89327d-107d-489a-99c9-5ed3dad699fe" hwGsdmlUnitID="VSM_ID_SUBMOD_PPO3_MOD_ID_MODULE_PPO3" description="PPO3 Data Object" information="Control/Reference and Status/Actual values" icon="ProtocolType">
+      <Channels>
+        <InputArea AreaByteSize="4" GSDMLHash="S2Q1mzH7anhJGRN1fQidiA==">
+          <Channel Name="Status" StartBit="0" EndBit="15" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Speed Actual" StartBit="16" EndBit="31" Type="ChannelInt32SignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </InputArea>
+        <OutputArea AreaByteSize="4" GSDMLHash="1C9QBuja+7lV6YDN90lNAg==">
+          <Channel Name="Command" StartBit="0" EndBit="15" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Speed Reference" StartBit="16" EndBit="31" Type="ChannelSInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </OutputArea>
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="1976e0ec-fa5f-429f-b1ce-3cd22f653eb4" hwGsdmlUnitID="MOD_ID_MODULE_PPO4" description="PPO Type 4" information="PPO Type 4" icon="ProtocolType" />
+    <HardwareUnit guid="a5ebd129-beec-4ecd-8995-b2f0ba305a68" hwGsdmlUnitID="VSM_ID_SUBMOD_PPO4_MOD_ID_MODULE_PPO4" description="PPO4 Data Object" information="Control/Reference, Status/Actual values + 4 IN/OUT words" icon="ProtocolType">
+      <Channels>
+        <InputArea AreaByteSize="12" GSDMLHash="VKqPFVNln6JdqubmRxJ9Zg==">
+          <Channel Name="Status" StartBit="0" EndBit="15" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Speed Actual" StartBit="16" EndBit="31" Type="ChannelInt32SignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Actual PZD3" StartBit="32" EndBit="47" Type="ChannelInt32SignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Actual PZD4" StartBit="48" EndBit="63" Type="ChannelInt32SignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Actual PZD5" StartBit="64" EndBit="79" Type="ChannelInt32SignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Actual PZD6" StartBit="80" EndBit="95" Type="ChannelInt32SignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </InputArea>
+        <OutputArea AreaByteSize="12" GSDMLHash="KN4kzr3w171FSoGSLgytWQ==">
+          <Channel Name="Command" StartBit="0" EndBit="15" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Speed Reference" StartBit="16" EndBit="31" Type="ChannelSInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Reference PZD3" StartBit="32" EndBit="47" Type="ChannelSInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Reference PZD4" StartBit="48" EndBit="63" Type="ChannelSInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Reference PZD5" StartBit="64" EndBit="79" Type="ChannelSInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Reference PZD6" StartBit="80" EndBit="95" Type="ChannelSInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </OutputArea>
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="1dbad18d-5845-4b65-8634-a28f9fca5a8f" hwGsdmlUnitID="MOD_ID_MODULE_PPO6" description="PPO Type 6" information="PPO Type 6" icon="ProtocolType" />
+    <HardwareUnit guid="2b0f9996-a999-422c-93b1-e41e9be72748" hwGsdmlUnitID="VSM_ID_SUBMOD_PPO6_MOD_ID_MODULE_PPO6" description="PPO6 Data Object" information="Control/Reference, Status/Actual values + 8 IN/OUT words" icon="ProtocolType">
+      <Channels>
+        <InputArea AreaByteSize="20" GSDMLHash="HXgm6bau40Ts541KjHfGHA==">
+          <Channel Name="Status" StartBit="0" EndBit="15" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Speed Actual" StartBit="16" EndBit="31" Type="ChannelInt32SignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Actual PZD3" StartBit="32" EndBit="47" Type="ChannelInt32SignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Actual PZD4" StartBit="48" EndBit="63" Type="ChannelInt32SignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Actual PZD5" StartBit="64" EndBit="79" Type="ChannelInt32SignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Actual PZD6" StartBit="80" EndBit="95" Type="ChannelInt32SignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Actual PZD7" StartBit="96" EndBit="111" Type="ChannelInt32SignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Actual PZD8" StartBit="112" EndBit="127" Type="ChannelInt32SignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Actual PZD9" StartBit="128" EndBit="143" Type="ChannelInt32SignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Actual PZD10" StartBit="144" EndBit="159" Type="ChannelInt32SignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </InputArea>
+        <OutputArea AreaByteSize="20" GSDMLHash="Y8oKyG65ooDLKWeraf/rgA==">
+          <Channel Name="Command" StartBit="0" EndBit="15" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Speed Reference" StartBit="16" EndBit="31" Type="ChannelSInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Reference PZD3" StartBit="32" EndBit="47" Type="ChannelSInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Reference PZD4" StartBit="48" EndBit="63" Type="ChannelSInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Reference PZD5" StartBit="64" EndBit="79" Type="ChannelSInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Reference PZD6" StartBit="80" EndBit="95" Type="ChannelSInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Reference PZD7" StartBit="96" EndBit="111" Type="ChannelSInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Reference PZD8" StartBit="112" EndBit="127" Type="ChannelSInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Reference PZD9" StartBit="128" EndBit="143" Type="ChannelSInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Reference PZD10" StartBit="144" EndBit="159" Type="ChannelSInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </OutputArea>
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="bace5b54-05f7-47a8-b972-5ada6eccec8e" hwGsdmlUnitID="MOD_ID_MODULE_PPO7" description="PPO Type 7" information="PPO Type 7" icon="ProtocolType" />
+    <HardwareUnit guid="50826826-daf3-4f0f-a1e5-19c3fb4ca5fa" hwGsdmlUnitID="VSM_ID_SUBMOD_PPO7_MOD_ID_MODULE_PPO7" description="PPO7 Data Object" information="Control/Reference, Status/Actual values + 10 IN/OUT words" icon="ProtocolType">
+      <Channels>
+        <InputArea AreaByteSize="24" GSDMLHash="2BF2yLPtiNga3Yte1oLuaA==">
+          <Channel Name="Status" StartBit="0" EndBit="15" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Speed Actual" StartBit="16" EndBit="31" Type="ChannelInt32SignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Actual PZD3" StartBit="32" EndBit="47" Type="ChannelInt32SignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Actual PZD4" StartBit="48" EndBit="63" Type="ChannelInt32SignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Actual PZD5" StartBit="64" EndBit="79" Type="ChannelInt32SignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Actual PZD6" StartBit="80" EndBit="95" Type="ChannelInt32SignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Actual PZD7" StartBit="96" EndBit="111" Type="ChannelInt32SignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Actual PZD8" StartBit="112" EndBit="127" Type="ChannelInt32SignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Actual PZD9" StartBit="128" EndBit="143" Type="ChannelInt32SignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Actual PZD10" StartBit="144" EndBit="159" Type="ChannelInt32SignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Actual PZD11" StartBit="160" EndBit="175" Type="ChannelInt32SignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Actual PZD12" StartBit="176" EndBit="191" Type="ChannelInt32SignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </InputArea>
+        <OutputArea AreaByteSize="24" GSDMLHash="zGl27VUg0nLcmj/QsjbYhQ==">
+          <Channel Name="Command" StartBit="0" EndBit="15" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Speed Reference" StartBit="16" EndBit="31" Type="ChannelSInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Reference PZD3" StartBit="32" EndBit="47" Type="ChannelSInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Reference PZD4" StartBit="48" EndBit="63" Type="ChannelSInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Reference PZD5" StartBit="64" EndBit="79" Type="ChannelSInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Reference PZD6" StartBit="80" EndBit="95" Type="ChannelSInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Reference PZD7" StartBit="96" EndBit="111" Type="ChannelSInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Reference PZD8" StartBit="112" EndBit="127" Type="ChannelSInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Reference PZD9" StartBit="128" EndBit="143" Type="ChannelSInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Reference PZD10" StartBit="144" EndBit="159" Type="ChannelSInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Reference PZD11" StartBit="160" EndBit="175" Type="ChannelSInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Reference PZD12" StartBit="176" EndBit="191" Type="ChannelSInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </OutputArea>
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="f5fe7590-e043-4c45-80ea-0d662bced9d9" hwGsdmlUnitID="MOD_ID_MODULE_SAFETY_ABB_PS1" description="PROFIsafe ABB_PS1" information="PROFIsafe ABB_PS1" icon="RackIOType" />
+    <HardwareUnit guid="0f838375-1a4a-429c-87f7-ca08d050dd03" hwGsdmlUnitID="VSM_ID_SUBMOD_SAFETY_ABB_PS1_MOD_ID_MODULE_SAFETY_ABB_PS1" description="F-Parameters_SUB_ID_SUBMOD_SAFETY_ABB_PS1_MOD_ID_MODULE_SAFETY_ABB_PS1" information="PROFIsafe F-Parameters" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="12" GSDMLHash="2TuJe7C6PLn4oMOCtm6P0g==">
+          <Channel Name="SLS2 state" StartBit="15" EndBit="15" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="SLS1 state" StartBit="14" EndBit="14" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="SOS active" StartBit="13" EndBit="13" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="SS2 active" StartBit="12" EndBit="12" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="SS1 active" StartBit="11" EndBit="11" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="SSE active" StartBit="10" EndBit="10" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="SBC active" StartBit="9" EndBit="9" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="STO active" StartBit="8" EndBit="8" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="SAR5 monitor active" StartBit="7" EndBit="7" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="SAR4 monitor active" StartBit="6" EndBit="6" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="SAR3 monitor active" StartBit="5" EndBit="5" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="SAR2 monitor active" StartBit="4" EndBit="4" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="SAR1 monitor active" StartBit="3" EndBit="3" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="SAR0 monitor active" StartBit="2" EndBit="2" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="SLS4 state" StartBit="1" EndBit="1" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="SLS3 state" StartBit="0" EndBit="0" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Speed feedback type" StartBit="31" EndBit="31" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="SMS state" StartBit="30" EndBit="30" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="SSM4 state" StartBit="29" EndBit="29" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="SSM3 state" StartBit="28" EndBit="28" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="SSM2 state" StartBit="27" EndBit="27" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="SSM1 state" StartBit="26" EndBit="26" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="SDI N state" StartBit="25" EndBit="25" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="SDI P state" StartBit="24" EndBit="24" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Safe input x114 4" StartBit="23" EndBit="23" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Safe input x114 3" StartBit="22" EndBit="22" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Safe input x114 2" StartBit="21" EndBit="21" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Safe input x114 1" StartBit="20" EndBit="20" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Safe input x113 4" StartBit="19" EndBit="19" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Safe input x113 3" StartBit="18" EndBit="18" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Safe input x113 2" StartBit="17" EndBit="17" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Safe input x113 1" StartBit="16" EndBit="16" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Variable SLS state" StartBit="47" EndBit="47" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="POUS active" StartBit="46" EndBit="46" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Safe output x114 9" StartBit="45" EndBit="45" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Safe output x114 8" StartBit="44" EndBit="44" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Safe output x114 7" StartBit="43" EndBit="43" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Safe output x113 9" StartBit="42" EndBit="42" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Safe output x113 8" StartBit="41" EndBit="41" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Safe output x113 7" StartBit="40" EndBit="40" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="SF end ack req" StartBit="39" EndBit="39" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="SF end ack req local" StartBit="38" EndBit="38" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="STO control active" StartBit="37" EndBit="37" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Speed value valid" StartBit="36" EndBit="36" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="FSO state" StartBit="35" EndBit="35" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="FSO mode0" StartBit="34" EndBit="34" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="FSO mode1" StartBit="33" EndBit="33" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Modulating" StartBit="32" EndBit="32" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="ABB_PS1 In Safe Speed" StartBit="48" EndBit="63" Type="ChannelInt32SignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="PROFIsafe F Message trailer_1" StartBit="64" EndBit="71" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="PROFIsafe F Message trailer_2" StartBit="72" EndBit="79" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="PROFIsafe F Message trailer_3" StartBit="80" EndBit="87" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="PROFIsafe F Message trailer_4" StartBit="88" EndBit="95" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="ABB_PS1 In0" StartBit="0" EndBit="15" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="ABB_PS1 In1" StartBit="16" EndBit="31" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="ABB_PS1 In2" StartBit="32" EndBit="47" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </InputArea>
+        <OutputArea AreaByteSize="10" GSDMLHash="tnBrUY6hOLo/xh93D/r85w==">
+          <Channel Name="SLS2 request" StartBit="15" EndBit="15" Type="ChannelBitBoolean" />
+          <Channel Name="SLS1 request" StartBit="14" EndBit="14" Type="ChannelBitBoolean" />
+          <Channel Name="SOS request" StartBit="13" EndBit="13" Type="ChannelBitBoolean" />
+          <Channel Name="SS2 request" StartBit="12" EndBit="12" Type="ChannelBitBoolean" />
+          <Channel Name="SS1 request" StartBit="11" EndBit="11" Type="ChannelBitBoolean" />
+          <Channel Name="SSE request" StartBit="10" EndBit="10" Type="ChannelBitBoolean" />
+          <Channel Name="POUS request" StartBit="9" EndBit="9" Type="ChannelBitBoolean" />
+          <Channel Name="STO request" StartBit="8" EndBit="8" Type="ChannelBitBoolean" />
+          <Channel Name="SDI N request" StartBit="7" EndBit="7" Type="ChannelBitBoolean" />
+          <Channel Name="SDI P request" StartBit="6" EndBit="6" Type="ChannelBitBoolean" />
+          <Channel Name="SAR5 request" StartBit="5" EndBit="5" Type="ChannelBitBoolean" />
+          <Channel Name="SAR4 request" StartBit="4" EndBit="4" Type="ChannelBitBoolean" />
+          <Channel Name="SAR3 request" StartBit="3" EndBit="3" Type="ChannelBitBoolean" />
+          <Channel Name="SAR2 request" StartBit="2" EndBit="2" Type="ChannelBitBoolean" />
+          <Channel Name="SLS4 request" StartBit="1" EndBit="1" Type="ChannelBitBoolean" />
+          <Channel Name="SLS3 request" StartBit="0" EndBit="0" Type="ChannelBitBoolean" />
+          <Channel Name="Variable SLS request" StartBit="31" EndBit="31" Type="ChannelBitBoolean" />
+          <Channel Name="Reserved out1 1" StartBit="30" EndBit="30" Type="ChannelBitBoolean" />
+          <Channel Name="SF end ack" StartBit="29" EndBit="29" Type="ChannelBitBoolean" />
+          <Channel Name="Reserved out1 3" StartBit="28" EndBit="28" Type="ChannelBitBoolean" />
+          <Channel Name="SSM4 request" StartBit="27" EndBit="27" Type="ChannelBitBoolean" />
+          <Channel Name="SSM3 request" StartBit="26" EndBit="26" Type="ChannelBitBoolean" />
+          <Channel Name="SSM2 request" StartBit="25" EndBit="25" Type="ChannelBitBoolean" />
+          <Channel Name="SSM1 request" StartBit="24" EndBit="24" Type="ChannelBitBoolean" />
+          <Channel Name="Safe output x114 9 control" StartBit="23" EndBit="23" Type="ChannelBitBoolean" />
+          <Channel Name="Safe output x114 8 control" StartBit="22" EndBit="22" Type="ChannelBitBoolean" />
+          <Channel Name="Safe output x114 7 control" StartBit="21" EndBit="21" Type="ChannelBitBoolean" />
+          <Channel Name="Safe output x113 9 control" StartBit="20" EndBit="20" Type="ChannelBitBoolean" />
+          <Channel Name="Safe output x113 8 control" StartBit="19" EndBit="19" Type="ChannelBitBoolean" />
+          <Channel Name="Safe output x113 7 control" StartBit="18" EndBit="18" Type="ChannelBitBoolean" />
+          <Channel Name="Negative scaling" StartBit="17" EndBit="17" Type="ChannelBitBoolean" />
+          <Channel Name="Positive scaling" StartBit="16" EndBit="16" Type="ChannelBitBoolean" />
+          <Channel Name="ABB_PS1 Out VarSLSLimit" StartBit="32" EndBit="47" Type="ChannelSInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="PROFIsafe F Message trailer_1" StartBit="48" EndBit="55" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="PROFIsafe F Message trailer_2" StartBit="56" EndBit="63" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="PROFIsafe F Message trailer_3" StartBit="64" EndBit="71" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="PROFIsafe F Message trailer_4" StartBit="72" EndBit="79" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="ABB_PS1 Out0" StartBit="0" EndBit="15" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="ABB_PS1 Out1" StartBit="16" EndBit="31" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </OutputArea>
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="ccc1d443-c1a7-431e-9b59-5611fbf0a6ca" hwGsdmlUnitID="MOD_ID_MODULE_SAFETY_ABB_PS2" description="PROFIsafe ABB_PS2" information="PROFIsafe ABB_PS2" icon="RackIOType" />
+    <HardwareUnit guid="5c0be4a0-b013-49f0-999f-c4c8be1e603b" hwGsdmlUnitID="VSM_ID_SUBMOD_SAFETY_ABB_PS2_MOD_ID_MODULE_SAFETY_ABB_PS2" description="F-Parameters_SUB_ID_SUBMOD_SAFETY_ABB_PS2_MOD_ID_MODULE_SAFETY_ABB_PS2" information="PROFIsafe F-Parameters" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="14" GSDMLHash="6H8EwpmBobTFJ8X88I4hag==">
+          <Channel Name="SLS2 state" StartBit="15" EndBit="15" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="SLS1 state" StartBit="14" EndBit="14" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="SOS active" StartBit="13" EndBit="13" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="SS2 active" StartBit="12" EndBit="12" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="SS1 active" StartBit="11" EndBit="11" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="SSE active" StartBit="10" EndBit="10" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="SBC active" StartBit="9" EndBit="9" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="STO active" StartBit="8" EndBit="8" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="SAR5 monitor active" StartBit="7" EndBit="7" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="SAR4 monitor active" StartBit="6" EndBit="6" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="SAR3 monitor active" StartBit="5" EndBit="5" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="SAR2 monitor active" StartBit="4" EndBit="4" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="SAR1 monitor active" StartBit="3" EndBit="3" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="SAR0 monitor active" StartBit="2" EndBit="2" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="SLS4 state" StartBit="1" EndBit="1" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="SLS3 state" StartBit="0" EndBit="0" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Speed feedback type" StartBit="31" EndBit="31" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="SMS state" StartBit="30" EndBit="30" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="SSM4 state" StartBit="29" EndBit="29" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="SSM3 state" StartBit="28" EndBit="28" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="SSM2 state" StartBit="27" EndBit="27" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="SSM1 state" StartBit="26" EndBit="26" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="SDI N state" StartBit="25" EndBit="25" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="SDI P state" StartBit="24" EndBit="24" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Safe input x114 4" StartBit="23" EndBit="23" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Safe input x114 3" StartBit="22" EndBit="22" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Safe input x114 2" StartBit="21" EndBit="21" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Safe input x114 1" StartBit="20" EndBit="20" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Safe input x113 4" StartBit="19" EndBit="19" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Safe input x113 3" StartBit="18" EndBit="18" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Safe input x113 2" StartBit="17" EndBit="17" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Safe input x113 1" StartBit="16" EndBit="16" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Variable SLS state" StartBit="47" EndBit="47" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="POUS active" StartBit="46" EndBit="46" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Safe output x114 9" StartBit="45" EndBit="45" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Safe output x114 8" StartBit="44" EndBit="44" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Safe output x114 7" StartBit="43" EndBit="43" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Safe output x113 9" StartBit="42" EndBit="42" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Safe output x113 8" StartBit="41" EndBit="41" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Safe output x113 7" StartBit="40" EndBit="40" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="SF end ack req" StartBit="39" EndBit="39" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="SF end ack req local" StartBit="38" EndBit="38" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="STO control active" StartBit="37" EndBit="37" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Speed and position value valid" StartBit="36" EndBit="36" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="FSO state" StartBit="35" EndBit="35" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="FSO mode0" StartBit="34" EndBit="34" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="FSO mode1" StartBit="33" EndBit="33" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Modulating" StartBit="32" EndBit="32" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="ABB_PS2 In Safe Speed" StartBit="48" EndBit="63" Type="ChannelInt32SignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="ABB_PS2 In Safe Position" StartBit="64" EndBit="79" Type="ChannelInt32SignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="PROFIsafe F Message trailer_1" StartBit="80" EndBit="87" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="PROFIsafe F Message trailer_2" StartBit="88" EndBit="95" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="PROFIsafe F Message trailer_3" StartBit="96" EndBit="103" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="PROFIsafe F Message trailer_4" StartBit="104" EndBit="111" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="ABB_PS2 In0" StartBit="0" EndBit="15" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="ABB_PS2 In1" StartBit="16" EndBit="31" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="ABB_PS2 In2" StartBit="32" EndBit="47" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </InputArea>
+        <OutputArea AreaByteSize="10" GSDMLHash="QBhr1JFTmBAkL5m4Hq5/Bw==">
+          <Channel Name="SLS2 request" StartBit="15" EndBit="15" Type="ChannelBitBoolean" />
+          <Channel Name="SLS1 request" StartBit="14" EndBit="14" Type="ChannelBitBoolean" />
+          <Channel Name="SOS request" StartBit="13" EndBit="13" Type="ChannelBitBoolean" />
+          <Channel Name="SS2 request" StartBit="12" EndBit="12" Type="ChannelBitBoolean" />
+          <Channel Name="SS1 request" StartBit="11" EndBit="11" Type="ChannelBitBoolean" />
+          <Channel Name="SSE request" StartBit="10" EndBit="10" Type="ChannelBitBoolean" />
+          <Channel Name="POUS request" StartBit="9" EndBit="9" Type="ChannelBitBoolean" />
+          <Channel Name="STO request" StartBit="8" EndBit="8" Type="ChannelBitBoolean" />
+          <Channel Name="SDI N request" StartBit="7" EndBit="7" Type="ChannelBitBoolean" />
+          <Channel Name="SDI P request" StartBit="6" EndBit="6" Type="ChannelBitBoolean" />
+          <Channel Name="SAR5 request" StartBit="5" EndBit="5" Type="ChannelBitBoolean" />
+          <Channel Name="SAR4 request" StartBit="4" EndBit="4" Type="ChannelBitBoolean" />
+          <Channel Name="SAR3 request" StartBit="3" EndBit="3" Type="ChannelBitBoolean" />
+          <Channel Name="SAR2 request" StartBit="2" EndBit="2" Type="ChannelBitBoolean" />
+          <Channel Name="SLS4 request" StartBit="1" EndBit="1" Type="ChannelBitBoolean" />
+          <Channel Name="SLS3 request" StartBit="0" EndBit="0" Type="ChannelBitBoolean" />
+          <Channel Name="Variable SLS request" StartBit="31" EndBit="31" Type="ChannelBitBoolean" />
+          <Channel Name="Reserved out1 1" StartBit="30" EndBit="30" Type="ChannelBitBoolean" />
+          <Channel Name="SF end ack" StartBit="29" EndBit="29" Type="ChannelBitBoolean" />
+          <Channel Name="Reserved out1 3" StartBit="28" EndBit="28" Type="ChannelBitBoolean" />
+          <Channel Name="SSM4 request" StartBit="27" EndBit="27" Type="ChannelBitBoolean" />
+          <Channel Name="SSM3 request" StartBit="26" EndBit="26" Type="ChannelBitBoolean" />
+          <Channel Name="SSM2 request" StartBit="25" EndBit="25" Type="ChannelBitBoolean" />
+          <Channel Name="SSM1 request" StartBit="24" EndBit="24" Type="ChannelBitBoolean" />
+          <Channel Name="Safe output x114 9 control" StartBit="23" EndBit="23" Type="ChannelBitBoolean" />
+          <Channel Name="Safe output x114 8 control" StartBit="22" EndBit="22" Type="ChannelBitBoolean" />
+          <Channel Name="Safe output x114 7 control" StartBit="21" EndBit="21" Type="ChannelBitBoolean" />
+          <Channel Name="Safe output x113 9 control" StartBit="20" EndBit="20" Type="ChannelBitBoolean" />
+          <Channel Name="Safe output x113 8 control" StartBit="19" EndBit="19" Type="ChannelBitBoolean" />
+          <Channel Name="Safe output x113 7 control" StartBit="18" EndBit="18" Type="ChannelBitBoolean" />
+          <Channel Name="Negative scaling" StartBit="17" EndBit="17" Type="ChannelBitBoolean" />
+          <Channel Name="Positive scaling" StartBit="16" EndBit="16" Type="ChannelBitBoolean" />
+          <Channel Name="ABB_PS2 Out VarSLSLimit" StartBit="32" EndBit="47" Type="ChannelSInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="PROFIsafe F Message trailer_1" StartBit="48" EndBit="55" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="PROFIsafe F Message trailer_2" StartBit="56" EndBit="63" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="PROFIsafe F Message trailer_3" StartBit="64" EndBit="71" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="PROFIsafe F Message trailer_4" StartBit="72" EndBit="79" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="ABB_PS2 Out0" StartBit="0" EndBit="15" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="ABB_PS2 Out1" StartBit="16" EndBit="31" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </OutputArea>
+      </Channels>
+    </HardwareUnit>
+    <HwdGlobalSettings MaxNumberSubUnits="65536" />
+  </Hwd>
+  <SessionDataVersion>1</SessionDataVersion>
+  <ChannelNumberBase>0</ChannelNumberBase>
+  <SessionID>d83db8e3-1aff-4b36-973c-5686cf5439c9</SessionID>
+  <DIW_BLOB_Version>1</DIW_BLOB_Version>
+  <DeviceIdentity VendorId="0x001A" DeviceId="0x0004" />
+  <HWDHeaderComment>Created : 2019-05-23 10:25</HWDHeaderComment>
+</DeviceImportWizard>

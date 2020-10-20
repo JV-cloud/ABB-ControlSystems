@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-16"?><FunctionBlockType xmlns="CBSourceCodeSchema3_0" Name="MBWrite" Protected="1" Hidden="0" Scope="public" Guid="f0b13837-1731-4711-b488-94e15273e0b7" InternalChangeTime="2012-01-26-14:26:40.012" BuildVersion="6.0.300.21" SaveDate="2019-09-18-05:56:53.025" CodePage="1252" InteractionWindow="" AlarmOwner="0" InstantiateAsAspectObject="0" SILLevel="NonSIL" RestrictedSIL="0" SimulationMark="0" EmbeddedGraphicsVisible="0"><Parameters><Parameter Name="Id" Type="Comm_Channel_MB" TypeGuid="ac112221-566e-44c1-9932-83c4db33e0e1" AccessLevel="Read Only" SafetyType="None" Attribute="" InitialValue="" ReadPermission="" WritePermission="" AuthenticationLevel="None" Direction="in_out" FDPort="yes left"><Description>IN (OUT) Communication channel, has to be connected to the Id- par. of the Connect- FB</Description></Parameter><Parameter Name="Req" Type="bool" TypeGuid="fcc571cc-3a50-4ec6-9241-0726a148299b" AccessLevel="Read Only" SafetyType="None" Attribute="retain" InitialValue="false" ReadPermission="" WritePermission="Administrate" AuthenticationLevel="None" Direction="in" FDPort="yes"><Description>Requests one operation on positive edge, True</Description></Parameter><Parameter Name="StartAddr" Type="string[40]" TypeGuid="49d3a1c9-a834-46c6-9f71-88a69e045a5d" AccessLevel="Read Only" SafetyType="None" Attribute="retain" InitialValue="" ReadPermission="" WritePermission="Administrate" AuthenticationLevel="None" Direction="in" FDPort="no"><Description>EDIT, the name of the "StartAddress" in remote system</Description></Parameter><Parameter Name="Done" Type="bool" TypeGuid="fcc571cc-3a50-4ec6-9241-0726a148299b" AccessLevel="Read Only" SafetyType="None" Attribute="retain" InitialValue="" ReadPermission="" WritePermission="Administrate" AuthenticationLevel="None" Direction="out" FDPort="yes"><Description>True when requested operation is done successfully</Description></Parameter><Parameter Name="Error" Type="bool" TypeGuid="fcc571cc-3a50-4ec6-9241-0726a148299b" AccessLevel="Read Only" SafetyType="None" Attribute="retain" InitialValue="" ReadPermission="" WritePermission="Administrate" AuthenticationLevel="None" Direction="out" FDPort="yes"><Description>Indicates an error with True. Status parameter &lt; 0</Description></Parameter><Parameter Name="Status" Type="dint" TypeGuid="d59be854-1395-4e4f-9cf6-6a4ba4ccdc98" AccessLevel="Read Only" SafetyType="None" Attribute="retain" InitialValue="1" ReadPermission="" WritePermission="Administrate" AuthenticationLevel="None" Direction="out" FDPort="no"><Description>Status code of last execution, operation successful 1, pending 0, errors &lt; 0, warnings &gt; 1</Description></Parameter></Parameters><ExtensibleParameters><ExtensibleParameter Name="Sd" Type="AnyType" TypeGuid="94d92390-9492-4e73-8023-b3040c7d6591" AccessLevel="Read Only" SafetyType="None" Attribute="" InitialValue="" Direction="in_out" FDPort="yes"><Description>IN "Variable_n" to be transfered</Description></ExtensibleParameter></ExtensibleParameters><Variables><Variable Name="AccessData" Type="MBAccessData" TypeGuid="c6d8beb7-5097-4e43-8aaf-1d90554691f8" AccessLevel="Read Only" SafetyType="None" Attribute="retain" InitialValue="" ReadPermission="" WritePermission="" AuthenticationLevel="None"><Description>Variable of structured type, used to assign specific in data for actual protocol</Description></Variable><Variable Name="AsyncStatus" Type="dint" TypeGuid="d59be854-1395-4e4f-9cf6-6a4ba4ccdc98" AccessLevel="Read Only" SafetyType="None" Attribute="" InitialValue="1" ReadPermission="" WritePermission="" AuthenticationLevel="None"><Description>Used to derive the result of asynchronous function calls</Description></Variable><Variable Name="DebugStatus" Type="dint" TypeGuid="d59be854-1395-4e4f-9cf6-6a4ba4ccdc98" AccessLevel="Read Only" SafetyType="None" Attribute="" InitialValue="1" ReadPermission="" WritePermission="" AuthenticationLevel="None"><Description>Used to derive the result of synchronous function calls</Description></Variable><Variable Name="GroupIsDefined" Type="bool" TypeGuid="fcc571cc-3a50-4ec6-9241-0726a148299b" AccessLevel="Read Only" SafetyType="None" Attribute="" InitialValue="" ReadPermission="" WritePermission="" AuthenticationLevel="None"/><Variable Name="i" Type="dint" TypeGuid="d59be854-1395-4e4f-9cf6-6a4ba4ccdc98" AccessLevel="Read Only" SafetyType="None" Attribute="" InitialValue="" ReadPermission="" WritePermission="" AuthenticationLevel="None"/><Variable Name="MessageReference" Type="tObject" TypeGuid="d07ca5b9-7c97-4b0c-abcf-699a0d8aa2d6" AccessLevel="Read Only" SafetyType="None" Attribute="" InitialValue="" ReadPermission="" WritePermission="" AuthenticationLevel="None"/><Variable Name="PrgStep" Type="dint" TypeGuid="d59be854-1395-4e4f-9cf6-6a4ba4ccdc98" AccessLevel="Read Only" SafetyType="None" Attribute="" InitialValue="100" ReadPermission="" WritePermission="" AuthenticationLevel="None"><Description>Current step of the state machine, init step set to value "100"</Description></Variable><Variable Name="PrgStepRetain" Type="dint" TypeGuid="d59be854-1395-4e4f-9cf6-6a4ba4ccdc98" AccessLevel="Read Only" SafetyType="None" Attribute="retain" InitialValue="" ReadPermission="" WritePermission="" AuthenticationLevel="None"><Description>Last step, used when power is back to generate an error</Description></Variable><Variable Name="Req_Old" Type="bool" TypeGuid="fcc571cc-3a50-4ec6-9241-0726a148299b" AccessLevel="Read Only" SafetyType="None" Attribute="hidden" InitialValue="" ReadPermission="" WritePermission="" AuthenticationLevel="None"><Description>Used to create the edge- detection of the Req -parameter</Description></Variable><Variable Name="ReqWasInterrupted" Type="bool" TypeGuid="fcc571cc-3a50-4ec6-9241-0726a148299b" AccessLevel="Read Only" SafetyType="None" Attribute="retain" InitialValue="" ReadPermission="" WritePermission="" AuthenticationLevel="None"/><Variable Name="Valid_Old" Type="bool" TypeGuid="fcc571cc-3a50-4ec6-9241-0726a148299b" AccessLevel="Read Only" SafetyType="None" Attribute="retain" InitialValue="" ReadPermission="" WritePermission="" AuthenticationLevel="None"><Description>Used to create the edge- detection of the Valid component</Description></Variable></Variables><ExternalVariables/><FunctionBlocks/><ControlModules/><CodeBlocks><STCodeBlock Name="Kod"><ST_Code>(# This function block is a template for construction of an asynchronous write
+   function block supporting an address- orientated protocol.
+
+
+   The program is built up of a "state machine" an contains following steps:
+
+
+   Step 100  - Initial Step
+
+   Step 200  - Create the message group
+
+   Step 300  - Add the (multi) parameters to be read in the message group
+               Create some structures in the first request
+
+   Step 350  - Wait for the asynchronous result of the creates structures
+               in preceding step
+
+   Step 400  - In first step, pack the data to be written. In next step
+               trig the Write/Read- Operation for the read of variable-
+               status
+
+   Step 500  - Check the (async)status after the Read- operation is trigged
+
+   Step 900  - When Error, update Status with current value
+
+   Step 1000 - Conclude the last pending operation
+
+ #)
+
+
+
+(* ============  The Write function block  =========== *)
+
+
+
+(* Reset the Out- parameters each scan to achieve a pulse *)
+
+Done := False;
+Error:= False;
+
+
+(* If there was a pending operation when the power failed. Set the
+   error parameter to value True at first scan after restart.
+   Note that the Error parameter is set to value True even after
+   a program change in connection to warmstart. This is handled
+   by the ordinary "Stopping Program" routines. *)
+
+IF PrgStepRetain &lt;&gt; 100 and FirstScanAfterPowerUp() then
+
+   (* There has been an iterupted operation *)
+   ReqWasInterrupted := True;
+
+END_IF;
+
+
+IF Id.Valid THEN
+
+   IF  NOT Valid_Old THEN
+       PrgStep := 100;
+       IF GroupIsDefined THEN
+          IF GCMessageStatus(MessageRef := MessageReference) = -6808 THEN
+             GroupIsDefined := False;
+          END_IF;
+       END_IF;
+   END_IF;
+
+
+   IF ReqWasInterrupted then
+
+      (* IF Request was interupted generate an error code *)
+      DebugStatus := -5331;
+      PrgStep := 900;
+      ReqWasInterrupted:=false;
+
+   END_IF;
+
+
+
+   (* Step 100 - The initial Step of the sequence *)
+
+   IF PrgStep = 100 AND Req AND NOT Req_Old  THEN
+
+      Status := 0;
+
+      (* If Group already is defined, skip the define section *)
+
+      IF GroupIsDefined THEN
+
+         PrgStep := 400;
+
+      ELSE
+
+         (* If Group not is defined, go to the "Create Message" step *)
+
+         PrgStep := 200;
+
+      END_IF;
+
+   END_IF;
+
+
+
+   (* Step 200 - Create the message group to be written *)
+
+   IF PrgStep = 200 THEN
+
+      (# REMARK!
+
+      The "RequestType" argument is set to "0" to establish a writeoperation.
+
+      Adapt the ProtocolData of the "TemplateCreateMessProtDataAddr" data type,
+      i.e. sometimes the user has to delete alternatively add own components
+      which furthermore has to be assigned
+      #)
+
+      AccessData.StartAddr := StartAddr;
+
+      GCCreateMessage(ConnectRef := Id.Reference,
+                      MessageRef := MessageReference,
+                      RequestType := 0,
+                      MultiSize := MultiSize,
+                      AccessData := AccessData,
+                      DebugStatus := DebugStatus);
+
+      IF DebugStatus = 1 THEN
+
+         (* Operation success *)        
+         PrgStep := 300;         
+
+      ELSE
+
+         (* Permanent error *)
+         PrgStep := 900;
+
+      END_IF;
+
+      i := 1;
+
+   END_IF;
+
+
+
+
+   (* Step 300 - Add the data multi- parameters to be written in the message
+                 group *)
+
+   IF PrgStep = 300 THEN
+
+      WHILE i &lt;= MultiSize DO
+
+         GCAppendMessage( MessageRef := MessageReference, 
+                          Index := i, 
+                          DataToTransfer := Sd[i], 
+                          DebugStatus := DebugStatus );
+
+         IF DebugStatus = 1 AND i = MultiSize THEN
+
+            (* Operation success, call the GCAsyncOp function to get
+               the result of the creation of the structures which was
+               initiated in the AppendMessage step *)
+
+            GCAsyncOp(MessageRef := MessageReference,
+                      DebugStatus := DebugStatus);
+
+            IF DebugStatus = 1 THEN
+
+               (* Operation success *)  
+
+               PrgStep := 350;
+
+            ELSE
+
+               (* Permanent error *)
+               PrgStep := 900;
+            END_IF;  
+
+
+         ELSIF DebugStatus &lt; 0 THEN
+
+            (* Permanent error *)
+            PrgStep := 900; 
+            EXIT;                
+
+         END_IF;
+
+         i := i + 1;
+
+      END_WHILE;
+
+
+   END_IF;
+
+
+
+   (* Step 350 - Wait for the asynchronous result of the created
+      structures in preceding step *)
+
+   IF PrgStep = 350 THEN
+
+      AsyncStatus := GCMessageStatus(MessageRef := MessageReference);
+
+      IF AsyncStatus = 1 THEN
+
+         (* Operation success *)
+         GroupIsDefined := True;                          
+         PrgStep := 400;
+
+      ELSIF AsyncStatus &lt; 0 THEN
+
+         (* Permanent error *)                        
+         PrgStep := 900;
+
+      END_IF;
+
+   END_IF;
+
+
+   (* Step 400 - Trig the Write/Read- Operation for the write of variable-
+                 status *)
+
+   IF PrgStep = 400 THEN
+
+      i := 1;
+
+      WHILE  i &lt;= MultiSize DO
+
+         GCPackData( MessageRef := MessageReference, 
+                     Index := i);
+         i := i + 1;
+
+      END_WHILE;
+
+
+      GCRWReq(MessageRef := MessageReference,
+              DebugStatus := DebugStatus);
+
+
+      IF DebugStatus = 1 THEN
+
+         (* Operation success *)        
+         PrgStep := 500;         
+
+      ELSE
+
+         (* Permanent error *)
+         PrgStep := 900;
+
+      END_IF;                           
+
+   END_IF;
+
+
+   (* Step 500 - Wait for the returned result/async- status after the
+                 Write/Read- Operation has been called *)
+
+   IF PrgStep = 500 THEN
+
+      AsyncStatus := GCMessageStatus(MessageRef := MessageReference);
+
+      (* The result of a Asynchronous  operation:
+
+         0 = Pending operation 
+         1 = Succeed
+        &lt;0 = Any error
+      *)
+
+      IF AsyncStatus = 1 THEN
+
+         (* Operation success *)                 
+         Status := 1;
+         Done := True;                    
+         PrgStep := 100;                   
+
+      ELSIF AsyncStatus &lt; 0 THEN
+
+         (* Permanent error *)                        
+         PrgStep := 900;
+
+      END_IF;
+
+   END_IF;
+
+
+
+
+   (* Step 900 - If an error occures, update Status- parameter with current
+                 value and return to Initial step 100*)
+
+   IF PrgStep = 900 THEN
+
+      IF DebugStatus &lt; 0 THEN
+
+         Status := Debugstatus;
+
+      ELSE
+
+         Status := AsyncStatus;
+
+      END_IF;
+
+   Error := True;
+   PrgStep := 100;
+
+   END_IF;
+
+
+ELSIF Req AND NOT Req_Old THEN
+
+   (* Request is performed without any established connection, i.e.
+      Id.Valid is equal to value False *)
+
+   Status := -5324;
+   Error := True;
+
+ELSIF Valid_Old AND PrgStep &lt;&gt; 100 THEN
+
+   IF PrgStep = 500 THEN
+      PrgStep := 1000;
+
+   ELSE
+      Status := -5325;
+      Error := True;
+      PrgStep := 100;
+   END_IF;
+
+END_IF;
+
+
+(* Step 1000 - Conclude the last pending operation, N.B. The result of this
+   operation has to be interpreted as an error *)
+
+IF PrgStep = 1000 THEN
+
+   AsyncStatus := GCMessageStatus(MessageRef := MessageReference);
+   IF AsyncStatus &lt;&gt; 0 THEN
+
+      (* Operation concluded *)
+      Status := -5325;
+      Error := True;
+      PrgStep := 100;
+
+   END_IF;
+
+END_IF;
+
+
+Req_Old := Req;
+
+Valid_Old := Id.Valid;
+
+(* Remember the last step after the power has failed *)
+PrgStepRetain := PrgStep;
+
+
+</ST_Code></STCodeBlock></CodeBlocks><Description>The MBWrite function block supports the address-oriented transfer model.
+You can use it to write to one or several variables in another system.</Description><CheckSum Value="55582"/></FunctionBlockType>

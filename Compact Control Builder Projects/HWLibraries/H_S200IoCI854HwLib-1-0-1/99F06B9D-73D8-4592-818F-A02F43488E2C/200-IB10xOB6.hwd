@@ -1,0 +1,267 @@
+HWUnitInfo (* 200-IB10xOB6 / ProfiBusDP - Full Format *)
+   HWUnitID {E2ACC841-E273-474c-A022-53201A96AE0B}
+   Description "200-IB10xOB6"
+   Information "Digital combo module, 10 input channels and 6 output channels 24 VDC"
+   Icons Ser200IOType
+   Attributes IoUnit DigitalIn DigitalOut
+   Parameters
+      ParamInfo 
+         Name FILTER0_9
+         Description "Filter constant channel 0 - 9"
+         CompileType IOConnect
+         Datatype ENUM
+         Default 0
+         ParValIndex 0
+         ParamType CIGIOData  6  0 1  ByteParam ByteOffset
+      End ParamInfo
+   ParamInfo 
+         Name SAFEVALUE_10
+         Description "Safe value channel 10"
+         CompileType IOConnect
+         Datatype BOOL
+         Default false
+         ParamType CIGIOData  5  0 1  ByteParam ByteOffset
+         OSPInfo
+           OSPType OSPValue
+           OSPData 0 0
+         End OSPInfo
+      End ParamInfo
+      ParamInfo 
+         Name SAFEVALUE_11
+         Description "Safe value channel 11"
+         CompileType IOConnect
+         Datatype BOOL
+         Default false
+         ParamType CIGIOData  5  1 1  ByteParam ByteOffset
+         OSPInfo
+           OSPType OSPValue
+           OSPData 0 1 
+         End OSPInfo
+      End ParamInfo
+      ParamInfo 
+         Name SAFEVALUE_12
+         Description "Safe value channel 12"
+         CompileType IOConnect
+         Datatype BOOL
+         Default false
+         ParamType CIGIOData  5  2 1  ByteParam ByteOffset
+         OSPInfo
+           OSPType OSPValue
+           OSPData 0 2
+         End OSPInfo
+      End ParamInfo
+      ParamInfo 
+         Name SAFEVALUE_13
+         Description "Safe value channel 13"
+         CompileType IOConnect
+         Datatype BOOL
+         Default false
+         ParamType CIGIOData  5  3 1  ByteParam ByteOffset
+         OSPInfo
+           OSPType OSPValue
+           OSPData 0 3
+         End OSPInfo
+      End ParamInfo
+      ParamInfo 
+         Name SAFEVALUE_14
+         Description "Safe value channel 14"
+         CompileType IOConnect
+         Datatype BOOL
+         Default false
+         ParamType CIGIOData  5  4 1  ByteParam ByteOffset
+         OSPInfo
+           OSPType OSPValue
+           OSPData 0 4
+         End OSPInfo
+      End ParamInfo
+      ParamInfo 
+         Name SAFEVALUE_15
+         Description "Safe value channel 15"
+         CompileType IOConnect
+         Datatype BOOL
+         Default false
+         ParamType CIGIOData  5  5 1  ByteParam ByteOffset
+         OSPInfo
+           OSPType OSPValue
+           OSPData 0 5 
+         End OSPInfo
+      End ParamInfo
+   End Parameters
+   ParValList
+      ParVal
+         ParValIndex 0
+         UnitText    "ms"
+         ENUM
+         "0.25"  0
+         "0.5"   1
+         "1"     2
+         "2"     3
+         "4"     4
+         "8"     5
+         "16"    6
+         "32"    7 
+      End ParVal
+   End ParValList
+    Channels
+      ChannelInfo
+         Number 0 
+         ChannelName "Input  0"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30000 16#1
+      End ChannelInfo
+      ChannelInfo
+         Number 1
+         ChannelName "Input  1"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30000 16#2
+      End ChannelInfo
+      ChannelInfo
+         Number 2
+         ChannelName "Input  2"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30000 16#4
+      End ChannelInfo
+      ChannelInfo
+         Number 3
+         ChannelName "Input  3"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30000 16#8
+      End ChannelInfo
+      ChannelInfo
+         Number   4
+         ChannelName "Input  4"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30000 16#10
+      End ChannelInfo
+      ChannelInfo
+         Number 5
+         ChannelName "Input  5"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30000 16#20
+      End ChannelInfo
+      ChannelInfo
+         Number 6
+         ChannelName "Input  6"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30000 16#40
+      End ChannelInfo
+      ChannelInfo
+         Number 7
+         ChannelName "Input  7"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30000 16#80
+      End ChannelInfo
+      ChannelInfo
+         Number 8
+         ChannelName "Input  8"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30000 16#100
+      End ChannelInfo
+      ChannelInfo
+         Number 9
+         ChannelName "Input  9"
+         Datatype Bool_In
+         Routine 101
+         CopyParameters 0 0 16#30000 16#200
+      End ChannelInfo
+      ChannelInfo
+         Number 10
+         ChannelName "Output 10"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40000 16#1
+         ConflictInfo 16#0201
+      End ChannelInfo
+      ChannelInfo
+         Number 11
+         ChannelName "Output 11"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40000 16#2
+         ConflictInfo 16#0201
+      End ChannelInfo
+      ChannelInfo
+         Number 12
+         ChannelName "Output 12"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40000 16#4
+         ConflictInfo 16#0201
+      End ChannelInfo
+      ChannelInfo
+         Number 13
+         ChannelName "Output 13"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40000 16#8
+         ConflictInfo 16#0201
+      End ChannelInfo
+      ChannelInfo
+         Number 14
+         ChannelName "Output 14"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40000 16#10
+         ConflictInfo 16#0201
+      End ChannelInfo
+      ChannelInfo
+         Number 15
+         ChannelName "Output 15"
+         Datatype Bool_Out
+         Routine 201
+         CopyParameters 0 0 16#40000 16#20
+         ConflictInfo 16#0201
+      End ChannelInfo
+      ChannelInfo
+         Number 16
+         ChannelName "All inputs"
+         Datatype Dword_In
+         Routine 501
+         CopyParameters 0 0 16#30000 0 16#3FF 16#0
+      End ChannelInfo
+      ChannelInfo
+         Number 17
+         ChannelName "All outputs"
+         Datatype Dword_Out
+         Routine 601
+         CopyParameters 0 0 16#40000 0 16#3F 16#0
+         ConflictInfo 16#0102
+      End ChannelInfo
+      ChannelInfo
+         Number 18
+         ChannelName "UnitStatus"
+         Datatype Status_In
+         Routine 900
+         CopyParameters 0 0 16#50000 
+      End ChannelInfo
+   End Channels
+   IoUnitStatus
+      StatusType IoError
+      StatusData 16#10000 16#100100 16#0 16#0
+   End IoUnitStatus
+   Configuration
+      ConfigInfo
+         ModuleKey   16#0100
+         InAreaSize  1
+         OutAreaSize 1
+         InWord 
+            WORD 0       0
+         OutWord
+            WORD 0       0
+         CIGIOConnData
+            CIGIOData     16#01 16#50 16#60
+            CIGIOData     16#05 16#01 16#00 16#11 16#00 16#00 16#00 16#00
+         End CIGIOConnData
+      End ConfigInfo
+   End Configuration
+  HWUnitInfoCRC 16#C2A3
+End HWUnitInfo (* 200-IB10xOB6 / ProfiBusDP - Full Format *)

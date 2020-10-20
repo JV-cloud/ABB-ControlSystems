@@ -1,0 +1,170 @@
+(*---------------------------------------------------------------*)
+(* 2008-01-28  Alfred Theorin                                    *)
+(*             PRC #30786                                        *)
+(*             Added Real SubUnitTypes                           *)
+(*---------------------------------------------------------------*)
+(* 2007-12-12  Alfred Theorin                                    *)
+(*             PRC #31009                                        *)
+(*             Decreased CIGIOData 16#08 from 400 to 255 due     *)
+(*             to overlow.                                       *)
+(*             OK since the value is unused and byte splitting,  *)
+(*             is currently not supported here by CI854.         *)
+(*---------------------------------------------------------------*)
+
+FileHeader
+  Contents              "ABBPanel800"
+  Date                  "2008-01-28"
+  Version               "Version 1.1-0"
+  RequiredSyntaxVersion "3.0"
+End FileHeader
+
+(*========================================================*)
+(*                                                        *)
+(*            ProfiBus - DPV1                             *)
+(*                                                        *)
+(*           ABB Process Panel                            *)
+(*                                                        *)
+(*========================================================*)
+
+HWUnitInfo
+  HWUnitID         16#00D509DA
+  Description      "ABB Panel 800"
+  Information      "ABB Panel 800"
+  Icons            OpPanel
+  Attributes       AdapterUnit  AutoAttach 
+
+  InterfaceInfo
+    IoSysType  CIGIO
+    CLSID_CB   {70AC2B68-4487-48e3-9957-EA25FD20A55F}
+    CLSID_CTRL {7a59948b-4432-4d69-9f66-2ca7ed7f9db5}
+    HWConfig   Fail
+  End InterfaceInfo
+
+  ConnectionInfo
+    ConnectType AllUnits
+    IOConnect   Fail
+    IOConfig    NoFail
+  End ConnectionInfo
+
+  SubUnits  40
+
+  SubUnitTypes
+    SubMenu "Bool"
+      HWUnitID 16#06D509DA  (* INPUT:16 Bool*)
+     Separator
+      HWUnitID 16#07D509DA  (* OUTPUT:16 Bool*)
+     SubMenuEnd
+     SubMenu "Byte"
+      HWUnitID 16#02D509DA (* INPUT: 2 Byte*)
+      HWUnitID 16#03D509DA (* INPUT: 16 Byte*)
+     Separator
+      HWUnitID 16#04D509DA (* OUTPUT:2 Byte *)
+      HWUnitID 16#05D509DA (* OUTPUT:16 Byte *)
+     SubMenuEnd
+     SubMenu "Int"
+      HWUnitID 16#08D509DA (*INPUT:1 Int*)
+      HWUnitID 16#09D509DA(* INPUT:  4 Int*)
+      HWUnitID 16#0AD509DA (* INPUT:16 Int*)
+     Separator
+      HWUnitID 16#0BD509DA (* OUTPUT:1 Int *)
+      HWUnitID 16#0CD509DA (* OUTPUT:4 Int *)
+      HWUnitID 16#0DD509DA (* OUTPUT:16 Int *)
+     SubMenuEnd
+     SubMenu "Word" 
+      HWUnitID 16#0ED509DA (*INPUT:1 Word*)
+      HWUnitID 16#0FD509DA(* INPUT: 4 Word*)
+      HWUnitID 16#10D509DA (* INPUT:16 Word*)
+      Separator
+      HWUnitID 16#14D509DA (* OUTPUT:1 Word *)
+      HWUnitID 16#15D509DA (* OUTPUT:4 Word *)
+      HWUnitID 16#16D509DA (* OUTPUT:16 Word *)
+     SubMenuEnd
+     SubMenu "DInt"
+      HWUnitID 16#11D509DA   (*INPUT:1 DInt*)
+      HWUnitID 16#12D509DA   (*INPUT:4 DInt*)
+      HWUnitID 16#13D509DA   (*INPUT:16 DInt*)
+     Separator
+      HWUnitID 16#17D509DA  (*OUTPUT:1 DInt*)
+      HWUnitID 16#18D509DA  (*OUTPUT:4 DInt*)
+      HWUnitID 16#19D509DA  (*OUTPUT:16 DInt*)
+    SubMenuEnd
+    SubMenu "Real"
+      HWUnitID {94042c73-d082-4974-93a3-787355b6a1a4} (*INPUT:1 Real*)
+      HWUnitID {0d9e2774-dce4-48a2-b94b-0f3caaae3b07} (*INPUT:4 Real*)
+      HWUnitID {232a79f2-cbb5-4f30-a4c2-e2b5f0443f4b} (*INPUT:16 Real*)
+    Separator
+      HWUnitID {ae43c87d-b775-44af-a932-dcc12863357d} (*OUTPUT:1 Real*)
+      HWUnitID {9322ba45-bc10-4772-8114-f8efaf650523} (*OUTPUT:4 Real*)
+      HWUnitID {6bf09a97-c2ca-4ca3-b6b1-088a490d4de9} (*OUTPUT:16 Real*)
+    SubMenuEnd
+  End SubUnitTypes
+
+  Parameters
+    ParamInfo
+      Name            USER_PRM_DATA
+      Description     "User Parameter Data"
+      CompileType      IOConnect
+      Datatype         STRING 
+      Default          "0xC0 0x00 0x00" 1250
+      ParamType        Numbered    200
+    End ParamInfo
+  End Parameters
+
+  Channels
+    ChannelInfo
+      Number            0
+      ChannelName      "UnitStatus"
+      Datatype          Status_In
+      Routine           900
+      CopyParameters    16#0 16#0 16#50000
+    End ChannelInfo
+  End Channels
+
+  UnitStatusText
+    ExtendedStatus1      "Slave does not exist"
+    ExtendedStatus2      "Configuration data fault"
+    ExtendedStatus3      "Parameter data fault"
+    ExtendedStatus4      "Static diagnostic"
+    ExtendedStatus5      "Redundant slave does not exist"
+    ExtendedStatus6      "Diagnostic configuration data fault"
+    ExtendedStatus7      "Report Diagnostics fault"
+  End UnitStatusText
+
+  UnitStatusSeverity
+    ExtendedStatus1      GeneralError TriggerAlarm SeverityMedium
+    ExtendedStatus2      GeneralError TriggerAlarm SeverityHigh
+    ExtendedStatus3      GeneralError TriggerAlarm SeverityHigh
+    ExtendedStatus4      GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus5      GeneralWarning TriggerEvent SeverityMedium
+    ExtendedStatus6      GeneralWarning TriggerEvent SeverityMedium
+    ExtendedStatus7      GeneralWarning TriggerEvent SeverityMedium
+  End UnitStatusSeverity
+
+  Configuration
+    ConfigInfo
+      ModuleKey        16#9DA
+      InAreaSize       0 BYTE
+      OutAreaSize      0 BYTE
+      CIGIOConnData
+        CIGIOData        16#05 16#C0 16#00 16#00
+        CIGIOData        16#02 16#88 16#00 16#00 16#00 16#9 16#DA 16#01
+        CIGIOData        16#03 15 15 15 15 15 0 25 50 100 200
+        CIGIOData        16#04 1
+        CIGIOData        16#06 200
+        CIGIOData        16#07 200
+        CIGIOData        16#08 255
+        CIGIOData        16#09 3
+        CIGIOData        16#0A 16#00 16#00 16#00 (* no HCIR support*)
+        SynchronizeDataExchange
+      End CIGIOConnData
+    End ConfigInfo
+    ConfigInfo
+      EmptyConfig
+      ModuleKey        16#FFFF
+      InAreaSize       0
+      OutAreaSize      0
+    End ConfigInfo
+  End Configuration
+
+  HWUnitInfoCRC 16#092C
+End HWUnitInfo (* Process Panel with CI-PP10 *)

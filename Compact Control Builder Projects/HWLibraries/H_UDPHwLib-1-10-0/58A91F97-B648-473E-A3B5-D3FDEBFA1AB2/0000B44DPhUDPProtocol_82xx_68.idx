@@ -1,0 +1,476 @@
+<HEAD>
+Index of symbols created 2012-12-13 14:46:57,65 
+</HEAD>
+<SECTIONS=15>
+00010000 000175e8 .text
+000175e8 000176f4 .got2
+000176f4 00017d58 .fixup
+00017d58 00017d94 .bss
+00017d94 00017da8 .data
+00017da8 00019412 .debug_abbrev
+00019412 0002a7fb .debug_info
+0002a7fb 0002cfcc .debug_line
+0002cfcc 0002eb50 .debug_frame
+0002eb50 0003341b .debug_loc
+0003341b 00035885 .debug_pubnames
+00035885 00035b2d .debug_aranges
+00035b2d 00036705 .debug_ranges
+00036705 0003b0d1 .debug_str
+0003b0d1 0003b0d1 .comment
+</SECTIONS>
+<SYMBOLS=454>
+00000000 PhUDPProtocol_82xx_68.elf EXE_HEAD
+00000060 PhUDPProtocol_82xx_68.elf isdigit(char)
+00000080 PhUDPProtocol_82xx_68.elf PhUDPConnection::PhUDPConnection(unsigned long, unsigned short)
+000000b0 PhUDPProtocol_82xx_68.elf PhUDPConnection::PhUDPConnection(unsigned long, unsigned short)
+000000e4 PhUDPProtocol_82xx_68.elf PhUDPConnection::WriteVarReq(unsigned long)
+000005b4 PhUDPProtocol_82xx_68.elf PhUDPConnection::operator delete(void*)
+0000063c PhUDPProtocol_82xx_68.elf PhUDPConnection::operator new(unsigned int)
+000006ec PhUDPProtocol_82xx_68.elf PhUDPConnection::InitCallbacks(ISocketCallback1*, IGenClientCallback1*, ISystemUtilitiesCallback4*, IHeapCallback*, IVOSCallback2*)
+00000794 PhUDPProtocol_82xx_68.elf inet_ntoa_b(unsigned int, char*)
+000007f0 PhUDPProtocol_82xx_68.elf PhUDPConnection::~PhUDPConnection()
+00000c60 PhUDPProtocol_82xx_68.elf PhUDPConnection::SetupConnection(bool)
+00001084 PhUDPProtocol_82xx_68.elf PhUDPConnection::CopyBuffTo1131(UDPBuffer*, unsigned int, tVarDataValue*, int)
+00001304 PhUDPProtocol_82xx_68.elf PhUDPConnection::ReadVarReq(unsigned long)
+0000180c PhUDPProtocol_82xx_68.elf PhUDPConnection::CheckAndAbortVarReq(unsigned long)
+00001968 PhUDPProtocol_82xx_68.elf PhUDPConnection::ReceiveThread()
+00002344 PhUDPProtocol_82xx_68.elf PhUDPConnection::ReceiveThreadBody(PhUDPConnection*)
+00002354 PhUDPProtocol_82xx_68.elf PhUDPConnection::~PhUDPConnection()
+000027c4 PhUDPProtocol_82xx_68.elf PhUDPManager::operator new(unsigned int, IHeapCallback*)
+00002884 PhUDPProtocol_82xx_68.elf PhUDPManager::~PhUDPManager()
+0000289c PhUDPProtocol_82xx_68.elf PhUDPManager::~PhUDPManager()
+000028b8 PhUDPProtocol_82xx_68.elf udpAssert(bool, char const*, unsigned int)
+00002928 PhUDPProtocol_82xx_68.elf PhUDPManager::operator delete(void*)
+000029c8 PhUDPProtocol_82xx_68.elf PhUDPManager::operator delete(void*, IHeapCallback*)
+00002a54 PhUDPProtocol_82xx_68.elf PhUDPManager::AbortVarReq(unsigned long)
+00002c24 PhUDPProtocol_82xx_68.elf PhUDPManager::ReadVarReq(unsigned long)
+00002cac PhUDPProtocol_82xx_68.elf PhUDPManager::WriteVarReq(unsigned long)
+00002d34 PhUDPProtocol_82xx_68.elf PhUDPManager::DisconnectReq(unsigned long, unsigned long)
+00002d80 PhUDPProtocol_82xx_68.elf PhUDPManager::ConnectReq(unsigned long, unsigned long*)
+00002fa8 PhUDPProtocol_82xx_68.elf PhUDPManager::PhUDPManager(IVOSCallback2*, ISocketCallback1*, IGenClientCallback1*, ISystemUtilitiesCallback4*)
+00003020 PhUDPProtocol_82xx_68.elf PhUDPManager::PhUDPManager(IVOSCallback2*, ISocketCallback1*, IGenClientCallback1*, ISystemUtilitiesCallback4*)
+00003098 PhUDPProtocol_82xx_68.elf CPhUDPProtocol::SetCommonCallbackInterface(ICommonCallback*)
+000031e0 PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::ReadRawReq(unsigned long, int*)
+000031e8 PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::ReadRawReq(unsigned long, int*)
+000031f0 PhUDPProtocol_82xx_68.elf CPhUDPProtocol::ReadRawReq(unsigned long, int*)
+00003208 PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::WriteRawReq(unsigned long, int*)
+00003210 PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::WriteRawReq(unsigned long, int*)
+00003218 PhUDPProtocol_82xx_68.elf CPhUDPProtocol::WriteRawReq(unsigned long, int*)
+00003230 PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::AbortRawReq(unsigned long, int*)
+00003238 PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::AbortRawReq(unsigned long, int*)
+00003240 PhUDPProtocol_82xx_68.elf CPhUDPProtocol::AbortRawReq(unsigned long, int*)
+00003258 PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::GetExtendedStatusSize(unsigned long, int*, int*)
+00003260 PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::GetExtendedStatusSize(unsigned long, int*, int*)
+00003268 PhUDPProtocol_82xx_68.elf CPhUDPProtocol::GetExtendedStatusSize(unsigned long, int*, int*)
+00003280 PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::GetExtendedStatus(unsigned long, int, teIEC1131Type*, tGCValue*, int*)
+00003288 PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::GetExtendedStatus(unsigned long, int, teIEC1131Type*, tGCValue*, int*)
+00003290 PhUDPProtocol_82xx_68.elf CPhUDPProtocol::GetExtendedStatus(unsigned long, int, teIEC1131Type*, tGCValue*, int*)
+000032a8 PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::SetStatus(unsigned long, int, int*)
+000032b0 PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::SetStatus(unsigned long, int, int*)
+000032b8 PhUDPProtocol_82xx_68.elf CPhUDPProtocol::SetStatus(unsigned long, int, int*)
+000032d0 PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::ReadRes(unsigned long, int, int*)
+000032d8 PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::ReadRes(unsigned long, int, int*)
+000032e0 PhUDPProtocol_82xx_68.elf CPhUDPProtocol::ReadRes(unsigned long, int, int*)
+000032f8 PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::WriteRes(unsigned long, int, int*)
+00003300 PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::WriteRes(unsigned long, int, int*)
+00003308 PhUDPProtocol_82xx_68.elf CPhUDPProtocol::WriteRes(unsigned long, int, int*)
+00003320 PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::PrepareForTermination(teHWFErrorCode*)
+00003328 PhUDPProtocol_82xx_68.elf CPhUDPProtocol::PrepareForTermination(teHWFErrorCode*)
+00003350 PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::PerformSwitchover(trHWFAddress, teHWFErrorCode*)
+00003358 PhUDPProtocol_82xx_68.elf CPhUDPProtocol::PerformSwitchover(trHWFAddress, teHWFErrorCode*)
+00003394 PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::PerformFailover(trHWFAddress, teHWFErrorCode*)
+0000339c PhUDPProtocol_82xx_68.elf CPhUDPProtocol::PerformFailover(trHWFAddress, teHWFErrorCode*)
+000033d8 PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::StartUsingDevice(trHWFAddress, teHWFErrorCode*)
+000033e0 PhUDPProtocol_82xx_68.elf CPhUDPProtocol::StartUsingDevice(trHWFAddress, teHWFErrorCode*)
+0000341c PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::RemoveHWConfiguration(trHWFAddress, teHWFErrorCode*)
+00003424 PhUDPProtocol_82xx_68.elf CPhUDPProtocol::RemoveHWConfiguration(trHWFAddress, teHWFErrorCode*)
+00003460 PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::RemoveIoConnection(unsigned long, teHWFErrorCode*)
+00003468 PhUDPProtocol_82xx_68.elf CPhUDPProtocol::RemoveIoConnection(unsigned long, teHWFErrorCode*)
+000034a8 PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::PhResponsibilityForRestart(trHWFAddress, teHWFErrorCode*)
+000034b0 PhUDPProtocol_82xx_68.elf CPhUDPProtocol::PhResponsibilityForRestart(trHWFAddress, teHWFErrorCode*)
+00003544 PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::PhResponsibilityForBackupDevice(trHWFAddress, teHWFErrorCode*)
+0000354c PhUDPProtocol_82xx_68.elf CPhUDPProtocol::PhResponsibilityForBackupDevice(trHWFAddress, teHWFErrorCode*)
+00003588 PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::PhResponsibilityForHotInsert(trHWFAddress, teHWFErrorCode*)
+00003590 PhUDPProtocol_82xx_68.elf CPhUDPProtocol::PhResponsibilityForHotInsert(trHWFAddress, teHWFErrorCode*)
+000035cc PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::StartUsingIoConnection(trHWFAddress, unsigned long, teHWFErrorCode*)
+000035d4 PhUDPProtocol_82xx_68.elf CPhUDPProtocol::StartUsingIoConnection(trHWFAddress, unsigned long, teHWFErrorCode*)
+00003624 PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::KickWatchdog(unsigned short*, teHWFErrorCode*)
+0000362c PhUDPProtocol_82xx_68.elf CPhUDPProtocol::KickWatchdog(unsigned short*, teHWFErrorCode*)
+0000366c PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::GetStatus(trHWFAddress, teHWFUnitKind, unsigned long*, unsigned long*, teHWFErrorCode*)
+00003674 PhUDPProtocol_82xx_68.elf CPhUDPProtocol::GetStatus(trHWFAddress, teHWFUnitKind, unsigned long*, unsigned long*, teHWFErrorCode*)
+000036c4 PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::PhResponsibility(trHWFAddress, teHWFErrorCode*)
+000036d0 PhUDPProtocol_82xx_68.elf CPhUDPProtocol::PhResponsibility(trHWFAddress, teHWFErrorCode*)
+00003914 PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::AbortVarReq(unsigned long, int*)
+0000391c PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::AbortVarReq(unsigned long, int*)
+00003924 PhUDPProtocol_82xx_68.elf CPhUDPProtocol::AbortVarReq(unsigned long, int*)
+0000396c PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::WriteVarReq(unsigned long, int*)
+00003974 PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::WriteVarReq(unsigned long, int*)
+0000397c PhUDPProtocol_82xx_68.elf CPhUDPProtocol::WriteVarReq(unsigned long, int*)
+000039c4 PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::ReadVarReq(unsigned long, int*)
+000039cc PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::ReadVarReq(unsigned long, int*)
+000039d4 PhUDPProtocol_82xx_68.elf CPhUDPProtocol::ReadVarReq(unsigned long, int*)
+00003a1c PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::DisconnectReq(unsigned long, unsigned long, int*)
+00003a24 PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::DisconnectReq(unsigned long, unsigned long, int*)
+00003a2c PhUDPProtocol_82xx_68.elf CPhUDPProtocol::DisconnectReq(unsigned long, unsigned long, int*)
+00003a74 PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::ConnectReq(unsigned long, unsigned long*, int*)
+00003a7c PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::ConnectReq(unsigned long, unsigned long*, int*)
+00003a84 PhUDPProtocol_82xx_68.elf CPhUDPProtocol::ConnectReq(unsigned long, unsigned long*, int*)
+00003ad0 PhUDPProtocol_82xx_68.elf CPhUDPProtocol::GetProductInfo(unsigned char*, unsigned char*, unsigned char*, unsigned long)
+00003b60 PhUDPProtocol_82xx_68.elf CPhUDPProtocol::CPhUDPProtocol()
+00003c00 PhUDPProtocol_82xx_68.elf CPhUDPProtocol::CPhUDPProtocol()
+00003c9c PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::~CPhUDPProtocol()
+00003ca4 PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::~CPhUDPProtocol()
+00003cac PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::~CPhUDPProtocol()
+00003cb4 PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::~CPhUDPProtocol()
+00003cc0 PhUDPProtocol_82xx_68.elf CPhUDPProtocol::~CPhUDPProtocol()
+00003d88 PhUDPProtocol_82xx_68.elf CPhUDPProtocol::~CPhUDPProtocol()
+00003e4c PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::~CPhUDPProtocol()
+00003e54 PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::~CPhUDPProtocol()
+00003e5c PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::~CPhUDPProtocol()
+00003e64 PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::~CPhUDPProtocol()
+00003e70 PhUDPProtocol_82xx_68.elf CPhUDPProtocol::~CPhUDPProtocol()
+00003f40 PhUDPProtocol_82xx_68.elf ObjectFactory
+00004068 PhUDPProtocol_82xx_68.elf operator delete(void*)
+000040a8 PhUDPProtocol_82xx_68.elf __cxa_pure_virtual
+000040e4 PhUDPProtocol_82xx_68.elf CPhCommon_Base::CPhCommon_Base()
+00004148 PhUDPProtocol_82xx_68.elf CPhCommon_Base::CPhCommon_Base()
+000041a8 PhUDPProtocol_82xx_68.elf CPhCommon_Base::GetProductInfo(unsigned char*, unsigned char*, unsigned char*, unsigned long)
+000041e4 PhUDPProtocol_82xx_68.elf CPhCommon_Base::SetCommonCallbackInterface(ICommonCallback*)
+00004214 PhUDPProtocol_82xx_68.elf CPhConfig_Base1::PrepareForTermination(teHWFErrorCode*)
+00004244 PhUDPProtocol_82xx_68.elf CPhConfig_Base1::RemoveHWConfiguration(trHWFAddress, teHWFErrorCode*)
+00004274 PhUDPProtocol_82xx_68.elf CPhConfig_Base1::RemoveIoConnection(unsigned long, teHWFErrorCode*)
+000042a8 PhUDPProtocol_82xx_68.elf CPhConfig_Base1::PhResponsibilityForRestart(trHWFAddress, teHWFErrorCode*)
+000042d8 PhUDPProtocol_82xx_68.elf CPhConfig_Base1::PhResponsibility(trHWFAddress, teHWFErrorCode*)
+00004308 PhUDPProtocol_82xx_68.elf CPhConfig_Base1::StartUsingIoConnection(trHWFAddress, unsigned long, teHWFErrorCode*)
+0000433c PhUDPProtocol_82xx_68.elf CPhConfig_Base1::PhResponsibilityForBackupDevice(trHWFAddress, teHWFErrorCode*)
+0000436c PhUDPProtocol_82xx_68.elf CPhConfig_Base1::PhResponsibilityForHotInsert(trHWFAddress, teHWFErrorCode*)
+0000439c PhUDPProtocol_82xx_68.elf CPhConfig_Base1::PerformSwitchover(trHWFAddress, teHWFErrorCode*)
+000043cc PhUDPProtocol_82xx_68.elf CPhConfig_Base1::StartUsingDevice(trHWFAddress, teHWFErrorCode*)
+000043fc PhUDPProtocol_82xx_68.elf CPhConfig_Base1::PerformFailover(trHWFAddress, teHWFErrorCode*)
+0000442c PhUDPProtocol_82xx_68.elf CPhClient_Base::ConnectReq(unsigned long, unsigned long*, int*)
+00004464 PhUDPProtocol_82xx_68.elf CPhClient_Base::DisconnectReq(unsigned long, unsigned long, int*)
+0000449c PhUDPProtocol_82xx_68.elf CPhClient_Base::ReadVarReq(unsigned long, int*)
+000044d0 PhUDPProtocol_82xx_68.elf CPhClient_Base::WriteVarReq(unsigned long, int*)
+00004504 PhUDPProtocol_82xx_68.elf CPhClient_Base::ReadRawReq(unsigned long, int*)
+00004538 PhUDPProtocol_82xx_68.elf CPhClient_Base::WriteRawReq(unsigned long, int*)
+0000456c PhUDPProtocol_82xx_68.elf CPhClient_Base::AbortRawReq(unsigned long, int*)
+000045a0 PhUDPProtocol_82xx_68.elf CPhClient_Base::AbortVarReq(unsigned long, int*)
+000045d4 PhUDPProtocol_82xx_68.elf CPhClient_Base::GetExtendedStatusSize(unsigned long, int*, int*)
+0000460c PhUDPProtocol_82xx_68.elf CPhClient_Base::GetExtendedStatus(unsigned long, int, teIEC1131Type*, tGCValue*, int*)
+0000464c PhUDPProtocol_82xx_68.elf CPhClient_Base::SetStatus(unsigned long, int, int*)
+00004684 PhUDPProtocol_82xx_68.elf CPhClient_Base::ReadRes(unsigned long, int, int*)
+000046bc PhUDPProtocol_82xx_68.elf CPhClient_Base::WriteRes(unsigned long, int, int*)
+000046f4 PhUDPProtocol_82xx_68.elf CPhClient_Base1::ConnectReq(unsigned long, unsigned long*, int*)
+0000472c PhUDPProtocol_82xx_68.elf CPhClient_Base1::DisconnectReq(unsigned long, unsigned long, int*)
+00004764 PhUDPProtocol_82xx_68.elf CPhClient_Base1::ReadVarReq(unsigned long, int*)
+00004798 PhUDPProtocol_82xx_68.elf CPhClient_Base1::WriteVarReq(unsigned long, int*)
+000047cc PhUDPProtocol_82xx_68.elf CPhClient_Base1::RegisterVarReq(unsigned long, int*)
+00004800 PhUDPProtocol_82xx_68.elf CPhClient_Base1::ReadRawReq(unsigned long, int*)
+00004834 PhUDPProtocol_82xx_68.elf CPhClient_Base1::WriteRawReq(unsigned long, int*)
+00004868 PhUDPProtocol_82xx_68.elf CPhClient_Base1::AbortRawReq(unsigned long, int*)
+0000489c PhUDPProtocol_82xx_68.elf CPhClient_Base1::AbortVarReq(unsigned long, int*)
+000048d0 PhUDPProtocol_82xx_68.elf CPhClient_Base1::TimeoutAbortVarReq(unsigned long, int*)
+00004934 PhUDPProtocol_82xx_68.elf CPhClient_Base1::GetExtendedStatusSize(unsigned long, int*, int*)
+0000496c PhUDPProtocol_82xx_68.elf CPhClient_Base1::GetExtendedStatus(unsigned long, int, teIEC1131Type*, tGCValue*, int*)
+000049ac PhUDPProtocol_82xx_68.elf CPhClient_Base1::BufferTakeForReceive(unsigned long, int*)
+000049e0 PhUDPProtocol_82xx_68.elf CPhClient_Base1::BufferGiveForReceive(unsigned long, int, int*)
+00004a18 PhUDPProtocol_82xx_68.elf CPhClient_Base1::BufferTakeForSend(unsigned long, unsigned int, int*)
+00004a50 PhUDPProtocol_82xx_68.elf CPhClient_Base1::BufferGiveForSend(unsigned long, unsigned int, int, int*)
+00004a8c PhUDPProtocol_82xx_68.elf CPhClient_Base1::SetStatus(unsigned long, int, int*)
+00004ac4 PhUDPProtocol_82xx_68.elf CPhClient_Base1::ReadRes(unsigned long, int, int*)
+00004afc PhUDPProtocol_82xx_68.elf CPhClient_Base1::WriteRes(unsigned long, int, int*)
+00004b34 PhUDPProtocol_82xx_68.elf CPhStatus_Base1::KickWatchdog(unsigned short*, teHWFErrorCode*)
+00004b68 PhUDPProtocol_82xx_68.elf CPhStatus_Base1::GetStatus(trHWFAddress, teHWFUnitKind, unsigned long*, unsigned long*, teHWFErrorCode*)
+00004ba4 PhUDPProtocol_82xx_68.elf CPhIOAccess_Base::GetCopyRoutineReference(unsigned int, void (**)(short, void*, void*), IOAccessErrorCode*)
+00004bdc PhUDPProtocol_82xx_68.elf CPhIOAccess_Base::ObtainDPM(eAreaType, trHWFAddress, IOAccessErrorCode*)
+00004c10 PhUDPProtocol_82xx_68.elf CPhIOAccess_Base::ReleaseDPM(eAreaType, trHWFAddress, IOAccessErrorCode*)
+00004c44 PhUDPProtocol_82xx_68.elf CPhDiagnostics_Base::PhDiagnosticsTableNew(teDiagErrorCode*)
+00004c74 PhUDPProtocol_82xx_68.elf CPhDiagnostics_Base::PhDiagnosticsTableCleared(teDiagErrorCode*)
+00004ca4 PhUDPProtocol_82xx_68.elf CPhOLU_Base::PrepareForFirmwareDownload(trHWFAddress const*, unsigned long, eOLUStatus*)
+00004cdc PhUDPProtocol_82xx_68.elf CPhOLU_Base::PrepareForApplicationStop(trHWFAddress const*, eOLUStatus*)
+00004d10 PhUDPProtocol_82xx_68.elf CPhOLU_Base::ResumeOperation(trHWFAddress const*, eOLUStatus*)
+00004d44 PhUDPProtocol_82xx_68.elf CPhOLU_Base::PhResponsibilityForOLU(trHWFAddress const*, eOLUStatus*)
+00004d78 PhUDPProtocol_82xx_68.elf CPhOLU_Base::PrepareForLeavingOLU(trHWFAddress const*, eOLUStatus*)
+00004dac PhUDPProtocol_82xx_68.elf CPhOLU_Base::PrepareForAppAndConfigDownload(trHWFAddress const*, eOLUStatus*)
+00004de0 PhUDPProtocol_82xx_68.elf CPhOLU_Base1::PrepareForFirmwareDownload(trHWFAddress const*, unsigned long, eOLUStatus*)
+00004e18 PhUDPProtocol_82xx_68.elf CPhOLU_Base1::PrepareForApplicationStop(trHWFAddress const*, eOLUStatus*)
+00004e4c PhUDPProtocol_82xx_68.elf CPhOLU_Base1::ResumeOperation(trHWFAddress const*, eOLUStatus*)
+00004e80 PhUDPProtocol_82xx_68.elf CPhOLU_Base1::PhResponsibilityForOLU(trHWFAddress const*, eOLUStatus*)
+00004eb4 PhUDPProtocol_82xx_68.elf CPhOLU_Base1::PrepareForLeavingOLU(trHWFAddress const*, eOLUStatus*)
+00004ee8 PhUDPProtocol_82xx_68.elf CPhOLU_Base1::PrepareForAppAndConfigDownload(trHWFAddress const*, eOLUStatus*)
+00004f1c PhUDPProtocol_82xx_68.elf CPhOLU_Base1::OLUEnablePhCom(trHWFAddress const*, eOLUStatus*)
+00004f50 PhUDPProtocol_82xx_68.elf CPhOLU_Base1::OLUDisablePhCom(trHWFAddress const*, eOLUStatus*)
+00004f84 PhUDPProtocol_82xx_68.elf CPhOLU_Base1::InformPhIsInSwitch(trHWFAddress const*, eOLUStatus*)
+00004fbc PhUDPProtocol_82xx_68.elf CPhCommon_Base::~CPhCommon_Base()
+00005038 PhUDPProtocol_82xx_68.elf CPhCommon_Base::~CPhCommon_Base()
+000050b4 PhUDPProtocol_82xx_68.elf CPhCommon_Base::~CPhCommon_Base()
+0000512c PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::AddRef()
+00005134 PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::AddRef()
+0000513c PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::AddRef()
+00005144 PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::AddRef()
+0000514c PhUDPProtocol_82xx_68.elf CPhUDPProtocol::AddRef()
+0000516c PhUDPProtocol_82xx_68.elf IUnknown::~IUnknown()
+000051b0 PhUDPProtocol_82xx_68.elf IUnknown::~IUnknown()
+000051f0 PhUDPProtocol_82xx_68.elf IPhConfig1::~IPhConfig1()
+00005238 PhUDPProtocol_82xx_68.elf IPhStatus1::~IPhStatus1()
+00005284 PhUDPProtocol_82xx_68.elf IPhStatus1::~IPhStatus1()
+000052cc PhUDPProtocol_82xx_68.elf IPhConfig1::~IPhConfig1()
+00005314 PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::QueryInterface(_GUID const&, void**)
+0000531c PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::QueryInterface(_GUID const&, void**)
+00005324 PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::QueryInterface(_GUID const&, void**)
+0000532c PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::QueryInterface(_GUID const&, void**)
+00005338 PhUDPProtocol_82xx_68.elf CPhUDPProtocol::QueryInterface(_GUID const&, void**)
+00005468 PhUDPProtocol_82xx_68.elf IPhClient1::~IPhClient1()
+000054b4 PhUDPProtocol_82xx_68.elf IPhClient1::~IPhClient1()
+000054f8 PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::Release()
+00005500 PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::Release()
+00005508 PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::Release()
+00005510 PhUDPProtocol_82xx_68.elf non-virtual thunk to CPhUDPProtocol::Release()
+00005518 PhUDPProtocol_82xx_68.elf CPhUDPProtocol::Release()
+00005588 PhUDPProtocol_82xx_68.elf IPhClient::~IPhClient()
+000055d4 PhUDPProtocol_82xx_68.elf IPhClient::~IPhClient()
+0000561c PhUDPProtocol_82xx_68.elf IUnknown::IUnknown()
+00005674 PhUDPProtocol_82xx_68.elf IPhCommon::IPhCommon()
+000056d8 PhUDPProtocol_82xx_68.elf IUnknown::~IUnknown()
+00005748 PhUDPProtocol_82xx_68.elf IPhConfig1::~IPhConfig1()
+000057c4 PhUDPProtocol_82xx_68.elf CPhConfig_Base1::~CPhConfig_Base1()
+00005840 PhUDPProtocol_82xx_68.elf CPhConfig_Base1::~CPhConfig_Base1()
+000058bc PhUDPProtocol_82xx_68.elf IPhClient::~IPhClient()
+00005938 PhUDPProtocol_82xx_68.elf CPhClient_Base::~CPhClient_Base()
+000059b4 PhUDPProtocol_82xx_68.elf CPhClient_Base::~CPhClient_Base()
+00005a30 PhUDPProtocol_82xx_68.elf IPhClient1::~IPhClient1()
+00005aac PhUDPProtocol_82xx_68.elf CPhClient_Base1::~CPhClient_Base1()
+00005b28 PhUDPProtocol_82xx_68.elf CPhClient_Base1::~CPhClient_Base1()
+00005ba4 PhUDPProtocol_82xx_68.elf IPhStatus1::~IPhStatus1()
+00005c20 PhUDPProtocol_82xx_68.elf CPhStatus_Base1::~CPhStatus_Base1()
+00005c9c PhUDPProtocol_82xx_68.elf CPhStatus_Base1::~CPhStatus_Base1()
+00005d18 PhUDPProtocol_82xx_68.elf IPhIOAccess::~IPhIOAccess()
+00005d94 PhUDPProtocol_82xx_68.elf CPhIOAccess_Base::~CPhIOAccess_Base()
+00005e10 PhUDPProtocol_82xx_68.elf IPhIOAccess::~IPhIOAccess()
+00005e8c PhUDPProtocol_82xx_68.elf IPhIOAccess::~IPhIOAccess()
+00005f08 PhUDPProtocol_82xx_68.elf CPhIOAccess_Base::~CPhIOAccess_Base()
+00005f84 PhUDPProtocol_82xx_68.elf IPhDiagnostics::~IPhDiagnostics()
+00006000 PhUDPProtocol_82xx_68.elf CPhDiagnostics_Base::~CPhDiagnostics_Base()
+0000607c PhUDPProtocol_82xx_68.elf IPhDiagnostics::~IPhDiagnostics()
+000060f8 PhUDPProtocol_82xx_68.elf IPhDiagnostics::~IPhDiagnostics()
+00006174 PhUDPProtocol_82xx_68.elf CPhDiagnostics_Base::~CPhDiagnostics_Base()
+000061f0 PhUDPProtocol_82xx_68.elf IPhOLU::~IPhOLU()
+0000626c PhUDPProtocol_82xx_68.elf CPhOLU_Base::~CPhOLU_Base()
+000062e8 PhUDPProtocol_82xx_68.elf IPhOLU::~IPhOLU()
+00006364 PhUDPProtocol_82xx_68.elf IPhOLU::~IPhOLU()
+000063e0 PhUDPProtocol_82xx_68.elf CPhOLU_Base::~CPhOLU_Base()
+0000645c PhUDPProtocol_82xx_68.elf IPhOLU1::~IPhOLU1()
+000064d8 PhUDPProtocol_82xx_68.elf CPhOLU_Base1::~CPhOLU_Base1()
+00006554 PhUDPProtocol_82xx_68.elf IPhOLU1::~IPhOLU1()
+000065d0 PhUDPProtocol_82xx_68.elf IPhOLU1::~IPhOLU1()
+0000664c PhUDPProtocol_82xx_68.elf CPhOLU_Base1::~CPhOLU_Base1()
+000066c8 PhUDPProtocol_82xx_68.elf IPhCommon::~IPhCommon()
+00006744 PhUDPProtocol_82xx_68.elf IPhCommon::~IPhCommon()
+000067c0 PhUDPProtocol_82xx_68.elf IPhCommon::~IPhCommon()
+00006838 PhUDPProtocol_82xx_68.elf CompanyName
+0000683c PhUDPProtocol_82xx_68.elf ProductName
+0000684c PhUDPProtocol_82xx_68.elf ProductVersion
+00006864 PhUDPProtocol_82xx_68.elf CLSID_CPhUDPProtocol
+000068cc PhUDPProtocol_82xx_68.elf IID_IPhCommonCB
+000068dc PhUDPProtocol_82xx_68.elf IID_IPhConfigCB
+000068ec PhUDPProtocol_82xx_68.elf IID_IPhConfigCB1
+000068fc PhUDPProtocol_82xx_68.elf IID_IPhIOAccessCB
+0000690c PhUDPProtocol_82xx_68.elf IID_IPhExternalConfigCB1
+0000691c PhUDPProtocol_82xx_68.elf IID_IPhExternalConfigCB2
+0000692c PhUDPProtocol_82xx_68.elf IID_IPhExternalConfigCB3
+0000693c PhUDPProtocol_82xx_68.elf IID_IPhOLUCB
+0000694c PhUDPProtocol_82xx_68.elf IID_IPhCommon
+0000695c PhUDPProtocol_82xx_68.elf IID_IPhConfig1
+0000696c PhUDPProtocol_82xx_68.elf IID_IPhStatus1
+0000697c PhUDPProtocol_82xx_68.elf IID_IPhClient
+0000698c PhUDPProtocol_82xx_68.elf IID_IPhClient1
+0000699c PhUDPProtocol_82xx_68.elf IID_IPhDiagnostics
+000069ac PhUDPProtocol_82xx_68.elf IID_IPhIOAccess
+000069bc PhUDPProtocol_82xx_68.elf IID_IPhSafeConfig
+000069cc PhUDPProtocol_82xx_68.elf IID_IPhSafeConfig1
+000069dc PhUDPProtocol_82xx_68.elf IID_IPhSafeConfig2
+000069ec PhUDPProtocol_82xx_68.elf IID_IPhSimulation
+000069fc PhUDPProtocol_82xx_68.elf IID_IPhOLU
+00006a0c PhUDPProtocol_82xx_68.elf IID_IPhOLU1
+00006a1c PhUDPProtocol_82xx_68.elf IID_IHeapCallback
+00006a2c PhUDPProtocol_82xx_68.elf IID_ISystemUtilitiesCallback
+00006a3c PhUDPProtocol_82xx_68.elf IID_ISystemUtilitiesCallback1
+00006a4c PhUDPProtocol_82xx_68.elf IID_ISystemUtilitiesCallback2
+00006a5c PhUDPProtocol_82xx_68.elf IID_ISystemUtilitiesCallback3
+00006a6c PhUDPProtocol_82xx_68.elf IID_ISystemUtilitiesCallback4
+00006a7c PhUDPProtocol_82xx_68.elf IID_IEventMgrCallback
+00006a8c PhUDPProtocol_82xx_68.elf IID_IEventMgrCallback1
+00006a9c PhUDPProtocol_82xx_68.elf IID_ISysClockCallback
+00006aac PhUDPProtocol_82xx_68.elf IID_ISysClockCallback1
+00006abc PhUDPProtocol_82xx_68.elf IID_ISysClockCallback2
+00006acc PhUDPProtocol_82xx_68.elf IID_ISysClockCallback3
+00006adc PhUDPProtocol_82xx_68.elf IID_INetwClockSynchCallback
+00006aec PhUDPProtocol_82xx_68.elf IID_IConfigCBCallback1
+00006afc PhUDPProtocol_82xx_68.elf IID_IConfigCBCallback2
+00006b0c PhUDPProtocol_82xx_68.elf IID_IConfigCBCallback3
+00006b1c PhUDPProtocol_82xx_68.elf IID_IExternalConfigCBCallback
+00006b2c PhUDPProtocol_82xx_68.elf IID_IExternalConfigCBCallback2
+00006b3c PhUDPProtocol_82xx_68.elf IID_IExternalConfigCBCallback3
+00006b4c PhUDPProtocol_82xx_68.elf IID_IExternalConfigCBCallback4
+00006b5c PhUDPProtocol_82xx_68.elf IID_IMessagesCBCallback
+00006b6c PhUDPProtocol_82xx_68.elf IID_IAIPAccessCBCallback
+00006b7c PhUDPProtocol_82xx_68.elf IID_IOLUCBCallback
+00006b8c PhUDPProtocol_82xx_68.elf IID_ISystemUtilitiesCBCallback1
+00006b9c PhUDPProtocol_82xx_68.elf IID_IConfigCallback1
+00006bac PhUDPProtocol_82xx_68.elf IID_IConfigCallback2
+00006bbc PhUDPProtocol_82xx_68.elf IID_IStatusCallback1
+00006bcc PhUDPProtocol_82xx_68.elf IID_IGenClientCallback
+00006bdc PhUDPProtocol_82xx_68.elf IID_IGenClientCallback1
+00006bec PhUDPProtocol_82xx_68.elf IID_IIACClientCallback
+00006bfc PhUDPProtocol_82xx_68.elf IID_IDriverFactoryCallback
+00006c0c PhUDPProtocol_82xx_68.elf IID_IDiagnosticsCallback
+00006c1c PhUDPProtocol_82xx_68.elf IID_ISafeConfigCallback
+00006c2c PhUDPProtocol_82xx_68.elf IID_ISafeConfigCallback1
+00006c3c PhUDPProtocol_82xx_68.elf IID_ISafeConfigCallback2
+00006c4c PhUDPProtocol_82xx_68.elf IID_ICRCCallback
+00006c5c PhUDPProtocol_82xx_68.elf IID_IIOAccessCallback
+00006c6c PhUDPProtocol_82xx_68.elf IID_CriticalRegionCallback
+00006c7c PhUDPProtocol_82xx_68.elf IID_VOSExceptionCallback
+00006c8c PhUDPProtocol_82xx_68.elf IID_DrvCommonCallback
+00006c9c PhUDPProtocol_82xx_68.elf IID_ProtectedMirroredHeapCallback
+00006cac PhUDPProtocol_82xx_68.elf IID_SharedMirroredHeapCallback
+00006cbc PhUDPProtocol_82xx_68.elf IID_TemporaryMirroredHeapCallback
+00006ccc PhUDPProtocol_82xx_68.elf IID_IRestrictedVOSCallback
+00006cdc PhUDPProtocol_82xx_68.elf IID_IVarServerCallback
+00006cec PhUDPProtocol_82xx_68.elf IID_IVarServerCallback1
+00006cfc PhUDPProtocol_82xx_68.elf IID_ISOCKETCallback
+00006d0c PhUDPProtocol_82xx_68.elf IID_ISOCKETCallback1
+00006d1c PhUDPProtocol_82xx_68.elf IID_IVOSCallback2
+00006e88 V vtable for CPhUDPProtocol PhUDPProtocol_82xx_68.elf 
+00007038 V vtable for IPhClient1 PhUDPProtocol_82xx_68.elf 
+000070a0 V vtable for IUnknown PhUDPProtocol_82xx_68.elf 
+000070c0 V vtable for IPhClient PhUDPProtocol_82xx_68.elf 
+00007110 V vtable for IPhStatus1 PhUDPProtocol_82xx_68.elf 
+00007138 V vtable for IPhConfig1 PhUDPProtocol_82xx_68.elf 
+00007180 V vtable for CPhOLU_Base1 PhUDPProtocol_82xx_68.elf 
+000071c0 V vtable for CPhOLU_Base PhUDPProtocol_82xx_68.elf 
+000071f8 V vtable for CPhDiagnostics_Base PhUDPProtocol_82xx_68.elf 
+00007220 V vtable for CPhIOAccess_Base PhUDPProtocol_82xx_68.elf 
+00007248 V vtable for CPhStatus_Base1 PhUDPProtocol_82xx_68.elf 
+00007270 V vtable for CPhClient_Base1 PhUDPProtocol_82xx_68.elf 
+000072d8 V vtable for CPhClient_Base PhUDPProtocol_82xx_68.elf 
+00007328 V vtable for CPhConfig_Base1 PhUDPProtocol_82xx_68.elf 
+00007370 V vtable for CPhCommon_Base PhUDPProtocol_82xx_68.elf 
+00007398 V vtable for IPhIOAccess PhUDPProtocol_82xx_68.elf 
+000073c0 V vtable for IPhDiagnostics PhUDPProtocol_82xx_68.elf 
+000073e8 V vtable for IPhOLU PhUDPProtocol_82xx_68.elf 
+00007420 V vtable for IPhOLU1 PhUDPProtocol_82xx_68.elf 
+00007460 V vtable for IPhCommon PhUDPProtocol_82xx_68.elf 
+00007484 PhUDPProtocol_82xx_68.elf CRTFuncTabBegin
+00007484 PhUDPProtocol_82xx_68.elf scprocs
+00007490 PhUDPProtocol_82xx_68.elf printf
+00007494 PhUDPProtocol_82xx_68.elf sprintf
+00007498 PhUDPProtocol_82xx_68.elf sscanf
+0000749c PhUDPProtocol_82xx_68.elf memcpy
+000074a0 PhUDPProtocol_82xx_68.elf memset
+000074a4 PhUDPProtocol_82xx_68.elf strcat
+000074a8 PhUDPProtocol_82xx_68.elf strcmp
+000074ac PhUDPProtocol_82xx_68.elf strlen
+000074b0 PhUDPProtocol_82xx_68.elf strncmp
+000074b4 PhUDPProtocol_82xx_68.elf strncpy
+000074b8 PhUDPProtocol_82xx_68.elf memchr
+000074bc PhUDPProtocol_82xx_68.elf memcmp
+000074c0 PhUDPProtocol_82xx_68.elf memmove
+000074c4 PhUDPProtocol_82xx_68.elf strchr
+000074c8 PhUDPProtocol_82xx_68.elf strcoll
+000074cc PhUDPProtocol_82xx_68.elf strcpy
+000074d0 PhUDPProtocol_82xx_68.elf strcspn
+000074d4 PhUDPProtocol_82xx_68.elf strncat
+000074d8 PhUDPProtocol_82xx_68.elf strpbrk
+000074dc PhUDPProtocol_82xx_68.elf strrchr
+000074e0 PhUDPProtocol_82xx_68.elf strspn
+000074e4 PhUDPProtocol_82xx_68.elf strstr
+000074e8 PhUDPProtocol_82xx_68.elf strtok
+000074ec PhUDPProtocol_82xx_68.elf strxfrm
+000074f0 PhUDPProtocol_82xx_68.elf strerror
+000074f4 PhUDPProtocol_82xx_68.elf pow
+000074f8 PhUDPProtocol_82xx_68.elf acos
+000074fc PhUDPProtocol_82xx_68.elf asin
+00007500 PhUDPProtocol_82xx_68.elf atan
+00007504 PhUDPProtocol_82xx_68.elf atan2
+00007508 PhUDPProtocol_82xx_68.elf ceil
+0000750c PhUDPProtocol_82xx_68.elf cos
+00007510 PhUDPProtocol_82xx_68.elf cosh
+00007514 PhUDPProtocol_82xx_68.elf exp
+00007518 PhUDPProtocol_82xx_68.elf fabs
+0000751c PhUDPProtocol_82xx_68.elf floor
+00007520 PhUDPProtocol_82xx_68.elf fmod
+00007524 PhUDPProtocol_82xx_68.elf frexp
+00007528 PhUDPProtocol_82xx_68.elf ldexp
+0000752c PhUDPProtocol_82xx_68.elf log
+00007530 PhUDPProtocol_82xx_68.elf log10
+00007534 PhUDPProtocol_82xx_68.elf modf
+00007538 PhUDPProtocol_82xx_68.elf sin
+0000753c PhUDPProtocol_82xx_68.elf sinh
+00007540 PhUDPProtocol_82xx_68.elf sqrt
+00007544 PhUDPProtocol_82xx_68.elf tan
+00007548 PhUDPProtocol_82xx_68.elf tanh
+0000754c PhUDPProtocol_82xx_68.elf div_r
+00007550 PhUDPProtocol_82xx_68.elf labs
+00007554 PhUDPProtocol_82xx_68.elf strtol
+00007558 PhUDPProtocol_82xx_68.elf free
+0000755c PhUDPProtocol_82xx_68.elf abort
+00007560 PhUDPProtocol_82xx_68.elf abs
+00007564 PhUDPProtocol_82xx_68.elf atof
+00007568 PhUDPProtocol_82xx_68.elf atoi
+0000756c PhUDPProtocol_82xx_68.elf atol
+00007570 PhUDPProtocol_82xx_68.elf bsearch
+00007574 PhUDPProtocol_82xx_68.elf ldiv_r
+00007578 PhUDPProtocol_82xx_68.elf qsort
+0000757c PhUDPProtocol_82xx_68.elf rand
+00007580 PhUDPProtocol_82xx_68.elf srand
+00007584 PhUDPProtocol_82xx_68.elf strtod
+00007588 PhUDPProtocol_82xx_68.elf strtoul
+0000758c PhUDPProtocol_82xx_68.elf malloc
+00007590 PhUDPProtocol_82xx_68.elf __assert
+00007594 PhUDPProtocol_82xx_68.elf time
+00007598 PhUDPProtocol_82xx_68.elf asctime
+0000759c PhUDPProtocol_82xx_68.elf gmtime
+000075a0 PhUDPProtocol_82xx_68.elf clock
+000075a4 PhUDPProtocol_82xx_68.elf ctime
+000075a8 PhUDPProtocol_82xx_68.elf difftime
+000075ac PhUDPProtocol_82xx_68.elf localtime
+000075b0 PhUDPProtocol_82xx_68.elf mktime
+000075b4 PhUDPProtocol_82xx_68.elf strftime
+000075b8 PhUDPProtocol_82xx_68.elf eventcollSem
+000075bc PhUDPProtocol_82xx_68.elf intLock
+000075c0 PhUDPProtocol_82xx_68.elf intUnlock
+000075cc PhUDPProtocol_82xx_68.elf fprintf
+000075d0 PhUDPProtocol_82xx_68.elf __stdout
+000075d4 PhUDPProtocol_82xx_68.elf __stderr
+000075d8 PhUDPProtocol_82xx_68.elf setjmp
+000075dc PhUDPProtocol_82xx_68.elf longjmp
+000075e0 PhUDPProtocol_82xx_68.elf operator new[](unsigned int)
+000075e4 PhUDPProtocol_82xx_68.elf operator delete[](void*)
+000075e8 PhUDPProtocol_82xx_68.elf CRTFuncTabEnd
+000075e8 PhUDPProtocol_82xx_68.elf ecprocs
+000075e8 PhUDPProtocol_82xx_68.elf etext
+000075e8 PhUDPProtocol_82xx_68.elf sgot2
+000076f4 PhUDPProtocol_82xx_68.elf egot2
+000076f4 PhUDPProtocol_82xx_68.elf sfixup
+00007d58 PhUDPProtocol_82xx_68.elf PhUDPConnection::m_pSocketCallback
+00007d58 PhUDPProtocol_82xx_68.elf efixup
+00007d5c PhUDPProtocol_82xx_68.elf PhUDPConnection::m_pGenClientCallback
+00007d60 PhUDPProtocol_82xx_68.elf PhUDPConnection::m_pSystemUtilitiesCallback
+00007d64 PhUDPProtocol_82xx_68.elf PhUDPConnection::m_pHeapCallback
+00007d68 PhUDPProtocol_82xx_68.elf PhUDPConnection::m_heapTag
+00007d6c PhUDPProtocol_82xx_68.elf PhUDPConnection::m_pVOSCallback
+00007d70 PhUDPProtocol_82xx_68.elf UDPBufferQueue::m_heapTag
+00007d74 PhUDPProtocol_82xx_68.elf PhUDPManager::m_TagUDP
+00007d78 PhUDPProtocol_82xx_68.elf PhUDPManager::m_pHeapCallback
+00007d7c PhUDPProtocol_82xx_68.elf PhUDPManager::m_pSystemUtilitiesCallback
+00007d80 PhUDPProtocol_82xx_68.elf PhUDPManager::m_pVOSCallback
+00007d84 PhUDPProtocol_82xx_68.elf CMirroredObject::c_pMirroredObjectMgrImpl
+00007d88 PhUDPProtocol_82xx_68.elf CMirroredObjectAgent::c_pHeapCallback
+00007d8c PhUDPProtocol_82xx_68.elf CMirroredObjectAgent::c_AgentTag
+00007d90 V CComCoClass<CPhUDPProtocol, &(CLSID_CPhUDPProtocol)>::m_HeapTag PhUDPProtocol_82xx_68.elf 
+00007d94 PhUDPProtocol_82xx_68.elf PHproperties
+00007d9c PhUDPProtocol_82xx_68.elf cThisFile
+00007da0 PhUDPProtocol_82xx_68.elf cThisFile
+00007da4 PhUDPProtocol_82xx_68.elf useEXEHEAD
+</SYMBOLS>

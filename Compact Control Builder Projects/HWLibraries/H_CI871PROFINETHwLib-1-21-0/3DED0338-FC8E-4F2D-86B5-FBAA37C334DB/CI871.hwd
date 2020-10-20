@@ -1,0 +1,213 @@
+HWUnitInfo (* CI871 PROFINET IO *)
+  HWUnitID      {F5887AC9-909A-4248-BDAD-94FE6E3F51EE}
+  Description   "CI871"
+  Information   "Communication Interface for PROFINET IO"
+  Icons         AC800ComType
+  Attributes    SystemUnit
+  ModuleType    16#5018
+  DownloadInstanceNamesForSubUnits
+
+
+(* Changes: 200?-??-??:  Default station name lowercase; IP addresses adjusted         *)
+(*          2008-10-16:  All CI871 status bits defined                                 *)
+(*          2008-12-19:  New parameter "Red. Ethernet recovery time"                   *)
+(*          2009-01-14:  New parameter "Watchdog factor"                               *)
+(*          2009-01-23:  Default value for red. Ethernet recovery time = 32ms          *)
+(*          2009-01-27:  New parameter to disable diagnosis and process alarms         *)
+(*          2009-02-20:  New parameter to recalculate the phase values                 *)
+(*          2009-02-20:  Position list removed when it contained 1..127                *)
+(*          2009-04-01:  SubUnitTypes list shortened, allow positions 1..255           *)
+(*          2009-04-29:  Udated Status Bits (but still under construction!)            *)
+(*          2009-08-07:  All parameter names look like the description now             *)
+(*          2009-12-08:  Max 126 devices, new keyword DownloadInstanceNamesForSubUnits *)
+(*          2009-12-14:  Obsolete keyword SubMenu removed                              *)
+(*          2010-02-12:  New diagnostics bits according system DoF                     *)
+(*          2010-03-23:  #41521 New parameter "Port mode"                              *)
+(*          2011-01-06:  New status bit "Communication problems"                       *)
+
+  InterfaceInfo
+    Interface CIGInterface
+    CLSID_CB   {D9720536-1BB9-4f74-A5CD-DCDDED2398CA}
+    CLSID_CTRL {38CEFCC8-23D7-43f9-BE6D-4251F87BF421}
+    HWConfig  Fail
+  End InterfaceInfo
+
+  DiscreteNumbers  (*PNIO device addresses*)
+    1..126
+  End DiscreteNumbers
+
+  SubUnitTypes
+    HWUnitID 16#00000000 (* Empty slot *)
+  End SubUnitTypes
+
+  Parameters
+    ParamInfo
+      Name stationName
+      Description "Station name"
+      CompileType HWConfig
+      Datatype STRING
+      Default "ci871" 240 (* 240 is max length of string *)
+      ParamType Numbered 1
+    End ParamInfo
+
+    ParamInfo
+      Name ipAddress
+      Description "IP address"
+      CompileType HWConfig
+      Datatype STRING
+      Default "192.168.0.2" 15 (* 15 is max length of string *)
+      ParamType Numbered 2
+    End ParamInfo
+
+    ParamInfo
+      Name subnetMask
+      Description "Subnet mask"
+      CompileType HWConfig
+      Datatype STRING
+      Default "255.255.255.0" 15 (* 15 is max length of string *)
+      ParamType Numbered 3
+    End ParamInfo
+
+    ParamInfo
+      Name defaultGateway
+      Description "Default gateway"
+      CompileType HWConfig
+      Datatype STRING
+      Default "192.168.0.1" 15 (* 15 is max length of string *)
+      ParamType Numbered 4
+    End ParamInfo
+
+    ParamInfo
+      Name redEthernetRecoveryTime
+      Description "Red. Ethernet recovery time"
+      CompileType HWConfig
+      Datatype Int
+      Default 32    (* smallest value for default WD factor 3 and default cycle times of 32ms *)
+      ParValIndex 1
+      ParamType Numbered 5
+    End ParamInfo
+
+    ParamInfo
+      Name watchdogFactor
+      Description "Watchdog factor"
+      CompileType HWConfig
+      Datatype Int
+      Default 3
+      ParValIndex 2
+      ParamType Numbered 6
+    End ParamInfo
+
+    ParamInfo
+      Name disableDiagnosisAlarms
+      Description "Disable diagnosis alarms"
+      CompileType HWConfig
+      Datatype ENUM
+      Default 0
+      ParValIndex 3
+      ParamType Numbered 7
+    End ParamInfo
+
+    ParamInfo
+      Name disableProcessAlarmsSOE
+      Description "Disable process alarms (SOE)"
+      CompileType HWConfig
+      Datatype ENUM
+      Default 0
+      ParValIndex 3
+      ParamType Numbered 8
+    End ParamInfo
+
+    ParamInfo
+      Name phaseValueCalculation
+      Description "Phase value calculation"
+      CompileType HWConfig
+      Datatype ENUM
+      Default 0
+      ParValIndex 4
+      ParamType Numbered 9
+    End ParamInfo
+
+    ParamInfo
+      Name portMode
+      Description "Port mode"
+      CompileType HWConfig
+      Datatype ENUM
+      Default 0
+      ParValIndex 5
+      ParamType Numbered 10
+    End ParamInfo
+  End Parameters
+
+  ParValList
+    ParVal (*dummy*)
+      ParValIndex 0
+      INT 1 64 1 64
+    End ParVal
+    
+    ParVal (*Red. Ethernet recovery time*)
+      ParValIndex 1
+      UnitText    "ms"
+      INT 0 1918 0 1918 (* max. value + 2 * min. cycle time must be <= 1920 *)
+    End ParVal
+
+    ParVal (*Watchdog factor*)
+      ParValIndex 2
+      UnitText    ""
+      INT 3 1920 3 1920   (* 0x0003 to 0x1e00, dividable by 3 according KW Profinet API *)
+    End ParVal
+
+    ParVal (*enable/disable*)
+      ParValIndex 3
+      UnitText    ""
+      ENUM
+      "off" 0
+      "on"  1
+    End ParVal
+
+    ParVal (*Phase values*)
+      ParValIndex 4
+      UnitText    ""
+      ENUM
+      "Based on old values" 0
+      "Recalculate all"     1
+    End ParVal
+
+    ParVal (*Port mode*)
+      ParValIndex 5
+      UnitText    ""
+      ENUM
+      "Auto negotiation" 0
+      "100Mbps/FD"       1
+    End ParVal
+  End ParValList
+
+  Channels
+    ChannelInfo
+      Number 0
+      ChannelName "UnitStatus"
+      Datatype Status_In
+      Routine 900
+      CopyParameters 0 0 16#50000
+    End ChannelInfo
+  End Channels
+
+  UnitStatusText
+    DeviceSpecific1  "Hardware failure"
+    DeviceSpecific2  "Ethernet cable dropped"
+    DeviceSpecific3  "Communication memory obtained too long" 
+    DeviceSpecific4  "CEX watchdog"
+    DeviceSpecific5  "PNIO Alarms blocked"
+    DeviceSpecific6  "Communication problems due to flooding on Ethernet"
+  End UnitStatusText
+
+  UnitStatusSeverity
+    DeviceSpecific1  GeneralError      TriggerEvent SeverityHigh
+    DeviceSpecific2  GeneralError      TriggerAlarm SeverityHigh
+    DeviceSpecific3  GeneralWarning    TriggerEvent SeverityHigh
+    DeviceSpecific4  GeneralError      TriggerEvent SeverityHigh
+    DeviceSpecific5  GeneralError      TriggerEvent SeverityHigh
+    DeviceSpecific6  GeneralError      TriggerEvent SeverityHigh
+  End UnitStatusSeverity
+
+   HWUnitInfoCRC 16#956C
+End HWUnitInfo(*CI871*)

@@ -1,0 +1,62 @@
+(*-----------------------------------------------------------------*)
+(* 2008-10-31  Version 5.1-1                                       *)
+(*             Kristina Rylander                                   *)
+(*             PRC #35805                                          *)
+(* 2009-01-13  Added DummyData in order for Controller to create   *)
+(*             HWConfigElement                                     *)
+(* 2010-12-17  Version 5.1-2. Added support for UDP protocol       *)
+(*             handler. Changed some names from IAC to generic     *)
+(* 2011-02-10  Ver 5.1-3. Added support for TCP protocol handler   *)
+(*-----------------------------------------------------------------*)
+
+FileHeader
+  Contents              "IP (Generic)"
+  Date                  "2011-02-10"
+  Version               "5.1-1"
+  RequiredSyntaxVersion "3.0"
+End FileHeader
+
+
+
+HWUnitInfo (* IP (Generic) *)
+  HWUnitId {2290D54A-CD13-4418-8C74-AB1C29082D1C} 
+  Description "IP"
+  Information "IP based protocols"
+  Icons ChannelType
+  InterfaceInfo
+    Interface CIGInterface
+    CLSID_CB     {4B6F939A-5DD6-4215-886F-218A961999E3}
+    CLSID_CTRL   {654FEA26-A4F9-4317-A979-984764848F5C}
+    HWConfig  NoFail   
+  End InterfaceInfo
+  DiscreteNumbers
+     1 2 3
+  End DiscreteNumbers
+  SubUnitTypes
+    SubMenu "Supported protocols"
+      HWUnitID {DDE44EAC-9263-476a-8E2A-7403995C126C} Positions 1 DefaultPositions 1 Instances 1 (* IAC MMS PH *)
+      HWUnitID {D717EE04-C296-4615-B889-832618D5C685} Positions 2 Instances 1 (* UDP *)
+      HWUnitID {653D49EE-5FFC-424f-A0FB-6C462D1F714D} Positions 3 Instances 1 (* TCP *)
+    SubMenuEnd
+  End SubUnitTypes
+  Parameters
+    ParamInfo
+      Name DummyData
+      Description "DummyData"
+      Hidden
+      CompileType HWConfig
+      Datatype INT
+      Default 3333
+      ParValIndex 0
+      ParamType Numbered 9114
+    End ParamInfo
+   End Parameters
+   ParValList
+    ParVal
+      ParValIndex 0
+      UnitText    "DummyCode"
+      INT 0 16383 0 16383
+    End ParVal
+   End ParValList
+  HWUnitInfoCRC 16#1B8D
+End HWUnitInfo (* IP (Generic) *)

@@ -1,0 +1,44 @@
+(*-----------------------------------------------------------------*)
+(* 2010-12-17  Created                                             *)
+(*-----------------------------------------------------------------*)
+
+FileHeader
+  Contents              "Generic UDP communication"
+  Date                  "2011-01-04"
+  Version               "1.0-0"
+  RequiredSyntaxVersion "3.0"
+End FileHeader
+
+HWUnitInfo  (* UDPProtocol *)
+   HWUnitID {D717EE04-C296-4615-B889-832618D5C685}
+   Description "UDPProtocol"
+   Information "Generic UDP Protocol"
+   Icons ProtocolType
+   InterfaceInfo
+     Interface CIGInterface
+     CLSID_CB   {214F1E9F-D9F5-4b0a-92DD-598762D2896D}
+     CLSID_CTRL {89F13D75-E3FD-495c-91A6-4C8D3FDF5C9A}
+     HWConfig Fail             
+   End InterfaceInfo
+   Parameters
+      ParamInfo 
+         Name LogicalName
+         Description "Logical name"
+         Hidden
+         CompileType HWConfig
+         Datatype STRING
+         Default "UDP_Name"
+         ParamType Numbered 0
+      End ParamInfo
+   End Parameters
+   Channels
+      ChannelInfo
+         Number 0
+         ChannelName "UnitStatus"
+         Datatype Status_In
+         Routine 900
+         CopyParameters 0 0 16#50000
+      End ChannelInfo
+   End Channels
+  HWUnitInfoCRC 16#D969
+End HWUnitInfo (* UDPProtocol *)

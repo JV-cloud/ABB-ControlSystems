@@ -1,0 +1,676 @@
+<?xml version="1.0"?>
+<DeviceImportWizard xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <GsdmlMerge>
+    <SelectedDapId DapId="RETA_DAP_V1">
+      <SelectedModuleId ModuleId="RETA_DAP_V1">
+        <SelectedSubmoduleId SubmoduleId="RETA_DAP_V1" />
+      </SelectedModuleId>
+      <SelectedModuleId ModuleId="ID_MODULE_PPO3">
+        <SelectedSubmoduleId SubmoduleId="ID_SUBMOD_PPO3" />
+      </SelectedModuleId>
+      <SelectedModuleId ModuleId="ID_MODULE_PPO4">
+        <SelectedSubmoduleId SubmoduleId="ID_SUBMOD_PPO4" />
+      </SelectedModuleId>
+      <SelectedModuleId ModuleId="ID_MODULE_PPO6">
+        <SelectedSubmoduleId SubmoduleId="ID_SUBMOD_PPO6" />
+      </SelectedModuleId>
+    </SelectedDapId>
+  </GsdmlMerge>
+  <Hwd>
+    <HardwareUnit guid="c5e99c70-7a36-40ec-8cec-217448191038" hwGsdmlUnitID="DEV_RETA_DAP_V1" description="RETA-02 Vendor" information="PROFINET IO module RETA-02" icon="MotorType" />
+    <HardwareUnit guid="fad38061-beef-4d9b-854e-828f0bcd19d2" hwGsdmlUnitID="DAP_RETA_DAP_V1" description="RETA-02 Vendor_DAP" information="PROFINET IO module RETA-02" icon="ProtocolType" />
+    <HardwareUnit guid="76f6f58d-b9f6-4efa-a06c-205ad1783109" hwGsdmlUnitID="VSM_RETA_DAP_V1_MOD_RETA_DAP_V1" description="RETA-02 Vendor_SUB" information="RETA-02 Vendor_SUB" icon="ProtocolType">
+      <Channels>
+        <InputArea AreaByteSize="0" GSDMLHash="" />
+        <OutputArea AreaByteSize="0" GSDMLHash="" />
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="865f12aa-e927-41a9-914a-45bb43a064d1" hwGsdmlUnitID="MOD_ID_MODULE_PPO3" description="Vendor Object PPO3" information="Vendor Object PPO3" icon="ProtocolType" />
+    <HardwareUnit guid="58cac721-5372-4345-978e-c8effe2aa10c" hwGsdmlUnitID="VSM_ID_SUBMOD_PPO3_MOD_ID_MODULE_PPO3" description="Vendor specific object PPO3" information="Control/Reference and Status/Actual values" icon="ProtocolType">
+      <Channels>
+        <InputArea AreaByteSize="4" GSDMLHash="Gkd6GjfDWvSdKT6E3weWBQ==">
+          <Channel Name="Status" StartBit="0" EndBit="15" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Speed Actual" StartBit="16" EndBit="31" Type="ChannelInt32SignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </InputArea>
+        <OutputArea AreaByteSize="4" GSDMLHash="+EPvK1m7Drngr/lHL93MQQ==">
+          <Channel Name="Command" StartBit="0" EndBit="15" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Speed Ref" StartBit="16" EndBit="31" Type="ChannelSInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </OutputArea>
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="d8bec1b5-05cc-45b8-af02-8a34b2700cff" hwGsdmlUnitID="MOD_ID_MODULE_PPO4" description="Vendor Object PPO4" information="Vendor Object PPO4" icon="ProtocolType" />
+    <HardwareUnit guid="d5bb46cf-f331-4432-92bf-2e91230de04c" hwGsdmlUnitID="VSM_ID_SUBMOD_PPO4_MOD_ID_MODULE_PPO4" description="Vendor specific object PPO4" information="Control/Reference, Status/Actual values + 4 IN/OUT words" icon="ProtocolType">
+      <Channels>
+        <InputArea AreaByteSize="12" GSDMLHash="VJBclZ70zz52I+oKDc57Fg==">
+          <Channel Name="Status" StartBit="0" EndBit="15" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Speed Actual" StartBit="16" EndBit="31" Type="ChannelInt32SignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Act PZD 3" StartBit="32" EndBit="47" Type="ChannelInt32SignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Act PZD 4" StartBit="48" EndBit="63" Type="ChannelInt32SignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Act PZD 5" StartBit="64" EndBit="79" Type="ChannelInt32SignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Act PZD 6" StartBit="80" EndBit="95" Type="ChannelInt32SignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </InputArea>
+        <OutputArea AreaByteSize="12" GSDMLHash="WWxYaSyeId5ko04aJ1hZow==">
+          <Channel Name="Command" StartBit="0" EndBit="15" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Speed Ref" StartBit="16" EndBit="31" Type="ChannelSInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Ref PZD 3" StartBit="32" EndBit="47" Type="ChannelSInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Ref PZD 4" StartBit="48" EndBit="63" Type="ChannelSInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Ref PZD 5" StartBit="64" EndBit="79" Type="ChannelSInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Ref PZD 6" StartBit="80" EndBit="95" Type="ChannelSInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </OutputArea>
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="5bcdb19e-3fb4-4e33-8506-651744e33bf3" hwGsdmlUnitID="MOD_ID_MODULE_PPO6" description="Vendor Object PPO6" information="Vendor Object PPO6" icon="ProtocolType" />
+    <HardwareUnit guid="8355f8ab-41d4-466b-888d-ae8fb74c1a67" hwGsdmlUnitID="VSM_ID_SUBMOD_PPO6_MOD_ID_MODULE_PPO6" description="Vendor specific object PPO6" information="Control/Reference, Status/Actual values + 8 IN/OUT words" icon="ProtocolType">
+      <Channels>
+        <InputArea AreaByteSize="20" GSDMLHash="c5MYFdDc4cx6Z2Qad71LsQ==">
+          <Channel Name="Status" StartBit="0" EndBit="15" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Speed Actual" StartBit="16" EndBit="31" Type="ChannelInt32SignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Act PZD 3" StartBit="32" EndBit="47" Type="ChannelInt32SignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Act PZD 4" StartBit="48" EndBit="63" Type="ChannelInt32SignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Act PZD 5" StartBit="64" EndBit="79" Type="ChannelInt32SignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Act PZD 6" StartBit="80" EndBit="95" Type="ChannelInt32SignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Act PZD 7" StartBit="96" EndBit="111" Type="ChannelInt32SignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Act PZD 8" StartBit="112" EndBit="127" Type="ChannelInt32SignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Act PZD 9" StartBit="128" EndBit="143" Type="ChannelInt32SignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Act PZD 10" StartBit="144" EndBit="159" Type="ChannelInt32SignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </InputArea>
+        <OutputArea AreaByteSize="20" GSDMLHash="FBVDX917DrWQtiBBXW49jQ==">
+          <Channel Name="Command" StartBit="0" EndBit="15" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Speed Ref" StartBit="16" EndBit="31" Type="ChannelSInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Ref PZD 3" StartBit="32" EndBit="47" Type="ChannelSInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Ref PZD 4" StartBit="48" EndBit="63" Type="ChannelSInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Ref PZD 5" StartBit="64" EndBit="79" Type="ChannelSInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Ref PZD 6" StartBit="80" EndBit="95" Type="ChannelSInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Ref PZD 7" StartBit="96" EndBit="111" Type="ChannelSInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Ref PZD 8" StartBit="112" EndBit="127" Type="ChannelSInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Ref PZD 9" StartBit="128" EndBit="143" Type="ChannelSInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Ref PZD 10" StartBit="144" EndBit="159" Type="ChannelSInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </OutputArea>
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="fe648d51-bb3f-4b5f-ad37-b999f3891b74" hwGsdmlUnitID="DEV_RETA_DAP_V2" description="RETA-02 PROFIdrive_DEV_RETA_DAP_V2" information="PROFINET IO module RETA-02" icon="RackAdapterType" />
+    <HardwareUnit guid="f002c7b4-4cdb-4f95-8667-f8a36f094e30" hwGsdmlUnitID="DAP_RETA_DAP_V2" description="RETA-02 PROFIdrive_DAP_RETA_DAP_V2" information="PROFINET IO module RETA-02" icon="RackIOType" />
+    <HardwareUnit guid="f04342ed-76ff-426e-83d9-fdb16082b961" hwGsdmlUnitID="VSM_RETA_DAP_V2_MOD_RETA_DAP_V2" description="RETA-02 PROFIdrive_SUB_RETA_DAP_V2_DAP_RETA_DAP_V2" information="PROFINET IO module RETA-02" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="0" GSDMLHash="" />
+        <OutputArea AreaByteSize="0" GSDMLHash="" />
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="b0d1d64f-b65e-4a56-8311-48326cd85091" hwGsdmlUnitID="PSM_32769_MOD_RETA_DAP_V2" description="Port 1" information="Port 1" icon="RackIOType" />
+    <HardwareUnit guid="71d211a6-ceaa-41b0-86e9-4a83108bb602" hwGsdmlUnitID="ISM_0x0001_MOD_RETA_DAP_V2" description="Interface" information="Interface" icon="RackIOType" />
+    <HardwareUnit guid="db1372b6-164d-4262-8e3e-5292f6690d1a" hwGsdmlUnitID="MOD_ID_MODULE_STD_TGM1" description="Std Tgm 1" information="Std Tgm 1" icon="RackIOType" />
+    <HardwareUnit guid="d803a38d-c532-4ae6-adf8-82fb2bf40f08" hwGsdmlUnitID="VSM_ID_PROFILE_MAPPAP_1_MOD_ID_MODULE_STD_TGM1" description="Module Access Point_SUB_ID_PROFILE_MAPPAP_1_MOD_ID_MODULE_STD_TGM1" information="Acyclic parameter access is possible through this module" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="0" GSDMLHash="" />
+        <OutputArea AreaByteSize="0" GSDMLHash="" />
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="27345373-dc72-4076-b66f-e79a90795949" hwGsdmlUnitID="VSM_ID_PROFILE_STD_TGM1_1_MOD_ID_MODULE_STD_TGM1" description="Standard telegram 1_SUB_ID_PROFILE_STD_TGM1_1_MOD_ID_MODULE_STD_TGM1" information="Control/Reference and Status/Actual values" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="4" GSDMLHash="qWZM7dGxUf+77tUNTPkZgQ==">
+          <Channel Name="Input" StartBit="0" EndBit="15" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Input_1" StartBit="16" EndBit="31" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </InputArea>
+        <OutputArea AreaByteSize="4" GSDMLHash="PBuQBoLtvYdv0Ri53UtQiw==">
+          <Channel Name="Output" StartBit="0" EndBit="15" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Output_1" StartBit="16" EndBit="31" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </OutputArea>
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="04f843b4-4f25-42a1-ba50-36e477272984" hwGsdmlUnitID="MOD_ID_MODULE_STD_TGM1_1PZD" description="Std Tgm 1 + 1 PZD" information="Std Tgm 1 + 1 PZD" icon="RackIOType" />
+    <HardwareUnit guid="e5935154-6f59-4f9e-9457-3398caddd47f" hwGsdmlUnitID="VSM_ID_PROFILE_MAPPAP_2_MOD_ID_MODULE_STD_TGM1_1PZD" description="Module Access Point_SUB_ID_PROFILE_MAPPAP_2_MOD_ID_MODULE_STD_TGM1_1PZD" information="Acyclic parameter access is possible through this module" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="0" GSDMLHash="" />
+        <OutputArea AreaByteSize="0" GSDMLHash="" />
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="14489c1d-6edc-4bee-b203-7005d5fefb56" hwGsdmlUnitID="VSM_ID_PROFILE_STD_TGM1_2_MOD_ID_MODULE_STD_TGM1_1PZD" description="Standard telegram 1_SUB_ID_PROFILE_STD_TGM1_2_MOD_ID_MODULE_STD_TGM1_1PZD" information="Control/Reference and Status/Actual values" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="4" GSDMLHash="qWZM7dGxUf+77tUNTPkZgQ==">
+          <Channel Name="Input" StartBit="0" EndBit="15" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Input_1" StartBit="16" EndBit="31" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </InputArea>
+        <OutputArea AreaByteSize="4" GSDMLHash="PBuQBoLtvYdv0Ri53UtQiw==">
+          <Channel Name="Output" StartBit="0" EndBit="15" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Output_1" StartBit="16" EndBit="31" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </OutputArea>
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="6a08b691-b522-4820-810d-b069ab757c7e" hwGsdmlUnitID="VSM_ID_PROFILE_INPUT2B_2_MOD_ID_MODULE_STD_TGM1_1PZD" description="Input 2 bytes_SUB_ID_PROFILE_INPUT2B_2_MOD_ID_MODULE_STD_TGM1_1PZD" information="Input 2 bytes, freely configurable" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="2" GSDMLHash="9nySN59wG3hCsRiVJGsQkA==">
+          <Channel Name="Input" StartBit="0" EndBit="15" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </InputArea>
+        <OutputArea AreaByteSize="0" GSDMLHash="" />
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="a52110d8-4ab9-4468-8b26-2a76265ee8cc" hwGsdmlUnitID="VSM_ID_PROFILE_OUTPUT2B_2_MOD_ID_MODULE_STD_TGM1_1PZD" description="Output 2 bytes_SUB_ID_PROFILE_OUTPUT2B_2_MOD_ID_MODULE_STD_TGM1_1PZD" information="Output 2 bytes, freely configurable" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="0" GSDMLHash="" />
+        <OutputArea AreaByteSize="2" GSDMLHash="Ks9nF1waxuAWasxPgZslmA==">
+          <Channel Name="Output" StartBit="0" EndBit="15" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </OutputArea>
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="dcb8eacc-2693-4993-a332-702d0f2ab254" hwGsdmlUnitID="MOD_ID_MODULE_STD_TGM1_2PZD" description="Std Tgm 1 + 2 PZD" information="Std Tgm 1 + 2 PZD" icon="RackIOType" />
+    <HardwareUnit guid="b0c27c0e-ba83-4192-9cc8-2b879be416c5" hwGsdmlUnitID="VSM_ID_PROFILE_MAPPAP_3_MOD_ID_MODULE_STD_TGM1_2PZD" description="Module Access Point_SUB_ID_PROFILE_MAPPAP_3_MOD_ID_MODULE_STD_TGM1_2PZD" information="Acyclic parameter access is possible through this module" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="0" GSDMLHash="" />
+        <OutputArea AreaByteSize="0" GSDMLHash="" />
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="954df208-2013-49b3-ac1a-76ee428c8bf4" hwGsdmlUnitID="VSM_ID_PROFILE_STD_TGM1_3_MOD_ID_MODULE_STD_TGM1_2PZD" description="Standard telegram 1_SUB_ID_PROFILE_STD_TGM1_3_MOD_ID_MODULE_STD_TGM1_2PZD" information="Control/Reference and Status/Actual values" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="4" GSDMLHash="qWZM7dGxUf+77tUNTPkZgQ==">
+          <Channel Name="Input" StartBit="0" EndBit="15" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Input_1" StartBit="16" EndBit="31" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </InputArea>
+        <OutputArea AreaByteSize="4" GSDMLHash="PBuQBoLtvYdv0Ri53UtQiw==">
+          <Channel Name="Output" StartBit="0" EndBit="15" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Output_1" StartBit="16" EndBit="31" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </OutputArea>
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="25bfefaf-ed64-4029-b3e7-044ff1203550" hwGsdmlUnitID="VSM_ID_PROFILE_INPUT2B_3_MOD_ID_MODULE_STD_TGM1_2PZD" description="Input 2 bytes_SUB_ID_PROFILE_INPUT2B_3_MOD_ID_MODULE_STD_TGM1_2PZD" information="Input 2 bytes, freely configurable" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="2" GSDMLHash="9nySN59wG3hCsRiVJGsQkA==">
+          <Channel Name="Input" StartBit="0" EndBit="15" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </InputArea>
+        <OutputArea AreaByteSize="0" GSDMLHash="" />
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="127ab43a-8d8c-47a6-89ac-0a3124ecf72b" hwGsdmlUnitID="VSM_ID_PROFILE_OUTPUT2B_3_MOD_ID_MODULE_STD_TGM1_2PZD" description="Output 2 bytes_SUB_ID_PROFILE_OUTPUT2B_3_MOD_ID_MODULE_STD_TGM1_2PZD" information="Output 2 bytes, freely configurable" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="0" GSDMLHash="" />
+        <OutputArea AreaByteSize="2" GSDMLHash="Ks9nF1waxuAWasxPgZslmA==">
+          <Channel Name="Output" StartBit="0" EndBit="15" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </OutputArea>
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="f5a0f6d5-5a09-4f4d-b326-2743efa460fc" hwGsdmlUnitID="MOD_ID_MODULE_STD_TGM1_3PZD" description="Std Tgm 1 + 3 PZD" information="Std Tgm 1 + 3 PZD" icon="RackIOType" />
+    <HardwareUnit guid="eebf4ab6-448f-4a8e-86a9-5bbb487d077c" hwGsdmlUnitID="VSM_ID_PROFILE_MAPPAP_4_MOD_ID_MODULE_STD_TGM1_3PZD" description="Module Access Point_SUB_ID_PROFILE_MAPPAP_4_MOD_ID_MODULE_STD_TGM1_3PZD" information="Acyclic parameter access is possible through this module" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="0" GSDMLHash="" />
+        <OutputArea AreaByteSize="0" GSDMLHash="" />
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="e77d3ac7-6012-4f2d-bfdd-18d7786a4ca5" hwGsdmlUnitID="VSM_ID_PROFILE_STD_TGM1_4_MOD_ID_MODULE_STD_TGM1_3PZD" description="Standard telegram 1_SUB_ID_PROFILE_STD_TGM1_4_MOD_ID_MODULE_STD_TGM1_3PZD" information="Control/Reference and Status/Actual values" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="4" GSDMLHash="qWZM7dGxUf+77tUNTPkZgQ==">
+          <Channel Name="Input" StartBit="0" EndBit="15" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Input_1" StartBit="16" EndBit="31" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </InputArea>
+        <OutputArea AreaByteSize="4" GSDMLHash="PBuQBoLtvYdv0Ri53UtQiw==">
+          <Channel Name="Output" StartBit="0" EndBit="15" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Output_1" StartBit="16" EndBit="31" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </OutputArea>
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="4054dd84-641a-4c13-8452-d7fe7648e589" hwGsdmlUnitID="VSM_ID_PROFILE_INPUT2B_4_MOD_ID_MODULE_STD_TGM1_3PZD" description="Input 2 bytes_SUB_ID_PROFILE_INPUT2B_4_MOD_ID_MODULE_STD_TGM1_3PZD" information="Input 2 bytes, freely configurable" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="2" GSDMLHash="9nySN59wG3hCsRiVJGsQkA==">
+          <Channel Name="Input" StartBit="0" EndBit="15" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </InputArea>
+        <OutputArea AreaByteSize="0" GSDMLHash="" />
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="e447fb76-30b5-45d0-b028-970d6e1d14a5" hwGsdmlUnitID="VSM_ID_PROFILE_OUTPUT2B_4_MOD_ID_MODULE_STD_TGM1_3PZD" description="Output 2 bytes_SUB_ID_PROFILE_OUTPUT2B_4_MOD_ID_MODULE_STD_TGM1_3PZD" information="Output 2 bytes, freely configurable" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="0" GSDMLHash="" />
+        <OutputArea AreaByteSize="2" GSDMLHash="Ks9nF1waxuAWasxPgZslmA==">
+          <Channel Name="Output" StartBit="0" EndBit="15" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </OutputArea>
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="c0a989e3-584d-4898-b71b-add858e7a2f1" hwGsdmlUnitID="MOD_ID_MODULE_STD_TGM1_4PZD" description="Std Tgm 1 + 4 PZD" information="Std Tgm 1 + 4 PZD" icon="RackIOType" />
+    <HardwareUnit guid="e301b215-0e20-4d80-8a42-799552df27d7" hwGsdmlUnitID="VSM_ID_PROFILE_MAPPAP_5_MOD_ID_MODULE_STD_TGM1_4PZD" description="Module Access Point_SUB_ID_PROFILE_MAPPAP_5_MOD_ID_MODULE_STD_TGM1_4PZD" information="Acyclic parameter access is possible through this module" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="0" GSDMLHash="" />
+        <OutputArea AreaByteSize="0" GSDMLHash="" />
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="9a257e09-faf1-44a6-adbe-ccdf914f073b" hwGsdmlUnitID="VSM_ID_PROFILE_STD_TGM1_5_MOD_ID_MODULE_STD_TGM1_4PZD" description="Standard telegram 1_SUB_ID_PROFILE_STD_TGM1_5_MOD_ID_MODULE_STD_TGM1_4PZD" information="Control/Reference and Status/Actual values" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="4" GSDMLHash="qWZM7dGxUf+77tUNTPkZgQ==">
+          <Channel Name="Input" StartBit="0" EndBit="15" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Input_1" StartBit="16" EndBit="31" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </InputArea>
+        <OutputArea AreaByteSize="4" GSDMLHash="PBuQBoLtvYdv0Ri53UtQiw==">
+          <Channel Name="Output" StartBit="0" EndBit="15" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Output_1" StartBit="16" EndBit="31" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </OutputArea>
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="8e031d56-4947-4716-9001-8c62fec2611e" hwGsdmlUnitID="VSM_ID_PROFILE_INPUT2B_5_MOD_ID_MODULE_STD_TGM1_4PZD" description="Input 2 bytes_SUB_ID_PROFILE_INPUT2B_5_MOD_ID_MODULE_STD_TGM1_4PZD" information="Input 2 bytes, freely configurable" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="2" GSDMLHash="9nySN59wG3hCsRiVJGsQkA==">
+          <Channel Name="Input" StartBit="0" EndBit="15" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </InputArea>
+        <OutputArea AreaByteSize="0" GSDMLHash="" />
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="ba6f590c-ee12-406f-a0a9-9365c15d6b6b" hwGsdmlUnitID="VSM_ID_PROFILE_OUTPUT2B_5_MOD_ID_MODULE_STD_TGM1_4PZD" description="Output 2 bytes_SUB_ID_PROFILE_OUTPUT2B_5_MOD_ID_MODULE_STD_TGM1_4PZD" information="Output 2 bytes, freely configurable" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="0" GSDMLHash="" />
+        <OutputArea AreaByteSize="2" GSDMLHash="Ks9nF1waxuAWasxPgZslmA==">
+          <Channel Name="Output" StartBit="0" EndBit="15" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </OutputArea>
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="bf47abd1-5aac-4238-a93c-fe610e3bc445" hwGsdmlUnitID="MOD_ID_MODULE_STD_TGM1_5PZD" description="Std Tgm 1 + 5 PZD" information="Std Tgm 1 + 5 PZD" icon="RackIOType" />
+    <HardwareUnit guid="551c07b4-49a9-420b-b8c6-1cb3bb483c69" hwGsdmlUnitID="VSM_ID_PROFILE_MAPPAP_6_MOD_ID_MODULE_STD_TGM1_5PZD" description="Module Access Point_SUB_ID_PROFILE_MAPPAP_6_MOD_ID_MODULE_STD_TGM1_5PZD" information="Acyclic parameter access is possible through this module" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="0" GSDMLHash="" />
+        <OutputArea AreaByteSize="0" GSDMLHash="" />
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="237be768-5681-4826-ac37-5bed8e47d7c7" hwGsdmlUnitID="VSM_ID_PROFILE_STD_TGM1_6_MOD_ID_MODULE_STD_TGM1_5PZD" description="Standard telegram 1_SUB_ID_PROFILE_STD_TGM1_6_MOD_ID_MODULE_STD_TGM1_5PZD" information="Control/Reference and Status/Actual values" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="4" GSDMLHash="qWZM7dGxUf+77tUNTPkZgQ==">
+          <Channel Name="Input" StartBit="0" EndBit="15" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Input_1" StartBit="16" EndBit="31" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </InputArea>
+        <OutputArea AreaByteSize="4" GSDMLHash="PBuQBoLtvYdv0Ri53UtQiw==">
+          <Channel Name="Output" StartBit="0" EndBit="15" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Output_1" StartBit="16" EndBit="31" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </OutputArea>
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="cc06c853-139d-4e8a-ac57-415f00f6e816" hwGsdmlUnitID="VSM_ID_PROFILE_INPUT2B_6_MOD_ID_MODULE_STD_TGM1_5PZD" description="Input 2 bytes_SUB_ID_PROFILE_INPUT2B_6_MOD_ID_MODULE_STD_TGM1_5PZD" information="Input 2 bytes, freely configurable" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="2" GSDMLHash="9nySN59wG3hCsRiVJGsQkA==">
+          <Channel Name="Input" StartBit="0" EndBit="15" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </InputArea>
+        <OutputArea AreaByteSize="0" GSDMLHash="" />
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="126ebaeb-de6c-431a-bb42-7adfd0591d5c" hwGsdmlUnitID="VSM_ID_PROFILE_OUTPUT2B_6_MOD_ID_MODULE_STD_TGM1_5PZD" description="Output 2 bytes_SUB_ID_PROFILE_OUTPUT2B_6_MOD_ID_MODULE_STD_TGM1_5PZD" information="Output 2 bytes, freely configurable" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="0" GSDMLHash="" />
+        <OutputArea AreaByteSize="2" GSDMLHash="Ks9nF1waxuAWasxPgZslmA==">
+          <Channel Name="Output" StartBit="0" EndBit="15" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </OutputArea>
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="6bf02218-39a9-40e7-afb8-7a926e7d312a" hwGsdmlUnitID="MOD_ID_MODULE_STD_TGM1_6PZD" description="Std Tgm 1 + 6 PZD" information="Std Tgm 1 + 6 PZD" icon="RackIOType" />
+    <HardwareUnit guid="bc8e1efa-fcb3-4264-8651-cf22efd6cc5f" hwGsdmlUnitID="VSM_ID_PROFILE_MAPPAP_7_MOD_ID_MODULE_STD_TGM1_6PZD" description="Module Access Point_SUB_ID_PROFILE_MAPPAP_7_MOD_ID_MODULE_STD_TGM1_6PZD" information="Acyclic parameter access is possible through this module" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="0" GSDMLHash="" />
+        <OutputArea AreaByteSize="0" GSDMLHash="" />
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="0033ffcf-4eb5-4bd4-9ec7-df9b25507634" hwGsdmlUnitID="VSM_ID_PROFILE_STD_TGM1_7_MOD_ID_MODULE_STD_TGM1_6PZD" description="Standard telegram 1_SUB_ID_PROFILE_STD_TGM1_7_MOD_ID_MODULE_STD_TGM1_6PZD" information="Control/Reference and Status/Actual values" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="4" GSDMLHash="qWZM7dGxUf+77tUNTPkZgQ==">
+          <Channel Name="Input" StartBit="0" EndBit="15" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Input_1" StartBit="16" EndBit="31" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </InputArea>
+        <OutputArea AreaByteSize="4" GSDMLHash="PBuQBoLtvYdv0Ri53UtQiw==">
+          <Channel Name="Output" StartBit="0" EndBit="15" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Output_1" StartBit="16" EndBit="31" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </OutputArea>
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="92589e71-f513-4cd1-ae16-7fe076bc924d" hwGsdmlUnitID="VSM_ID_PROFILE_INPUT2B_7_MOD_ID_MODULE_STD_TGM1_6PZD" description="Input 2 bytes_SUB_ID_PROFILE_INPUT2B_7_MOD_ID_MODULE_STD_TGM1_6PZD" information="Input 2 bytes, freely configurable" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="2" GSDMLHash="9nySN59wG3hCsRiVJGsQkA==">
+          <Channel Name="Input" StartBit="0" EndBit="15" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </InputArea>
+        <OutputArea AreaByteSize="0" GSDMLHash="" />
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="032670cb-f255-4e5c-8673-45d859c9f624" hwGsdmlUnitID="VSM_ID_PROFILE_OUTPUT2B_7_MOD_ID_MODULE_STD_TGM1_6PZD" description="Output 2 bytes_SUB_ID_PROFILE_OUTPUT2B_7_MOD_ID_MODULE_STD_TGM1_6PZD" information="Output 2 bytes, freely configurable" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="0" GSDMLHash="" />
+        <OutputArea AreaByteSize="2" GSDMLHash="Ks9nF1waxuAWasxPgZslmA==">
+          <Channel Name="Output" StartBit="0" EndBit="15" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </OutputArea>
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="fc1f5600-fa75-40eb-b4c5-561b121c2cc6" hwGsdmlUnitID="MOD_ID_MODULE_STD_TGM1_7PZD" description="Std Tgm 1 + 7 PZD" information="Std Tgm 1 + 7 PZD" icon="RackIOType" />
+    <HardwareUnit guid="2666fc9e-5a1a-4184-a65b-5bb7c8cbaeb3" hwGsdmlUnitID="VSM_ID_PROFILE_MAPPAP_8_MOD_ID_MODULE_STD_TGM1_7PZD" description="Module Access Point_SUB_ID_PROFILE_MAPPAP_8_MOD_ID_MODULE_STD_TGM1_7PZD" information="Acyclic parameter access is possible through this module" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="0" GSDMLHash="" />
+        <OutputArea AreaByteSize="0" GSDMLHash="" />
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="a2d735a5-c617-48e7-9942-fbaa74d581c7" hwGsdmlUnitID="VSM_ID_PROFILE_STD_TGM1_8_MOD_ID_MODULE_STD_TGM1_7PZD" description="Standard telegram 1_SUB_ID_PROFILE_STD_TGM1_8_MOD_ID_MODULE_STD_TGM1_7PZD" information="Control/Reference and Status/Actual values" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="4" GSDMLHash="qWZM7dGxUf+77tUNTPkZgQ==">
+          <Channel Name="Input" StartBit="0" EndBit="15" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Input_1" StartBit="16" EndBit="31" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </InputArea>
+        <OutputArea AreaByteSize="4" GSDMLHash="PBuQBoLtvYdv0Ri53UtQiw==">
+          <Channel Name="Output" StartBit="0" EndBit="15" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Output_1" StartBit="16" EndBit="31" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </OutputArea>
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="99ea6bdd-c2f2-433c-bb62-b3e5f77d7b6d" hwGsdmlUnitID="VSM_ID_PROFILE_INPUT2B_8_MOD_ID_MODULE_STD_TGM1_7PZD" description="Input 2 bytes_SUB_ID_PROFILE_INPUT2B_8_MOD_ID_MODULE_STD_TGM1_7PZD" information="Input 2 bytes, freely configurable" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="2" GSDMLHash="9nySN59wG3hCsRiVJGsQkA==">
+          <Channel Name="Input" StartBit="0" EndBit="15" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </InputArea>
+        <OutputArea AreaByteSize="0" GSDMLHash="" />
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="54aa6da2-834c-4e69-92d2-279129d0e8c5" hwGsdmlUnitID="VSM_ID_PROFILE_OUTPUT2B_8_MOD_ID_MODULE_STD_TGM1_7PZD" description="Output 2 bytes_SUB_ID_PROFILE_OUTPUT2B_8_MOD_ID_MODULE_STD_TGM1_7PZD" information="Output 2 bytes, freely configurable" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="0" GSDMLHash="" />
+        <OutputArea AreaByteSize="2" GSDMLHash="Ks9nF1waxuAWasxPgZslmA==">
+          <Channel Name="Output" StartBit="0" EndBit="15" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </OutputArea>
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="e287b865-b2cc-441b-a324-fd7b291ad502" hwGsdmlUnitID="MOD_ID_MODULE_STD_TGM1_8PZD" description="Std Tgm 1 + 8 PZD" information="Std Tgm 1 + 8 PZD" icon="RackIOType" />
+    <HardwareUnit guid="101c84f6-11c6-4826-a495-f29742f0bae0" hwGsdmlUnitID="VSM_ID_PROFILE_MAPPAP_9_MOD_ID_MODULE_STD_TGM1_8PZD" description="Module Access Point_SUB_ID_PROFILE_MAPPAP_9_MOD_ID_MODULE_STD_TGM1_8PZD" information="Acyclic parameter access is possible through this module" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="0" GSDMLHash="" />
+        <OutputArea AreaByteSize="0" GSDMLHash="" />
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="96572a32-3849-4fd7-a637-0269892a771c" hwGsdmlUnitID="VSM_ID_PROFILE_STD_TGM1_9_MOD_ID_MODULE_STD_TGM1_8PZD" description="Standard telegram 1_SUB_ID_PROFILE_STD_TGM1_9_MOD_ID_MODULE_STD_TGM1_8PZD" information="Control/Reference and Status/Actual values" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="4" GSDMLHash="qWZM7dGxUf+77tUNTPkZgQ==">
+          <Channel Name="Input" StartBit="0" EndBit="15" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Input_1" StartBit="16" EndBit="31" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </InputArea>
+        <OutputArea AreaByteSize="4" GSDMLHash="PBuQBoLtvYdv0Ri53UtQiw==">
+          <Channel Name="Output" StartBit="0" EndBit="15" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Output_1" StartBit="16" EndBit="31" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </OutputArea>
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="3515f74d-9c3f-4245-97ea-f51f506a371d" hwGsdmlUnitID="VSM_ID_PROFILE_INPUT2B_9_MOD_ID_MODULE_STD_TGM1_8PZD" description="Input 2 bytes_SUB_ID_PROFILE_INPUT2B_9_MOD_ID_MODULE_STD_TGM1_8PZD" information="Input 2 bytes, freely configurable" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="2" GSDMLHash="9nySN59wG3hCsRiVJGsQkA==">
+          <Channel Name="Input" StartBit="0" EndBit="15" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </InputArea>
+        <OutputArea AreaByteSize="0" GSDMLHash="" />
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="c16018ec-0203-4414-a812-90c1f1c82d0d" hwGsdmlUnitID="VSM_ID_PROFILE_OUTPUT2B_9_MOD_ID_MODULE_STD_TGM1_8PZD" description="Output 2 bytes_SUB_ID_PROFILE_OUTPUT2B_9_MOD_ID_MODULE_STD_TGM1_8PZD" information="Output 2 bytes, freely configurable" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="0" GSDMLHash="" />
+        <OutputArea AreaByteSize="2" GSDMLHash="Ks9nF1waxuAWasxPgZslmA==">
+          <Channel Name="Output" StartBit="0" EndBit="15" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </OutputArea>
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="418641e7-c2cd-46cf-bd9a-ad98cc5bb5d7" hwGsdmlUnitID="VSM_RETA_DAP_V1_SUB_MOD_RETA_DAP_V1" description="RETA-02 Vendor_DAP_SUB" information="PROFINET IO module RETA-02 Vendor mode" icon="ProtocolType">
+      <Channels>
+        <InputArea AreaByteSize="0" GSDMLHash="" />
+        <OutputArea AreaByteSize="0" GSDMLHash="" />
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="de4e23da-a6b1-417e-813b-516a9e898940" hwGsdmlUnitID="VSM_RETA_DAP_V2_SUB_MOD_RETA_DAP_V2" description="RETA-02 PROFIdrive_SUB_RETA_DAP_V2_SUB_DAP_RETA_DAP_V2" information="PROFINET IO module RETA-02 PROFIdrive mode" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="0" GSDMLHash="" />
+        <OutputArea AreaByteSize="0" GSDMLHash="" />
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="54faa308-558f-421a-83b6-98110f5b8703" hwGsdmlUnitID="SUB_ID_PROFILE_STD_TGM1" description="Standard telegram 1" information="Control/Reference and Status/Actual values" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="4" GSDMLHash="qWZM7dGxUf+77tUNTPkZgQ==">
+          <Channel Name="Ready To Switch On" StartBit="15" EndBit="15" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Ready To Operate" StartBit="14" EndBit="14" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Operation Enabled" StartBit="13" EndBit="13" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Fault Present" StartBit="12" EndBit="12" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Coast Stop Not Activated" StartBit="11" EndBit="11" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Quick Stop Not Activated" StartBit="10" EndBit="10" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Switching On Inhibited" StartBit="9" EndBit="9" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Warning Present" StartBit="8" EndBit="8" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Speed Error Within Tolerance" StartBit="7" EndBit="7" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Control Requested" StartBit="6" EndBit="6" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="f Or n Reached or Exceeded" StartBit="5" EndBit="5" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Reserved" StartBit="4" EndBit="4" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Reserved_1" StartBit="3" EndBit="3" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Reserved_2" StartBit="2" EndBit="2" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Reserved_3" StartBit="1" EndBit="1" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Reserved_4" StartBit="0" EndBit="0" Type="ChannelBitBooleanIOPS" />
+          <Channel Name="Input" StartBit="16" EndBit="31" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Input_1" StartBit="0" EndBit="15" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </InputArea>
+        <OutputArea AreaByteSize="4" GSDMLHash="PBuQBoLtvYdv0Ri53UtQiw==">
+          <Channel Name="ON" StartBit="15" EndBit="15" Type="ChannelBitBoolean" />
+          <Channel Name="No Coast Stop" StartBit="14" EndBit="14" Type="ChannelBitBoolean" />
+          <Channel Name="No Quick Stop" StartBit="13" EndBit="13" Type="ChannelBitBoolean" />
+          <Channel Name="Enable Operation" StartBit="12" EndBit="12" Type="ChannelBitBoolean" />
+          <Channel Name="Enable Ramp Generator" StartBit="11" EndBit="11" Type="ChannelBitBoolean" />
+          <Channel Name="Unfreeze Ramp Generator" StartBit="10" EndBit="10" Type="ChannelBitBoolean" />
+          <Channel Name="Enable Setpoint" StartBit="9" EndBit="9" Type="ChannelBitBoolean" />
+          <Channel Name="Fault Acknowledge" StartBit="8" EndBit="8" Type="ChannelBitBoolean" />
+          <Channel Name="Jog 1 ON" StartBit="7" EndBit="7" Type="ChannelBitBoolean" />
+          <Channel Name="Jog 2 ON" StartBit="6" EndBit="6" Type="ChannelBitBoolean" />
+          <Channel Name="Control By PLC" StartBit="5" EndBit="5" Type="ChannelBitBoolean" />
+          <Channel Name="Reserved" StartBit="4" EndBit="4" Type="ChannelBitBoolean" />
+          <Channel Name="Reserved_1" StartBit="3" EndBit="3" Type="ChannelBitBoolean" />
+          <Channel Name="Reserved_2" StartBit="2" EndBit="2" Type="ChannelBitBoolean" />
+          <Channel Name="Reserved_3" StartBit="1" EndBit="1" Type="ChannelBitBoolean" />
+          <Channel Name="Reserved_4" StartBit="0" EndBit="0" Type="ChannelBitBoolean" />
+          <Channel Name="Output" StartBit="16" EndBit="31" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+          <Channel Name="Output_1" StartBit="0" EndBit="15" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </OutputArea>
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="6079df50-854a-4994-8a5e-08534115b975" hwGsdmlUnitID="SUB_ID_PROFILE_INPUT2B" description="Input 2 bytes" information="Input 2 bytes, freely configurable" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="2" GSDMLHash="9nySN59wG3hCsRiVJGsQkA==">
+          <Channel Name="Input" StartBit="0" EndBit="15" Type="ChannelInt32UnsignedIOPS">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </InputArea>
+        <OutputArea AreaByteSize="0" GSDMLHash="" />
+      </Channels>
+    </HardwareUnit>
+    <HardwareUnit guid="fb297dde-a06d-4aa7-b2d3-b0233a9147f8" hwGsdmlUnitID="SUB_ID_PROFILE_OUTPUT2B" description="Output 2 bytes" information="Output 2 bytes, freely configurable" icon="RackIOType">
+      <Channels>
+        <InputArea AreaByteSize="0" GSDMLHash="" />
+        <OutputArea AreaByteSize="2" GSDMLHash="Ks9nF1waxuAWasxPgZslmA==">
+          <Channel Name="Output" StartBit="0" EndBit="15" Type="ChannelInt16">
+            <TypeParameter Name="Swap" Value="2" />
+          </Channel>
+        </OutputArea>
+      </Channels>
+    </HardwareUnit>
+    <HwdGlobalSettings MaxNumberSubUnits="65536" />
+  </Hwd>
+  <HWDHeaderComment>Modified : 2010-02-16 10:30
+Modified : 2010-03-01 10:36
+Modified : 2010-03-08 14:35
+Modified : 2010-03-09 15:09
+Modified : 2010-03-25 15:19
+Modified : 2013-01-31 12:20
+Modified : 2014-05-13 15:12
+-&gt; Changed IO channels from UInt to Int
+</HWDHeaderComment>
+  <SessionDataVersion>1</SessionDataVersion>
+  <ChannelNumberBase>0</ChannelNumberBase>
+  <SessionID>1184b0ec-9006-4a85-80fc-b98bac808796</SessionID>
+  <DIW_BLOB_Version>1</DIW_BLOB_Version>
+  <DeviceIdentity VendorId="0x001A" DeviceId="0x0001" />
+</DeviceImportWizard>

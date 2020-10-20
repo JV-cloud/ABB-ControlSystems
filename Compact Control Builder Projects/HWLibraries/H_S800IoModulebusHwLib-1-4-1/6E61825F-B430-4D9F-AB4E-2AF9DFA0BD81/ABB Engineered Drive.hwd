@@ -1,0 +1,575 @@
+(* -------------------------------------------------------------- *)
+(*    Module: ACS600ENG  Modulebus                                *)
+(* -------------------------------------------------------------- *)
+
+(* Version 1.0/1                                                  *)
+(* 2006-08-28     K Gardin                                        *)
+(* AC800M #26023  Changed copy routine for Ref/90.02 and /90.03   *) 
+(* -------------------------------------------------------------- *)
+(* Version 1.0/0 based on io_acs600engm.hwd version 5.0/3         *)
+(* 2005-08-31    N Ljungberg                                      *)
+
+HWUnitInfo  (* ACS600 Eng *)
+   HWUnitID 16#00888A00
+   Description "ABB Engineered Drive"
+   Information "ABB Engineered drive"
+   Icons MotorType
+   Attributes AdapterUnit IoUnit DigitalIn DigitalOut AnalogIn AnalogOut
+   InterfaceInfo
+    IoSysType CIGIO
+    CLSID_CB     {02A678FA-CA7D-4e4b-ABEA-888CF8CCE2F8}
+    CLSID_CTRL   {90F15C58-7EFA-4565-B572-246C19BBBB85}
+  End InterfaceInfo
+   ConnectionInfo
+     ConnectType OwnUnit
+     IOConnect   NoFail
+     IOConfig    NoFail
+   End ConnectionInfo
+   Parameters
+     ParamInfo 
+       Name Channel_1
+       Description "Channel 1 (DDS 10/11)"
+       CompileType IOConfig
+       Datatype ENUM
+       Default  2
+       ParValIndex 0
+       ParamType CIGIOData 1 6 6 ByteParam ByteOffset
+     End ParamInfo
+     ParamInfo 
+       Name Channel_2
+       Description "Channel 2 (DDS 12/13)"
+       CompileType IOConfig
+       Datatype ENUM
+       Default  2
+       ParValIndex 0
+       ParamType CIGIOData 1 6 7 ByteParam ByteOffset
+     End ParamInfo
+     ParamInfo 
+       Name Channel_3
+       Description "Channel 3 (DDS 14/15)"
+       CompileType IOConfig
+       Datatype ENUM
+       Default  2
+       ParValIndex 0
+       ParamType CIGIOData 1 6 8 ByteParam ByteOffset
+     End ParamInfo
+     ParamInfo 
+       Name Channel_4
+       Description "Channel 4 (DDS 16/17)"
+       CompileType IOConfig
+       Datatype ENUM
+       Default  2
+       ParValIndex 0
+       ParamType CIGIOData 1 6 9 ByteParam ByteOffset
+     End ParamInfo
+     ParamInfo 
+       Name Channel_5
+       Description "Channel 5 (DDS 18/19)"
+       CompileType IOConfig
+       Datatype ENUM
+       Default  2
+       ParValIndex 0
+       ParamType CIGIOData 1 6 10 ByteParam ByteOffset
+     End ParamInfo
+     ParamInfo 
+       Name Channel_6
+       Description "Channel 6 (DDS 20/21)"
+       CompileType IOConfig
+       Datatype ENUM
+       Default  2
+       ParValIndex 0
+       ParamType CIGIOData 1 6 11 ByteParam ByteOffset
+     End ParamInfo
+     ParamInfo 
+       Name Channel_7
+       Description "Channel 7 (DDS 22/23)"
+       CompileType IOConfig
+       Datatype ENUM
+       Default  2
+       ParValIndex 0
+       ParamType CIGIOData 1 6 12 ByteParam ByteOffset
+     End ParamInfo
+     ParamInfo 
+       Name Channel_8
+       Description "Channel 8 (DDS 24/25)"
+       CompileType IOConfig
+       Datatype ENUM
+       Default  2
+       ParValIndex 0
+       ParamType CIGIOData 1 6 13 ByteParam ByteOffset
+     End ParamInfo
+   End Parameters
+   ParValList
+     ParVal
+     ParValIndex 0
+       ENUM
+       "Off"            0
+       "Read"           2
+       "Read and Write" 3
+     End ParVal
+   End ParValList
+   Channels
+     ChannelInfo
+         Number 1 
+         ChannelName "Act/92.01 (DDS11)"
+         Datatype Int_In
+         Routine 310
+         CopyParameters 0 0 16#30008 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 2 
+         ChannelName "Act/92.02 (DDS11)"
+         Datatype Int_In
+         Routine 310
+         CopyParameters 0 0 16#30009 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 3 
+         ChannelName "Act/92.03 (DDS11)"
+         Datatype Int_In
+         Routine 310
+         CopyParameters 0 0 16#3000A 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 4 
+         ChannelName "Act/92.04 (DDS13)"
+         Datatype Int_In
+         Routine 310
+         CopyParameters 0 0 16#3000B 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 5 
+         ChannelName "Act/92.05 (DDS13)"
+         Datatype Int_In
+         Routine 310
+         CopyParameters 0 0 16#3000C 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 6 
+         ChannelName "Act/92.06 (DDS13)"
+         Datatype Int_In
+         Routine 310
+         CopyParameters 0 0 16#3000D 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 7
+         ChannelName "Act/92.07 (DDS15)"
+         Datatype Int_In
+         Routine 310
+         CopyParameters 0 0 16#3000E 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 8
+         ChannelName "Act/92.08 (DDS15)"
+         Datatype Int_In
+         Routine 310
+         CopyParameters 0 0 16#3000F 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 9
+         ChannelName "Act/92.09 (DDS15)"
+         Datatype Int_In
+         Routine 310
+         CopyParameters 0 0 16#30010 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 10
+         ChannelName "Act/92.10 (DDS17)"
+         Datatype Int_In
+         Routine 310
+         CopyParameters 0 0 16#30011 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 11
+         ChannelName "Act/92.11 (DDS17)"
+         Datatype Int_In
+         Routine 310
+         CopyParameters 0 0 16#30012 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 12
+         ChannelName "Act/92.12 (DDS17)"
+         Datatype Int_In
+         Routine 310
+         CopyParameters 0 0 16#30013 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 13
+         ChannelName "Act/92.13 (DDS19)"
+         Datatype Int_In
+         Routine 310
+         CopyParameters 0 0 16#30014 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 14
+         ChannelName "Act/92.14 (DDS19)"
+         Datatype Int_In
+         Routine 310
+         CopyParameters 0 0 16#30015 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 15
+         ChannelName "Act/92.15 (DDS19)"
+         Datatype Int_In
+         Routine 310
+         CopyParameters 0 0 16#30016 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 16
+         ChannelName "Act/92.16 (DDS21)"
+         Datatype Int_In
+         Routine 310
+         CopyParameters 0 0 16#30017 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 17
+         ChannelName "Act/92.17 (DDS21)"
+         Datatype Int_In
+         Routine 310
+         CopyParameters 0 0 16#30018 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 18
+         ChannelName "Act/92.18 (DDS21)"
+         Datatype Int_In
+         Routine 310
+         CopyParameters 0 0 16#30019 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 19
+         ChannelName "Act/93.01 (DDS23)"
+         Datatype Int_In
+         Routine 310
+         CopyParameters 0 0 16#3001A 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 20
+         ChannelName "Act/93.02 (DDS23)"
+         Datatype Int_In
+         Routine 310
+         CopyParameters 0 0 16#3001B 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 21
+         ChannelName "Act/93.03 (DDS23)"
+         Datatype Int_In
+         Routine 310
+         CopyParameters 0 0 16#3001C 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 22
+         ChannelName "Act/93.04 (DDS25)"
+         Datatype Int_In
+         Routine 310
+         CopyParameters 0 0 16#3001D 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 23
+         ChannelName "Act/93.05 (DDS25)"
+         Datatype Int_In
+         Routine 310
+         CopyParameters 0 0 16#3001E 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 24
+         ChannelName "Act/93.06 (DDS25)"
+         Datatype Int_In
+         Routine 310
+         CopyParameters 0 0 16#3001F 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 25
+         ChannelName "Ref/90.01 (DDS 10)"
+         Datatype Int_Out
+         Routine 400
+         CopyParameters 0 0 16#40000 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 26
+         ChannelName "Ref/90.02 (DDS 10)"
+         Datatype Int_Out
+         Routine 410
+         CopyParameters 0 0 16#40001 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 27
+         ChannelName "Ref/90.03 (DDS 10)"
+         Datatype Int_Out
+         Routine 410
+         CopyParameters 0 0 16#40002 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 28
+         ChannelName "Ref/90.04 (DDS 12)"
+         Datatype Int_Out
+         Routine 400
+         CopyParameters 0 0 16#40003 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 29
+         ChannelName "Ref/90.05 (DDS 12)"
+         Datatype Int_Out
+         Routine 400
+         CopyParameters 0 0 16#40004 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 30
+         ChannelName "Ref/90.06 (DDS 12)"
+         Datatype Int_Out
+         Routine 400
+         CopyParameters 0 0 16#40005 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 31
+         ChannelName "Ref/90.07 (DDS 14)"
+         Datatype Int_Out
+         Routine 400
+         CopyParameters 0 0 16#40006 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 32
+         ChannelName "Ref/90.08 (DDS 14)"
+         Datatype Int_Out
+         Routine 400
+         CopyParameters 0 0 16#40007 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 33
+         ChannelName "Ref/90.09 (DDS 14)"
+         Datatype Int_Out
+         Routine 400
+         CopyParameters 0 0 16#40008 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 34
+         ChannelName "Ref/90.10 (DDS 16)"
+         Datatype Int_Out
+         Routine 400
+         CopyParameters 0 0 16#40009 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 35
+         ChannelName "Ref/90.11 (DDS 16)"
+         Datatype Int_Out
+         Routine 400
+         CopyParameters 0 0 16#4000A 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 36
+         ChannelName "Ref/90.12 (DDS 16)"
+         Datatype Int_Out
+         Routine 400
+         CopyParameters 0 0 16#4000B 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 37
+         ChannelName "Ref/90.13 (DDS 18)"
+         Datatype Int_Out
+         Routine 400
+         CopyParameters 0 0 16#4000C 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 38
+         ChannelName "Ref/90.14 (DDS 18)"
+         Datatype Int_Out
+         Routine 400
+         CopyParameters 0 0 16#4000D 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 39
+         ChannelName "Ref/90.15 (DDS 18)"
+         Datatype Int_Out
+         Routine 400
+         CopyParameters 0 0 16#4000E 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 40
+         ChannelName "Ref/90.16 (DDS 20)"
+         Datatype Int_Out
+         Routine 400
+         CopyParameters 0 0 16#4000F 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 41
+         ChannelName "Ref/90.17 (DDS 20)"
+         Datatype Int_Out
+         Routine 400
+         CopyParameters 0 0 16#40010 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 42
+         ChannelName "Ref/90.18 (DDS 20)"
+         Datatype Int_Out
+         Routine 400
+         CopyParameters 0 0 16#40011 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 43
+         ChannelName "Ref/91.01 (DDS 22)"
+         Datatype Int_Out
+         Routine 400
+         CopyParameters 0 0 16#40012 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 44
+         ChannelName "Ref/91.02 (DDS 22)"
+         Datatype Int_Out
+         Routine 400
+         CopyParameters 0 0 16#40013 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 45
+         ChannelName "Ref/91.03 (DDS 22)"
+         Datatype Int_Out
+         Routine 400
+         CopyParameters 0 0 16#40014 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 46
+         ChannelName "Ref/91.04 (DDS 24)"
+         Datatype Int_Out
+         Routine 400
+         CopyParameters 0 0 16#40015 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 47
+         ChannelName "Ref/91.05 (DDS 24)"
+         Datatype Int_Out
+         Routine 400
+         CopyParameters 0 0 16#40016 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 48
+         ChannelName "Ref/91.06 (DDS 24)"
+         Datatype Int_Out
+         Routine 400
+         CopyParameters 0 0 16#40017 16#0
+     End ChannelInfo
+     ChannelInfo
+         Number 49
+         ChannelName "UnitStatus"
+         Datatype Status_In
+         Routine 900
+         CopyParameters 0 0 16#50000
+     End ChannelInfo
+   End Channels
+   IoUnitStatus
+     StatusType WrongModuleType 
+     StatusData 16#30000 16#0F00 16#4 16#0A00
+     StatusType ModuleMissing
+     StatusData 16#30000 16#0F00 16#4 16#0D00
+     StatusType IoError
+     StatusData 16#30000 16#1000 16#0 16#0
+     StatusType IoWarning
+     StatusData 16#30000 16#2000 16#0 16#0
+   End IoUnitStatus
+
+ UnitstatusText
+    ExtendedStatus1 "Communication broken"
+    ExtendedStatus2 "Wrong drive type"
+    ExtendedStatus3 "Wrong application ID"
+    ExtendedStatus4 "Undefined error"
+  End UnitStatusText
+
+ UnitStatusSeverity
+  End UnitStatusSeverity
+
+   Configuration
+      ConfigInfo
+         ModuleKey    16#0000
+         InAreaSize   40
+         OutAreaSize  32
+         InWord
+          (*WORD 0       0*)
+          (*WORD 0       1*)
+          (*WORD 0       2*)
+            WORD 0       3
+            WORD 0       4
+            WORD 0       5
+            WORD 0       6
+            WORD 0       7
+            WORD 0       8
+            WORD 0       9
+            WORD 0       10
+            WORD 0       11
+            WORD 0       12
+            WORD 0       13
+            WORD 0       14
+            WORD 0       15
+            WORD 0       16
+            WORD 0       17
+            WORD 0       18
+            WORD 0       19
+            WORD 0       20
+            WORD 0       21
+            WORD 0       22
+            WORD 0       23
+            WORD 0       24
+            WORD 0       25
+            WORD 0       26
+            WORD 0       27
+            WORD 0       28
+            WORD 0       29
+            WORD 0       30
+            WORD 0       31
+            WORD 0       32
+            WORD 0       33
+            WORD 0       34
+            WORD 0       35
+            WORD 0       36
+            WORD 0       37
+            WORD 0       38
+            WORD 0       39
+         OutWord
+            WORD 0       0
+            WORD 0       1
+            WORD 0       2
+            WORD 0       3
+            WORD 0       4
+            WORD 0       5
+            WORD 0       6
+            WORD 0       7
+            WORD 0       8
+            WORD 0       9
+            WORD 0       10
+            WORD 0       11
+            WORD 0       12
+            WORD 0       13
+            WORD 0       14
+            WORD 0       15
+            WORD 0       16
+            WORD 0       17
+            WORD 0       18
+            WORD 0       19
+            WORD 0       20
+            WORD 0       21
+            WORD 0       22
+            WORD 0       23
+            WORD 0       24
+            WORD 0       25
+            WORD 0       26
+            WORD 0       27
+            WORD 0       28
+            WORD 0       29
+            WORD 0       30
+            WORD 0       31
+       CIGIOConnData
+         CIGIOData   16#8A (* FamilyType *)
+         CIGIOData   16#00 (* ModuleNumber *)
+         CIGIOData   16#00 (* ModuleRevision *)
+         CIGIOData   16#00 (* TreatmentType *)
+         CIGIOData   16#00 (* Length of module parameter *)
+         CIGIOData   16#08 (* Number of channels *)
+         CIGIOData   16#0A 16#00 (* ChannelParam *)
+         CIGIOData   16#0C 16#00 (* ChannelParam *)
+         CIGIOData   16#0E 16#00 (* ChannelParam *)
+         CIGIOData   16#10 16#00 (* ChannelParam *)
+         CIGIOData   16#12 16#00 (* ChannelParam *)
+         CIGIOData   16#14 16#00 (* ChannelParam *)
+         CIGIOData   16#16 16#00 (* ChannelParam *)
+         CIGIOData   16#18 16#00 (* ChannelParam *)
+       End CIGIOConnData
+     End ConfigInfo
+   End Configuration
+  HWUnitInfoCRC 16#213B
+End HWUnitInfo (* ACS600 Eng *)

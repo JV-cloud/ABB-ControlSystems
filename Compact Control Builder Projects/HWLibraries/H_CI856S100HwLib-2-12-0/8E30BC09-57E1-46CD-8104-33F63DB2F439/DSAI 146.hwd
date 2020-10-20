@@ -1,0 +1,2795 @@
+(****************************************************************************)
+(* FILE            dsai146.hwd         from DSAI 130                        *)
+(*                                                                          *)
+(* DESCRIPTION     Hardware definition file for S100 I/O module DSAI 146    *)
+(*                                                                          *)
+(* AUTHOR          INCRC/800xA   Venkata RKA                                *)
+(*                                                                          *)
+(* All rights reserved. Reproduction, modification, use or disclosure       *)
+(* to third parties without express authority, is forbidden.                *)
+(* Copyright ABB Process Industries AB, Sweden, 2002.                       *)
+(*                                                                          *)
+(*                                                                          *)
+(* HISTORY $Log: /S100/workplace/current/source/hwdefinitions               *)
+(*                              /definitionfiles/s100/dsai146.hwd           *)
+(*                                                                          *)
+(*                                                                          *)
+(* Reference Document num:3BSE026125                                        *)
+(*                                                                          *)
+(* 1     12-08-013 16:49 Venkata RKA                                        *)
+(* Initial version                                                          *)
+(* 2    26-09-2014 15.34 Sneha S                                            *)  
+(* Second version                                                           *)   
+(*  Updated parameters related to scan interval,resolution,deadband,        *)
+(*  powerfrequecy,ranges,channel Info,CIGIOData,Inareasize                  *)
+(* 3    10-11-2014 12.09 Sneha S                                            *)
+(* Third version                                                            *)
+(*  Updated the default value for scaninterval,added warning message,updated*) 
+(*  counts for ranges                                                       *)                                                   
+(*                                                                          *)
+(* 4 19-1-2015   15.29  Sneha S                                             *)
+(* Added comment expaining the default value of scan interval               *)
+(* Added -40 to 40 C range in the parvalIndex                               *)
+(* 5 2-2-2015  12:26 Sneha S                                                *)                                                       
+(*   Version 5                                                              *)
+(*   Updated Reference Document num,Information field,added comment for     *) 
+(*   module specific parameters and  channel specific parameters            *)  
+(*                                                                          *)
+(* 6  5-3-2015  18.30 Sneha S                                               *)
+(*    Version 6                                                             *)
+(*   Updated scan interval for each channel,CIGIO DATA and limits for scan  *)
+(* interval                                                                 *)
+(*                                                                          *)
+(* 7  21-8-2015  18.30 Akhilesh Patel                                       *)
+(*    Version 7                                                             *)
+(*   Removed range -40...40 Deg C and updated range -200...320 deg C to     *)
+(*    -100...320 Deg C                                                      *)
+(*                                                                          *)
+(* 8  23-9-2015  11.30 Sneha S                                              *)
+(*    Version 8                                                             *)
+(*   Updated counts for all ranges  (#58212,#58662)                         *)
+(*                                                                          *) 
+(* 9 06-11-2015   16:15 Sneha S                                             *)
+(*   Updated enum range index for #58997                                    *)
+(*                                                                          *)
+(* 10 06-11-2015   16:15 Akhilesh Patel                                     *)
+(*   #58959. Updated over range counts for range -40..40 degC. Over-range   *)
+(*   should be equal to maximum counts so that over-range sign is shown in  *)
+(*   CB just after maximum value occurs.                                    *)
+(*                                                                          *)
+(* 11  30-11-2015  4.30 Venkata RKA                                         *)
+(*    Version 11                                                            *)
+(*   hidden linearlization parameter (#59297)                               *)
+(*                                                                          *)
+(****************************************************************************)
+
+HWUnitInfo (* DSAI 146 *)
+  HWUnitID {6BCCBD49-B144-48D5-B3E4-5B1A306C3847}
+  Description "DSAI 146"
+  Information "Pt100 module, 3-wire, 31 channels + 1 Ref channel" 
+  Icons RackIOType
+  Attributes AdapterUnit IoUnit AnalogIn 
+
+  InterfaceInfo
+    (*Interface CIGInterface*) (* If GetDeviceStatus is wanted or Numbered parameters specified *)
+    IoSysType CIGIO        (* GetConnStatus will be called from framework *)
+    CLSID_CB {E15630B2-7F2A-4fab-ACDC-9A46839D335B} (* CLSID_CB = GUID for S100 Protocol handler (PH) in Control builder CB *)
+    CLSID_CTRL   {41ACBED2-973D-48d1-B5B5-51836FEF4B26} (* CLSID_CTRL   = GUID for S100 Protocol handler (PH) in Controller *)
+    HWConfig Fail     (* Change of net parameters affect subunits *)
+  End InterfaceInfo 
+
+  ConnectionInfo
+    ConnectType OwnUnit
+    IOConnect   Fail
+    IOConfig    NoFail
+  End ConnectionInfo
+
+(*The below parameters are per module based parameters*)
+
+  Parameters
+    ParamInfo 
+      Name Ver
+      Description "Version"
+      Hidden
+      CompileType IOConnect
+      Datatype INT
+      Default 1 
+      ParValIndex 8
+      ParamType CIGIOData 0 0 0 ByteParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name AccessMode
+      Description "Access Mode"
+      Hidden
+      CompileType IOConnect
+      Datatype INT
+      Default 0 
+      ParValIndex 8
+      ParamType CIGIOData 1 0 0 ByteParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name NoOfAddresses
+      Description "No of Address"
+      Hidden
+      CompileType IOConnect
+      Datatype INT
+      Default 1 
+      ParValIndex 0
+      ParamType CIGIOData 2 0 0 ByteParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name Address
+      Description "Address"
+      CompileType IOConnect
+      Datatype INT
+      Default 32
+      ParValIndex 1
+      ParamType CIGIOData 3 0 0 ByteParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ModType
+      Description "Module type"
+      Hidden
+      CompileType IOConnect
+      Datatype INT
+      Default 14 
+      ParValIndex 8
+      ParamType CIGIOData 4 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo 
+      Name PowerFrequency
+      Description "PowerFrequency"
+      CompileType IOConfig
+      Datatype ENUM
+      Default 0
+      ParValIndex 10
+      ParamType CIGIOData 14 0 31 WordParam ByteOffset 
+    End ParamInfo
+
+(*The below parameters are w.r.t to each channel*)
+
+    ParamInfo 
+      Name ActiveChannel1
+      Description "Active channel 1"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 0 0 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel2
+      Description "Active channel 2"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 0 0 2 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel3
+      Description "Active channel 3"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 0 0 3 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel4
+      Description "Active channel 4"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 0 0 4 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel5
+      Description "Active channel 5"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 0 0 5 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel6
+      Description "Active channel 6"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 0 0 6 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel7
+      Description "Active channel 7"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 0 0 7 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel8
+      Description "Active channel 8"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 0 0 8 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel9
+      Description "Active channel 9"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 0 0 9 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel10
+      Description "Active channel 10"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 0 0 10 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel11
+      Description "Active channel 11"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 0 0 11 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel12
+      Description "Active channel 12"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 0 0 12 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel13
+      Description "Active channel 13"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 0 0 13 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel14
+      Description "Active channel 14"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 0 0 14 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel15
+      Description "Active channel 15"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 0 0 15 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel16
+      Description "Active channel 16"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 0 0 16 WordParam ByteOffset
+    End ParamInfo
+
+   ParamInfo 
+      Name ActiveChannel17
+      Description "Active channel 17"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 0 0 17 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel18
+      Description "Active channel 18"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 0 0 18 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel19
+      Description "Active channel 19"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 0 0 19 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel20
+      Description "Active channel 20"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 0 0 20 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel21
+      Description "Active channel 21"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 0 0 21 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel22
+      Description "Active channel 22"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 0 0 22 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel23
+      Description "Active channel 23"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 0 0 23 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel24
+      Description "Active channel 24"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 0 0 24 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel25
+      Description "Active channel 25"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 0 0 25 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel26
+      Description "Active channel 26"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 0 0 26 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel27
+      Description "Active channel 27"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 0 0 27 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel28
+      Description "Active channel 28"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 0 0 28 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel29
+      Description "Active channel 29"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 0 0 29 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel30
+      Description "Active channel 30"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 0 0 30 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name ActiveChannel31
+      Description "Active channel 31"
+      CompileType IOConfig
+      Datatype BOOL
+      Default TRUE
+      ParamType CIGIOData 0 0 31 WordParam ByteOffset
+    End ParamInfo  
+    ParamInfo 
+      Name ScanIntervalChannel1
+      Description "Scan interval channel 1"
+      CompileType IOConfig
+      Datatype INT
+      Default 40000
+      ParValIndex 2
+      ParamType CIGIOData 12 0 1 WordParam ByteOffset 
+    End ParamInfo
+    ParamInfo 
+      Name ScanIntervalChannel2
+      Description "Scan interval channel 2"
+      CompileType IOConfig
+      Datatype INT
+      Default 40000
+      ParValIndex 2
+      ParamType CIGIOData 12 0 2 WordParam ByteOffset 
+    End ParamInfo
+    ParamInfo 
+      Name ScanIntervalChannel3
+      Description "Scan interval channel 3"
+      CompileType IOConfig
+      Datatype INT
+      Default 40000
+      ParValIndex 2
+      ParamType CIGIOData 12 0 3 WordParam ByteOffset 
+    End ParamInfo
+    ParamInfo 
+      Name ScanIntervalChannel4
+      Description "Scan interval channel 4"
+      CompileType IOConfig
+      Datatype INT
+      Default 40000
+      ParValIndex 2
+      ParamType CIGIOData 12 0 4 WordParam ByteOffset 
+    End ParamInfo
+    ParamInfo 
+      Name ScanIntervalChannel5
+      Description "Scan interval channel 5"
+      CompileType IOConfig
+      Datatype INT
+      Default 40000
+      ParValIndex 2
+      ParamType CIGIOData 12 0 5 WordParam ByteOffset 
+    End ParamInfo
+    ParamInfo 
+      Name ScanIntervalChannel6
+      Description "Scan interval channel 6"
+      CompileType IOConfig
+      Datatype INT
+      Default 40000
+      ParValIndex 2
+      ParamType CIGIOData 12 0 6 WordParam ByteOffset 
+    End ParamInfo
+    ParamInfo 
+      Name ScanIntervalChannel7
+      Description "Scan interval channel 7"
+      CompileType IOConfig
+      Datatype INT
+      Default 40000
+      ParValIndex 2
+      ParamType CIGIOData 12 0 7 WordParam ByteOffset 
+    End ParamInfo
+    ParamInfo 
+      Name ScanIntervalChannel8
+      Description "Scan interval channel 8"
+      CompileType IOConfig
+      Datatype INT
+      Default 40000
+      ParValIndex 2
+      ParamType CIGIOData 12 0 8 WordParam ByteOffset 
+    End ParamInfo
+    ParamInfo 
+      Name ScanIntervalChannel9
+      Description "Scan interval channel 9"
+      CompileType IOConfig
+      Datatype INT
+      Default 40000
+      ParValIndex 2
+      ParamType CIGIOData 12 0 9 WordParam ByteOffset 
+    End ParamInfo
+    ParamInfo 
+      Name ScanIntervalChannel10
+      Description "Scan interval channel 10"
+      CompileType IOConfig
+      Datatype INT
+      Default 40000
+      ParValIndex 2
+      ParamType CIGIOData 12 0 10 WordParam ByteOffset 
+    End ParamInfo
+    ParamInfo 
+      Name ScanIntervalChannel11
+      Description "Scan interval channel 11"
+      CompileType IOConfig
+      Datatype INT
+      Default 40000
+      ParValIndex 2
+      ParamType CIGIOData 12 0 11 WordParam ByteOffset 
+    End ParamInfo
+    ParamInfo 
+      Name ScanIntervalChannel12
+      Description "Scan interval channel 12"
+      CompileType IOConfig
+      Datatype INT
+      Default 40000
+      ParValIndex 2
+      ParamType CIGIOData 12 0 12 WordParam ByteOffset 
+    End ParamInfo
+    ParamInfo 
+      Name ScanIntervalChannel13
+      Description "Scan interval channel 13"
+      CompileType IOConfig
+      Datatype INT
+      Default 40000
+      ParValIndex 2
+      ParamType CIGIOData 12 0 13 WordParam ByteOffset 
+    End ParamInfo
+    ParamInfo 
+      Name ScanIntervalChannel14
+      Description "Scan interval channel 14"
+      CompileType IOConfig
+      Datatype INT
+      Default 40000
+      ParValIndex 2
+      ParamType CIGIOData 12 0 14 WordParam ByteOffset 
+    End ParamInfo
+    ParamInfo 
+      Name ScanIntervalChannel15
+      Description "Scan interval channel 15"
+      CompileType IOConfig
+      Datatype INT
+      Default 40000
+      ParValIndex 2
+      ParamType CIGIOData 12 0 15 WordParam ByteOffset 
+    End ParamInfo
+    ParamInfo 
+      Name ScanIntervalChannel16
+      Description "Scan interval channel 16"
+      CompileType IOConfig
+      Datatype INT
+      Default 40000
+      ParValIndex 2
+      ParamType CIGIOData 12 0 16 WordParam ByteOffset 
+    End ParamInfo
+    ParamInfo 
+      Name ScanIntervalChannel17
+      Description "Scan interval channel 17"
+      CompileType IOConfig
+      Datatype INT
+      Default 40000
+      ParValIndex 2
+      ParamType CIGIOData 12 0 17 WordParam ByteOffset
+    End ParamInfo
+    ParamInfo 
+      Name ScanIntervalChannel18
+      Description "Scan interval channel 18"
+      CompileType IOConfig
+      Datatype INT
+      Default 40000
+      ParValIndex 2
+      ParamType CIGIOData 12 0 18 WordParam ByteOffset
+    End ParamInfo
+    ParamInfo 
+      Name ScanIntervalChannel19
+      Description "Scan interval channel 19"
+      CompileType IOConfig
+      Datatype INT
+      Default 40000
+      ParValIndex 2
+      ParamType CIGIOData 12 0 19 WordParam ByteOffset
+    End ParamInfo
+    ParamInfo 
+      Name ScanIntervalChannel20
+      Description "Scan interval channel 20"
+      CompileType IOConfig
+      Datatype INT
+      Default 40000
+      ParValIndex 2
+      ParamType CIGIOData 12 0 20 WordParam ByteOffset
+    End ParamInfo
+    ParamInfo 
+      Name ScanIntervalChannel21
+      Description "Scan interval channel 21"
+      CompileType IOConfig
+      Datatype INT
+      Default 40000
+      ParValIndex 2
+      ParamType CIGIOData 12 0 21 WordParam ByteOffset
+    End ParamInfo
+    ParamInfo 
+      Name ScanIntervalChannel22
+      Description "Scan interval channel 22"
+      CompileType IOConfig
+      Datatype INT
+      Default 40000
+      ParValIndex 2
+      ParamType CIGIOData 12 0 22 WordParam ByteOffset
+    End ParamInfo
+    ParamInfo 
+      Name ScanIntervalChannel23
+      Description "Scan interval channel 23"
+      CompileType IOConfig
+      Datatype INT
+      Default 40000
+      ParValIndex 2
+      ParamType CIGIOData 12 0 23 WordParam ByteOffset
+    End ParamInfo
+    ParamInfo 
+      Name ScanIntervalChannel24
+      Description "Scan interval channel 24"
+      CompileType IOConfig
+      Datatype INT
+      Default 40000
+      ParValIndex 2
+      ParamType CIGIOData 12 0 24 WordParam ByteOffset
+    End ParamInfo
+    ParamInfo 
+      Name ScanIntervalChannel25
+      Description "Scan interval channel 25"
+      CompileType IOConfig
+      Datatype INT
+      Default 40000
+      ParValIndex 2
+      ParamType CIGIOData 12 0 25 WordParam ByteOffset
+    End ParamInfo
+    ParamInfo 
+      Name ScanIntervalChannel26
+      Description "Scan interval channel 26"
+      CompileType IOConfig
+      Datatype INT
+      Default 40000
+      ParValIndex 2
+      ParamType CIGIOData 12 0 26 WordParam ByteOffset
+    End ParamInfo
+    ParamInfo 
+      Name ScanIntervalChannel27
+      Description "Scan interval channel 27"
+      CompileType IOConfig
+      Datatype INT
+      Default 40000
+      ParValIndex 2
+      ParamType CIGIOData 12 0 27 WordParam ByteOffset
+    End ParamInfo
+    ParamInfo 
+      Name ScanIntervalChannel28
+      Description "Scan interval channel 28"
+      CompileType IOConfig
+      Datatype INT
+      Default 40000
+      ParValIndex 2
+      ParamType CIGIOData 12 0 28 WordParam ByteOffset
+    End ParamInfo
+    ParamInfo 
+      Name ScanIntervalChannel29
+      Description "Scan interval channel 29"
+      CompileType IOConfig
+      Datatype INT
+      Default 40000
+      ParValIndex 2
+      ParamType CIGIOData 12 0 29 WordParam ByteOffset
+    End ParamInfo
+    ParamInfo 
+      Name ScanIntervalChannel30
+      Description "Scan interval channel 30"
+      CompileType IOConfig
+      Datatype INT
+      Default 40000
+      ParValIndex 2
+      ParamType CIGIOData 12 0 30 WordParam ByteOffset
+    End ParamInfo
+    ParamInfo 
+      Name ScanIntervalChannel31
+      Description "Scan interval channel 31"
+      CompileType IOConfig
+      Datatype INT
+      Default 40000
+      ParValIndex 2
+      ParamType CIGIOData 12 0 31 WordParam ByteOffset
+    End ParamInfo
+    ParamInfo 
+      Name FilterTimeChannel1
+      Description "Filter time channel 1"
+      CompileType IOConfig
+      Datatype INT
+      Default 0
+      ParValIndex 3
+      ParamType CIGIOData 2 0 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name FilterTimeChannel2
+      Description "Filter time channel 2"
+      CompileType IOConfig
+      Datatype INT
+      Default 0
+      ParValIndex 3
+      ParamType CIGIOData 2 0 2 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name FilterTimeChannel3
+      Description "Filter time channel 3"
+      CompileType IOConfig
+      Datatype INT
+      Default 0
+      ParValIndex 3
+      ParamType CIGIOData 2 0 3 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name FilterTimeChannel4
+      Description "Filter time channel 4"
+      CompileType IOConfig
+      Datatype INT
+      Default 0
+      ParValIndex 3
+      ParamType CIGIOData 2 0 4 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name FilterTimeChannel5
+      Description "Filter time channel 5"
+      CompileType IOConfig
+      Datatype INT
+      Default 0
+      ParValIndex 3
+      ParamType CIGIOData 2 0 5 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name FilterTimeChannel6
+      Description "Filter time channel 6"
+      CompileType IOConfig
+      Datatype INT
+      Default 0
+      ParValIndex 3
+      ParamType CIGIOData 2 0 6 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name FilterTimeChannel7
+      Description "Filter time channel 7"
+      CompileType IOConfig
+      Datatype INT
+      Default 0
+      ParValIndex 3
+      ParamType CIGIOData 2 0 7 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name FilterTimeChannel8
+      Description "Filter time channel 8"
+      CompileType IOConfig
+      Datatype INT
+      Default 0
+      ParValIndex 3
+      ParamType CIGIOData 2 0 8 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name FilterTimeChannel9
+      Description "Filter time channel 9"
+      CompileType IOConfig
+      Datatype INT
+      Default 0
+      ParValIndex 3
+      ParamType CIGIOData 2 0 9 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name FilterTimeChannel10
+      Description "Filter time channel 10"
+      CompileType IOConfig
+      Datatype INT
+      Default 0
+      ParValIndex 3
+      ParamType CIGIOData 2 0 10 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name FilterTimeChannel11
+      Description "Filter time channel 11"
+      CompileType IOConfig
+      Datatype INT
+      Default 0
+      ParValIndex 3
+      ParamType CIGIOData 2 0 11 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name FilterTimeChannel12
+      Description "Filter time channel 12"
+      CompileType IOConfig
+      Datatype INT
+      Default 0
+      ParValIndex 3
+      ParamType CIGIOData 2 0 12 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name FilterTimeChannel13
+      Description "Filter time channel 13"
+      CompileType IOConfig
+      Datatype INT
+      Default 0
+      ParValIndex 3
+      ParamType CIGIOData 2 0 13 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name FilterTimeChannel14
+      Description "Filter time channel 14"
+      CompileType IOConfig
+      Datatype INT
+      Default 0
+      ParValIndex 3
+      ParamType CIGIOData 2 0 14 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name FilterTimeChannel15
+      Description "Filter time channel 15"
+      CompileType IOConfig
+      Datatype INT
+      Default 0
+      ParValIndex 3
+      ParamType CIGIOData 2 0 15 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name FilterTimeChannel16
+      Description "Filter time channel 16"
+      CompileType IOConfig
+      Datatype INT
+      Default 0
+      ParValIndex 3
+      ParamType CIGIOData 2 0 16 WordParam ByteOffset
+    End ParamInfo
+
+
+    ParamInfo 
+      Name FilterTimeChannel17
+      Description "Filter time channel 17"
+      CompileType IOConfig
+      Datatype INT
+      Default 0
+      ParValIndex 3
+      ParamType CIGIOData 2 0 17 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name FilterTimeChannel18
+      Description "Filter time channel 18"
+      CompileType IOConfig
+      Datatype INT
+      Default 0
+      ParValIndex 3
+      ParamType CIGIOData 2 0 18 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name FilterTimeChannel19
+      Description "Filter time channel 19"
+      CompileType IOConfig
+      Datatype INT
+      Default 0
+      ParValIndex 3
+      ParamType CIGIOData 2 0 19 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name FilterTimeChannel20
+      Description "Filter time channel 20"
+      CompileType IOConfig
+      Datatype INT
+      Default 0
+      ParValIndex 3
+      ParamType CIGIOData 2 0 20 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name FilterTimeChannel21
+      Description "Filter time channel 21"
+      CompileType IOConfig
+      Datatype INT
+      Default 0
+      ParValIndex 3
+      ParamType CIGIOData 2 0 21 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name FilterTimeChannel22
+      Description "Filter time channel 22"
+      CompileType IOConfig
+      Datatype INT
+      Default 0
+      ParValIndex 3
+      ParamType CIGIOData 2 0 22 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name FilterTimeChannel23
+      Description "Filter time channel 23"
+      CompileType IOConfig
+      Datatype INT
+      Default 0
+      ParValIndex 3
+      ParamType CIGIOData 2 0 23 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name FilterTimeChannel24
+      Description "Filter time channel 24"
+      CompileType IOConfig
+      Datatype INT
+      Default 0
+      ParValIndex 3
+      ParamType CIGIOData 2 0 24 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name FilterTimeChannel25
+      Description "Filter time channel 25"
+      CompileType IOConfig
+      Datatype INT
+      Default 0
+      ParValIndex 3
+      ParamType CIGIOData 2 0 25 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name FilterTimeChannel26
+      Description "Filter time channel 26"
+      CompileType IOConfig
+      Datatype INT
+      Default 0
+      ParValIndex 3
+      ParamType CIGIOData 2 0 26 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name FilterTimeChannel27
+      Description "Filter time channel 27"
+      CompileType IOConfig
+      Datatype INT
+      Default 0
+      ParValIndex 3
+      ParamType CIGIOData 2 0 27 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name FilterTimeChannel28
+      Description "Filter time channel 28"
+      CompileType IOConfig
+      Datatype INT
+      Default 0
+      ParValIndex 3
+      ParamType CIGIOData 2 0 28 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name FilterTimeChannel29
+      Description "Filter time channel 29"
+      CompileType IOConfig
+      Datatype INT
+      Default 0
+      ParValIndex 3
+      ParamType CIGIOData 2 0 29 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name FilterTimeChannel30
+      Description "Filter time channel 30"
+      CompileType IOConfig
+      Datatype INT
+      Default 0
+      ParValIndex 3
+      ParamType CIGIOData 2 0 30 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name FilterTimeChannel31
+      Description "Filter time channel 31"
+      CompileType IOConfig
+      Datatype INT
+      Default 0
+      ParValIndex 3
+      ParamType CIGIOData 2 0 31 WordParam ByteOffset
+    End ParamInfo
+ ParamInfo 
+      Name SignalRangeChannel1
+      Description "Signal range channel 1"
+      CompileType IOConfig
+      DataType ENUMRANGE
+      Default 0
+      ParValIndex 5
+      ParamType CIGIOData 6 0 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name SignalRangeChannel2
+      Description "Signal range channel 2"
+      CompileType IOConfig
+      DataType ENUMRANGE
+      Default 0
+      ParValIndex 5
+      ParamType CIGIOData 6 0 2 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name SignalRangeChannel3
+      Description "Signal range channel 3"
+      CompileType IOConfig
+      DataType ENUMRANGE
+      Default 0
+      ParValIndex 5
+      ParamType CIGIOData 6 0 3 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name SignalRangeChannel4
+      Description "Signal range channel 4"
+      CompileType IOConfig
+      DataType ENUMRANGE
+      Default 0
+      ParValIndex 5
+      ParamType CIGIOData 6 0 4 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name SignalRangeChannel5
+      Description "Signal range channel 5"
+      CompileType IOConfig
+      DataType ENUMRANGE
+      Default 0
+      ParValIndex 5
+      ParamType CIGIOData 6 0 5 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name SignalRangeChannel6
+      Description "Signal range channel 6"
+      CompileType IOConfig
+      DataType ENUMRANGE
+      Default 0
+      ParValIndex 5
+      ParamType CIGIOData 6 0 6 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name SignalRangeChannel7
+      Description "Signal range channel 7"
+      CompileType IOConfig
+      DataType ENUMRANGE
+      Default 0
+      ParValIndex 5
+      ParamType CIGIOData 6 0 7 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name SignalRangeChannel8
+      Description "Signal range channel 8"
+      CompileType IOConfig
+      DataType ENUMRANGE
+      Default 0
+      ParValIndex 5
+      ParamType CIGIOData 6 0 8 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name SignalRangeChannel9
+      Description "Signal range channel 9"
+      CompileType IOConfig
+      DataType ENUMRANGE
+      Default 0
+      ParValIndex 5
+      ParamType CIGIOData 6 0 9 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name SignalRangeChannel10
+      Description "Signal range channel 10"
+      CompileType IOConfig
+      DataType ENUMRANGE
+      Default 0
+      ParValIndex 5
+      ParamType CIGIOData 6 0 10 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name SignalRangeChannel11
+      Description "Signal range channel 11"
+      CompileType IOConfig
+      DataType ENUMRANGE
+      Default 0
+      ParValIndex 5
+      ParamType CIGIOData 6 0 11 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name SignalRangeChannel12
+      Description "Signal range channel 12"
+      CompileType IOConfig
+      DataType ENUMRANGE
+      Default 0
+      ParValIndex 5
+      ParamType CIGIOData 6 0 12 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name SignalRangeChannel13
+      Description "Signal range channel 13"
+      CompileType IOConfig
+      DataType ENUMRANGE
+      Default 0
+      ParValIndex 5
+      ParamType CIGIOData 6 0 13 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name SignalRangeChannel14
+      Description "Signal range channel 14"
+      CompileType IOConfig
+      DataType ENUMRANGE
+      Default 0
+      ParValIndex 5
+      ParamType CIGIOData 6 0 14 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name SignalRangeChannel15
+      Description "Signal range channel 15"
+      CompileType IOConfig
+      DataType ENUMRANGE
+      Default 0
+      ParValIndex 5
+      ParamType CIGIOData 6 0 15 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name SignalRangeChannel16
+      Description "Signal range channel 16"
+      CompileType IOConfig
+      DataType ENUMRANGE
+      Default 0
+      ParValIndex 5
+      ParamType CIGIOData 6 0 16 WordParam ByteOffset
+    End ParamInfo
+
+
+ParamInfo 
+      Name SignalRangeChannel17
+      Description "Signal range channel 17"
+      CompileType IOConfig
+      DataType ENUMRANGE
+      Default 0
+      ParValIndex 5
+      ParamType CIGIOData 6 0 17 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name SignalRangeChannel18
+      Description "Signal range channel 18"
+      CompileType IOConfig
+      DataType ENUMRANGE
+      Default 0
+      ParValIndex 5
+      ParamType CIGIOData 6 0 18 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name SignalRangeChannel19
+      Description "Signal range channel 19"
+      CompileType IOConfig
+      DataType ENUMRANGE
+      Default 0
+      ParValIndex 5
+      ParamType CIGIOData 6 0 19 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name SignalRangeChannel20
+      Description "Signal range channel 20"
+      CompileType IOConfig
+      DataType ENUMRANGE
+      Default 0
+      ParValIndex 5
+      ParamType CIGIOData 6 0 20 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name SignalRangeChannel21
+      Description "Signal range channel 21"
+      CompileType IOConfig
+      DataType ENUMRANGE
+      Default 0
+      ParValIndex 5
+      ParamType CIGIOData 6 0 21 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name SignalRangeChannel22
+      Description "Signal range channel 22"
+      CompileType IOConfig
+      DataType ENUMRANGE
+      Default 0
+      ParValIndex 5
+      ParamType CIGIOData 6 0 22 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name SignalRangeChannel23
+      Description "Signal range channel 23"
+      CompileType IOConfig
+      DataType ENUMRANGE
+      Default 0
+      ParValIndex 5
+      ParamType CIGIOData 6 0 23 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name SignalRangeChannel24
+      Description "Signal range channel 24"
+      CompileType IOConfig
+      DataType ENUMRANGE
+      Default 0
+      ParValIndex 5
+      ParamType CIGIOData 6 0 24 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name SignalRangeChannel25
+      Description "Signal range channel 25"
+      CompileType IOConfig
+      DataType ENUMRANGE
+      Default 0
+      ParValIndex 5
+      ParamType CIGIOData 6 0 25 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name SignalRangeChannel26
+      Description "Signal range channel 26"
+      CompileType IOConfig
+      DataType ENUMRANGE
+      Default 0
+      ParValIndex 5
+      ParamType CIGIOData 6 0 26 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name SignalRangeChannel27
+      Description "Signal range channel 27"
+      CompileType IOConfig
+      DataType ENUMRANGE
+      Default 0
+      ParValIndex 5
+      ParamType CIGIOData 6 0 27 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name SignalRangeChannel28
+      Description "Signal range channel 28"
+      CompileType IOConfig
+      DataType ENUMRANGE
+      Default 0
+      ParValIndex 5
+      ParamType CIGIOData 6 0 28 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name SignalRangeChannel29
+      Description "Signal range channel 29"
+      CompileType IOConfig
+      DataType ENUMRANGE
+      Default 0
+      ParValIndex 5
+      ParamType CIGIOData 6 0 29 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name SignalRangeChannel30
+      Description "Signal range channel 30"
+      CompileType IOConfig
+      DataType ENUMRANGE
+      Default 0
+      ParValIndex 5
+      ParamType CIGIOData 6 0 30 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name SignalRangeChannel31
+      Description "Signal range channel 31"
+      CompileType IOConfig
+      DataType ENUMRANGE
+      Default 0
+      ParValIndex 5
+      ParamType CIGIOData 6 0 31 WordParam ByteOffset
+    End ParamInfo  
+    ParamInfo 
+      Name LinearizationCodeChannel1
+      Description "LinearizationCode channel 1"
+      Hidden
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 9
+      ParamType CIGIOData 4 0 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name LinearizationCodeChannel2
+      Description "LinearizationCode channel 2"
+      Hidden
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 9
+      ParamType CIGIOData 4 0 2 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name LinearizationCodeChannel3
+      Description "LinearizationCode channel 3"
+      Hidden
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 9
+      ParamType CIGIOData 4 0 3 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name LinearizationCodeChannel4
+      Description "LinearizationCode channel 4"
+      Hidden
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 9
+      ParamType CIGIOData 4 0 4 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name LinearizationCodeChannel5
+      Description "LinearizationCode channel 5"
+      Hidden
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 9
+      ParamType CIGIOData 4 0 5 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name LinearizationCodeChannel6
+      Description "LinearizationCode channel 6"
+      Hidden
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 9
+      ParamType CIGIOData 4 0 6 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name LinearizationCodeChannel7
+      Description "LinearizationCode channel 7"
+      Hidden
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 9
+      ParamType CIGIOData 4 0 7 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name LinearizationCodeChannel8
+      Description "LinearizationCode channel 8"
+      Hidden
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 9
+      ParamType CIGIOData 4 0 8 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name LinearizationCodeChannel9
+      Description "LinearizationCode channel 9"
+      Hidden
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 9
+      ParamType CIGIOData 4 0 9 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name LinearizationCodeChannel10
+      Description "LinearizationCode channel 10"
+      Hidden
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 9
+      ParamType CIGIOData 4 0 10 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name LinearizationCodeChannel11
+      Description "LinearizationCode channel 11"
+      Hidden
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 9
+      ParamType CIGIOData 4 0 11 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name LinearizationCodeChannel12
+      Description "LinearizationCode channel 12"
+      Hidden
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 9
+      ParamType CIGIOData 4 0 12 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name LinearizationCodeChannel13
+      Description "LinearizationCode channel 13"
+      Hidden
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 9
+      ParamType CIGIOData 4 0 13 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name LinearizationCodeChannel14
+      Description "LinearizationCode channel 14"
+      Hidden
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 9
+      ParamType CIGIOData 4 0 14 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name LinearizationCodeChannel15
+      Description "LinearizationCode channel 15"
+      Hidden
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 9
+      ParamType CIGIOData 4 0 15 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name LinearizationCodeChannel16
+      Description "LinearizationCode channel 16"
+      Hidden
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 9
+      ParamType CIGIOData 4 0 16 WordParam ByteOffset
+    End ParamInfo
+
+   ParamInfo 
+      Name LinearizationCodeChannel17
+      Description "LinearizationCode channel 17"
+      Hidden
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 9
+      ParamType CIGIOData 4 0 17 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name LinearizationCodeChannel18
+      Description "LinearizationCode channel 18"
+      Hidden
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 9
+      ParamType CIGIOData 4 0 18 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name LinearizationCodeChannel19
+      Description "LinearizationCode channel 19"
+      Hidden
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 9
+      ParamType CIGIOData 4 0 19 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name LinearizationCodeChannel20
+      Description "LinearizationCode channel 20"
+      Hidden
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 9
+      ParamType CIGIOData 4 0 20 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name LinearizationCodeChannel21
+      Description "LinearizationCode channel 21"
+      Hidden
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 9
+      ParamType CIGIOData 4 0 21 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name LinearizationCodeChannel22
+      Description "LinearizationCode channel 22"
+      Hidden
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 9
+      ParamType CIGIOData 4 0 22 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name LinearizationCodeChannel23
+      Description "LinearizationCode channel 23"
+      Hidden
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 9
+      ParamType CIGIOData 4 0 23 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name LinearizationCodeChannel24
+      Description "LinearizationCode channel 24"
+      Hidden
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 9
+      ParamType CIGIOData 4 0 24 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name LinearizationCodeChannel25
+      Description "LinearizationCode channel 25"
+      Hidden
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 9
+      ParamType CIGIOData 4 0 25 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name LinearizationCodeChannel26
+      Description "LinearizationCode channel 26"
+      Hidden
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 9
+      ParamType CIGIOData 4 0 26 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name LinearizationCodeChannel27
+      Description "LinearizationCode channel 27"
+      Hidden
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 9
+      ParamType CIGIOData 4 0 27 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name LinearizationCodeChannel28
+      Description "LinearizationCode channel 28"
+      Hidden
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 9
+      ParamType CIGIOData 4 0 28 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name LinearizationCodeChannel29
+      Description "LinearizationCode channel 29"
+      Hidden
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 9
+      ParamType CIGIOData 4 0 29 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name LinearizationCodeChannel30
+      Description "LinearizationCode channel 30"
+      Hidden
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 9
+      ParamType CIGIOData 4 0 30 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name LinearizationCodeChannel31
+      Description "LinearizationCode channel 31"
+      Hidden
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 9
+      ParamType CIGIOData 4 0 31 WordParam ByteOffset
+    End ParamInfo    
+
+
+    ParamInfo 
+      Name DeadBandChannel1
+      Description "Deadband channel 1"
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 6
+      ParamType CIGIOData 10 0 1 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name DeadBandChannel2
+      Description "Deadband channel 2"
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 6
+      ParamType CIGIOData 10 0 2 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name DeadBandChannel3
+      Description "Deadband channel 3"
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 6
+      ParamType CIGIOData 10 0 3 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name DeadBandChannel4
+      Description "Deadband channel 4"
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 6
+      ParamType CIGIOData 10 0 4 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name DeadBandChannel5
+      Description "Deadband channel 5"
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 6
+      ParamType CIGIOData 10 0 5 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name DeadBandChannel6
+      Description "Deadband channel 6"
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 6
+      ParamType CIGIOData 10 0 6 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name DeadBandChannel7
+      Description "Deadband channel 7"
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 6
+      ParamType CIGIOData 10 0 7 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name DeadBandChannel8
+      Description "Deadband channel 8"
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 6
+      ParamType CIGIOData 10 0 8 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name DeadBandChannel9
+      Description "Deadband channel 9"
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 6
+      ParamType CIGIOData 10 0 9 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name DeadBandChannel10
+      Description "Deadband channel 10"
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 6
+      ParamType CIGIOData 10 0 10 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name DeadBandChannel11
+      Description "Deadband channel 11"
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 6
+      ParamType CIGIOData 10 0 11 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name DeadBandChannel12
+      Description "Deadband channel 12"
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 6
+      ParamType CIGIOData 10 0 12 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name DeadBandChannel13
+      Description "Deadband channel 13"
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 6
+      ParamType CIGIOData 10 0 13 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name DeadBandChannel14
+      Description "Deadband channel 14"
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 6
+      ParamType CIGIOData 10 0 14 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name DeadBandChannel15
+      Description "Deadband channel 15"
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 6
+      ParamType CIGIOData 10 0 15 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name DeadBandChannel16
+      Description "Deadband channel 16"
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 6
+      ParamType CIGIOData 10 0 16 WordParam ByteOffset
+    End ParamInfo
+
+   ParamInfo 
+      Name DeadBandChannel17
+      Description "Deadband channel 17"
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 6
+      ParamType CIGIOData 10 0 17 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name DeadBandChannel18
+      Description "Deadband channel 18"
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 6
+      ParamType CIGIOData 10 0 18 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name DeadBandChannel19
+      Description "Deadband channel 19"
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 6
+      ParamType CIGIOData 10 0 19 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name DeadBandChannel20
+      Description "Deadband channel 20"
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 6
+      ParamType CIGIOData 10 0 20 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name DeadBandChannel21
+      Description "Deadband channel 21"
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 6
+      ParamType CIGIOData 10 0 21 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name DeadBandChannel22
+      Description "Deadband channel 22"
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 6
+      ParamType CIGIOData 10 0 22 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name DeadBandChannel23
+      Description "Deadband channel 23"
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 6
+      ParamType CIGIOData 10 0 23 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name DeadBandChannel24
+      Description "Deadband channel 24"
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 6
+      ParamType CIGIOData 10 0 24 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name DeadBandChannel25
+      Description "Deadband channel 25"
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 6
+      ParamType CIGIOData 10 0 25 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name DeadBandChannel26
+      Description "Deadband channel 26"
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 6
+      ParamType CIGIOData 10 0 26 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name DeadBandChannel27
+      Description "Deadband channel 27"
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 6
+      ParamType CIGIOData 10 0 27 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name DeadBandChannel28
+      Description "Deadband channel 28"
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 6
+      ParamType CIGIOData 10 0 28 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name DeadBandChannel29
+      Description "Deadband channel 29"
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 6
+      ParamType CIGIOData 10 0 29 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name DeadBandChannel30
+      Description "Deadband channel 30"
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 6
+      ParamType CIGIOData 10 0 30 WordParam ByteOffset
+    End ParamInfo
+
+    ParamInfo 
+      Name DeadBandChannel31
+      Description "Deadband channel 31"
+      CompileType IOConfig
+      DataType ENUM
+      Default 0
+      ParValIndex 6
+      ParamType CIGIOData 10 0 31 WordParam ByteOffset
+    End ParamInfo   
+    ParamInfo 
+      Name ResolutionChannel1
+      Description "Resolution channel 1"
+      CompileType IOConfig
+      Datatype ENUM
+      Default 0
+      ParValIndex 11
+      ParamType CIGIOData 8 0 1 WordParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo 
+      Name ResolutionChannel2
+      Description "Resolution channel 2"
+      CompileType IOConfig
+      Datatype ENUM
+      Default 0
+      ParValIndex 11
+      ParamType CIGIOData 8 0 2 WordParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo 
+      Name ResolutionChannel3
+      Description "Resolution channel 3"
+      CompileType IOConfig
+      Datatype ENUM
+      Default 0
+      ParValIndex 11
+      ParamType CIGIOData 8 0 3 WordParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo 
+      Name ResolutionChannel4
+      Description "Resolution channel 4"
+      CompileType IOConfig
+      Datatype ENUM
+      Default 0
+      ParValIndex 11
+      ParamType CIGIOData 8 0 4 WordParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo 
+      Name ResolutionChannel5
+      Description "Resolution channel 5"
+      CompileType IOConfig
+      Datatype ENUM
+      Default 0
+      ParValIndex 11
+      ParamType CIGIOData 8 0 5 WordParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo 
+      Name ResolutionChannel6
+      Description "Resolution channel 6"
+      CompileType IOConfig
+      Datatype ENUM
+      Default 0
+      ParValIndex 11
+      ParamType CIGIOData 8 0 6 WordParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo 
+      Name ResolutionChannel7
+      Description "Resolution channel 7"
+      CompileType IOConfig
+      Datatype ENUM
+      Default 0
+      ParValIndex 11
+      ParamType CIGIOData 8 0 7 WordParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo 
+      Name ResolutionChannel8
+      Description "Resolution channel 8"
+      CompileType IOConfig
+      Datatype ENUM
+      Default 0
+      ParValIndex 11
+      ParamType CIGIOData 8 0 8 WordParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo 
+      Name ResolutionChannel9
+      Description "Resolution channel 9"
+      CompileType IOConfig
+      Datatype ENUM
+      Default 0
+      ParValIndex 11
+      ParamType CIGIOData 8 0 9 WordParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo 
+      Name ResolutionChannel10
+      Description "Resolution channel 10"
+      CompileType IOConfig
+      Datatype ENUM
+      Default 0
+      ParValIndex 11
+      ParamType CIGIOData 8 0 10 WordParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo 
+      Name ResolutionChannel11
+      Description "Resolution channel 11"
+      CompileType IOConfig
+      Datatype ENUM
+      Default 0
+      ParValIndex 11
+      ParamType CIGIOData 8 0 11 WordParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo 
+      Name ResolutionChannel12
+      Description "Resolution channel 12"
+      CompileType IOConfig
+      Datatype ENUM
+      Default 0
+      ParValIndex 11
+      ParamType CIGIOData 8 0 12 WordParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo 
+      Name ResolutionChannel13
+      Description "Resolution channel 13"
+      CompileType IOConfig
+      Datatype ENUM
+      Default 0
+      ParValIndex 11
+      ParamType CIGIOData 8 0 13 WordParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo 
+      Name ResolutionChannel14
+      Description "Resolution channel 14"
+      CompileType IOConfig
+      Datatype ENUM
+      Default 0
+      ParValIndex 11
+      ParamType CIGIOData 8 0 14 WordParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo 
+      Name ResolutionChannel15
+      Description "Resolution channel 15"
+      CompileType IOConfig
+      Datatype ENUM
+      Default 0
+      ParValIndex 11
+      ParamType CIGIOData 8 0 15 WordParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo 
+      Name ResolutionChannel16
+      Description "Resolution channel 16"
+      CompileType IOConfig
+      Datatype ENUM
+      Default 0
+      ParValIndex 11
+      ParamType CIGIOData 8 0 16 WordParam ByteOffset 
+    End ParamInfo
+
+
+    ParamInfo 
+      Name ResolutionChannel17
+      Description "Resolution channel 17"
+      CompileType IOConfig
+      Datatype ENUM
+      Default 0
+      ParValIndex 11
+      ParamType CIGIOData 8 0 17 WordParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo 
+      Name ResolutionChannel18
+      Description "Resolution channel 18"
+      CompileType IOConfig
+      Datatype ENUM
+      Default 0
+      ParValIndex 11
+      ParamType CIGIOData 8 0 18 WordParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo 
+      Name ResolutionChannel19
+      Description "Resolution channel 19"
+      CompileType IOConfig
+      Datatype ENUM
+      Default 0
+      ParValIndex 11
+      ParamType CIGIOData 8 0 19 WordParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo 
+      Name ResolutionChannel20
+      Description "Resolution channel 20"
+      CompileType IOConfig
+      Datatype ENUM
+      Default 0
+      ParValIndex 11
+      ParamType CIGIOData 8 0 20 WordParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo 
+      Name ResolutionChannel21
+      Description "Resolution channel 21"
+      CompileType IOConfig
+      Datatype ENUM
+      Default 0
+      ParValIndex 11
+      ParamType CIGIOData 8 0 21 WordParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo 
+      Name ResolutionChannel22
+      Description "Resolution channel 22"
+      CompileType IOConfig
+      Datatype ENUM
+      Default 0
+      ParValIndex 11
+      ParamType CIGIOData 8 0 22 WordParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo 
+      Name ResolutionChannel23
+      Description "Resolution channel 23"
+      CompileType IOConfig
+      Datatype ENUM
+      Default 0
+      ParValIndex 11
+      ParamType CIGIOData 8 0 23 WordParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo 
+      Name ResolutionChannel24
+      Description "Resolution channel 24"
+      CompileType IOConfig
+      Datatype ENUM
+      Default 0
+      ParValIndex 11
+      ParamType CIGIOData 8 0 24 WordParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo 
+      Name ResolutionChannel25
+      Description "Resolution channel 25"
+      CompileType IOConfig
+      Datatype ENUM
+      Default 0
+      ParValIndex 11
+      ParamType CIGIOData 8 0 25 WordParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo 
+      Name ResolutionChannel26
+      Description "Resolution channel 26"
+      CompileType IOConfig
+      Datatype ENUM
+      Default 0
+      ParValIndex 11
+      ParamType CIGIOData 8 0 26 WordParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo 
+      Name ResolutionChannel27
+      Description "Resolution channel 27"
+      CompileType IOConfig
+      Datatype ENUM
+      Default 0
+      ParValIndex 11
+      ParamType CIGIOData 8 0 27 WordParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo 
+      Name ResolutionChannel28
+      Description "Resolution channel 28"
+      CompileType IOConfig
+      Datatype ENUM
+      Default 0
+      ParValIndex 11
+      ParamType CIGIOData 8 0 28 WordParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo 
+      Name ResolutionChannel29
+      Description "Resolution channel 29"
+      CompileType IOConfig
+      Datatype ENUM
+      Default 0
+      ParValIndex 11
+      ParamType CIGIOData 8 0 29 WordParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo 
+      Name ResolutionChannel30
+      Description "Resolution channel 30"
+      CompileType IOConfig
+      Datatype ENUM
+      Default 0
+      ParValIndex 11
+      ParamType CIGIOData 8 0 30 WordParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo 
+      Name ResolutionChannel31
+      Description "Resolution channel 31"
+      CompileType IOConfig
+      Datatype ENUM
+      Default 0
+      ParValIndex 11
+      ParamType CIGIOData 8 0 31 WordParam ByteOffset 
+    End ParamInfo
+   End Parameters
+
+
+  ParValList
+    ParVal
+      ParValIndex 0      (* No of addresses which this unit uses *)
+      UnitText    " "
+      INT 1 4 1 4
+    End ParVal
+
+    ParVal
+      ParValIndex 1      (* Strapped adress interval *)
+      UnitText    " "
+      INT 32 63 32 63
+    End ParVal
+
+    ParVal
+      ParValIndex 2      (* Scan interval *)
+      UnitText    "0.1 ms"
+      INT 20000 50000 20000 50000
+    End ParVal
+
+    ParVal
+      ParValIndex 3      (* Filter time *)
+      UnitText    "ms"
+      INT 0 65535 0 65535
+    End ParVal
+
+    ParVal
+      ParValIndex 4      (* Celcius Fahrenheit *)
+      ENUM
+      "Celcius" 0
+      "Fahrenheit" 1
+    End ParVal
+
+    ParVal
+      ParValIndex 5      (* Signal range *)
+      ENUMRANGE      
+      "-100..320 deg C"   1 16#77CE 16#D780 16#77CE 16#D780   Bipolar
+      "-200..640 deg C"   2 16#71F0 16#D6AC 16#71F0 16#D6AC   Bipolar      
+      "-148..608 deg F"   4 16#77CE 16#D780 16#77CE 16#D780   Bipolar
+      "-328..1184 deg F"  5 16#71F0 16#D6AC 16#71F0 16#D6AC   Bipolar      
+      End ParVal
+
+    ParVal
+      ParValIndex 6      (* Deadband *)
+      UnitText    "%"
+      ENUM
+      "Update every time"  0
+      "0"      0
+      "0.025"  4
+      "0.05"   5
+      "0.1"    6
+      "0.2"    7
+      "0.4"    8
+      "0.8"    9
+      "1.6"    10
+      "3.2"    11
+    End ParVal
+
+    ParVal
+      ParValIndex 7      (* Interval for data type real *)
+      UnitText    " "
+      REAL -1.0E+36 1.0E+36 -1.0E+36 1.0E+36
+    End ParVal
+
+    ParVal
+      ParValIndex 8      (* General INT type *)
+      UnitText    " "
+      INT 0 65535 0 65535
+    End ParVal
+     ParVal
+      ParValIndex 9      (* Linearization code *)
+      ENUM
+      "No Linearization" 0
+      "Sqrt"             1
+    End ParVal
+   ParVal
+      ParValIndex 10      (* Power frequency *)
+      ENUM
+      "20Hz" 0
+      "30Hz" 1
+      "50Hz" 2
+      "60Hz" 3
+    End ParVal
+   ParVal
+      ParValIndex 11      (* Power frequency *)
+      ENUM
+      "12 Bit" 0
+      "13 Bit" 1      
+    End ParVal
+
+  End ParValList
+
+  Channels
+    ChannelInfo
+      Number 1 
+      ChannelName "Value channel 1"
+      Datatype Real_In
+      Routine 700
+      CopyParameters 0 0 16#30003 16#FFFF 0 16#0 16#50000 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 2 
+      ChannelName "Value channel 2"
+      Datatype Real_In
+      Routine 700
+      CopyParameters 0 0 16#30005 16#FFFF 1 16#0 16#50000 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 3 
+      ChannelName "Value channel 3"
+      Datatype Real_In
+      Routine 700
+      CopyParameters 0 0 16#30007 16#FFFF 2 16#0 16#50000 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 4 
+      ChannelName "Value channel 4"
+      Datatype Real_In
+      Routine 700
+      CopyParameters 0 0 16#30009 16#FFFF 3 16#0 16#50000 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 5
+      ChannelName "Value channel 5"
+      Datatype Real_In
+      Routine 700
+      CopyParameters 0 0 16#3000B 16#FFFF 4 16#0 16#50000 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 6 
+      ChannelName "Value channel 6"
+      Datatype Real_In
+      Routine 700
+      CopyParameters 0 0 16#3000D 16#FFFF 5 16#0 16#50000 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 7 
+      ChannelName "Value channel 7"
+      Datatype Real_In
+      Routine 700
+      CopyParameters 0 0 16#3000F 16#FFFF 6 16#0 16#50000 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 8 
+      ChannelName "Value channel 8"
+      Datatype Real_In
+      Routine 700
+      CopyParameters 0 0 16#30011 16#FFFF 7 16#0 16#50000 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 9 
+      ChannelName "Value channel 9"
+      Datatype Real_In
+      Routine 700
+      CopyParameters 0 0 16#30013 16#FFFF 8 16#0 16#50000 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 10 
+      ChannelName "Value channel 10"
+      Datatype Real_In
+      Routine 700
+      CopyParameters 0 0 16#30015 16#FFFF 9 16#0 16#50000 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 11 
+      ChannelName "Value channel 11"
+      Datatype Real_In
+      Routine 700
+      CopyParameters 0 0 16#30017 16#FFFF 10 16#0 16#50000 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 12 
+      ChannelName "Value channel 12"
+      Datatype Real_In
+      Routine 700
+      CopyParameters 0 0 16#30019 16#FFFF 11 16#0 16#50000 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 13 
+      ChannelName "Value channel 13"
+      Datatype Real_In
+      Routine 700
+      CopyParameters 0 0 16#3001B 16#FFFF 12 16#0 16#50000 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 14 
+      ChannelName "Value channel 14"
+      Datatype Real_In
+      Routine 700
+      CopyParameters 0 0 16#3001D 16#FFFF 13 16#0 16#50000 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 15 
+      ChannelName "Value channel 15"
+      Datatype Real_In
+      Routine 700
+      CopyParameters 0 0 16#3001F 16#FFFF 14 16#0 16#50000 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 16 
+      ChannelName "Value channel 16"
+      Datatype Real_In
+      Routine 700
+      CopyParameters 0 0 16#30021 16#FFFF 15 16#0 16#50000 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 17 
+      ChannelName "value channel 17"
+      Datatype Real_In
+      Routine 700
+      CopyParameters 0 0 16#30023 16#FFFF 16 16#0 16#50000 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 18
+      ChannelName "Value channel 18"
+      Datatype Real_In
+      Routine 700
+      CopyParameters 0 0 16#30025 16#FFFF 17 16#0 16#50000 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 19 
+      ChannelName "Value channel 19"
+      Datatype Real_In
+      Routine 700
+      CopyParameters 0 0 16#30027 16#FFFF 18 16#0 16#50000 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 20 
+      ChannelName "Value channel 20"
+      Datatype Real_In
+      Routine 700
+      CopyParameters 0 0 16#30029 16#FFFF 19 16#0 16#50000 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 21
+      ChannelName "Value channel 21"
+      Datatype Real_In
+      Routine 700
+      CopyParameters 0 0 16#3002B 16#FFFF 20 16#0 16#50000 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 22 
+      ChannelName "Value channel 22"
+      Datatype Real_In
+      Routine 700
+      CopyParameters 0 0 16#3002D 16#FFFF 21 16#0 16#50000 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 23 
+      ChannelName "Value channel 23"
+      Datatype Real_In
+      Routine 700
+      CopyParameters 0 0 16#3002F 16#FFFF 22 16#0 16#50000 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 24 
+      ChannelName "Value channel 24"
+      Datatype Real_In
+      Routine 700
+      CopyParameters 0 0 16#30031 16#FFFF 23 16#0 16#50000 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 25 
+      ChannelName "Value channel 25"
+      Datatype Real_In
+      Routine 700
+      CopyParameters 0 0 16#30033 16#FFFF 24 16#0 16#50000 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 26 
+      ChannelName "Value channel 26"
+      Datatype Real_In
+      Routine 700
+      CopyParameters 0 0 16#30035 16#FFFF 25 16#0 16#50000 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 27 
+      ChannelName "Value channel 27"
+      Datatype Real_In
+      Routine 700
+      CopyParameters 0 0 16#30037 16#FFFF 26 16#0 16#50000 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 28 
+      ChannelName "Value channel 28"
+      Datatype Real_In
+      Routine 700
+      CopyParameters 0 0 16#30039 16#FFFF 27 16#0 16#50000 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 29 
+      ChannelName "Value channel 29"
+      Datatype Real_In
+      Routine 700
+      CopyParameters 0 0 16#3003B 16#FFFF 28 16#0 16#50000 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 30 
+      ChannelName "Value channel 30"
+      Datatype Real_In
+      Routine 700
+      CopyParameters 0 0 16#3003D 16#FFFF 29 16#0 16#50000 
+    End ChannelInfo
+
+    ChannelInfo
+      Number 31 
+      ChannelName "Value channel 31"
+      Datatype Real_In
+      Routine 700
+      CopyParameters 0 0 16#3003F 16#FFFF 30 16#0 16#50000 
+    End ChannelInfo   
+
+
+    ChannelInfo
+      Number 32
+      ChannelName "UnitStatus"
+      Datatype Status_In
+      Routine 900
+      CopyParameters 0 0 16#50000
+    End ChannelInfo      
+  End Channels
+
+  IoUnitStatus
+    StatusType ModuleMissing
+    StatusData 16#30001 16#0001 16#0 16#0
+    StatusType WrongModuleType 
+    StatusData 16#30001 16#0002 16#0 16#0
+    StatusType IoError
+    StatusData 16#30001 16#0004 16#0 16#0
+    StatusType GeneralWarning DeviceSpecific1
+    StatusData 16#30001 16#0100 16#0 16#0
+    StatusType GeneralWarning DeviceSpecific2
+    StatusData 16#30001 16#0200 16#0 16#0
+    StatusType GeneralWarning DeviceSpecific3
+    StatusData 16#30001 16#0400 16#0 16#0
+    StatusType GeneralWarning DeviceSpecific4
+    StatusData 16#30001 16#0800 16#0 16#0
+    StatusType GeneralWarning DeviceSpecific6
+    StatusData 16#30001 16#2000 16#0 16#0
+  End IoUnitStatus
+
+  UnitstatusText
+    DeviceSpecific1 "Zero ref. level error"
+    DeviceSpecific2 "Max ref. level errror"
+    DeviceSpecific3 "Conversion time-out"
+    DeviceSpecific4 "Conversion overflow"
+    DeviceSpecific6 "ScanInterval Auto Corrected"
+  End UnitStatusText
+
+  UnitstatusSeverity
+    DeviceSpecific1 GeneralWarning TriggerEvent SeverityLow
+    DeviceSpecific2 GeneralWarning TriggerEvent SeverityLow
+    DeviceSpecific3 GeneralWarning TriggerEvent SeverityLow
+    DeviceSpecific4 GeneralWarning TriggerEvent SeverityLow
+    DeviceSpecific6 GeneralWarning TriggerEvent SeverityLow
+  End UnitStatusSeverity
+
+  Configuration
+    ConfigInfo
+      ModuleKey   16#0000
+      InAreaSize  64
+      OutAreaSize 0
+      InWord 
+        WORD 0        0  (* State             *)
+        WORD 0        1  (* Module status     *)
+        WORD 0        2  (* Status channel 1  *)
+        WORD 0        3  (* Value channel 1   *)
+        WORD 0        4  (* Status channel 2  *)
+        WORD 0        5  (* Value channel 2   *)
+        WORD 0        6  (* Status channel 3  *)
+        WORD 0        7  (* Value channel 3   *)
+        WORD 0        8  (* Status channel 4  *)
+        WORD 0        9  (* Value channel 4   *)
+        WORD 0       10  (* Status channel 5  *)
+        WORD 0       11  (* Value channel 5   *)
+        WORD 0       12  (* Status channel 6  *)
+        WORD 0       13  (* Value channel 6   *)
+        WORD 0       14  (* Status channel 7  *)
+        WORD 0       15  (* Value channel 7   *)
+        WORD 0       16  (* Status channel 8  *)
+        WORD 0       17  (* Value channel 8   *)
+        WORD 0       18  (* Status channel 9  *)
+        WORD 0       19  (* Value channel 9   *)
+        WORD 0       20  (* Status channel 10 *)
+        WORD 0       21  (* Value channel 10  *)
+        WORD 0       22  (* Status channel 11 *)
+        WORD 0       23  (* Value channel 11  *)
+        WORD 0       24  (* Status channel 12 *)
+        WORD 0       25  (* Value channel 12  *)
+        WORD 0       26  (* Status channel 13 *)
+        WORD 0       27  (* Value channel 13  *)
+        WORD 0       28  (* Status channel 14 *)
+        WORD 0       29  (* Value channel 14  *)
+        WORD 0       30  (* Status channel 15 *)
+        WORD 0       31  (* Value channel 15  *)
+        WORD 0       32  (* Status channel 16 *)
+        WORD 0       33  (* Value channel 16  *)
+        WORD 0       34  (* Status channel 17  *)
+        WORD 0       35  (* Value channel 17   *)
+        WORD 0       36  (* Status channel 18  *)
+        WORD 0       37  (* Value channel 18   *)
+        WORD 0       38  (* Status channel 19  *)
+        WORD 0       39  (* Value channel 19   *)
+        WORD 0       40  (* Status channel 20  *)
+        WORD 0       41  (* Value channel 20   *)
+        WORD 0       42  (* Status channel 21  *)
+        WORD 0       43  (* Value channel 21   *)
+        WORD 0       44  (* Status channel 22  *)
+        WORD 0       45  (* Value channel 22   *)
+        WORD 0       46  (* Status channel 23  *)
+        WORD 0       47  (* Value channel 23   *)
+        WORD 0       48  (* Status channel 24  *)
+        WORD 0       49  (* Value channel 24   *)
+        WORD 0       50  (* Status channel 25  *)
+        WORD 0       51  (* Value channel 25   *)
+        WORD 0       52  (* Status channel 26 *)
+        WORD 0       53  (* Value channel 26  *)
+        WORD 0       54  (* Status channel 27 *)
+        WORD 0       55  (* Value channel 27  *)
+        WORD 0       56  (* Status channel 28 *)
+        WORD 0       57  (* Value channel 28  *)
+        WORD 0       58  (* Status channel 29 *)
+        WORD 0       59  (* Value channel 29  *)
+        WORD 0       60  (* Status channel 30 *)
+        WORD 0       61  (* Value channel 30  *)
+        WORD 0       62  (* Status channel 31 *)
+        WORD 0       63  (* Value channel 31  *)
+
+
+
+
+
+
+      CIGIOConnData
+        CIGIOData 0 0 0 0 0  (* Common parameters *)
+        CIGIOData 0 0 0 0 0 0 0 0 0 0 0 0 0 0  (* Channel 1  *)     
+        CIGIOData 0 0 0 0 0 0 0 0 0 0 0 0 0 0  (* Channel 2  *)     
+        CIGIOData 0 0 0 0 0 0 0 0 0 0 0 0 0 0  (* Channel 3  *)     
+        CIGIOData 0 0 0 0 0 0 0 0 0 0 0 0 0 0  (* Channel 4  *)     
+        CIGIOData 0 0 0 0 0 0 0 0 0 0 0 0 0 0  (* Channel 5  *)     
+        CIGIOData 0 0 0 0 0 0 0 0 0 0 0 0 0 0  (* Channel 6  *)     
+        CIGIOData 0 0 0 0 0 0 0 0 0 0 0 0 0 0  (* Channel 7  *)     
+        CIGIOData 0 0 0 0 0 0 0 0 0 0 0 0 0 0  (* Channel 8  *)     
+        CIGIOData 0 0 0 0 0 0 0 0 0 0 0 0 0 0  (* Channel 9  *)     
+        CIGIOData 0 0 0 0 0 0 0 0 0 0 0 0 0 0  (* Channel 10 *)     
+        CIGIOData 0 0 0 0 0 0 0 0 0 0 0 0 0 0  (* Channel 11 *)     
+        CIGIOData 0 0 0 0 0 0 0 0 0 0 0 0 0 0  (* Channel 12 *)     
+        CIGIOData 0 0 0 0 0 0 0 0 0 0 0 0 0 0  (* Channel 13 *)     
+        CIGIOData 0 0 0 0 0 0 0 0 0 0 0 0 0 0  (* Channel 14 *)     
+        CIGIOData 0 0 0 0 0 0 0 0 0 0 0 0 0 0  (* Channel 15 *)     
+        CIGIOData 0 0 0 0 0 0 0 0 0 0 0 0 0 0  (* Channel 16 *) 
+        CIGIOData 0 0 0 0 0 0 0 0 0 0 0 0 0 0  (* Channel 17 *)     
+        CIGIOData 0 0 0 0 0 0 0 0 0 0 0 0 0 0  (* Channel 18 *)     
+        CIGIOData 0 0 0 0 0 0 0 0 0 0 0 0 0 0  (* Channel 19 *)     
+        CIGIOData 0 0 0 0 0 0 0 0 0 0 0 0 0 0  (* Channel 20 *)     
+        CIGIOData 0 0 0 0 0 0 0 0 0 0 0 0 0 0  (* Channel 21 *)     
+        CIGIOData 0 0 0 0 0 0 0 0 0 0 0 0 0 0  (* Channel 22 *)     
+        CIGIOData 0 0 0 0 0 0 0 0 0 0 0 0 0 0  (* Channel 23 *)     
+        CIGIOData 0 0 0 0 0 0 0 0 0 0 0 0 0 0  (* Channel 24 *)     
+        CIGIOData 0 0 0 0 0 0 0 0 0 0 0 0 0 0  (* Channel 25 *)     
+        CIGIOData 0 0 0 0 0 0 0 0 0 0 0 0 0 0  (* Channel 26 *)     
+        CIGIOData 0 0 0 0 0 0 0 0 0 0 0 0 0 0  (* Channel 27 *)     
+        CIGIOData 0 0 0 0 0 0 0 0 0 0 0 0 0 0  (* Channel 28 *)     
+        CIGIOData 0 0 0 0 0 0 0 0 0 0 0 0 0 0  (* Channel 29 *)     
+        CIGIOData 0 0 0 0 0 0 0 0 0 0 0 0 0 0  (* Channel 30 *)     
+        CIGIOData 0 0 0 0 0 0 0 0 0 0 0 0 0 0  (* Channel 31 *)
+                  0 0(*PowerFrequecy*)                   
+      End CIGIOConnData
+    End ConfigInfo
+  End Configuration
+  HWUnitInfoCRC 16#5A32
+End HWUnitInfo (* DSAI 146 *)

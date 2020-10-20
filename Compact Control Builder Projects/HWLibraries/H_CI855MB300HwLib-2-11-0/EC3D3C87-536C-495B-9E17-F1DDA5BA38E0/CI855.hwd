@@ -1,0 +1,310 @@
+(****************************************************************************)
+(* FILE            ac800ci855.hwd                                           *)
+(*                                                                          *)
+(* DESCRIPTION     Hardware definition file for MB300 module CI 855         *)
+(*                                                                          *)
+(* AUTHOR          PA/XA/AHC Peter Wahlstrom                                *)
+(*                                                                          *)
+(* All rights reserved. Reproduction, modification, use or disclosure       *)
+(* to third parties without express authority, is forbidden.                *)
+(* Copyright ABB Process Industries AB, Sweden, 2002.                       *)
+(*                                                                          *)
+(*                                                                          *)
+(* HISTORY $Log: /MB300/workplace/current/source/hwdefinitions/definitionfiles/ac800ci855.hwd $  *)
+(*  *)
+(* 1    07-12-17 15:20 sepewah *)
+(* - Header added. *)
+(* - #30692 Tighter HWD parsing due to SIL-3*)
+(* ParValIndex 7 changed from INT 21 21 21 21 to INT 0 42 0 42 *)
+(*  *)
+(*                                                                          *)
+(*                                                                          *)
+(* ABSTRACT                                                                 *)
+(*                                                                          *)
+(****************************************************************************)
+
+HwUnitInfo  (* CI855*)
+   HWUnitID {23A5048F-8AFC-4e71-A2EA-D5B2B1D69D5A}
+   Description "CI855"
+   Information "Communication Interface - MB 300"
+(* ###HelpProject MB300Help.xxx *)
+   Icons AC800ComType  
+   Attributes SystemUnit
+   ModuleType  16#5006
+   InterfaceInfo
+     Interface CIGInterface
+     CLSID_CB   {9948C614-2B45-44ca-9C72-59624E0B3B40}  (*  CLSID_CB = GUID for MB300 Protocol handler (PH) in Control builder CB *)
+     CLSID_CTRL  {B03B49AD-BCA5-43f9-B134-98CF4CDFDE0A} (* CLSID_CTRL  = GUID for MB300 Protocol handler (PH) in Controler *)
+     HWConfig Fail     (* Change of net parameters affect subunits *)
+   End InterfaceInfo
+   DiscreteNumbers
+      10 20 30 40 50 60 70 80 90 120
+   End DiscreteNumbers
+   SubUnitTypes 
+      HWUnitID {229114B3-8CFF-4333-AD93-EEA37EE4585B} (* MB300_CTRLAREA*)
+   End SubUnitTypes
+   Parameters
+      ParamInfo 
+         Name OWNNODENUMBER
+         Description "CI855 node number"
+         CompileType HWConfig
+         Datatype INT
+         Default 1
+         ParValIndex 0
+         ParamType Numbered 0
+      End ParamInfo
+      ParamInfo 
+         Name PROTOCOL1
+         Description "Protocol type"
+         CompileType HWConfig
+         Datatype ENUM
+         Default 0
+         ParValIndex 2
+         ParamType Numbered 2
+      End ParamInfo
+      ParamInfo 
+         Name NETWNO1
+         Description "Network number 1"
+         CompileType HWConfig
+         Datatype INT
+         Default 11
+         ParValIndex 1
+         ParamType Numbered 1
+      End ParamInfo
+      ParamInfo 
+         Name NETWNO2
+         Description "Network number 2"
+         CompileType HWConfig
+         Datatype INT
+         Default 12
+         ParValIndex 1
+         ParamType Numbered 9
+      End ParamInfo
+      ParamInfo 
+         Name TIMESYNC
+         Description "Time sync"
+         CompileType HWConfig
+         Datatype ENUM
+         Default 1
+         ParValIndex 9
+         ParamType Numbered 20
+      End ParamInfo
+      ParamInfo 
+         Name ENDNODE1
+         Description "End Node"
+         CompileType HWConfig
+         Datatype BOOL
+         Default False
+         ParamType Numbered 3
+      End ParamInfo
+      ParamInfo 
+         Name CYCLETIME1
+         Description "Routing Transmit Cycle Time"
+         CompileType HWConfig
+         Datatype INT
+         Default 10
+         ParValIndex 4
+         ParamType Numbered 4
+      End ParamInfo
+      ParamInfo 
+         Name DISTANCE1
+         Description "Distance"
+         CompileType HWConfig
+         Datatype INT
+         Default 51
+         ParValIndex 5
+         ParamType Numbered 5
+      End ParamInfo
+      ParamInfo 
+         Name RECBUF1
+         Description "No Receive buffers"
+         Hidden
+         CompileType HWConfig
+         Datatype INT
+         Default 21
+         ParValIndex 7
+         ParamType Numbered 8
+      End ParamInfo
+      ParamInfo 
+         Name CYCACKTIME
+         Description "Cyclic Ack Time"
+         CompileType HWConfig
+         Datatype INT
+         Default 600
+         ParValIndex 10
+         ParamType Numbered 17
+      End ParamInfo
+      ParamInfo 
+         Name TPDUBETWACK
+         Description "TPDU Between Ack"
+         CompileType HWConfig
+         Datatype INT
+         Default 3
+         ParValIndex 8
+         ParamType Numbered 18
+      End ParamInfo
+      ParamInfo 
+         Name TPDUCREDIT
+         Description "TPDU Credit"
+         CompileType HWConfig
+         Datatype INT
+         Default 4
+         ParValIndex 8
+         ParamType Numbered 19
+      End ParamInfo
+      ParamInfo 
+         Name FILTER1
+         Description "Filter 1"
+         CompileType HWConfig
+         Datatype INT
+         Default 0
+         ParValIndex 6
+         ParamType Numbered 6
+      End ParamInfo
+      ParamInfo 
+         Name OVERRIDE1
+         Description "Override 1"
+         CompileType HWConfig
+         Datatype BOOL
+         Default False
+         ParamType Numbered 7
+      End ParamInfo
+      ParamInfo 
+         Name FILTER2
+         Description "Filter 2"
+         CompileType HWConfig
+         Datatype INT
+         Default 0
+         ParValIndex 6
+         ParamType Numbered 14
+      End ParamInfo
+      ParamInfo 
+         Name OVERRIDE2
+         Description "Override 2"
+         CompileType HWConfig
+         Datatype BOOL
+         Default False
+         ParamType Numbered 15
+      End ParamInfo
+      ParamInfo 
+         Name PROTOCOL2
+         Description "Protocol type 2"
+         Hidden 
+         CompileType HWConfig
+         Datatype ENUM
+         Default 0
+         ParValIndex 2
+         ParamType Numbered 10
+      End ParamInfo
+      ParamInfo 
+         Name ENDNODE2
+         Description "Node type 2"
+         Hidden
+         CompileType HWConfig
+         Datatype BOOL
+         Default 0
+         ParamType Numbered 11
+      End ParamInfo
+      ParamInfo 
+         Name CYCLETIME2
+         Description "Routing Transmit Cycle Time 2"
+         Hidden
+         CompileType HWConfig
+         Datatype INT
+         Default 10
+         ParValIndex 4
+         ParamType Numbered 12
+      End ParamInfo
+      ParamInfo 
+         Name DISTANCE2
+         Description "Distance 2"
+         Hidden
+         CompileType HWConfig
+         Datatype INT
+         Default 51
+         ParValIndex 5
+         ParamType Numbered 13
+      End ParamInfo
+      ParamInfo 
+         Name RECBUF2
+         Description "No Receive buffers 2"
+         Hidden
+         CompileType HWConfig
+         Datatype INT
+         Default 42
+         ParValIndex 7
+         ParamType Numbered 16
+      End ParamInfo
+   End Parameters
+   ParValList
+      ParVal
+         ParValIndex 0
+         INT 1 99 1 99
+      End ParVal
+      ParVal
+         ParValIndex 1
+         INT 0 127 0 127
+      End ParVal
+      ParVal
+         ParValIndex 2
+         ENUM
+         "MB 300"     1   (*Change value, slave and master*)
+         "MB 300F"    2
+         "MB 300E"    3
+      End ParVal
+      ParVal
+         ParValIndex 4
+         INT 10 127 10 127
+      End ParVal
+      ParVal
+         ParValIndex 5
+         INT 45 100 45 100
+      End ParVal
+      ParVal
+         ParValIndex 6
+         INT 0 7 0 7
+      End ParVal
+      ParVal
+         ParValIndex 7
+         INT 0 42 0 42
+      End ParVal
+      ParVal
+         ParValIndex 8
+         INT 1 15 1 15
+      End ParVal
+      ParVal
+         ParValIndex 9
+         ENUM
+         "NO Time-sync"   0
+         "AC 800M Local"  1
+         "MB 300 Slave"   2 
+         "MB 300 Master"  3 
+      End ParVal
+      ParVal
+         ParValIndex 10
+         INT 600 1200 600 1200
+      End ParVal
+   End ParValList
+
+   Channels
+      ChannelInfo
+         Number 0
+         ChannelName "UnitStatus"
+         Datatype Status_In
+         Routine 900
+         CopyParameters 0 0 16#50000
+      End ChannelInfo
+   End Channels
+
+   UnitStatusText
+     DeviceSpecific1 "MB300 System message received. Check log-file"
+     DeviceSpecific10 "No communication on port 1"
+     DeviceSpecific9 "No communication on port 2"
+  End UnitStatusText
+   UnitStatusSeverity
+     DeviceSpecific1 GeneralWarning TriggerEvent SeverityLow
+     DeviceSpecific10 GeneralWarning TriggerAlarm SeverityMedium
+     DeviceSpecific9 GeneralWarning TriggerAlarm SeverityMedium
+   End UnitStatusSeverity
+  HWUnitInfoCRC 16#FFD9
+End HWUnitInfo (* CI855V2 *)

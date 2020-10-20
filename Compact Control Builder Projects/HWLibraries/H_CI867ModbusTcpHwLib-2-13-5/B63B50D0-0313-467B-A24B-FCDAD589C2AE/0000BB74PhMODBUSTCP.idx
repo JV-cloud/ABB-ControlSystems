@@ -1,0 +1,606 @@
+<HEAD>
+Index of symbols created Fri 10/12/2012 10:12:10.33 
+</HEAD>
+<SECTIONS=10>
+00010000 00025a28 .text
+00025a28 000264c0 .got2
+000264c0 000268ac .fixup
+000268ac 000268e8 .bss
+000268e8 0002d800 .data
+0002d800 0002d800 .sdata
+0002d800 0004e578 .stab
+0004e578 00025a28 .comment
+00025a28 0004e9f8 .sdata2
+0004e9f8 0004e9f8 .stabstr
+</SECTIONS>
+<SYMBOLS=589>
+00000000 PhMODBUSTCP.elf EXE_HEAD
+00000064 PhMODBUSTCP.elf CPHMODBUSTCP::CPHMODBUSTCP(int)
+00000288 PhMODBUSTCP.elf CPHMODBUSTCP::~CPHMODBUSTCP(void)
+000003e8 PhMODBUSTCP.elf CPHMODBUSTCP::PhResponsibilityForRestart(trHWFAddress, teHWFErrorCode *)
+000004ec PhMODBUSTCP.elf CPHMODBUSTCP::PhResponsibility(trHWFAddress, teHWFErrorCode *)
+000013e4 PhMODBUSTCP.elf CPHMODBUSTCP::PhResponsibilityForHotInsert(trHWFAddress, teHWFErrorCode *)
+0000150c PhMODBUSTCP.elf CPHMODBUSTCP::PhResponsibilityForBackupDevice(trHWFAddress, teHWFErrorCode *)
+00001da0 PhMODBUSTCP.elf CPHMODBUSTCP::PrepareForTermination(teHWFErrorCode *)
+00001e44 PhMODBUSTCP.elf CPHMODBUSTCP::RemoveHWConfiguration(trHWFAddress, teHWFErrorCode *)
+000023fc PhMODBUSTCP.elf CPHMODBUSTCP::PerformFailover(trHWFAddress, teHWFErrorCode *)
+00002510 PhMODBUSTCP.elf CPHMODBUSTCP::StartUsingIoConnection(trHWFAddress, unsigned long, teHWFErrorCode *)
+00002564 PhMODBUSTCP.elf CPHMODBUSTCP::PerformSwitchover(trHWFAddress, teHWFErrorCode *)
+000025b8 PhMODBUSTCP.elf CPHMODBUSTCP::StartUsingDevice(trHWFAddress, teHWFErrorCode *)
+0000260c PhMODBUSTCP.elf CPHMODBUSTCP::RemoveIoConnection(unsigned long, teHWFErrorCode *)
+0000265c PhMODBUSTCP.elf CPHMODBUSTCP::KickWatchdog(unsigned short *, teHWFErrorCode *)
+000026b8 PhMODBUSTCP.elf CPHMODBUSTCP::GetStatus(trHWFAddress, teHWFUnitKind, unsigned long *, unsigned long *, teHWFErrorCode *)
+00002810 PhMODBUSTCP.elf CPHMODBUSTCP::TakeAllSemaphores(void)
+00002a48 PhMODBUSTCP.elf CPHMODBUSTCP::ReleaseAllSemaphores(void)
+00002c6c PhMODBUSTCP.elf CPHMODBUSTCP::DeleteMasterthread(void)
+00002df0 PhMODBUSTCP.elf CPHMODBUSTCP::DisableCyclicStatus(teHWFErrorCode *)
+000030f4 PhMODBUSTCP.elf CPHMODBUSTCP::EnableCyclicStatus(trHWFAddress, teHWFErrorCode *)
+00003400 PhMODBUSTCP.elf CPHMODBUSTCP::IsAddressMatching(trHWFAddress, trHWFAddress)
+00003460 PhMODBUSTCP.elf CPHMODBUSTCP::operator new(unsigned int, IHeapCallback *)
+00003514 PhMODBUSTCP.elf CPHMODBUSTCP::heap_delete(void)
+00003580 PhMODBUSTCP.elf CPHMODBUSTCP::QueryInterface(_GUID const &, void **)
+000036c8 PhMODBUSTCP.elf CPHMODBUSTCP::AddRef(void)
+000036e0 PhMODBUSTCP.elf CPHMODBUSTCP::Release(void)
+0000375c PhMODBUSTCP.elf Letext
+00003760 PhMODBUSTCP.elf CPhClient_Impl::CPhClient_Impl(int)
+000038a0 PhMODBUSTCP.elf CPhClient_Impl::~CPhClient_Impl(void)
+000039a8 PhMODBUSTCP.elf CPhClient_Impl::ConnectReq(unsigned long, unsigned long *, int *)
+00003e38 PhMODBUSTCP.elf CPhClient_Impl::UpdateConnectFB(unsigned long, int *, int)
+00003ed4 PhMODBUSTCP.elf CPhClient_Impl::DisconnectReq(unsigned long, unsigned long, int *)
+00004214 PhMODBUSTCP.elf CPhClient_Impl::ReadVarReq(unsigned long, int *)
+000049f4 PhMODBUSTCP.elf CPhClient_Impl::WriteVarReq(unsigned long, int *)
+0000520c PhMODBUSTCP.elf CPhClient_Impl::ReadRawReq(unsigned long, int *)
+00005260 PhMODBUSTCP.elf CPhClient_Impl::WriteRawReq(unsigned long, int *)
+000052b4 PhMODBUSTCP.elf CPhClient_Impl::AbortRawReq(unsigned long, int *)
+00005308 PhMODBUSTCP.elf CPhClient_Impl::TimeoutAbortVarReq(unsigned long, int *)
+00005360 PhMODBUSTCP.elf CPhClient_Impl::AbortVarReq(unsigned long, int *)
+00005428 PhMODBUSTCP.elf CPhClient_Impl::GetExtendedStatusSize(unsigned long, int *, int *)
+0000547c PhMODBUSTCP.elf CPhClient_Impl::GetExtendedStatus(unsigned long, int, teIEC1131Type *, tGCValue *, int *)
+000054d0 PhMODBUSTCP.elf CPhClient_Impl::SetStatus(unsigned long, int, int *)
+00005524 PhMODBUSTCP.elf CPhClient_Impl::ReadRes(unsigned long, int, int *)
+0000558c PhMODBUSTCP.elf CPhClient_Impl::WriteRes(unsigned long, int, int *)
+000055e0 PhMODBUSTCP.elf CPhClient_Impl::Free_Node(node *)
+00005670 PhMODBUSTCP.elf CPhClient_Impl::Insert_Node(unsigned long, trHWAddr, node *, int *)
+000057fc PhMODBUSTCP.elf CPhClient_Impl::EncapsulateCommunicationMessage(unsigned long, tVarDataValue *, unsigned char *, int, int, trClientRequestInfo *, unsigned char *, unsigned int *, int *, unsigned int)
+0000659c PhMODBUSTCP.elf CPhClient_Impl::SendClientMessage(unsigned char *, int, int, eErrorCodes *)
+00006784 PhMODBUSTCP.elf CPhClient_Impl::GetWriteData(unsigned long, bool, tVarDataValue *, unsigned char *, int, unsigned char *, unsigned int *, int *)
+00006afc PhMODBUSTCP.elf CPhClient_Impl::Convert_String_To_HWAddr(tGCValue *, trHWAddr *)
+00006c54 PhMODBUSTCP.elf CPhClient_Impl::CheckStatus(trHWAddr, unsigned long *, unsigned long *)
+00006da0 PhMODBUSTCP.elf CPhClient_Impl::GetMemoryType(unsigned long, unsigned short *, int *)
+00006fac PhMODBUSTCP.elf CPhClient_Impl::IsConnectionAllowed(trHWFAddress)
+000070c4 PhMODBUSTCP.elf CPhClient_Impl::RemovePendingRequestForConnection(unsigned long, int, int *)
+000073e4 PhMODBUSTCP.elf CVardataReq::InsertVarDataHandle(unsigned int *, unsigned long, int *)
+00007590 PhMODBUSTCP.elf CVardataReq::ClearVarData(unsigned int, unsigned long)
+000076dc PhMODBUSTCP.elf CVardataReq::CVardataReq(int)
+00007800 PhMODBUSTCP.elf CVardataReq::~CVardataReq(void)
+000078e8 PhMODBUSTCP.elf CVardataReq::IsVarDataPresent(unsigned int, unsigned long)
+00007a04 PhMODBUSTCP.elf Letext
+00007a08 PhMODBUSTCP.elf CPHMODBUSTCP::ClientThreadWork(void)
+00007dc0 PhMODBUSTCP.elf vosClientHelperThread(int, int, int, int)
+00007de4 PhMODBUSTCP.elf CPHMODBUSTCP::StartClientThread(unsigned short)
+00007f48 PhMODBUSTCP.elf CPHMODBUSTCP::DeleteClientThread(void)
+00007fbc PhMODBUSTCP.elf CPhClient_Impl::SendMsgQRequest(trClientRequestInfo *, int *, unsigned int)
+00008168 PhMODBUSTCP.elf CPhClient_Impl::UpdateFBForAbortVarReq(unsigned long, int *)
+000083dc PhMODBUSTCP.elf Letext
+000083e0 PhMODBUSTCP.elf CPhCommon_Impl::CPhCommon_Impl(int)
+00008480 G _SDA2_BASE_ PhMODBUSTCP.elf 
+000084d4 PhMODBUSTCP.elf CPhCommon_Impl::~CPhCommon_Impl(void)
+000085d0 PhMODBUSTCP.elf CPHMODBUSTCP::GetProductInfo(unsigned char *, unsigned char *, unsigned char *, unsigned long)
+00008668 PhMODBUSTCP.elf CPHMODBUSTCP::SetCommonCallbackInterface(ICommonCallback *)
+000089b0 PhMODBUSTCP.elf Letext
+000089b4 PhMODBUSTCP.elf CPhConfig1_Impl::CPhConfig1_Impl(int)
+00008ac8 PhMODBUSTCP.elf CPhConfig1_Impl::~CPhConfig1_Impl(void)
+00008bc8 PhMODBUSTCP.elf CPhConfig1_Impl::ConfigureCI867(trHWFAddress, eModuleTypes, bool, teHWFErrorCode *, ICIGDriverCallback *)
+0000a498 PhMODBUSTCP.elf CPhConfig1_Impl::ConfigureTCPSlaves(trHWFAddress, unsigned short, unsigned long, eModuleTypes, bool, teHWFErrorCode *)
+0000af8c PhMODBUSTCP.elf CPhConfig1_Impl::ConfigureSerialSlaves(trHWFAddress, unsigned short, unsigned long, eModuleTypes, bool, teHWFErrorCode *)
+0000b58c PhMODBUSTCP.elf CPhConfig1_Impl::SendConfigMessage(trModbusTCPConfigInfo, unsigned long, eModuleTypes, teHWFErrorCode *)
+0000b6ec PhMODBUSTCP.elf CPhConfig1_Impl::RemoveHWObject(trHWFAddress, teHWFErrorCode *)
+0000b878 PhMODBUSTCP.elf CPhConfig1_Impl::CheckCompatibility(IsPrimaryOrBackup, trHWFAddress, teHWFErrorCode *, ICIGDriverCallback *)
+0000bf2c PhMODBUSTCP.elf CPhConfig1_Impl::UppdateHWConfBit(trHWFAddress)
+0000c0a8 PhMODBUSTCP.elf CPhConfig1_Impl::SwapCompatibilityStatusBits(trHWFAddress)
+0000c2c4 PhMODBUSTCP.elf CPhConfig1_Impl::ClearCompatibilityStatusBits(trHWFAddress, IsPrimaryOrBackup)
+0000c40c PhMODBUSTCP.elf CPhConfig1_Impl::SendSwitchOverMsgToBackUp(void)
+0000c51c PhMODBUSTCP.elf CPhConfig1_Impl::SendStopKickWdMsg(void)
+0000c644 PhMODBUSTCP.elf CPhConfig1_Impl::RegisterDevice(trHWFAddress)
+0000c7c0 PhMODBUSTCP.elf CPhConfig1_Impl::WaitForCI867ToBecomeReady(ICIGDriverCallback *, int)
+0000c9ac PhMODBUSTCP.elf Letext
+0000c9b0 PhMODBUSTCP.elf CPHMODBUSTCP::FailOver(void)
+0000cce8 PhMODBUSTCP.elf CPHMODBUSTCP::SendAllConnectionHandles(void)
+0000cf40 PhMODBUSTCP.elf CPHMODBUSTCP::SendAllPendingReq(void)
+0000d3d4 PhMODBUSTCP.elf vosFailOverThread(int, int, int, int)
+0000d424 PhMODBUSTCP.elf CPHMODBUSTCP::StartFailOverThread(void)
+0000d510 PhMODBUSTCP.elf CPhClient_Impl::Float_To_IEEE(float, unsigned short &, unsigned short &)
+0000d510 PhMODBUSTCP.elf Letext
+0000d530 PhMODBUSTCP.elf CPHMODBUSTCP::IEEE_To_Float(int)
+0000d530 PhMODBUSTCP.elf Letext
+0000d548 PhMODBUSTCP.elf Letext
+0000d548 PhMODBUSTCP.elf CPHMODBUSTCP::PrepareForFirmwareDownload(trHWFAddress const *, unsigned long, eOLUStatus *)
+0000d55c PhMODBUSTCP.elf CPHMODBUSTCP::PrepareForApplicationStop(trHWFAddress const *, eOLUStatus *)
+0000d618 PhMODBUSTCP.elf CPHMODBUSTCP::ResumeOperation(trHWFAddress const *, eOLUStatus *)
+0000d9a4 PhMODBUSTCP.elf CPHMODBUSTCP::PhResponsibilityForOLU(trHWFAddress const *, eOLUStatus *)
+0000daa4 PhMODBUSTCP.elf CPHMODBUSTCP::PrepareForLeavingOLU(trHWFAddress const *, eOLUStatus *)
+0000dabc PhMODBUSTCP.elf CPHMODBUSTCP::PrepareForAppAndConfigDownload(trHWFAddress const *, eOLUStatus *)
+0000dacc PhMODBUSTCP.elf Letext
+0000dad0 PhMODBUSTCP.elf CPhSharedData::CPhSharedData(void)
+0000dbc0 PhMODBUSTCP.elf CPhSharedData::~CPhSharedData(void)
+0000dc2c PhMODBUSTCP.elf CPhSharedData::operator delete(void *)
+0000dc94 PhMODBUSTCP.elf CPhSharedData::Convert_HWAddr_To_HWFAddr(trHWFAddress *, trHWAddr)
+0000dd40 PhMODBUSTCP.elf CPhSharedData::Error(char const *, int, char const *, unsigned int)
+0000de3c PhMODBUSTCP.elf CPhSharedData::PrepareMessage(char *, char const *, char const *, unsigned int, int)
+0000e0e8 PhMODBUSTCP.elf CPhSharedData::Info(char const *, char const *, unsigned int)
+0000e1d4 PhMODBUSTCP.elf CPhSharedData::PhMBTCP_Trace(int, char const *)
+0000e2bc PhMODBUSTCP.elf CPhSharedData::PhMBTCP_Get_Trace_Level(void)
+0000e378 PhMODBUSTCP.elf CPhSharedData::createSemaphores(void)
+0000e80c PhMODBUSTCP.elf CPhSharedData::SemTakeForDriver(void)
+0000e9e8 PhMODBUSTCP.elf CPhSharedData::SemGiveForDriver(void)
+0000eb80 PhMODBUSTCP.elf CPhSharedData::SemTakeForVarDataList(void)
+0000ec2c PhMODBUSTCP.elf CPhSharedData::SemGiveForVarDataList(void)
+0000ecc8 PhMODBUSTCP.elf CPhSharedData::deleteSemaphores(void)
+0000f07c PhMODBUSTCP.elf CPhSharedData::CreateAndOpenCIGDriver(IsPrimaryOrBackup, int, eErrorCodes *)
+0000f1ec PhMODBUSTCP.elf CPhSharedData::CreateAndOpenDriver(int, ICIGDriverCallback **, eErrorCodes *)
+0000f420 PhMODBUSTCP.elf CPhSharedData::SetCIGDriverInterface(IsPrimaryOrBackup, ICIGDriverCallback *)
+0000f484 PhMODBUSTCP.elf CPhSharedData::CloseCIGDriverInterface(IsPrimaryOrBackup, eErrorCodes *)
+0000f590 PhMODBUSTCP.elf CPhSharedData::GetCIGDriverInterface(IsPrimaryOrBackup, ICIGDriverCallback **)
+0000f5b4 PhMODBUSTCP.elf CPhSharedData::UpdatePrimaryDriverForFailOver(TypeOfSwitch)
+0000f684 PhMODBUSTCP.elf CPhSharedData::WriteWithTimeout(ICIGDriverCallback *, int, unsigned char *, int, int, eErrorCodes *)
+0000f828 PhMODBUSTCP.elf CPhSharedData::SetRedudancyLEDs(ICIGDriverCallback *, bool, bool, eErrorCodes *)
+0000f8f8 PhMODBUSTCP.elf CPhSharedData::SetFlagToForceSetOfLEDs(void)
+0000f90c PhMODBUSTCP.elf CPhSharedData::EmptyConnectionHandleQueue(void)
+0000fa54 PhMODBUSTCP.elf CPhSharedData::CIGeoReset(eErrorCodes *)
+0000fc58 PhMODBUSTCP.elf CPhSharedData::ClientMessageQueueCreate(void)
+0000fd20 PhMODBUSTCP.elf CPhSharedData::ClientMessageQueueDelete(void)
+0000fdd4 PhMODBUSTCP.elf Letext
+0000fdd8 PhMODBUSTCP.elf CPhMODBUSTCPSlave::CPhMODBUSTCPSlave(int)
+0000ff28 PhMODBUSTCP.elf CPhMODBUSTCPSlave::~CPhMODBUSTCPSlave(void)
+0001000c PhMODBUSTCP.elf vosSlaveThread(int, int, int, int)
+00010030 PhMODBUSTCP.elf CPhMODBUSTCPSlave::StartSlaveThread(unsigned short)
+00010188 PhMODBUSTCP.elf CPhMODBUSTCPSlave::SlaveThreadWork(void)
+00010344 PhMODBUSTCP.elf CPhMODBUSTCPSlave::ReceiveMessageAndProcess(void)
+000103c0 PhMODBUSTCP.elf CPhMODBUSTCPSlave::ReadMessage(int *)
+0001057c PhMODBUSTCP.elf CPhMODBUSTCPSlave::ProcessMessage(int *)
+00010634 PhMODBUSTCP.elf CPhMODBUSTCPSlave::RegisterRWFromToVarServer(unsigned int, unsigned int, unsigned char)
+000109f8 PhMODBUSTCP.elf CPhMODBUSTCPSlave::BooleanRWFromToVarServer(unsigned int, unsigned int, unsigned char)
+00010d88 PhMODBUSTCP.elf CPhMODBUSTCPSlave::BuildAndSendMsg(void)
+00010ea8 PhMODBUSTCP.elf CPhMODBUSTCPSlave::SendRWResponseMessage(eErrorCodes *)
+000110bc PhMODBUSTCP.elf CPhMODBUSTCPSlave::DeleteSlavethread(void)
+00011244 PhMODBUSTCP.elf Letext
+00011248 PhMODBUSTCP.elf CPhStatus1_Impl::CPhStatus1_Impl(int)
+00011378 PhMODBUSTCP.elf CPhStatus1_Impl::~CPhStatus1_Impl(void)
+0001145c PhMODBUSTCP.elf CPhStatus1_Impl::KickWatchdog(teHWFRedundancyMode, unsigned short *)
+0001177c PhMODBUSTCP.elf CPhStatus1_Impl::ReadVICIRegisters(trHWFAddress, unsigned long *, unsigned long *, teHWFErrorCode *)
+00012220 PhMODBUSTCP.elf CPhStatus1_Impl::StatusThreadWork(void)
+0001237c PhMODBUSTCP.elf CPhStatus1_Impl::EthernetPortStatus(trHWFAddress, unsigned long *, unsigned long *, teHWFErrorCode *)
+000126fc PhMODBUSTCP.elf CPhStatus1_Impl::ReadCnctdSlaveStatus(void)
+00012d28 PhMODBUSTCP.elf CPhStatus1_Impl::DeleteStatusthread(void)
+00012ef0 PhMODBUSTCP.elf vosStatusThread(int, int, int, int)
+00012f14 PhMODBUSTCP.elf CPhStatus1_Impl::StartStatusThread(unsigned short)
+00013064 PhMODBUSTCP.elf Letext
+00013068 PhMODBUSTCP.elf CPHMODBUSTCP::MasterThreadWork(void)
+000132dc PhMODBUSTCP.elf CPHMODBUSTCP::HandleHotRemove(void)
+0001370c PhMODBUSTCP.elf CPHMODBUSTCP::ProcessResponseMsg(unsigned long *, int *)
+00013bd8 PhMODBUSTCP.elf CPHMODBUSTCP::GetVarDataInfo(unsigned long)
+00013cb0 PhMODBUSTCP.elf CPHMODBUSTCP::ProcessCoils(unsigned long)
+00013d54 PhMODBUSTCP.elf CPHMODBUSTCP::ProcessRegisters(unsigned long)
+00014028 PhMODBUSTCP.elf CPHMODBUSTCP::PrintReceivedInfo(void)
+0001412c PhMODBUSTCP.elf CPHMODBUSTCP::UpdateFB(unsigned long)
+00014444 PhMODBUSTCP.elf CPHMODBUSTCP::EmptyVardataQueue(void)
+000146e4 PhMODBUSTCP.elf vosMasterThread(int, int, int, int)
+00014708 PhMODBUSTCP.elf CPHMODBUSTCP::StartMasterThread(unsigned short)
+0001486c PhMODBUSTCP.elf Letext
+00014870 PhMODBUSTCP.elf ObjectFactory
+000149b8 PhMODBUSTCP.elf Letext
+000149bc PhMODBUSTCP.elf __pure_virtual
+00014a24 PhMODBUSTCP.elf __builtin_delete
+00014a88 PhMODBUSTCP.elf Letext
+00014a88 PhMODBUSTCP.elf Letext
+00014a88 PhMODBUSTCP.elf Letext
+00014a8c PhMODBUSTCP.elf CPhCommon_Base::CPhCommon_Base(void)
+00014af8 PhMODBUSTCP.elf CPhCommon_Base::~CPhCommon_Base(void)
+00014b70 PhMODBUSTCP.elf CPhCommon_Base::GetProductInfo(unsigned char *, unsigned char *, unsigned char *, unsigned long)
+00014bac PhMODBUSTCP.elf CPhCommon_Base::SetCommonCallbackInterface(ICommonCallback *)
+00014bdc PhMODBUSTCP.elf CPhConfig_Base1::PrepareForTermination(teHWFErrorCode *)
+00014c0c PhMODBUSTCP.elf CPhConfig_Base1::RemoveHWConfiguration(trHWFAddress, teHWFErrorCode *)
+00014c40 PhMODBUSTCP.elf CPhConfig_Base1::RemoveIoConnection(unsigned long, teHWFErrorCode *)
+00014c74 PhMODBUSTCP.elf CPhConfig_Base1::PhResponsibilityForRestart(trHWFAddress, teHWFErrorCode *)
+00014ca8 PhMODBUSTCP.elf CPhConfig_Base1::PhResponsibility(trHWFAddress, teHWFErrorCode *)
+00014cdc PhMODBUSTCP.elf CPhConfig_Base1::StartUsingIoConnection(trHWFAddress, unsigned long, teHWFErrorCode *)
+00014d14 PhMODBUSTCP.elf CPhConfig_Base1::PhResponsibilityForBackupDevice(trHWFAddress, teHWFErrorCode *)
+00014d48 PhMODBUSTCP.elf CPhConfig_Base1::PhResponsibilityForHotInsert(trHWFAddress, teHWFErrorCode *)
+00014d7c PhMODBUSTCP.elf CPhConfig_Base1::PerformSwitchover(trHWFAddress, teHWFErrorCode *)
+00014db0 PhMODBUSTCP.elf CPhConfig_Base1::StartUsingDevice(trHWFAddress, teHWFErrorCode *)
+00014de4 PhMODBUSTCP.elf CPhConfig_Base1::PerformFailover(trHWFAddress, teHWFErrorCode *)
+00014e18 PhMODBUSTCP.elf CPhClient_Base::ConnectReq(unsigned long, unsigned long *, int *)
+00014e50 PhMODBUSTCP.elf CPhClient_Base::DisconnectReq(unsigned long, unsigned long, int *)
+00014e88 PhMODBUSTCP.elf CPhClient_Base::ReadVarReq(unsigned long, int *)
+00014ebc PhMODBUSTCP.elf CPhClient_Base::WriteVarReq(unsigned long, int *)
+00014ef0 PhMODBUSTCP.elf CPhClient_Base::ReadRawReq(unsigned long, int *)
+00014f24 PhMODBUSTCP.elf CPhClient_Base::WriteRawReq(unsigned long, int *)
+00014f58 PhMODBUSTCP.elf CPhClient_Base::AbortRawReq(unsigned long, int *)
+00014f8c PhMODBUSTCP.elf CPhClient_Base::AbortVarReq(unsigned long, int *)
+00014fc0 PhMODBUSTCP.elf CPhClient_Base::GetExtendedStatusSize(unsigned long, int *, int *)
+00014ff8 PhMODBUSTCP.elf CPhClient_Base::GetExtendedStatus(unsigned long, int, teIEC1131Type *, tGCValue *, int *)
+00015038 PhMODBUSTCP.elf CPhClient_Base::SetStatus(unsigned long, int, int *)
+00015070 PhMODBUSTCP.elf CPhClient_Base::ReadRes(unsigned long, int, int *)
+000150a8 PhMODBUSTCP.elf CPhClient_Base::WriteRes(unsigned long, int, int *)
+000150e0 PhMODBUSTCP.elf CPhClient_Base1::ConnectReq(unsigned long, unsigned long *, int *)
+00015118 PhMODBUSTCP.elf CPhClient_Base1::DisconnectReq(unsigned long, unsigned long, int *)
+00015150 PhMODBUSTCP.elf CPhClient_Base1::ReadVarReq(unsigned long, int *)
+00015184 PhMODBUSTCP.elf CPhClient_Base1::WriteVarReq(unsigned long, int *)
+000151b8 PhMODBUSTCP.elf CPhClient_Base1::RegisterVarReq(unsigned long, int *)
+000151ec PhMODBUSTCP.elf CPhClient_Base1::ReadRawReq(unsigned long, int *)
+00015220 PhMODBUSTCP.elf CPhClient_Base1::WriteRawReq(unsigned long, int *)
+00015254 PhMODBUSTCP.elf CPhClient_Base1::AbortRawReq(unsigned long, int *)
+00015288 PhMODBUSTCP.elf CPhClient_Base1::AbortVarReq(unsigned long, int *)
+000152bc PhMODBUSTCP.elf CPhClient_Base1::TimeoutAbortVarReq(unsigned long, int *)
+0001534c PhMODBUSTCP.elf CPhClient_Base1::GetExtendedStatusSize(unsigned long, int *, int *)
+00015384 PhMODBUSTCP.elf CPhClient_Base1::GetExtendedStatus(unsigned long, int, teIEC1131Type *, tGCValue *, int *)
+000153c4 PhMODBUSTCP.elf CPhClient_Base1::BufferTakeForReceive(unsigned long, int *)
+000153f8 PhMODBUSTCP.elf CPhClient_Base1::BufferGiveForReceive(unsigned long, int, int *)
+00015430 PhMODBUSTCP.elf CPhClient_Base1::BufferTakeForSend(unsigned long, unsigned int, int *)
+00015468 PhMODBUSTCP.elf CPhClient_Base1::BufferGiveForSend(unsigned long, unsigned int, int, int *)
+000154a4 PhMODBUSTCP.elf CPhClient_Base1::SetStatus(unsigned long, int, int *)
+000154dc PhMODBUSTCP.elf CPhClient_Base1::ReadRes(unsigned long, int, int *)
+00015514 PhMODBUSTCP.elf CPhClient_Base1::WriteRes(unsigned long, int, int *)
+0001554c PhMODBUSTCP.elf CPhStatus_Base1::KickWatchdog(unsigned short *, teHWFErrorCode *)
+00015580 PhMODBUSTCP.elf CPhStatus_Base1::GetStatus(trHWFAddress, teHWFUnitKind, unsigned long *, unsigned long *, teHWFErrorCode *)
+000155c0 PhMODBUSTCP.elf CPhIOAccess_Base::GetCopyRoutineReference(unsigned int, void (**)(short, void *, void *), IOAccessErrorCode *)
+000155f8 PhMODBUSTCP.elf CPhIOAccess_Base::ObtainDPM(eAreaType, trHWFAddress, IOAccessErrorCode *)
+00015630 PhMODBUSTCP.elf CPhIOAccess_Base::ReleaseDPM(eAreaType, trHWFAddress, IOAccessErrorCode *)
+00015668 PhMODBUSTCP.elf CPhDiagnostics_Base::PhDiagnosticsTableNew(teDiagErrorCode *)
+00015698 PhMODBUSTCP.elf CPhDiagnostics_Base::PhDiagnosticsTableCleared(teDiagErrorCode *)
+000156c8 PhMODBUSTCP.elf CPhOLU_Base::PrepareForFirmwareDownload(trHWFAddress const *, unsigned long, eOLUStatus *)
+00015700 PhMODBUSTCP.elf CPhOLU_Base::PrepareForApplicationStop(trHWFAddress const *, eOLUStatus *)
+00015734 PhMODBUSTCP.elf CPhOLU_Base::ResumeOperation(trHWFAddress const *, eOLUStatus *)
+00015768 PhMODBUSTCP.elf CPhOLU_Base::PhResponsibilityForOLU(trHWFAddress const *, eOLUStatus *)
+0001579c PhMODBUSTCP.elf CPhOLU_Base::PrepareForLeavingOLU(trHWFAddress const *, eOLUStatus *)
+000157d0 PhMODBUSTCP.elf CPhOLU_Base::PrepareForAppAndConfigDownload(trHWFAddress const *, eOLUStatus *)
+00015808 PhMODBUSTCP.elf IPhCommon::IPhCommon(void)
+00015874 PhMODBUSTCP.elf IUnknown::IUnknown(void)
+000158cc PhMODBUSTCP.elf CRTFuncTabBegin
+000158cc PhMODBUSTCP.elf Letext
+000158cc PhMODBUSTCP.elf scprocs
+000158d8 PhMODBUSTCP.elf printf
+000158dc PhMODBUSTCP.elf sprintf
+000158e0 PhMODBUSTCP.elf sscanf
+000158e4 PhMODBUSTCP.elf memcpy
+000158e8 PhMODBUSTCP.elf memset
+000158ec PhMODBUSTCP.elf strcat
+000158f0 PhMODBUSTCP.elf strcmp
+000158f4 PhMODBUSTCP.elf strlen
+000158f8 PhMODBUSTCP.elf strncmp
+000158fc PhMODBUSTCP.elf strncpy
+00015900 PhMODBUSTCP.elf memchr
+00015904 PhMODBUSTCP.elf memcmp
+00015908 PhMODBUSTCP.elf memmove
+0001590c PhMODBUSTCP.elf strchr
+00015910 PhMODBUSTCP.elf strcoll
+00015914 PhMODBUSTCP.elf strcpy
+00015918 PhMODBUSTCP.elf strcspn
+0001591c PhMODBUSTCP.elf strncat
+00015920 PhMODBUSTCP.elf strpbrk
+00015924 PhMODBUSTCP.elf strrchr
+00015928 PhMODBUSTCP.elf strspn
+0001592c PhMODBUSTCP.elf strstr
+00015930 PhMODBUSTCP.elf strtok
+00015934 PhMODBUSTCP.elf strxfrm
+00015938 PhMODBUSTCP.elf strerror
+0001593c PhMODBUSTCP.elf pow
+00015940 PhMODBUSTCP.elf acos
+00015944 PhMODBUSTCP.elf asin
+00015948 PhMODBUSTCP.elf atan
+0001594c PhMODBUSTCP.elf atan2
+00015950 PhMODBUSTCP.elf ceil
+00015954 PhMODBUSTCP.elf cos
+00015958 PhMODBUSTCP.elf cosh
+0001595c PhMODBUSTCP.elf exp
+00015960 PhMODBUSTCP.elf fabs
+00015964 PhMODBUSTCP.elf floor
+00015968 PhMODBUSTCP.elf fmod
+0001596c PhMODBUSTCP.elf frexp
+00015970 PhMODBUSTCP.elf ldexp
+00015974 PhMODBUSTCP.elf log
+00015978 PhMODBUSTCP.elf log10
+0001597c PhMODBUSTCP.elf modf
+00015980 PhMODBUSTCP.elf sin
+00015984 PhMODBUSTCP.elf sinh
+00015988 PhMODBUSTCP.elf sqrt
+0001598c PhMODBUSTCP.elf tan
+00015990 PhMODBUSTCP.elf tanh
+00015994 PhMODBUSTCP.elf div_r
+00015998 PhMODBUSTCP.elf labs
+0001599c PhMODBUSTCP.elf strtol
+000159a0 PhMODBUSTCP.elf free
+000159a4 PhMODBUSTCP.elf abort
+000159a8 PhMODBUSTCP.elf abs
+000159ac PhMODBUSTCP.elf atof
+000159b0 PhMODBUSTCP.elf atoi
+000159b4 PhMODBUSTCP.elf atol
+000159b8 PhMODBUSTCP.elf bsearch
+000159bc PhMODBUSTCP.elf ldiv_r
+000159c0 PhMODBUSTCP.elf qsort
+000159c4 PhMODBUSTCP.elf rand
+000159c8 PhMODBUSTCP.elf srand
+000159cc PhMODBUSTCP.elf strtod
+000159d0 PhMODBUSTCP.elf strtoul
+000159d4 PhMODBUSTCP.elf malloc
+000159d8 PhMODBUSTCP.elf __assert
+000159dc PhMODBUSTCP.elf time
+000159e0 PhMODBUSTCP.elf asctime
+000159e4 PhMODBUSTCP.elf gmtime
+000159e8 PhMODBUSTCP.elf clock
+000159ec PhMODBUSTCP.elf ctime
+000159f0 PhMODBUSTCP.elf difftime
+000159f4 PhMODBUSTCP.elf localtime
+000159f8 PhMODBUSTCP.elf mktime
+000159fc PhMODBUSTCP.elf strftime
+00015a00 PhMODBUSTCP.elf eventcollSem
+00015a04 PhMODBUSTCP.elf intLock
+00015a08 PhMODBUSTCP.elf intUnlock
+00015a0c PhMODBUSTCP.elf __builtin_vec_new
+00015a10 PhMODBUSTCP.elf __builtin_vec_delete
+00015a14 PhMODBUSTCP.elf fprintf
+00015a18 PhMODBUSTCP.elf __stdout
+00015a1c PhMODBUSTCP.elf __stderr
+00015a20 PhMODBUSTCP.elf setjmp
+00015a24 PhMODBUSTCP.elf longjmp
+00015a28 PhMODBUSTCP.elf CRTFuncTabEnd
+00015a28 PhMODBUSTCP.elf ecprocs
+00015a28 PhMODBUSTCP.elf etext
+00015a28 PhMODBUSTCP.elf sgot2
+000164c0 PhMODBUSTCP.elf egot2
+000164c0 PhMODBUSTCP.elf sfixup
+000168ac PhMODBUSTCP.elf efixup
+000168ac PhMODBUSTCP.elf g_pHeapCallback
+000168b0 PhMODBUSTCP.elf g_pHeapCallback
+000168b4 PhMODBUSTCP.elf g_pHeapCallback
+000168b8 PhMODBUSTCP.elf g_pHeapCallback
+000168bc PhMODBUSTCP.elf g_pHeapCallback
+000168c0 PhMODBUSTCP.elf g_pHeapCallback
+000168c4 PhMODBUSTCP.elf g_pHeapCallback
+000168c8 PhMODBUSTCP.elf g_pHeapCallback
+000168cc PhMODBUSTCP.elf g_pHeapCallback
+000168d0 PhMODBUSTCP.elf g_pHeapCallback
+000168d4 PhMODBUSTCP.elf g_pHeapCallback
+000168d8 PhMODBUSTCP.elf g_pHeapCallback
+000168dc PhMODBUSTCP.elf g_pHeapCallback
+000168e0 PhMODBUSTCP.elf g_pHeapCallback
+000168e4 PhMODBUSTCP.elf useEXEHEAD
+000168e8 PhMODBUSTCP.elf iTagModbus
+000168f8 PhMODBUSTCP.elf STagModbus
+0001691c PhMODBUSTCP.elf MBTCPFILE
+00016920 PhMODBUSTCP.elf CComCoClass<CPHMODBUSTCP, &CLSID_CPhMODBUSTCP>::m_HeapTag
+00017bc0 PhMODBUSTCP.elf CPHMODBUSTCP::CPhOLU_Base virtual table
+00017c18 PhMODBUSTCP.elf CPHMODBUSTCP::CPhClient_Impl virtual table
+00017ca8 PhMODBUSTCP.elf CPHMODBUSTCP::CPhStatus_Base1 virtual table
+00017ce0 PhMODBUSTCP.elf CPHMODBUSTCP::CPhConfig_Base1 virtual table
+00017d60 PhMODBUSTCP.elf CPHMODBUSTCP virtual table
+00017da0 PhMODBUSTCP.elf CPHMODBUSTCP::CPhSharedData virtual table
+00017dc0 PhMODBUSTCP.elf IPhConfig1 virtual table
+00017e40 PhMODBUSTCP.elf IPhStatus1 virtual table
+00017e78 PhMODBUSTCP.elf IPhOLU virtual table
+00017ed0 PhMODBUSTCP.elf IUnknown virtual table
+00017ef8 PhMODBUSTCP.elf iTagModbus
+00017f08 PhMODBUSTCP.elf STagModbus
+00017f34 PhMODBUSTCP.elf MBTCPFILE
+00018df4 PhMODBUSTCP.elf uiVarPosn$132
+00018f10 PhMODBUSTCP.elf CPhClient_Impl::CPhSharedData virtual table
+00018f30 PhMODBUSTCP.elf CPhClient_Impl virtual table
+00018fc0 PhMODBUSTCP.elf CVardataReq::CPhSharedData virtual table
+00018fe0 PhMODBUSTCP.elf IPhClient virtual table
+00019070 PhMODBUSTCP.elf IUnknown virtual table
+00019098 PhMODBUSTCP.elf iTagModbus
+000190a8 PhMODBUSTCP.elf STagModbus
+000190d8 PhMODBUSTCP.elf MBTCPFILE
+00019220 PhMODBUSTCP.elf silastError$51
+000193f0 PhMODBUSTCP.elf iTagModbus
+00019400 PhMODBUSTCP.elf STagModbus
+0001942c PhMODBUSTCP.elf MBTCPFILE
+00019450 PhMODBUSTCP.elf CPhCommon_Impl::CPhSharedData virtual table
+00019470 PhMODBUSTCP.elf CPhCommon_Impl virtual table
+000194b0 PhMODBUSTCP.elf CompanyName
+000194b4 PhMODBUSTCP.elf ProductName
+000194c0 PhMODBUSTCP.elf ProductVersion
+000194e0 PhMODBUSTCP.elf iTagModbus
+000194f0 PhMODBUSTCP.elf STagModbus
+0001951c PhMODBUSTCP.elf MBTCPFILE
+0001a308 PhMODBUSTCP.elf CPhConfig1_Impl::CPhSharedData virtual table
+0001a328 PhMODBUSTCP.elf iTagModbus
+0001a338 PhMODBUSTCP.elf STagModbus
+0001a364 PhMODBUSTCP.elf MBTCPFILE
+0001a7a4 PhMODBUSTCP.elf iTagModbus
+0001a7b4 PhMODBUSTCP.elf STagModbus
+0001a7e4 PhMODBUSTCP.elf MBTCPFILE
+0001a7e8 PhMODBUSTCP.elf iTagModbus
+0001a7f8 PhMODBUSTCP.elf STagModbus
+0001a828 PhMODBUSTCP.elf MBTCPFILE
+0001a82c PhMODBUSTCP.elf iTagModbus
+0001a83c PhMODBUSTCP.elf STagModbus
+0001a864 PhMODBUSTCP.elf MBTCPFILE
+0001aa48 PhMODBUSTCP.elf iTagModbus
+0001aa58 PhMODBUSTCP.elf STagModbus
+0001aa84 PhMODBUSTCP.elf MBTCPFILE
+0001b598 PhMODBUSTCP.elf CPhSharedData::m_TagModbus
+0001b6e8 PhMODBUSTCP.elf CPhSharedData virtual table
+0001b708 PhMODBUSTCP.elf iTagModbus
+0001b718 PhMODBUSTCP.elf STagModbus
+0001b744 PhMODBUSTCP.elf MBTCPFILE
+0001bdb8 PhMODBUSTCP.elf CPhMODBUSTCPSlave::CPhSharedData virtual table
+0001bdd8 PhMODBUSTCP.elf iTagModbus
+0001bde8 PhMODBUSTCP.elf STagModbus
+0001be14 PhMODBUSTCP.elf MBTCPFILE
+0001be18 PhMODBUSTCP.elf bPrevPrimaryLED$48
+0001be1c PhMODBUSTCP.elf bPrevDualLED$49
+0001be20 PhMODBUSTCP.elf bPrevBackupDualLED$50
+0001be24 PhMODBUSTCP.elf prevPrimDriv$51
+0001be28 PhMODBUSTCP.elf prevBackupDriv$52
+0001c6d0 PhMODBUSTCP.elf CPhStatus1_Impl::CPhSharedData virtual table
+0001c6f0 PhMODBUSTCP.elf iTagModbus
+0001c700 PhMODBUSTCP.elf STagModbus
+0001c72c PhMODBUSTCP.elf MBTCPFILE
+0001ca64 PhMODBUSTCP.elf PendingQueFullStatusCnt$45
+0001cea8 PhMODBUSTCP.elf iTagModbus
+0001ceb8 PhMODBUSTCP.elf STagModbus
+0001cecc PhMODBUSTCP.elf CLSID_CPhMODBUSTCP
+0001cee8 PhMODBUSTCP.elf PHproperties
+0001cef0 PhMODBUSTCP.elf CMirroredObject::c_pMirroredObjectMgrImpl
+0001cef4 PhMODBUSTCP.elf CMirroredObjectAgent::c_pHeapCallback
+0001cef8 PhMODBUSTCP.elf CMirroredObjectAgent::c_AgentTag
+0001cf4c PhMODBUSTCP.elf GUID_NULL
+0001cf60 PhMODBUSTCP.elf IID_IPhCommonCB
+0001cf70 PhMODBUSTCP.elf IID_IPhConfigCB
+0001cf80 PhMODBUSTCP.elf IID_IPhConfigCB1
+0001cf90 PhMODBUSTCP.elf IID_IPhIOAccessCB
+0001cfa0 PhMODBUSTCP.elf IID_IPhExternalConfigCB1
+0001cfb0 PhMODBUSTCP.elf IID_IPhExternalConfigCB2
+0001cfc0 PhMODBUSTCP.elf IID_IPhExternalConfigCB3
+0001cfd0 PhMODBUSTCP.elf IID_IPhOLUCB
+0001cfe0 PhMODBUSTCP.elf IID_IPhCommon
+0001cff0 PhMODBUSTCP.elf IID_IPhConfig1
+0001d000 PhMODBUSTCP.elf IID_IPhStatus1
+0001d010 PhMODBUSTCP.elf IID_IPhClient
+0001d020 PhMODBUSTCP.elf IID_IPhClient1
+0001d030 PhMODBUSTCP.elf IID_IPhDiagnostics
+0001d040 PhMODBUSTCP.elf IID_IPhIOAccess
+0001d050 PhMODBUSTCP.elf IID_IPhSafeConfig
+0001d060 PhMODBUSTCP.elf IID_IPhSafeConfig1
+0001d070 PhMODBUSTCP.elf IID_IPhSimulation
+0001d080 PhMODBUSTCP.elf IID_IPhOLU
+0001d090 PhMODBUSTCP.elf IID_IHeapCallback
+0001d0a0 PhMODBUSTCP.elf IID_ISystemUtilitiesCallback
+0001d0b0 PhMODBUSTCP.elf IID_ISystemUtilitiesCallback1
+0001d0c0 PhMODBUSTCP.elf IID_ISystemUtilitiesCallback2
+0001d0d0 PhMODBUSTCP.elf IID_IEventMgrCallback
+0001d0e0 PhMODBUSTCP.elf IID_IEventMgrCallback1
+0001d0f0 PhMODBUSTCP.elf IID_ISysClockCallback
+0001d100 PhMODBUSTCP.elf IID_ISysClockCallback1
+0001d110 PhMODBUSTCP.elf IID_ISysClockCallback2
+0001d120 PhMODBUSTCP.elf IID_ISysClockCallback3
+0001d130 PhMODBUSTCP.elf IID_IVarServerCallback
+0001d140 PhMODBUSTCP.elf IID_IVOSCallback
+0001d150 PhMODBUSTCP.elf IID_INetwClockSynchCallback
+0001d160 PhMODBUSTCP.elf IID_IConfigCBCallback1
+0001d170 PhMODBUSTCP.elf IID_IConfigCBCallback2
+0001d180 PhMODBUSTCP.elf IID_IConfigCBCallback3
+0001d190 PhMODBUSTCP.elf IID_IExternalConfigCBCallback
+0001d1a0 PhMODBUSTCP.elf IID_IExternalConfigCBCallback2
+0001d1b0 PhMODBUSTCP.elf IID_IExternalConfigCBCallback3
+0001d1c0 PhMODBUSTCP.elf IID_IExternalConfigCBCallback4
+0001d1d0 PhMODBUSTCP.elf IID_IMessagesCBCallback
+0001d1e0 PhMODBUSTCP.elf IID_IAIPAccessCBCallback
+0001d1f0 PhMODBUSTCP.elf IID_IOLUCBCallback
+0001d200 PhMODBUSTCP.elf IID_ISystemUtilitiesCBCallback1
+0001d210 PhMODBUSTCP.elf IID_IConfigCallback1
+0001d220 PhMODBUSTCP.elf IID_IConfigCallback2
+0001d230 PhMODBUSTCP.elf IID_IStatusCallback1
+0001d240 PhMODBUSTCP.elf IID_IGenClientCallback
+0001d250 PhMODBUSTCP.elf IID_IGenClientCallback1
+0001d260 PhMODBUSTCP.elf IID_IDriverFactoryCallback
+0001d270 PhMODBUSTCP.elf IID_IDiagnosticsCallback
+0001d280 PhMODBUSTCP.elf IID_ISafeConfigCallback
+0001d290 PhMODBUSTCP.elf IID_ISafeConfigCallback1
+0001d2a0 PhMODBUSTCP.elf IID_ICRCCallback
+0001d2b0 PhMODBUSTCP.elf IID_IIOAccessCallback
+0001d2c0 PhMODBUSTCP.elf IID_CriticalRegionCallback
+0001d2d0 PhMODBUSTCP.elf IID_VOSExceptionCallback
+0001d2e0 PhMODBUSTCP.elf IID_DrvCommonCallback
+0001d2f0 PhMODBUSTCP.elf IID_ProtectedMirroredHeapCallback
+0001d300 PhMODBUSTCP.elf IID_SharedMirroredHeapCallback
+0001d310 PhMODBUSTCP.elf IID_TemporaryMirroredHeapCallback
+0001d320 PhMODBUSTCP.elf IID_IRestrictedVOSCallback
+0001d330 PhMODBUSTCP.elf CPhOLU_Base virtual table
+0001d388 PhMODBUSTCP.elf CPhDiagnostics_Base virtual table
+0001d3c0 PhMODBUSTCP.elf CPhIOAccess_Base virtual table
+0001d400 PhMODBUSTCP.elf CPhStatus_Base1 virtual table
+0001d438 PhMODBUSTCP.elf CPhClient_Base1 virtual table
+0001d4f8 PhMODBUSTCP.elf CPhClient_Base virtual table
+0001d588 PhMODBUSTCP.elf CPhConfig_Base1 virtual table
+0001d608 PhMODBUSTCP.elf CPhCommon_Base virtual table
+0001d648 PhMODBUSTCP.elf GUID_NULL
+0001d658 PhMODBUSTCP.elf MaxCompanyNameLen
+0001d65c PhMODBUSTCP.elf MaxProductNameLen
+0001d660 PhMODBUSTCP.elf MaxProductVersionLen
+0001d664 PhMODBUSTCP.elf cMaxNrOfHWFAdrLevels
+0001d668 PhMODBUSTCP.elf cGCWrite
+0001d66c PhMODBUSTCP.elf cGCRead
+0001d670 PhMODBUSTCP.elf cGCSubscription
+0001d674 PhMODBUSTCP.elf cGCRegistration
+0001d678 PhMODBUSTCP.elf cGCAddMemoryAreaArrayNumberPlaces
+0001d67c PhMODBUSTCP.elf cPONotFound
+0001d680 PhMODBUSTCP.elf cGCBusyDisconnecting
+0001d684 PhMODBUSTCP.elf cGCRemovingPO
+0001d688 PhMODBUSTCP.elf cGCParametersMissing
+0001d68c PhMODBUSTCP.elf cGCAlreadyDefined
+0001d690 PhMODBUSTCP.elf cGCTypeNotSupported
+0001d694 PhMODBUSTCP.elf cGCIndexOutOfRange
+0001d698 PhMODBUSTCP.elf cGCTypeNotDefined
+0001d69c PhMODBUSTCP.elf cGCStringMismatch
+0001d6a0 PhMODBUSTCP.elf cGCFacadeError
+0001d6a4 PhMODBUSTCP.elf cGCInvalidHandle
+0001d6a8 PhMODBUSTCP.elf cGCAddedMemoryAreaError
+0001d6ac PhMODBUSTCP.elf cGCBSErrorDetected
+0001d6b0 PhMODBUSTCP.elf cAborted
+0001d6b4 PhMODBUSTCP.elf cSuccess
+0001d6b8 PhMODBUSTCP.elf cPending
+0001d6bc PhMODBUSTCP.elf cGCDisconnected
+0001d6c0 PhMODBUSTCP.elf cGCExtendedStatus
+0001d6c4 PhMODBUSTCP.elf cPHHeapFull
+0001d6c8 PhMODBUSTCP.elf cPHTypeMismatch
+0001d6cc PhMODBUSTCP.elf cPHSizeMismatch
+0001d6d0 PhMODBUSTCP.elf cPHErrAccessData
+0001d6d4 PhMODBUSTCP.elf cPHErrProtocolData
+0001d6d8 PhMODBUSTCP.elf cPHAccessVarNotFound
+0001d6dc PhMODBUSTCP.elf cPHErrInvalidPar
+0001d6e0 PhMODBUSTCP.elf cPHDirAddrFormatNotSupported
+0001d6e4 PhMODBUSTCP.elf cPHGenericFormatNotSupported
+0001d6e8 PhMODBUSTCP.elf cPHNotImplemented
+0001d6ec PhMODBUSTCP.elf cPHVarDataUnsupportedDirection
+0001d6f0 PhMODBUSTCP.elf cPHVarDataNotSupported
+0001d6f4 PhMODBUSTCP.elf cPHRawDataNotSupported
+0001d6f8 PhMODBUSTCP.elf cPHDriverError
+0001d6fc PhMODBUSTCP.elf cPHHardwareError
+0001d700 PhMODBUSTCP.elf cPHTRAdisconnect
+0001d704 PhMODBUSTCP.elf cLegacyFormat
+0001d708 PhMODBUSTCP.elf cDirAddrFormat
+0001d70c PhMODBUSTCP.elf cGenericFormat
+0001d710 PhMODBUSTCP.elf eHWFDeviceSpecific1
+0001d714 PhMODBUSTCP.elf eHWFUnitBPrimary
+0001d718 PhMODBUSTCP.elf cHWFOPCMask
+0001d71c PhMODBUSTCP.elf cHWFOPCChannelOk
+0001d720 PhMODBUSTCP.elf cHWFOPCChannelError
+0001d724 PhMODBUSTCP.elf cHWFOPCChannelForced
+0001d728 PhMODBUSTCP.elf cHWFOPCDeviceError
+0001d72c PhMODBUSTCP.elf cHWFOPCChannelErrorLow
+0001d730 PhMODBUSTCP.elf cHWFOPCChannelErrorHigh
+0001d734 PhMODBUSTCP.elf cHWFOPCChannelHigh
+0001d738 PhMODBUSTCP.elf cHWFOPCChannelLow
+0001d73c PhMODBUSTCP.elf cHWFChannelRedundant
+0001d740 PhMODBUSTCP.elf cHWFUnitBPrimary
+0001d744 PhMODBUSTCP.elf cHWFBackupUnitError
+0001d748 PhMODBUSTCP.elf cHWFXSPValueUsed
+0001d74c PhMODBUSTCP.elf cHWFChannelSimulated
+0001d750 PhMODBUSTCP.elf cHWFChannelForced
+0001d754 PhMODBUSTCP.elf cHWFChannelInverted
+0001d758 PhMODBUSTCP.elf cHWFXSPMask
+0001d75c PhMODBUSTCP.elf cHWFXSPNoSetting
+0001d760 PhMODBUSTCP.elf cHWFXSPValue
+0001d764 PhMODBUSTCP.elf cHWFXSPClear
+0001d768 PhMODBUSTCP.elf cHWFXSPFreeze
+0001d76c PhMODBUSTCP.elf cHWFXSPInvert
+0001d770 PhMODBUSTCP.elf cHWFXSPInitDPM
+0001d774 PhMODBUSTCP.elf HWFNO_XSP_FORCE
+0001d775 PhMODBUSTCP.elf HWFFORCE_OSP
+0001d776 PhMODBUSTCP.elf HWFFORCE_CLEAR
+0001d777 PhMODBUSTCP.elf HWFFORCE_BLOCK_IO_DPM_OUT_WRITE
+0001d778 PhMODBUSTCP.elf HWFFORCE_BLOCK_SM_DPM_OUT_WRITE
+0001d77c PhMODBUSTCP.elf cHWFMaxNrOfChannels
+0001d780 PhMODBUSTCP.elf cHWFStatusErrorsMask
+0001d784 PhMODBUSTCP.elf cHWFRootStatusErrorMask
+0001d788 PhMODBUSTCP.elf cHWFDoNotCopyUnitErrorMask
+0001d78c PhMODBUSTCP.elf cFWUpgradePrimary
+0001d790 PhMODBUSTCP.elf cFWUpgradeBackup
+0001d794 PhMODBUSTCP.elf cNewPhVersion
+0001d798 PhMODBUSTCP.elf cNewPMFirmware
+0001d7a0 PhMODBUSTCP.elf IPhCommon virtual table
+0001d7d8 PhMODBUSTCP.elf IUnknown virtual table
+00025800 G _SDA_BASE_ PhMODBUSTCP.elf 
+</SYMBOLS>

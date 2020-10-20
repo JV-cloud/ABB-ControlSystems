@@ -1,0 +1,1594 @@
+(****************************************************************************)
+(* FILE            200-IT8.hwd                                              *)
+(*                                                                          *)
+(* DESCRIPTION     Hardware definition file for  200-IT8.hwd (EtherNet/IP)  *)
+(*                                                                          *)
+(* AUTHOR          Sneha S                                                  *)
+(*                                                                          *)
+(*                                                                          *)
+(* All rights reserved. Reproduction, modification, use or disclosure       *)
+(* to third parties without express authority, is forbidden.                *)
+(* Copyright ABB Inc. 2013.                                                 *)
+(*                                                                          *)
+(*                                                                          *)
+(* 09-10-2013 Sneha S            Initial version                            *)
+(*                                                                          *)
+(****************************************************************************)
+FileHeader
+  Contents              "200-IT8"
+  Date                  "09.10.2013"
+  Version               "1.0-0"  
+  RequiredSyntaxVersion "3.0"
+End FileHeader
+
+HWUnitInfo
+  HWUnitID         {5b1da259-5b75-4b23-8bd9-398cd4a0a6a7}
+  Description      "200-IT8"
+  Information      "Analog Thermocouple/mV input module, 8 channels"
+  Icons            Ser200IOType
+  Attributes       IoUnit AnalogIn
+
+
+
+  Parameters
+    ParamInfo
+      Name            Node_Type
+      Description     "NodeType"
+      Hidden
+      CompileType     HWConfig
+      Datatype        ENUM
+      Default         7
+      ParValIndex     0
+      ParamType        Numbered 1
+    End ParamInfo
+    ParamInfo
+      Name            VENDORID
+      Description     "Vendor ID"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         1083
+      ParValIndex     1
+      ParamType        Numbered 2
+    End ParamInfo
+    ParamInfo
+      Name            PRODTYPE
+      Description     "Product Type"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         12
+      ParValIndex     1
+      ParamType        Numbered 3
+    End ParamInfo
+    ParamInfo
+      Name            PRODCODE
+      Description     "Product Code"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         261
+      ParValIndex     1
+      ParamType        Numbered 4
+    End ParamInfo
+    ParamInfo
+      Name            MAJORREV
+      Description     "Major Revision"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         1
+      ParValIndex     1
+      ParamType        Numbered 5
+    End ParamInfo
+    ParamInfo
+      Name            MINORREV
+      Description     "Minor Revision"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         13
+      ParValIndex     1
+      ParamType        Numbered 6
+    End ParamInfo
+    ParamInfo
+      Name            EKEYVENDORID
+      Description     "Electronic Key VendorID"
+      Hidden
+      CompileType     HWConfig
+      Datatype        ENUM
+      Default         1
+      ParValIndex     2
+      ParamType        Numbered 7
+    End ParamInfo
+    ParamInfo
+      Name            EKEYPRODTYPE
+      Description     "Electronic Key Product Type"
+      Hidden
+      CompileType     HWConfig
+      Datatype        ENUM
+      Default         1
+      ParValIndex     2
+      ParamType        Numbered 8
+    End ParamInfo
+    ParamInfo
+      Name            EKEYPRODCODE
+      Description     "Electronic Key Product Code"
+      Hidden
+      CompileType     HWConfig
+      Datatype        ENUM
+      Default         1
+      ParValIndex     2
+      ParamType        Numbered 9
+    End ParamInfo
+    ParamInfo
+      Name            EKEYMAJREV
+      Description     "Electronic Key Major Revision"
+      Hidden
+      CompileType     HWConfig
+      Datatype        ENUM
+      Default         2
+      ParValIndex     3
+      ParamType        Numbered 10
+    End ParamInfo
+    ParamInfo
+      Name            PRMCLSDSCRPTR
+      Description     "Parameter Class Descriptor"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         16#0
+      ParValIndex     1
+      ParamType        Numbered 11
+    End ParamInfo
+    ParamInfo
+      Name            NOOFPORTS
+      Description     "Number of Port Objects"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         1
+      ParValIndex     1
+      ParamType        Numbered 12
+    End ParamInfo
+    ParamInfo
+      Name            ETHERNETIP_PORTTYPE
+      Description     "Port Type"
+      Hidden
+      CompileType     HWConfig
+      Datatype        ENUM
+      Default         0
+      ParValIndex     4
+      ParamType        Numbered 50
+    End ParamInfo
+    ParamInfo
+      Name            ETHERNETIP_PORTNUM
+      Description     "Port Number"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         1
+      ParValIndex     1
+      ParamType        Numbered 51
+    End ParamInfo
+
+    ParamInfo
+      Name            NUM_OF_CONN_OBJECTS
+      Description     "Number of Connection Objects"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         1
+      ParValIndex     1
+      ParamType        Numbered 103
+    End ParamInfo
+
+    ParamInfo
+      Name            ExclusiveOwner_Address
+      Description     "ExclusiveOwner Address"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         200
+      ParValIndex     1
+      ParamType        Numbered 14
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_Enabled
+      Description     "ExclusiveOwner Enabled"
+      Hidden
+      CompileType     HWConfig
+      Datatype        ENUM
+      Default         1
+      ParValIndex     5
+      ParamType        Numbered 200
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_Transport
+      Description     "ExclusiveOwner Transport"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         16#0002
+      ParValIndex     1
+      ParamType        Numbered 201
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_Trigger
+      Description     "ExclusiveOwner Trigger"
+      Hidden
+      CompileType     HWConfig
+      Datatype        ENUM
+      Default         0
+      ParValIndex     6
+      ParamType        Numbered 202
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_ConnParams
+      Description     "ExclusiveOwner Connection Parameters"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         16#44240405
+      ParValIndex     1
+      ParamType        Numbered 203
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_O2TConnType
+      Description     "ExclusiveOwner O2T Connection Type"
+      Hidden
+      CompileType     HWConfig
+      Datatype        ENUM
+      Default         2
+      ParValIndex     7
+      ParamType        Numbered 204
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_T2OConnType
+      Description     "ExclusiveOwner T2O Connection Type"
+      Hidden
+      CompileType     HWConfig
+      Datatype        ENUM
+      Default         0
+      ParValIndex     8
+      ParamType        Numbered 205
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_O2TRPI
+      Description     "Connection O2TRPI"      
+      CompileType     HWConfig
+      Datatype        INT
+      Default         500
+      ParValIndex     9
+      ParamType        Numbered 206
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_O2TSIze
+      Description     "ExclusiveOwner O2TSIze"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         0
+      ParValIndex     1
+      ParamType        Numbered 207
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_T2ORPI
+      Description     "Connection T2ORPI"      
+      CompileType     HWConfig
+      Datatype        INT
+      Default         500
+      ParValIndex     9
+      ParamType        Numbered 208
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_T2OSIze
+      Description     "ExclusiveOwner T2OSIze"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         26
+      ParValIndex     1
+      ParamType        Numbered 209
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_Timeout_Multiplier
+      Description     "Connection Timeout Multiplier"
+      CompileType     HWConfig
+      Datatype        INT
+      Default         4
+      ParValIndex     11
+      ParamType        Numbered 210
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_ConnPath_Size
+      Description     "ExclusiveOwner Connection Path Size"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         10
+      ParValIndex     1
+      ParamType        Numbered 211
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_O2TConnPoint
+      Description     "ExclusiveOwner O2T Connection Point"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         16#01
+      ParValIndex     1
+      ParamType        Numbered 212
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_T2OConnPoint
+      Description     "ExclusiveOwner T2O Connection Point"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         16#02
+      ParValIndex     1
+      ParamType        Numbered 213
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_Conn_Path
+      Description     "ExclusiveOwner Connection Path"
+      Hidden
+      CompileType     HWConfig
+      Datatype        STRING
+      Default         "01 SLOT_MINUS_ONE 20 04 24 03 2C 01 2C 02"
+      ParamType        Numbered 214
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_Num_Of_Channels
+      Description     "ExclusiveOwner NumOfChannels"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         10
+      ParValIndex     1
+      ParamType        Numbered 216
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_StartChannelID
+      Description     "ExclusiveOwner StartChannelID"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         0
+      ParValIndex     1
+      ParamType        Numbered 217
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_EndChannelID
+      Description     "ExclusiveOwner EndChannelID"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         9
+      ParValIndex     1
+      ParamType        Numbered 218
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_Config1_Size
+      Description     "ExclusiveOwner Config1 Size"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         32
+      ParValIndex     1
+      ParamType        Numbered 219
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_Config1_ParamCount
+      Description     "ExclusiveOwner Config1 Param Count"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         18
+      ParValIndex     1
+      ParamType        Numbered 220
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_Configurationrevision_BitSize
+      Description     "ExclusiveOwner_ConfigurationrevisionBitSize"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         16
+      ParValIndex     1
+      ParamType        Numbered 221
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_ConfigurationrevisionData_Type
+      Description     "ExclusiveOwner_Configurationrevision DataType"
+      Hidden
+      CompileType     HWConfig
+      Datatype        ENUM
+      Default         1
+      ParValIndex     12
+      ParamType        Numbered 222
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_Configurationrevision_DataVal
+      Description     "ExclusiveOwner_Configuration revision"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         1
+      ParValIndex     13
+      ParamType        Numbered 223
+    End ParamInfo
+    ParamInfo
+      Name            Untitled224_BitSize
+      Description     "Untitled224BitSize"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         16
+      ParValIndex     1
+      ParamType        Numbered 224
+    End ParamInfo
+    ParamInfo
+      Name            Untitled225Data_Type
+      Description     "Untitled225 DataType"
+      Hidden
+      CompileType     HWConfig
+      Datatype        ENUM
+      Default         1
+      ParValIndex     12
+      ParamType        Numbered 225
+    End ParamInfo
+    ParamInfo
+      Name            Untitled226_DataVal
+      Description     "Untitled226"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         2
+      ParValIndex     1
+      ParamType        Numbered 226
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_outputassemblywidth_BitSize
+      Description     "ExclusiveOwner_outputassemblywidthBitSize"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         16
+      ParValIndex     1
+      ParamType        Numbered 227
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_outputassemblywidthData_Type
+      Description     "ExclusiveOwner_outputassemblywidth DataType"
+      Hidden
+      CompileType     HWConfig
+      Datatype        ENUM
+      Default         1
+      ParValIndex     12
+      ParamType        Numbered 228
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_outputassemblywidth_DataVal
+      Description     "ExclusiveOwner_output assembly, width"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         0
+      ParValIndex     14
+      ParamType        Numbered 229
+    End ParamInfo
+    ParamInfo
+      Name            Untitled230_BitSize
+      Description     "Untitled230BitSize"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         16
+      ParValIndex     1
+      ParamType        Numbered 230
+    End ParamInfo
+    ParamInfo
+      Name            Untitled231Data_Type
+      Description     "Untitled231 DataType"
+      Hidden
+      CompileType     HWConfig
+      Datatype        ENUM
+      Default         1
+      ParValIndex     12
+      ParamType        Numbered 231
+    End ParamInfo
+    ParamInfo
+      Name            Untitled232_DataVal
+      Description     "Untitled232"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         3197
+      ParValIndex     1
+      ParamType        Numbered 232
+    End ParamInfo
+    ParamInfo
+      Name            Untitled233_BitSize
+      Description     "Untitled233BitSize"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         16
+      ParValIndex     1
+      ParamType        Numbered 233
+    End ParamInfo
+    ParamInfo
+      Name            Untitled234Data_Type
+      Description     "Untitled234 DataType"
+      Hidden
+      CompileType     HWConfig
+      Datatype        ENUM
+      Default         1
+      ParValIndex     12
+      ParamType        Numbered 234
+    End ParamInfo
+    ParamInfo
+      Name            Untitled235_DataVal
+      Description     "Untitled235"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         4
+      ParValIndex     1
+      ParamType        Numbered 235
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_inputassemblywidth_BitSize
+      Description     "ExclusiveOwner_inputassemblywidthBitSize"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         16
+      ParValIndex     1
+      ParamType        Numbered 236
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_inputassemblywidthData_Type
+      Description     "ExclusiveOwner_inputassemblywidth DataType"
+      Hidden
+      CompileType     HWConfig
+      Datatype        ENUM
+      Default         1
+      ParValIndex     12
+      ParamType        Numbered 237
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_inputassemblywidth_DataVal
+      Description     "ExclusiveOwner_input assembly, width"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         144
+      ParValIndex     14
+      ParamType        Numbered 238
+    End ParamInfo
+    ParamInfo
+      Name            Untitled239_BitSize
+      Description     "Untitled239BitSize"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         16
+      ParValIndex     1
+      ParamType        Numbered 239
+    End ParamInfo
+    ParamInfo
+      Name            Untitled240Data_Type
+      Description     "Untitled240 DataType"
+      Hidden
+      CompileType     HWConfig
+      Datatype        ENUM
+      Default         1
+      ParValIndex     12
+      ParamType        Numbered 240
+    End ParamInfo
+    ParamInfo
+      Name            Untitled241_DataVal
+      Description     "Untitled241"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         2685
+      ParValIndex     1
+      ParamType        Numbered 241
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_statusassemblywidth_BitSize
+      Description     "ExclusiveOwner_statusassemblywidthBitSize"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         16
+      ParValIndex     1
+      ParamType        Numbered 242
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_statusassemblywidthData_Type
+      Description     "ExclusiveOwner_statusassemblywidth DataType"
+      Hidden
+      CompileType     HWConfig
+      Datatype        ENUM
+      Default         1
+      ParValIndex     12
+      ParamType        Numbered 243
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_statusassemblywidth_DataVal
+      Description     "ExclusiveOwner_status assembly, width"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         32
+      ParValIndex     14
+      ParamType        Numbered 244
+    End ParamInfo
+    ParamInfo
+      Name            Untitled245_BitSize
+      Description     "Untitled245BitSize"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         16
+      ParValIndex     1
+      ParamType        Numbered 245
+    End ParamInfo
+    ParamInfo
+      Name            Untitled246Data_Type
+      Description     "Untitled246 DataType"
+      Hidden
+      CompileType     HWConfig
+      Datatype        ENUM
+      Default         1
+      ParValIndex     12
+      ParamType        Numbered 246
+    End ParamInfo
+    ParamInfo
+      Name            Untitled247_DataVal
+      Description     "Untitled247"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         2941
+      ParValIndex     1
+      ParamType        Numbered 247
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_sizeofconfigdata_BitSize
+      Description     "ExclusiveOwner_sizeofconfigdataBitSize"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         16
+      ParValIndex     1
+      ParamType        Numbered 248
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_sizeofconfigdataData_Type
+      Description     "ExclusiveOwner_sizeofconfigdata DataType"
+      Hidden
+      CompileType     HWConfig
+      Datatype        ENUM
+      Default         1
+      ParValIndex     12
+      ParamType        Numbered 249
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_sizeofconfigdata_DataVal
+      Description     "ExclusiveOwner_size of config data"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         9
+      ParValIndex     14
+      ParamType        Numbered 250
+    End ParamInfo
+    ParamInfo
+      Name            Untitled251_BitSize
+      Description     "Untitled251BitSize"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         16
+      ParValIndex     1
+      ParamType        Numbered 251
+    End ParamInfo
+    ParamInfo
+      Name            Untitled252Data_Type
+      Description     "Untitled252 DataType"
+      Hidden
+      CompileType     HWConfig
+      Datatype        ENUM
+      Default         1
+      ParValIndex     12
+      ParamType        Numbered 252
+    End ParamInfo
+    ParamInfo
+      Name            Untitled253_DataVal
+      Description     "Untitled253"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         6912
+      ParValIndex     1
+      ParamType        Numbered 253
+    End ParamInfo
+    ParamInfo
+      Name            Untitled254_BitSize
+      Description     "Untitled254BitSize"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         4
+      ParValIndex     1
+      ParamType        Numbered 254
+    End ParamInfo
+    ParamInfo
+      Name            Untitled255Data_Type
+      Description     "Untitled255 DataType"
+      Hidden
+      CompileType     HWConfig
+      Datatype        ENUM
+      Default         1
+      ParValIndex     12
+      ParamType        Numbered 255
+    End ParamInfo
+    ParamInfo
+      Name            Untitled256_DataVal
+      Description     "Untitled256"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         0
+      ParValIndex     1
+      ParamType        Numbered 256
+    End ParamInfo
+    ParamInfo
+      Name            Untitled257_BitSize
+      Description     "Untitled257BitSize"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         4
+      ParValIndex     1
+      ParamType        Numbered 257
+    End ParamInfo
+    ParamInfo
+      Name            Untitled258Data_Type
+      Description     "Untitled258 DataType"
+      Hidden
+      CompileType     HWConfig
+      Datatype        ENUM
+      Default         1
+      ParValIndex     12
+      ParamType        Numbered 258
+    End ParamInfo
+    ParamInfo
+      Name            Untitled259_DataVal
+      Description     "Untitled259"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         0
+      ParValIndex     1
+      ParamType        Numbered 259
+    End ParamInfo
+    ParamInfo
+      Name            Untitled260_BitSize
+      Description     "Untitled260BitSize"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         8
+      ParValIndex     1
+      ParamType        Numbered 260
+    End ParamInfo
+    ParamInfo
+      Name            Untitled261Data_Type
+      Description     "Untitled261 DataType"
+      Hidden
+      CompileType     HWConfig
+      Datatype        ENUM
+      Default         1
+      ParValIndex     12
+      ParamType        Numbered 261
+    End ParamInfo
+    ParamInfo
+      Name            Untitled262_DataVal
+      Description     "Untitled262"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         0
+      ParValIndex     1
+      ParamType        Numbered 262
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_moduleinputsize_BitSize
+      Description     "ExclusiveOwner_moduleinputsizeBitSize"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         16
+      ParValIndex     1
+      ParamType        Numbered 263
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_moduleinputsizeData_Type
+      Description     "ExclusiveOwner_moduleinputsize DataType"
+      Hidden
+      CompileType     HWConfig
+      Datatype        ENUM
+      Default         1
+      ParValIndex     12
+      ParamType        Numbered 264
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_moduleinputsize_DataVal
+      Description     "ExclusiveOwner_module input size"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         9
+      ParValIndex     15
+      ParamType        Numbered 265
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_modulestatussize_BitSize
+      Description     "ExclusiveOwner_modulestatussizeBitSize"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         16
+      ParValIndex     1
+      ParamType        Numbered 266
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_modulestatussizeData_Type
+      Description     "ExclusiveOwner_modulestatussize DataType"
+      Hidden
+      CompileType     HWConfig
+      Datatype        ENUM
+      Default         1
+      ParValIndex     12
+      ParamType        Numbered 267
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_modulestatussize_DataVal
+      Description     "ExclusiveOwner_module status size"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         2
+      ParValIndex     16
+      ParamType        Numbered 268
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_moduleoutputsize_BitSize
+      Description     "ExclusiveOwner_moduleoutputsizeBitSize"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         16
+      ParValIndex     1
+      ParamType        Numbered 269
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_moduleoutputsizeData_Type
+      Description     "ExclusiveOwner_moduleoutputsize DataType"
+      Hidden
+      CompileType     HWConfig
+      Datatype        ENUM
+      Default         1
+      ParValIndex     12
+      ParamType        Numbered 270
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_moduleoutputsize_DataVal
+      Description     "ExclusiveOwner_module output size"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         0
+      ParValIndex     17
+      ParamType        Numbered 271
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_moduleconfigsize_BitSize
+      Description     "ExclusiveOwner_moduleconfigsizeBitSize"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         16
+      ParValIndex     1
+      ParamType        Numbered 272
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_moduleconfigsizeData_Type
+      Description     "ExclusiveOwner_moduleconfigsize DataType"
+      Hidden
+      CompileType     HWConfig
+      Datatype        ENUM
+      Default         1
+      ParValIndex     12
+      ParamType        Numbered 273
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_moduleconfigsize_DataVal
+      Description     "ExclusiveOwner_module config size"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         4
+      ParValIndex     18
+      ParamType        Numbered 274
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_Config2_Size
+      Description     "ExclusiveOwner Config2 Size"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         6
+      ParValIndex     1
+      ParamType        Numbered 275
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_Config2_ParamCount
+      Description     "ExclusiveOwner Config2 Param Count"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         12
+      ParValIndex     1
+      ParamType        Numbered 276
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_DataType_BitSize
+      Description     "ExclusiveOwner_DataTypeBitSize"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         2
+      ParValIndex     1
+      ParamType        Numbered 277
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_DataTypeData_Type
+      Description     "ExclusiveOwner_DataType DataType"
+      Hidden
+      CompileType     HWConfig
+      Datatype        ENUM
+      Default         2
+      ParValIndex     12
+      ParamType        Numbered 278
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_DataType_DataVal
+      Description     "Data format"
+      Hidden
+      CompileType     HWConfig
+      Datatype        ENUM
+      Default         0
+      ParValIndex     19
+      ParamType        Numbered 279
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_FixedDigitalFilter_BitSize
+      Description     "ExclusiveOwner_FixedDigitalFilterBitSize"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         1
+      ParValIndex     1
+      ParamType        Numbered 280
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_FixedDigitalFilterData_Type
+      Description     "ExclusiveOwner_FixedDigitalFilter DataType"
+      Hidden
+      CompileType     HWConfig
+      Datatype        ENUM
+      Default         2
+      ParValIndex     12
+      ParamType        Numbered 281
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_FixedDigitalFilter_DataVal
+      Description     "Fixed Digital Filter"
+      CompileType     HWConfig
+      Datatype        ENUM
+      Default         0
+      ParValIndex     20
+      ParamType        Numbered 282
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_ADFilter1stNotchFrequency_BitSize
+      Description     "ExclusiveOwner_ADFilter1stNotchFrequencyBitSize"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         3
+      ParValIndex     1
+      ParamType        Numbered 283
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_ADFilter1stNotchFrequencyData_Type
+      Description     "ExclusiveOwner_ADFilter1stNotchFrequency DataType"
+      Hidden
+      CompileType     HWConfig
+      Datatype        ENUM
+      Default         2
+      ParValIndex     12
+      ParamType        Numbered 284
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_ADFilter1stNotchFrequency_DataVal
+      Description     "Filter cutoff"
+      CompileType     HWConfig
+      Datatype        ENUM
+      Default         0
+      ParValIndex     21
+      ParamType        Numbered 285
+    End ParamInfo
+    ParamInfo
+      Name            Untitled286_BitSize
+      Description     "Untitled286BitSize"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         10
+      ParValIndex     1
+      ParamType        Numbered 286
+    End ParamInfo
+    ParamInfo
+      Name            Untitled287Data_Type
+      Description     "Untitled287 DataType"
+      Hidden
+      CompileType     HWConfig
+      Datatype        ENUM
+      Default         1
+      ParValIndex     12
+      ParamType        Numbered 287
+    End ParamInfo
+    ParamInfo
+      Name            Untitled288_DataVal
+      Description     "Untitled288"     
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         0
+      ParValIndex     1
+      ParamType        Numbered 288
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_Channel0ThermocoupleType_BitSize
+      Description     "ExclusiveOwner_Channel0ThermocoupleTypeBitSize"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         4
+      ParValIndex     1
+      ParamType        Numbered 289
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_Channel0ThermocoupleTypeData_Type
+      Description     "ExclusiveOwner_Channel0ThermocoupleType DataType"
+      Hidden
+      CompileType     HWConfig
+      Datatype        ENUM
+      Default         2
+      ParValIndex     12
+      ParamType        Numbered 290
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_Channel0ThermocoupleType_DataVal
+      Description     "Sensor Type 0"
+      CompileType     HWConfig
+      Datatype        ENUMRANGE
+      Default         0
+      ParValIndex     23
+      ParamType        Numbered 291
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_Channel1ThermocoupleType_BitSize
+      Description     "ExclusiveOwner_Channel1ThermocoupleTypeBitSize"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         4
+      ParValIndex     1
+      ParamType        Numbered 292
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_Channel1ThermocoupleTypeData_Type
+      Description     "ExclusiveOwner_Channel1ThermocoupleType DataType"
+      Hidden
+      CompileType     HWConfig
+      Datatype        ENUM
+      Default         2
+      ParValIndex     12
+      ParamType        Numbered 293
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_Channel1ThermocoupleType_DataVal
+      Description     "Sensor Type 1"
+      CompileType     HWConfig
+      Datatype        ENUMRANGE
+      Default         0
+      ParValIndex     23
+      ParamType        Numbered 294
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_Channel2ThermocoupleType_BitSize
+      Description     "ExclusiveOwner_Channel2ThermocoupleTypeBitSize"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         4
+      ParValIndex     1
+      ParamType        Numbered 295
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_Channel2ThermocoupleTypeData_Type
+      Description     "ExclusiveOwner_Channel2ThermocoupleType DataType"
+      Hidden
+      CompileType     HWConfig
+      Datatype        ENUM
+      Default         2
+      ParValIndex     12
+      ParamType        Numbered 296
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_Channel2ThermocoupleType_DataVal
+      Description     "Sensor Type 2"
+      CompileType     HWConfig
+      Datatype        ENUMRANGE
+      Default         0
+      ParValIndex     23
+      ParamType        Numbered 297
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_Channel3ThermocoupleType_BitSize
+      Description     "ExclusiveOwner_Channel3ThermocoupleTypeBitSize"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         4
+      ParValIndex     1
+      ParamType        Numbered 298
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_Channel3ThermocoupleTypeData_Type
+      Description     "ExclusiveOwner_Channel3ThermocoupleType DataType"
+      Hidden
+      CompileType     HWConfig
+      Datatype        ENUM
+      Default         2
+      ParValIndex     12
+      ParamType        Numbered 299
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_Channel3ThermocoupleType_DataVal
+      Description     "Sensor Type 3"
+      CompileType     HWConfig
+      Datatype        ENUMRANGE
+      Default         0
+      ParValIndex     23
+      ParamType        Numbered 300
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_Channel4ThermocoupleType_BitSize
+      Description     "ExclusiveOwner_Channel4ThermocoupleTypeBitSize"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         4
+      ParValIndex     1
+      ParamType        Numbered 301
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_Channel4ThermocoupleTypeData_Type
+      Description     "ExclusiveOwner_Channel4ThermocoupleType DataType"
+      Hidden
+      CompileType     HWConfig
+      Datatype        ENUM
+      Default         2
+      ParValIndex     12
+      ParamType        Numbered 302
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_Channel4ThermocoupleType_DataVal
+      Description     "Sensor Type 4"
+      CompileType     HWConfig
+      Datatype        ENUMRANGE
+      Default         0
+      ParValIndex     23
+      ParamType        Numbered 303
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_Channel5ThermocoupleType_BitSize
+      Description     "ExclusiveOwner_Channel5ThermocoupleTypeBitSize"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         4
+      ParValIndex     1
+      ParamType        Numbered 304
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_Channel5ThermocoupleTypeData_Type
+      Description     "ExclusiveOwner_Channel5ThermocoupleType DataType"
+      Hidden
+      CompileType     HWConfig
+      Datatype        ENUM
+      Default         2
+      ParValIndex     12
+      ParamType        Numbered 305
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_Channel5ThermocoupleType_DataVal
+      Description     "Sensor Type 5"
+      CompileType     HWConfig
+      Datatype        ENUMRANGE
+      Default         0
+      ParValIndex     23
+      ParamType        Numbered 306
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_Channel6ThermocoupleType_BitSize
+      Description     "ExclusiveOwner_Channel6ThermocoupleTypeBitSize"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         4
+      ParValIndex     1
+      ParamType        Numbered 307
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_Channel6ThermocoupleTypeData_Type
+      Description     "ExclusiveOwner_Channel6ThermocoupleType DataType"
+      Hidden
+      CompileType     HWConfig
+      Datatype        ENUM
+      Default         2
+      ParValIndex     12
+      ParamType        Numbered 308
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_Channel6ThermocoupleType_DataVal
+      Description     "Sensor Type 6"
+      CompileType     HWConfig
+      Datatype        ENUMRANGE
+      Default         0
+      ParValIndex     23
+      ParamType        Numbered 309
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_Channel7ThermocoupleType_BitSize
+      Description     "ExclusiveOwner_Channel7ThermocoupleTypeBitSize"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         4
+      ParValIndex     1
+      ParamType        Numbered 310
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_Channel7ThermocoupleTypeData_Type
+      Description     "ExclusiveOwner_Channel7ThermocoupleType DataType"
+      Hidden
+      CompileType     HWConfig
+      Datatype        ENUM
+      Default         2
+      ParValIndex     12
+      ParamType        Numbered 311
+    End ParamInfo
+    ParamInfo
+      Name            ExclusiveOwner_Channel7ThermocoupleType_DataVal
+      Description     "Sensor Type 7"
+      CompileType     HWConfig
+      Datatype        ENUMRANGE
+      Default         0
+      ParValIndex     23
+      ParamType        Numbered 312
+    End ParamInfo
+    ParamInfo
+      Name            Num_Of_Param_Objects
+      Description     "Number of parameters"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         0
+      ParValIndex     1
+      ParamType        Numbered 3000
+    End ParamInfo
+
+  End Parameters
+
+  ParValList
+    ParVal
+      ParValIndex     0
+      UnitText        ""
+      enum
+      "Node_CI873" 1
+      "Node_CI_Diagnostics" 2
+      "Node_EIPDevice" 3
+      "Node_EIPMAdapter" 4
+      "Node_LD800DN" 5
+      "Node_DNetDevice" 6
+      "Node_DNetMAdapter" 7
+      "Node_EIPIOModule" 8
+      "Node_DNetIOModule" 9
+      "Node_LD_Diagnostics" 10
+    End ParVal
+    ParVal
+      ParValIndex     1
+      UnitText        ""
+      INT 0 2147483647 0 2147483647
+    End ParVal
+    ParVal
+      ParValIndex     2
+      UnitText        ""
+      enum
+      "Disable Keying" 0
+      "Enable Keying" 1
+    End ParVal
+    ParVal
+      ParValIndex     3
+      UnitText        ""
+      enum
+      "Disable Keying" 0
+      "Exact Match" 1
+      "Current and Higher" 2
+    End ParVal
+    ParVal
+      ParValIndex     4
+      UnitText        ""
+      enum
+      "Ethernet_IP" 1
+      "DeviceNet" 2
+      "Vendor_Specific" 3
+    End ParVal
+    ParVal
+      ParValIndex     5
+      UnitText        ""
+      ENUM
+      "Disabled" 0
+      "Enabled" 1
+    End ParVal
+    ParVal
+      ParValIndex     6
+      UnitText        ""
+      ENUM
+      "Cyclic" 0
+    End ParVal
+    ParVal
+      ParValIndex     7
+      UnitText        ""
+      ENUM
+      "NULL" 0
+      "MULTICAST" 8192
+      "POINT2POINT" 16384
+    End ParVal
+    ParVal
+      ParValIndex     8
+      UnitText        ""
+      ENUM
+      "MULTICAST" 8192
+    End ParVal
+    ParVal
+      ParValIndex     9
+      UnitText        "ms"
+      INT 10 1000 10 1000
+    End ParVal
+
+    ParVal
+      ParValIndex     11
+      UnitText        ""
+      INT 0 7 0 7
+    End ParVal
+    ParVal
+      ParValIndex     12
+      UnitText        ""
+      enum
+      "bool" 0
+      "int" 1
+      "enum" 2
+      "scaled" 3
+    End ParVal
+    ParVal
+      ParValIndex     13
+      UnitText        ""
+      int 0 1 0 1
+    End ParVal
+    ParVal
+      ParValIndex     14
+      UnitText        ""
+      int 0 65535 0 65535
+    End ParVal
+    ParVal
+      ParValIndex     15
+      UnitText        ""
+      int 2 9 2 9
+    End ParVal
+    ParVal
+      ParValIndex     16
+      UnitText        ""
+      int 2 2 2 2
+    End ParVal
+    ParVal
+      ParValIndex     17
+      UnitText        ""
+      int 0 0 0 0
+    End ParVal
+    ParVal
+      ParValIndex     18
+      UnitText        ""
+      int 4 4 4 4
+    End ParVal
+    ParVal
+      ParValIndex     19
+      UnitText        ""
+      enum
+      "_C" 0
+      "_F" 1
+      "-32768 to 32767" 2
+      "0 to 65535" 3
+    End ParVal
+    ParVal
+      ParValIndex     20
+      UnitText        ""
+      enum
+      "false" 0
+      "true" 1
+    End ParVal
+    ParVal
+      ParValIndex     21
+      UnitText        "Hz"
+      enum
+      "10Hz" 0
+      "25Hz" 1
+      "50 Hz" 2
+      "60 Hz" 3
+      "100 Hz" 4
+      "250 Hz" 5
+      "500 Hz" 6
+      "1000 Hz" 7
+    End ParVal
+
+    ParVal
+      ParValIndex     23
+      UnitText        ""
+      enumrange
+      "off" 15 0 0 0 0
+      "Millivolt" 0 7650 -7650 32767 -32768 Bipolar
+      "Type B" 1 18000 3000 65535 0
+      "Type E" 2 10000 -2300 32767 -32768 Bipolar
+      "Type J" 3 12000 -1950 32767 -32768 Bipolar
+      "Type K" 4 13720 -2300 32767 -32768 Bipolar
+      "Type R" 5 17680 -500 32767 -32768 Bipolar
+      "Type S" 6 17680 -500 32767 -32768 Bipolar
+      "Type T" 7 4000 -1950 32767 -32768 Bipolar
+      "Type C" 8 23150 0 65535 0
+      "Type N" 9 13000 -2700 32767 -32768 Bipolar        
+    End ParVal
+    ParVal
+      ParValIndex     24
+      UnitText        ""
+      enumcontrol
+      "Keep current value" 0 HoldLastValue
+    End ParVal
+  End ParValList
+
+  Channels
+    ChannelInfo
+       Number 0 
+       ChannelName "Input 0"
+       Datatype Real_In
+       Routine 703
+       (*                                         UnitErr  Under range   Over range      Pwr up + Diag  Riup *)   
+       CopyParameters 0 0 16#30006 16#FFFF 0 16#1 16#50000 16#30016 16#101 16#30018 16#78 16#3001A 16#01 
+    End ChannelInfo
+    ChannelInfo
+       Number 1 
+       ChannelName "Input 1"
+       Datatype Real_In
+       Routine 703
+       CopyParameters 0 0 16#30008 16#FFFF 1 16#1 16#50000 16#30016 16#202 16#30018 16#78 16#3001A 16#01 
+    End ChannelInfo
+    ChannelInfo
+       Number 2 
+       ChannelName "Input 2"
+       Datatype Real_In
+       Routine 703
+       CopyParameters 0 0 16#3000A 16#FFFF 2 16#1 16#50000 16#30016 16#404 16#30018 16#78 16#3001A 16#01
+    End ChannelInfo
+    ChannelInfo
+       Number 3
+       ChannelName "Input 3"
+       Datatype Real_In
+       Routine 703
+       CopyParameters 0 0 16#3000C 16#FFFF 3 16#1 16#50000 16#30016 16#808 16#30018 16#78 16#3001A 16#01
+    End ChannelInfo
+    ChannelInfo
+       Number 4
+       ChannelName "Input 4"
+       Datatype Real_In
+       Routine 703
+       CopyParameters 0 0 16#3000E 16#FFFF 4 16#1 16#50000 16#30016 16#1010 16#30018 16#78 16#3001A 16#01
+    End ChannelInfo
+    ChannelInfo
+       Number 5
+       ChannelName "Input 5"
+       Datatype Real_In
+       Routine 703
+       CopyParameters 0 0 16#30010 16#FFFF 5 16#1 16#50000 16#30016 16#2020 16#30018 16#78 16#3001A 16#01
+    End ChannelInfo
+    ChannelInfo
+       Number 6
+       ChannelName "Input 6"
+       Datatype Real_In
+       Routine 703
+       CopyParameters 0 0 16#30012 16#FFFF 6 16#1 16#50000 16#30016 16#4040 16#30018 16#78 16#3001A 16#01
+    End ChannelInfo
+    ChannelInfo
+       Number 7
+       ChannelName "Input 7"
+       Datatype Real_In
+       Routine 703
+       CopyParameters 0 0 16#30014 16#FFFF 7 16#1 16#50000 16#30016 16#8080 16#30018 16#78 16#3001A 16#01
+    End ChannelInfo
+    ChannelInfo
+      Number                8
+      ChannelName           "CJC underflow"
+      Datatype              Bool_In
+      Routine               152
+      CopyParameters         16#30018 16#01  16#3001A 16#01
+    End ChannelInfo
+    ChannelInfo
+      Number                9
+      ChannelName           "CJC overflow"
+      Datatype              Bool_In
+      Routine               152
+      CopyParameters         16#30018 16#02  16#3001A 16#01
+    End ChannelInfo
+    ChannelInfo
+      Number                10
+      ChannelName           "UnitStatus"
+      Datatype              Status_In
+      Routine               900
+      CopyParameters        16#0 16#0 16#50000
+    End ChannelInfo
+  End Channels
+
+  UnitStatusText
+    DeviceSpecific1  "Device Not Found"
+    DeviceSpecific2  "Wrong Device Type"
+    DeviceSpecific3  "Internal Config Error"    
+    ExtendedStatus1  "Minor Revision Missmatch"
+  End UnitStatusText
+
+  UnitStatusSeverity
+    DeviceSpecific1   GeneralError TriggerAlarm SeverityHigh
+    DeviceSpecific2   GeneralError TriggerAlarm SeverityHigh
+    DeviceSpecific3   GeneralWarning TriggerAlarm SeverityHigh    
+    ExtendedStatus1   GeneralWarning TriggerAlarm SeverityLow
+  End UnitStatusSeverity
+
+  Configuration
+    ConfigInfo
+      ModuleKey        16#1B00
+      InAreaSize       28 BYTE
+      OutAreaSize      0 BYTE
+    End ConfigInfo
+  End Configuration
+
+  HWUnitInfoCRC 16#75FF
+End HWUnitInfo

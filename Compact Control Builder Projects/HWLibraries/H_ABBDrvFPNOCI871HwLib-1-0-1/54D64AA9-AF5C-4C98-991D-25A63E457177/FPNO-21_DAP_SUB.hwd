@@ -1,0 +1,73 @@
+(*============================*)
+(* Created : 2019-05-23 10:25 *)
+(*============================*)
+FileHeader
+  Contents              "FPNO-21"
+  Date                  "23.05.2019"
+  Version               "Version 1.4.9" (* Device Import Wizard *)
+  (* Parser             "Profinet 1.0.17.0" *)
+  RequiredSyntaxVersion "3.0"
+End FileHeader
+
+SessionID d83db8e3-1aff-4b36-973c-5686cf5439c9
+
+(*========================================================*)
+(*                        FPNO-21                         *)
+(*========================================================*)
+
+HWUnitInfo
+  HWUnitID         {4d56eb3a-0bd9-42f5-b70e-2cb7bb08add7}
+  Description      "FPNO-21_DAP_SUB"
+  Information      "PROFINET IO module FPNO"
+  Icons            ProtocolType
+  Attributes       IOUnit
+  DownloadInstanceNamesForSubUnits
+
+  Channels
+    ChannelInfo
+      Number                0
+      ChannelName           "UnitStatus"
+      Datatype              Status_In
+      Routine               900
+      CopyParameters        16#0 16#0 16#50000
+    End ChannelInfo
+  End Channels
+
+  UnitStatusText
+    DeviceSpecific1  "Maintenance required"
+    DeviceSpecific2  "Maintenance demanded"
+    DeviceSpecific3  "Diagnosis data available"
+    DeviceSpecific4  "Locked by other controller/supervisor"
+    DeviceSpecific6  "Parametrization fault"
+  End UnitStatusText
+
+  UnitStatusSeverity
+    DeviceSpecific1  GeneralWarning TriggerEvent SeverityMedium
+    DeviceSpecific2  GeneralWarning TriggerEvent SeverityMedium
+    DeviceSpecific3  GeneralWarning TriggerEvent SeverityMedium
+    DeviceSpecific4  GeneralWarning TriggerEvent SeverityMedium
+    DeviceSpecific6  GeneralError TriggerAlarm SeverityHigh
+  End UnitStatusSeverity
+
+  Configuration
+    ConfigInfo
+      ModuleKey        5
+      InAreaSize       1 BYTE
+      OutAreaSize      1 BYTE
+      OutByte
+        BYTE  16#80    0  (* IOCS_Out *)
+      CIGIOConnData
+        CIGIOData      16#10 16#a5 16#5a 16#0 16#1 16#2 16#21 16#2 16#2 
+        CIGIOData      16#6 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#0 16#1 16#1 16#0 16#0 16#0 16#0 
+      End CIGIOConnData
+    End ConfigInfo
+    ConfigInfo
+      EmptyConfig
+      ModuleKey        16#FFFF
+      InAreaSize       0 BYTE
+      OutAreaSize      0 BYTE
+    End ConfigInfo
+  End Configuration
+
+  HWUnitInfoCRC 16#309f
+End HWUnitInfo

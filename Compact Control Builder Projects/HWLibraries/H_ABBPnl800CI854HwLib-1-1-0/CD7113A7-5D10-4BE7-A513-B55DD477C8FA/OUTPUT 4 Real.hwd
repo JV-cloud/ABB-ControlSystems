@@ -1,0 +1,96 @@
+(*---------------------------------------------------------------*)
+(* 2008-01-28  Alfred Theorin                                    *)
+(*             PRC #30786                                        *)
+(*             New UnitInfo supplied by Jan-Olof Nilsson       *)
+(*---------------------------------------------------------------*)
+
+FileHeader
+  Contents              "ABBPanel800 - Output 4 Real"
+  Date                  "2008-01-28"
+  Version               "Version 1.1-0"
+  RequiredSyntaxVersion "3.0"
+End FileHeader
+
+(*========================================================*)
+(*               OUTPUT 4 Real                            *)
+(*========================================================*)
+
+HWUnitInfo
+  HWUnitID         {9322ba45-bc10-4772-8114-f8efaf650523}
+  Description      "OUTPUT 4 Real"
+  Information      "Real(32 bits)Float with exponent"
+  Icons            ProtocolType
+  Attributes       IoUnit AnalogOut
+
+  (* ===== No parameter information delivered from the parser ===== *)
+
+  Channels
+    ChannelInfo
+      Number                0
+      ChannelName           "Output Real 0"
+      Datatype              Real_Out
+      Routine               820
+      CopyParameters        16#0 16#0 16#40000 16#00
+    End ChannelInfo
+    ChannelInfo
+      Number                1
+      ChannelName           "Output Real 1"
+      Datatype              Real_Out
+      Routine               820
+      CopyParameters        16#0 16#0 16#40004 16#00
+    End ChannelInfo
+    ChannelInfo
+      Number                2
+      ChannelName           "Output Real 2"
+      Datatype              Real_Out
+      Routine               820
+      CopyParameters        16#0 16#0 16#40008 16#00
+    End ChannelInfo
+    ChannelInfo
+      Number                3
+      ChannelName           "Output Real 3"
+      Datatype              Real_Out
+      Routine               820
+      CopyParameters        16#0 16#0 16#4000C 16#00
+    End ChannelInfo
+    ChannelInfo
+      Number                4
+      ChannelName           "UnitStatus"
+      Datatype              Status_In
+      Routine               900
+      CopyParameters        16#0 16#0 16#50000
+    End ChannelInfo
+  End Channels
+
+  (* ===== No diagnostic information delivered from the parser ===== *)
+
+  Configuration
+    ConfigInfo
+      ModuleKey        16#15
+      InAreaSize       0 BYTE
+      OutAreaSize      16 BYTE
+      OutByte
+        BYTE 0 0
+        BYTE 0 1
+        BYTE 0 2
+        BYTE 0 3
+        BYTE 0 4
+        BYTE 0 5
+        BYTE 0 6
+        BYTE 0 7
+        BYTE 0 8
+        BYTE 0 9
+        BYTE 0 10
+        BYTE 0 11
+        BYTE 0 12
+        BYTE 0 13
+        BYTE 0 14
+        BYTE 0 15
+      CIGIOConnData
+        CIGIOData      16#01 16#67
+      End CIGIOConnData
+    End ConfigInfo
+  End Configuration
+
+  HWUnitInfoCRC 16#27A2
+End HWUnitInfo

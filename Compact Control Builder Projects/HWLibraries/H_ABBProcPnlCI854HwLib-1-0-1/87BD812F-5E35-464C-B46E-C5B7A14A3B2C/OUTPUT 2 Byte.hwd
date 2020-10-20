@@ -1,0 +1,54 @@
+
+
+
+
+
+
+
+(*========================================================*)
+(*                                                        *)
+(*            OUTPUT: 2 Byte                             *)
+(*                                                        *)
+(*========================================================*)
+
+HWUnitInfo
+  HWUnitID         16#04D51002
+  Description      "OUTPUT 2 Byte"
+  Information      "Byte(8bit)"
+  Icons            ProtocolType
+  Attributes       IoUnit 
+
+  Channels
+    ChannelInfo
+      Number            0
+      ChannelName      "Output Byte 0"
+      Datatype          Dword_Out
+      Routine           601
+      CopyParameters    16#0 16#0 16#40000 16#0 16#FF 16#1
+    End ChannelInfo
+    ChannelInfo
+      Number            1
+      ChannelName      "Output Byte 1"
+      Datatype          Dword_Out
+      Routine           601
+      CopyParameters    16#0 16#0 16#40001 16#0 16#FF 16#1
+    End ChannelInfo
+
+  End Channels
+
+  Configuration
+    ConfigInfo
+      ModuleKey        16#4
+      InAreaSize       0 BYTE
+      OutAreaSize      2 BYTE
+      OutByte
+        BYTE  0    0
+        BYTE  0    1
+
+      CIGIOConnData
+        CIGIOData        16#01 16#60
+      End CIGIOConnData
+    End ConfigInfo
+  End Configuration
+  HWUnitInfoCRC 16#8A7D
+End HWUnitInfo (* OUTPUT: 16 Byte *)

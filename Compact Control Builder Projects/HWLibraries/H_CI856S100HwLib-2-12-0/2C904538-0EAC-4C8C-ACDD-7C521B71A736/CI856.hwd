@@ -1,0 +1,136 @@
+(****************************************************************************)
+(* FILE            ac800ci856.hwd                                           *)
+(*                                                                          *)
+(* DESCRIPTION     Hardware definition file for module CI 856               *)
+(*                                                                          *)
+(* AUTHOR          SEPID/FVT G Ronnback                                     *)
+(*                                                                          *)
+(* All rights reserved. Reproduction, modification, use or disclosure       *)
+(* to third parties without express authority, is forbidden.                *)
+(* Copyright ABB Process Industries AB, Sweden, 2002.                       *)
+(*                                                                          *)
+(*                                                                          *)
+(* HISTORY $Log: /S100/workplace/current/source/hwdefinitions/definitionfiles/ac800ci856.hwd $ *)
+(*                                                                          *)
+(*                                                                          *)
+(* 9  04-08-2015 11:40 Sneha S                                              *)
+(* Changed the UnitStatusSeverity of  ExtendedStatus1 to High               *)
+(* for the trackers #56818 and #56605                                       *)
+(* 8  30-07-2015 14:40 Sneha S                                              *)
+(* Changed the UnitStatusSeverity for  ExtendedStatus1 to Error             *)
+(* for the trackers #56818 and #56605                                       *)
+(* 7     02-09-05 17:20 Jruth *)
+(* PRC #6391 *)
+(* Corrections and clean-up in status part. *)
+(*  *)
+(* 6     02-08-26 15:06 Jruth *)
+(* Unit status channel for connection to 1131. *)
+(* PRC #6194,6264 *)
+(*  *)
+(* 5     02-06-22 14:38 Jruth *)
+(* Description and Information updated *)
+(*  *)
+(* 4     02-06-18 12:28 Jruth *)
+(* Module type changed to 16#5008, see CIS100 in moduleid.h *)
+(*  *)
+(* 3     02-05-04 23:09 Jruth *)
+(* UnitStatusText updated *)
+(*  *)
+(* 2     02-04-02 11:37 Z1hjaco1 *)
+(* Added new GUID definitions *)
+(*  *)
+(* 1     02-03-06 16:33 Gronnbac *)
+(* Initial version *)
+(*                                                                          *)
+(*                                                                          *)
+(* ABSTRACT                                                                 *)
+(*                                                                          *)
+(****************************************************************************)
+
+HWUnitInfo  (* CI856 *)
+   HWUnitID {BFCEB4AF-0C82-4197-AD57-D248D8EFBC32} (* GUID for CI856 module *)
+   Description "CI856"
+   Information "Communication Interface S100"
+   Icons AC800ComType  
+   Attributes SystemUnit
+   ModuleType  16#5008
+
+   InterfaceInfo
+     Interface CIGInterface
+     CLSID_CB {E15630B2-7F2A-4fab-ACDC-9A46839D335B} (* CLSID_CB = GUID for S100 Protocol handler (PH) in Control builder CB *)
+     CLSID_CTRL   {41ACBED2-973D-48d1-B5B5-51836FEF4B26} (* CLSID_CTRL   = GUID for S100 Protocol handler (PH) in Controller *)
+     HWConfig Fail     (* Change of net parameters affect subunits *)
+   End InterfaceInfo
+
+   DiscreteNumbers
+      1  2  3  4  5  
+   End DiscreteNumbers
+
+   SubUnitTypes
+      HWUnitID {5B367CEF-DA81-42c8-BFCC-B5134820CA83} Positions 1 2 3 4 5 Instances 5 (* GUID for S100 Rack *)
+   End SubUnitTypes
+
+   (* At least one parameter has to be defined for CIGInterface *)
+   Parameters
+      ParamInfo 
+         Name DummyParameter
+         Description "Dummy parameter"
+         Hidden
+         CompileType HWConfig
+         Datatype INT
+         Default 0
+         ParValIndex 0
+         ParamType Numbered 1
+      End ParamInfo
+   End Parameters
+
+   ParValList
+      ParVal
+         ParValIndex 0
+         INT 0 125 0 125
+      End ParVal
+   End ParValList
+
+   Channels
+      ChannelInfo
+         Number 0
+         ChannelName "UnitStatus"
+         Datatype Status_In
+         Routine 900
+         CopyParameters 0 0 16#50000
+      End ChannelInfo
+   End Channels
+
+   UnitStatusText
+     ExtendedStatus1  "CPU overload"
+     ExtendedStatus2  "Scan task overload"
+     ExtendedStatus3  "Lack of scan resources"
+     ExtendedStatus4  "PTC status queue full" 
+     ExtendedStatus5  "PTC event queue full" 
+     ExtendedStatus6  "SOE status queue full" 
+     ExtendedStatus7  "DI queue full" 
+     ExtendedStatus8  "AI queue full" 
+     ExtendedStatus9  "Unknown I/O module type" 
+     ExtendedStatus10  "Illegal I/O module ID" 
+     ExtendedStatus11  "I/O module ID conflict" 
+     ExtendedStatus12  "Max number of PTC devices exceeded" 
+   End UnitStatusText
+
+   UnitStatusSeverity
+     ExtendedStatus1  GeneralError   TriggerEvent SeverityHigh
+     ExtendedStatus2  GeneralWarning TriggerEvent SeverityLow
+     ExtendedStatus3  GeneralWarning TriggerEvent SeverityLow
+     ExtendedStatus4  GeneralWarning TriggerEvent SeverityLow
+     ExtendedStatus5  GeneralWarning TriggerEvent SeverityLow
+     ExtendedStatus6  GeneralWarning TriggerEvent SeverityLow
+     ExtendedStatus7  GeneralWarning TriggerEvent SeverityLow
+     ExtendedStatus8  GeneralWarning TriggerEvent SeverityLow
+     ExtendedStatus9  GeneralWarning TriggerAlarm SeverityMedium
+     ExtendedStatus10  GeneralWarning TriggerAlarm SeverityMedium
+     ExtendedStatus11  GeneralWarning TriggerAlarm SeverityMedium
+     ExtendedStatus12  GeneralWarning TriggerAlarm SeverityMedium
+   End UnitStatusSeverity
+
+
+  HWUnitInfoCRC 16#423C
+End HWUnitInfo  (* CI856 *)

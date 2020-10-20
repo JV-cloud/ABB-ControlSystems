@@ -1,0 +1,292 @@
+HWUnitInfo  (* CPU Soft *)
+   HWUnitID 16#02202700
+   Description "CPU PA"
+   Information "Soft Controller CPU"
+   Icons PCBoardType
+   Attributes Systemunit CPUUnit CompileAlways
+   MaxNrOfHardwareUnits       5000
+   MaxNrOfVariableConnections 50000
+
+   InterfaceInfo
+      Interface CpuDriver
+      HWConfig NoFail
+   End InterfaceInfo
+   DiscreteNumbers
+      1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 
+      18 19 20 21 22 23 24 25 26 27 28 29 30 31 32
+   End DiscreteNumbers
+   SubUnitTypes
+      HWUnitID 16#03000021 (* Serial without PPP*)
+      HWUnitID {2290D54A-CD13-4418-8C74-AB1C29082D1C} Positions 5 DefaultPositions 5 (* IP (IAC)   *)
+   End SubUnitTypes
+   Parameters
+     ParamInfo 
+        Name MMSTCPIP    (* Coldstart is needed *)
+        Description "Enable MMS on TCP/IP"
+        Hidden
+        CompileType HWConfig  (* If true gives that the TCP/IP enable bit in EEPROM should be set *)
+        Datatype BOOL
+        Default TRUE
+        ParamType Numbered 0
+     End ParamInfo
+     ParamInfo 
+        Name MMSETHERNET    (* Coldstart is needed *)
+        Description "Enable MMS on Ethernet"
+        Hidden
+        CompileType HWConfig  (* If true gives that the Ethernet enable bit in EEPROM should be set for this CIE *)
+        Datatype BOOL
+        Default FALSE
+        ParamType Numbered 1
+     End ParamInfo
+     ParamInfo 
+        Name EnableSattbusTCPIP
+        Description "Enable SattBus on TCP/IP"
+        CompileType HWConfig
+        Datatype BOOL
+        Default FALSE
+        ParamType Numbered 2
+     End ParamInfo
+     ParamInfo 
+        Name SattbusTCPIPNode
+        Description "SattbusTCPIPNode"
+        Hidden
+        CompileType HWConfig
+        Datatype INT
+        Default 0
+        ParValIndex 0
+        ParamType Numbered 3
+     End ParamInfo
+     ParamInfo 
+        Name SattBusTCPIPChannel
+        Description "SattBus Channel"
+        Hidden
+        CompileType HWConfig
+        Datatype INT
+        Default 5
+        ParValIndex 1
+        ParamType Numbered 4
+     End ParamInfo
+     ParamInfo 
+        Name SattBusTCPIPNetwork
+        Description "SattBusTCPIPNetwork"
+        Hidden
+        CompileType HWConfig
+        Datatype STRING
+        Default ""
+        ParamType Numbered 5
+     End ParamInfo
+     ParamInfo
+        Name SYSTEMAECLASS
+        Description "AE System AE class"
+        CompileType HWConfig
+        Datatype INT
+        Default 9950
+        ParValIndex 8
+        ParamType Numbered 8
+     End ParamInfo
+     ParamInfo
+        Name SYSTEMAELOWSEVERITY
+        Description "AE System AE low severity"
+        CompileType HWConfig
+        DataType INT
+        Default 200
+        ParValIndex 9
+        ParamType Numbered 24
+     End ParamInfo
+     ParamInfo
+        Name SYSTEMAEMEDIUMSEVERITY
+        Description "AE System AE medium severity"
+        CompileType HWConfig
+        DataType INT
+        Default 400
+        ParValIndex 9
+        ParamType Numbered 25
+     End ParamInfo
+     ParamInfo
+        Name SYSTEMAEHIGHSEVERITY
+        Description "AE System AE high severity"
+        CompileType HWConfig
+        DataType INT
+        Default 600
+        ParValIndex 9
+        ParamType Numbered 26
+     End ParamInfo
+     ParamInfo
+        Name SYSTEMAECRITICALSEVERITY
+        Description "AE System AE critical severity"
+        CompileType HWConfig
+        DataType INT
+        Default 800
+        ParValIndex 9
+        ParamType Numbered 27
+     End ParamInfo
+     ParamInfo
+        Name SYSTEMAEFATALSEVERITY
+        Description "AE System AE fatal severity"
+        CompileType HWConfig
+        DataType INT
+        Default 1000
+        ParValIndex 9
+        ParamType Numbered 28
+     End ParamInfo
+     ParamInfo 
+        Name SYSTEMEVENTSTOSESSIONLOG
+        Description "AE System events to controller log"
+        CompileType HWConfig
+        Datatype ENUM
+        Default 2
+        ParValIndex 10
+        ParamType Numbered 29
+     End ParamInfo
+     ParamInfo 
+        Name EVENTQUEUESIZE
+        Description "AE Local printer event queue size"
+        CompileType HWConfig
+        Datatype INT
+        Default 300
+        ParValIndex 2
+        ParamType Numbered 10
+     End ParamInfo
+     ParamInfo 
+        Name MAXNOOFEVENTQUEUES
+        Description "AE Max no of local printer event queues"
+        CompileType HWConfig
+        Datatype INT
+        Default 0
+        ParValIndex 4
+        ParamType Numbered 12
+     End ParamInfo
+     ParamInfo 
+        Name EVENTENROLLMENTQUEUESIZE
+        Description "AE Event subscription queue size"
+        CompileType HWConfig
+        Datatype INT
+        Default 300
+        ParValIndex 3
+        ParamType Numbered 11
+     End ParamInfo
+     ParamInfo 
+        Name MAXNOOFENROLLMENTS
+        Description "AE Max number of event subscriptions"
+        CompileType HWConfig
+        Datatype INT
+        Default 1
+        ParValIndex 5
+        ParamType Numbered 13
+     End ParamInfo
+     ParamInfo 
+        Name EVENTENROLLMENTTIMEOUT
+        Description "AE Event subscription time out"
+        CompileType HWConfig
+        Datatype INT
+        Default 360
+        ParValIndex 6
+        ParamType Numbered 14
+     End ParamInfo
+     ParamInfo 
+        Name MAXNOOFNAMEDVALUEITEMS
+        Description "AE Max no of Named Value items"
+        CompileType HWConfig
+        Datatype INT
+        Default 0
+        ParValIndex 11
+        ParamType Numbered 42
+     End ParamInfo
+     ParamInfo 
+        Name MAXPERCOFLOGSTRINGS
+        Description "AE Max percent of log strings"
+        CompileType HWConfig
+        Datatype INT
+        Default 10
+        ParValIndex 12
+        ParamType Numbered 43
+     End ParamInfo
+     ParamInfo 
+        Name ALARMAUTODISABLELIMIT
+        Description "AE Limit auto disable"
+        CompileType HWConfig
+        Datatype INT
+        Default 3
+        ParValIndex 13
+        ParamType Numbered 32
+     End ParamInfo
+   End Parameters
+   ParValList
+      ParVal
+         ParValIndex 0
+         INT 0 127 0 127
+      End ParVal
+      ParVal
+         ParValIndex 1
+         INT 1 5 1 5
+      End ParVal
+      ParVal
+         ParValIndex 2
+         INT 10 3000 10 3000
+      End ParVal
+      ParVal
+         ParValIndex 3
+         INT 200 3000 200 3000
+      End ParVal
+      ParVal
+         ParValIndex 4
+         INT 0 5 0 5
+      End ParVal
+      ParVal
+         ParValIndex 5
+         INT 0 7 0 7
+      End ParVal
+      ParVal
+         ParValIndex 6
+         UnitText    "min"
+         INT 0 1440 0 1440
+      End ParVal
+      ParVal
+         ParValIndex 7
+         ENUM
+         "Disabled" 0
+         "Enabled"  1
+      End ParVal
+      ParVal
+         ParValIndex 8
+         INT 1 9999 1 9999
+      End ParVal
+      ParVal
+         ParValIndex 9
+         INT 1 1000 1 1000
+      End ParVal
+      ParVal
+         ParValIndex 10
+         ENUM
+         "None" 0
+         "Low Severity" 1
+         "Medium Severity" 2
+         "High Severity" 3
+         "Critical Severity" 4
+         "Fatal Severity" 5
+      End ParVal 
+      ParVal
+         ParValIndex 11
+         INT 0 9000 0 9000
+      End ParVal
+      ParVal
+         ParValIndex 12
+         UnitText    "%"
+         INT 0 100 0 100
+      End ParVal
+      ParVal
+         ParValIndex 13
+         INT 0 127 0 127
+      End ParVal
+   End ParValList
+   Channels
+      ChannelInfo
+         Number 0
+         ChannelName "UnitStatus"
+         Datatype Status_In
+         Routine 900
+         CopyParameters 0 0 16#50000
+      End ChannelInfo
+   End Channels
+  HWUnitInfoCRC 16#6197
+End HWUnitInfo (* CPU *)

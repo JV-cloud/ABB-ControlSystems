@@ -1,0 +1,407 @@
+FileHeader
+  Contents              "FPBA-01"
+  Date                  "09.04.2012"
+  Version               "Version 1.4.0" (* Device Import Wizard *)
+  (* Parser             "Profibus 1.3.3" *)
+  RequiredSyntaxVersion "3.0"
+End FileHeader
+
+(*========================================================*)
+(*                     FPBA-01                            *)
+(*========================================================*)
+
+HWUnitInfo
+  HWUnitID         {d657e680-7356-4385-9b94-606c1c7446a8}
+  Description      "FPBA-01"
+  Information      "ABB Drives PROFIBUS Adapter"
+  Icons            MotorType
+  Attributes       AdapterUnit AutoAttach
+
+  InterfaceInfo
+    IoSysType  CIGIO
+    CLSID_CB   {70AC2B68-4487-48e3-9957-EA25FD20A55F}
+    CLSID_CTRL {7a59948b-4432-4d69-9f66-2ca7ed7f9db5}
+    HWConfig   Fail
+  End InterfaceInfo
+
+  ConnectionInfo
+    ConnectType  AllUnits
+    IOConnect    Fail
+    IOConfig     NoFail
+  End ConnectionInfo
+
+  SubUnits  1
+
+  DiscreteNumbers
+    1
+  End DiscreteNumbers
+
+  SubUnitTypes
+    HWUnitID {7905f731-8766-4a28-aa30-57aea115a479}
+    HWUnitID {05acd25d-fabe-48a0-a961-5c7696ede1ea}
+    HWUnitID {2c0909e4-7e26-4597-9443-7c44d44af30c}
+    HWUnitID {a8a38002-c5e1-4cbd-9acc-1373e662bcaa}
+    HWUnitID {b625345f-b24f-4917-8cb6-9b7ea56c3722}
+    HWUnitID {456737e1-7c41-43d1-b703-ecd6d2bac98c}
+    HWUnitID {1d369f45-91c2-47d1-acc0-3f67e1053481}
+    HWUnitID {671e0ec1-0dcf-4772-a7e6-02f213961c40}
+  End SubUnitTypes
+
+  Parameters
+    ParamInfo
+      Name            DP_MODE_PARAM000
+      Description     "DP Mode"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         0
+      ParValIndex     0
+      ParamType       CIGIOData 1 7 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            PROCESS_ALARM_PARAM001
+      Description     "Process Alarm"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         0
+      ParValIndex     1
+      ParamType       CIGIOData 2 6 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            DIAGNOSTIC_ALARM_PARAM002
+      Description     "Diagnostic Alarm"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         0
+      ParValIndex     1
+      ParamType       CIGIOData 2 5 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            UPDATE_ALARM_PARAM003
+      Description     "Update Alarm"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         0
+      ParValIndex     1
+      ParamType       CIGIOData 2 2 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            ALARM_MODE_PARAM004
+      Description     "Alarm Mode"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         0
+      ParValIndex     2
+      ParamType       CIGIOData 3 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            PRM_STRUCTURE_PARAM005
+      Description     "Prm Structure"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         1
+      ParValIndex     1
+      ParamType       CIGIOData 3 3 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            LENGTH_OF_USER_DATA_PARAM006
+      Description     "Length of User Data"
+      CompileType     IOConnect
+      Datatype        int
+      Default         26
+      ParValIndex     3
+      ParamType       CIGIOData 4 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            STRUCTURE_TYPE_PARAM007
+      Description     "Structure Type"
+      CompileType     IOConnect
+      Datatype        int
+      Default         129
+      ParValIndex     4
+      ParamType       CIGIOData 5 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            SLOT_PARAM008
+      Description     "Slot"
+      CompileType     IOConnect
+      Datatype        int
+      Default         0
+      ParValIndex     5
+      ParamType       CIGIOData 6 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            RESERVED_PARAM009
+      Description     "Reserved"
+      CompileType     IOConnect
+      Datatype        int
+      Default         0
+      ParValIndex     5
+      ParamType       CIGIOData 7 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            FAIL_SAFE_MODE_PARAM010
+      Description     "Fail Safe mode"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         0
+      ParValIndex     6
+      ParamType       CIGIOData 8 0 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            CONTROL_ZERO_MODE_PARAM011
+      Description     "Control-zero mode"
+      CompileType     IOConnect
+      Datatype        enum
+      Default         0
+      ParValIndex     7
+      ParamType       CIGIOData 8 2 0 ByteParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            FAILSAFE_TIMEOUT_0___NO_TIMEOUT__PARAM012
+      Description     "Failsafe Timeout(0 = No timeout)"
+      CompileType     IOConnect
+      Datatype        int
+      Default         10
+      ParValIndex     8
+      ParamType       CIGIOData 9 0 0 WordParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            PZD1_FAILSAFE_VALUE_PARAM013
+      Description     "PZD1 Failsafe value"
+      CompileType     IOConnect
+      Datatype        int
+      Default         1150
+      ParValIndex     8
+      ParamType       CIGIOData 11 0 0 WordParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            PZD2_FAILSAFE_VALUE_PARAM014
+      Description     "PZD2 Failsafe value"
+      CompileType     IOConnect
+      Datatype        int
+      Default         0
+      ParValIndex     8
+      ParamType       CIGIOData 13 0 0 WordParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            PZD3_FAILSAFE_VALUE_PARAM015
+      Description     "PZD3 Failsafe value"
+      CompileType     IOConnect
+      Datatype        int
+      Default         0
+      ParValIndex     8
+      ParamType       CIGIOData 15 0 0 WordParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            PZD4_FAILSAFE_VALUE_PARAM016
+      Description     "PZD4 Failsafe value"
+      CompileType     IOConnect
+      Datatype        int
+      Default         0
+      ParValIndex     8
+      ParamType       CIGIOData 17 0 0 WordParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            PZD5_FAILSAFE_VALUE_PARAM017
+      Description     "PZD5 Failsafe value"
+      CompileType     IOConnect
+      Datatype        int
+      Default         0
+      ParValIndex     8
+      ParamType       CIGIOData 19 0 0 WordParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            PZD6_FAILSAFE_VALUE_PARAM018
+      Description     "PZD6 Failsafe value"
+      CompileType     IOConnect
+      Datatype        int
+      Default         0
+      ParValIndex     8
+      ParamType       CIGIOData 21 0 0 WordParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            PZD7_FAILSAFE_VALUE_PARAM019
+      Description     "PZD7 Failsafe value"
+      CompileType     IOConnect
+      Datatype        int
+      Default         0
+      ParValIndex     8
+      ParamType       CIGIOData 23 0 0 WordParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            PZD8_FAILSAFE_VALUE_PARAM020
+      Description     "PZD8 Failsafe value"
+      CompileType     IOConnect
+      Datatype        int
+      Default         0
+      ParValIndex     8
+      ParamType       CIGIOData 25 0 0 WordParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            PZD9_FAILSAFE_VALUE_PARAM021
+      Description     "PZD9 Failsafe value"
+      CompileType     IOConnect
+      Datatype        int
+      Default         0
+      ParValIndex     8
+      ParamType       CIGIOData 27 0 0 WordParam ByteOffset
+    End ParamInfo
+    ParamInfo
+      Name            PZD10_FAILSAFE_VALUE_PARAM022
+      Description     "PZD10 Failsafe value"
+      CompileType     IOConnect
+      Datatype        int
+      Default         0
+      ParValIndex     8
+      ParamType       CIGIOData 29 0 0 WordParam ByteOffset
+    End ParamInfo
+  End Parameters
+
+  ParValList
+    ParVal
+      ParValIndex     0
+      UnitText        ""
+      enum
+      "DPV0" 0
+      "DPV1" 1
+    End ParVal
+    ParVal
+      ParValIndex     1
+      UnitText        ""
+      enum
+      "Disabled" 0
+      "Enabled" 1
+    End ParVal
+    ParVal
+      ParValIndex     2
+      UnitText        ""
+      enum
+      "type mode" 0
+      "2 alarms" 1
+      "4 alarms" 2
+      "8 alarms" 3
+      "12 alarms" 4
+      "16 alarms" 5
+      "24 alarms" 6
+      "32 alarms" 7
+    End ParVal
+    ParVal
+      ParValIndex     3
+      UnitText        ""
+      int 26 26 26 26
+    End ParVal
+    ParVal
+      ParValIndex     4
+      UnitText        ""
+      int 129 129 129 129
+    End ParVal
+    ParVal
+      ParValIndex     5
+      UnitText        ""
+      int 0 0 0 0
+    End ParVal
+    ParVal
+      ParValIndex     6
+      UnitText        ""
+      enum
+      "Stop" 0
+      "Last Reference" 1
+      "Use fail-safe values" 2
+    End ParVal
+    ParVal
+      ParValIndex     7
+      UnitText        ""
+      enum
+      "Use data" 0
+      "Ignore data" 1
+    End ParVal
+    ParVal
+      ParValIndex     8
+      UnitText        ""
+      int 0 65535 0 65535
+    End ParVal
+  End ParValList
+
+  Channels
+    ChannelInfo
+      Number                0
+      ChannelName           "UnitStatus"
+      Datatype              Status_In
+      Routine               900
+      CopyParameters        16#0 16#0 16#50000
+    End ChannelInfo
+  End Channels
+
+  Diagnostics
+    ModuleOffset        1
+    CompileRule         Position
+    DiagInfo
+      Number            1
+      Description       "Unit_Diag_Area_0_0"
+      UnitText          ""
+      Datatype          ENUMDIAG
+      DiagValueIndex    0
+      DiagAreaOffset    1 1 16#01
+    End DiagInfo
+  End Diagnostics
+
+  DiagValueList
+    DiagValue
+      DiagValueIndex    0
+      DiagDataSize      1
+      ENUMDIAG
+      "Host communication lost" 1 DeviceSpecific1 
+    End DiagValue
+  End DiagValueList
+
+  UnitStatusText
+    ExtendedStatus1   "Slave does not exist"
+    ExtendedStatus2   "Configuration data fault"
+    ExtendedStatus3   "Parameter data fault"
+    ExtendedStatus4   "Static diagnostic"
+    ExtendedStatus5   "Backup unit missing"
+    ExtendedStatus6   "Diagnostic configuration data fault"
+    ExtendedStatus7   "Report diagnostics fault"
+    DeviceSpecific1   "Host communication lost"
+  End UnitStatusText
+
+  UnitStatusSeverity
+    ExtendedStatus1   GeneralError   TriggerAlarm SeverityMedium
+    ExtendedStatus2   GeneralError   TriggerAlarm SeverityMedium
+    ExtendedStatus3   GeneralError   TriggerAlarm SeverityMedium
+    ExtendedStatus4   GeneralWarning TriggerEvent SeverityLow   
+    ExtendedStatus5   GeneralWarning TriggerAlarm SeverityLow   
+    ExtendedStatus6   GeneralWarning TriggerEvent SeverityMedium
+    ExtendedStatus7   GeneralWarning TriggerEvent SeverityMedium
+    DeviceSpecific1   GeneralError TriggerAlarm SeverityHigh  
+  End UnitStatusSeverity
+
+  Configuration
+    ConfigInfo
+      ModuleKey        16#959
+      InAreaSize       0 BYTE
+      OutAreaSize      0 BYTE
+      CIGIOConnData
+        CIGIOData      16#05 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 _
+ 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00 16#00
+        CIGIOData      16#02 16#88 16#00 16#00 16#00 16#09 16#59 16#01
+        CIGIOData      16#03 16#00 16#3c 16#00 16#3c 16#00 16#3c 16#00 16#3c 16#00 16#50 16#00 16#00 16#00 16#64 16#00 16#96 16#00 16#fa 16#01 16#90
+        CIGIOData      16#04 16#00 16#06
+        CIGIOData      16#06 16#20
+        CIGIOData      16#07 16#20
+        CIGIOData      16#08 16#40
+        CIGIOData      16#09 16#1e
+        CIGIOData      16#0A 16#00 16#00 16#00 (* no HCIR support*)
+        SyncronizeDataExchange
+      End CIGIOConnData
+    End ConfigInfo
+    ConfigInfo
+      EmptyConfig
+      ModuleKey        16#FFFF
+      InAreaSize       0 BYTE
+      OutAreaSize      0 BYTE
+    End ConfigInfo
+  End Configuration
+
+  HWUnitInfoCRC 16#3A99
+End HWUnitInfo

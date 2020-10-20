@@ -1,0 +1,183 @@
+HWUnitInfo (* AI210 / ProfiBusDP - Full Format *)
+   HWUnitID {FAC17C43-6B4A-4f4d-86B3-DD259A7BBAE0}
+   Description "AI210"
+   Information "Analog input module, 8 channels"
+   Icons Ser200CompactIoType
+   Attributes IoUnit AnalogIn
+   Parameters
+      ParamInfo 
+         Name RANGE_0
+         Description "Range Channel 0"
+         CompileType IOConnect
+         Datatype ENUMRANGE
+         default 1
+         ParValIndex 0
+         ParamType CIGIOData  6  0 1  ByteOffset
+      End ParamInfo 
+      ParamInfo 
+         Name RANGE_1
+         Description "Range Channel 1"
+         CompileType IOConnect
+         Datatype ENUMRANGE
+         default 1
+         ParValIndex 0
+         ParamType CIGIOData  6  1 1  ByteOffset
+      End ParamInfo 
+      ParamInfo 
+         Name RANGE_2
+         Description "Range Channel 2"
+         CompileType IOConnect
+         Datatype ENUMRANGE
+         default 1
+         ParValIndex 0
+         ParamType CIGIOData  6  2 1  ByteOffset
+      End ParamInfo 
+      ParamInfo 
+         Name RANGE_3
+         Description "Range Channel 3"
+         CompileType IOConnect
+         Datatype ENUMRANGE
+         default 1
+         ParValIndex 0
+         ParamType CIGIOData  6  3 1  ByteOffset
+      End ParamInfo 
+      ParamInfo 
+         Name RANGE_4
+         Description "Range Channel 4"
+         CompileType IOConnect
+         Datatype ENUMRANGE
+         default 1
+         ParValIndex 0
+         ParamType CIGIOData  6  4 1  ByteOffset
+      End ParamInfo 
+      ParamInfo 
+         Name RANGE_5
+         Description "Range Channel 5"
+         CompileType IOConnect
+         Datatype ENUMRANGE
+         default 1
+         ParValIndex 0
+         ParamType CIGIOData  6  5 1  ByteOffset
+      End ParamInfo 
+      ParamInfo 
+         Name RANGE_6
+         Description "Range Channel 6"
+         CompileType IOConnect
+         Datatype ENUMRANGE
+         default 1
+         ParValIndex 0
+         ParamType CIGIOData  6  6 1  ByteOffset
+      End ParamInfo 
+      ParamInfo 
+         Name RANGE_7
+         Description "Range Channel 7"
+         CompileType IOConnect
+         Datatype ENUMRANGE
+         default 1
+         ParValIndex 0
+         ParamType CIGIOData  6  7 1  ByteOffset
+      End ParamInfo 
+   End Parameters
+   ParValList
+      ParVal
+         ParValIndex 0
+         ENUMRANGE
+         "off"     0       0       0       0       0
+         "0-20mA"  16#0001 16#79E8 16#0000 16#7FE0 16#0000
+         "4-20mA"  16#0001 16#79E8 16#1860 16#7FE0 16#1248
+      End ParVal
+   End ParValList
+   Channels
+     ChannelInfo
+         Number 0 
+         ChannelName "Input 0"
+         Datatype Real_In
+         Routine 701
+         CopyParameters 0 0 16#30000 16#FFFF 0 16#0 16#50000 16#30008 16#8000 
+      End ChannelInfo
+     ChannelInfo
+         Number 1
+         ChannelName "Input 1"
+         Datatype Real_In
+         Routine 701
+         CopyParameters 0 0 16#30001 16#FFFF 1 16#0 16#50000 16#30008 16#8000
+      End ChannelInfo
+     ChannelInfo
+         Number 2
+         ChannelName "Input 2"
+         Datatype Real_In
+         Routine 701
+         CopyParameters 0 0 16#30002 16#FFFF 2 16#0 16#50000 16#30008 16#8000
+      End ChannelInfo
+     ChannelInfo
+         Number 3
+         ChannelName "Input 3"
+         Datatype Real_In
+         Routine 701
+         CopyParameters 0 0 16#30003 16#FFFF 3 16#0 16#50000 16#30008 16#8000
+      End ChannelInfo
+     ChannelInfo
+         Number 4
+         ChannelName "Input 4"
+         Datatype Real_In
+         Routine 701
+         CopyParameters 0 0 16#30004 16#FFFF 4 16#0 16#50000 16#30008 16#8000
+      End ChannelInfo
+     ChannelInfo
+         Number 5
+         ChannelName "Input 5"
+         Datatype Real_In
+         Routine 701
+         CopyParameters 0 0 16#30005 16#FFFF 5 16#0 16#50000 16#30008 16#8000
+      End ChannelInfo
+     ChannelInfo
+         Number 6
+         ChannelName "Input 6"
+         Datatype Real_In
+         Routine 701
+         CopyParameters 0 0 16#30006 16#FFFF 6 16#0 16#50000 16#30008 16#8000
+      End ChannelInfo
+     ChannelInfo
+         Number 7 
+         ChannelName "Input 7"
+         Datatype Real_In
+         Routine 701
+         CopyParameters 0 0 16#30007 16#FFFF 7 16#0 16#50000 16#30008 16#8000
+      End ChannelInfo
+     ChannelInfo
+         Number 8
+         ChannelName "UnitStatus"
+         Datatype Status_In
+         Routine 900
+         CopyParameters 0 0 16#50000
+      End ChannelInfo
+   End Channels
+   IoUnitStatus
+      StatusType IoError
+      StatusData 16#10000 16#100100 16#0 16#0
+   End IoUnitStatus
+   Configuration
+      ConfigInfo
+         ModuleKey   16#1901
+         InAreaSize  9
+         OutAreaSize 1
+         InWord
+            WORD 0       0
+            WORD 0       1 
+            WORD 0       2 
+            WORD 0       3 
+            WORD 0       4 
+            WORD 0       5 
+            WORD 0       6 
+            WORD 0       7
+            WORD 0       8
+         OutWord
+            WORD 0       0 
+         CIGIOConnData
+            CIGIOData     16#01 16#58 16#60
+            CIGIOData     16#05 16#19 16#01 16#11 16#00 16#00 16#00 16#00
+         End CIGIOConnData
+      End ConfigInfo
+   End Configuration
+  HWUnitInfoCRC 16#F00F
+End HWUnitInfo (* AI210 / ProfiBusDP - Full Format *)

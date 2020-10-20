@@ -1,0 +1,90 @@
+(*=============================*)
+(* Modified : 2013-11-21 15:24 *)
+(* Modified : 2019-03-20 15:27 *)
+(* Modified : 2019-05-23 16:59 *)
+(*=============================*)
+FileHeader
+  Contents              "PNQ22"
+  Date                  "23.05.2019"
+  Version               "Version 1.4.9" (* Device Import Wizard *)
+  (* Parser             "Profinet 1.0.17.0" *)
+  RequiredSyntaxVersion "3.0"
+End FileHeader
+
+SessionID bd07358a-7947-4de8-9c8c-9bc6949e99b2
+
+(*========================================================*)
+(*                         PNQ22                          *)
+(*========================================================*)
+
+HWUnitInfo
+  HWUnitID         {4242b084-3376-4c6a-83fd-7d3b1de8c7c2}
+  Description      "Empty Slot Data"
+  Information      "Dummy data for unused slot"
+  Icons            RackIOType
+  Attributes       IOUnit DigitalIn DigitalOut
+  DownloadInstanceNamesForSubUnits
+
+  Channels
+    ChannelInfo
+      Number                1
+      ChannelName           "Dummy Input Byte"
+      Datatype              DInt_In
+      Routine               323
+      CopyParameters        16#30000 16#18 16#08 16#00 16#00 16#00 16#30001
+    End ChannelInfo
+    ChannelInfo
+      Number                2
+      ChannelName           "Dummy Output Byte"
+      Datatype              Int_Out
+      Routine               401
+      CopyParameters        16#0 16#0 16#40000 16#08 16#FF00 16#00
+    End ChannelInfo
+    ChannelInfo
+      Number                3
+      ChannelName           "UnitStatus"
+      Datatype              Status_In
+      Routine               900
+      CopyParameters        16#0 16#0 16#50000
+    End ChannelInfo
+  End Channels
+
+  UnitStatusText
+    DeviceSpecific1  "Maintenance required"
+    DeviceSpecific2  "Maintenance demanded"
+    DeviceSpecific3  "Diagnosis data available"
+    DeviceSpecific4  "Locked by other controller/supervisor"
+    DeviceSpecific6  "Parametrization fault"
+  End UnitStatusText
+
+  UnitStatusSeverity
+    DeviceSpecific1  GeneralWarning TriggerEvent SeverityMedium
+    DeviceSpecific2  GeneralWarning TriggerEvent SeverityMedium
+    DeviceSpecific3  GeneralWarning TriggerEvent SeverityMedium
+    DeviceSpecific4  GeneralWarning TriggerEvent SeverityMedium
+    DeviceSpecific6  GeneralError TriggerAlarm SeverityHigh
+  End UnitStatusSeverity
+
+  Configuration
+    ConfigInfo
+      ModuleKey        3
+      InAreaSize       3 BYTE
+      OutAreaSize      3 BYTE
+      OutByte
+        BYTE  16#80    1  (* IOPS_Out *)
+        BYTE  16#80    2  (* IOCS_Out *)
+      CIGIOConnData
+        CIGIOData      16#10 16#a5 16#5a 16#0 16#1 16#2 16#21 16#2 16#2 
+        CIGIOData      16#6 16#0 16#0 16#1 16#9 16#0 16#0 16#0 16#0 16#1 16#1 16#0 16#1 16#0 16#1 
+      End CIGIOConnData
+    End ConfigInfo
+    ConfigInfo
+      EmptyConfig
+      ModuleKey        16#FFFF
+      InAreaSize       0 BYTE
+      OutAreaSize      0 BYTE
+    End ConfigInfo
+  End Configuration
+
+  HWUnitInfoCRC 16#6fb0
+End HWUnitInfo

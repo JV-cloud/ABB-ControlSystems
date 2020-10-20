@@ -1,0 +1,291 @@
+HwUnitInfo  (* Fixed PPP *)
+   HWUnitID 16#0300000D
+   Description "PPP"
+   Information "PPP"
+   Icons ProtocolType
+   Attributes 
+     DontDisplayPos
+     CompileAlways
+   InterfaceInfo
+     Interface PPPprotocol 
+     HWConfig Fail
+   End InterfaceInfo
+   Parameters
+      ParamInfo 
+        Name IPADDRESS  (* ToDo: Change to string type *)
+        Description "IP address"
+        CompileType HWConfig (* 172.16.12.34 Node address (34?) is defined by the Ethernet address (only Hex switch ?) *)
+        Datatype STRING        
+        Default "192.168.255.254"
+        ParamType Numbered 0
+     End ParamInfo
+     ParamInfo            (* ToDo: Change to string type *)
+        Name IPSUBNETMASK (* This information is connected with a specific Ethernet board. *)
+        Description "IP subnet mask"
+        CompileType HWConfig
+        Datatype STRING
+        Default "255.255.255.0"
+        ParamType Numbered 1
+     End ParamInfo
+     ParamInfo 
+        Name NETAREA  
+        Description "Network Area"
+        CompileType HWConfig
+        Datatype INT
+        Default 0
+        ParValIndex 1
+        ParamType Numbered 2
+     End ParamInfo
+     ParamInfo 
+        Name PATHNO  
+        Description "Path Number"
+        CompileType HWConfig
+        Datatype INT
+        Default 0
+        ParValIndex 2
+        ParamType Numbered 3
+     End ParamInfo
+     ParamInfo 
+        Name NODENO  
+        Description "Node Number"
+        CompileType HWConfig
+        Datatype INT
+        Default 0
+        ParValIndex 3
+        ParamType Numbered 4
+     End ParamInfo
+     ParamInfo 
+        Name LOCAL  
+        Description "Network Area Local"
+        CompileType HWConfig
+        Datatype BOOL
+        Default FALSE
+        ParamType Numbered 5
+     End ParamInfo
+     ParamInfo 
+        Name SENDPERIOD  
+        Description "Send Period"
+        CompileType HWConfig
+        Datatype INT
+        Default 5
+        ParValIndex 4
+        ParamType Numbered 6
+     End ParamInfo
+     ParamInfo 
+        Name MAXLOSTMSG  
+        Description "Max Lost Messages"
+        CompileType HWConfig
+        Datatype INT
+        Default 3
+        ParValIndex 5
+        ParamType Numbered 7
+     End ParamInfo
+     ParamInfo 
+        Name NAMESERVER  (* Coldstart is needed *)
+        Description "Name server enabled"
+        Hidden
+        CompileType HWConfig
+        Datatype BOOL
+        Default FALSE
+        ParamType Numbered 8
+     End ParamInfo
+     ParamInfo 
+        Name NETNAME  (* Coldstart is needed *)
+        Description "Network area name"
+        Hidden
+        CompileType HWConfig
+        Datatype string
+        Default ""
+        ParamType Numbered 9
+     End ParamInfo
+     ParamInfo 
+        Name DNSADDRESS1  
+        Description "Name server address 1"
+        Hidden
+        CompileType HWConfig (* 172.16.12.34 Node address (34?) is defined by the Ethernet address (only Hex switch ?) *)
+        Datatype STRING        
+        Default ""
+        ParamType Numbered 10
+     End ParamInfo
+     ParamInfo 
+        Name DNSDOMAIN1  
+        Description "Name server network area 1"
+        Hidden
+        CompileType HWConfig
+        Datatype string
+        Default ""
+        ParamType Numbered 11
+     End ParamInfo
+     ParamInfo 
+        Name DNSADDRESS2  
+        Description "Name server address 2"
+        Hidden
+        CompileType HWConfig (* 172.16.12.34 Node address (34?) is defined by the Ethernet address (only Hex switch ?) *)
+        Datatype STRING        
+        Default ""
+        ParamType Numbered 12
+     End ParamInfo
+     ParamInfo 
+        Name DNSDOMAIN2  
+        Description "Name server network area 2"
+        Hidden
+        CompileType HWConfig
+        Datatype string
+        Default ""
+        ParamType Numbered 13
+     End ParamInfo
+     ParamInfo 
+        Name DNSADDRESS3  
+        Description "Name server address 3"
+        Hidden
+        CompileType HWConfig (* 172.16.12.34 Node address (34?) is defined by the Ethernet address (only Hex switch ?) *)
+        Datatype STRING        
+        Default ""
+        ParamType Numbered 14
+     End ParamInfo
+     ParamInfo 
+        Name DNSDOMAIN3  
+        Description "Name server network area 3"
+        Hidden
+        CompileType HWConfig
+        Datatype string
+        Default ""
+        ParamType Numbered 15
+     End ParamInfo
+     ParamInfo 
+        Name DNSADDRESS4  
+        Description "Name server address 4"
+        Hidden
+        CompileType HWConfig (* 172.16.12.34 Node address (34?) is defined by the Ethernet address (only Hex switch ?) *)
+        Datatype STRING        
+        Default ""
+        ParamType Numbered 16
+     End ParamInfo
+     ParamInfo 
+        Name DNSDOMAIN4  
+        Description "Name server network area 4"
+        Hidden
+        CompileType HWConfig
+        Datatype string
+        Default ""
+        ParamType Numbered 17
+     End ParamInfo
+     ParamInfo 
+        Name CNRPSENDPERIOD  
+        Description "Name server send Period"
+        Hidden
+        CompileType HWConfig
+        Datatype INT
+        Default 8
+        ParValIndex 6
+        ParamType Numbered 18
+     End ParamInfo
+     ParamInfo 
+        Name CNRPRESENDMSG  
+        Description "Name server max no of resends"
+        Hidden
+        CompileType HWConfig
+        Datatype INT
+        Default 3
+        ParValIndex 7
+        ParamType Numbered 19
+     End ParamInfo
+     ParamInfo 
+        Name CNRPTIMEOUT  
+        Description "Name server timeout"
+        Hidden
+        CompileType HWConfig
+        Datatype INT
+        Default 8
+        ParValIndex 8
+        ParamType Numbered 20
+     End ParamInfo
+     ParamInfo 
+        Name PROXYROUTER  (* ToDo: Change to string type *)
+        Description "Proxy router"
+        CompileType HWConfig 
+        Datatype STRING        
+        Default "0.0.0.0"
+        ParamType Numbered 21
+     End ParamInfo
+     ParamInfo 
+        Name TARGETADDRESS  (* ToDo: Change to string type *)
+        Description "Target address"
+        CompileType HWConfig 
+        Datatype STRING        
+        Default "0.0.0.0"
+        ParamType Numbered 22
+     End ParamInfo
+     ParamInfo 
+        Name PTPIPADDRESS  (* ToDo: Change to string type *)
+        Description "Remote IP address"
+        CompileType HWConfig (* 172.16.12.34 Node address (34?) is defined by the Ethernet address (only Hex switch ?) *)
+        Datatype STRING        
+        Default "192.168.255.253"
+        ParamType Numbered 23
+     End ParamInfo
+   End Parameters
+   ParValList
+      ParVal
+         ParValIndex 1
+         INT 0 35 0 35
+      End ParVal
+      ParVal
+         ParValIndex 2
+         INT 0 3 0 3
+      End ParVal
+      ParVal
+         ParValIndex 3
+         INT 0 500 0 500
+      End ParVal
+      ParVal
+         ParValIndex 4
+         UnitText    "s"
+         INT 1 60 1 60
+      End ParVal
+      ParVal
+         ParValIndex 5
+         INT 1 10 1 10
+      End ParVal
+      ParVal
+         ParValIndex 6
+         UnitText    "s"
+         INT 1 60 1 60
+      End ParVal
+      ParVal
+         ParValIndex 7
+         INT 0 10 0 10
+      End ParVal
+      ParVal
+         ParValIndex 8
+         UnitText    "s"
+         INT 1 50 1 50
+      End ParVal
+      ParVal
+         ParValIndex 9
+         ENUM
+         "Active"  1
+         "Passive" 0
+      End ParVal
+      ParVal
+         ParValIndex 10
+         INT 1 100 1 100
+      End ParVal
+   End ParValList
+   Channels
+      ChannelInfo
+         Number 0
+         ChannelName "UnitStatus"
+         Datatype Status_In
+         Routine 900
+         CopyParameters 0 0 16#50000
+      End ChannelInfo
+   End Channels
+   UnitStatusText
+      DeviceSpecific2 "No communication"
+   End UnitStatusText
+   UnitStatusSeverity
+      DeviceSpecific2 GeneralWarning TriggerEvent SeverityMedium
+   End UnitStatusSeverity
+  HWUnitInfoCRC 16#11F8
+End HWUnitInfo (* FIXEDPPP *)

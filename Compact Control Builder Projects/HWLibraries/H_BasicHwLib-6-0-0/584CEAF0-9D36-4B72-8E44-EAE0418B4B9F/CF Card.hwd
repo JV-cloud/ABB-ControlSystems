@@ -1,0 +1,55 @@
+HwUnitInfo  (* Compact Flash Card *)
+   HWUnitID {0447DE23-5960-422f-AD30-E0F1FCDF4847}
+   Description "CF Card"
+   Information "Compact Flash Card"
+   Icons CompactFlash
+   Attributes CompileAlways
+   InterfaceInfo
+     Interface CompactFlashCard
+     HWConfig Fail
+   End InterfaceInfo
+   Parameters
+      ParamInfo 
+         Name RETAIN
+         Description "Save cold retain values"
+         CompileType HWConfig
+         Datatype INT      
+         Default 60
+         ParValIndex 0
+         ParamType Numbered 0
+      End ParamInfo 
+   End Parameters
+   ParValList
+      ParVal
+         ParValIndex 0
+         UnitText    "min"
+         INT 0 65535 0 65535 
+      End ParVal
+   End ParValList
+   Channels
+      ChannelInfo
+         Number 0
+         ChannelName "UnitStatus"
+         Datatype Status_In
+         Routine 900
+         CopyParameters 0 0 16#50000
+      End ChannelInfo
+   End Channels
+   UnitStatusText
+      DeviceSpecific1 "No card present"
+      DeviceSpecific2 "Application version mismatch"
+      DeviceSpecific3 "Invalid save setting"
+      DeviceSpecific4 "Controller version mismatch"
+      DeviceSpecific5 "Image is corrupt"
+      DeviceSpecific6 "No image"
+   End UnitStatusText
+   UnitStatusSeverity
+      DeviceSpecific1 GeneralWarning TriggerAlarm SeverityMedium
+      DeviceSpecific2 GeneralWarning TriggerAlarm SeverityMedium
+      DeviceSpecific3 GeneralWarning TriggerAlarm SeverityMedium
+      DeviceSpecific4 GeneralWarning TriggerAlarm SeverityMedium
+      DeviceSpecific5 GeneralWarning TriggerAlarm SeverityMedium
+      DeviceSpecific6 GeneralWarning TriggerAlarm SeverityMedium
+   End UnitStatusSeverity
+  HWUnitInfoCRC 16#827A
+End HWUnitInfo (* Compact Flash Card *)

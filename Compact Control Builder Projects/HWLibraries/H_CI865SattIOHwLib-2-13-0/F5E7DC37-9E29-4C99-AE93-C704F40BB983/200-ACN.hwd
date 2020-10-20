@@ -1,0 +1,131 @@
+HWUnitInfo  (* 200-ACN *)
+   HWUnitID {8635DB9E-F66D-4A2E-BC08-6FF830EDC128}
+   Description "200-ACN"
+   Information "ControlNet adapter for S200 I/O"
+   Icons Ser200AdapterType
+   Attributes AdapterUnit
+   InterfaceInfo   
+      Interface CIGInterface
+      IoSysType CIGIO
+      CLSID_CB   {3EACE835-A8D1-4581-8FA1-F85144768CF2} (* CLSID_CB   = GUID for CICN Protocol handler (PH) in Control builder CB *)
+      CLSID_CTRL {A3AE7532-6EC1-4636-A0D9-2AD4D5A0D798} (* CLSID_CTRL = GUID for CICN Protocol handler (PH) in Controller *)
+      HWConfig  Fail      
+   End InterfaceInfo
+   ConnectionInfo
+      ConnectType AllUnits
+      IOConnect Fail
+      IOConfig NoFail
+   End ConnectionInfo  
+   SubUnits 8
+   SubUnitTypes
+      Submenu "S200L I/O"
+        HWUnitID {0C032D0D-358A-4212-B142-52CC36683B02}  (* AI210        *)
+        HWUnitID {2CA93251-564C-468F-8E0C-18CC0FD41588}  (* AX210        *)
+        HWUnitID {8B6476E4-D55D-45D2-8D67-D21FA64B71D9}  (* AO210        *)
+        HWUnitID {D3B17A52-78A3-48A6-A908-446983613A26}  (* DI210        *)
+        HWUnitID {8397F463-8792-4887-918C-80FBDA126EAD}  (* DX210        *)
+        HWUnitID {EF835A95-F2F1-4F26-8065-2AC81D27AE7C}  (* DO210        *)
+      SubMenuEnd
+      SubMenu "S200 I/O"
+        HWUnitID {AC454C13-B1FE-4D2C-B363-6F46C40B4666} (* 200-IE8      *)
+        HWUnitID {E3685B79-939B-4FF9-BA6C-71549C1AA440} (* 200-IT8      *)
+        HWUnitID {20B69E00-42F3-486F-B325-2E88BBAD7753} (* 200-IR8      *)
+        HWUnitID {A9D43526-D6D0-48A3-8B2B-226F566AF8D1} (* 200-IR8R     *)
+        HWUnitID {232A5FD0-152C-4590-B08B-CEE6382F7049} (* 200-IF4I     *)
+        HWUnitID {1845D36F-C145-4F7E-A153-8AEC9871BD40} (* 200-IE4xOE2  *)
+        Separator
+        HWUnitID {E1B9E0B2-BCE9-4418-8DA2-2074F2EDD963} (* 200-OE4      *)
+        HWUnitID {5A1F0DE3-1C7C-452B-BAA4-6B811D43921B} (* 200-OF4I     *)
+        Separator
+        HWUnitID {4A4D04A5-2BF1-4CB6-8678-683AA3CA07FE} (* 200-IB16     *)
+        HWUnitID {A41ED54A-8CCA-409F-B14C-588478710337} (* 200-IB32     *)
+        HWUnitID {03ED4658-B636-40EE-8B6D-7341C8E416A5} (* 200-IA8      *)
+        HWUnitID {25790FB8-0D38-4191-B873-F394666B4DDD} (* 200-IM8      *)
+        HWUnitID {8D314A51-8E0D-4708-AFAF-2EA1244AE6E4} (* 200-IB10xOB6 *)
+        HWUnitID {A5F53C5F-3815-4068-9301-ACE3AB1DA91B} (* 200-IB16xOB16P *)
+        (* HWUnitID 16#00020111  200-IB2xOB2P *)
+        Separator
+        HWUnitID {6EC8B5A5-21A8-41D3-BC03-75B50A007CC5} (* 200-OB16     *)
+        HWUnitID {8B735EEB-E858-47E9-BD23-B4C620A2F231} (* 200-OB16P    *)
+        HWUnitID {58450D44-47A1-4D49-BFAF-20F935ADCB6B} (* 200-OB32P    *)
+        HWUnitID {1D6826D5-0CD2-4A87-926F-A0A68EFA3B49} (* 200-OA8      *)
+        HWUnitID {60B9A9DE-BDD1-440C-B5D3-630552FAB1D0} (* 200-OW8      *)
+        HWUnitID {F16E5544-EED6-4116-8D05-DB41656DAFE4} (* 200-OB8EP    *)
+        HWUnitID {E48B384E-66F2-4782-ACB3-150CB0BD2F06} (* 200-OM8      *)
+        Separator
+        HWUnitID {6DCB2780-1B07-420F-9C7B-24F1E3EC66AE} (* 200-IP2      *)
+        HWUnitID {2938D626-D628-4D35-A75B-6B8941E71D8D} (* 200-IP4      *)
+        (* HWUnitID 16#00021804  1794-ID2     *)
+        HWUnitID {A6EF6A50-4F38-40C7-91A2-30719A3E7308} (* 200-DUTB     *)
+      SubMenuEnd
+      Submenu "I/O 200C"
+        HWUnitID {9FDF90DF-1412-47A2-9986-7DEEEE396F57}  (* 200C-IE8     *)
+        HWUnitID {A8C8CA0D-03DC-4B4A-80D0-69BBEB22F497}  (* 200C-IE4xOE2 *)
+        HWUnitID {D55954E5-9D0E-4310-975F-E0CE141B8CC7}  (* 200C-OE4     *)
+        HWUnitID {48ED8AB2-5827-424F-90A9-0A5E82BD8B01}  (* 200C-IB16    *)
+        HWUnitID {9E4B96D5-BB01-4BCD-8C81-7F76ED19F11A}  (* 200C-IB10xOB6*)
+        HWUnitID {45DF760A-BE8F-40A2-8E2F-B429792F6FE7}  (* 200C-OB16P   *)
+      SubMenuEnd
+   End SubUnitTypes
+   Parameters
+      ParamInfo 
+         Name EPR
+         Description "Expected packet rate"
+         CompileType HWConfig
+         Datatype ENUM
+         Default 0 (* use default *)
+         ParValIndex 0
+         ParamType Numbered 1
+      End ParamInfo 
+   End Parameters
+   ParValList
+      ParVal
+         ParValIndex 0
+         UnitText    "ms"
+         ENUM 
+         "Use default" 0
+         "5"           5
+         "10"         10
+         "15"         15
+         "20"         20
+         "25"         25
+         "30"         30
+         "40"         40
+         "50"         50
+         "60"         60
+      End ParVal
+   End ParValList
+   Channels
+      ChannelInfo
+         Number 0
+         ChannelName "UnitStatus"
+         Datatype Status_In
+         Routine 900
+         CopyParameters 0 0 16#50000
+      End ChannelInfo
+   End Channels
+   Configuration
+      ConfigInfo
+         ModuleKey     16#0019
+         InAreaSize    1
+         OutAreaSize   1
+         InWord 
+            WORD     0       0
+         ConfWord 
+            WORD     16#0001 0
+         CIGIOConnData
+            CIGIOData  16#01 16#00 16#20 16#04 16#24 16#03 16#20 16#04 16#24 16#01 16#20 16#04 16#24 16#02   (* Class data   *)
+            CIGIOData  16#02 16#00 16#00 16#00 16#0C 16#00 16#19 16#00 16#81 16#04                           (* Device key   *)
+            CIGIOData  16#03 16#00 16#01 16#78 16#01 16#00 16#02 16#0F 16#7B 16#01 16#00 16#01               (* Out data     *)
+            CIGIOData  16#04 16#00 16#08 16#78 16#01 16#00 16#03 16#08 16#7B 16#01 16#00 16#01               (* In data      *)
+         End CIGIOConnData
+      End ConfigInfo
+      ConfigInfo
+         EmptyConfig
+         ModuleKey     16#0F00
+         InAreaSize    0
+         OutAreaSize   0
+      End ConfigInfo
+   End Configuration
+  HWUnitInfoCRC 16#448B
+End HWUnitInfo (* 200-ACN *)

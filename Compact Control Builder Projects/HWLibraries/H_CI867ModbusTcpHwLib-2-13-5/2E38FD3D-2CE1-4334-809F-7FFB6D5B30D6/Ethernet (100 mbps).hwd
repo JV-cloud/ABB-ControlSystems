@@ -1,0 +1,176 @@
+(****************************************************************************)
+(* FILE            Ethernet100Mbps.hwd                                      *)
+(*                                                                          *)
+(* DESCRIPTION     Hardware definition file Ethernet 100Mbps                *)
+(*                                                                          *)
+(* AUTHOR          Premanand K                                              *)
+(*                                                                          *)
+(* All rights reserved. Reproduction, modification, use or disclosure       *)
+(* to third parties without express authority, is forbidden.                *)
+(* Copyright ABB Inc. 2006.                                                 *)
+(*                                                                          *)
+(*                                                                          *)
+(* 16-08-2006 Premanand K     Initial version                               *)
+(* 13-03-2007 Mathias Eng     Updated after DoF review                      *)
+(*                                                                          *)
+(****************************************************************************)
+FileHeader
+   Contents               "Ethernet (100 mbps)" 
+   Date                   "2007-03-15"
+   Version                "1.0-0"
+  RequiredSyntaxVersion "3.0"
+End FileHeader
+
+HwUnitInfo  (* EtherNet 100Mbps *)
+   HWUnitID {ACFB3804-17E4-4c27-A14F-B925C16A463F}
+   Description "Ethernet (100 mbps)"
+   Information "Ethernet (100 mbps)"
+   Icons ChannelType
+   InterfaceInfo
+      Interface CIGInterface
+      CLSID_CB   {DD3B11AD-9263-4c69-A8AD-1D0D76BD6E6A}
+      CLSID_CTRL {AA890B2C-6A8D-47ec-8609-147271D1E66F}
+      HWConfig Fail
+   End InterfaceInfo
+
+   DiscreteNumbers
+      1   2   3   4   5   6   7   8   9   10  11  12  13  14  15  16
+      17  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32
+      33  34  35  36  37  38  39  40  41  42  43  44  45  46  47  48
+      49  50  51  52  53  54  55  56  57  58  59  60  61  62  63  64
+      65  66  67  68  69  70  71  72  73  74  75  76  77  78  79  80
+      81  82  83  84  85  86  87  88  89  90  91  92  93  94  95  96
+      97  98  99  100 101 102 103 104 105 106 107 108 109 110 111 112
+      113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128
+      129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144
+      145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160
+      161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176
+      177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192
+      193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208
+      209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224
+      225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240
+      241 242 243 244 245 246 247 248 249 250 251 252 253 254 
+   End DiscreteNumbers
+
+   SubUnitTypes
+      HWUnitID {B52A1E20-9721-46c1-998C-F427A34E53EA}  (* GUID for Modbus TCP Slave *)
+      HWUnitID {2B935447-0151-488d-A455-310CE8873F9C}  (* GUID for Gateway *)
+   End SubUnitTypes
+   Parameters 
+     ParamInfo 
+        Name IPADDRESS                        (* IP address *)
+        Description "IP address"
+        CompileType HWConfig 
+        Datatype STRING
+        Default "192.168.0.0"
+        ParamType Numbered 0
+     End ParamInfo
+    ParamInfo 
+        Name BACKUPIPADDRESS                 (* Backup IP address *)
+        Description "Backup IP address offset"
+        CompileType HWConfig 
+        Datatype STRING        
+        Default "0.0.0.100"
+        ParamType Numbered 1
+     End ParamInfo
+     ParamInfo
+        Name IPSUBNETMASK                    (* IP subnet mask *)
+        Description "IP subnet mask"
+        CompileType HWConfig
+        Datatype STRING
+        Default "255.255.255.0"
+        ParamType Numbered 2
+     End ParamInfo
+     ParamInfo
+        Name SPEED                           (* Speed *)
+        Description "Speed"
+        Hidden
+        CompileType HWConfig
+        Datatype ENUM
+        Default 0
+        ParValIndex 0
+        ParamType Numbered 3
+     End ParamInfo
+     ParamInfo
+        Name DUPLEX                          (* Duplex *)
+        Description "Duplex"
+        Hidden
+        CompileType HWConfig
+        Datatype ENUM
+        Default 0
+        ParValIndex 1
+        ParamType Numbered 4
+     End ParamInfo
+     ParamInfo
+        Name COMMTIMEOUTREDUNDANCY            (* Communication timeout for redundancy *)
+        Description "Communication timeout for redundancy"
+        Hidden
+        CompileType HWConfig
+        Datatype INT
+        Default 1000
+        ParValIndex 2
+        ParamType Numbered 5
+     End ParamInfo
+   End Parameters
+   ParValList
+      ParVal
+         ParValIndex 0               (*Speed*)
+         UnitText   "mbps"
+         ENUM
+         "Auto" 0
+         "100" 100
+         "10" 10
+      End ParVal
+      ParVal
+         ParValIndex 1               (*Duplex*)
+         ENUM
+         "Auto" 0
+         "Half" 1
+         "Full" 2
+      End ParVal
+      ParVal
+         ParValIndex 2               (*Communication timeout for redundancy*)
+         UnitText    "msec"
+         INT 0 60000 0 60000
+      End ParVal
+   End ParValList
+   Channels
+      ChannelInfo
+         Number 0
+         ChannelName "UnitStatus"
+         Datatype Status_In
+         Routine 900
+         CopyParameters 0 0 16#50000
+      End ChannelInfo
+   End Channels
+
+   UnitStatusText
+     ExtendedStatus1    "Cable break on ethernet port 1"
+     ExtendedStatus2    "IP conflict"
+     ExtendedStatus3    "Failed to initialize ethernet port 1"
+     ExtendedStatus4    "Network Storm Detected on ethernet port 1"
+     ExtendedStatus5    "Communication problem on ethernet port 1"
+
+     ExtendedStatus9    "Cable break on ethernet port 1 in the backup"
+     ExtendedStatus10   "IP conflict in the backup"
+     ExtendedStatus11   "Failed to initialize ethernet port 1 in the backup"
+     ExtendedStatus12   "Network Storm Detected on ethernet port 1 in the backup"
+     ExtendedStatus13   "Communication problem on ethernet port 1 in the backup"
+   End UnitStatusText
+
+   UnitStatusSeverity
+     ExtendedStatus1    GeneralError  TriggerAlarm  SeverityHigh  (*"Cable break on ethernet port 1"*)
+     ExtendedStatus2    GeneralError  TriggerAlarm  SeverityHigh  (*"IP conflict"*)
+     ExtendedStatus3    GeneralError  TriggerAlarm  SeverityHigh  (*"Failed to initialize ethernet port 1"*)
+     ExtendedStatus4    GeneralError  TriggerAlarm  SeverityHigh  (*"Network Storm Detected on ethernet port 1"*)
+     ExtendedStatus5    GeneralError  TriggerAlarm  SeverityHigh  (*"Communication problem on ethernet port 1"*)
+
+     ExtendedStatus9    GeneralError  TriggerAlarm  SeverityMedium  (*"Cable break on ethernet port 1 in the backup"*)
+     ExtendedStatus10    GeneralError  TriggerAlarm  SeverityMedium  (*"IP conflict in the backup"*)
+     ExtendedStatus11   GeneralError  TriggerAlarm  SeverityMedium  (*"Failed to initialize ethernet port 1 in the backup"*)
+     ExtendedStatus12    GeneralError  TriggerAlarm  SeverityMedium  (*"Network Storm Detected on ethernet port 1 in the backup"*)
+     ExtendedStatus13    GeneralError  TriggerAlarm  SeverityMedium  (*"Communication problem on ethernet port 1 in the backup"*)
+  End UnitStatusSeverity
+
+  HWUnitInfoCRC 16#1D54
+End HWUnitInfo (* EtherNet100Mbps *)

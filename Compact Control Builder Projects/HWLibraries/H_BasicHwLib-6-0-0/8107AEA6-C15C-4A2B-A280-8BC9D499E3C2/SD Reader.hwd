@@ -1,0 +1,16 @@
+HwUnitInfo  (* SD Reader *)
+   HWUnitID {07B38A6B-F8B3-4a8d-AB1C-FB740189C26B}
+   Description "SD Reader"
+   Information "SD Memory Reader"
+   Icons ChannelType
+   Attributes CompileAlways
+   InterfaceInfo
+     Interface CompactFlashReader
+     HWConfig Fail
+   End InterfaceInfo
+   SubUnits 1
+   SubUnitTypes
+      HWUnitID {E1982706-AE94-4093-AD8D-2B100710B614}
+   End SubUnitTypes
+  HWUnitInfoCRC 16#6A1A
+End HWUnitInfo (* SD Reader *)

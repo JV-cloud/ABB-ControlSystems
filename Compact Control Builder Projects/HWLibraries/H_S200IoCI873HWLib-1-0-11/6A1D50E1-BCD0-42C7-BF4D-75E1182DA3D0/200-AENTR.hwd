@@ -1,0 +1,353 @@
+(****************************************************************************)
+(* FILE            200-AENTR.hwd                                            *)
+(*                                                                          *)
+(* DESCRIPTION     Hardware definition file for 200-AENTR                   *)
+(*                                                                          *)
+(* AUTHOR          Sneha S                                                  *)
+(*                                                                          *)
+(*                                                                          *)
+(* All rights reserved. Reproduction, modification, use or disclosure       *)
+(* to third parties without express authority, is forbidden.                *)
+(* Copyright ABB Inc. 2013.                                                 *)
+(*                                                                          *)
+(*                                                                          *)
+(* 17-10-2013 Sneha S            Initial version                            *)
+(*                                                                          *)
+(****************************************************************************)
+FileHeader
+  Contents              "200-AENTR"
+  Date                  "17-10-2013"
+  Version               "1.0-0"  
+  RequiredSyntaxVersion "3.0"
+End FileHeader
+
+HWUnitInfo
+  HWUnitID         {7e938f95-1917-4d58-a605-bdae3951378b}
+  Description      "200-AENTR"
+  Information      "EtherNet/IP adapter for S200 I/O"
+  Icons            Ser200AdapterType
+  Attributes       AdapterUnit
+
+  InterfaceInfo
+    Interface  CIGInterface
+    IoSysType  CIGIO
+    CLSID_CB   {4CDF91C2-C5C4-4153-8502-15783AA2384B}
+    CLSID_CTRL {2DA9F31E-56AB-4ffa-A07B-CC488F4F88BC}
+    HWConfig   Fail
+  End InterfaceInfo
+
+  ConnectionInfo
+    ConnectType  AllUnits
+    IOConnect    Fail
+    IOConfig     NoFail
+  End ConnectionInfo
+
+  AutoAttachInfo
+    AutoAttachTo {2EAB862D-192C-427d-90F9-AB8643D2543E}
+  End AutoAttachInfo
+
+  DiscreteNumbers
+     1 2 3 4 5 6 7 8 
+  End DiscreteNumbers
+
+  SubUnitTypes
+    HWUnitID {6635d2ae-9d1a-4953-b36a-556eea31874d} Positions  1 2 3 4 5 6 7 8 (* 200C-IE4xOE2 *)
+    HWUnitID {5967de90-e618-4622-bc51-320835eecdca} Positions  1 2 3 4 5 6 7 8 (* 200-IE8 *) 
+    HWUnitID {1999cd15-abf7-479f-bc1b-2e92bb4e6758} Positions  1 2 3 4 5 6 7 8 (* 200-OE4 *)
+    HWUnitID {d2bf3af6-2020-479e-90bd-0eb86eb90785} Positions  1 2 3 4 5 6 7 8 (* 200-IB16 *)
+    HWUnitID {47dc0ef5-9ba5-4adf-888f-81edc1e36ff6} Positions  1 2 3 4 5 6 7 8 (* 200-OB16 *)
+    HWUnitID {9c7d85df-54d8-4185-a224-96d5c59e93ea} Positions  1 2 3 4 5 6 7 8 (* 200C-IB10xOB6P *)
+    HWUnitID {7453a152-19ce-4dbd-9b20-a76699296abe} Positions  1 2 3 4 5 6 7 8 (* 200C-IB16 *)
+    HWUnitID {301ad781-1e9d-4517-b57c-93ef18755431} Positions  1 2 3 4 5 6 7 8 (* 200C-IE8 *)
+    HWUnitID {99EDF2BF-4142-4098-A269-9C48E8023C6A} Positions  1 2 3 4 5 6 7 8 (* 200C-OB16P *)
+    HWUnitID {3bb5d3ac-3f6d-4d6d-be27-5512acbf2f99} Positions  1 2 3 4 5 6 7 8 (* 200C-OE4 *) 
+    HWUnitID {88b7c44d-0192-4af9-8d37-5b610b3d5b78} Positions  1 2 3 4 5 6 7 8 (* 200-DUTB *)
+    HWUnitID {76137729-d439-46bf-b709-41151478877f} Positions  1 2 3 4 5 6 7 8 (* 200-IB10xOB6 *)
+    HWUnitID {9a966fea-85bb-495c-9897-0764f1906eae} Positions  1 2 3 4 5 6 7 8 (* 200-IB32 *)
+    HWUnitID {caf50612-fd36-413d-9afe-2ca82172a5d7} Positions  1 2 3 4 5 6 7 8 (* 200-IE4xOE2 *)
+    HWUnitID {c7c02f24-b187-4781-9c7b-259e9c211524} Positions  1 2 3 4 5 6 7 8 (* 200-IF4I *)
+    HWUnitID {5b1da259-5b75-4b23-8bd9-398cd4a0a6a7} Positions  1 2 3 4 5 6 7 8 (* 200-IT8 *)
+    HWUnitID {92a3bbe9-3549-4b42-849f-1d0e01cd68bc} Positions  1 2 3 4 5 6 7 8 (* 200-OB16P *)
+    HWUnitID {c39b1833-4878-457c-848f-617e563581d6} Positions  1 2 3 4 5 6 7 8 (* 200-OB32P *)
+    HWUnitID {1aa8dc6f-bb07-4b67-9864-8c26d2f81df1} Positions  1 2 3 4 5 6 7 8 (* 200-OF4I *)
+    HWUnitID {1440476e-1fbe-47ef-893d-916430bd528b} Positions  1 2 3 4 5 6 7 8 (* AI210 *)
+    HWUnitID {179c4804-d792-4472-9559-fbcfae83e7c9} Positions  1 2 3 4 5 6 7 8 (* AO210 *)
+    HWUnitID {2ebc1a48-24dc-4f4a-a915-2245f16e8801} Positions  1 2 3 4 5 6 7 8 (* AX210 *)
+    HWUnitID {4e1476cb-a42e-488b-b20e-3125fb0c5885} Positions  1 2 3 4 5 6 7 8 (* DI210 *)
+    HWUnitID {60e95b58-5504-489c-b1ac-f10228727950} Positions  1 2 3 4 5 6 7 8 (* DO210 *)
+    HWUnitID {7481fc54-bd3e-4292-b79a-17b2773b29c0} Positions  1 2 3 4 5 6 7 8 (* 200-IA8 *)
+    HWUnitID {457b7484-0fdd-4726-9d90-28546e45a3c5} Positions  1 2 3 4 5 6 7 8 (* 200-IB16xOB16P *)
+    HWUnitID {f8529a91-80ed-4b8e-8115-62ddf6ae846a} Positions  1 2 3 4 5 6 7 8 (* 200-IM8 *)
+    HWUnitID {992f9548-62f9-4a52-81e0-719016d2ce0f} Positions  1 2 3 4 5 6 7 8 (* 200-IP4 *)
+    HWUnitID {555645c9-d43e-40b9-a1e6-33ba7133eb52} Positions  1 2 3 4 5 6 7 8 (* 200-IR8 *)
+    HWUnitID {f76822a2-5821-434e-8634-664baf35a846} Positions  1 2 3 4 5 6 7 8 (* 200-OA8 *)
+    HWUnitID {e91f70c2-5933-4ea1-a058-f3386c9f2273} Positions  1 2 3 4 5 6 7 8 (* 200-OB8EP *)
+    HWUnitID {791b990e-5711-4d82-b512-3e6619f84904} Positions  1 2 3 4 5 6 7 8 (* 200-OM8 *)
+    HWUnitID {6b249e9e-e098-4446-897a-dc0a18dd2688} Positions  1 2 3 4 5 6 7 8 (* 200-OW8 *)
+    HWUnitID {2e4b5d8c-2242-46f1-83a3-e1530430bd32} Positions  1 2 3 4 5 6 7 8 (* DX210 *)
+    HWUnitID {EF172DC2-2647-4480-9B88-B59918711905} Positions  1 2 3 4 5 6 7 8 (* 200-IR8R *)
+    HWUnitID {32DC7534-51A6-4705-9796-E488A5F1080E} Positions  1 2 3 4 5 6 7 8 (* 200-IP2 *)
+
+  End SubUnitTypes
+
+  Parameters
+    ParamInfo
+      Name            Node_Type
+      Description     "NodeType"
+      Hidden
+      CompileType     HWConfig
+      Datatype        ENUM
+      Default         3
+      ParValIndex     0
+      ParamType        Numbered 1
+    End ParamInfo
+    ParamInfo
+      Name            VENDORID
+      Description     "Vendor ID"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         1083
+      ParValIndex     1
+      ParamType        Numbered 2
+    End ParamInfo
+    ParamInfo
+      Name            PRODTYPE
+      Description     "Product Type"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         12
+      ParValIndex     1
+      ParamType        Numbered 3
+    End ParamInfo
+    ParamInfo
+      Name            PRODCODE
+      Description     "Product Code"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         261
+      ParValIndex     1
+      ParamType        Numbered 4
+    End ParamInfo
+    ParamInfo
+      Name            MAJORREV
+      Description     "Major Revision"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         1
+      ParValIndex     1
+      ParamType        Numbered 5
+    End ParamInfo
+    ParamInfo
+      Name            MINORREV
+      Description     "Minor Revision"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         13
+      ParValIndex     1
+      ParamType        Numbered 6
+    End ParamInfo
+    ParamInfo
+      Name            EKEYVENDORID
+      Description     "Electronic Key VendorID"
+      Hidden
+      CompileType     HWConfig
+      Datatype        ENUM
+      Default         1
+      ParValIndex     2
+      ParamType        Numbered 7
+    End ParamInfo
+    ParamInfo
+      Name            EKEYPRODTYPE
+      Description     "Electronic Key Product Type"
+      Hidden
+      CompileType     HWConfig
+      Datatype        ENUM
+      Default         1
+      ParValIndex     2
+      ParamType        Numbered 8
+    End ParamInfo
+    ParamInfo
+      Name            EKEYPRODCODE
+      Description     "Electronic Key Product Code"
+      Hidden
+      CompileType     HWConfig
+      Datatype        ENUM
+      Default         1
+      ParValIndex     2
+      ParamType        Numbered 9
+    End ParamInfo
+    ParamInfo
+      Name            EKEYMAJREV
+      Description     "Electronic Key Major Revision"
+      Hidden
+      CompileType     HWConfig
+      Datatype        ENUM
+      Default         2
+      ParValIndex     3
+      ParamType        Numbered 10
+    End ParamInfo
+    ParamInfo
+      Name            PRMCLSDSCRPTR
+      Description     "Parameter Class Descriptor"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         16#0
+      ParValIndex     1
+      ParamType        Numbered 11
+    End ParamInfo
+    ParamInfo
+      Name            NOOFPORTS
+      Description     "Number of Port Objects"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         1
+      ParValIndex     1
+      ParamType        Numbered 12
+    End ParamInfo
+    ParamInfo
+      Name            ETHERNETIP_PORTTYPE
+      Description     "Port Type"
+      Hidden
+      CompileType     HWConfig
+      Datatype        ENUM
+      Default         0
+      ParValIndex     4
+      ParamType        Numbered 50
+    End ParamInfo
+    ParamInfo
+      Name            ETHERNETIP_PORTNUM
+      Description     "Port Number"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         1
+      ParValIndex     1
+      ParamType        Numbered 51
+    End ParamInfo
+    ParamInfo
+      Name            IPADDRESS
+      Description     "IP Address"
+      CompileType     HWConfig
+      Datatype        STRING
+      Default         ""
+      ParamType        Numbered 100
+    End ParamInfo
+
+    ParamInfo
+      Name            NUM_OF_CONN_OBJECTS
+      Description     "Number of Connection Objects"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         0
+      ParValIndex     1
+      ParamType        Numbered 103
+    End ParamInfo
+
+    ParamInfo
+      Name            Num_Of_Param_Objects
+      Description     "Number of parameters"
+      Hidden
+      CompileType     HWConfig
+      Datatype        INT
+      Default         0
+      ParValIndex     1
+      ParamType        Numbered 3000
+    End ParamInfo
+  End Parameters
+
+  ParValList
+    ParVal
+      ParValIndex     0
+      UnitText        ""
+      enum
+      "Node_CI873" 1
+      "Node_CI_Diagnostics" 2
+      "Node_EIPDevice" 3
+      "Node_EIPMAdapter" 4
+      "Node_LD800DN" 5
+      "Node_DNetDevice" 6
+      "Node_DNetMAdapter" 7
+      "Node_EIPIOModule" 8
+      "Node_DNetIOModule" 9
+      "Node_LD_Diagnostics" 10
+    End ParVal
+    ParVal
+      ParValIndex     1
+      UnitText        ""
+      INT 0 2147483647 0 2147483647
+    End ParVal
+    ParVal
+      ParValIndex     2
+      UnitText        ""
+      enum
+      "Disable Keying" 0
+      "Enable Keying" 1
+    End ParVal
+    ParVal
+      ParValIndex     3
+      UnitText        ""
+      enum
+      "Disable Keying" 0
+      "Exact Match" 1
+      "Current and Higher" 2
+    End ParVal
+    ParVal
+      ParValIndex     4
+      UnitText        ""
+      enum
+      "Ethernet_IP" 1
+      "DeviceNet" 2
+      "Vendor_Specific" 3
+    End ParVal
+  End ParValList
+
+  Channels
+    ChannelInfo
+      Number                0
+      ChannelName           "UnitStatus"
+      Datatype              Status_In
+      Routine               900
+      CopyParameters        16#0 16#0 16#50000
+    End ChannelInfo
+  End Channels
+
+  UnitStatusText
+    DeviceSpecific1  "Device Not Found"
+    DeviceSpecific2  "Wrong Device Type"
+    DeviceSpecific3  "Internal Config Error"   
+    ExtendedStatus1  "Minor Revision Mismatch"
+    ExtendedStatus8  "No connections enabled"
+  End UnitStatusText
+
+  UnitStatusSeverity
+    DeviceSpecific1   GeneralError TriggerAlarm SeverityHigh
+    DeviceSpecific2   GeneralError TriggerAlarm SeverityHigh
+    DeviceSpecific3   GeneralWarning TriggerAlarm SeverityHigh    
+    ExtendedStatus1   GeneralWarning TriggerAlarm SeverityLow
+    ExtendedStatus8   GeneralWarning TriggerAlarm SeverityLow
+  End UnitStatusSeverity
+
+  Configuration
+    ConfigInfo
+      ModuleKey        16#1FFF
+      InAreaSize       0 BYTE
+      OutAreaSize      0 BYTE
+    End ConfigInfo
+    ConfigInfo
+      EmptyConfig
+      ModuleKey        16#FFFF
+      InAreaSize       0 BYTE
+      OutAreaSize      0 BYTE
+    End ConfigInfo
+  End Configuration
+
+  HWUnitInfoCRC 16#0991
+End HWUnitInfo

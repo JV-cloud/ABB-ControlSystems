@@ -1,0 +1,809 @@
+(*-------------------------------------------------------------------*)
+(* $Workfile: io_DX910_p.hwd $ *)
+(* Created:       26.03.2001 (DD.MM.YY) *)
+(* by:            T.Merlin, ABB Automation *)
+(* $Revision: 21 $ *)
+(* Last modified: $Date: 28.09.04 9:28 $ *)
+(* by:            $ amansson $ *)
+(* $Revision: 22 $ *)
+(* Last modified: $Date: 12.02.08 13:35 $ *)
+(* by:            $ Bosch $ *)
+(* Change wrong Number 23 to 29 at DiagInfo Description Channel 8 *)
+(* Correction because SIL parser - CI854 variant DIO8 *)
+(* Removing CI851 *)
+(* $Revision: 23 $ *)
+(* Last modified: $Date: 28.05.08 12:14 $ *)
+(* by:            $Author: Bosch $ *)
+(* Write protection of io_DX910_p.hwd *)
+(* Special letters . , and : were removed at inserting of the *.hwd file in Control builder M  SV 5 SP1 *)
+(* Version 1.1.1   Bugfix Tracker 33892*)
+
+(*-------------------------------------------------------------------*)
+
+(*----------------------------------------------------------------------------*)
+(*----------------------------------------------------------------------------*)
+(* Coding for CI854 *)
+(*----------------------------------------------------------------------------*)
+(*----------------------------------------------------------------------------*)
+
+(* DX910S (DIO8-Ex) *)
+
+HWUnitInfo
+  HWUnitID         {900A39D9-CC72-11d5-B504-00C04F11556C}
+  Description      "DX910* (DIO8)"
+  Information      "Digital I/O, 1 x 8 ch., initiator or I.S. valve"
+  Icons            S900IOType
+  Attributes       IoUnit DigitalIn DigitalOut
+
+
+  Parameters
+
+    ParamInfo
+      Name            SHORT_DETECT_1_2
+      Description     "ch. 1,2: short detect"
+      CompileType      IOConfig
+      Datatype         ENUM 
+      Default          0
+      ParValIndex      1
+      ParamType        CIGIOData  1 7 1 ByteParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo
+      Name            SHORT_DETECT_3_4
+      Description     "ch. 3,4: short detect"
+      CompileType      IOConfig
+      Datatype         ENUM 
+      Default          0
+      ParValIndex      1
+      ParamType        CIGIOData  2 7 1 ByteParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo
+      Name            SHORT_DETECT_5_6
+      Description     "ch. 5,6: short detect"
+      CompileType      IOConfig
+      Datatype         ENUM 
+      Default          0
+      ParValIndex      1
+      ParamType        CIGIOData  3 7 1 ByteParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo
+      Name            SHORT_DETECT_7_8
+      Description     "ch. 7,8: short detect"
+      CompileType      IOConfig
+      Datatype         ENUM 
+      Default          0
+      ParValIndex      1
+      ParamType        CIGIOData  4 7 1 ByteParam ByteOffset 
+    End ParamInfo
+
+  ParamInfo
+      Name            OPEN_LINE_DETECT_1_2
+      Description     "ch. 1,2: open line detect"
+      CompileType      IOConfig
+      Datatype         ENUM 
+      Default          0
+      ParValIndex      1
+      ParamType        CIGIOData  1 6 1 ByteParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo
+      Name            OPEN_LINE_DETECT_3_4
+      Description     "ch. 3,4: open line detect"
+      CompileType      IOConfig
+      Datatype         ENUM 
+      Default          0
+      ParValIndex      1
+      ParamType        CIGIOData  2 6 1 ByteParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo
+      Name            OPEN_LINE_DETECT_5_6
+      Description     "ch. 5,6: open line detect"
+      CompileType      IOConfig
+      Datatype         ENUM 
+      Default          0
+      ParValIndex      1
+      ParamType        CIGIOData  3 6 1 ByteParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo
+      Name            OPEN_LINE_DETECT_7_8
+      Description     "ch. 7,8: open line detect"
+      CompileType      IOConfig
+      Datatype         ENUM 
+      Default          0
+      ParValIndex      1
+      ParamType        CIGIOData  4 6 1 ByteParam ByteOffset 
+    End ParamInfo
+
+  ParamInfo
+      Name            FAILSAFE_1_2
+      Description     "ch. 1,2: failsafe mode"
+      CompileType      IOConfig
+      Datatype         ENUM 
+      Default          0
+      ParValIndex      71
+      ParamType        CIGIOData  1 4 1 ByteParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo
+      Name            FAILSAFE_3_4
+      Description     "ch. 3,4: failsafe mode"
+      CompileType      IOConfig
+      Datatype         ENUM 
+      Default          0
+      ParValIndex      71
+      ParamType        CIGIOData  2 4 1 ByteParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo
+      Name            FAILSAFE_5_6
+      Description     "ch. 5,6: failsafe mode"
+      CompileType      IOConfig
+      Datatype         ENUM 
+      Default          0
+      ParValIndex      71
+      ParamType        CIGIOData  3 4 1 ByteParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo
+      Name            FAILSAFE_7_8
+      Description     "ch. 7,8: failsafe mode"
+      CompileType      IOConfig
+      Datatype         ENUM 
+      Default          0
+      ParValIndex      71
+      ParamType        CIGIOData  4 4 1 ByteParam ByteOffset 
+    End ParamInfo
+
+  ParamInfo
+      Name            DIRECTION_1_2
+      Description     "ch. 1,2: direction"
+      CompileType      IOConfig
+      Datatype         ENUM 
+      Default          0
+      ParValIndex      79
+      ParamType        CIGIOData  1 3 1 ByteParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo
+      Name            DIRECTION_3_4
+      Description     "ch. 3,4: direction"
+      CompileType      IOConfig
+      Datatype         ENUM 
+      Default          0
+      ParValIndex      79
+      ParamType        CIGIOData  2 3 1 ByteParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo
+      Name            DIRECTION_5_6
+      Description     "ch. 5,6: direction"
+      CompileType      IOConfig
+      Datatype         ENUM 
+      Default          0
+      ParValIndex      79
+      ParamType        CIGIOData  3 3 1 ByteParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo
+      Name            DIRECTION_7_8
+      Description     "ch. 7,8: direction"
+      CompileType      IOConfig
+      Datatype         ENUM 
+      Default          0
+      ParValIndex      79
+      ParamType        CIGIOData  4 3 1 ByteParam ByteOffset 
+    End ParamInfo
+
+  ParamInfo
+      Name            POLARITY_1_2
+      Description     "ch. 1,2: polarity"
+      CompileType      IOConnect
+      Datatype         ENUM 
+      Default          0
+      ParValIndex      87
+      ParamType        CIGIOData  1 2 1 ByteParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo
+      Name            POLARITY_3_4
+      Description     "ch. 3,4: polarity"
+      CompileType      IOConnect
+      Datatype         ENUM 
+      Default          0
+      ParValIndex      87
+      ParamType        CIGIOData  2 2 1 ByteParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo
+      Name            POLARITY_5_6
+      Description     "ch. 5,6: polarity"
+      CompileType      IOConnect
+      Datatype         ENUM 
+      Default          0
+      ParValIndex      87
+      ParamType        CIGIOData  3 2 1 ByteParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo
+      Name            POLARITY_7_8
+      Description     "ch. 7,8: polarity"
+      CompileType      IOConnect
+      Datatype         ENUM 
+      Default          0
+      ParValIndex      87
+      ParamType        CIGIOData  4 2 1 ByteParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo
+      Name            DAMPING_1_2
+      Description     "ch. 1,2: damping"
+      CompileType      IOConfig
+      Datatype         ENUM 
+      Default          0
+      ParValIndex      95
+      ParamType        CIGIOData  1 0 1 ByteParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo
+      Name            DAMPING_3_4
+      Description     "ch. 3,4: damping"
+      CompileType      IOConfig
+      Datatype         ENUM 
+      Default          0
+      ParValIndex      95
+      ParamType        CIGIOData  2 0 1 ByteParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo
+      Name            DAMPING_5_6
+      Description     "ch. 5,6: damping"
+      CompileType      IOConfig
+      Datatype         ENUM 
+      Default          0
+      ParValIndex      95
+      ParamType        CIGIOData  3 0 1 ByteParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo
+      Name            DAMPING_7_8
+      Description     "ch. 7,8: damping"
+      CompileType     IOConfig
+      Datatype        ENUM 
+      Default         0
+      ParValIndex     95
+      ParamType       CIGIOData  4 0 1 ByteParam ByteOffset 
+    End ParamInfo
+
+    ParamInfo
+      Name            DEACTIVATE_1
+      Description     "ch. 1: deactivate"
+      CompileType     IOConfig
+      DataType        BOOL
+      Default 0
+      ParamType       CIGIOData  5 0 1 ByteParam ByteOffset
+    End ParamInfo
+
+    ParamInfo
+      Name            DEACTIVATE_2
+      Description     "ch. 2: deactivate"
+      CompileType     IOConfig
+      DataType        BOOL
+      Default 0
+      ParamType       CIGIOData  5 1 1 ByteParam ByteOffset
+  End ParamInfo
+
+    ParamInfo
+      Name            DEACTIVATE_3
+      Description     "ch. 3: deactivate"
+      CompileType     IOConfig
+      DataType        BOOL
+      Default 0
+      ParamType       CIGIOData  5 2 1 ByteParam ByteOffset
+    End ParamInfo
+
+    ParamInfo
+      Name            DEACTIVATE_4
+      Description     "ch. 4: deactivate"
+      CompileType     IOConfig
+      DataType        BOOL
+      Default 0
+      ParamType       CIGIOData  5 3 1 ByteParam ByteOffset
+    End ParamInfo
+
+    ParamInfo
+      Name            DEACTIVATE_5
+      Description     "ch. 5: deactivate"
+      CompileType     IOConfig
+      DataType        BOOL
+      Default 0
+      ParamType       CIGIOData  5 4 1 ByteParam ByteOffset
+    End ParamInfo
+
+    ParamInfo
+      Name            DEACTIVATE_6
+      Description     "ch. 6: deactivate"
+      CompileType     IOConfig
+      DataType        BOOL
+      Default 0
+      ParamType       CIGIOData  5 5 1 ByteParam ByteOffset
+    End ParamInfo
+
+    ParamInfo
+      Name            DEACTIVATE_7
+      Description     "ch. 7: deactivate"
+      CompileType     IOConfig
+      DataType        BOOL
+      Default 0
+      ParamType       CIGIOData  5 6 1 ByteParam ByteOffset
+    End ParamInfo
+
+    ParamInfo
+      Name            DEACTIVATE_8
+      Description     "ch. 8: deactivate"
+      CompileType     IOConfig
+      DataType        BOOL
+      Default 0
+      ParamType       CIGIOData  5 7 1 ByteParam ByteOffset
+    End ParamInfo
+
+  End Parameters
+
+
+  ParValList
+
+    ParVal
+      ParValIndex      1
+      UnitText         ""
+      ENUM
+      "on" 0
+      "off" 1
+    End ParVal
+
+    ParVal
+      ParValIndex      71
+      UnitText         ""
+      ENUM
+      "min value" 0
+      "max value" 1
+      "last valid value" 2
+    End ParVal
+
+    ParVal
+      ParValIndex      79
+      UnitText         ""
+      ENUM
+      "input" 0
+      "output" 1
+    End ParVal
+
+    ParVal
+      ParValIndex      87
+      UnitText         ""
+      ENUM
+      "normal" 0
+      "inverted" 1
+    End ParVal
+
+    ParVal
+      ParValIndex      95
+      UnitText         ""
+      ENUM
+      "off" 0
+      "10ms" 1
+      "20ms" 2
+      "50ms" 3
+    End ParVal
+
+  End ParValList
+
+
+  Channels
+
+    ChannelInfo
+      Number            1
+      ChannelName      "Input 1"
+      Datatype          Bool_In
+      Routine           130
+      CopyParameters    16#0 16#0 16#30000 16#1
+    End ChannelInfo
+
+    ChannelInfo
+      Number            2
+      ChannelName      "Input 2"
+      Datatype          Bool_In
+      Routine           130
+      CopyParameters    16#0 16#0 16#30000 16#2
+    End ChannelInfo
+
+    ChannelInfo
+      Number            3
+      ChannelName      "Input 3"
+      Datatype          Bool_In
+      Routine           130
+      CopyParameters    16#0 16#0 16#30000 16#4
+    End ChannelInfo
+
+    ChannelInfo
+      Number            4
+      ChannelName      "Input 4"
+      Datatype          Bool_In
+      Routine           130
+      CopyParameters    16#0 16#0 16#30000 16#8
+    End ChannelInfo
+
+    ChannelInfo
+      Number            5
+      ChannelName      "Input 5"
+      Datatype          Bool_In
+      Routine           130
+      CopyParameters    16#0 16#0 16#30000 16#10
+    End ChannelInfo
+
+    ChannelInfo
+      Number            6
+      ChannelName      "Input 6"
+      Datatype          Bool_In
+      Routine           130
+      CopyParameters    16#0 16#0 16#30000 16#20
+    End ChannelInfo
+
+    ChannelInfo
+      Number            7
+      ChannelName      "Input 7"
+      Datatype          Bool_In
+      Routine           130
+      CopyParameters    16#0 16#0 16#30000 16#40
+    End ChannelInfo
+
+    ChannelInfo
+      Number            8
+      ChannelName      "Input 8"
+      Datatype          Bool_In
+      Routine           130
+      CopyParameters    16#0 16#0 16#30000 16#80
+    End ChannelInfo
+
+    ChannelInfo
+      Number            9
+      ChannelName       "All inputs"
+      DataType          DWord_In
+      Routine           530
+      CopyParameters    16#0 16#0 16#30000
+    End ChannelInfo
+
+    ChannelInfo
+      Number            10
+      ChannelName      "Output 1"
+      Datatype          Bool_Out
+      Routine           230
+      CopyParameters    16#0 16#0 16#40000 16#1
+      ConflictInfo      16#0201
+    End ChannelInfo
+
+    ChannelInfo
+      Number            11
+      ChannelName      "Output 2"
+      Datatype          Bool_Out
+      Routine           230
+      CopyParameters    16#0 16#0 16#40000 16#2
+      ConflictInfo      16#0201
+    End ChannelInfo
+
+    ChannelInfo
+      Number            12
+      ChannelName      "Output 3"
+      Datatype          Bool_Out
+      Routine           230
+      CopyParameters    16#0 16#0 16#40000 16#4
+      ConflictInfo      16#0201
+    End ChannelInfo
+
+    ChannelInfo
+      Number            13
+      ChannelName      "Output 4"
+      Datatype          Bool_Out
+      Routine           230
+      CopyParameters    16#0 16#0 16#40000 16#8
+      ConflictInfo      16#0201
+    End ChannelInfo
+
+    ChannelInfo
+      Number            14
+      ChannelName      "Output 5"
+      Datatype          Bool_Out
+      Routine           230
+      CopyParameters    16#0 16#0 16#40000 16#10
+      ConflictInfo      16#0201
+    End ChannelInfo
+
+    ChannelInfo
+      Number            15
+      ChannelName      "Output 6"
+      Datatype          Bool_Out
+      Routine           230
+      CopyParameters    16#0 16#0 16#40000 16#20
+      ConflictInfo      16#0201
+    End ChannelInfo
+
+    ChannelInfo
+      Number            16
+      ChannelName      "Output 7"
+      Datatype          Bool_Out
+      Routine           230
+      CopyParameters    16#0 16#0 16#40000 16#40
+      ConflictInfo      16#0201
+    End ChannelInfo
+
+    ChannelInfo
+      Number            17
+      ChannelName      "Output 8"
+      Datatype          Bool_Out
+      Routine           230
+      CopyParameters    16#0 16#0 16#40000 16#80
+      ConflictInfo      16#0201
+    End ChannelInfo
+
+    ChannelInfo
+      Number            18
+      ChannelName       "All outputs"
+      Datatype          DWord_Out
+      Routine           630
+      CopyParameters    16#0 16#0 16#40000
+      ConflictInfo      16#0102
+    End ChannelInfo
+
+    ChannelInfo
+      Number            19
+      ChannelName       "UnitStatus"
+      Datatype          Status_In
+      Routine           900
+      CopyParameters    0 0 16#50000
+    End ChannelInfo
+
+  End Channels
+
+
+  Diagnostics
+
+    DiagInfo
+      Number            20
+      Description       "Module state"
+      UnitText          ""
+      Datatype          ENUMDIAG
+      DiagValueIndex    1
+      DiagAreaOffset    1 4 16#00020003
+    End DiagInfo
+
+    DiagInfo
+      Number            21
+      Description       "Module"
+      UnitText          ""
+      Datatype          ENUMDIAG
+      DiagValueIndex    2
+      DiagAreaOffset    3 0 0 
+    End DiagInfo
+
+    DiagInfo
+      Number            22
+      Description       "Channel 1"
+      UnitText          ""
+      Datatype          ENUMDIAG
+      DiagValueIndex    3
+      DiagAreaOffset    3 1 0 
+    End DiagInfo
+
+    DiagInfo
+      Number            23
+      Description       "Channel 2"
+      UnitText          ""
+      Datatype          ENUMDIAG
+      DiagValueIndex    4
+      DiagAreaOffset    3 2 0 
+    End DiagInfo
+
+    DiagInfo
+      Number            24
+      Description       "Channel 3"
+      UnitText          ""
+      Datatype          ENUMDIAG
+      DiagValueIndex    5
+      DiagAreaOffset    3 3 0 
+    End DiagInfo
+
+    DiagInfo
+      Number            25
+      Description       "Channel 4"
+      UnitText          ""
+      Datatype          ENUMDIAG
+      DiagValueIndex    6
+      DiagAreaOffset    3 4 0 
+    End DiagInfo
+
+    DiagInfo
+      Number            26
+      Description       "Channel 5"
+      UnitText          ""
+      Datatype          ENUMDIAG
+      DiagValueIndex    7
+      DiagAreaOffset    3 5 0 
+    End DiagInfo
+
+    DiagInfo
+      Number            27
+      Description       "Channel 6"
+      UnitText          ""
+      Datatype          ENUMDIAG
+      DiagValueIndex    8
+      DiagAreaOffset    3 6 0 
+    End DiagInfo
+
+    DiagInfo
+      Number            28
+      Description       "Channel 7"
+      UnitText          ""
+      Datatype          ENUMDIAG
+      DiagValueIndex    9
+      DiagAreaOffset    3 7 0 
+    End DiagInfo
+
+    DiagInfo
+      Number            29
+      Description       "Channel 8"
+      UnitText          ""
+      Datatype          ENUMDIAG
+      DiagValueIndex    10
+      DiagAreaOffset    3 8 0 
+    End DiagInfo
+
+  End Diagnostics
+
+
+  DiagValueList
+
+    DiagValue
+      DiagValueIndex    1
+      DiagDataSize      2
+      ENUMDIAG
+      "OK"              0 NoAction
+      "Module error"    1 DeviceSpecific1
+      "Wrong module"    2 WrongModuleType
+      "Missing module"  3 ModuleMissing
+    End DiagValue
+
+    DiagValue
+      DiagValueIndex    2
+      DiagDataSize      5
+      ENUMDIAG
+      "Internal address conflict" 18 DeviceSpecific2
+      "Unknown module configured" 19 DeviceSpecific3
+      "Unknown module detected"   20 DeviceSpecific4
+      "Parameter inconsistant"    22 DeviceSpecific5
+      "Error"                     10 DeviceSpecific6
+    End DiagValue
+
+    DiagValue
+      DiagValueIndex    3
+      DiagDataSize      5
+      ENUMDIAG
+      "Short circuit ch. 1"       1  ExtendedStatus1
+      "Wire break ch. 1"          6  ExtendedStatus1
+    End DiagValue
+
+    DiagValue
+      DiagValueIndex    4
+      DiagDataSize      5
+      ENUMDIAG
+      "Short circuit ch. 2"       1  ExtendedStatus2
+      "Wire break ch. 2"          6  ExtendedStatus2
+    End DiagValue
+
+    DiagValue
+      DiagValueIndex    5
+      DiagDataSize      5
+      ENUMDIAG
+      "Short circuit ch. 3"       1  ExtendedStatus3
+      "Wire break ch. 3"          6  ExtendedStatus3
+    End DiagValue
+
+    DiagValue
+      DiagValueIndex    6
+      DiagDataSize      5
+      ENUMDIAG
+      "Short circuit ch. 4"       1  ExtendedStatus4
+      "Wire break ch. 4"          6  ExtendedStatus4
+    End DiagValue
+
+    DiagValue
+      DiagValueIndex    7
+      DiagDataSize      5
+      ENUMDIAG
+      "Short circuit ch. 5"       1  ExtendedStatus5
+      "Wire break ch. 5"          6  ExtendedStatus5
+    End DiagValue
+
+    DiagValue
+      DiagValueIndex    8
+      DiagDataSize      5
+      ENUMDIAG
+      "Short circuit ch. 6"       1  ExtendedStatus6
+      "Wire break ch. 6"          6  ExtendedStatus6
+    End DiagValue
+
+    DiagValue
+      DiagValueIndex    9
+      DiagDataSize      5
+      ENUMDIAG
+      "Short circuit ch. 7"       1  ExtendedStatus7
+      "Wire break ch. 7"          6  ExtendedStatus7
+    End DiagValue
+
+    DiagValue
+      DiagValueIndex    10
+      DiagDataSize      5
+      ENUMDIAG
+      "Short circuit ch. 8"       1  ExtendedStatus8
+      "Wire break ch. 8"          6  ExtendedStatus8
+    End DiagValue
+
+  End DiagValueList  
+
+
+  UnitStatusText
+    DeviceSpecific1 "Module error"
+    DeviceSpecific2 "Internal address conflict"
+    DeviceSpecific3 "Unknown module configured"
+    DeviceSpecific4 "Unknown module detected"
+    DeviceSpecific5 "Parameter inconsistant"
+    DeviceSpecific6 "Error"
+
+    ExtendedStatus1 "Line fault ch. 1"
+    ExtendedStatus2 "Line fault ch. 2"
+    ExtendedStatus3 "Line fault ch. 3"
+    ExtendedStatus4 "Line fault ch. 4"
+    ExtendedStatus5 "Line fault ch. 5"
+    ExtendedStatus6 "Line fault ch. 6"
+    ExtendedStatus7 "Line fault ch. 7"
+    ExtendedStatus8 "Line fault ch. 8"
+  End UnitStatusText
+
+
+  UnitStatusSeverity
+    DeviceSpecific1   GeneralError TriggerAlarm SeverityMedium
+    DeviceSpecific2   GeneralError TriggerAlarm SeverityMedium
+    DeviceSpecific3   GeneralError TriggerAlarm SeverityMedium
+    DeviceSpecific4   GeneralError TriggerAlarm SeverityMedium
+    DeviceSpecific5   GeneralError TriggerAlarm SeverityMedium
+    DeviceSpecific6   GeneralError TriggerAlarm SeverityMedium
+
+    ExtendedStatus1   GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus2   GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus3   GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus4   GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus5   GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus6   GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus7   GeneralWarning TriggerEvent SeverityLow
+    ExtendedStatus8   GeneralWarning TriggerEvent SeverityLow
+  End UnitStatusSeverity
+
+
+  Configuration
+    ConfigInfo
+      ModuleKey        16#0004
+      InAreaSize       1  BYTE
+      OutAreaSize      1  BYTE
+      InByte
+        BYTE 0   0
+      OutByte
+        BYTE 0   0
+      CIGIOConnData
+        CIGIOData     16#01 16#C1 16#00 16#00 16#04
+        CIGIOData     16#05 16#00 16#00 16#00 16#00 16#00
+      End CIGIOConnData
+    End ConfigInfo
+  End Configuration
+  HWUnitInfoCRC 16#2933
+End HWUnitInfo (* DX910* (DIO8) *)

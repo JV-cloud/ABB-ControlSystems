@@ -1,0 +1,31 @@
+HWUnitInfo  (* MB300_NODE *)
+   HWUnitID {F839760B-9EC3-496c-96A6-BD0FDA9571F4}
+   Description "MB300 Node"
+   Information "MB300 NODE"
+   Icons RackAdapterType
+   Attributes IoUnit
+   InterfaceInfo
+     Interface CIGInterface
+     CLSID_CB   {9948C614-2B45-44ca-9C72-59624E0B3B40}  (*  CLSID_CB = GUID for MB300 Protocol handler (PH) in Control builder CB *)
+     CLSID_CTRL  {B03B49AD-BCA5-43f9-B134-98CF4CDFDE0A} (* CLSID_CTRL  = GUID for MB300 Protocol handler (PH) in Controler *)
+     HWConfig Fail     (* Change of net parameters affect subunits *)
+   End InterfaceInfo
+
+   Channels
+      ChannelInfo
+         Number 0
+         ChannelName "UnitStatus"
+         Datatype Status_In
+         Routine 900
+         CopyParameters 0 0 16#50000
+      End ChannelInfo
+   End Channels
+   UnitStatusText
+     DeviceSpecific1 "Node unreachable"
+  End UnitStatusText
+   UnitStatusSeverity
+     DeviceSpecific1 GeneralWarning TriggerAlarm SeverityMedium
+   End UnitStatusSeverity
+
+  HWUnitInfoCRC 16#CA51
+End HWUnitInfo  (* MB300_CTRLAREA *)

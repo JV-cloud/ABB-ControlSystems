@@ -1,0 +1,63 @@
+(*---------------------------------------------------------------*)
+(* 2008-01-28  Alfred Theorin                                    *)
+(*             PRC #30786                                        *)
+(*             New UnitInfo supplied by Jan-Olof Nilsson       *)
+(*---------------------------------------------------------------*)
+
+FileHeader
+  Contents              "ABBPanel800 - Input 1 Real"
+  Date                  "2008-01-28"
+  Version               "Version 1.1-0"
+  RequiredSyntaxVersion "3.0"
+End FileHeader
+
+(*========================================================*)
+(*                     INPUT 1 Real                       *)
+(*========================================================*)
+
+HWUnitInfo
+  HWUnitID         {94042c73-d082-4974-93a3-787355b6a1a4}
+  Description      "INPUT 1 Real"
+  Information      "Real(32 bits)Float with exponent"
+  Icons            ProtocolType
+  Attributes       IoUnit AnalogIn
+
+  (* ===== No parameter information delivered from the parser ===== *)
+
+  Channels
+    ChannelInfo
+      Number                0
+      ChannelName           "Input Real 0"
+      Datatype              Real_In
+      Routine               720
+      CopyParameters        16#0 16#0 16#30000 16#00
+    End ChannelInfo
+    ChannelInfo
+      Number                1
+      ChannelName           "UnitStatus"
+      Datatype              Status_In
+      Routine               900
+      CopyParameters        16#0 16#0 16#50000
+    End ChannelInfo
+  End Channels
+
+  (* ===== No diagnostic information delivered from the parser ===== *)
+
+  Configuration
+    ConfigInfo
+      ModuleKey        16#b
+      InAreaSize       4 BYTE
+      OutAreaSize      0 BYTE
+      InByte
+        BYTE 0 0
+        BYTE 0 1
+        BYTE 0 2
+        BYTE 0 3
+      CIGIOConnData
+        CIGIOData      16#01 16#51
+      End CIGIOConnData
+    End ConfigInfo
+  End Configuration
+
+  HWUnitInfoCRC 16#1BAD
+End HWUnitInfo

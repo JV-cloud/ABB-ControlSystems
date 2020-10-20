@@ -1,0 +1,16 @@
+HwUnitInfo  (* Compact Flash Reader *)
+   HWUnitID {A66B660D-0CE6-4d70-A09F-E3AFA7EDE950}
+   Description "CF Reader"
+   Information "Compact Flash Reader"
+   Icons ChannelType
+   Attributes CompileAlways
+   InterfaceInfo
+     Interface CompactFlashReader
+     HWConfig Fail
+   End InterfaceInfo
+   SubUnits 1
+   SubUnitTypes
+      HWUnitID {0447DE23-5960-422f-AD30-E0F1FCDF4847}
+   End SubUnitTypes
+  HWUnitInfoCRC 16#DB14
+End HWUnitInfo (* Compact Flash Reader *)

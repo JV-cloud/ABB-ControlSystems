@@ -1,0 +1,564 @@
+<HEAD>
+Index of symbols created 22-Aug-13 14:22:12.61 
+</HEAD>
+<SECTIONS=15>
+00010000 0002c97c .text
+0002c97c 0002cefc .got2
+0002cefc 0002d56c .fixup
+0002d56c 0002d57c .bss
+0002d57c 0002d588 .data
+0002d588 0002f243 .debug_abbrev
+0002f243 00050b67 .debug_info
+00050b67 00053d88 .debug_line
+00053d88 0005675c .debug_frame
+0005675c 0005a0c7 .debug_loc
+0005a0c7 0005d3f0 .debug_pubnames
+0005d3f0 0005d720 .debug_aranges
+0005d720 0005d7e8 .debug_ranges
+0005d7e8 0006060e .debug_str
+0006060e 0006060e .comment
+</SECTIONS>
+<SYMBOLS=542>
+00000000 PhIEC61850_82xx_68.elf EXE_HEAD
+00000060 PhIEC61850_82xx_68.elf CPhIEC61850PM::ProtocolSpecificConfigurationValues(trHWFAddress, bool&, unsigned long&, unsigned long&, unsigned short&, unsigned long&)
+00000098 PhIEC61850_82xx_68.elf CPhIEC61850PM::FetchRequiredFirmwareInfo(tFirmwareInfo&)
+000000f4 PhIEC61850_82xx_68.elf CPhIEC61850PM::GetProductInfo(unsigned char*, unsigned char*, unsigned char*, unsigned long)
+00000180 PhIEC61850_82xx_68.elf non-virtual thunk to CPhIEC61850PM::~CPhIEC61850PM()
+00000188 PhIEC61850_82xx_68.elf non-virtual thunk to CPhIEC61850PM::~CPhIEC61850PM()
+00000190 PhIEC61850_82xx_68.elf non-virtual thunk to CPhIEC61850PM::~CPhIEC61850PM()
+00000198 PhIEC61850_82xx_68.elf non-virtual thunk to CPhIEC61850PM::~CPhIEC61850PM()
+000001a4 PhIEC61850_82xx_68.elf CPhIEC61850PM::~CPhIEC61850PM()
+00000218 PhIEC61850_82xx_68.elf non-virtual thunk to CPhIEC61850PM::~CPhIEC61850PM()
+00000220 PhIEC61850_82xx_68.elf non-virtual thunk to CPhIEC61850PM::~CPhIEC61850PM()
+00000228 PhIEC61850_82xx_68.elf non-virtual thunk to CPhIEC61850PM::~CPhIEC61850PM()
+00000230 PhIEC61850_82xx_68.elf non-virtual thunk to CPhIEC61850PM::~CPhIEC61850PM()
+0000023c PhIEC61850_82xx_68.elf CPhIEC61850PM::~CPhIEC61850PM()
+000002a0 PhIEC61850_82xx_68.elf CPhIEC61850PM::~CPhIEC61850PM()
+00000304 PhIEC61850_82xx_68.elf CPhIEC61850PM::CPhIEC61850PM()
+0000037c PhIEC61850_82xx_68.elf CPhIEC61850PM::CPhIEC61850PM()
+000003f4 PhIEC61850_82xx_68.elf ObjectFactory
+0000051c PhIEC61850_82xx_68.elf operator delete(void*)
+0000055c PhIEC61850_82xx_68.elf __cxa_pure_virtual
+00000598 PhIEC61850_82xx_68.elf CPhCommon_Base::CPhCommon_Base()
+000005fc PhIEC61850_82xx_68.elf CPhCommon_Base::CPhCommon_Base()
+0000065c PhIEC61850_82xx_68.elf CPhCommon_Base::GetProductInfo(unsigned char*, unsigned char*, unsigned char*, unsigned long)
+00000698 PhIEC61850_82xx_68.elf CPhCommon_Base::SetCommonCallbackInterface(ICommonCallback*)
+000006c8 PhIEC61850_82xx_68.elf CPhConfig_Base1::PrepareForTermination(teHWFErrorCode*)
+000006f8 PhIEC61850_82xx_68.elf CPhConfig_Base1::RemoveHWConfiguration(trHWFAddress, teHWFErrorCode*)
+00000728 PhIEC61850_82xx_68.elf CPhConfig_Base1::RemoveIoConnection(unsigned long, teHWFErrorCode*)
+0000075c PhIEC61850_82xx_68.elf CPhConfig_Base1::PhResponsibilityForRestart(trHWFAddress, teHWFErrorCode*)
+0000078c PhIEC61850_82xx_68.elf CPhConfig_Base1::PhResponsibility(trHWFAddress, teHWFErrorCode*)
+000007bc PhIEC61850_82xx_68.elf CPhConfig_Base1::StartUsingIoConnection(trHWFAddress, unsigned long, teHWFErrorCode*)
+000007f0 PhIEC61850_82xx_68.elf CPhConfig_Base1::PhResponsibilityForBackupDevice(trHWFAddress, teHWFErrorCode*)
+00000820 PhIEC61850_82xx_68.elf CPhConfig_Base1::PhResponsibilityForHotInsert(trHWFAddress, teHWFErrorCode*)
+00000850 PhIEC61850_82xx_68.elf CPhConfig_Base1::PerformSwitchover(trHWFAddress, teHWFErrorCode*)
+00000880 PhIEC61850_82xx_68.elf CPhConfig_Base1::StartUsingDevice(trHWFAddress, teHWFErrorCode*)
+000008b0 PhIEC61850_82xx_68.elf CPhConfig_Base1::PerformFailover(trHWFAddress, teHWFErrorCode*)
+000008e0 PhIEC61850_82xx_68.elf CPhClient_Base::ConnectReq(unsigned long, unsigned long*, int*)
+00000918 PhIEC61850_82xx_68.elf CPhClient_Base::DisconnectReq(unsigned long, unsigned long, int*)
+00000950 PhIEC61850_82xx_68.elf CPhClient_Base::ReadVarReq(unsigned long, int*)
+00000984 PhIEC61850_82xx_68.elf CPhClient_Base::WriteVarReq(unsigned long, int*)
+000009b8 PhIEC61850_82xx_68.elf CPhClient_Base::ReadRawReq(unsigned long, int*)
+000009ec PhIEC61850_82xx_68.elf CPhClient_Base::WriteRawReq(unsigned long, int*)
+00000a20 PhIEC61850_82xx_68.elf CPhClient_Base::AbortRawReq(unsigned long, int*)
+00000a54 PhIEC61850_82xx_68.elf CPhClient_Base::AbortVarReq(unsigned long, int*)
+00000a88 PhIEC61850_82xx_68.elf CPhClient_Base::GetExtendedStatusSize(unsigned long, int*, int*)
+00000ac0 PhIEC61850_82xx_68.elf CPhClient_Base::GetExtendedStatus(unsigned long, int, teIEC1131Type*, tGCValue*, int*)
+00000b00 PhIEC61850_82xx_68.elf CPhClient_Base::SetStatus(unsigned long, int, int*)
+00000b38 PhIEC61850_82xx_68.elf CPhClient_Base::ReadRes(unsigned long, int, int*)
+00000b70 PhIEC61850_82xx_68.elf CPhClient_Base::WriteRes(unsigned long, int, int*)
+00000ba8 PhIEC61850_82xx_68.elf CPhClient_Base1::ConnectReq(unsigned long, unsigned long*, int*)
+00000be0 PhIEC61850_82xx_68.elf CPhClient_Base1::DisconnectReq(unsigned long, unsigned long, int*)
+00000c18 PhIEC61850_82xx_68.elf CPhClient_Base1::ReadVarReq(unsigned long, int*)
+00000c4c PhIEC61850_82xx_68.elf CPhClient_Base1::WriteVarReq(unsigned long, int*)
+00000c80 PhIEC61850_82xx_68.elf CPhClient_Base1::RegisterVarReq(unsigned long, int*)
+00000cb4 PhIEC61850_82xx_68.elf CPhClient_Base1::ReadRawReq(unsigned long, int*)
+00000ce8 PhIEC61850_82xx_68.elf CPhClient_Base1::WriteRawReq(unsigned long, int*)
+00000d1c PhIEC61850_82xx_68.elf CPhClient_Base1::AbortRawReq(unsigned long, int*)
+00000d50 PhIEC61850_82xx_68.elf CPhClient_Base1::AbortVarReq(unsigned long, int*)
+00000d84 PhIEC61850_82xx_68.elf CPhClient_Base1::TimeoutAbortVarReq(unsigned long, int*)
+00000de8 PhIEC61850_82xx_68.elf CPhClient_Base1::GetExtendedStatusSize(unsigned long, int*, int*)
+00000e20 PhIEC61850_82xx_68.elf CPhClient_Base1::GetExtendedStatus(unsigned long, int, teIEC1131Type*, tGCValue*, int*)
+00000e60 PhIEC61850_82xx_68.elf CPhClient_Base1::BufferTakeForReceive(unsigned long, int*)
+00000e94 PhIEC61850_82xx_68.elf CPhClient_Base1::BufferGiveForReceive(unsigned long, int, int*)
+00000ecc PhIEC61850_82xx_68.elf CPhClient_Base1::BufferTakeForSend(unsigned long, unsigned int, int*)
+00000f04 PhIEC61850_82xx_68.elf CPhClient_Base1::BufferGiveForSend(unsigned long, unsigned int, int, int*)
+00000f40 PhIEC61850_82xx_68.elf CPhClient_Base1::SetStatus(unsigned long, int, int*)
+00000f78 PhIEC61850_82xx_68.elf CPhClient_Base1::ReadRes(unsigned long, int, int*)
+00000fb0 PhIEC61850_82xx_68.elf CPhClient_Base1::WriteRes(unsigned long, int, int*)
+00000fe8 PhIEC61850_82xx_68.elf CPhStatus_Base1::KickWatchdog(unsigned short*, teHWFErrorCode*)
+0000101c PhIEC61850_82xx_68.elf CPhStatus_Base1::GetStatus(trHWFAddress, teHWFUnitKind, unsigned long*, unsigned long*, teHWFErrorCode*)
+00001058 PhIEC61850_82xx_68.elf CPhIOAccess_Base::GetCopyRoutineReference(unsigned int, void (**)(short, void*, void*), IOAccessErrorCode*)
+00001090 PhIEC61850_82xx_68.elf CPhIOAccess_Base::ObtainDPM(eAreaType, trHWFAddress, IOAccessErrorCode*)
+000010c4 PhIEC61850_82xx_68.elf CPhIOAccess_Base::ReleaseDPM(eAreaType, trHWFAddress, IOAccessErrorCode*)
+000010f8 PhIEC61850_82xx_68.elf CPhDiagnostics_Base::PhDiagnosticsTableNew(teDiagErrorCode*)
+00001128 PhIEC61850_82xx_68.elf CPhDiagnostics_Base::PhDiagnosticsTableCleared(teDiagErrorCode*)
+00001158 PhIEC61850_82xx_68.elf CPhOLU_Base::PrepareForFirmwareDownload(trHWFAddress const*, unsigned long, eOLUStatus*)
+00001190 PhIEC61850_82xx_68.elf CPhOLU_Base::PrepareForApplicationStop(trHWFAddress const*, eOLUStatus*)
+000011c4 PhIEC61850_82xx_68.elf CPhOLU_Base::ResumeOperation(trHWFAddress const*, eOLUStatus*)
+000011f8 PhIEC61850_82xx_68.elf CPhOLU_Base::PhResponsibilityForOLU(trHWFAddress const*, eOLUStatus*)
+0000122c PhIEC61850_82xx_68.elf CPhOLU_Base::PrepareForLeavingOLU(trHWFAddress const*, eOLUStatus*)
+00001260 PhIEC61850_82xx_68.elf CPhOLU_Base::PrepareForAppAndConfigDownload(trHWFAddress const*, eOLUStatus*)
+00001298 PhIEC61850_82xx_68.elf CPhCommon_Base::~CPhCommon_Base()
+00001314 PhIEC61850_82xx_68.elf CPhCommon_Base::~CPhCommon_Base()
+00001390 PhIEC61850_82xx_68.elf CPhCommon_Base::~CPhCommon_Base()
+00001408 PhIEC61850_82xx_68.elf CListOfRegistrationInfo::CListOfRegistrationInfo(CPMLogger*)
+00001480 PhIEC61850_82xx_68.elf CListOfRegistrationInfo::CListOfRegistrationInfo(CPMLogger*)
+000014f8 PhIEC61850_82xx_68.elf CListOfRegistrationInfo::~CListOfRegistrationInfo()
+00001578 PhIEC61850_82xx_68.elf CListOfRegistrationInfo::~CListOfRegistrationInfo()
+000015f8 PhIEC61850_82xx_68.elf CListOfRegistrationInfo::Init(IHeapCallback*, int)
+00001668 PhIEC61850_82xx_68.elf CListOfRegistrationInfo::CompareRegistrationInfo(void const*, void const*)
+000017b4 PhIEC61850_82xx_68.elf CListOfRegistrationInfo::Find(unsigned long)
+00001878 PhIEC61850_82xx_68.elf CListOfRegistrationInfo::Item(unsigned long)
+0000191c PhIEC61850_82xx_68.elf CListOfRegistrationInfo::Clear()
+00001954 PhIEC61850_82xx_68.elf CListOfRegistrationInfo::AllIOConnectionStarted()
+00001a10 PhIEC61850_82xx_68.elf CListOfRegistrationInfo::ClearSentFlag()
+00001aa0 PhIEC61850_82xx_68.elf CListOfAllocatedItems::Item(unsigned long)
+00001b34 PhIEC61850_82xx_68.elf CListOfAllocatedItems::GetArray(unsigned long*)
+00001b74 PhIEC61850_82xx_68.elf CListOfAllocatedItems::AllocateMemory(unsigned long)
+00001c18 PhIEC61850_82xx_68.elf CListOfAllocatedItems::CListOfAllocatedItems(unsigned long, void*, int)
+00001ce8 PhIEC61850_82xx_68.elf CListOfAllocatedItems::CListOfAllocatedItems(unsigned long, void*, int)
+00001db8 PhIEC61850_82xx_68.elf CListOfAllocatedItems::FreeMemory(unsigned char*)
+00001e3c PhIEC61850_82xx_68.elf CListOfAllocatedItems::~CListOfAllocatedItems()
+00001e90 PhIEC61850_82xx_68.elf CListOfAllocatedItems::~CListOfAllocatedItems()
+00001ee4 PhIEC61850_82xx_68.elf non-virtual thunk to CPhPMBase::PerformSwitchover(trHWFAddress, teHWFErrorCode*)
+00001eec PhIEC61850_82xx_68.elf CPhPMBase::PerformSwitchover(trHWFAddress, teHWFErrorCode*)
+00001f70 PhIEC61850_82xx_68.elf CPhPMBase::ProcessHWunit(unsigned char**, unsigned long*)
+00001f98 PhIEC61850_82xx_68.elf CPhPMBase::ProcessSubHwUnitStatus(trHWFAddress, unsigned long*, unsigned long*, bool)
+00001fc8 PhIEC61850_82xx_68.elf CPhPMBase::SetAllIoConnectionStarted()
+00002064 PhIEC61850_82xx_68.elf non-virtual thunk to CPhPMBase::PrepareForFirmwareDownload(trHWFAddress const*, unsigned long, eOLUStatus*)
+0000206c PhIEC61850_82xx_68.elf CPhPMBase::PrepareForFirmwareDownload(trHWFAddress const*, unsigned long, eOLUStatus*)
+000020f0 PhIEC61850_82xx_68.elf non-virtual thunk to CPhPMBase::PrepareForAppAndConfigDownload(trHWFAddress const*, eOLUStatus*)
+000020f8 PhIEC61850_82xx_68.elf CPhPMBase::PrepareForAppAndConfigDownload(trHWFAddress const*, eOLUStatus*)
+0000216c PhIEC61850_82xx_68.elf CPhPMBase::ProtocolSpecificConfigurationValues(trHWFAddress, bool&, unsigned long&, unsigned long&, unsigned short&, unsigned long&)
+000021a4 PhIEC61850_82xx_68.elf CPhPMBase::SwitchoverThread()
+000023d8 PhIEC61850_82xx_68.elf spawnSwitchoverThread(int, int, int, int)
+00002424 PhIEC61850_82xx_68.elf CPhPMBase::DriverForCIModuleClosed(int)
+00002488 PhIEC61850_82xx_68.elf non-virtual thunk to CPhPMBase::PrepareForLeavingOLU(trHWFAddress const*, eOLUStatus*)
+00002490 PhIEC61850_82xx_68.elf CPhPMBase::PrepareForLeavingOLU(trHWFAddress const*, eOLUStatus*)
+000025c4 PhIEC61850_82xx_68.elf non-virtual thunk to CPhPMBase::PhResponsibilityForOLU(trHWFAddress const*, eOLUStatus*)
+000025d0 PhIEC61850_82xx_68.elf CPhPMBase::PhResponsibilityForOLU(trHWFAddress const*, eOLUStatus*)
+000026f8 PhIEC61850_82xx_68.elf non-virtual thunk to CPhPMBase::ResumeOperation(trHWFAddress const*, eOLUStatus*)
+00002700 PhIEC61850_82xx_68.elf CPhPMBase::ResumeOperation(trHWFAddress const*, eOLUStatus*)
+00002820 PhIEC61850_82xx_68.elf non-virtual thunk to CPhPMBase::PrepareForApplicationStop(trHWFAddress const*, eOLUStatus*)
+00002828 PhIEC61850_82xx_68.elf CPhPMBase::PrepareForApplicationStop(trHWFAddress const*, eOLUStatus*)
+0000290c PhIEC61850_82xx_68.elf CPhPMBase::HandleThreadSupervision()
+00002b58 PhIEC61850_82xx_68.elf CPhPMBase::WaitForAllIOConnectionsToStart(teHWFErrorCode*)
+00002c48 PhIEC61850_82xx_68.elf CPhPMBase::HandleCItoCIMessages(int, unsigned long, ENUM_TRANSCEIVER_MSG_TYPE, unsigned char*, unsigned long)
+00002d80 PhIEC61850_82xx_68.elf CPhPMBase::WriteToDriver(int, ENUM_TRANSCEIVER_MSG_TYPE, unsigned char*, unsigned long)
+00002e70 PhIEC61850_82xx_68.elf CPhPMBase::HandleSwitchoverRequest(int)
+0000328c PhIEC61850_82xx_68.elf CPhPMBase::TimeSynch(TRANSCEIVER_TIMESYNCHDATA*)
+00003610 PhIEC61850_82xx_68.elf CPhPMBase::Init(trHWFAddress, teHWFErrorCode*)
+00003e4c PhIEC61850_82xx_68.elf CPhPMBase::HandleStatusMsg(TRANSCEIVER_STATUSDATA*, unsigned long, bool)
+00004358 PhIEC61850_82xx_68.elf CPhPMBase::HandleHighPrioCIMessagesThread()
+000045e8 PhIEC61850_82xx_68.elf spawnHighPriorityMessgeHandleThread(int, int, int, int)
+00004634 PhIEC61850_82xx_68.elf CPhPMBase::RestartCIModule()
+0000496c PhIEC61850_82xx_68.elf non-virtual thunk to CPhPMBase::StartUsingDevice(trHWFAddress, teHWFErrorCode*)
+00004978 PhIEC61850_82xx_68.elf CPhPMBase::StartUsingDevice(trHWFAddress, teHWFErrorCode*)
+00004aac PhIEC61850_82xx_68.elf CPhPMBase::SendCommand(int, int, teHWFErrorCode*)
+00004be8 PhIEC61850_82xx_68.elf CPhPMBase::SendLogSettings(int, teHWFErrorCode*)
+00004d24 PhIEC61850_82xx_68.elf CPhPMBase::SendAllIOConnectionStarted(int, teHWFErrorCode*)
+00004e10 PhIEC61850_82xx_68.elf CPhPMBase::SendLastNodeConfigured(int)
+00004eb0 PhIEC61850_82xx_68.elf non-virtual thunk to CPhPMBase::RemoveHWConfiguration(trHWFAddress, teHWFErrorCode*)
+00004ebc PhIEC61850_82xx_68.elf CPhPMBase::RemoveHWConfiguration(trHWFAddress, teHWFErrorCode*)
+0000512c PhIEC61850_82xx_68.elf non-virtual thunk to CPhPMBase::PrepareForTermination(teHWFErrorCode*)
+00005138 PhIEC61850_82xx_68.elf CPhPMBase::PrepareForTermination(teHWFErrorCode*)
+000053e0 PhIEC61850_82xx_68.elf CPhPMBase::GetHWUnitType(trHWFAddress)
+000056c0 PhIEC61850_82xx_68.elf CPhPMBase::SendStartUsingIOConnection(PH_HWFAddress*, int, teHWFErrorCode*)
+00005818 PhIEC61850_82xx_68.elf CPhPMBase::SendStartUsingForAllUnsentIOConnections(int)
+000059a0 PhIEC61850_82xx_68.elf non-virtual thunk to CPhPMBase::StartUsingIoConnection(trHWFAddress, unsigned long, teHWFErrorCode*)
+000059ac PhIEC61850_82xx_68.elf CPhPMBase::StartUsingIoConnection(trHWFAddress, unsigned long, teHWFErrorCode*)
+00005d38 PhIEC61850_82xx_68.elf CPhPMBase::SendStartIOConnectionForAllIOConnections(int)
+00005e40 PhIEC61850_82xx_68.elf CListOfAllocatedItems::PutArray(unsigned char*, unsigned long)
+00005f50 PhIEC61850_82xx_68.elf CListOfAllocatedItems::Add(PH_HWFAddress*, unsigned long, unsigned long, AI_STATUS, ENUM_ELEMENT_TYPE)
+000060e0 PhIEC61850_82xx_68.elf CPhPMBase::SendIoConnectionAddressList(int)
+000064e8 PhIEC61850_82xx_68.elf CPhPMBase::WaitForConfigReply(int, unsigned long)
+0000668c PhIEC61850_82xx_68.elf CPhPMBase::WaitOnIOConAddrFromCI(int, unsigned long)
+0000682c PhIEC61850_82xx_68.elf non-virtual thunk to CPhPMBase::PerformFailover(trHWFAddress, teHWFErrorCode*)
+00006834 PhIEC61850_82xx_68.elf CPhPMBase::PerformFailover(trHWFAddress, teHWFErrorCode*)
+000068d8 PhIEC61850_82xx_68.elf non-virtual thunk to CPhPMBase::GetStatus(trHWFAddress, teHWFUnitKind, unsigned long*, unsigned long*, teHWFErrorCode*)
+000068e0 PhIEC61850_82xx_68.elf CPhPMBase::GetStatus(trHWFAddress, teHWFUnitKind, unsigned long*, unsigned long*, teHWFErrorCode*)
+00006a00 PhIEC61850_82xx_68.elf non-virtual thunk to CPhPMBase::KickWatchdog(unsigned short*, teHWFErrorCode*)
+00006a08 PhIEC61850_82xx_68.elf CPhPMBase::KickWatchdog(unsigned short*, teHWFErrorCode*)
+00006aa8 PhIEC61850_82xx_68.elf CPhPMBase::ConfigureWatchdog(trHWFAddress, int)
+00006d0c PhIEC61850_82xx_68.elf CPhPMBase::HandlePMCommand(int, teHWFErrorCode*)
+00006e80 PhIEC61850_82xx_68.elf CPhPMBase::CheckSystemVariables()
+00007218 PhIEC61850_82xx_68.elf CPhPMBase::CheckCompatibility(trHWFAddress const*, tFirmwareInfo, unsigned long*, unsigned long*)
+000072ac PhIEC61850_82xx_68.elf CPhPMBase::CheckRedundancyState(trHWFAddress, teHWFErrorCode*)
+00007598 PhIEC61850_82xx_68.elf non-virtual thunk to CPhPMBase::PhResponsibilityForRestart(trHWFAddress, teHWFErrorCode*)
+000075a4 PhIEC61850_82xx_68.elf CPhPMBase::PhResponsibilityForRestart(trHWFAddress, teHWFErrorCode*)
+000077f8 PhIEC61850_82xx_68.elf non-virtual thunk to CPhPMBase::ReleaseDPM(eAreaType, trHWFAddress, IOAccessErrorCode*)
+00007800 PhIEC61850_82xx_68.elf CPhPMBase::ReleaseDPM(eAreaType, trHWFAddress, IOAccessErrorCode*)
+000078a4 PhIEC61850_82xx_68.elf non-virtual thunk to CPhPMBase::ObtainDPM(eAreaType, trHWFAddress, IOAccessErrorCode*)
+000078ac PhIEC61850_82xx_68.elf CPhPMBase::ObtainDPM(eAreaType, trHWFAddress, IOAccessErrorCode*)
+00007954 PhIEC61850_82xx_68.elf CPhPMBase::SetCommonCallbackInterface(ICommonCallback*)
+00007c38 PhIEC61850_82xx_68.elf non-virtual thunk to CPhPMBase::~CPhPMBase()
+00007c40 PhIEC61850_82xx_68.elf non-virtual thunk to CPhPMBase::~CPhPMBase()
+00007c48 PhIEC61850_82xx_68.elf non-virtual thunk to CPhPMBase::~CPhPMBase()
+00007c50 PhIEC61850_82xx_68.elf non-virtual thunk to CPhPMBase::~CPhPMBase()
+00007c5c PhIEC61850_82xx_68.elf CPhPMBase::~CPhPMBase()
+00007e64 PhIEC61850_82xx_68.elf non-virtual thunk to CPhPMBase::~CPhPMBase()
+00007e6c PhIEC61850_82xx_68.elf non-virtual thunk to CPhPMBase::~CPhPMBase()
+00007e74 PhIEC61850_82xx_68.elf non-virtual thunk to CPhPMBase::~CPhPMBase()
+00007e7c PhIEC61850_82xx_68.elf non-virtual thunk to CPhPMBase::~CPhPMBase()
+00007e88 PhIEC61850_82xx_68.elf CPhPMBase::~CPhPMBase()
+00008094 PhIEC61850_82xx_68.elf CPhPMBase::~CPhPMBase()
+000082a0 PhIEC61850_82xx_68.elf CPhPMBase::CPhPMBase()
+000085fc PhIEC61850_82xx_68.elf CPhPMBase::CPhPMBase()
+00008958 PhIEC61850_82xx_68.elf CListOfRegistrationInfo::PutArray(unsigned char*, unsigned long)
+00008b2c PhIEC61850_82xx_68.elf CListOfRegistrationInfo::Add(PH_HWFAddress, unsigned long)
+00008de4 PhIEC61850_82xx_68.elf CListOfRegistrationInfo::Add(trHWFAddress, unsigned long)
+00008ed4 PhIEC61850_82xx_68.elf CListOfRegistrationInfo::Find(trHWFAddress)
+00008fd8 PhIEC61850_82xx_68.elf CPhPMBase::RegisterHWUnitWithIOC(trHWFAddress, unsigned int)
+00009648 PhIEC61850_82xx_68.elf CPhPMBase::SendConfigDataToCIModule(trHWFAddress, ENUM_ELEMENT_TYPE, int)
+00009db8 PhIEC61850_82xx_68.elf CPhPMBase::TraverseHWTree(trHWFAddress, int, CPhPMBase::tePhPMTraverseTreeMode, unsigned long, unsigned long, bool)
+0000a3e4 PhIEC61850_82xx_68.elf non-virtual thunk to CPhPMBase::PhResponsibilityForBackupDevice(trHWFAddress, teHWFErrorCode*)
+0000a3f0 PhIEC61850_82xx_68.elf CPhPMBase::PhResponsibilityForBackupDevice(trHWFAddress, teHWFErrorCode*)
+0000aba4 PhIEC61850_82xx_68.elf CPhPMBase::CommonPhResponsibility(trHWFAddress, teHWFErrorCode*)
+0000b3f0 PhIEC61850_82xx_68.elf non-virtual thunk to CPhPMBase::PhResponsibilityForHotInsert(trHWFAddress, teHWFErrorCode*)
+0000b3fc PhIEC61850_82xx_68.elf CPhPMBase::PhResponsibilityForHotInsert(trHWFAddress, teHWFErrorCode*)
+0000b8c8 PhIEC61850_82xx_68.elf non-virtual thunk to CPhPMBase::PhResponsibility(trHWFAddress, teHWFErrorCode*)
+0000b8d4 PhIEC61850_82xx_68.elf CPhPMBase::PhResponsibility(trHWFAddress, teHWFErrorCode*)
+0000c050 PhIEC61850_82xx_68.elf CListOfRegistrationInfo::Find(PH_HWFAddress)
+0000c11c PhIEC61850_82xx_68.elf CPhPMBase::HandleNodeConfigCompleted(CListOfAllocatedItems*)
+0000c410 PhIEC61850_82xx_68.elf CPhPMBase::SupervisionThread()
+0000cc84 PhIEC61850_82xx_68.elf spawnSupervisionThread(int, int, int, int)
+0000cccc PhIEC61850_82xx_68.elf CListOfRegistrationInfo::Remove(PH_HWFAddress)
+0000ce58 PhIEC61850_82xx_68.elf non-virtual thunk to CPhPMBase::RemoveIoConnection(unsigned long, teHWFErrorCode*)
+0000ce64 PhIEC61850_82xx_68.elf CPhPMBase::RemoveIoConnection(unsigned long, teHWFErrorCode*)
+0000d028 PhIEC61850_82xx_68.elf CDriverHandler::Init(trHWFAddress const*, IDriverFactoryCallback*, IVOSCallback2*, IStatusCallback1*, IHeapCallback*, int, int, int, int, unsigned long, unsigned long, teHWFErrorCode*)
+0000d670 PhIEC61850_82xx_68.elf CDriverHandler::ReadyForUse()
+0000d6a0 PhIEC61850_82xx_68.elf CDriverHandler::Exit()
+0000da90 PhIEC61850_82xx_68.elf CDriverHandler::~CDriverHandler()
+0000dac8 PhIEC61850_82xx_68.elf CDriverHandler::~CDriverHandler()
+0000db00 PhIEC61850_82xx_68.elf CDriverHandler::CreateTransactionIdAndEvent(ICIGDriverCallback*, unsigned long*, unsigned long*)
+0000dc84 PhIEC61850_82xx_68.elf CDriverHandler::GetDriverInfoPtr(dhdriverinfo**, dhdriverinfo**)
+0000dd2c PhIEC61850_82xx_68.elf CDriverHandler::EnableTimeSync(int, eErrorCodes*)
+0000df64 PhIEC61850_82xx_68.elf CDriverHandler::SetPrimary(int)
+0000e008 PhIEC61850_82xx_68.elf CDriverHandler::IsRedundant()
+0000e040 PhIEC61850_82xx_68.elf CDriverHandler::HasGotBusError(int)
+0000e0f8 PhIEC61850_82xx_68.elf CDriverHandler::ModuleAvailable(int)
+0000e2b8 PhIEC61850_82xx_68.elf CDriverHandler::HasGotConfigReply(int)
+0000e33c PhIEC61850_82xx_68.elf CDriverHandler::SetConfigReply(int, bool)
+0000e3ac PhIEC61850_82xx_68.elf CDriverHandler::GetStatusIntSempahore(int)
+0000e444 PhIEC61850_82xx_68.elf CDriverHandler::PutStatusIntSempahore(int)
+0000e4cc PhIEC61850_82xx_68.elf CDriverHandler::GetPrimaryCIPos()
+0000e50c PhIEC61850_82xx_68.elf CDriverHandler::GetBackupCIPos()
+0000e54c PhIEC61850_82xx_68.elf CDriverHandler::GetRWMStartAddress(int)
+0000e5e8 PhIEC61850_82xx_68.elf CDriverHandler::AtLeastOneDriverIsOpen()
+0000e6b4 PhIEC61850_82xx_68.elf CDriverHandler::ObtainDPM(unsigned long)
+0000e850 PhIEC61850_82xx_68.elf CDriverHandler::ReleaseDPM(unsigned long)
+0000e9ec PhIEC61850_82xx_68.elf CDriverHandler::DriverIsOpen(int)
+0000ea30 PhIEC61850_82xx_68.elf CDriverHandler::GetBackupAck()
+0000ea60 PhIEC61850_82xx_68.elf CDriverHandler::GetPrimaryAck()
+0000ea90 PhIEC61850_82xx_68.elf CDriverHandler::SetBackupAck()
+0000eabc PhIEC61850_82xx_68.elf CDriverHandler::SetPrimaryAck()
+0000eae8 PhIEC61850_82xx_68.elf CDriverHandler::SetRWError(int)
+0000eb70 PhIEC61850_82xx_68.elf CDriverHandler::TakeAllChannelSem(dhdriverinfo*)
+0000ec7c PhIEC61850_82xx_68.elf CDriverHandler::GiveAllChannelSem(dhdriverinfo*)
+0000ed78 PhIEC61850_82xx_68.elf CDriverHandler::PrintStatusRegisters(dhdriverinfo*, int)
+0000ef08 PhIEC61850_82xx_68.elf CDriverHandler::RaiseBecomePrimaryInterrupt(int)
+0000f164 PhIEC61850_82xx_68.elf CDriverHandler::EnableFFH(dhdriverinfo*)
+0000f298 PhIEC61850_82xx_68.elf CDriverHandler::KickWatchDog(unsigned short*, teHWFErrorCode*)
+0000fc90 PhIEC61850_82xx_68.elf CDriverHandler::GetSwitchoverInfo(int, eErrorCodes*, unsigned long*, eErrorCodes*, unsigned long*)
+00010058 PhIEC61850_82xx_68.elf CDriverHandler::WaitForStatusInt(int, bool, unsigned long, eErrorCodes*)
+000102c8 PhIEC61850_82xx_68.elf CDriverHandler::GetFirmwareInfo(int, tFirmwareInfo*, int, eErrorCodes*)
+0001063c PhIEC61850_82xx_68.elf CDriverHandler::ResetCIModule(int, eErrorCodes*)
+0001088c PhIEC61850_82xx_68.elf CDriverHandler::SwitchOver(int*)
+000109f8 PhIEC61850_82xx_68.elf CDriverHandler::GetStatusRegisters(dhdriverinfo*, unsigned long*)
+00010d2c PhIEC61850_82xx_68.elf CDriverHandler::GetStatus(bool, trHWFAddress, teHWFUnitKind, unsigned long*, unsigned long*, teHWFErrorCode*)
+00011174 PhIEC61850_82xx_68.elf CDriverHandler::CloseCIGDriver(dhdriverinfo*, bool, eErrorCodes*)
+00011e60 PhIEC61850_82xx_68.elf CDriverHandler::Close(int, bool)
+000120ac PhIEC61850_82xx_68.elf CDriverHandler::CheckCompatibility(trHWFAddress const*, tFirmwareInfo, unsigned long*, unsigned long*)
+000126e4 PhIEC61850_82xx_68.elf CDriverHandler::OpenCIGDriver(dhdriverinfo*, bool, bool*, eErrorCodes*)
+0001313c PhIEC61850_82xx_68.elf CDriverHandler::OpenForHotInsert(int*, bool*, bool*)
+00013470 PhIEC61850_82xx_68.elf CDriverHandler::Open(int, bool, int*)
+00013740 PhIEC61850_82xx_68.elf CDriverHandler::UpdateRedundancyInfo(int, int, int, teHWFErrorCode*)
+00013b04 PhIEC61850_82xx_68.elf CDriverHandler::Write(int, unsigned long, ENUM_TRANSCEIVER_MSG_TYPE, unsigned char*, unsigned long, eErrorCodes*)
+00014204 PhIEC61850_82xx_68.elf CDriverHandler::SendBackupToCI(int, int)
+00014364 PhIEC61850_82xx_68.elf CDriverHandler::SendPrimaryToCI(int, int)
+000144c8 PhIEC61850_82xx_68.elf CDriverHandler::SendOLUStateToCI(int, ENUM_OLU_STATE)
+00014688 PhIEC61850_82xx_68.elf CDriverHandler::SendWatchdogStateToCI(int, WD_STATE, teHWFErrorCode*)
+000147e0 PhIEC61850_82xx_68.elf CDriverHandler::CDriverHandler(CPMLogger*)
+00014d90 PhIEC61850_82xx_68.elf CDriverHandler::CDriverHandler(CPMLogger*)
+00015344 PhIEC61850_82xx_68.elf CDriverHandler::Read(int, unsigned long, ENUM_TRANSCEIVER_MSG_TYPE*, unsigned char**, unsigned long*, unsigned long, eErrorCodes*)
+00015ecc PhIEC61850_82xx_68.elf CPMLogger::CPMLogger()
+00015f54 PhIEC61850_82xx_68.elf CPMLogger::CPMLogger()
+00015fd8 PhIEC61850_82xx_68.elf CPMLogger::SetInterfacePointers(ISystemUtilitiesCallback4*)
+00016008 PhIEC61850_82xx_68.elf CPMLogger::UpdateTraceSettings(unsigned long)
+00016038 PhIEC61850_82xx_68.elf CPMLogger::GetTraceSettings()
+00016068 PhIEC61850_82xx_68.elf CPMLogger::UpdateStrHeader()
+0001610c PhIEC61850_82xx_68.elf CPMLogger::SetCIModulePos(int)
+00016180 PhIEC61850_82xx_68.elf CPMLogger::NotifyUser(unsigned long, unsigned long)
+0001624c PhIEC61850_82xx_68.elf CPMLogger::PrintConfBuffer(char*, char*, int, tePMMsgClassMask)
+00016394 PhIEC61850_82xx_68.elf CPMLogger::Trace(char const*, tePMMsgClassMask)
+000164b0 PhIEC61850_82xx_68.elf CPMLogger::Warning(char const*, int)
+000165b8 PhIEC61850_82xx_68.elf CPMLogger::Warning(char const*)
+000166b8 PhIEC61850_82xx_68.elf CPMLogger::Info(char const*, int)
+000167c0 PhIEC61850_82xx_68.elf CPMLogger::Info(char const*)
+000168f4 PhIEC61850_82xx_68.elf CPMLogger::Error(char const*, int)
+000169fc PhIEC61850_82xx_68.elf CPMLogger::Error(char const*)
+00016afc PhIEC61850_82xx_68.elf CPMLogger::HwAddrToString(char*, char*, trHWFAddress)
+00016c44 PhIEC61850_82xx_68.elf CPMLogger::Trace(char const*, trHWFAddress, tePMMsgClassMask)
+00016da8 PhIEC61850_82xx_68.elf CPMLogger::~CPMLogger()
+00016e18 PhIEC61850_82xx_68.elf CPMLogger::~CPMLogger()
+00016e88 PhIEC61850_82xx_68.elf CPMLogger::~CPMLogger()
+00016ef4 PhIEC61850_82xx_68.elf non-virtual thunk to CPhIEC61850PM::AddRef()
+00016efc PhIEC61850_82xx_68.elf non-virtual thunk to CPhIEC61850PM::AddRef()
+00016f04 PhIEC61850_82xx_68.elf non-virtual thunk to CPhIEC61850PM::AddRef()
+00016f0c PhIEC61850_82xx_68.elf non-virtual thunk to CPhIEC61850PM::AddRef()
+00016f14 PhIEC61850_82xx_68.elf CPhIEC61850PM::AddRef()
+00016f30 PhIEC61850_82xx_68.elf non-virtual thunk to CPhIEC61850PM::Release()
+00016f38 PhIEC61850_82xx_68.elf non-virtual thunk to CPhIEC61850PM::Release()
+00016f40 PhIEC61850_82xx_68.elf non-virtual thunk to CPhIEC61850PM::Release()
+00016f48 PhIEC61850_82xx_68.elf non-virtual thunk to CPhIEC61850PM::Release()
+00016f50 PhIEC61850_82xx_68.elf CPhIEC61850PM::Release()
+00016fbc PhIEC61850_82xx_68.elf non-virtual thunk to CPhIEC61850PM::QueryInterface(_GUID const&, void**)
+00016fc4 PhIEC61850_82xx_68.elf non-virtual thunk to CPhIEC61850PM::QueryInterface(_GUID const&, void**)
+00016fcc PhIEC61850_82xx_68.elf non-virtual thunk to CPhIEC61850PM::QueryInterface(_GUID const&, void**)
+00016fd4 PhIEC61850_82xx_68.elf non-virtual thunk to CPhIEC61850PM::QueryInterface(_GUID const&, void**)
+00016fe0 PhIEC61850_82xx_68.elf CPhIEC61850PM::QueryInterface(_GUID const&, void**)
+000170ec PhIEC61850_82xx_68.elf IUnknown::IUnknown()
+00017144 PhIEC61850_82xx_68.elf IPhCommon::IPhCommon()
+000171a8 PhIEC61850_82xx_68.elf IUnknown::~IUnknown()
+00017218 PhIEC61850_82xx_68.elf IPhConfig1::~IPhConfig1()
+00017294 PhIEC61850_82xx_68.elf CPhConfig_Base1::~CPhConfig_Base1()
+00017310 PhIEC61850_82xx_68.elf IPhConfig1::~IPhConfig1()
+0001738c PhIEC61850_82xx_68.elf IPhConfig1::~IPhConfig1()
+00017408 PhIEC61850_82xx_68.elf IUnknown::~IUnknown()
+00017478 PhIEC61850_82xx_68.elf IUnknown::~IUnknown()
+000174e8 PhIEC61850_82xx_68.elf CPhConfig_Base1::~CPhConfig_Base1()
+00017564 PhIEC61850_82xx_68.elf IPhClient::~IPhClient()
+000175e0 PhIEC61850_82xx_68.elf CPhClient_Base::~CPhClient_Base()
+0001765c PhIEC61850_82xx_68.elf IPhClient::~IPhClient()
+000176d8 PhIEC61850_82xx_68.elf IPhClient::~IPhClient()
+00017754 PhIEC61850_82xx_68.elf CPhClient_Base::~CPhClient_Base()
+000177d0 PhIEC61850_82xx_68.elf IPhClient1::~IPhClient1()
+0001784c PhIEC61850_82xx_68.elf CPhClient_Base1::~CPhClient_Base1()
+000178c8 PhIEC61850_82xx_68.elf IPhClient1::~IPhClient1()
+00017944 PhIEC61850_82xx_68.elf IPhClient1::~IPhClient1()
+000179c0 PhIEC61850_82xx_68.elf CPhClient_Base1::~CPhClient_Base1()
+00017a3c PhIEC61850_82xx_68.elf IPhStatus1::~IPhStatus1()
+00017ab8 PhIEC61850_82xx_68.elf CPhStatus_Base1::~CPhStatus_Base1()
+00017b34 PhIEC61850_82xx_68.elf IPhStatus1::~IPhStatus1()
+00017bb0 PhIEC61850_82xx_68.elf IPhStatus1::~IPhStatus1()
+00017c2c PhIEC61850_82xx_68.elf CPhStatus_Base1::~CPhStatus_Base1()
+00017ca8 PhIEC61850_82xx_68.elf IPhIOAccess::~IPhIOAccess()
+00017d24 PhIEC61850_82xx_68.elf CPhIOAccess_Base::~CPhIOAccess_Base()
+00017da0 PhIEC61850_82xx_68.elf IPhIOAccess::~IPhIOAccess()
+00017e1c PhIEC61850_82xx_68.elf IPhIOAccess::~IPhIOAccess()
+00017e98 PhIEC61850_82xx_68.elf CPhIOAccess_Base::~CPhIOAccess_Base()
+00017f14 PhIEC61850_82xx_68.elf IPhDiagnostics::~IPhDiagnostics()
+00017f90 PhIEC61850_82xx_68.elf CPhDiagnostics_Base::~CPhDiagnostics_Base()
+0001800c PhIEC61850_82xx_68.elf IPhDiagnostics::~IPhDiagnostics()
+00018088 PhIEC61850_82xx_68.elf IPhDiagnostics::~IPhDiagnostics()
+00018104 PhIEC61850_82xx_68.elf CPhDiagnostics_Base::~CPhDiagnostics_Base()
+00018180 PhIEC61850_82xx_68.elf IPhOLU::~IPhOLU()
+000181fc PhIEC61850_82xx_68.elf CPhOLU_Base::~CPhOLU_Base()
+00018278 PhIEC61850_82xx_68.elf IPhOLU::~IPhOLU()
+000182f4 PhIEC61850_82xx_68.elf IPhOLU::~IPhOLU()
+00018370 PhIEC61850_82xx_68.elf CPhOLU_Base::~CPhOLU_Base()
+000183ec PhIEC61850_82xx_68.elf IPhCommon::~IPhCommon()
+00018468 PhIEC61850_82xx_68.elf IPhCommon::~IPhCommon()
+000184e4 PhIEC61850_82xx_68.elf IPhCommon::~IPhCommon()
+00018560 PhIEC61850_82xx_68.elf IPhConfig1::IPhConfig1()
+000185c4 PhIEC61850_82xx_68.elf CPhConfig_Base1::CPhConfig_Base1()
+00018628 PhIEC61850_82xx_68.elf IPhStatus1::IPhStatus1()
+0001868c PhIEC61850_82xx_68.elf CPhStatus_Base1::CPhStatus_Base1()
+000186f0 PhIEC61850_82xx_68.elf IPhIOAccess::IPhIOAccess()
+00018754 PhIEC61850_82xx_68.elf CPhIOAccess_Base::CPhIOAccess_Base()
+000187b8 PhIEC61850_82xx_68.elf IPhOLU::IPhOLU()
+0001881c PhIEC61850_82xx_68.elf CPhOLU_Base::CPhOLU_Base()
+00018880 PhIEC61850_82xx_68.elf CPhOLU_Base::~CPhOLU_Base()
+000188fc PhIEC61850_82xx_68.elf CPhIOAccess_Base::~CPhIOAccess_Base()
+00018978 PhIEC61850_82xx_68.elf CPhStatus_Base1::~CPhStatus_Base1()
+000189f4 PhIEC61850_82xx_68.elf CPhConfig_Base1::~CPhConfig_Base1()
+00018a6c PhIEC61850_82xx_68.elf CompanyName
+00018a70 PhIEC61850_82xx_68.elf ProductName
+00018a80 PhIEC61850_82xx_68.elf ProductVersion
+00018af4 PhIEC61850_82xx_68.elf IID_IPhCommonCB
+00018b04 PhIEC61850_82xx_68.elf IID_IPhConfigCB
+00018b14 PhIEC61850_82xx_68.elf IID_IPhConfigCB1
+00018b24 PhIEC61850_82xx_68.elf IID_IPhIOAccessCB
+00018b34 PhIEC61850_82xx_68.elf IID_IPhExternalConfigCB1
+00018b44 PhIEC61850_82xx_68.elf IID_IPhExternalConfigCB2
+00018b54 PhIEC61850_82xx_68.elf IID_IPhExternalConfigCB3
+00018b64 PhIEC61850_82xx_68.elf IID_IPhOLUCB
+00018b74 PhIEC61850_82xx_68.elf IID_IPhCommon
+00018b84 PhIEC61850_82xx_68.elf IID_IPhConfig1
+00018b94 PhIEC61850_82xx_68.elf IID_IPhStatus1
+00018ba4 PhIEC61850_82xx_68.elf IID_IPhClient
+00018bb4 PhIEC61850_82xx_68.elf IID_IPhClient1
+00018bc4 PhIEC61850_82xx_68.elf IID_IPhDiagnostics
+00018bd4 PhIEC61850_82xx_68.elf IID_IPhIOAccess
+00018be4 PhIEC61850_82xx_68.elf IID_IPhSafeConfig
+00018bf4 PhIEC61850_82xx_68.elf IID_IPhSafeConfig1
+00018c04 PhIEC61850_82xx_68.elf IID_IPhSimulation
+00018c14 PhIEC61850_82xx_68.elf IID_IPhOLU
+00018c24 PhIEC61850_82xx_68.elf IID_IHeapCallback
+00018c34 PhIEC61850_82xx_68.elf IID_ISystemUtilitiesCallback
+00018c44 PhIEC61850_82xx_68.elf IID_ISystemUtilitiesCallback1
+00018c54 PhIEC61850_82xx_68.elf IID_ISystemUtilitiesCallback2
+00018c64 PhIEC61850_82xx_68.elf IID_ISystemUtilitiesCallback3
+00018c74 PhIEC61850_82xx_68.elf IID_ISystemUtilitiesCallback4
+00018c84 PhIEC61850_82xx_68.elf IID_IEventMgrCallback
+00018c94 PhIEC61850_82xx_68.elf IID_IEventMgrCallback1
+00018ca4 PhIEC61850_82xx_68.elf IID_ISysClockCallback
+00018cb4 PhIEC61850_82xx_68.elf IID_ISysClockCallback1
+00018cc4 PhIEC61850_82xx_68.elf IID_ISysClockCallback2
+00018cd4 PhIEC61850_82xx_68.elf IID_ISysClockCallback3
+00018ce4 PhIEC61850_82xx_68.elf IID_INetwClockSynchCallback
+00018cf4 PhIEC61850_82xx_68.elf IID_IConfigCBCallback1
+00018d04 PhIEC61850_82xx_68.elf IID_IConfigCBCallback2
+00018d14 PhIEC61850_82xx_68.elf IID_IConfigCBCallback3
+00018d24 PhIEC61850_82xx_68.elf IID_IExternalConfigCBCallback
+00018d34 PhIEC61850_82xx_68.elf IID_IExternalConfigCBCallback2
+00018d44 PhIEC61850_82xx_68.elf IID_IExternalConfigCBCallback3
+00018d54 PhIEC61850_82xx_68.elf IID_IExternalConfigCBCallback4
+00018d64 PhIEC61850_82xx_68.elf IID_IMessagesCBCallback
+00018d74 PhIEC61850_82xx_68.elf IID_IAIPAccessCBCallback
+00018d84 PhIEC61850_82xx_68.elf IID_IOLUCBCallback
+00018d94 PhIEC61850_82xx_68.elf IID_ISystemUtilitiesCBCallback1
+00018da4 PhIEC61850_82xx_68.elf IID_IConfigCallback1
+00018db4 PhIEC61850_82xx_68.elf IID_IConfigCallback2
+00018dc4 PhIEC61850_82xx_68.elf IID_IStatusCallback1
+00018dd4 PhIEC61850_82xx_68.elf IID_IGenClientCallback
+00018de4 PhIEC61850_82xx_68.elf IID_IGenClientCallback1
+00018df4 PhIEC61850_82xx_68.elf IID_IDriverFactoryCallback
+00018e04 PhIEC61850_82xx_68.elf IID_IDiagnosticsCallback
+00018e14 PhIEC61850_82xx_68.elf IID_ISafeConfigCallback
+00018e24 PhIEC61850_82xx_68.elf IID_ISafeConfigCallback1
+00018e34 PhIEC61850_82xx_68.elf IID_ICRCCallback
+00018e44 PhIEC61850_82xx_68.elf IID_IIOAccessCallback
+00018e54 PhIEC61850_82xx_68.elf IID_CriticalRegionCallback
+00018e64 PhIEC61850_82xx_68.elf IID_VOSExceptionCallback
+00018e74 PhIEC61850_82xx_68.elf IID_DrvCommonCallback
+00018e84 PhIEC61850_82xx_68.elf IID_ProtectedMirroredHeapCallback
+00018e94 PhIEC61850_82xx_68.elf IID_SharedMirroredHeapCallback
+00018ea4 PhIEC61850_82xx_68.elf IID_TemporaryMirroredHeapCallback
+00018eb4 PhIEC61850_82xx_68.elf IID_IRestrictedVOSCallback
+00018ec4 PhIEC61850_82xx_68.elf IID_IVarServerCallback
+00018ed4 PhIEC61850_82xx_68.elf IID_IVarServerCallback1
+00018ee4 PhIEC61850_82xx_68.elf IID_ISOCKETCallback
+00018ef4 PhIEC61850_82xx_68.elf IID_IVOSCallback2
+0001c150 PhIEC61850_82xx_68.elf CPMLogger::m_PhClassLibIdStr
+0001c188 V vtable for CPhIEC61850PM PhIEC61850_82xx_68.elf 
+0001c2e0 V vtable for CPhOLU_Base PhIEC61850_82xx_68.elf 
+0001c318 V vtable for CPhDiagnostics_Base PhIEC61850_82xx_68.elf 
+0001c340 V vtable for CPhIOAccess_Base PhIEC61850_82xx_68.elf 
+0001c368 V vtable for CPhStatus_Base1 PhIEC61850_82xx_68.elf 
+0001c390 V vtable for CPhClient_Base1 PhIEC61850_82xx_68.elf 
+0001c3f8 V vtable for CPhClient_Base PhIEC61850_82xx_68.elf 
+0001c448 V vtable for CPhConfig_Base1 PhIEC61850_82xx_68.elf 
+0001c490 V vtable for CPhCommon_Base PhIEC61850_82xx_68.elf 
+0001c4b8 V vtable for IPhConfig1 PhIEC61850_82xx_68.elf 
+0001c500 V vtable for IUnknown PhIEC61850_82xx_68.elf 
+0001c520 V vtable for IPhClient PhIEC61850_82xx_68.elf 
+0001c570 V vtable for IPhClient1 PhIEC61850_82xx_68.elf 
+0001c5d8 V vtable for IPhStatus1 PhIEC61850_82xx_68.elf 
+0001c600 V vtable for IPhIOAccess PhIEC61850_82xx_68.elf 
+0001c628 V vtable for IPhDiagnostics PhIEC61850_82xx_68.elf 
+0001c650 V vtable for IPhOLU PhIEC61850_82xx_68.elf 
+0001c688 V vtable for IPhCommon PhIEC61850_82xx_68.elf 
+0001c6b0 V vtable for CPhPMBase PhIEC61850_82xx_68.elf 
+0001c808 V vtable for CPMLogger PhIEC61850_82xx_68.elf 
+0001c818 PhIEC61850_82xx_68.elf CRTFuncTabBegin
+0001c818 PhIEC61850_82xx_68.elf scprocs
+0001c824 PhIEC61850_82xx_68.elf printf
+0001c828 PhIEC61850_82xx_68.elf sprintf
+0001c82c PhIEC61850_82xx_68.elf sscanf
+0001c830 PhIEC61850_82xx_68.elf memcpy
+0001c834 PhIEC61850_82xx_68.elf memset
+0001c838 PhIEC61850_82xx_68.elf strcat
+0001c83c PhIEC61850_82xx_68.elf strcmp
+0001c840 PhIEC61850_82xx_68.elf strlen
+0001c844 PhIEC61850_82xx_68.elf strncmp
+0001c848 PhIEC61850_82xx_68.elf strncpy
+0001c84c PhIEC61850_82xx_68.elf memchr
+0001c850 PhIEC61850_82xx_68.elf memcmp
+0001c854 PhIEC61850_82xx_68.elf memmove
+0001c858 PhIEC61850_82xx_68.elf strchr
+0001c85c PhIEC61850_82xx_68.elf strcoll
+0001c860 PhIEC61850_82xx_68.elf strcpy
+0001c864 PhIEC61850_82xx_68.elf strcspn
+0001c868 PhIEC61850_82xx_68.elf strncat
+0001c86c PhIEC61850_82xx_68.elf strpbrk
+0001c870 PhIEC61850_82xx_68.elf strrchr
+0001c874 PhIEC61850_82xx_68.elf strspn
+0001c878 PhIEC61850_82xx_68.elf strstr
+0001c87c PhIEC61850_82xx_68.elf strtok
+0001c880 PhIEC61850_82xx_68.elf strxfrm
+0001c884 PhIEC61850_82xx_68.elf strerror
+0001c888 PhIEC61850_82xx_68.elf pow
+0001c88c PhIEC61850_82xx_68.elf acos
+0001c890 PhIEC61850_82xx_68.elf asin
+0001c894 PhIEC61850_82xx_68.elf atan
+0001c898 PhIEC61850_82xx_68.elf atan2
+0001c89c PhIEC61850_82xx_68.elf ceil
+0001c8a0 PhIEC61850_82xx_68.elf cos
+0001c8a4 PhIEC61850_82xx_68.elf cosh
+0001c8a8 PhIEC61850_82xx_68.elf exp
+0001c8ac PhIEC61850_82xx_68.elf fabs
+0001c8b0 PhIEC61850_82xx_68.elf floor
+0001c8b4 PhIEC61850_82xx_68.elf fmod
+0001c8b8 PhIEC61850_82xx_68.elf frexp
+0001c8bc PhIEC61850_82xx_68.elf ldexp
+0001c8c0 PhIEC61850_82xx_68.elf log
+0001c8c4 PhIEC61850_82xx_68.elf log10
+0001c8c8 PhIEC61850_82xx_68.elf modf
+0001c8cc PhIEC61850_82xx_68.elf sin
+0001c8d0 PhIEC61850_82xx_68.elf sinh
+0001c8d4 PhIEC61850_82xx_68.elf sqrt
+0001c8d8 PhIEC61850_82xx_68.elf tan
+0001c8dc PhIEC61850_82xx_68.elf tanh
+0001c8e0 PhIEC61850_82xx_68.elf div_r
+0001c8e4 PhIEC61850_82xx_68.elf labs
+0001c8e8 PhIEC61850_82xx_68.elf strtol
+0001c8ec PhIEC61850_82xx_68.elf free
+0001c8f0 PhIEC61850_82xx_68.elf abort
+0001c8f4 PhIEC61850_82xx_68.elf abs
+0001c8f8 PhIEC61850_82xx_68.elf atof
+0001c8fc PhIEC61850_82xx_68.elf atoi
+0001c900 PhIEC61850_82xx_68.elf atol
+0001c904 PhIEC61850_82xx_68.elf bsearch
+0001c908 PhIEC61850_82xx_68.elf ldiv_r
+0001c90c PhIEC61850_82xx_68.elf qsort
+0001c910 PhIEC61850_82xx_68.elf rand
+0001c914 PhIEC61850_82xx_68.elf srand
+0001c918 PhIEC61850_82xx_68.elf strtod
+0001c91c PhIEC61850_82xx_68.elf strtoul
+0001c920 PhIEC61850_82xx_68.elf malloc
+0001c924 PhIEC61850_82xx_68.elf __assert
+0001c928 PhIEC61850_82xx_68.elf time
+0001c92c PhIEC61850_82xx_68.elf asctime
+0001c930 PhIEC61850_82xx_68.elf gmtime
+0001c934 PhIEC61850_82xx_68.elf clock
+0001c938 PhIEC61850_82xx_68.elf ctime
+0001c93c PhIEC61850_82xx_68.elf difftime
+0001c940 PhIEC61850_82xx_68.elf localtime
+0001c944 PhIEC61850_82xx_68.elf mktime
+0001c948 PhIEC61850_82xx_68.elf strftime
+0001c94c PhIEC61850_82xx_68.elf eventcollSem
+0001c950 PhIEC61850_82xx_68.elf intLock
+0001c954 PhIEC61850_82xx_68.elf intUnlock
+0001c960 PhIEC61850_82xx_68.elf fprintf
+0001c964 PhIEC61850_82xx_68.elf __stdout
+0001c968 PhIEC61850_82xx_68.elf __stderr
+0001c96c PhIEC61850_82xx_68.elf setjmp
+0001c970 PhIEC61850_82xx_68.elf longjmp
+0001c974 PhIEC61850_82xx_68.elf operator new[](unsigned int)
+0001c978 PhIEC61850_82xx_68.elf operator delete[](void*)
+0001c97c PhIEC61850_82xx_68.elf CRTFuncTabEnd
+0001c97c PhIEC61850_82xx_68.elf ecprocs
+0001c97c PhIEC61850_82xx_68.elf etext
+0001c97c PhIEC61850_82xx_68.elf sgot2
+0001cefc PhIEC61850_82xx_68.elf egot2
+0001cefc PhIEC61850_82xx_68.elf sfixup
+0001d56c PhIEC61850_82xx_68.elf CMirroredObject::c_pMirroredObjectMgrImpl
+0001d56c PhIEC61850_82xx_68.elf efixup
+0001d570 PhIEC61850_82xx_68.elf CMirroredObjectAgent::c_pHeapCallback
+0001d574 PhIEC61850_82xx_68.elf CMirroredObjectAgent::c_AgentTag
+0001d578 V CComCoClass<CPhIEC61850PM, &(CLSID_CPhIEC61850PM)>::m_HeapTag PhIEC61850_82xx_68.elf 
+0001d57c PhIEC61850_82xx_68.elf PHproperties
+0001d584 PhIEC61850_82xx_68.elf useEXEHEAD
+</SYMBOLS>

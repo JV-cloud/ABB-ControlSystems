@@ -1,0 +1,66 @@
+
+
+
+(*========================================================*)
+(*                                                        *)
+(*            OUTPUT: 4 Int DPV1                         *)
+(*                                                        *)
+(*========================================================*)
+
+HWUnitInfo
+  HWUnitID         16#0CD509DA
+  Description      "OUTPUT 4 Int"
+  Information      "Int(16 bits) Int including the sign bit"
+  Icons            ProtocolType
+  Attributes       IoUnit 
+
+  Channels
+    ChannelInfo
+      Number            0
+      ChannelName      "Output Int 0"
+      Datatype          Int_Out
+      Routine           410
+      CopyParameters    16#0 16#0 16#40000 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number            1
+      ChannelName      "Output Int 1"
+      Datatype          Int_Out
+      Routine           410
+      CopyParameters    16#0 16#0 16#40001 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number            2
+      ChannelName      "Output Int 2"
+      Datatype          Int_Out
+      Routine           410
+      CopyParameters    16#0 16#0 16#40002 16#0
+    End ChannelInfo
+    ChannelInfo
+      Number            3
+      ChannelName      "Output Int 3"
+      Datatype          Int_Out
+      Routine           410
+      CopyParameters    16#0 16#0 16#40003 16#0
+    End ChannelInfo
+
+  End Channels
+
+  Configuration
+    ConfigInfo
+      ModuleKey        16#C
+      InAreaSize       0 WORD
+      OutAreaSize      4 WORD
+      OutWord
+        WORD  0    0
+        WORD  0    1
+        WORD  0    2
+        WORD  0    3
+
+      CIGIOConnData
+        CIGIOData        16#01 16#63
+      End CIGIOConnData
+    End ConfigInfo
+  End Configuration
+  HWUnitInfoCRC 16#B187
+End HWUnitInfo (* OUTPUT: 4 Int *)

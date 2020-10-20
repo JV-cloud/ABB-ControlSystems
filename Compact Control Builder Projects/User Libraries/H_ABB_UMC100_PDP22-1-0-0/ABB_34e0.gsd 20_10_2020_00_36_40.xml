@@ -1,0 +1,1652 @@
+<DeviceImportWizard>
+  <PROFIBUSParserBLOBVersion>2.1.0</PROFIBUSParserBLOBVersion>
+  <TargetSystemVersion>5.0</TargetSystemVersion>
+  <NameSubstitution>True</NameSubstitution>
+  <HWUnitID1>fe73f3c2-5052-4cde-b7d1-ee3d2fd03494</HWUnitID1>
+  <HWUnitID2>dbc47078-26c9-4819-96ad-a9792b67408c</HWUnitID2>
+  <RedundancySupp>0</RedundancySupp>
+  <RedMaxSwitchover>-1</RedMaxSwitchover>
+  <RedSuppParamOffs>0</RedSuppParamOffs>
+  <GSDVendor_Name>ABB</GSDVendor_Name>
+  <GSDModel_Name>PDP22-FBP with UMC100</GSDModel_Name>
+  <GSDInfo_Text>
+  </GSDInfo_Text>
+  <GSDIdent_Number>13536</GSDIdent_Number>
+  <SysVendor_Name>ABB</SysVendor_Name>
+  <SysModel_Name>PDP22-FBP with UMC100</SysModel_Name>
+  <SysInfo_Text>
+  </SysInfo_Text>
+  <SysIdent_Number>13536</SysIdent_Number>
+  <SlaveIcon>DefaultAdapterType</SlaveIcon>
+  <ModuleCount>1</ModuleCount>
+  <UserParameterList TotalLength="2">
+    <UserParameter Name="Block - Parameter" DataType="enum" ByteData="3" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+      <Enum Value="0" Text="Use Block-Parameters" />
+      <Enum Value="1" Text="Ignore Block-Parameters" />
+    </UserParameter>
+    <UserParameter Name="Diagnosis Format" DataType="enum" ByteData="4" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+      <Enum Value="0" Text="DPV0 Diagnosis Format" />
+      <Enum Value="1" Text="DPV1 Diagnosis Format" />
+    </UserParameter>
+    <Original>
+      <UserParameter Name="Block - Parameter" DataType="enum" ByteData="3" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="Use Block-Parameters" />
+        <Enum Value="1" Text="Ignore Block-Parameters" />
+      </UserParameter>
+      <UserParameter Name="Diagnosis Format" DataType="enum" ByteData="4" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="DPV0 Diagnosis Format" />
+        <Enum Value="1" Text="DPV1 Diagnosis Format" />
+      </UserParameter>
+    </Original>
+  </UserParameterList>
+  <Module Name="UMC100-FBP (V1_13)" moduleId="1" OrgName="UMC100-FBP (V1_13)" description="" OrgDescr="" Select="True" Error="False" Icon="DefaultIOType" Guid="fe9ba976-cd94-48e1-a2a0-4b70d14ec3a2" InputLength="16" OutputLength="12" LastByteRule="3" LastWordRule="2" EmptyModule="False" DiagChannels="14" DCSetByUser="False">
+    <UserParameterList TotalLength="109">
+      <UserParameter Name="Setting Ie 1 [0.01A]" DataType="int" ByteData="0" BitData="0" LengthData="4" Min="24" Max="320000" ParserGenerated="False" Deleted="False" Unit="" Default="50" OrgSize="4" EnumtableOnlyNumbers="False" />
+      <UserParameter Name="Setting Ie 2 [0.01A]" DataType="int" ByteData="4" BitData="0" LengthData="4" Min="24" Max="320000" ParserGenerated="False" Deleted="False" Unit="" Default="50" OrgSize="4" EnumtableOnlyNumbers="False" />
+      <UserParameter Name="YD Starting Time [0.1s]" DataType="int" ByteData="8" BitData="0" LengthData="2" Min="10" Max="36000" ParserGenerated="False" Deleted="False" Unit="" Default="600" OrgSize="2" EnumtableOnlyNumbers="False" />
+      <UserParameter Name="Current Factor [%]" DataType="int" ByteData="10" BitData="0" LengthData="2" Min="2" Max="64000" ParserGenerated="False" Deleted="False" Unit="" Default="100" OrgSize="2" EnumtableOnlyNumbers="False" />
+      <UserParameter Name="Cooling Time [s]" DataType="int" ByteData="12" BitData="0" LengthData="2" Min="30" Max="64000" ParserGenerated="False" Deleted="False" Unit="" Default="120" OrgSize="2" EnumtableOnlyNumbers="False" />
+      <UserParameter Name="Language" DataType="enum" ByteData="16" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="English" />
+        <Enum Value="1" Text="Deutsch" />
+        <Enum Value="2" Text="Francais" />
+        <Enum Value="3" Text="Espanol" />
+        <Enum Value="4" Text="Italiano" />
+        <Enum Value="5" Text="Portugues" />
+      </UserParameter>
+      <UserParameter Name="Rev Lock-Out Time [s]" DataType="int" ByteData="17" BitData="0" LengthData="1" Min="1" Max="255" ParserGenerated="False" Deleted="False" Unit="" Default="1" OrgSize="1" EnumtableOnlyNumbers="False" />
+      <UserParameter Name="Fault Output" DataType="enum" ByteData="18" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="Off" />
+        <Enum Value="1" Text="Flash DO2" />
+        <Enum Value="2" Text="On DO2" />
+        <Enum Value="3" Text="Invert DO2" />
+        <Enum Value="4" Text="Flash DO3" />
+        <Enum Value="5" Text="On DO3" />
+        <Enum Value="6" Text="Invert DO3" />
+      </UserParameter>
+      <UserParameter Name="Trip Class" DataType="enum" ByteData="19" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="1" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="Class 5" />
+        <Enum Value="1" Text="Class 10" />
+        <Enum Value="2" Text="Class 20" />
+        <Enum Value="3" Text="Class 30" />
+        <Enum Value="4" Text="Class 40" />
+      </UserParameter>
+      <UserParameter Name="Low Curr Warn Level [5%]" DataType="int" ByteData="20" BitData="0" LengthData="1" Min="0" Max="20" ParserGenerated="False" Deleted="False" Unit="" Default="10" OrgSize="1" EnumtableOnlyNumbers="False" />
+      <UserParameter Name="Low Curr Trip Level [5%]" DataType="int" ByteData="21" BitData="0" LengthData="1" Min="0" Max="20" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False" />
+      <UserParameter Name="High Curr Warn Level [5%]" DataType="int" ByteData="22" BitData="0" LengthData="1" Min="20" Max="160" ParserGenerated="False" Deleted="False" Unit="" Default="30" OrgSize="1" EnumtableOnlyNumbers="False" />
+      <UserParameter Name="High Curr Trip Level [5%]" DataType="int" ByteData="23" BitData="0" LengthData="1" Min="20" Max="160" ParserGenerated="False" Deleted="False" Unit="" Default="160" OrgSize="1" EnumtableOnlyNumbers="False" />
+      <UserParameter Name="Locked Rotor Level [5%]" DataType="int" ByteData="24" BitData="0" LengthData="1" Min="20" Max="160" ParserGenerated="False" Deleted="False" Unit="" Default="160" OrgSize="1" EnumtableOnlyNumbers="False" />
+      <UserParameter Name="Locked Rotor Delay [0.1s]" DataType="int" ByteData="25" BitData="0" LengthData="1" Min="0" Max="255" ParserGenerated="False" Deleted="False" Unit="" Default="5" OrgSize="1" EnumtableOnlyNumbers="False" />
+      <UserParameter Name="Custom App Parameter" DataType="int" ByteData="26" BitData="0" LengthData="1" Min="0" Max="255" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False" />
+      <UserParameter Name="Multif In 0" DataType="enum" ByteData="27" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="Off" />
+        <Enum Value="1" Text="Stop (NC)" />
+        <Enum Value="2" Text="Stop (NO)" />
+        <Enum Value="3" Text="Ext. Flt (NC) always" />
+        <Enum Value="4" Text="Ext. Flt (NO) always" />
+        <Enum Value="5" Text="Ext. Flt (NC) Motor on" />
+        <Enum Value="6" Text="Ext. Flt (NO) Motor on" />
+        <Enum Value="7" Text="Prep. emerg. Start (NC)" />
+        <Enum Value="8" Text="Prep. emerg. Start (NO)" />
+        <Enum Value="9" Text="Testposition (NC)" />
+        <Enum Value="10" Text="Testposition (NO)" />
+        <Enum Value="11" Text="Force local (NC)" />
+        <Enum Value="12" Text="Force local (NO)" />
+        <Enum Value="13" Text="Fault reset (NC)" />
+        <Enum Value="14" Text="Fault reset (NO)" />
+        <Enum Value="15" Text="Voltage DIP (NC)" />
+        <Enum Value="16" Text="Voltage DIP (NO)" />
+        <Enum Value="17" Text="CEM11 always (Warning)" />
+        <Enum Value="18" Text="CEM11 after startup (Warning)" />
+        <Enum Value="19" Text="CEM11 always (Fault)" />
+        <Enum Value="20" Text="CEM11 after startup time (Fault)" />
+      </UserParameter>
+      <UserParameter Name="Multif In 1" DataType="enum" ByteData="28" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="Off" />
+        <Enum Value="1" Text="Stop (NC)" />
+        <Enum Value="2" Text="Stop (NO)" />
+        <Enum Value="3" Text="Ext. Flt (NC) always" />
+        <Enum Value="4" Text="Ext. Flt (NO) always" />
+        <Enum Value="5" Text="Ext. Flt (NC) Motor on" />
+        <Enum Value="6" Text="Ext. Flt (NO) Motor on" />
+        <Enum Value="7" Text="Prep. emerg. Start (NC)" />
+        <Enum Value="8" Text="Prep. emerg. Start (NO)" />
+        <Enum Value="9" Text="Testposition (NC)" />
+        <Enum Value="10" Text="Testposition (NO)" />
+        <Enum Value="11" Text="Force local (NC)" />
+        <Enum Value="12" Text="Force local (NO)" />
+        <Enum Value="13" Text="Fault reset (NC)" />
+        <Enum Value="14" Text="Fault reset (NO)" />
+        <Enum Value="15" Text="Voltage DIP (NC)" />
+        <Enum Value="16" Text="Voltage DIP (NO)" />
+        <Enum Value="17" Text="CEM11 always (Warning)" />
+        <Enum Value="18" Text="CEM11 after startup (Warning)" />
+        <Enum Value="19" Text="CEM11 always (Fault)" />
+        <Enum Value="20" Text="CEM11 after startup time (Fault)" />
+      </UserParameter>
+      <UserParameter Name="Multif In 2" DataType="enum" ByteData="29" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="Off" />
+        <Enum Value="1" Text="Stop (NC)" />
+        <Enum Value="2" Text="Stop (NO)" />
+        <Enum Value="3" Text="Ext. Flt (NC) always" />
+        <Enum Value="4" Text="Ext. Flt (NO) always" />
+        <Enum Value="5" Text="Ext. Flt (NC) Motor on" />
+        <Enum Value="6" Text="Ext. Flt (NO) Motor on" />
+        <Enum Value="7" Text="Prep. emerg. Start (NC)" />
+        <Enum Value="8" Text="Prep. emerg. Start (NO)" />
+        <Enum Value="9" Text="Testposition (NC)" />
+        <Enum Value="10" Text="Testposition (NO)" />
+        <Enum Value="11" Text="Force local (NC)" />
+        <Enum Value="12" Text="Force local (NO)" />
+        <Enum Value="13" Text="Fault reset (NC)" />
+        <Enum Value="14" Text="Fault reset (NO)" />
+        <Enum Value="15" Text="Voltage DIP (NC)" />
+        <Enum Value="16" Text="Voltage DIP (NO)" />
+        <Enum Value="17" Text="CEM11 always (Warning)" />
+        <Enum Value="18" Text="CEM11 after startup (Warning)" />
+        <Enum Value="19" Text="CEM11 always (Fault)" />
+        <Enum Value="20" Text="CEM11 after startup time (Fault)" />
+      </UserParameter>
+      <UserParameter Name="Multif In 0 Delay [0.1s]" DataType="int" ByteData="30" BitData="0" LengthData="1" Min="0" Max="255" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False" />
+      <UserParameter Name="Multif In 1 Delay [0.1s]" DataType="int" ByteData="31" BitData="0" LengthData="1" Min="0" Max="255" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False" />
+      <UserParameter Name="Multif In 2 Delay [0.1s]" DataType="int" ByteData="32" BitData="0" LengthData="1" Min="0" Max="255" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False" />
+      <UserParameter Name="Control Function" DataType="enum" ByteData="33" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="3" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="1" Text="Transparent" />
+        <Enum Value="2" Text="Overload Relay" />
+        <Enum Value="3" Text="Direct Starter" />
+        <Enum Value="4" Text="Reverse Starter" />
+        <Enum Value="5" Text="Star-delta Starter" />
+        <Enum Value="7" Text="Pole-Changing Starter" />
+        <Enum Value="9" Text="Actuator 1" />
+        <Enum Value="10" Text="Actuator 2" />
+        <Enum Value="11" Text="Actuator 3" />
+        <Enum Value="12" Text="Actuator 4" />
+      </UserParameter>
+      <UserParameter Name="Busfault Reaction" DataType="enum" ByteData="34" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="Motor Off" />
+        <Enum Value="1" Text="Retain" />
+        <Enum Value="2" Text="Start Forward" />
+        <Enum Value="3" Text="Start Reverse" />
+      </UserParameter>
+      <UserParameter Name="Aux Inp 1 Reaction" DataType="enum" ByteData="35" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="Disabled" />
+        <Enum Value="1" Text="Fault (NC) Motor in On/Off" />
+        <Enum Value="2" Text="Fault (NO) Motor in On/Off" />
+        <Enum Value="3" Text="Fault (NC) Motor in On" />
+        <Enum Value="4" Text="Fault (NO) Motor in On" />
+        <Enum Value="5" Text="Warning (NC) Motor in On/Off" />
+        <Enum Value="6" Text="Warning (NO) Motor in On/Off" />
+        <Enum Value="7" Text="Warning (NC) Motor in On" />
+        <Enum Value="8" Text="Warning (NO) Motor in On" />
+      </UserParameter>
+      <UserParameter Name="Aux Inp 2 Reaction" DataType="enum" ByteData="35" BitData="4" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="Disabled" />
+        <Enum Value="1" Text="Fault (NC) Motor in On/Off" />
+        <Enum Value="2" Text="Fault (NO) Motor in On/Off" />
+        <Enum Value="3" Text="Fault (NC) Motor in On" />
+        <Enum Value="4" Text="Fault (NO) Motor in On" />
+        <Enum Value="5" Text="Warning (NC) Motor in On/Off" />
+        <Enum Value="6" Text="Warning (NO) Motor in On/Off" />
+        <Enum Value="7" Text="Warning (NC) Motor in On" />
+        <Enum Value="8" Text="Warning (NO) Motor in On" />
+      </UserParameter>
+      <UserParameter Name="Aux Inp 3 Reaction" DataType="enum" ByteData="36" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="Disabled" />
+        <Enum Value="1" Text="Fault (NC) Motor in On/Off" />
+        <Enum Value="2" Text="Fault (NO) Motor in On/Off" />
+        <Enum Value="3" Text="Fault (NC) Motor in On" />
+        <Enum Value="4" Text="Fault (NO) Motor in On" />
+        <Enum Value="5" Text="Warning (NC) Motor in On/Off" />
+        <Enum Value="6" Text="Warning (NO) Motor in On/Off" />
+        <Enum Value="7" Text="Warning (NC) Motor in On" />
+        <Enum Value="8" Text="Warning (NO) Motor in On" />
+      </UserParameter>
+      <UserParameter Name="Aux Inp 4 Reaction" DataType="enum" ByteData="36" BitData="4" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="Disabled" />
+        <Enum Value="1" Text="Fault (NC) Motor in On/Off" />
+        <Enum Value="2" Text="Fault (NO) Motor in On/Off" />
+        <Enum Value="3" Text="Fault (NC) Motor in On" />
+        <Enum Value="4" Text="Fault (NO) Motor in On" />
+        <Enum Value="5" Text="Warning (NC) Motor in On/Off" />
+        <Enum Value="6" Text="Warning (NO) Motor in On/Off" />
+        <Enum Value="7" Text="Warning (NC) Motor in On" />
+        <Enum Value="8" Text="Warning (NO) Motor in On" />
+      </UserParameter>
+      <UserParameter Name="Aux Inp 5 Reaction" DataType="enum" ByteData="37" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="Disabled" />
+        <Enum Value="1" Text="Fault (NC) Motor in On/Off" />
+        <Enum Value="2" Text="Fault (NO) Motor in On/Off" />
+        <Enum Value="3" Text="Fault (NC) Motor in On" />
+        <Enum Value="4" Text="Fault (NO) Motor in On" />
+        <Enum Value="5" Text="Warning (NC) Motor in On/Off" />
+        <Enum Value="6" Text="Warning (NO) Motor in On/Off" />
+        <Enum Value="7" Text="Warning (NC) Motor in On" />
+        <Enum Value="8" Text="Warning (NO) Motor in On" />
+      </UserParameter>
+      <UserParameter Name="Aux Inp 6 Reaction" DataType="enum" ByteData="37" BitData="4" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="Disabled" />
+        <Enum Value="1" Text="Fault (NC) Motor in On/Off" />
+        <Enum Value="2" Text="Fault (NO) Motor in On/Off" />
+        <Enum Value="3" Text="Fault (NC) Motor in On" />
+        <Enum Value="4" Text="Fault (NO) Motor in On" />
+        <Enum Value="5" Text="Warning (NC) Motor in On/Off" />
+        <Enum Value="6" Text="Warning (NO) Motor in On/Off" />
+        <Enum Value="7" Text="Warning (NC) Motor in On" />
+        <Enum Value="8" Text="Warning (NO) Motor in On" />
+      </UserParameter>
+      <UserParameter Name="PTC, Thermistor" DataType="enum" ByteData="38" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="Disabled" />
+        <Enum Value="1" Text="Trip" />
+        <Enum Value="2" Text="Warning" />
+      </UserParameter>
+      <UserParameter Name="Check-Back" DataType="enum" ByteData="38" BitData="2" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="2" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="1" Text="Contact DI0" />
+        <Enum Value="2" Text="Current" />
+        <Enum Value="3" Text="Simulation" />
+      </UserParameter>
+      <UserParameter Name="Check Phase Sequence" DataType="enum" ByteData="38" BitData="4" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="Disabled" />
+        <Enum Value="1" Text="Trip" />
+        <Enum Value="2" Text="Warning" />
+      </UserParameter>
+      <UserParameter Name="Fault Auto Reset" DataType="enum" ByteData="39" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="Off" />
+        <Enum Value="1" Text="On" />
+      </UserParameter>
+      <UserParameter Name="Emergency Start" DataType="enum" ByteData="39" BitData="1" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="Off" />
+        <Enum Value="1" Text="On" />
+      </UserParameter>
+      <UserParameter Name="Address Check" DataType="enum" ByteData="39" BitData="3" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="Off" />
+        <Enum Value="1" Text="On" />
+      </UserParameter>
+      <UserParameter Name="Enable Custom Logic" DataType="enum" ByteData="39" BitData="4" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="No" />
+        <Enum Value="1" Text="Yes" />
+      </UserParameter>
+      <UserParameter Name="YD Change-Over Mode" DataType="enum" ByteData="39" BitData="5" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="1" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="Time" />
+        <Enum Value="1" Text="Current" />
+      </UserParameter>
+      <UserParameter Name="Phase Loss Prot." DataType="enum" ByteData="39" BitData="6" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="1" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="Off" />
+        <Enum Value="1" Text="On" />
+      </UserParameter>
+      <UserParameter Name="DX1xx Enabled" DataType="enum" ByteData="40" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="Off" />
+        <Enum Value="1" Text="On" />
+      </UserParameter>
+      <UserParameter Name="Missing Module React." DataType="enum" ByteData="40" BitData="7" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="Error" />
+        <Enum Value="1" Text="Warning" />
+      </UserParameter>
+      <UserParameter Name="Aux Inp 1 Ack Mode" DataType="enum" ByteData="41" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="Manual Reset" />
+        <Enum Value="1" Text="Auto Reset" />
+      </UserParameter>
+      <UserParameter Name="Aux Inp 2 Ack Mode" DataType="enum" ByteData="41" BitData="1" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="Manual Reset" />
+        <Enum Value="1" Text="Auto Reset" />
+      </UserParameter>
+      <UserParameter Name="Aux Inp 3 Ack Mode" DataType="enum" ByteData="41" BitData="2" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="Manual Reset" />
+        <Enum Value="1" Text="Auto Reset" />
+      </UserParameter>
+      <UserParameter Name="Aux Inp 4 Ack Mode" DataType="enum" ByteData="41" BitData="3" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="Manual Reset" />
+        <Enum Value="1" Text="Auto Reset" />
+      </UserParameter>
+      <UserParameter Name="Aux Inp 5 Ack Mode" DataType="enum" ByteData="41" BitData="4" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="Manual Reset" />
+        <Enum Value="1" Text="Auto Reset" />
+      </UserParameter>
+      <UserParameter Name="Aux Inp 6 Ack Mode" DataType="enum" ByteData="41" BitData="5" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="Manual Reset" />
+        <Enum Value="1" Text="Auto Reset" />
+      </UserParameter>
+      <UserParameter Name="Cooling Mode" DataType="enum" ByteData="41" BitData="7" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="Time" />
+        <Enum Value="1" Text="x% Therm. Load" />
+      </UserParameter>
+      <UserParameter Name="Invert DI Start Inp." DataType="enum" ByteData="42" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="No" />
+        <Enum Value="1" Text="Yes" />
+      </UserParameter>
+      <UserParameter Name="Invert DI Stop Inp." DataType="enum" ByteData="42" BitData="1" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="1" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="No" />
+        <Enum Value="1" Text="Yes" />
+      </UserParameter>
+      <UserParameter Name="Inching DI Start Inp" DataType="enum" ByteData="42" BitData="4" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="No" />
+        <Enum Value="1" Text="Yes" />
+      </UserParameter>
+      <UserParameter Name="Loc 1 Start Bus Cyc" DataType="enum" ByteData="43" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="No" />
+        <Enum Value="1" Text="Yes" />
+      </UserParameter>
+      <UserParameter Name="Loc 1 Stop Bus Cyc" DataType="enum" ByteData="43" BitData="1" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="1" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="No" />
+        <Enum Value="1" Text="Yes" />
+      </UserParameter>
+      <UserParameter Name="Loc 1 Start DI" DataType="enum" ByteData="43" BitData="2" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="1" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="No" />
+        <Enum Value="1" Text="Yes" />
+      </UserParameter>
+      <UserParameter Name="Loc 1 Stop DI" DataType="enum" ByteData="43" BitData="3" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="1" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="No" />
+        <Enum Value="1" Text="Yes" />
+      </UserParameter>
+      <UserParameter Name="Loc 1 Start LCD" DataType="enum" ByteData="43" BitData="4" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="1" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="No" />
+        <Enum Value="1" Text="Yes" />
+      </UserParameter>
+      <UserParameter Name="Loc 1 Stop LCD" DataType="enum" ByteData="43" BitData="5" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="1" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="No" />
+        <Enum Value="1" Text="Yes" />
+      </UserParameter>
+      <UserParameter Name="Loc 1 Start Bus Acyc" DataType="enum" ByteData="43" BitData="6" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="No" />
+        <Enum Value="1" Text="Yes" />
+      </UserParameter>
+      <UserParameter Name="Loc 1 Stop Bus Acyc" DataType="enum" ByteData="43" BitData="7" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="1" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="No" />
+        <Enum Value="1" Text="Yes" />
+      </UserParameter>
+      <UserParameter Name="Auto Start Bus Cyc" DataType="enum" ByteData="44" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="1" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="No" />
+        <Enum Value="1" Text="Yes" />
+      </UserParameter>
+      <UserParameter Name="Auto Stop Bus Cyc" DataType="enum" ByteData="44" BitData="1" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="1" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="No" />
+        <Enum Value="1" Text="Yes" />
+      </UserParameter>
+      <UserParameter Name="Auto Start DI" DataType="enum" ByteData="44" BitData="2" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="No" />
+        <Enum Value="1" Text="Yes" />
+      </UserParameter>
+      <UserParameter Name="Auto Stop DI" DataType="enum" ByteData="44" BitData="3" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="1" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="No" />
+        <Enum Value="1" Text="Yes" />
+      </UserParameter>
+      <UserParameter Name="Auto Start LCD" DataType="enum" ByteData="44" BitData="4" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="No" />
+        <Enum Value="1" Text="Yes" />
+      </UserParameter>
+      <UserParameter Name="Auto Stop LCD" DataType="enum" ByteData="44" BitData="5" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="1" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="No" />
+        <Enum Value="1" Text="Yes" />
+      </UserParameter>
+      <UserParameter Name="Auto Start Bus Acyc" DataType="enum" ByteData="44" BitData="6" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="1" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="No" />
+        <Enum Value="1" Text="Yes" />
+      </UserParameter>
+      <UserParameter Name="Auto Stop Bus Acyc" DataType="enum" ByteData="44" BitData="7" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="1" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="No" />
+        <Enum Value="1" Text="Yes" />
+      </UserParameter>
+      <UserParameter Name="Loc 2 Start Bus Cyc" DataType="enum" ByteData="45" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="No" />
+        <Enum Value="1" Text="Yes" />
+      </UserParameter>
+      <UserParameter Name="Loc 2 Stop Bus Cyc" DataType="enum" ByteData="45" BitData="1" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="1" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="No" />
+        <Enum Value="1" Text="Yes" />
+      </UserParameter>
+      <UserParameter Name="Loc 2 Start DI" DataType="enum" ByteData="45" BitData="2" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="1" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="No" />
+        <Enum Value="1" Text="Yes" />
+      </UserParameter>
+      <UserParameter Name="Loc 2 Stop DI" DataType="enum" ByteData="45" BitData="3" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="1" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="No" />
+        <Enum Value="1" Text="Yes" />
+      </UserParameter>
+      <UserParameter Name="Loc 2 Start LCD" DataType="enum" ByteData="45" BitData="4" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="1" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="No" />
+        <Enum Value="1" Text="Yes" />
+      </UserParameter>
+      <UserParameter Name="Loc 2 Stop LCD" DataType="enum" ByteData="45" BitData="5" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="1" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="No" />
+        <Enum Value="1" Text="Yes" />
+      </UserParameter>
+      <UserParameter Name="Loc 2 Start Bus Acyc" DataType="enum" ByteData="45" BitData="6" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="No" />
+        <Enum Value="1" Text="Yes" />
+      </UserParameter>
+      <UserParameter Name="Loc 2 Stop Bus Acyc" DataType="enum" ByteData="45" BitData="7" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="1" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="No" />
+        <Enum Value="1" Text="Yes" />
+      </UserParameter>
+      <UserParameter Name="Multif In 0 Autoreset" DataType="enum" ByteData="46" BitData="4" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="No" />
+        <Enum Value="1" Text="Yes" />
+      </UserParameter>
+      <UserParameter Name="Multif In 1 Autoreset" DataType="enum" ByteData="46" BitData="5" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="No" />
+        <Enum Value="1" Text="Yes" />
+      </UserParameter>
+      <UserParameter Name="Multif In 2 Autoreset" DataType="enum" ByteData="46" BitData="6" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="No" />
+        <Enum Value="1" Text="Yes" />
+      </UserParameter>
+      <UserParameter Name="Aux Inp 1 Delay [0.1s]" DataType="int" ByteData="50" BitData="0" LengthData="1" Min="0" Max="255" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False" />
+      <UserParameter Name="Aux Inp 2 Delay [0.1s]" DataType="int" ByteData="51" BitData="0" LengthData="1" Min="0" Max="255" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False" />
+      <UserParameter Name="Aux Inp 3 Delay [0.1s]" DataType="int" ByteData="52" BitData="0" LengthData="1" Min="0" Max="255" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False" />
+      <UserParameter Name="Aux Inp 4 Delay [0.1s]" DataType="int" ByteData="53" BitData="0" LengthData="1" Min="0" Max="255" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False" />
+      <UserParameter Name="Aux Inp 5 Delay [0.1s]" DataType="int" ByteData="54" BitData="0" LengthData="1" Min="0" Max="255" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False" />
+      <UserParameter Name="Aux Inp 6 Delay [0.1s]" DataType="int" ByteData="55" BitData="0" LengthData="1" Min="0" Max="255" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False" />
+      <UserParameter Name="Check-Back Time [0.1s]" DataType="int" ByteData="56" BitData="0" LengthData="1" Min="1" Max="255" ParserGenerated="False" Deleted="False" Unit="" Default="5" OrgSize="1" EnumtableOnlyNumbers="False" />
+      <UserParameter Name="Low Curr Warn Delay [0.1s]" DataType="int" ByteData="57" BitData="0" LengthData="1" Min="0" Max="255" ParserGenerated="False" Deleted="False" Unit="" Default="5" OrgSize="1" EnumtableOnlyNumbers="False" />
+      <UserParameter Name="Low Curr Trip Delay [0.1s]" DataType="int" ByteData="58" BitData="0" LengthData="1" Min="0" Max="255" ParserGenerated="False" Deleted="False" Unit="" Default="5" OrgSize="1" EnumtableOnlyNumbers="False" />
+      <UserParameter Name="High Curr Warn Delay [0.1s]" DataType="int" ByteData="59" BitData="0" LengthData="1" Min="0" Max="255" ParserGenerated="False" Deleted="False" Unit="" Default="5" OrgSize="1" EnumtableOnlyNumbers="False" />
+      <UserParameter Name="High Curr Trip Delay [0.1s]" DataType="int" ByteData="60" BitData="0" LengthData="1" Min="0" Max="255" ParserGenerated="False" Deleted="False" Unit="" Default="5" OrgSize="1" EnumtableOnlyNumbers="False" />
+      <UserParameter Name="Phase Imb Trip Level [%]" DataType="int" ByteData="61" BitData="0" LengthData="1" Min="0" Max="100" ParserGenerated="False" Deleted="False" Unit="" Default="50" OrgSize="1" EnumtableOnlyNumbers="False" />
+      <UserParameter Name="Phase Imb Warn Level [%]" DataType="int" ByteData="62" BitData="0" LengthData="1" Min="0" Max="100" ParserGenerated="False" Deleted="False" Unit="" Default="100" OrgSize="1" EnumtableOnlyNumbers="False" />
+      <UserParameter Name="Phase Reversal" DataType="enum" ByteData="63" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="Phase Sequence L1 L2 L3" />
+        <Enum Value="1" Text="Phase Sequence L3 L2 L1" />
+      </UserParameter>
+      <UserParameter Name="Restart Level [%]" DataType="int" ByteData="64" BitData="0" LengthData="1" Min="10" Max="100" ParserGenerated="False" Deleted="False" Unit="" Default="30" OrgSize="1" EnumtableOnlyNumbers="False" />
+      <UserParameter Name="User Display 1" DataType="enum" ByteData="65" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="Thermal Load" />
+        <Enum Value="1" Text="DX1xx DI" />
+        <Enum Value="2" Text="DX1xx DO" />
+        <Enum Value="3" Text="Operating Hours" />
+        <Enum Value="4" Text="Number of Trips" />
+        <Enum Value="5" Text="Number of Starts" />
+        <Enum Value="6" Text="max. Startup Current" />
+        <Enum Value="7" Text="Real Startup Time" />
+      </UserParameter>
+      <UserParameter Name="User Display 2" DataType="enum" ByteData="66" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="6" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="Thermal Load" />
+        <Enum Value="1" Text="DX1xx DI" />
+        <Enum Value="2" Text="DX1xx DO" />
+        <Enum Value="3" Text="Operating Hours" />
+        <Enum Value="4" Text="Number of Trips" />
+        <Enum Value="5" Text="Number of Starts" />
+        <Enum Value="6" Text="max. Startup Current" />
+        <Enum Value="7" Text="Real Startup Time" />
+      </UserParameter>
+      <UserParameter Name="User Display 3" DataType="enum" ByteData="67" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="7" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="Thermal Load" />
+        <Enum Value="1" Text="DX1xx DI" />
+        <Enum Value="2" Text="DX1xx DO" />
+        <Enum Value="3" Text="Operating Hours" />
+        <Enum Value="4" Text="Number of Trips" />
+        <Enum Value="5" Text="Number of Starts" />
+        <Enum Value="6" Text="max. Startup Current" />
+        <Enum Value="7" Text="Real Startup Time" />
+      </UserParameter>
+      <UserParameter Name="User Display 4" DataType="enum" ByteData="68" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="4" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="Binary 0" />
+        <Enum Value="1" Text="Binary 1" />
+        <Enum Value="2" Text="Analog 0" />
+        <Enum Value="3" Text="Analog 1" />
+        <Enum Value="4" Text="Time to Trip" />
+        <Enum Value="5" Text="Time to Cool" />
+      </UserParameter>
+      <UserParameter Name="User Display 5" DataType="enum" ByteData="69" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="5" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="Binary 0" />
+        <Enum Value="1" Text="Binary 1" />
+        <Enum Value="2" Text="Analog 0" />
+        <Enum Value="3" Text="Analog 1" />
+        <Enum Value="4" Text="Time to Trip" />
+        <Enum Value="5" Text="Time to Cool" />
+      </UserParameter>
+      <UserParameter Name="Dip Duration [0.1s]" DataType="int" ByteData="71" BitData="0" LengthData="1" Min="1" Max="255" ParserGenerated="False" Deleted="False" Unit="" Default="5" OrgSize="1" EnumtableOnlyNumbers="False" />
+      <UserParameter Name="Dip Autorestart Window [0.1s]" DataType="int" ByteData="72" BitData="0" LengthData="1" Min="1" Max="10" ParserGenerated="False" Deleted="False" Unit="" Default="1" OrgSize="1" EnumtableOnlyNumbers="False" />
+      <UserParameter Name="Dip Autorestart Delay [s]" DataType="int" ByteData="73" BitData="0" LengthData="1" Min="0" Max="255" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False" />
+      <UserParameter Name="Thermal Load Warnlev [%]" DataType="int" ByteData="74" BitData="0" LengthData="1" Min="20" Max="100" ParserGenerated="False" Deleted="False" Unit="" Default="100" OrgSize="1" EnumtableOnlyNumbers="False" />
+      <UserParameter Name="DX1xx DI Delay [ms]" DataType="int" ByteData="83" BitData="0" LengthData="1" Min="3" Max="200" ParserGenerated="False" Deleted="False" Unit="" Default="20" OrgSize="1" EnumtableOnlyNumbers="False" />
+      <UserParameter Name="DX1xx AO Type" DataType="enum" ByteData="112" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="0-20mA" />
+        <Enum Value="1" Text="4-20mA" />
+        <Enum Value="2" Text="0-10mA" />
+        <Enum Value="3" Text="0-10V" />
+      </UserParameter>
+      <UserParameter Name="DX1xx AO Err Reac" DataType="enum" ByteData="112" BitData="2" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="Disabled" />
+        <Enum Value="1" Text="Trip" />
+        <Enum Value="2" Text="Warning" />
+      </UserParameter>
+      <UserParameter Name="Backlight" DataType="enum" ByteData="117" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="1" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="Off" />
+        <Enum Value="1" Text="On" />
+      </UserParameter>
+      <UserParameter Name="Password Protection" DataType="enum" ByteData="117" BitData="1" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="Off" />
+        <Enum Value="1" Text="On for Parameters" />
+        <Enum Value="2" Text="On for Param. + Motor Control" />
+      </UserParameter>
+      <UserParameter Name="Dip Enable" DataType="enum" ByteData="117" BitData="3" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="Off" />
+        <Enum Value="1" Text="On" />
+        <Enum Value="2" Text="On + Rapid Cycle Lockout" />
+      </UserParameter>
+      <UserParameter Name="Dip Autorestart Enable" DataType="enum" ByteData="117" BitData="5" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+        <Enum Value="0" Text="Off" />
+        <Enum Value="1" Text="On" />
+      </UserParameter>
+      <Original>
+        <UserParameter Name="Setting Ie 1 [0.01A]" DataType="int" ByteData="0" BitData="0" LengthData="4" Min="24" Max="320000" ParserGenerated="False" Deleted="False" Unit="" Default="50" OrgSize="4" EnumtableOnlyNumbers="False" />
+        <UserParameter Name="Setting Ie 2 [0.01A]" DataType="int" ByteData="4" BitData="0" LengthData="4" Min="24" Max="320000" ParserGenerated="False" Deleted="False" Unit="" Default="50" OrgSize="4" EnumtableOnlyNumbers="False" />
+        <UserParameter Name="YD Starting Time [0.1s]" DataType="int" ByteData="8" BitData="0" LengthData="2" Min="10" Max="36000" ParserGenerated="False" Deleted="False" Unit="" Default="600" OrgSize="2" EnumtableOnlyNumbers="False" />
+        <UserParameter Name="Current Factor [%]" DataType="int" ByteData="10" BitData="0" LengthData="2" Min="2" Max="64000" ParserGenerated="False" Deleted="False" Unit="" Default="100" OrgSize="2" EnumtableOnlyNumbers="False" />
+        <UserParameter Name="Cooling Time [s]" DataType="int" ByteData="12" BitData="0" LengthData="2" Min="30" Max="64000" ParserGenerated="False" Deleted="False" Unit="" Default="120" OrgSize="2" EnumtableOnlyNumbers="False" />
+        <UserParameter Name="Language" DataType="enum" ByteData="16" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="English" />
+          <Enum Value="1" Text="Deutsch" />
+          <Enum Value="2" Text="Francais" />
+          <Enum Value="3" Text="Espanol" />
+          <Enum Value="4" Text="Italiano" />
+          <Enum Value="5" Text="Portugues" />
+        </UserParameter>
+        <UserParameter Name="Rev Lock-Out Time [s]" DataType="int" ByteData="17" BitData="0" LengthData="1" Min="1" Max="255" ParserGenerated="False" Deleted="False" Unit="" Default="1" OrgSize="1" EnumtableOnlyNumbers="False" />
+        <UserParameter Name="Fault Output" DataType="enum" ByteData="18" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="Off" />
+          <Enum Value="1" Text="Flash DO2" />
+          <Enum Value="2" Text="On DO2" />
+          <Enum Value="3" Text="Invert DO2" />
+          <Enum Value="4" Text="Flash DO3" />
+          <Enum Value="5" Text="On DO3" />
+          <Enum Value="6" Text="Invert DO3" />
+        </UserParameter>
+        <UserParameter Name="Trip Class" DataType="enum" ByteData="19" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="1" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="Class 5" />
+          <Enum Value="1" Text="Class 10" />
+          <Enum Value="2" Text="Class 20" />
+          <Enum Value="3" Text="Class 30" />
+          <Enum Value="4" Text="Class 40" />
+        </UserParameter>
+        <UserParameter Name="Low Curr Warn Level [5%]" DataType="int" ByteData="20" BitData="0" LengthData="1" Min="0" Max="20" ParserGenerated="False" Deleted="False" Unit="" Default="10" OrgSize="1" EnumtableOnlyNumbers="False" />
+        <UserParameter Name="Low Curr Trip Level [5%]" DataType="int" ByteData="21" BitData="0" LengthData="1" Min="0" Max="20" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False" />
+        <UserParameter Name="High Curr Warn Level [5%]" DataType="int" ByteData="22" BitData="0" LengthData="1" Min="20" Max="160" ParserGenerated="False" Deleted="False" Unit="" Default="30" OrgSize="1" EnumtableOnlyNumbers="False" />
+        <UserParameter Name="High Curr Trip Level [5%]" DataType="int" ByteData="23" BitData="0" LengthData="1" Min="20" Max="160" ParserGenerated="False" Deleted="False" Unit="" Default="160" OrgSize="1" EnumtableOnlyNumbers="False" />
+        <UserParameter Name="Locked Rotor Level [5%]" DataType="int" ByteData="24" BitData="0" LengthData="1" Min="20" Max="160" ParserGenerated="False" Deleted="False" Unit="" Default="160" OrgSize="1" EnumtableOnlyNumbers="False" />
+        <UserParameter Name="Locked Rotor Delay [0.1s]" DataType="int" ByteData="25" BitData="0" LengthData="1" Min="0" Max="255" ParserGenerated="False" Deleted="False" Unit="" Default="5" OrgSize="1" EnumtableOnlyNumbers="False" />
+        <UserParameter Name="Custom App Parameter" DataType="int" ByteData="26" BitData="0" LengthData="1" Min="0" Max="255" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False" />
+        <UserParameter Name="Multif In 0" DataType="enum" ByteData="27" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="Off" />
+          <Enum Value="1" Text="Stop (NC)" />
+          <Enum Value="2" Text="Stop (NO)" />
+          <Enum Value="3" Text="Ext. Flt (NC) always" />
+          <Enum Value="4" Text="Ext. Flt (NO) always" />
+          <Enum Value="5" Text="Ext. Flt (NC) Motor on" />
+          <Enum Value="6" Text="Ext. Flt (NO) Motor on" />
+          <Enum Value="7" Text="Prep. emerg. Start (NC)" />
+          <Enum Value="8" Text="Prep. emerg. Start (NO)" />
+          <Enum Value="9" Text="Testposition (NC)" />
+          <Enum Value="10" Text="Testposition (NO)" />
+          <Enum Value="11" Text="Force local (NC)" />
+          <Enum Value="12" Text="Force local (NO)" />
+          <Enum Value="13" Text="Fault reset (NC)" />
+          <Enum Value="14" Text="Fault reset (NO)" />
+          <Enum Value="15" Text="Voltage DIP (NC)" />
+          <Enum Value="16" Text="Voltage DIP (NO)" />
+          <Enum Value="17" Text="CEM11 always (Warning)" />
+          <Enum Value="18" Text="CEM11 after startup (Warning)" />
+          <Enum Value="19" Text="CEM11 always (Fault)" />
+          <Enum Value="20" Text="CEM11 after startup time (Fault)" />
+        </UserParameter>
+        <UserParameter Name="Multif In 1" DataType="enum" ByteData="28" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="Off" />
+          <Enum Value="1" Text="Stop (NC)" />
+          <Enum Value="2" Text="Stop (NO)" />
+          <Enum Value="3" Text="Ext. Flt (NC) always" />
+          <Enum Value="4" Text="Ext. Flt (NO) always" />
+          <Enum Value="5" Text="Ext. Flt (NC) Motor on" />
+          <Enum Value="6" Text="Ext. Flt (NO) Motor on" />
+          <Enum Value="7" Text="Prep. emerg. Start (NC)" />
+          <Enum Value="8" Text="Prep. emerg. Start (NO)" />
+          <Enum Value="9" Text="Testposition (NC)" />
+          <Enum Value="10" Text="Testposition (NO)" />
+          <Enum Value="11" Text="Force local (NC)" />
+          <Enum Value="12" Text="Force local (NO)" />
+          <Enum Value="13" Text="Fault reset (NC)" />
+          <Enum Value="14" Text="Fault reset (NO)" />
+          <Enum Value="15" Text="Voltage DIP (NC)" />
+          <Enum Value="16" Text="Voltage DIP (NO)" />
+          <Enum Value="17" Text="CEM11 always (Warning)" />
+          <Enum Value="18" Text="CEM11 after startup (Warning)" />
+          <Enum Value="19" Text="CEM11 always (Fault)" />
+          <Enum Value="20" Text="CEM11 after startup time (Fault)" />
+        </UserParameter>
+        <UserParameter Name="Multif In 2" DataType="enum" ByteData="29" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="Off" />
+          <Enum Value="1" Text="Stop (NC)" />
+          <Enum Value="2" Text="Stop (NO)" />
+          <Enum Value="3" Text="Ext. Flt (NC) always" />
+          <Enum Value="4" Text="Ext. Flt (NO) always" />
+          <Enum Value="5" Text="Ext. Flt (NC) Motor on" />
+          <Enum Value="6" Text="Ext. Flt (NO) Motor on" />
+          <Enum Value="7" Text="Prep. emerg. Start (NC)" />
+          <Enum Value="8" Text="Prep. emerg. Start (NO)" />
+          <Enum Value="9" Text="Testposition (NC)" />
+          <Enum Value="10" Text="Testposition (NO)" />
+          <Enum Value="11" Text="Force local (NC)" />
+          <Enum Value="12" Text="Force local (NO)" />
+          <Enum Value="13" Text="Fault reset (NC)" />
+          <Enum Value="14" Text="Fault reset (NO)" />
+          <Enum Value="15" Text="Voltage DIP (NC)" />
+          <Enum Value="16" Text="Voltage DIP (NO)" />
+          <Enum Value="17" Text="CEM11 always (Warning)" />
+          <Enum Value="18" Text="CEM11 after startup (Warning)" />
+          <Enum Value="19" Text="CEM11 always (Fault)" />
+          <Enum Value="20" Text="CEM11 after startup time (Fault)" />
+        </UserParameter>
+        <UserParameter Name="Multif In 0 Delay [0.1s]" DataType="int" ByteData="30" BitData="0" LengthData="1" Min="0" Max="255" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False" />
+        <UserParameter Name="Multif In 1 Delay [0.1s]" DataType="int" ByteData="31" BitData="0" LengthData="1" Min="0" Max="255" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False" />
+        <UserParameter Name="Multif In 2 Delay [0.1s]" DataType="int" ByteData="32" BitData="0" LengthData="1" Min="0" Max="255" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False" />
+        <UserParameter Name="Control Function" DataType="enum" ByteData="33" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="3" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="1" Text="Transparent" />
+          <Enum Value="2" Text="Overload Relay" />
+          <Enum Value="3" Text="Direct Starter" />
+          <Enum Value="4" Text="Reverse Starter" />
+          <Enum Value="5" Text="Star-delta Starter" />
+          <Enum Value="7" Text="Pole-Changing Starter" />
+          <Enum Value="9" Text="Actuator 1" />
+          <Enum Value="10" Text="Actuator 2" />
+          <Enum Value="11" Text="Actuator 3" />
+          <Enum Value="12" Text="Actuator 4" />
+        </UserParameter>
+        <UserParameter Name="Busfault Reaction" DataType="enum" ByteData="34" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="Motor Off" />
+          <Enum Value="1" Text="Retain" />
+          <Enum Value="2" Text="Start Forward" />
+          <Enum Value="3" Text="Start Reverse" />
+        </UserParameter>
+        <UserParameter Name="Aux Inp 1 Reaction" DataType="enum" ByteData="35" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="Disabled" />
+          <Enum Value="1" Text="Fault (NC) Motor in On/Off" />
+          <Enum Value="2" Text="Fault (NO) Motor in On/Off" />
+          <Enum Value="3" Text="Fault (NC) Motor in On" />
+          <Enum Value="4" Text="Fault (NO) Motor in On" />
+          <Enum Value="5" Text="Warning (NC) Motor in On/Off" />
+          <Enum Value="6" Text="Warning (NO) Motor in On/Off" />
+          <Enum Value="7" Text="Warning (NC) Motor in On" />
+          <Enum Value="8" Text="Warning (NO) Motor in On" />
+        </UserParameter>
+        <UserParameter Name="Aux Inp 2 Reaction" DataType="enum" ByteData="35" BitData="4" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="Disabled" />
+          <Enum Value="1" Text="Fault (NC) Motor in On/Off" />
+          <Enum Value="2" Text="Fault (NO) Motor in On/Off" />
+          <Enum Value="3" Text="Fault (NC) Motor in On" />
+          <Enum Value="4" Text="Fault (NO) Motor in On" />
+          <Enum Value="5" Text="Warning (NC) Motor in On/Off" />
+          <Enum Value="6" Text="Warning (NO) Motor in On/Off" />
+          <Enum Value="7" Text="Warning (NC) Motor in On" />
+          <Enum Value="8" Text="Warning (NO) Motor in On" />
+        </UserParameter>
+        <UserParameter Name="Aux Inp 3 Reaction" DataType="enum" ByteData="36" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="Disabled" />
+          <Enum Value="1" Text="Fault (NC) Motor in On/Off" />
+          <Enum Value="2" Text="Fault (NO) Motor in On/Off" />
+          <Enum Value="3" Text="Fault (NC) Motor in On" />
+          <Enum Value="4" Text="Fault (NO) Motor in On" />
+          <Enum Value="5" Text="Warning (NC) Motor in On/Off" />
+          <Enum Value="6" Text="Warning (NO) Motor in On/Off" />
+          <Enum Value="7" Text="Warning (NC) Motor in On" />
+          <Enum Value="8" Text="Warning (NO) Motor in On" />
+        </UserParameter>
+        <UserParameter Name="Aux Inp 4 Reaction" DataType="enum" ByteData="36" BitData="4" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="Disabled" />
+          <Enum Value="1" Text="Fault (NC) Motor in On/Off" />
+          <Enum Value="2" Text="Fault (NO) Motor in On/Off" />
+          <Enum Value="3" Text="Fault (NC) Motor in On" />
+          <Enum Value="4" Text="Fault (NO) Motor in On" />
+          <Enum Value="5" Text="Warning (NC) Motor in On/Off" />
+          <Enum Value="6" Text="Warning (NO) Motor in On/Off" />
+          <Enum Value="7" Text="Warning (NC) Motor in On" />
+          <Enum Value="8" Text="Warning (NO) Motor in On" />
+        </UserParameter>
+        <UserParameter Name="Aux Inp 5 Reaction" DataType="enum" ByteData="37" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="Disabled" />
+          <Enum Value="1" Text="Fault (NC) Motor in On/Off" />
+          <Enum Value="2" Text="Fault (NO) Motor in On/Off" />
+          <Enum Value="3" Text="Fault (NC) Motor in On" />
+          <Enum Value="4" Text="Fault (NO) Motor in On" />
+          <Enum Value="5" Text="Warning (NC) Motor in On/Off" />
+          <Enum Value="6" Text="Warning (NO) Motor in On/Off" />
+          <Enum Value="7" Text="Warning (NC) Motor in On" />
+          <Enum Value="8" Text="Warning (NO) Motor in On" />
+        </UserParameter>
+        <UserParameter Name="Aux Inp 6 Reaction" DataType="enum" ByteData="37" BitData="4" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="Disabled" />
+          <Enum Value="1" Text="Fault (NC) Motor in On/Off" />
+          <Enum Value="2" Text="Fault (NO) Motor in On/Off" />
+          <Enum Value="3" Text="Fault (NC) Motor in On" />
+          <Enum Value="4" Text="Fault (NO) Motor in On" />
+          <Enum Value="5" Text="Warning (NC) Motor in On/Off" />
+          <Enum Value="6" Text="Warning (NO) Motor in On/Off" />
+          <Enum Value="7" Text="Warning (NC) Motor in On" />
+          <Enum Value="8" Text="Warning (NO) Motor in On" />
+        </UserParameter>
+        <UserParameter Name="PTC, Thermistor" DataType="enum" ByteData="38" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="Disabled" />
+          <Enum Value="1" Text="Trip" />
+          <Enum Value="2" Text="Warning" />
+        </UserParameter>
+        <UserParameter Name="Check-Back" DataType="enum" ByteData="38" BitData="2" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="2" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="1" Text="Contact DI0" />
+          <Enum Value="2" Text="Current" />
+          <Enum Value="3" Text="Simulation" />
+        </UserParameter>
+        <UserParameter Name="Check Phase Sequence" DataType="enum" ByteData="38" BitData="4" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="Disabled" />
+          <Enum Value="1" Text="Trip" />
+          <Enum Value="2" Text="Warning" />
+        </UserParameter>
+        <UserParameter Name="Fault Auto Reset" DataType="enum" ByteData="39" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="Off" />
+          <Enum Value="1" Text="On" />
+        </UserParameter>
+        <UserParameter Name="Emergency Start" DataType="enum" ByteData="39" BitData="1" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="Off" />
+          <Enum Value="1" Text="On" />
+        </UserParameter>
+        <UserParameter Name="Address Check" DataType="enum" ByteData="39" BitData="3" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="Off" />
+          <Enum Value="1" Text="On" />
+        </UserParameter>
+        <UserParameter Name="Enable Custom Logic" DataType="enum" ByteData="39" BitData="4" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="No" />
+          <Enum Value="1" Text="Yes" />
+        </UserParameter>
+        <UserParameter Name="YD Change-Over Mode" DataType="enum" ByteData="39" BitData="5" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="1" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="Time" />
+          <Enum Value="1" Text="Current" />
+        </UserParameter>
+        <UserParameter Name="Phase Loss Prot." DataType="enum" ByteData="39" BitData="6" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="1" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="Off" />
+          <Enum Value="1" Text="On" />
+        </UserParameter>
+        <UserParameter Name="DX1xx Enabled" DataType="enum" ByteData="40" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="Off" />
+          <Enum Value="1" Text="On" />
+        </UserParameter>
+        <UserParameter Name="Missing Module React." DataType="enum" ByteData="40" BitData="7" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="Error" />
+          <Enum Value="1" Text="Warning" />
+        </UserParameter>
+        <UserParameter Name="Aux Inp 1 Ack Mode" DataType="enum" ByteData="41" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="Manual Reset" />
+          <Enum Value="1" Text="Auto Reset" />
+        </UserParameter>
+        <UserParameter Name="Aux Inp 2 Ack Mode" DataType="enum" ByteData="41" BitData="1" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="Manual Reset" />
+          <Enum Value="1" Text="Auto Reset" />
+        </UserParameter>
+        <UserParameter Name="Aux Inp 3 Ack Mode" DataType="enum" ByteData="41" BitData="2" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="Manual Reset" />
+          <Enum Value="1" Text="Auto Reset" />
+        </UserParameter>
+        <UserParameter Name="Aux Inp 4 Ack Mode" DataType="enum" ByteData="41" BitData="3" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="Manual Reset" />
+          <Enum Value="1" Text="Auto Reset" />
+        </UserParameter>
+        <UserParameter Name="Aux Inp 5 Ack Mode" DataType="enum" ByteData="41" BitData="4" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="Manual Reset" />
+          <Enum Value="1" Text="Auto Reset" />
+        </UserParameter>
+        <UserParameter Name="Aux Inp 6 Ack Mode" DataType="enum" ByteData="41" BitData="5" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="Manual Reset" />
+          <Enum Value="1" Text="Auto Reset" />
+        </UserParameter>
+        <UserParameter Name="Cooling Mode" DataType="enum" ByteData="41" BitData="7" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="Time" />
+          <Enum Value="1" Text="x% Therm. Load" />
+        </UserParameter>
+        <UserParameter Name="Invert DI Start Inp." DataType="enum" ByteData="42" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="No" />
+          <Enum Value="1" Text="Yes" />
+        </UserParameter>
+        <UserParameter Name="Invert DI Stop Inp." DataType="enum" ByteData="42" BitData="1" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="1" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="No" />
+          <Enum Value="1" Text="Yes" />
+        </UserParameter>
+        <UserParameter Name="Inching DI Start Inp" DataType="enum" ByteData="42" BitData="4" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="No" />
+          <Enum Value="1" Text="Yes" />
+        </UserParameter>
+        <UserParameter Name="Loc 1 Start Bus Cyc" DataType="enum" ByteData="43" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="No" />
+          <Enum Value="1" Text="Yes" />
+        </UserParameter>
+        <UserParameter Name="Loc 1 Stop Bus Cyc" DataType="enum" ByteData="43" BitData="1" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="1" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="No" />
+          <Enum Value="1" Text="Yes" />
+        </UserParameter>
+        <UserParameter Name="Loc 1 Start DI" DataType="enum" ByteData="43" BitData="2" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="1" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="No" />
+          <Enum Value="1" Text="Yes" />
+        </UserParameter>
+        <UserParameter Name="Loc 1 Stop DI" DataType="enum" ByteData="43" BitData="3" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="1" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="No" />
+          <Enum Value="1" Text="Yes" />
+        </UserParameter>
+        <UserParameter Name="Loc 1 Start LCD" DataType="enum" ByteData="43" BitData="4" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="1" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="No" />
+          <Enum Value="1" Text="Yes" />
+        </UserParameter>
+        <UserParameter Name="Loc 1 Stop LCD" DataType="enum" ByteData="43" BitData="5" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="1" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="No" />
+          <Enum Value="1" Text="Yes" />
+        </UserParameter>
+        <UserParameter Name="Loc 1 Start Bus Acyc" DataType="enum" ByteData="43" BitData="6" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="No" />
+          <Enum Value="1" Text="Yes" />
+        </UserParameter>
+        <UserParameter Name="Loc 1 Stop Bus Acyc" DataType="enum" ByteData="43" BitData="7" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="1" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="No" />
+          <Enum Value="1" Text="Yes" />
+        </UserParameter>
+        <UserParameter Name="Auto Start Bus Cyc" DataType="enum" ByteData="44" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="1" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="No" />
+          <Enum Value="1" Text="Yes" />
+        </UserParameter>
+        <UserParameter Name="Auto Stop Bus Cyc" DataType="enum" ByteData="44" BitData="1" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="1" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="No" />
+          <Enum Value="1" Text="Yes" />
+        </UserParameter>
+        <UserParameter Name="Auto Start DI" DataType="enum" ByteData="44" BitData="2" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="No" />
+          <Enum Value="1" Text="Yes" />
+        </UserParameter>
+        <UserParameter Name="Auto Stop DI" DataType="enum" ByteData="44" BitData="3" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="1" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="No" />
+          <Enum Value="1" Text="Yes" />
+        </UserParameter>
+        <UserParameter Name="Auto Start LCD" DataType="enum" ByteData="44" BitData="4" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="No" />
+          <Enum Value="1" Text="Yes" />
+        </UserParameter>
+        <UserParameter Name="Auto Stop LCD" DataType="enum" ByteData="44" BitData="5" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="1" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="No" />
+          <Enum Value="1" Text="Yes" />
+        </UserParameter>
+        <UserParameter Name="Auto Start Bus Acyc" DataType="enum" ByteData="44" BitData="6" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="1" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="No" />
+          <Enum Value="1" Text="Yes" />
+        </UserParameter>
+        <UserParameter Name="Auto Stop Bus Acyc" DataType="enum" ByteData="44" BitData="7" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="1" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="No" />
+          <Enum Value="1" Text="Yes" />
+        </UserParameter>
+        <UserParameter Name="Loc 2 Start Bus Cyc" DataType="enum" ByteData="45" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="No" />
+          <Enum Value="1" Text="Yes" />
+        </UserParameter>
+        <UserParameter Name="Loc 2 Stop Bus Cyc" DataType="enum" ByteData="45" BitData="1" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="1" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="No" />
+          <Enum Value="1" Text="Yes" />
+        </UserParameter>
+        <UserParameter Name="Loc 2 Start DI" DataType="enum" ByteData="45" BitData="2" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="1" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="No" />
+          <Enum Value="1" Text="Yes" />
+        </UserParameter>
+        <UserParameter Name="Loc 2 Stop DI" DataType="enum" ByteData="45" BitData="3" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="1" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="No" />
+          <Enum Value="1" Text="Yes" />
+        </UserParameter>
+        <UserParameter Name="Loc 2 Start LCD" DataType="enum" ByteData="45" BitData="4" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="1" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="No" />
+          <Enum Value="1" Text="Yes" />
+        </UserParameter>
+        <UserParameter Name="Loc 2 Stop LCD" DataType="enum" ByteData="45" BitData="5" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="1" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="No" />
+          <Enum Value="1" Text="Yes" />
+        </UserParameter>
+        <UserParameter Name="Loc 2 Start Bus Acyc" DataType="enum" ByteData="45" BitData="6" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="No" />
+          <Enum Value="1" Text="Yes" />
+        </UserParameter>
+        <UserParameter Name="Loc 2 Stop Bus Acyc" DataType="enum" ByteData="45" BitData="7" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="1" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="No" />
+          <Enum Value="1" Text="Yes" />
+        </UserParameter>
+        <UserParameter Name="Multif In 0 Autoreset" DataType="enum" ByteData="46" BitData="4" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="No" />
+          <Enum Value="1" Text="Yes" />
+        </UserParameter>
+        <UserParameter Name="Multif In 1 Autoreset" DataType="enum" ByteData="46" BitData="5" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="No" />
+          <Enum Value="1" Text="Yes" />
+        </UserParameter>
+        <UserParameter Name="Multif In 2 Autoreset" DataType="enum" ByteData="46" BitData="6" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="No" />
+          <Enum Value="1" Text="Yes" />
+        </UserParameter>
+        <UserParameter Name="Aux Inp 1 Delay [0.1s]" DataType="int" ByteData="50" BitData="0" LengthData="1" Min="0" Max="255" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False" />
+        <UserParameter Name="Aux Inp 2 Delay [0.1s]" DataType="int" ByteData="51" BitData="0" LengthData="1" Min="0" Max="255" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False" />
+        <UserParameter Name="Aux Inp 3 Delay [0.1s]" DataType="int" ByteData="52" BitData="0" LengthData="1" Min="0" Max="255" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False" />
+        <UserParameter Name="Aux Inp 4 Delay [0.1s]" DataType="int" ByteData="53" BitData="0" LengthData="1" Min="0" Max="255" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False" />
+        <UserParameter Name="Aux Inp 5 Delay [0.1s]" DataType="int" ByteData="54" BitData="0" LengthData="1" Min="0" Max="255" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False" />
+        <UserParameter Name="Aux Inp 6 Delay [0.1s]" DataType="int" ByteData="55" BitData="0" LengthData="1" Min="0" Max="255" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False" />
+        <UserParameter Name="Check-Back Time [0.1s]" DataType="int" ByteData="56" BitData="0" LengthData="1" Min="1" Max="255" ParserGenerated="False" Deleted="False" Unit="" Default="5" OrgSize="1" EnumtableOnlyNumbers="False" />
+        <UserParameter Name="Low Curr Warn Delay [0.1s]" DataType="int" ByteData="57" BitData="0" LengthData="1" Min="0" Max="255" ParserGenerated="False" Deleted="False" Unit="" Default="5" OrgSize="1" EnumtableOnlyNumbers="False" />
+        <UserParameter Name="Low Curr Trip Delay [0.1s]" DataType="int" ByteData="58" BitData="0" LengthData="1" Min="0" Max="255" ParserGenerated="False" Deleted="False" Unit="" Default="5" OrgSize="1" EnumtableOnlyNumbers="False" />
+        <UserParameter Name="High Curr Warn Delay [0.1s]" DataType="int" ByteData="59" BitData="0" LengthData="1" Min="0" Max="255" ParserGenerated="False" Deleted="False" Unit="" Default="5" OrgSize="1" EnumtableOnlyNumbers="False" />
+        <UserParameter Name="High Curr Trip Delay [0.1s]" DataType="int" ByteData="60" BitData="0" LengthData="1" Min="0" Max="255" ParserGenerated="False" Deleted="False" Unit="" Default="5" OrgSize="1" EnumtableOnlyNumbers="False" />
+        <UserParameter Name="Phase Imb Trip Level [%]" DataType="int" ByteData="61" BitData="0" LengthData="1" Min="0" Max="100" ParserGenerated="False" Deleted="False" Unit="" Default="50" OrgSize="1" EnumtableOnlyNumbers="False" />
+        <UserParameter Name="Phase Imb Warn Level [%]" DataType="int" ByteData="62" BitData="0" LengthData="1" Min="0" Max="100" ParserGenerated="False" Deleted="False" Unit="" Default="100" OrgSize="1" EnumtableOnlyNumbers="False" />
+        <UserParameter Name="Phase Reversal" DataType="enum" ByteData="63" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="Phase Sequence L1 L2 L3" />
+          <Enum Value="1" Text="Phase Sequence L3 L2 L1" />
+        </UserParameter>
+        <UserParameter Name="Restart Level [%]" DataType="int" ByteData="64" BitData="0" LengthData="1" Min="10" Max="100" ParserGenerated="False" Deleted="False" Unit="" Default="30" OrgSize="1" EnumtableOnlyNumbers="False" />
+        <UserParameter Name="User Display 1" DataType="enum" ByteData="65" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="Thermal Load" />
+          <Enum Value="1" Text="DX1xx DI" />
+          <Enum Value="2" Text="DX1xx DO" />
+          <Enum Value="3" Text="Operating Hours" />
+          <Enum Value="4" Text="Number of Trips" />
+          <Enum Value="5" Text="Number of Starts" />
+          <Enum Value="6" Text="max. Startup Current" />
+          <Enum Value="7" Text="Real Startup Time" />
+        </UserParameter>
+        <UserParameter Name="User Display 2" DataType="enum" ByteData="66" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="6" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="Thermal Load" />
+          <Enum Value="1" Text="DX1xx DI" />
+          <Enum Value="2" Text="DX1xx DO" />
+          <Enum Value="3" Text="Operating Hours" />
+          <Enum Value="4" Text="Number of Trips" />
+          <Enum Value="5" Text="Number of Starts" />
+          <Enum Value="6" Text="max. Startup Current" />
+          <Enum Value="7" Text="Real Startup Time" />
+        </UserParameter>
+        <UserParameter Name="User Display 3" DataType="enum" ByteData="67" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="7" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="Thermal Load" />
+          <Enum Value="1" Text="DX1xx DI" />
+          <Enum Value="2" Text="DX1xx DO" />
+          <Enum Value="3" Text="Operating Hours" />
+          <Enum Value="4" Text="Number of Trips" />
+          <Enum Value="5" Text="Number of Starts" />
+          <Enum Value="6" Text="max. Startup Current" />
+          <Enum Value="7" Text="Real Startup Time" />
+        </UserParameter>
+        <UserParameter Name="User Display 4" DataType="enum" ByteData="68" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="4" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="Binary 0" />
+          <Enum Value="1" Text="Binary 1" />
+          <Enum Value="2" Text="Analog 0" />
+          <Enum Value="3" Text="Analog 1" />
+          <Enum Value="4" Text="Time to Trip" />
+          <Enum Value="5" Text="Time to Cool" />
+        </UserParameter>
+        <UserParameter Name="User Display 5" DataType="enum" ByteData="69" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="5" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="Binary 0" />
+          <Enum Value="1" Text="Binary 1" />
+          <Enum Value="2" Text="Analog 0" />
+          <Enum Value="3" Text="Analog 1" />
+          <Enum Value="4" Text="Time to Trip" />
+          <Enum Value="5" Text="Time to Cool" />
+        </UserParameter>
+        <UserParameter Name="Dip Duration [0.1s]" DataType="int" ByteData="71" BitData="0" LengthData="1" Min="1" Max="255" ParserGenerated="False" Deleted="False" Unit="" Default="5" OrgSize="1" EnumtableOnlyNumbers="False" />
+        <UserParameter Name="Dip Autorestart Window [0.1s]" DataType="int" ByteData="72" BitData="0" LengthData="1" Min="1" Max="10" ParserGenerated="False" Deleted="False" Unit="" Default="1" OrgSize="1" EnumtableOnlyNumbers="False" />
+        <UserParameter Name="Dip Autorestart Delay [s]" DataType="int" ByteData="73" BitData="0" LengthData="1" Min="0" Max="255" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False" />
+        <UserParameter Name="Thermal Load Warnlev [%]" DataType="int" ByteData="74" BitData="0" LengthData="1" Min="20" Max="100" ParserGenerated="False" Deleted="False" Unit="" Default="100" OrgSize="1" EnumtableOnlyNumbers="False" />
+        <UserParameter Name="DX1xx DI Delay [ms]" DataType="int" ByteData="83" BitData="0" LengthData="1" Min="3" Max="200" ParserGenerated="False" Deleted="False" Unit="" Default="20" OrgSize="1" EnumtableOnlyNumbers="False" />
+        <UserParameter Name="DX1xx AO Type" DataType="enum" ByteData="112" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="0-20mA" />
+          <Enum Value="1" Text="4-20mA" />
+          <Enum Value="2" Text="0-10mA" />
+          <Enum Value="3" Text="0-10V" />
+        </UserParameter>
+        <UserParameter Name="DX1xx AO Err Reac" DataType="enum" ByteData="112" BitData="2" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="Disabled" />
+          <Enum Value="1" Text="Trip" />
+          <Enum Value="2" Text="Warning" />
+        </UserParameter>
+        <UserParameter Name="Backlight" DataType="enum" ByteData="117" BitData="0" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="1" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="Off" />
+          <Enum Value="1" Text="On" />
+        </UserParameter>
+        <UserParameter Name="Password Protection" DataType="enum" ByteData="117" BitData="1" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="Off" />
+          <Enum Value="1" Text="On for Parameters" />
+          <Enum Value="2" Text="On for Param. + Motor Control" />
+        </UserParameter>
+        <UserParameter Name="Dip Enable" DataType="enum" ByteData="117" BitData="3" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="Off" />
+          <Enum Value="1" Text="On" />
+          <Enum Value="2" Text="On + Rapid Cycle Lockout" />
+        </UserParameter>
+        <UserParameter Name="Dip Autorestart Enable" DataType="enum" ByteData="117" BitData="5" LengthData="1" Min="0" Max="0" ParserGenerated="False" Deleted="False" Unit="" Default="0" OrgSize="1" EnumtableOnlyNumbers="False">
+          <Enum Value="0" Text="Off" />
+          <Enum Value="1" Text="On" />
+        </UserParameter>
+      </Original>
+    </UserParameterList>
+    <InputChannelList MaxLength="16">
+      <Channel Component="Input 1" DataType="UInt 16=&gt;DInt" ByteData="0" BitData="0" LengthData="16" DatatypeIndex="3" Swap="False" />
+      <Channel Component="Input 2" DataType="UInt 16=&gt;DInt" ByteData="2" BitData="0" LengthData="16" DatatypeIndex="3" Swap="False" />
+      <Channel Component="Input 3" DataType="UInt 16=&gt;DInt" ByteData="4" BitData="0" LengthData="16" DatatypeIndex="3" Swap="False" />
+      <Channel Component="Input 4" DataType="UInt 16=&gt;DInt" ByteData="6" BitData="0" LengthData="16" DatatypeIndex="3" Swap="False" />
+      <Channel Component="Input 5" DataType="UInt 16=&gt;DInt" ByteData="8" BitData="0" LengthData="16" DatatypeIndex="3" Swap="False" />
+      <Channel Component="Input 6" DataType="UInt 16=&gt;DInt" ByteData="10" BitData="0" LengthData="16" DatatypeIndex="3" Swap="False" />
+      <Channel Component="Input 7" DataType="UInt 16=&gt;DInt" ByteData="12" BitData="0" LengthData="16" DatatypeIndex="3" Swap="False" />
+      <Channel Component="Input 8" DataType="UInt 16=&gt;DInt" ByteData="14" BitData="0" LengthData="16" DatatypeIndex="3" Swap="False" />
+    </InputChannelList>
+    <OutputChannelList MaxLength="12">
+      <Channel Component="Output 1" DataType="UInt 16=&gt;DInt" ByteData="0" BitData="0" LengthData="16" DatatypeIndex="3" Swap="False" />
+      <Channel Component="Output 2" DataType="UInt 16=&gt;DInt" ByteData="2" BitData="0" LengthData="16" DatatypeIndex="3" Swap="False" />
+      <Channel Component="Output 3" DataType="UInt 16=&gt;DInt" ByteData="4" BitData="0" LengthData="16" DatatypeIndex="3" Swap="False" />
+      <Channel Component="Output 4" DataType="UInt 16=&gt;DInt" ByteData="6" BitData="0" LengthData="16" DatatypeIndex="3" Swap="False" />
+      <Channel Component="Output 5" DataType="UInt 16=&gt;DInt" ByteData="8" BitData="0" LengthData="16" DatatypeIndex="3" Swap="False" />
+      <Channel Component="Output 6" DataType="UInt 16=&gt;DInt" ByteData="10" BitData="0" LengthData="16" DatatypeIndex="3" Swap="False" />
+    </OutputChannelList>
+    <Diagnostics>
+      <KindList>
+        <Kind Index="0" AllUsed="False">
+          <Line ID="" Text="" Statusbit="" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="1" Text="Short circuit" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Short circuit" HelpText="Short circuit" Hidden="False" PatternFactor="0" />
+          <Line ID="2" Text="Undervoltage" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Undervoltage" HelpText="Undervoltage" Hidden="False" PatternFactor="0" />
+          <Line ID="3" Text="Overvoltage" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Overvoltage" HelpText="Overvoltage" Hidden="False" PatternFactor="0" />
+          <Line ID="4" Text="Overload" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Overload" HelpText="Overload" Hidden="False" PatternFactor="0" />
+          <Line ID="5" Text="Overtemperature" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Overtemperature" HelpText="Overtemperature" Hidden="False" PatternFactor="0" />
+          <Line ID="6" Text="Line break" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Line break" HelpText="Line break" Hidden="False" PatternFactor="0" />
+          <Line ID="7" Text="Upper limit value exceeded" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Upper limit value exceeded" HelpText="Upper limit value exceeded" Hidden="False" PatternFactor="0" />
+          <Line ID="8" Text="Lower limit value exceeded" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Lower limit value exceeded" HelpText="Lower limit value exceeded" Hidden="False" PatternFactor="0" />
+          <Line ID="9" Text="Error" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Error" HelpText="Error" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+        </Kind>
+        <Kind Index="1" AllUsed="False" />
+        <Kind Index="2" AllUsed="False" />
+        <Kind Index="3" AllUsed="False">
+          <Line ID="1" Text="Module Error" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Module Error" HelpText="Indicates some error(s) at the module" Hidden="False" PatternFactor="0" />
+        </Kind>
+        <Kind Index="4" AllUsed="False">
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="1 / Ch 0" Text="Short circuit" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Short circuit" HelpText="Short circuit" Hidden="False" PatternFactor="0" />
+          <Line ID="1 / Ch 1" Text="Short circuit" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Short circuit" HelpText="Short circuit" Hidden="False" PatternFactor="0" />
+          <Line ID="1 / Ch 2" Text="Short circuit" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Short circuit" HelpText="Short circuit" Hidden="False" PatternFactor="0" />
+          <Line ID="1 / Ch 3" Text="Short circuit" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Short circuit" HelpText="Short circuit" Hidden="False" PatternFactor="0" />
+          <Line ID="1 / Ch 4" Text="Short circuit" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Short circuit" HelpText="Short circuit" Hidden="False" PatternFactor="0" />
+          <Line ID="1 / Ch 5" Text="Short circuit" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Short circuit" HelpText="Short circuit" Hidden="False" PatternFactor="0" />
+          <Line ID="1 / Ch 6" Text="Short circuit" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Short circuit" HelpText="Short circuit" Hidden="False" PatternFactor="0" />
+          <Line ID="1 / Ch 7" Text="Short circuit" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Short circuit" HelpText="Short circuit" Hidden="False" PatternFactor="0" />
+          <Line ID="1 / Ch 8" Text="Short circuit" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Short circuit" HelpText="Short circuit" Hidden="False" PatternFactor="0" />
+          <Line ID="1 / Ch 9" Text="Short circuit" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Short circuit" HelpText="Short circuit" Hidden="False" PatternFactor="0" />
+          <Line ID="1 / Ch 10" Text="Short circuit" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Short circuit" HelpText="Short circuit" Hidden="False" PatternFactor="0" />
+          <Line ID="1 / Ch 11" Text="Short circuit" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Short circuit" HelpText="Short circuit" Hidden="False" PatternFactor="0" />
+          <Line ID="1 / Ch 12" Text="Short circuit" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Short circuit" HelpText="Short circuit" Hidden="False" PatternFactor="0" />
+          <Line ID="1 / Ch 13" Text="Short circuit" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Short circuit" HelpText="Short circuit" Hidden="False" PatternFactor="0" />
+          <Line ID="2 / Ch 0" Text="Undervoltage" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Undervoltage" HelpText="Undervoltage" Hidden="False" PatternFactor="0" />
+          <Line ID="2 / Ch 1" Text="Undervoltage" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Undervoltage" HelpText="Undervoltage" Hidden="False" PatternFactor="0" />
+          <Line ID="2 / Ch 2" Text="Undervoltage" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Undervoltage" HelpText="Undervoltage" Hidden="False" PatternFactor="0" />
+          <Line ID="2 / Ch 3" Text="Undervoltage" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Undervoltage" HelpText="Undervoltage" Hidden="False" PatternFactor="0" />
+          <Line ID="2 / Ch 4" Text="Undervoltage" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Undervoltage" HelpText="Undervoltage" Hidden="False" PatternFactor="0" />
+          <Line ID="2 / Ch 5" Text="Undervoltage" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Undervoltage" HelpText="Undervoltage" Hidden="False" PatternFactor="0" />
+          <Line ID="2 / Ch 6" Text="Undervoltage" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Undervoltage" HelpText="Undervoltage" Hidden="False" PatternFactor="0" />
+          <Line ID="2 / Ch 7" Text="Undervoltage" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Undervoltage" HelpText="Undervoltage" Hidden="False" PatternFactor="0" />
+          <Line ID="2 / Ch 8" Text="Undervoltage" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Undervoltage" HelpText="Undervoltage" Hidden="False" PatternFactor="0" />
+          <Line ID="2 / Ch 9" Text="Undervoltage" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Undervoltage" HelpText="Undervoltage" Hidden="False" PatternFactor="0" />
+          <Line ID="2 / Ch 10" Text="Undervoltage" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Undervoltage" HelpText="Undervoltage" Hidden="False" PatternFactor="0" />
+          <Line ID="2 / Ch 11" Text="Undervoltage" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Undervoltage" HelpText="Undervoltage" Hidden="False" PatternFactor="0" />
+          <Line ID="2 / Ch 12" Text="Undervoltage" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Undervoltage" HelpText="Undervoltage" Hidden="False" PatternFactor="0" />
+          <Line ID="2 / Ch 13" Text="Undervoltage" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Undervoltage" HelpText="Undervoltage" Hidden="False" PatternFactor="0" />
+          <Line ID="3 / Ch 0" Text="Overvoltage" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Overvoltage" HelpText="Overvoltage" Hidden="False" PatternFactor="0" />
+          <Line ID="3 / Ch 1" Text="Overvoltage" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Overvoltage" HelpText="Overvoltage" Hidden="False" PatternFactor="0" />
+          <Line ID="3 / Ch 2" Text="Overvoltage" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Overvoltage" HelpText="Overvoltage" Hidden="False" PatternFactor="0" />
+          <Line ID="3 / Ch 3" Text="Overvoltage" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Overvoltage" HelpText="Overvoltage" Hidden="False" PatternFactor="0" />
+          <Line ID="3 / Ch 4" Text="Overvoltage" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Overvoltage" HelpText="Overvoltage" Hidden="False" PatternFactor="0" />
+          <Line ID="3 / Ch 5" Text="Overvoltage" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Overvoltage" HelpText="Overvoltage" Hidden="False" PatternFactor="0" />
+          <Line ID="3 / Ch 6" Text="Overvoltage" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Overvoltage" HelpText="Overvoltage" Hidden="False" PatternFactor="0" />
+          <Line ID="3 / Ch 7" Text="Overvoltage" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Overvoltage" HelpText="Overvoltage" Hidden="False" PatternFactor="0" />
+          <Line ID="3 / Ch 8" Text="Overvoltage" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Overvoltage" HelpText="Overvoltage" Hidden="False" PatternFactor="0" />
+          <Line ID="3 / Ch 9" Text="Overvoltage" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Overvoltage" HelpText="Overvoltage" Hidden="False" PatternFactor="0" />
+          <Line ID="3 / Ch 10" Text="Overvoltage" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Overvoltage" HelpText="Overvoltage" Hidden="False" PatternFactor="0" />
+          <Line ID="3 / Ch 11" Text="Overvoltage" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Overvoltage" HelpText="Overvoltage" Hidden="False" PatternFactor="0" />
+          <Line ID="3 / Ch 12" Text="Overvoltage" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Overvoltage" HelpText="Overvoltage" Hidden="False" PatternFactor="0" />
+          <Line ID="3 / Ch 13" Text="Overvoltage" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Overvoltage" HelpText="Overvoltage" Hidden="False" PatternFactor="0" />
+          <Line ID="4 / Ch 0" Text="Overload" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Overload" HelpText="Overload" Hidden="False" PatternFactor="0" />
+          <Line ID="4 / Ch 1" Text="Overload" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Overload" HelpText="Overload" Hidden="False" PatternFactor="0" />
+          <Line ID="4 / Ch 2" Text="Overload" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Overload" HelpText="Overload" Hidden="False" PatternFactor="0" />
+          <Line ID="4 / Ch 3" Text="Overload" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Overload" HelpText="Overload" Hidden="False" PatternFactor="0" />
+          <Line ID="4 / Ch 4" Text="Overload" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Overload" HelpText="Overload" Hidden="False" PatternFactor="0" />
+          <Line ID="4 / Ch 5" Text="Overload" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Overload" HelpText="Overload" Hidden="False" PatternFactor="0" />
+          <Line ID="4 / Ch 6" Text="Overload" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Overload" HelpText="Overload" Hidden="False" PatternFactor="0" />
+          <Line ID="4 / Ch 7" Text="Overload" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Overload" HelpText="Overload" Hidden="False" PatternFactor="0" />
+          <Line ID="4 / Ch 8" Text="Overload" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Overload" HelpText="Overload" Hidden="False" PatternFactor="0" />
+          <Line ID="4 / Ch 9" Text="Overload" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Overload" HelpText="Overload" Hidden="False" PatternFactor="0" />
+          <Line ID="4 / Ch 10" Text="Overload" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Overload" HelpText="Overload" Hidden="False" PatternFactor="0" />
+          <Line ID="4 / Ch 11" Text="Overload" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Overload" HelpText="Overload" Hidden="False" PatternFactor="0" />
+          <Line ID="4 / Ch 12" Text="Overload" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Overload" HelpText="Overload" Hidden="False" PatternFactor="0" />
+          <Line ID="4 / Ch 13" Text="Overload" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Overload" HelpText="Overload" Hidden="False" PatternFactor="0" />
+          <Line ID="5 / Ch 0" Text="Overtemperature" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Overtemperature" HelpText="Overtemperature" Hidden="False" PatternFactor="0" />
+          <Line ID="5 / Ch 1" Text="Overtemperature" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Overtemperature" HelpText="Overtemperature" Hidden="False" PatternFactor="0" />
+          <Line ID="5 / Ch 2" Text="Overtemperature" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Overtemperature" HelpText="Overtemperature" Hidden="False" PatternFactor="0" />
+          <Line ID="5 / Ch 3" Text="Overtemperature" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Overtemperature" HelpText="Overtemperature" Hidden="False" PatternFactor="0" />
+          <Line ID="5 / Ch 4" Text="Overtemperature" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Overtemperature" HelpText="Overtemperature" Hidden="False" PatternFactor="0" />
+          <Line ID="5 / Ch 5" Text="Overtemperature" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Overtemperature" HelpText="Overtemperature" Hidden="False" PatternFactor="0" />
+          <Line ID="5 / Ch 6" Text="Overtemperature" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Overtemperature" HelpText="Overtemperature" Hidden="False" PatternFactor="0" />
+          <Line ID="5 / Ch 7" Text="Overtemperature" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Overtemperature" HelpText="Overtemperature" Hidden="False" PatternFactor="0" />
+          <Line ID="5 / Ch 8" Text="Overtemperature" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Overtemperature" HelpText="Overtemperature" Hidden="False" PatternFactor="0" />
+          <Line ID="5 / Ch 9" Text="Overtemperature" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Overtemperature" HelpText="Overtemperature" Hidden="False" PatternFactor="0" />
+          <Line ID="5 / Ch 10" Text="Overtemperature" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Overtemperature" HelpText="Overtemperature" Hidden="False" PatternFactor="0" />
+          <Line ID="5 / Ch 11" Text="Overtemperature" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Overtemperature" HelpText="Overtemperature" Hidden="False" PatternFactor="0" />
+          <Line ID="5 / Ch 12" Text="Overtemperature" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Overtemperature" HelpText="Overtemperature" Hidden="False" PatternFactor="0" />
+          <Line ID="5 / Ch 13" Text="Overtemperature" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Overtemperature" HelpText="Overtemperature" Hidden="False" PatternFactor="0" />
+          <Line ID="6 / Ch 0" Text="Line break" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Line break" HelpText="Line break" Hidden="False" PatternFactor="0" />
+          <Line ID="6 / Ch 1" Text="Line break" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Line break" HelpText="Line break" Hidden="False" PatternFactor="0" />
+          <Line ID="6 / Ch 2" Text="Line break" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Line break" HelpText="Line break" Hidden="False" PatternFactor="0" />
+          <Line ID="6 / Ch 3" Text="Line break" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Line break" HelpText="Line break" Hidden="False" PatternFactor="0" />
+          <Line ID="6 / Ch 4" Text="Line break" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Line break" HelpText="Line break" Hidden="False" PatternFactor="0" />
+          <Line ID="6 / Ch 5" Text="Line break" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Line break" HelpText="Line break" Hidden="False" PatternFactor="0" />
+          <Line ID="6 / Ch 6" Text="Line break" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Line break" HelpText="Line break" Hidden="False" PatternFactor="0" />
+          <Line ID="6 / Ch 7" Text="Line break" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Line break" HelpText="Line break" Hidden="False" PatternFactor="0" />
+          <Line ID="6 / Ch 8" Text="Line break" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Line break" HelpText="Line break" Hidden="False" PatternFactor="0" />
+          <Line ID="6 / Ch 9" Text="Line break" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Line break" HelpText="Line break" Hidden="False" PatternFactor="0" />
+          <Line ID="6 / Ch 10" Text="Line break" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Line break" HelpText="Line break" Hidden="False" PatternFactor="0" />
+          <Line ID="6 / Ch 11" Text="Line break" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Line break" HelpText="Line break" Hidden="False" PatternFactor="0" />
+          <Line ID="6 / Ch 12" Text="Line break" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Line break" HelpText="Line break" Hidden="False" PatternFactor="0" />
+          <Line ID="6 / Ch 13" Text="Line break" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Line break" HelpText="Line break" Hidden="False" PatternFactor="0" />
+          <Line ID="7 / Ch 0" Text="Upper limit value exceeded" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Upper limit value exceeded" HelpText="Upper limit value exceeded" Hidden="False" PatternFactor="0" />
+          <Line ID="7 / Ch 1" Text="Upper limit value exceeded" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Upper limit value exceeded" HelpText="Upper limit value exceeded" Hidden="False" PatternFactor="0" />
+          <Line ID="7 / Ch 2" Text="Upper limit value exceeded" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Upper limit value exceeded" HelpText="Upper limit value exceeded" Hidden="False" PatternFactor="0" />
+          <Line ID="7 / Ch 3" Text="Upper limit value exceeded" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Upper limit value exceeded" HelpText="Upper limit value exceeded" Hidden="False" PatternFactor="0" />
+          <Line ID="7 / Ch 4" Text="Upper limit value exceeded" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Upper limit value exceeded" HelpText="Upper limit value exceeded" Hidden="False" PatternFactor="0" />
+          <Line ID="7 / Ch 5" Text="Upper limit value exceeded" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Upper limit value exceeded" HelpText="Upper limit value exceeded" Hidden="False" PatternFactor="0" />
+          <Line ID="7 / Ch 6" Text="Upper limit value exceeded" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Upper limit value exceeded" HelpText="Upper limit value exceeded" Hidden="False" PatternFactor="0" />
+          <Line ID="7 / Ch 7" Text="Upper limit value exceeded" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Upper limit value exceeded" HelpText="Upper limit value exceeded" Hidden="False" PatternFactor="0" />
+          <Line ID="7 / Ch 8" Text="Upper limit value exceeded" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Upper limit value exceeded" HelpText="Upper limit value exceeded" Hidden="False" PatternFactor="0" />
+          <Line ID="7 / Ch 9" Text="Upper limit value exceeded" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Upper limit value exceeded" HelpText="Upper limit value exceeded" Hidden="False" PatternFactor="0" />
+          <Line ID="7 / Ch 10" Text="Upper limit value exceeded" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Upper limit value exceeded" HelpText="Upper limit value exceeded" Hidden="False" PatternFactor="0" />
+          <Line ID="7 / Ch 11" Text="Upper limit value exceeded" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Upper limit value exceeded" HelpText="Upper limit value exceeded" Hidden="False" PatternFactor="0" />
+          <Line ID="7 / Ch 12" Text="Upper limit value exceeded" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Upper limit value exceeded" HelpText="Upper limit value exceeded" Hidden="False" PatternFactor="0" />
+          <Line ID="7 / Ch 13" Text="Upper limit value exceeded" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Upper limit value exceeded" HelpText="Upper limit value exceeded" Hidden="False" PatternFactor="0" />
+          <Line ID="8 / Ch 0" Text="Lower limit value exceeded" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Lower limit value exceeded" HelpText="Lower limit value exceeded" Hidden="False" PatternFactor="0" />
+          <Line ID="8 / Ch 1" Text="Lower limit value exceeded" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Lower limit value exceeded" HelpText="Lower limit value exceeded" Hidden="False" PatternFactor="0" />
+          <Line ID="8 / Ch 2" Text="Lower limit value exceeded" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Lower limit value exceeded" HelpText="Lower limit value exceeded" Hidden="False" PatternFactor="0" />
+          <Line ID="8 / Ch 3" Text="Lower limit value exceeded" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Lower limit value exceeded" HelpText="Lower limit value exceeded" Hidden="False" PatternFactor="0" />
+          <Line ID="8 / Ch 4" Text="Lower limit value exceeded" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Lower limit value exceeded" HelpText="Lower limit value exceeded" Hidden="False" PatternFactor="0" />
+          <Line ID="8 / Ch 5" Text="Lower limit value exceeded" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Lower limit value exceeded" HelpText="Lower limit value exceeded" Hidden="False" PatternFactor="0" />
+          <Line ID="8 / Ch 6" Text="Lower limit value exceeded" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Lower limit value exceeded" HelpText="Lower limit value exceeded" Hidden="False" PatternFactor="0" />
+          <Line ID="8 / Ch 7" Text="Lower limit value exceeded" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Lower limit value exceeded" HelpText="Lower limit value exceeded" Hidden="False" PatternFactor="0" />
+          <Line ID="8 / Ch 8" Text="Lower limit value exceeded" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Lower limit value exceeded" HelpText="Lower limit value exceeded" Hidden="False" PatternFactor="0" />
+          <Line ID="8 / Ch 9" Text="Lower limit value exceeded" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Lower limit value exceeded" HelpText="Lower limit value exceeded" Hidden="False" PatternFactor="0" />
+          <Line ID="8 / Ch 10" Text="Lower limit value exceeded" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Lower limit value exceeded" HelpText="Lower limit value exceeded" Hidden="False" PatternFactor="0" />
+          <Line ID="8 / Ch 11" Text="Lower limit value exceeded" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Lower limit value exceeded" HelpText="Lower limit value exceeded" Hidden="False" PatternFactor="0" />
+          <Line ID="8 / Ch 12" Text="Lower limit value exceeded" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Lower limit value exceeded" HelpText="Lower limit value exceeded" Hidden="False" PatternFactor="0" />
+          <Line ID="8 / Ch 13" Text="Lower limit value exceeded" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Lower limit value exceeded" HelpText="Lower limit value exceeded" Hidden="False" PatternFactor="0" />
+          <Line ID="9 / Ch 0" Text="Error" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Error" HelpText="Error" Hidden="False" PatternFactor="0" />
+          <Line ID="9 / Ch 1" Text="Error" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Error" HelpText="Error" Hidden="False" PatternFactor="0" />
+          <Line ID="9 / Ch 2" Text="Error" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Error" HelpText="Error" Hidden="False" PatternFactor="0" />
+          <Line ID="9 / Ch 3" Text="Error" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Error" HelpText="Error" Hidden="False" PatternFactor="0" />
+          <Line ID="9 / Ch 4" Text="Error" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Error" HelpText="Error" Hidden="False" PatternFactor="0" />
+          <Line ID="9 / Ch 5" Text="Error" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Error" HelpText="Error" Hidden="False" PatternFactor="0" />
+          <Line ID="9 / Ch 6" Text="Error" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Error" HelpText="Error" Hidden="False" PatternFactor="0" />
+          <Line ID="9 / Ch 7" Text="Error" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Error" HelpText="Error" Hidden="False" PatternFactor="0" />
+          <Line ID="9 / Ch 8" Text="Error" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Error" HelpText="Error" Hidden="False" PatternFactor="0" />
+          <Line ID="9 / Ch 9" Text="Error" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Error" HelpText="Error" Hidden="False" PatternFactor="0" />
+          <Line ID="9 / Ch 10" Text="Error" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Error" HelpText="Error" Hidden="False" PatternFactor="0" />
+          <Line ID="9 / Ch 11" Text="Error" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Error" HelpText="Error" Hidden="False" PatternFactor="0" />
+          <Line ID="9 / Ch 12" Text="Error" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Error" HelpText="Error" Hidden="False" PatternFactor="0" />
+          <Line ID="9 / Ch 13" Text="Error" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Error" HelpText="Error" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+          <Line ID="" Text="" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+        </Kind>
+        <Kind Index="5" AllUsed="False" />
+      </KindList>
+      <Free>DeviceSpecific01,DeviceSpecific02,DeviceSpecific03,DeviceSpecific04,DeviceSpecific05,DeviceSpecific06,DeviceSpecific07,DeviceSpecific08,DeviceSpecific09,DeviceSpecific10,ExtendedStatus01,ExtendedStatus02,ExtendedStatus03,ExtendedStatus04,ExtendedStatus05,ExtendedStatus06,ExtendedStatus07,ExtendedStatus08,ExtendedStatus09,ExtendedStatus10,ExtendedStatus11,ExtendedStatus12,ExtendedStatus13,ExtendedStatus14,ExtendedStatus15,ExtendedStatus16,ExtendedStatus17,ExtendedStatus18,ExtendedStatus19,ExtendedStatus20,ExtendedStatus21,ExtendedStatus22</Free>
+    </Diagnostics>
+  </Module>
+  <DiagUsed>False</DiagUsed>
+  <DiagIDUsed>False</DiagIDUsed>
+  <DiagMapping>False</DiagMapping>
+  <DiagPatternList />
+  <Diagnostics>
+    <KindList>
+      <Kind Index="0" AllUsed="False">
+        <Line ID="" Text="" Statusbit="" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="1" Text="Short circuit" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Short circuit" HelpText="Short circuit" Hidden="False" PatternFactor="0" />
+        <Line ID="2" Text="Undervoltage" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Undervoltage" HelpText="Undervoltage" Hidden="False" PatternFactor="0" />
+        <Line ID="3" Text="Overvoltage" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Overvoltage" HelpText="Overvoltage" Hidden="False" PatternFactor="0" />
+        <Line ID="4" Text="Overload" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Overload" HelpText="Overload" Hidden="False" PatternFactor="0" />
+        <Line ID="5" Text="Overtemperature" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Overtemperature" HelpText="Overtemperature" Hidden="False" PatternFactor="0" />
+        <Line ID="6" Text="Line break" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Line break" HelpText="Line break" Hidden="False" PatternFactor="0" />
+        <Line ID="7" Text="Upper limit value exceeded" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Upper limit value exceeded" HelpText="Upper limit value exceeded" Hidden="False" PatternFactor="0" />
+        <Line ID="8" Text="Lower limit value exceeded" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Lower limit value exceeded" HelpText="Lower limit value exceeded" Hidden="False" PatternFactor="0" />
+        <Line ID="9" Text="Error" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Error" HelpText="Error" Hidden="False" PatternFactor="0" />
+        <Line ID="" Text="" Statusbit="" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="" Text="" Statusbit="" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="" Text="" Statusbit="" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="" Text="" Statusbit="" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="" Text="" Statusbit="" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="" Text="" Statusbit="" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="" Text="" Statusbit="" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="" Text="" Statusbit="" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="" Text="" Statusbit="" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="" Text="" Statusbit="" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="" Text="" Statusbit="" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="" Text="" Statusbit="" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="" Text="" Statusbit="" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="" Text="" Statusbit="" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="" Text="" Statusbit="" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="" Text="" Statusbit="" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="" Text="" Statusbit="" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="" Text="" Statusbit="" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="" Text="" Statusbit="" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="" Text="" Statusbit="" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="" Text="" Statusbit="" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="" Text="" Statusbit="" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="" HelpText="" Hidden="False" PatternFactor="0" />
+      </Kind>
+      <Kind Index="1" AllUsed="False" />
+      <Kind Index="2" AllUsed="False">
+        <Line ID="0-7/129" Text="UMC100 Diag status available" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="UMC100 Diag status available" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="24-31/0" Text="Communication OK" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Communication OK" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="24-31/1" Text="Lost Communication to UMC100" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Lost Communication to UMC100" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="32-32/1" Text="Thermal Overload Trip" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Thermal Overload Trip" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="33-33/1" Text="Phase-Loss (Current)" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Phase-Loss (Current)" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="34-34/1" Text="Phase Imbalance (I)" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Phase Imbalance (I)" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="35-35/1" Text="Locked Rotor" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Locked Rotor" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="36-36/1" Text="Thermal Load Prewarn." Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Thermal Load Prewarn." HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="37-37/1" Text="PTC Temperature High" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="PTC Temperature High" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="38-38/1" Text="PTC Wiring Problem" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="PTC Wiring Problem" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="39-39/1" Text="Check-Back Error" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Check-Back Error" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="40-40/1" Text="I below Trip Level" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="I below Trip Level" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="41-41/1" Text="I below Warn Level" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="I below Warn Level" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="42-42/1" Text="I above Trip Level" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="I above Trip Level" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="43-43/1" Text="I above Warn Level" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="I above Warn Level" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="44-44/1" Text="Earthfault Trip" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Earthfault Trip" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="45-45/1" Text="Earthfault Warning" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Earthfault Warning" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="46-46/1" Text="UMC Selftest Error" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="UMC Selftest Error" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="47-47/1" Text="Actuator" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Actuator" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="48-48/1" Text="IO-Module Missing" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="IO-Module Missing" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="49-49/1" Text="Application Error" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Application Error" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="50-50/1" Text="IO-Module Warning/Error" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="IO-Module Warning/Error" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="51-51/1" Text="Auxiliary Input 1" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Auxiliary Input 1" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="52-52/1" Text="Auxiliary Input 2" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Auxiliary Input 2" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="53-53/1" Text="Auxiliary Input 3" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Auxiliary Input 3" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="54-54/1" Text="Auxiliary Input 4" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Auxiliary Input 4" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="55-55/1" Text="Auxiliary Input 5" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Auxiliary Input 5" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="56-56/1" Text="Auxiliary Input 6" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Auxiliary Input 6" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="57-57/1" Text="Ext. Fault Multif. DI0" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Ext. Fault Multif. DI0" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="58-58/1" Text="Ext. Fault Multif. DI1" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Ext. Fault Multif. DI1" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="59-59/1" Text="Ext. Fault Multif. DI2" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Ext. Fault Multif. DI2" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="60-60/1" Text="reserved" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="reserved" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="61-61/1" Text="reserved" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="reserved" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="62-62/1" Text="reserved" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="reserved" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="63-63/1" Text="reserved" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="reserved" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="64-64/1" Text="reserved" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="reserved" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="65-65/1" Text="reserved" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="reserved" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="66-66/1" Text="reserved" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="reserved" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="67-67/1" Text="reserved" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="reserved" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="68-68/1" Text="reserved" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="reserved" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="69-69/1" Text="reserved" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="reserved" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="70-70/1" Text="reserved" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="reserved" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="71-71/1" Text="reserved" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="reserved" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="72-72/1" Text="reserved" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="reserved" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="73-73/1" Text="reserved" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="reserved" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="74-74/1" Text="reserved" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="reserved" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="75-75/1" Text="reserved" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="reserved" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="76-76/1" Text="reserved" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="reserved" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="77-77/1" Text="Cooling Time Running" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Cooling Time Running" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="78-78/1" Text="reserved" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="reserved" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="79-79/1" Text="reserved" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="reserved" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="80-80/1" Text="reserved" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="reserved" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="81-81/1" Text="reserved" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="reserved" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="82-82/1" Text="reserved" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="reserved" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="83-83/1" Text="reserved" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="reserved" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="84-84/1" Text="reserved" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="reserved" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="85-85/1" Text="reserved" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="reserved" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="86-86/1" Text="Parameter out of range" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Parameter out of range" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="87-87/1" Text="Ext. Diag. Available" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Ext. Diag. Available" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="88-88/1" Text="Bit0 ext. UMC-Diagnosis" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Bit0 ext. UMC-Diagnosis" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="89-89/1" Text="Bit1 ext. UMC-Diagnosis" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Bit1 ext. UMC-Diagnosis" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="90-90/1" Text="Bit2 ext. UMC-Diagnosis" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Bit2 ext. UMC-Diagnosis" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="91-91/1" Text="Bit3 ext. UMC-Diagnosis" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Bit3 ext. UMC-Diagnosis" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="92-92/1" Text="Bit4 ext. UMC-Diagnosis" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Bit4 ext. UMC-Diagnosis" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="93-93/1" Text="Bit5 ext. UMC-Diagnosis" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Bit5 ext. UMC-Diagnosis" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="94-94/1" Text="Bit6 ext. UMC-Diagnosis" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Bit6 ext. UMC-Diagnosis" HelpText="" Hidden="False" PatternFactor="0" />
+        <Line ID="95-95/1" Text="Bit7 ext. UMC-Diagnosis" Statusbit="n" Used="False" EWIndex="0" AEIndex="0" SVIndex="0" OrgText="Bit7 ext. UMC-Diagnosis" HelpText="" Hidden="False" PatternFactor="0" />
+      </Kind>
+      <Kind Index="3" AllUsed="False" />
+      <Kind Index="4" AllUsed="False" />
+      <Kind Index="5" AllUsed="False" />
+    </KindList>
+    <Free>DeviceSpecific01,DeviceSpecific02,DeviceSpecific03,DeviceSpecific04,DeviceSpecific05,DeviceSpecific06,DeviceSpecific07,DeviceSpecific08,DeviceSpecific09,DeviceSpecific10,ExtendedStatus08,ExtendedStatus09,ExtendedStatus10,ExtendedStatus11,ExtendedStatus12,ExtendedStatus13,ExtendedStatus14,ExtendedStatus15,ExtendedStatus16,ExtendedStatus17,ExtendedStatus18,ExtendedStatus19,ExtendedStatus20,ExtendedStatus21,ExtendedStatus22</Free>
+  </Diagnostics>
+  <DIW_BLOB_Version>1</DIW_BLOB_Version>
+  <HWDHeaderComment>Modified : 2020-10-20 00:37
+Modified : 2020-10-20 00:39</HWDHeaderComment>
+</DeviceImportWizard>

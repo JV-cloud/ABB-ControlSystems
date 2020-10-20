@@ -1,0 +1,225 @@
+(*=============================*)
+(* Modified : 2010-02-16 10:59 *)
+(* Modified : 2010-03-08 14:38 *)
+(* Modified : 2010-03-25 16:04 *)
+(* Modified : 2010-05-07 13:44 *)
+(* Modified : 2010-05-07 14:01 *)
+(* Modified : 2010-05-11 11:08 *)
+(* Modified : 2012-03-12 14:18 *)
+(* Modified : 2013-01-31 12:49 *)
+(*=============================*)
+FileHeader
+  Contents              "MLink"
+  Date                  "31.01.2013"
+  Version               "Version 1.4.9" (* Device Import Wizard *)
+  (* Parser             "Profinet 1.0.17.0" *)
+  RequiredSyntaxVersion "3.0"
+End FileHeader
+
+SessionID d2ea4b6b-69fe-43e0-8406-35492fafb797
+
+(*========================================================*)
+(*                         MLink                          *)
+(*========================================================*)
+
+HWUnitInfo
+  HWUnitID         {5317d6b2-9846-46bf-a67f-b86546417ca8}
+  Description      "General Purpose IO"
+  Information      "General Purpose IO Control"
+  Icons            RackIOType
+  Attributes       IOUnit DigitalIn DigitalOut
+  DownloadInstanceNamesForSubUnits
+
+  Channels
+    ChannelInfo
+      Number                1
+      ChannelName           "GPI 1"
+      Datatype              Bool_In
+      Routine               123
+      CopyParameters        16#30000 16#01 16#00 16#30001
+      ConflictInfo          16#0102
+    End ChannelInfo
+    ChannelInfo
+      Number                2
+      ChannelName           "GPI 2"
+      Datatype              Bool_In
+      Routine               123
+      CopyParameters        16#30000 16#02 16#00 16#30001
+      ConflictInfo          16#0102
+    End ChannelInfo
+    ChannelInfo
+      Number                3
+      ChannelName           "GPI 3"
+      Datatype              Bool_In
+      Routine               123
+      CopyParameters        16#30000 16#04 16#00 16#30001
+      ConflictInfo          16#0102
+    End ChannelInfo
+    ChannelInfo
+      Number                4
+      ChannelName           "GPI 4"
+      Datatype              Bool_In
+      Routine               123
+      CopyParameters        16#30000 16#08 16#00 16#30001
+      ConflictInfo          16#0102
+    End ChannelInfo
+    ChannelInfo
+      Number                5
+      ChannelName           "GPI 5"
+      Datatype              Bool_In
+      Routine               123
+      CopyParameters        16#30000 16#10 16#00 16#30001
+      ConflictInfo          16#0102
+    End ChannelInfo
+    ChannelInfo
+      Number                6
+      ChannelName           "GPI 6"
+      Datatype              Bool_In
+      Routine               123
+      CopyParameters        16#30000 16#20 16#00 16#30001
+      ConflictInfo          16#0102
+    End ChannelInfo
+    ChannelInfo
+      Number                7
+      ChannelName           "GPI 7"
+      Datatype              Bool_In
+      Routine               123
+      CopyParameters        16#30000 16#40 16#00 16#30001
+      ConflictInfo          16#0102
+    End ChannelInfo
+    ChannelInfo
+      Number                8
+      ChannelName           "GPI 8"
+      Datatype              Bool_In
+      Routine               123
+      CopyParameters        16#30000 16#80 16#00 16#30001
+      ConflictInfo          16#0102
+    End ChannelInfo
+    ChannelInfo
+      Number                9
+      ChannelName           "General Purpose In"
+      Datatype              DInt_In
+      Routine               323
+      CopyParameters        16#30000 16#18 16#08 16#00 16#00 16#00 16#30001
+      ConflictInfo          16#0201
+    End ChannelInfo
+    ChannelInfo
+      Number                10
+      ChannelName           "GPO 1"
+      Datatype              Bool_Out
+      Routine               230
+      CopyParameters        16#0 16#0 16#40000 16#01
+      ConflictInfo          16#0102
+    End ChannelInfo
+    ChannelInfo
+      Number                11
+      ChannelName           "GPO 2"
+      Datatype              Bool_Out
+      Routine               230
+      CopyParameters        16#0 16#0 16#40000 16#02
+      ConflictInfo          16#0102
+    End ChannelInfo
+    ChannelInfo
+      Number                12
+      ChannelName           "GPO 3"
+      Datatype              Bool_Out
+      Routine               230
+      CopyParameters        16#0 16#0 16#40000 16#04
+      ConflictInfo          16#0102
+    End ChannelInfo
+    ChannelInfo
+      Number                13
+      ChannelName           "GPO 4"
+      Datatype              Bool_Out
+      Routine               230
+      CopyParameters        16#0 16#0 16#40000 16#08
+      ConflictInfo          16#0102
+    End ChannelInfo
+    ChannelInfo
+      Number                14
+      ChannelName           "GPO 5"
+      Datatype              Bool_Out
+      Routine               230
+      CopyParameters        16#0 16#0 16#40000 16#10
+      ConflictInfo          16#0102
+    End ChannelInfo
+    ChannelInfo
+      Number                15
+      ChannelName           "GPO 6"
+      Datatype              Bool_Out
+      Routine               230
+      CopyParameters        16#0 16#0 16#40000 16#20
+      ConflictInfo          16#0102
+    End ChannelInfo
+    ChannelInfo
+      Number                16
+      ChannelName           "GPO 7"
+      Datatype              Bool_Out
+      Routine               230
+      CopyParameters        16#0 16#0 16#40000 16#40
+      ConflictInfo          16#0102
+    End ChannelInfo
+    ChannelInfo
+      Number                17
+      ChannelName           "GPO 8"
+      Datatype              Bool_Out
+      Routine               230
+      CopyParameters        16#0 16#0 16#40000 16#80
+      ConflictInfo          16#0102
+    End ChannelInfo
+    ChannelInfo
+      Number                18
+      ChannelName           "General Purpose Out"
+      Datatype              Int_Out
+      Routine               401
+      CopyParameters        16#0 16#0 16#40000 16#08 16#FF00 16#00
+      ConflictInfo          16#0201
+    End ChannelInfo
+    ChannelInfo
+      Number                19
+      ChannelName           "UnitStatus"
+      Datatype              Status_In
+      Routine               900
+      CopyParameters        16#0 16#0 16#50000
+    End ChannelInfo
+  End Channels
+
+  UnitStatusText
+    DeviceSpecific1  "Maintenance required"
+    DeviceSpecific2  "Maintenance demanded"
+    DeviceSpecific3  "Diagnosis data available"
+    DeviceSpecific4  "Locked by other controller/supervisor"
+    DeviceSpecific6  "Parametrization fault"
+  End UnitStatusText
+
+  UnitStatusSeverity
+    DeviceSpecific1  GeneralWarning TriggerEvent SeverityMedium
+    DeviceSpecific2  GeneralWarning TriggerEvent SeverityMedium
+    DeviceSpecific3  GeneralWarning TriggerEvent SeverityMedium
+    DeviceSpecific4  GeneralWarning TriggerEvent SeverityMedium
+    DeviceSpecific6  GeneralError TriggerAlarm SeverityHigh
+  End UnitStatusSeverity
+
+  Configuration
+    ConfigInfo
+      ModuleKey        19
+      InAreaSize       3 BYTE
+      OutAreaSize      3 BYTE
+      OutByte
+        BYTE  16#80    1  (* IOPS_Out *)
+        BYTE  16#80    2  (* IOCS_Out *)
+      CIGIOConnData
+        CIGIOData      16#10 16#a5 16#5a 16#0 16#1 16#2 16#1 16#2 16#1 
+        CIGIOData      16#6 16#10 16#0 16#0 16#13 16#0 16#0 16#0 16#0 16#1 16#1 16#0 16#1 16#0 16#1 
+      End CIGIOConnData
+    End ConfigInfo
+    ConfigInfo
+      EmptyConfig
+      ModuleKey        16#FFFF
+      InAreaSize       0 BYTE
+      OutAreaSize      0 BYTE
+    End ConfigInfo
+  End Configuration
+
+  HWUnitInfoCRC 16#6998
+End HWUnitInfo

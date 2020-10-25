@@ -1,0 +1,36 @@
+Header
+ ( SyntaxVersion '3.3'
+   SavedDate '2020-10-20-17:08:55.955'
+   FileName '' )
+FileUnits
+ ( Library 'AlarmEventLib'
+   Library 'BasicGraphicLib'
+   Library 'BasicLib'
+   Library 'ControlAdvancedLib'
+   Library 'ControlBasicLib'
+   Library 'ControlExtendedLib'
+   Library 'ControlFuzzyLib'
+   Library 'ControlSimpleLib'
+   Library 'ControlStandardLib'
+   Library 'ControlSupportLib'
+   Library 'IconLib'
+    )
+Screen ( Attributes
+    (  ) )
+Windows
+ ( Window
+    ( WindowKind ProjectWindow
+      Placement
+       ( State Normal
+         Position ( 510 -1054 1599 -45 ) )
+      DockingState 'ProjectWindow'
+      Selected ( 
+         'CCB_LogicSamples'
+         'Controllers'
+         'PLC_1 (127.0.0.1:2)'
+         'Hardware  AC 800M'
+         '  1         CI854'
+         ' 10         PDP22-FBP with UMC100'
+         '  0         UMC100-FBP (V1_13)' ) )
+    )
+
